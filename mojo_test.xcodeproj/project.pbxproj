@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		82EF22D5FBC7403D2ED4E74A /* Pods_mojo_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A46049713FFD8EF38D2B91 /* Pods_mojo_testUITests.framework */; };
+		8891671721B0F8E4000267F7 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* FourthViewController.swift */; };
+		8891671C21B1166B000267F7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671B21B1166B000267F7 /* LoginController.swift */; };
 		88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C03321AE6F71004EADFC /* AppDelegate.swift */; };
 		88B5C03621AE6F71004EADFC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C03521AE6F71004EADFC /* FirstViewController.swift */; };
 		88B5C03821AE6F71004EADFC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C03721AE6F71004EADFC /* SecondViewController.swift */; };
@@ -44,6 +46,8 @@
 		3B92FAC75E98011E271C4321 /* Pods_mojo_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76DF50AEDF6949CB364E6F93 /* Pods-mojo_testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_testTests/Pods-mojo_testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8891671621B0F8E4000267F7 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
+		8891671B21B1166B000267F7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		88B5C03021AE6F71004EADFC /* mojo_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mojo_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B5C03321AE6F71004EADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B5C03521AE6F71004EADFC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8891671821B0FA0A000267F7 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				8891671621B0F8E4000267F7 /* FourthViewController.swift */,
+				8891671B21B1166B000267F7 /* LoginController.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		88B5C02721AE6F71004EADFC = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +141,7 @@
 		88B5C03221AE6F71004EADFC /* mojo_test */ = {
 			isa = PBXGroup;
 			children = (
+				8891671821B0FA0A000267F7 /* New Group */,
 				B24681A721B09468007BD8C4 /* GoogleService-Info.plist */,
 				88B5C03321AE6F71004EADFC /* AppDelegate.swift */,
 				88B5C03521AE6F71004EADFC /* FirstViewController.swift */,
@@ -384,9 +398,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8891671721B0F8E4000267F7 /* FourthViewController.swift in Sources */,
 				88B5C03821AE6F71004EADFC /* SecondViewController.swift in Sources */,
 				88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */,
 				88B5C03621AE6F71004EADFC /* FirstViewController.swift in Sources */,
+				8891671C21B1166B000267F7 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,9 +579,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3Y2YF8BNX;
+				DEVELOPMENT_TEAM = 6D5RXZZT78;
 				INFOPLIST_FILE = mojo_test/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mojodating.prealpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -579,9 +598,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A3Y2YF8BNX;
+				DEVELOPMENT_TEAM = 6D5RXZZT78;
 				INFOPLIST_FILE = mojo_test/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mojodating.prealpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -598,7 +620,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D5RXZZT78;
 				INFOPLIST_FILE = mojo_testTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YC.mojo-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -616,7 +642,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D5RXZZT78;
 				INFOPLIST_FILE = mojo_testTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YC.mojo-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -633,7 +663,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D5RXZZT78;
 				INFOPLIST_FILE = mojo_testUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YC.mojo-testUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -650,7 +684,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D5RXZZT78;
 				INFOPLIST_FILE = mojo_testUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YC.mojo-testUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
