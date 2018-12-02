@@ -9,15 +9,51 @@
 import UIKit
 import Firebase
 
+
+
+
+
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    // database connection
+    var ref: DatabaseReference!
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // database setup
+        ref = Database.database().reference()
         FirebaseApp.configure()
+
+        let user = Auth.auth().currentUser
+        if let user = user {
+            // The user's ID, unique to the Firebase project.
+            // Do NOT use this value to authenticate with your backend server,
+            // if you have one. Use getTokenWithCompletion:completion: instead.
+            let uid = user.uid
+            let email = user.email
+            let photoURL = user.photoURL
+            // ...
+        }
+        
+//        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+//        changeRequest?.displayName = displayName
+//        changeRequest?.commitChanges { (error) in
+//            // ...
+//        }
+        
+//        var user = "tim"
+//        var username = "tcsiwula"
+//        self.ref.child("users").child(user.uid).setValue(["username": username])
+
+        
+        
         
         return true
     }
@@ -44,6 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    
+    
 }
 
