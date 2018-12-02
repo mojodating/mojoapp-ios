@@ -41,22 +41,22 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
-        <!--Me-->
+        <!--The house-->
         <scene sceneID="ycf-TQ-zej">
             <objects>
-                <viewController id="yig-bq-zv7" sceneMemberID="viewController">
+                <viewController id="yig-bq-zv7" customClass="FourthViewController" customModule="mojo_test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bdH-Cz-29G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ozk-sS-bPu"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Me" image="second" id="zvE-zH-16U"/>
+                    <tabBarItem key="tabBarItem" title="The house" image="second" id="zvE-zH-16U"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PxF-mT-xCw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="990"/>
+            <point key="canvasLocation" x="0.0" y="744"/>
         </scene>
         <!--Wallet-->
         <scene sceneID="8TF-jT-VIy">
@@ -122,9 +122,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="qVL-kn-AWm" kind="relationship" relationship="viewControllers" id="eNk-bj-SAf"/>
                         <segue destination="yig-bq-zv7" kind="relationship" relationship="viewControllers" id="jrB-Jo-1NR"/>
                     </connections>
                 </tabBarController>
