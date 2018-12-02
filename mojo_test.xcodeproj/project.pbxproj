@@ -10,11 +10,12 @@
 		82EF22D5FBC7403D2ED4E74A /* Pods_mojo_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A46049713FFD8EF38D2B91 /* Pods_mojo_testUITests.framework */; };
 		8891671721B0F8E4000267F7 /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* FourthViewController.swift */; };
 		8891671C21B1166B000267F7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671B21B1166B000267F7 /* LoginController.swift */; };
+		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
+		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
+		8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */; };
+		8897461521B4712700DBF6F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8897461421B4712700DBF6F6 /* Images.xcassets */; };
 		88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C03321AE6F71004EADFC /* AppDelegate.swift */; };
-		88B5C03621AE6F71004EADFC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C03521AE6F71004EADFC /* FirstViewController.swift */; };
-		88B5C03821AE6F71004EADFC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C03721AE6F71004EADFC /* SecondViewController.swift */; };
 		88B5C03B21AE6F71004EADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B5C03921AE6F71004EADFC /* Main.storyboard */; };
-		88B5C03D21AE6F73004EADFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88B5C03C21AE6F73004EADFC /* Assets.xcassets */; };
 		88B5C04021AE6F73004EADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B5C03E21AE6F73004EADFC /* LaunchScreen.storyboard */; };
 		88B5C04B21AE6F73004EADFC /* mojo_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C04A21AE6F73004EADFC /* mojo_testTests.swift */; };
 		88B5C05621AE6F73004EADFC /* mojo_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C05521AE6F73004EADFC /* mojo_testUITests.swift */; };
@@ -48,12 +49,13 @@
 		878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8891671621B0F8E4000267F7 /* FourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		8891671B21B1166B000267F7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
+		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
+		8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
+		8897461421B4712700DBF6F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		88B5C03021AE6F71004EADFC /* mojo_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mojo_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B5C03321AE6F71004EADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		88B5C03521AE6F71004EADFC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		88B5C03721AE6F71004EADFC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		88B5C03A21AE6F71004EADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		88B5C03C21AE6F73004EADFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88B5C03F21AE6F73004EADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88B5C04121AE6F73004EADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88B5C04621AE6F73004EADFC /* mojo_testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mojo_testTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,13 +109,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8891671821B0FA0A000267F7 /* New Group */ = {
+		8891671821B0FA0A000267F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8891671621B0F8E4000267F7 /* FourthViewController.swift */,
 				8891671B21B1166B000267F7 /* LoginController.swift */,
 			);
-			path = "New Group";
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8897460C21B28B4E00DBF6F6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8897460F21B2989700DBF6F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */,
+				8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		88B5C02721AE6F71004EADFC = {
@@ -141,14 +160,14 @@
 		88B5C03221AE6F71004EADFC /* mojo_test */ = {
 			isa = PBXGroup;
 			children = (
-				8891671821B0FA0A000267F7 /* New Group */,
+				8897460F21B2989700DBF6F6 /* Views */,
+				8897460C21B28B4E00DBF6F6 /* Extensions */,
+				8891671821B0FA0A000267F7 /* Controllers */,
 				B24681A721B09468007BD8C4 /* GoogleService-Info.plist */,
 				88B5C03321AE6F71004EADFC /* AppDelegate.swift */,
-				88B5C03521AE6F71004EADFC /* FirstViewController.swift */,
-				88B5C03721AE6F71004EADFC /* SecondViewController.swift */,
 				88B5C03921AE6F71004EADFC /* Main.storyboard */,
-				88B5C03C21AE6F73004EADFC /* Assets.xcassets */,
 				88B5C03E21AE6F73004EADFC /* LaunchScreen.storyboard */,
+				8897461421B4712700DBF6F6 /* Images.xcassets */,
 				88B5C04121AE6F73004EADFC /* Info.plist */,
 			);
 			path = mojo_test;
@@ -294,8 +313,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				88B5C04021AE6F73004EADFC /* LaunchScreen.storyboard in Resources */,
+				8897461521B4712700DBF6F6 /* Images.xcassets in Resources */,
 				B24681A821B09468007BD8C4 /* GoogleService-Info.plist in Resources */,
-				88B5C03D21AE6F73004EADFC /* Assets.xcassets in Resources */,
 				88B5C03B21AE6F71004EADFC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,12 +379,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-mojo_test/Pods-mojo_test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,10 +421,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */,
 				8891671721B0F8E4000267F7 /* FourthViewController.swift in Sources */,
-				88B5C03821AE6F71004EADFC /* SecondViewController.swift in Sources */,
+				8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */,
+				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,
 				88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */,
-				88B5C03621AE6F71004EADFC /* FirstViewController.swift in Sources */,
 				8891671C21B1166B000267F7 /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
