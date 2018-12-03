@@ -8,7 +8,14 @@
 
 import UIKit
 
+// import firebase library
+import Firebase
+
+
 class HomeController: UIViewController {
+    
+    // get a reference to users
+    var remoteUsers: DatabaseReference!
     
     let cardsDeckView = UIView()
     let topStackView = TopNavigationStackView()
@@ -22,6 +29,12 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // configuration for firebase db
+        FirebaseApp.configure()
+        
+        // get a reference to users
+        remoteUsers = Database.database().reference().child("users");
+        
         view.addSubview(cardsDeckView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
         
@@ -34,6 +47,25 @@ class HomeController: UIViewController {
         buttonStackView.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 451 , width: 48, height: 451)
     
     }
+    
+    func addUser(){
+        //generating a new key inside users node
+        //and also getting the generated key
+        let key = remoteUsers.childByAutoId().key
+        
+        //creating artist with the given values
+        let newUser = ["id":key,
+                      "firstName": textFieldName.text! as String,
+                      "lastName": textFieldGenre.text! as String
+        ]
+        
+        //adding the artist inside the generated unique key
+        remoteUsers.child(key).setValue(newUser)
+        
+        //displaying message
+        labelMessage.text = "Thanks for joining"
+    }
+
     
     fileprivate func setupDummyCards() {
         users.forEach {(user) in
