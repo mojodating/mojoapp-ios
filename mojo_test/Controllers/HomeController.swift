@@ -20,6 +20,7 @@ class HomeController: UIViewController {
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.addSubview(cardsDeckView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
         
