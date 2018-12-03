@@ -25,23 +25,31 @@ class CardView: UIView {
     }
     
     @objc fileprivate func handlePan(gesture: UIPanGestureRecognizer) {
-        
-        let degrees: CGFloat = 15
+        let translation = gesture.translation(in: nil)
+        let degrees: CGFloat = translation.x / 20
         let angle = degrees * .pi / 180
         
         let rotationalTransformation = CGAffineTransform (rotationAngle: angle)
-        self.transform = rotationalTransformation
-        
-//        let translation = gesture.translation(in: nil)
-//        self.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+        self.transform = rotationalTransformation.translatedBy(x: translation.x, y: translation.y)
         
         switch gesture.state {
         case .changed:
             let translation = gesture.translation(in: nil)
             self.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
         case .ended:
+            
+            let shouldDismissCard = true
+            
             UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 1,initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-                self.transform = .identity
+                
+                if shouldDismissCard {
+                    
+                    let offScreenTransform = self.transform.translatedBy(x: 1000, y: 0)
+                    
+                    self.transform = offScreenTransform
+                } else {
+                   self.transform = .identity
+                }
             }) {(_) in                
             }
         default:
