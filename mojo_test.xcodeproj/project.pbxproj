@@ -23,6 +23,7 @@
 		97A73E34B5A7000F26E2048D /* Pods_mojo_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B92FAC75E98011E271C4321 /* Pods_mojo_test.framework */; };
 		A128C95BCCC156BF62989F3D /* Pods_mojo_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */; };
 		B24681A821B09468007BD8C4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B24681A721B09468007BD8C4 /* GoogleService-Info.plist */; };
+		B28074BD21B4C071008B55A1 /* FetchUsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28074BC21B4C071008B55A1 /* FetchUsersController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		88FAA89F8FB1B59CFC05C968 /* Pods-mojo_testUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_testUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_testUITests/Pods-mojo_testUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ABA6EAEA43B5A026719611F6 /* Pods-mojo_testUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_testUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_testUITests/Pods-mojo_testUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B24681A721B09468007BD8C4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B28074BC21B4C071008B55A1 /* FetchUsersController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUsersController.swift; sourceTree = "<group>"; };
 		B39CED528515D07CDD5588E9 /* Pods-mojo_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_test/Pods-mojo_test.debug.xcconfig"; sourceTree = "<group>"; };
 		F1A46049713FFD8EF38D2B91 /* Pods_mojo_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -116,6 +118,7 @@
 			children = (
 				8891671621B0F8E4000267F7 /* FourthViewController.swift */,
 				8891671B21B1166B000267F7 /* LoginController.swift */,
+				B28074BC21B4C071008B55A1 /* FetchUsersController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				8891671721B0F8E4000267F7 /* FourthViewController.swift in Sources */,
 				8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */,
 				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,
+				B28074BD21B4C071008B55A1 /* FetchUsersController.swift in Sources */,
 				88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */,
 				8891671C21B1166B000267F7 /* LoginController.swift in Sources */,
 			);
