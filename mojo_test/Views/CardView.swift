@@ -10,7 +10,8 @@ import UIKit
 
 class CardView: UIView {
     
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "5"))
+    let imageView = UIImageView(image: #imageLiteral(resourceName: "5"))
+    let informationLabel = UILabel()
     
     //configuration
     fileprivate let threshold: CGFloat = 100
@@ -19,12 +20,21 @@ class CardView: UIView {
         super.init(frame: frame)
         //custom code
         
+        imageView.contentMode = .scaleAspectFill
+        
         addSubview(imageView)
         imageView.fillSuperview()
         
+        addSubview(informationLabel) 
+        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 24, right: 24))
+        
+        informationLabel.text = "TEST NAME"
+        informationLabel.textColor = .white
+        informationLabel.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
+        informationLabel.numberOfLines = 0
+        
         let panGesture = UIPanGestureRecognizer (target: self, action: #selector(handlePan))
         addGestureRecognizer(panGesture)
-        
     }
     
     @objc fileprivate func handlePan(gesture: UIPanGestureRecognizer) {
@@ -51,19 +61,20 @@ class CardView: UIView {
     }
     
     fileprivate func handleEnded(_ gesture: UIPanGestureRecognizer) {
-        let shouldDismissCard = gesture.translation(in: nil).x > threshold
+        let shouldDismissCard = abs (gesture.translation(in: nil).x) > threshold
         
-        UIView.animate(withDuration: 0.75, delay: 0, usingSpringWithDamping: 0.6,initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6,initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
             if shouldDismissCard {
-                
-                self.frame = CGRect (x: 1000 , y: 0, width: self.frame.width, height: self.frame.height)
+                self.frame = CGRect (x: 600 , y: 0, width: self.frame.width, height: self.frame.height)
             } else {
                 self.transform = .identity
             }
         }) {(_) in
-//            print("completed, bring back")
                 self.transform = .identity
-            self.frame = CGRect (x: 0 , y: 0, width: self.superview!.frame.width, height: self.superview!.frame.height)
+            if shouldDismissCard {
+                self.removeFromSuperview()
+            }
+//            self.frame = CGRect (x: 0 , y: 0, width: self.superview!.frame.width, height: self.superview!.frame.height)
         }
     }
     
