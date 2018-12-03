@@ -20,7 +20,7 @@ class HomeBottomControlStackView: UIStackView {
         distribution = .equalSpacing
         alignment = .bottom
         heightAnchor.constraint(equalToConstant:
-            451).isActive = true
+            403).isActive = true
         
         ratingButton.setImage(#imageLiteral(resourceName: "rating-1").withRenderingMode(.alwaysOriginal), for: .normal)
         profileThumbnail.setImage(#imageLiteral(resourceName: "thumbnail-1").withRenderingMode(.alwaysOriginal), for: .normal)
