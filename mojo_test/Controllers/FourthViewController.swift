@@ -27,17 +27,7 @@ class FourthViewController: UIViewController {
         
         topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
         buttonStackView.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 451 , width: 48, height: 451)
-
-
-        
-//        let contentStackView = UIStackView(arrangedSubviews: [topStackView, buttonStackView])
-//            contentStackView.axis = .vertical
-//            contentStackView.distribution = .equalSpacing
-
-//            cardsDeckView.addSubview(contentStackView)
-//        contentStackView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor)
-        
-        
+    
     }
     
     fileprivate func setupDummyCards() {
