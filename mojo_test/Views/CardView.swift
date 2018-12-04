@@ -25,8 +25,22 @@ class CardView: UIView {
             }
             barsStackView.arrangedSubviews.first?.backgroundColor = .white
             
+            setupImageIndexObserver()
         }
     }
+    
+    fileprivate func setupImageIndexObserver() {
+        cardViewModel.imageIndexObserver = { (idx, image) in
+            print ("changing photo")
+            self.imageView.image = image
+                    
+            self.barsStackView.arrangedSubviews.forEach({(v) in
+                v.backgroundColor = self.barDeselectedColor
+            })
+            self.barsStackView.arrangedSubviews[idx].backgroundColor = .white
+        }
+    }
+            
     //encapsulation 
     fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "5"))
     fileprivate let gradientLayer = CAGradientLayer()
@@ -44,24 +58,19 @@ class CardView: UIView {
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
-    var imageIndex = 0
+//    var imageIndex = 0
     fileprivate let barDeselectedColor = UIColor(white: 0, alpha: 0.1)
     
     @objc fileprivate func handleTap(gesture:UITapGestureRecognizer){
         let tapLocation = gesture.location(in: nil)
         let shouldAdvanceNextPhoto = tapLocation.x > frame.width / 2 ? true : false
+        
         if shouldAdvanceNextPhoto {
-            imageIndex = min ( imageIndex + 1, cardViewModel.imageNames.count - 1)
+            cardViewModel.advanceToNextPhoto()
         } else {
-            imageIndex = max(0, imageIndex - 1)
+            cardViewModel.goToPreviousPhoto()
         }
         
-        let imageName = cardViewModel.imageNames [imageIndex]
-        imageView.image = UIImage(named: imageName)
-        barsStackView.arrangedSubviews.forEach{(v) in
-            v.backgroundColor = barDeselectedColor
-        }
-        barsStackView.arrangedSubviews[imageIndex].backgroundColor = .white
     }
     
     fileprivate func setupLayout() {
@@ -141,7 +150,7 @@ class CardView: UIView {
             if shouldDismissCard {
                 self.removeFromSuperview()
             }
-//            self.frame = CGRect (x: 0 , y: 0, width: self.superview!.frame.width, height: self.superview!.frame.height)
+
         }
     }
     

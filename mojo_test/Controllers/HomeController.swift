@@ -28,6 +28,8 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        topStackView.settingsButton.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
   
         view.addSubview(cardsDeckView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
@@ -40,6 +42,13 @@ class HomeController: UIViewController {
         topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
         buttonStackView.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 403 , width: 48, height: 403)
     
+    }
+    
+    @objc func handleSignup () {
+        print ("show registration page")
+        let registrationController = RegistrationController()
+        present(registrationController, animated: true)
+
     }
     
     fileprivate func setupDummyCards() {

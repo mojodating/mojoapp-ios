@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		82EF22D5FBC7403D2ED4E74A /* Pods_mojo_testUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1A46049713FFD8EF38D2B91 /* Pods_mojo_testUITests.framework */; };
 		8891671721B0F8E4000267F7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* HomeController.swift */; };
-		8891671C21B1166B000267F7 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671B21B1166B000267F7 /* LoginController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
 		8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */; };
@@ -18,6 +17,8 @@
 		8897461A21B4BBA200DBF6F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461921B4BBA200DBF6F6 /* User.swift */; };
 		8897461D21B4CA0C00DBF6F6 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461C21B4CA0C00DBF6F6 /* CardViewModel.swift */; };
 		8897461F21B5A88E00DBF6F6 /* InHouseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461E21B5A88E00DBF6F6 /* InHouseUser.swift */; };
+		8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462021B6FAD800DBF6F6 /* RegistrationController.swift */; };
+		8897462321B7057F00DBF6F6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462221B7057F00DBF6F6 /* CustomTextField.swift */; };
 		88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C03321AE6F71004EADFC /* AppDelegate.swift */; };
 		88B5C03B21AE6F71004EADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B5C03921AE6F71004EADFC /* Main.storyboard */; };
 		88B5C04021AE6F73004EADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B5C03E21AE6F73004EADFC /* LaunchScreen.storyboard */; };
@@ -52,7 +53,6 @@
 		76DF50AEDF6949CB364E6F93 /* Pods-mojo_testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_testTests/Pods-mojo_testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8891671621B0F8E4000267F7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
-		8891671B21B1166B000267F7 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
 		8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
@@ -61,6 +61,8 @@
 		8897461921B4BBA200DBF6F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8897461C21B4CA0C00DBF6F6 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
 		8897461E21B5A88E00DBF6F6 /* InHouseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InHouseUser.swift; sourceTree = "<group>"; };
+		8897462021B6FAD800DBF6F6 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
+		8897462221B7057F00DBF6F6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		88B5C03021AE6F71004EADFC /* mojo_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mojo_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B5C03321AE6F71004EADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B5C03A21AE6F71004EADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				8891671621B0F8E4000267F7 /* HomeController.swift */,
-				8891671B21B1166B000267F7 /* LoginController.swift */,
+				8897462021B6FAD800DBF6F6 /* RegistrationController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -140,6 +142,7 @@
 				8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */,
 				8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */,
 				8897461621B47C8C00DBF6F6 /* CardView.swift */,
+				8897462221B7057F00DBF6F6 /* CustomTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -455,9 +458,10 @@
 				8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */,
 				8897461A21B4BBA200DBF6F6 /* User.swift in Sources */,
 				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,
+				8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */,
 				8897461F21B5A88E00DBF6F6 /* InHouseUser.swift in Sources */,
+				8897462321B7057F00DBF6F6 /* CustomTextField.swift in Sources */,
 				88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */,
-				8891671C21B1166B000267F7 /* LoginController.swift in Sources */,
 				8897461D21B4CA0C00DBF6F6 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
