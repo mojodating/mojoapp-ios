@@ -16,9 +16,9 @@ class HomeController: UIViewController {
     
     let cardViewModels :  [CardViewModel] = {
         let producers = [
-            User(name: "Peter Dinklage", age: 40, profession: "hand of the King", imageName: "4"),
-            User(name: "Magic Max", age: 23, profession: "dancer", imageName: "2"),
-            InHouseUser(name: "Jordan Wolf", age: 46, profession: "Wolf in Wall Street", imageName: "1")
+            User(name: "Peter Dinklage", age: 40, profession: "hand of the King", imageNames: ["4", "4-2", "4-3"]),
+            User(name: "Magic Max", age: 23, profession: "dancer", imageNames: ["2"]),
+            InHouseUser(name: "Jordan Wolf", age: 46, profession: "Wolf in Wall Street", imageNames: "1")
         ] as [ProducesCardViewModel]
         
         let viewModels = producers.map({return $0.toCardViewModel()})
@@ -28,7 +28,7 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+  
         view.addSubview(cardsDeckView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
         
