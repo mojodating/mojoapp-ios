@@ -28,6 +28,7 @@ class RegistrationController: UIViewController {
         let tf = CustomTextField(padding: 16)
         tf.placeholder = "Enter full name"
         tf.backgroundColor = .white
+        tf.addTarget( self, action: #selector(handleTextChange), for: .editingChanged)
         return tf
     } ()
     
@@ -36,6 +37,7 @@ class RegistrationController: UIViewController {
         tf.placeholder = "Enter email"
         tf.keyboardType = .emailAddress
         tf.backgroundColor = .white
+        tf.addTarget( self, action: #selector(handleTextChange), for: .editingChanged)
         return tf
     }()
     
@@ -44,8 +46,24 @@ class RegistrationController: UIViewController {
         tf.placeholder = "Set up a password"
         tf.isSecureTextEntry = true
         tf.backgroundColor = .white
+        tf.addTarget( self, action: #selector(handleTextChange), for: .editingChanged)
         return tf
     }()
+    
+    @objc fileprivate func handleTextChange(textField: UITextField) {
+        if textField == fullNameTextField {
+            print ("changing")
+            registrationViewModel.fullName = textField.text
+        } else if textField == emailTextField {
+            registrationViewModel.email = textField.text
+        } else {
+            registrationViewModel.password = textField.text
+        }
+        
+
+
+        
+    }
     
     let registerButton: UIButton = {
         let button = UIButton(type: .system)
@@ -53,6 +71,7 @@ class RegistrationController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         button.backgroundColor = #colorLiteral(red: 1, green: 0.3299229163, blue: 0.6192239214, alpha: 1)
+        button.isEnabled = false
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.layer.cornerRadius = 4
         return button
@@ -67,10 +86,28 @@ class RegistrationController: UIViewController {
         setupLayout()
         setupNotificationObservers()
         setupTapGesture()
+        setupRegistrationViewModelObserver()
         
     }
     
     //Mark:- private
+    
+    let registrationViewModel = RegistrationViewModel()
+    
+    fileprivate func setupRegistrationViewModelObserver() {
+        registrationViewModel.isFormValidObserver = { [unowned self](isFormValid) in
+            print(isFormValid)
+            
+            self.registerButton.isEnabled = true
+            if isFormValid {
+                
+            } else {
+                // put invalid notification here
+                
+            }
+            
+        }
+    }
     
     fileprivate func setupTapGesture() {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapDismiss)))
