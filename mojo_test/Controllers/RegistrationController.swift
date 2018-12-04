@@ -59,10 +59,6 @@ class RegistrationController: UIViewController {
         } else {
             registrationViewModel.password = textField.text
         }
-        
-
-
-        
     }
     
     let registerButton: UIButton = {
@@ -74,8 +70,13 @@ class RegistrationController: UIViewController {
         button.isEnabled = false
         button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.layer.cornerRadius = 4
+        button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
+    
+    @objc fileprivate func handleRegister() {
+        print ("register user to firebase auth")
+    }
     
     
     override func viewDidLoad() {
