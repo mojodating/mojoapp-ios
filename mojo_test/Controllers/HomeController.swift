@@ -7,48 +7,47 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeController: UIViewController {
     
     let cardsDeckView = UIView()
+    var cardViewModels = [CardViewModel]() // empty array
     let topStackView = TopNavigationStackView()
     let buttonStackView = HomeBottomControlStackView()
     
-    let cardViewModels :  [CardViewModel] = {
-        let producers = [
-            User(name: "Peter Dinklage", age: 40, profession: "hand of the King", imageNames: ["4", "4-2", "4-3"]),
-            User(name: "Magic Max", age: 23, profession: "dancer", imageNames: ["2"]),
-            InHouseUser(name: "Jordan Wolf", age: 46, profession: "Wolf in Wall Street", imageNames: "1")
-        ] as [ProducesCardViewModel]
-        
-        let viewModels = producers.map({return $0.toCardViewModel()})
-        return viewModels
-    }()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        topStackView.settingsButton.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
   
+        view.backgroundColor = .white
         view.addSubview(cardsDeckView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
         
         setupDummyCards()
-        
-        cardsDeckView.addSubview(topStackView)
-        cardsDeckView.addSubview(buttonStackView)
-        
-        topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
-        buttonStackView.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 403 , width: 48, height: 403)
-    
+        fetchUsersFromFirestore()
+
     }
     
+    fileprivate func fetchUsersFromFirestore() {
+        Firestore.firestore().collection("users").getDocuments { (snapshot, err) in
+            if let err = err {
+                print( "fail to fetch users", err)
+                return
+            }
+            
+            snapshot?.documents.forEach({ (documentSnapshot) in
+                let userDictionary = documentSnapshot.data()
+                let user = User(dictionary: userDictionary)
+                self.cardViewModels.append(user.toCardViewModel())
+        })
+        self.setupDummyCards()
+    }
+}
+
     @objc func handleSignup () {
         print ("show registration page")
         let registrationController = RegistrationController()
         present(registrationController, animated: true)
-
     }
     
     fileprivate func setupDummyCards() {
@@ -57,6 +56,13 @@ class HomeController: UIViewController {
             cardView.cardViewModel = cardVM
             cardsDeckView.addSubview(cardView)
             cardView.fillSuperview ()
+            cardView.addSubview(topStackView)
+            cardView.addSubview(buttonStackView)
+            
+            topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
+            buttonStackView.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 403 , width: 48, height: 403)
+            
+            topStackView.settingsButton.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         }
         
     }
