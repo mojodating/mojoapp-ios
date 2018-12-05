@@ -10,6 +10,22 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
+extension RegistrationController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as? UIImage
+        registrationViewModel.bindableImage.value = image
+        
+//        registrationViewModel.image = image
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
+    }
+}
+
 class RegistrationController: UIViewController {
     
     //UI components
@@ -23,8 +39,18 @@ class RegistrationController: UIViewController {
         button.layer.cornerRadius = 8
         button.layer.borderWidth = 1
         button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside )
+        button.imageView?.contentMode = .scaleAspectFill
+        button.clipsToBounds = true
         return button
     } ()
+    
+    @objc fileprivate func handleSelectPhoto() {
+        print("select photo")
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true)
+    }
     
     let fullNameTextField: CustomTextField = {
         let tf = CustomTextField(padding: 16)
@@ -119,17 +145,14 @@ class RegistrationController: UIViewController {
     let registrationViewModel = RegistrationViewModel()
     
     fileprivate func setupRegistrationViewModelObserver() {
-        registrationViewModel.isFormValidObserver = { [unowned self](isFormValid) in
-            print(isFormValid)
-            
-            self.registerButton.isEnabled = true
-            if isFormValid {
-                
-            } else {
-                // put invalid notification here
-                
-            }
-            
+        
+    registrationViewModel.bindableIsFormValid.bind { [unowned self]
+        (isFormValid) in
+        self.registerButton.isEnabled = true
+    }
+        
+        registrationViewModel.bindableImage.bind {[unowned self] (img) in
+            self.selectPhotoButton.setImage(img?.withRenderingMode(.alwaysOriginal), for: .normal)
         }
     }
     
