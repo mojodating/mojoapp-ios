@@ -7,12 +7,20 @@
 //
 
 import UIKit
-let ratingButton = UIButton(type: .system)
-let profileThumbnail = UIButton(type: .system)
-let chatButton = UIButton(type: .system)
-let reviewButton = UIButton(type: .system)
 
 class HomeBottomControlStackView: UIStackView {
+    
+    static func createButton(image: UIImage) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.imageView?.contentMode = .scaleAspectFill
+        return button
+    }
+    
+    let ratingButton = createButton(image:#imageLiteral(resourceName: "rating-1"))
+    let profileThumbnail = createButton(image: #imageLiteral(resourceName: "thumbnail-1"))
+    let chatButton = createButton(image: #imageLiteral(resourceName: "chatbutton-1"))
+    let refreshButton = createButton(image: #imageLiteral(resourceName: "review-1"))
     
     override init (frame: CGRect) {
         super.init(frame:frame)
@@ -21,14 +29,10 @@ class HomeBottomControlStackView: UIStackView {
         alignment = .bottom
         heightAnchor.constraint(equalToConstant:
             403).isActive = true
+
         
-        ratingButton.setImage(#imageLiteral(resourceName: "rating-1").withRenderingMode(.alwaysOriginal), for: .normal)
-        profileThumbnail.setImage(#imageLiteral(resourceName: "thumbnail-1").withRenderingMode(.alwaysOriginal), for: .normal)
-        chatButton.setImage(#imageLiteral(resourceName: "chatbutton-1").withRenderingMode(.alwaysOriginal), for: .normal)
-        reviewButton.setImage(#imageLiteral(resourceName: "review-1").withRenderingMode(.alwaysOriginal), for: .normal)
-        
-        [ratingButton, profileThumbnail, chatButton, reviewButton].forEach{(v) in
-            addArrangedSubview(v)
+        [ratingButton, profileThumbnail, chatButton, refreshButton].forEach{(button) in
+            self.addArrangedSubview(button)
         }
         
         isLayoutMarginsRelativeArrangement = true

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8891671721B0F8E4000267F7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* HomeController.swift */; };
+		8891671721B0F8E4000267F7 /*  HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /*  HomeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
 		8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */; };
@@ -50,7 +50,7 @@
 		3A9154023E1BDE2B631D4978 /* Pods-mojo_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_test.release.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_test/Pods-mojo_test.release.xcconfig"; sourceTree = "<group>"; };
 		3B92FAC75E98011E271C4321 /* Pods_mojo_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8891671621B0F8E4000267F7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		8891671621B0F8E4000267F7 /*  HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " HomeController.swift"; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
 		8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		8891671821B0FA0A000267F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8891671621B0F8E4000267F7 /* HomeController.swift */,
+				8891671621B0F8E4000267F7 /*  HomeController.swift */,
 				8897462021B6FAD800DBF6F6 /* RegistrationController.swift */,
 				8897462621B7325300DBF6F6 /* RegistrationViewModel.swift */,
 				8897462A21B7526000DBF6F6 /* Bindable.swift */,
@@ -430,7 +430,7 @@
 				8897461721B47C8C00DBF6F6 /* CardView.swift in Sources */,
 				8897462721B7325300DBF6F6 /* RegistrationViewModel.swift in Sources */,
 				8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */,
-				8891671721B0F8E4000267F7 /* HomeController.swift in Sources */,
+				8891671721B0F8E4000267F7 /*  HomeController.swift in Sources */,
 				8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */,
 				8897461A21B4BBA200DBF6F6 /* User.swift in Sources */,
 				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,
