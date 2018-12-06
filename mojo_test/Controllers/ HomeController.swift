@@ -70,7 +70,6 @@ class HomeController: UIViewController {
                 self.cardViewModels.append(user.toCardViewModel())
                 self.lastFetchedUser = user
                 self.setupCardFromUser(user: user)
-                
         })
 
     }
@@ -86,8 +85,9 @@ class HomeController: UIViewController {
 
     @objc func handleSignup () {
         print ("show registration page")
-        let registrationController = RegistrationController()
-        present(registrationController, animated: true)
+        let settingsController = SettingsController()
+        let navController = UINavigationController(rootViewController: settingsController)
+        present(navController, animated: true)
     }
     
     fileprivate func setupFirestoreUserCards() {
