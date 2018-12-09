@@ -23,6 +23,9 @@
 		8897462B21B7526000DBF6F6 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462A21B7526000DBF6F6 /* Bindable.swift */; };
 		8897462F21B8C3B500DBF6F6 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462E21B8C3B500DBF6F6 /* SettingsController.swift */; };
 		8897463121B8E11C00DBF6F6 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463021B8E11C00DBF6F6 /* SettingsCell.swift */; };
+		8897463321B9F55700DBF6F6 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463221B9F55700DBF6F6 /* AgeRangeCell.swift */; };
+		8897463621BDB24E00DBF6F6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463521BDB24E00DBF6F6 /* LoginController.swift */; };
+		8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */; };
 		88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B5C03321AE6F71004EADFC /* AppDelegate.swift */; };
 		88B5C03B21AE6F71004EADFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B5C03921AE6F71004EADFC /* Main.storyboard */; };
 		88B5C04021AE6F73004EADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88B5C03E21AE6F73004EADFC /* LaunchScreen.storyboard */; };
@@ -68,6 +71,9 @@
 		8897462A21B7526000DBF6F6 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		8897462E21B8C3B500DBF6F6 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		8897463021B8E11C00DBF6F6 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		8897463221B9F55700DBF6F6 /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
+		8897463521BDB24E00DBF6F6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		88B5C03021AE6F71004EADFC /* mojo_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mojo_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88B5C03321AE6F71004EADFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88B5C03A21AE6F71004EADFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 		8891671821B0FA0A000267F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8897463421BDB15E00DBF6F6 /* Login */,
 				8891671621B0F8E4000267F7 /*  HomeController.swift */,
 				8897462021B6FAD800DBF6F6 /* RegistrationController.swift */,
 				8897462621B7325300DBF6F6 /* RegistrationViewModel.swift */,
@@ -147,6 +154,7 @@
 				8897461621B47C8C00DBF6F6 /* CardView.swift */,
 				8897462221B7057F00DBF6F6 /* CustomTextField.swift */,
 				8897463021B8E11C00DBF6F6 /* SettingsCell.swift */,
+				8897463221B9F55700DBF6F6 /* AgeRangeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -166,6 +174,15 @@
 				8897461C21B4CA0C00DBF6F6 /* CardViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8897463421BDB15E00DBF6F6 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8897463521BDB24E00DBF6F6 /* LoginController.swift */,
+				8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		88B5C02721AE6F71004EADFC = {
@@ -439,9 +456,12 @@
 				8891671721B0F8E4000267F7 /*  HomeController.swift in Sources */,
 				8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */,
 				8897462F21B8C3B500DBF6F6 /* SettingsController.swift in Sources */,
+				8897463321B9F55700DBF6F6 /* AgeRangeCell.swift in Sources */,
+				8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */,
 				8897461A21B4BBA200DBF6F6 /* User.swift in Sources */,
 				8897463121B8E11C00DBF6F6 /* SettingsCell.swift in Sources */,
 				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,
+				8897463621BDB24E00DBF6F6 /* LoginController.swift in Sources */,
 				8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */,
 				8897461F21B5A88E00DBF6F6 /* InHouseUser.swift in Sources */,
 				8897462321B7057F00DBF6F6 /* CustomTextField.swift in Sources */,
