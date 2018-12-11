@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
-class HomeController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate {
+class HomeController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate, CardViewDelegate {
     
     
     let cardsDeckView = UIView()
@@ -24,7 +24,7 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         view.backgroundColor = .white
         view.addSubview(cardsDeckView)
         view.addSubview(topStackView)
-        view.addSubview(bottomControls)
+//        view.addSubview(bottomControls)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
 //
 //        cardsDeckView.addSubview(topStackView)
@@ -33,16 +33,14 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
         bottomControls.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 403 , width: 48, height: 403)
         
-        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
+//        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         
         view.bringSubviewToFront(topStackView)
-        view.bringSubviewToFront(bottomControls)
+//        view.bringSubviewToFront(bottomControls)
         view.sendSubviewToBack(cardsDeckView)
         
         topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
         fetchCurrentUser()
-//        setupFirestoreUserCards()
-//        fetchUsersFromFirestore()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -89,11 +87,6 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         
         let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
         let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
-        
-//        let hud = JGProgressHUD (style: .dark)
-//        hud.textLabel.text = "Fetching Users"
-//        hud.show(in:view)
-        // introduce pagination here
   
 //        let query = Firestore.firestore().collection("users").order(by:"uid").start(after: [lastFetchedUser?.uid ?? ""]).limit(to:2)
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
@@ -108,14 +101,9 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
-                
                 if user.uid != Auth.auth().currentUser?.uid {
                     self.setupCardFromUser(user: user)
                 }
-                
-//                self.cardViewModels.append(user.toCardViewModel())
-//                self.lastFetchedUser = user
-//                self.setupCardFromUser(user: user)
         })
 
     }
@@ -123,10 +111,16 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     
     fileprivate func setupCardFromUser(user: User) {
         let cardView = CardView(frame: .zero)
+        cardView.delegate = self
         cardView.cardViewModel = user.toCardViewModel()
         cardsDeckView.addSubview(cardView)
         cardView.fillSuperview()
         cardsDeckView.sendSubviewToBack(cardView)
+    }
+    
+    func didTapMoreInfo() {
+        let chatRequestController = ChatRequestController()
+        present(chatRequestController, animated: true)
     }
 
     @objc func handleSettings () {

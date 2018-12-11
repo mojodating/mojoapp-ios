@@ -9,7 +9,13 @@
 import UIKit
 import SDWebImage
 
+protocol CardViewDelegate {
+    func didTapMoreInfo()
+}
+
 class CardView: UIView {
+    
+    var delegate: CardViewDelegate?
     
     var cardViewModel: CardViewModel! {
         didSet {
@@ -79,6 +85,20 @@ class CardView: UIView {
         } else {
             cardViewModel.goToPreviousPhoto()
         }
+    }
+    
+    fileprivate let chatButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "chatbutton-1").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.addTarget(self, action: #selector(handlChatRequest), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc fileprivate func handlChatRequest() {
+        print("Present chat request window")
+        //use a delegate to present
+        delegate?.didTapMoreInfo()
+        
         
     }
     
@@ -97,6 +117,9 @@ class CardView: UIView {
         informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 24, right: 24))
         informationLabel.textColor = .white
         informationLabel.numberOfLines = 0
+        
+        addSubview(chatButton)
+        chatButton.anchor(top: nil, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 16), size: .init(width: 44, height: 44))
     }
     
     let barsStackView = UIStackView()
