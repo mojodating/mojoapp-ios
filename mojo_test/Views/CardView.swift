@@ -13,7 +13,7 @@ class CardView: UIView {
     
     var cardViewModel: CardViewModel! {
         didSet {
-            let imageName = cardViewModel.imageNames.first ?? ""
+            let imageName = cardViewModel.imageUrls.first ?? ""
             //load our image using url instead
             if let url = URL(string: imageName) {
                 imageView.sd_setImage(with: url)
@@ -24,7 +24,7 @@ class CardView: UIView {
             informationLabel.attributedText = cardViewModel.attributedString
             informationLabel.textAlignment = cardViewModel.textAlignment
             
-            (0..<cardViewModel.imageNames.count).forEach{ (_) in
+            (0..<cardViewModel.imageUrls.count).forEach{ (_) in
                 let barView = UIView()
                 barView.backgroundColor = barDeselectedColor
                 barsStackView.addArrangedSubview(barView)

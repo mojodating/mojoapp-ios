@@ -23,18 +23,21 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     
         view.backgroundColor = .white
         view.addSubview(cardsDeckView)
+        view.addSubview(topStackView)
+        view.addSubview(bottomControls)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
-        
-        cardsDeckView.addSubview(topStackView)
-        cardsDeckView.addSubview(bottomControls)
+//
+//        cardsDeckView.addSubview(topStackView)
+//        cardsDeckView.addSubview(bottomControls)
         
         topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
         bottomControls.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 403 , width: 48, height: 403)
         
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         
-        cardsDeckView.bringSubviewToFront(topStackView)
-        cardsDeckView.bringSubviewToFront(bottomControls)
+        view.bringSubviewToFront(topStackView)
+        view.bringSubviewToFront(bottomControls)
+        view.sendSubviewToBack(cardsDeckView)
         
         topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
         fetchCurrentUser()
@@ -87,9 +90,9 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
         let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
         
-        let hud = JGProgressHUD (style: .dark)
-        hud.textLabel.text = "Fetching Users"
-        hud.show(in:view)
+//        let hud = JGProgressHUD (style: .dark)
+//        hud.textLabel.text = "Fetching Users"
+//        hud.show(in:view)
         // introduce pagination here
   
 //        let query = Firestore.firestore().collection("users").order(by:"uid").start(after: [lastFetchedUser?.uid ?? ""]).limit(to:2)
@@ -104,10 +107,15 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
             
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
-                let user = User(dictionary: userDictionary) 
-                self.cardViewModels.append(user.toCardViewModel())
-                self.lastFetchedUser = user
-                self.setupCardFromUser(user: user)
+                let user = User(dictionary: userDictionary)
+                
+                if user.uid != Auth.auth().currentUser?.uid {
+                    self.setupCardFromUser(user: user)
+                }
+                
+//                self.cardViewModels.append(user.toCardViewModel())
+//                self.lastFetchedUser = user
+//                self.setupCardFromUser(user: user)
         })
 
     }
@@ -134,15 +142,15 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         fetchCurrentUser()
     }
     
-    fileprivate func setupFirestoreUserCards() {
-        cardViewModels.forEach {(cardVM) in
-            let cardView = CardView(frame: .zero)
-            cardView.cardViewModel = cardVM
-            cardsDeckView.addSubview(cardView)
-            cardView.fillSuperview()
-            cardsDeckView.sendSubviewToBack(cardView)
-        }
-    }
+//    fileprivate func setupFirestoreUserCards() {
+//        cardViewModels.forEach {(cardVM) in
+//            let cardView = CardView(frame: .zero)
+//            cardView.cardViewModel = cardVM
+//            cardsDeckView.addSubview(cardView)
+//            cardView.fillSuperview()
+//            cardsDeckView.sendSubviewToBack(cardView)
+//        }
+//    }
 
 }
         
