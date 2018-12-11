@@ -65,7 +65,7 @@ class LoginController: UIViewController {
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-        button.backgroundColor = #colorLiteral(red: 1, green: 0.3299229163, blue: 0.6192239214, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         button.isEnabled = false
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         button.layer.cornerRadius = 8
@@ -98,7 +98,7 @@ class LoginController: UIViewController {
     }()
     
     @objc fileprivate func handleBack() {
-            navigationController?.popViewController(animated: true)
+        navigationController?.popViewController(animated: true)
     }
         
     override func viewDidLoad() {
@@ -117,6 +117,7 @@ class LoginController: UIViewController {
         loginViewModel.isFormValid.bind { [unowned self] (isFormValid) in
             guard let isFormValid = isFormValid else {return}
             self.loginButton.isEnabled = isFormValid
+            self.loginButton.backgroundColor = isFormValid ? #colorLiteral(red: 0.8235294118, green: 0, blue: 0.3254901961, alpha: 1) : .lightGray
         }
         loginViewModel.isLoggingIn.bind { [unowned self] (isRegistering) in
             if isRegistering == true {

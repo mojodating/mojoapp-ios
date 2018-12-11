@@ -17,6 +17,7 @@ class CardView: UIView {
             //load our image using url instead
             if let url = URL(string: imageName) {
                 imageView.sd_setImage(with: url)
+                imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "logo-3x"), options: .continueInBackground)
             
             }
             
@@ -36,12 +37,12 @@ class CardView: UIView {
     
     fileprivate func setupImageIndexObserver() {
         cardViewModel.imageIndexObserver = {[weak self] (idx, imageUrl) in
-            print ("changing photo")
+            print ("changing photo from view model")
             if let url = URL(string: imageUrl ?? "") {
-                self?.imageView.sd_setImage(with: url)
+                self?.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "logo-3x"), options: .continueInBackground)
             }
                     
-            self?.barsStackView.arrangedSubviews.forEach({(v) in
+            self?.barsStackView.arrangedSubviews.forEach({ (v) in
                 v.backgroundColor = self?.barDeselectedColor
             })
             self?.barsStackView.arrangedSubviews[idx].backgroundColor = .white
@@ -69,6 +70,7 @@ class CardView: UIView {
     fileprivate let barDeselectedColor = UIColor(white: 0, alpha: 0.1)
     
     @objc fileprivate func handleTap(gesture:UITapGestureRecognizer){
+        print("Handling tap and cycling photos")
         let tapLocation = gesture.location(in: nil)
         let shouldAdvanceNextPhoto = tapLocation.x > frame.width / 2 ? true : false
         

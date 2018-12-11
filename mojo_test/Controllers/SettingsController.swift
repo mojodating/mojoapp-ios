@@ -104,7 +104,15 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     var user: User?
     
     fileprivate func fetchCurrentUser() {
-        //fetch users
+        Firestore.firestore().fetchCurrentUser { (user, err) in
+            if let err = err {
+                print("Failed to fetch user:", err)
+                return
+            }
+            self.user = user
+            self.loadUserPhotos()
+            self.tableView.reloadData()
+        }
     
     }
     
@@ -201,21 +209,39 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     @objc fileprivate func handleMinAgeChange(slider: UISlider) {
 //        print(slider.value)
         //update the minLabel in AgeRangeCell
-        let indexPath = IndexPath(row:0, section: 5)
-        let ageRangeCell = tableView.cellForRow(at: indexPath) as! AgeRangeCell
-        ageRangeCell.minLabel.text = "Min: \(Int(slider.value))"
+//        let indexPath = IndexPath(row:0, section: 5)
+//        let ageRangeCell = tableView.cellForRow(at: indexPath) as! AgeRangeCell
+//        ageRangeCell.minLabel.text = "Min: \(Int(slider.value))"
         
-        self.user?.minSeekingAge = Int(slider.value)
+//        self.user?.minSeekingAge = Int(slider.value)
+        evaluateMinMax()
     }
     
     @objc fileprivate func handleMaxAgeChange(slider: UISlider) {
-        print(slider.value)
-        let indexPath = IndexPath(row:0, section: 5)
-        let ageRangeCell = tableView.cellForRow(at: indexPath) as! AgeRangeCell
-        ageRangeCell.maxLabel.text = "Max: \(Int(slider.value))"
-        
-        self.user?.maxSeekingAge = Int(slider.value)
+//        print(slider.value)
+//        let indexPath = IndexPath(row:0, section: 5)
+//        let ageRangeCell = tableView.cellForRow(at: indexPath) as! AgeRangeCell
+//        ageRangeCell.maxLabel.text = "Max: \(Int(slider.value))"
+//
+//        self.user?.maxSeekingAge = Int(slider.value)
+        evaluateMinMax()
     }
+    
+    fileprivate func evaluateMinMax() {
+        guard let ageRangeCell = tableView.cellForRow(at: [5, 0]) as? AgeRangeCell else { return }
+        let minValue = Int(ageRangeCell.minSlider.value)
+        var maxValue = Int(ageRangeCell.maxSlider.value)
+        maxValue = max(minValue, maxValue)
+        ageRangeCell.maxSlider.value = Float(maxValue)
+        ageRangeCell.minLabel.text = "Min \(minValue)"
+        ageRangeCell.maxLabel.text = "Max \(maxValue)"
+        
+        user?.minSeekingAge = minValue
+        user?.maxSeekingAge = maxValue 
+    }
+    
+    static let defaultMinSeekingAge = 18
+    static let defaultMaxSeekingAge = 50
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -226,14 +252,16 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
             ageRangeCell.maxSlider.addTarget(self, action: #selector(handleMaxAgeChange), for: .valueChanged)
             
             // we need to set up the labels on our cell here
-            ageRangeCell.minLabel.text = "Min \(user?.minSeekingAge ?? 18)"
-            ageRangeCell.maxLabel.text = "Max \(user?.maxSeekingAge ?? 50)"
+            let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
+            let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
+            
+            ageRangeCell.minLabel.text = "Min \(minAge)"
+            ageRangeCell.maxLabel.text = "Max \(maxAge)"
+            ageRangeCell.minSlider.value = Float(minAge)
+            ageRangeCell.maxSlider.value = Float(maxAge)
             return ageRangeCell
         }
-        
-        
-        
-        
+
         let cell = SettingsCell(style: .default, reuseIdentifier: nil)
         
         switch indexPath.section {
@@ -306,8 +334,8 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
         hud.show(in: view)
         
         Firestore.firestore().collection("users").document(uid).setData(docData) {
-            (err)
-            in
+            (err) in
+            hud.dismiss()
             if let err = err {
                 print("Failed to save user settings", err)
                 return

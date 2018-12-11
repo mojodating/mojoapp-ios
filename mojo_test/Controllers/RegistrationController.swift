@@ -15,6 +15,7 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as? UIImage
         registrationViewModel.bindableImage.value = image
+        registrationViewModel.checkFormValidity()
         
 //        registrationViewModel.image = image
         dismiss(animated: true, completion: nil)
@@ -27,6 +28,8 @@ extension RegistrationController: UIImagePickerControllerDelegate, UINavigationC
 }
 
 class RegistrationController: UIViewController {
+    
+    var delegate: LoginControllerDelegate?
     
     //UI components
     let selectPhotoButton: UIButton = {
@@ -106,14 +109,17 @@ class RegistrationController: UIViewController {
     
     @objc fileprivate func handleRegister() {
         self.handleTapDismiss()
-
-        registrationViewModel.performRegistration { (err) in
+        registrationViewModel.performRegistration { [weak self] (err) in
             if let err = err {
-                self.showHUDWithError(error: err)
+                self?.showHUDWithError(error: err)
                 return
             }
             
             print("Finished registering")
+            
+            self?.dismiss(animated: true, completion: {
+                self?.delegate?.didFinishLoggingIn()
+            })
         }
     }
     
@@ -222,6 +228,7 @@ class RegistrationController: UIViewController {
     
     @objc fileprivate func handleGoToLogin() {
         let loginController = LoginController()
+        loginController.delegate = delegate
         navigationController?.pushViewController(loginController, animated: true)
         
     }
