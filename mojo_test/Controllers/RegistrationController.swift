@@ -38,7 +38,6 @@ class RegistrationController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
         button.backgroundColor = .white
         button.setTitleColor(.black, for: .normal)
-        button.heightAnchor.constraint(equalToConstant: 300).isActive = true
         button.layer.cornerRadius = 8
         button.layer.borderWidth = 1
         button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
@@ -48,12 +47,16 @@ class RegistrationController: UIViewController {
         return button
     } ()
     
-    @objc fileprivate func handleSelectPhoto() {
+    @objc func handleSelectPhoto() {
         print("select photo")
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
         present(imagePickerController, animated: true)
     }
+    
+    lazy var selectPhotoButtonWidthAnchor = selectPhotoButton.widthAnchor.constraint(equalToConstant: 300)
+    lazy var selectPhotoButtonHeightAnchor = selectPhotoButton.heightAnchor.constraint(equalToConstant: 300)
+    
     
     let fullNameTextField: CustomTextField = {
         let tf = CustomTextField(padding: 16)

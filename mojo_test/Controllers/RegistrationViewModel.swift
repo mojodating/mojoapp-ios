@@ -56,6 +56,7 @@ class RegistrationViewModel {
                 completion(err)
                 return // bail
             }
+            
             print ("Fnished uploading image to storage")
             ref.downloadURL(completion: {(url, err) in
                 if let err = err {
