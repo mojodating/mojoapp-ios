@@ -33,7 +33,7 @@ struct User: ProducesCardViewModel {
         self.imageUrl1 = dictionary["imageUrl3"] as? String
         self.uid = dictionary["uid"] as? String ?? ""
         self.minSeekingAge = dictionary["minSeekingAge"] as? Int
-        self.minSeekingAge = dictionary["maxSeekingAge"] as? Int
+        self.maxSeekingAge = dictionary["maxSeekingAge"] as? Int
     }
     
     func toCardViewModel() -> CardViewModel{
