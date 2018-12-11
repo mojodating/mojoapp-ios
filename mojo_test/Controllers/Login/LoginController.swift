@@ -56,7 +56,7 @@ class LoginController: UIViewController {
         if textField == emailTextField {
             loginViewModel.email = textField.text
         } else {
-            loginViewModel.email = textField.text
+            loginViewModel.password = textField.text
         }
     }
     
@@ -65,7 +65,7 @@ class LoginController: UIViewController {
         button.setTitle("Login", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-        button.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
         button.isEnabled = false
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
         button.layer.cornerRadius = 8
@@ -115,9 +115,10 @@ class LoginController: UIViewController {
     
     fileprivate func setupBindables() {
         loginViewModel.isFormValid.bind { [unowned self] (isFormValid) in
-            guard let isFormValid = isFormValid else {return}
+            guard let isFormValid = isFormValid else { return }
             self.loginButton.isEnabled = isFormValid
             self.loginButton.backgroundColor = isFormValid ? #colorLiteral(red: 0.8235294118, green: 0, blue: 0.3254901961, alpha: 1) : .lightGray
+            self.loginButton.setTitleColor(isFormValid ? .white : .gray, for: .normal)
         }
         loginViewModel.isLoggingIn.bind { [unowned self] (isRegistering) in
             if isRegistering == true {

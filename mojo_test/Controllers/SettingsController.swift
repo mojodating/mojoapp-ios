@@ -43,7 +43,7 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
         dismiss(animated: true)
         
         let filename = UUID().uuidString
-        let ref = Storage.storage().reference(withPath: "/iamge/\(filename)")
+        let ref = Storage.storage().reference(withPath: "/image/\(filename)")
         guard let uploadData = selectedImage?.jpegData(compressionQuality: 0.75) else {
             return
         }
@@ -314,15 +314,15 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     }
     
     @objc fileprivate func handleSave() {
-        print("saving our our settings")
+        print("saving our settings")
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let docData: [String: Any] = [
             "uid": uid,
-            "fullName": user?.name ?? "",
+            "fullname": user?.name ?? "",
             "age": user?.age ?? -1,
-            "iamgeUrl1": user?.imageUrl1 ?? "",
-            "iamgeUrl2": user?.imageUrl2 ?? "",
-            "iamgeUrl3": user?.imageUrl3 ?? "",
+            "imageUrl1": user?.imageUrl1 ?? "",
+            "imageUrl2": user?.imageUrl2 ?? "",
+            "imageUrl3": user?.imageUrl3 ?? "",
             "profession": user?.profession ?? "",
             "minSeekingAge": user?.minSeekingAge ?? -1,
             "maxSeekingAge":user?.maxSeekingAge ?? -1
@@ -330,7 +330,7 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
         ]
         
         let hud = JGProgressHUD(style: .dark)
-        hud.textLabel.text = "Saving settings"
+        hud.textLabel.text = "Saving profile"
         hud.show(in: view)
         
         Firestore.firestore().collection("users").document(uid).setData(docData) {
@@ -344,7 +344,7 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
             self.dismiss(animated: true, completion: {
                 print ("dismissal complete")
                 self.delegate?.didSaveSettings()
-//                homeController.fetchCurrentUser() // I want to fetch my cards inside of homecontroller somehow
+//              homeController.fetchCurrentUser()
                 
             })
         }
