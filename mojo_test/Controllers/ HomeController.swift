@@ -118,9 +118,12 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
         cardsDeckView.sendSubviewToBack(cardView)
     }
     
-    func didTapMoreInfo() {
+    func didTapChatButton(cardViewModel:CardViewModel) {
+        print("Home controller:", cardViewModel.attributedString)
         let chatRequestController = ChatRequestController()
+        
         present(chatRequestController, animated: true)
+//        navigationController?.pushViewController(chatRequestController, animated: true)
     }
 
     @objc func handleSettings () {

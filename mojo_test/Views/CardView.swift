@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 protocol CardViewDelegate {
-    func didTapMoreInfo()
+    func didTapChatButton(cardViewModel: CardViewModel)
 }
 
 class CardView: UIView {
@@ -97,7 +97,7 @@ class CardView: UIView {
     @objc fileprivate func handlChatRequest() {
         print("Present chat request window")
         //use a delegate to present
-        delegate?.didTapMoreInfo()
+        delegate?.didTapChatButton(cardViewModel: self.cardViewModel)
         
         
     }
