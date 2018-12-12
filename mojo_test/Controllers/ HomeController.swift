@@ -20,7 +20,7 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+ 
         view.backgroundColor = .white
         view.addSubview(cardsDeckView)
         view.addSubview(topStackView)

@@ -24,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        window?.rootViewController = HomeController()
+//        window?.rootViewController = HomeController()
+        
+        window?.rootViewController = CustomTabBarController()
         
         
         return true
