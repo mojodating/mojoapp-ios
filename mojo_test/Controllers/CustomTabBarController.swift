@@ -32,8 +32,9 @@ class CustomTabBarController: UITabBarController {
         let homeController = HomeController()
         homeController.tabBarItem.title = "HOME"
         homeController.tabBarItem.image = #imageLiteral(resourceName: "first")
-
-        let chatController = ChatController()
+        
+        let layout = UICollectionViewFlowLayout()
+        let chatController = ChatController(collectionViewLayout: layout)
         chatController.tabBarItem.title = "CHAT"
         chatController.tabBarItem.image = #imageLiteral(resourceName: "first")
         
