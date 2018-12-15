@@ -17,13 +17,24 @@ class ChatController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        navigationItem.title = "Chat"
+        
         collectionView.backgroundColor = .white
         collectionView.alwaysBounceVertical = true
         collectionView.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
         
+//        collectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showChatLogController)))
+      
         setupData()
     }
+    
+//    @objc fileprivate func showChatLogController() {
+//        print("123")
+//        let layout = UICollectionViewFlowLayout()
+//        let controller = ChatLogController(collectionViewLayout: layout)
+//        navigationController?.pushViewController(controller, animated: true)
+//    }
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let count = messages?.count {
@@ -46,15 +57,14 @@ class ChatController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 100)
     }
-    
-    
+
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("selected")
         let layout = UICollectionViewFlowLayout()
         let controller = ChatLogController(collectionViewLayout: layout)
         controller.friend = messages?[indexPath.item].friend
         navigationController?.pushViewController(controller, animated: true)
     }
-    
 
 }
 
@@ -81,11 +91,14 @@ class MessageCell: BaseCell {
         }
     }
     
+    
+    
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 34
         imageView.layer.masksToBounds = true
+        imageView.isUserInteractionEnabled = true
         return imageView
     }()
     
@@ -143,11 +156,13 @@ class MessageCell: BaseCell {
         dividerLineView.translatesAutoresizingMaskIntoConstraints = false
         dividerLineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
         dividerLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
     }
 
     private func setupContainerView() {
         let containerView = UIView()
+        
+        isUserInteractionEnabled = false
+        
         addSubview(containerView)
         containerView.anchor(top: topAnchor, leading: profileImageView.trailingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 8, left: 16, bottom: 8, right: 16))
         
@@ -168,6 +183,7 @@ class BaseCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -177,7 +193,9 @@ class BaseCell: UICollectionViewCell {
     func setupViews() {
         
     }
+    
 }
+
 
 
 
