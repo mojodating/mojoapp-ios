@@ -46,7 +46,18 @@ class ChatController: UICollectionViewController, UICollectionViewDelegateFlowLa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 100)
     }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let layout = UICollectionViewFlowLayout()
+        let controller = ChatLogController(collectionViewLayout: layout)
+        controller.friend = messages?[indexPath.item].friend
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+
 }
+
 
 class MessageCell: BaseCell {
     
@@ -126,20 +137,19 @@ class MessageCell: BaseCell {
         hasReadImageView.image = #imageLiteral(resourceName: "peter")
         
         //setupLayout
-        dividerLineView.translatesAutoresizingMaskIntoConstraints = false
-        dividerLineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
-        dividerLineView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
-        dividerLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
         profileImageView.translatesAutoresizingMaskIntoConstraints = false
         profileImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 16, left: 16, bottom: 16, right: 16), size: .init(width: 68, height: 68))
+        
+        dividerLineView.translatesAutoresizingMaskIntoConstraints = false
+        dividerLineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
+        dividerLineView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
     }
 
     private func setupContainerView() {
         let containerView = UIView()
         addSubview(containerView)
-        containerView.anchor(top: topAnchor, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 8, left: 16, bottom: 8, right: 16), size: .init(width: 300, height: 50))
-        containerView.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor).isActive = true
+        containerView.anchor(top: topAnchor, leading: profileImageView.trailingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 8, left: 16, bottom: 8, right: 16))
         
         containerView.addSubview(nameLabel)
         containerView.addSubview(messageLabel)
@@ -165,7 +175,7 @@ class BaseCell: UICollectionViewCell {
     }
     
     func setupViews() {
-        backgroundColor = .blue
+        
     }
 }
 
