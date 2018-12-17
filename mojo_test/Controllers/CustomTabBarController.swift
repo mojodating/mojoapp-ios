@@ -33,9 +33,12 @@ class CustomTabBarController: UITabBarController {
         homeController.tabBarItem.title = "HOME"
         homeController.tabBarItem.image = #imageLiteral(resourceName: "first")
         
-        let layout = UICollectionViewFlowLayout()
-        let chatController = ChatController(collectionViewLayout: layout)
-        let navController = UINavigationController(rootViewController: chatController)
+//        let layout = UICollectionViewFlowLayout()
+//        let chatController = ChatController(collectionViewLayout: layout)
+//        let navController = UINavigationController(rootViewController: chatController)
+        
+        let messagesController = MessagesController()
+        let navController = UINavigationController(rootViewController: messagesController)
         navController.tabBarItem.title = "CHAT"
         navController.tabBarItem.image = #imageLiteral(resourceName: "first")
         

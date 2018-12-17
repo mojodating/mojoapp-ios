@@ -50,7 +50,7 @@ class RegistrationController: UIViewController {
     
     @objc func handleSelectPhoto() {
         print("select photo")
-        let imagePickerController = UIImagePickerController()
+        let imagePickerController  = UIImagePickerController()
         imagePickerController.delegate = self
         present(imagePickerController, animated: true)
     }

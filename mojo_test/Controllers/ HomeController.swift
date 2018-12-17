@@ -120,10 +120,12 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     
     func didTapChatButton(cardViewModel:CardViewModel) {
         print("Home controller:", cardViewModel.attributedString)
-        let chatRequestController = ChatRequestController()
-        
-        present(chatRequestController, animated: true)
-//        navigationController?.pushViewController(chatRequestController, animated: true)
+//        let chatRequestController = ChatRequestController()
+//        present(chatRequestController, animated: true)
+        let modalViewController = ModalViewController()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        present(modalViewController, animated: true)
+
     }
 
     @objc func handleSettings () {
