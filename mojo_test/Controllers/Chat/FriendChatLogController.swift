@@ -11,6 +11,8 @@ import Firebase
 
 class FriendChatLogController: UICollectionViewController {
     
+    
+    
     var user: User? {
         didSet {
             navigationItem.title = user?.name

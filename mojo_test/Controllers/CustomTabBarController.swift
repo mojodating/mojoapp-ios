@@ -38,18 +38,21 @@ class CustomTabBarController: UITabBarController {
 //        let navController = UINavigationController(rootViewController: chatController)
         
         let messagesController = MessagesController()
-        let navController = UINavigationController(rootViewController: messagesController)
-        navController.tabBarItem.title = "CHAT"
-        navController.tabBarItem.image = #imageLiteral(resourceName: "first")
+        let chatNavController = UINavigationController(rootViewController: messagesController)
+        chatNavController.tabBarItem.title = "CHAT"
+        chatNavController.tabBarItem.image = #imageLiteral(resourceName: "first")
+        
+        let meController = MeController()
+        let meNavController = UINavigationController(rootViewController: meController)
+        meNavController.tabBarItem.title = "ME"
+        meNavController.tabBarItem.image = #imageLiteral(resourceName: "first")
+        
         
 //        let walletController = WalletController()
 //        walletController.tabBarItem.title = "WALLET"
 //        homeController.tabBarItem.image = #imageLiteral(resourceName: "first")
-//        let meController = MeController()
-//        meController.tabBarItem.title = "ME"
-//        homeController.tabBarItem.image = #imageLiteral(resourceName: "first")
         
-        viewControllers = [homeController, navController, createDummyControllerWithTitles(title: "WALLET", imageName: "first"), createDummyControllerWithTitles(title: "ME", imageName: "first")]
+        viewControllers = [homeController, chatNavController, createDummyControllerWithTitles(title: "WALLET", imageName: "first"), meNavController]
     }
     
     private func createDummyControllerWithTitles(title:String, imageName: String) -> UIViewController {

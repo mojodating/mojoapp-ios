@@ -8,7 +8,15 @@
 
 import UIKit
 
-class ModalViewController: UIViewController {
+class ChatRequestController: UIViewController {
+    
+    var cardViewModel: CardViewModel! {
+        didSet {
+            infoLabel.attributedText = cardViewModel.attributedString
+            
+            swipingPhotosController.cardViewModel = cardViewModel
+        }
+    }
     
     let cancelButton: UIButton = {
         let button = UIButton(type: .system)
@@ -37,13 +45,7 @@ class ModalViewController: UIViewController {
         return label
     }()
     
-    let imageView: UIImageView = {
-        let iv = UIImageView(image: #imageLiteral(resourceName: "drink-2"))
-        iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true
-        iv.layer.cornerRadius = 16
-        return iv
-    }()
+    let swipingPhotosController = SwipingPhotosController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     
     let menuLabel: UILabel = {
         let label = UILabel()
@@ -79,6 +81,8 @@ class ModalViewController: UIViewController {
     
     fileprivate func setupLayout() {
         
+        let menuSwipingView = swipingPhotosController.view!
+        
         view.addSubview(cancelButton)
         cancelButton.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 24, left: 24, bottom: 8, right: 8), size: .init(width: 80, height: 32))
         
@@ -88,14 +92,14 @@ class ModalViewController: UIViewController {
         view.addSubview(infoLabel)
         infoLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 16, right: 24))
         
-        view.addSubview(imageView)
-        imageView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 32, right: 16) , size: .init(width: view.frame.width, height: view.frame.width))
+        view.addSubview(menuSwipingView)
+        menuSwipingView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 32, right: 16) , size: .init(width: view.frame.width, height: view.frame.width))
         
         view.addSubview(menuLabel)
-        menuLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: imageView.topAnchor, trailing: nil, padding: .init(top: 8, left: 24, bottom: 16, right: 16))
+        menuLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: menuSwipingView.topAnchor, trailing: nil, padding: .init(top: 8, left: 24, bottom: 16, right: 16))
         
         view.addSubview(balanceLabel)
-        balanceLabel.anchor(top: nil, leading: nil, bottom:imageView.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 8, left: 16, bottom: 16, right: 24))
+        balanceLabel.anchor(top: nil, leading: nil, bottom:menuSwipingView.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 8, left: 16, bottom: 16, right: 24))
         
         
     }

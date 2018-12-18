@@ -19,14 +19,8 @@ class CardView: UIView {
     
     var cardViewModel: CardViewModel! {
         didSet {
-            let imageName = cardViewModel.imageUrls.first ?? ""
-            //load our image using url instead
-            if let url = URL(string: imageName) {
-                imageView.sd_setImage(with: url)
-                imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "logo-3x"), options: .continueInBackground)
             
-            }
-            
+            swipingPhotosController.cardViewModel = self.cardViewModel
             informationLabel.attributedText = cardViewModel.attributedString
             informationLabel.textAlignment = cardViewModel.textAlignment
             
@@ -44,10 +38,10 @@ class CardView: UIView {
     fileprivate func setupImageIndexObserver() {
         cardViewModel.imageIndexObserver = {[weak self] (idx, imageUrl) in
             print ("changing photo from view model")
-            if let url = URL(string: imageUrl ?? "") {
-                self?.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "logo-3x"), options: .continueInBackground)
-            }
-                    
+//            if let url = URL(string: imageUrl ?? "") {
+//                self?.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "logo-3x"), options: .continueInBackground)
+//            }
+            
             self?.barsStackView.arrangedSubviews.forEach({ (v) in
                 v.backgroundColor = self?.barDeselectedColor
             })
@@ -55,8 +49,8 @@ class CardView: UIView {
         }
     }
             
-    //encapsulation 
-    fileprivate let imageView = UIImageView(image: #imageLiteral(resourceName: "5"))
+    //encapsulation
+    fileprivate let swipingPhotosController =   SwipingPhotosController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     fileprivate let gradientLayer = CAGradientLayer()
     fileprivate let informationLabel = UILabel()
     
@@ -103,12 +97,16 @@ class CardView: UIView {
     }
     
     fileprivate func setupLayout() {
+        
+        clipsToBounds = true
         //custom code
-        imageView.contentMode = .scaleAspectFill
+        
+        let swipingPhotosView = swipingPhotosController.view!
 
-        addSubview(imageView)
-        imageView.fillSuperview()
-        setupBarsStackView()
+        addSubview(swipingPhotosView)
+        swipingPhotosView.fillSuperview()
+        
+//        setupBarsStackView()
         
         //add gradient layer
         setupGradientLayer()
@@ -161,19 +159,19 @@ class CardView: UIView {
     
     fileprivate func handleChanged(_ gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: nil)
-        let degrees: CGFloat = translation.x / 20
-        let angle = degrees * .pi / 180
-        
-        let rotationalTransformation = CGAffineTransform (rotationAngle: angle)
-        self.transform = rotationalTransformation.translatedBy(x: translation.x, y: translation.y)
+        let degrees: CGFloat = translation.y / 20
+//        let angle = degrees * .pi / 90
+//
+//        let rotationalTransformation = CGAffineTransform (rotationAngle: angle)
+//        self.transform = rotationalTransformation.translatedBy(x: translation.x, y: translation.y)
     }
     
     fileprivate func handleEnded(_ gesture: UIPanGestureRecognizer) {
-        let shouldDismissCard = abs (gesture.translation(in: nil).x) > threshold
+        let shouldDismissCard = abs (gesture.translation(in: nil).y) > threshold
         
-        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6,initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             if shouldDismissCard {
-                self.frame = CGRect (x: 600 , y: 0, width: self.frame.width, height: self.frame.height)
+                self.frame = CGRect (x: 0 , y: -600, width: self.frame.width, height: self.frame.height)
             } else {
                 self.transform = .identity
             }

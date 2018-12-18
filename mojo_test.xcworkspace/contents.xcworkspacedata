@@ -2,18 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Friend+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Friend+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Message+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:Message+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:mojo_test.xcodeproj">
    </FileRef>
    <FileRef

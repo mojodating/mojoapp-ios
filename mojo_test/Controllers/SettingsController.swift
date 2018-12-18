@@ -207,23 +207,12 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     }
     
     @objc fileprivate func handleMinAgeChange(slider: UISlider) {
-//        print(slider.value)
-        //update the minLabel in AgeRangeCell
-//        let indexPath = IndexPath(row:0, section: 5)
-//        let ageRangeCell = tableView.cellForRow(at: indexPath) as! AgeRangeCell
-//        ageRangeCell.minLabel.text = "Min: \(Int(slider.value))"
-        
-//        self.user?.minSeekingAge = Int(slider.value)
+
         evaluateMinMax()
     }
     
     @objc fileprivate func handleMaxAgeChange(slider: UISlider) {
-//        print(slider.value)
-//        let indexPath = IndexPath(row:0, section: 5)
-//        let ageRangeCell = tableView.cellForRow(at: indexPath) as! AgeRangeCell
-//        ageRangeCell.maxLabel.text = "Max: \(Int(slider.value))"
-//
-//        self.user?.maxSeekingAge = Int(slider.value)
+
         evaluateMinMax()
     }
     
@@ -310,6 +299,7 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     @objc fileprivate func handleLogout() {
         try? Auth.auth().signOut()
         dismiss(animated: true)
+        
 
     }
     

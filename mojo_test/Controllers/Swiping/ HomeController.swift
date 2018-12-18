@@ -10,54 +10,55 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
-class HomeController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate, CardViewDelegate {
-    
+class HomeController: UIViewController, CardViewDelegate {
+
+//SettingsControllerDelegate, LoginControllerDelegate, CardViewDelegate {
     
     let cardsDeckView = UIView()
     var cardViewModels = [CardViewModel]() // empty array
-    let topStackView = TopNavigationStackView()
-    let bottomControls = HomeBottomControlStackView()
+//    let topStackView = TopNavigationStackView()
+//    let bottomControls = HomeBottomControlStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
  
         view.backgroundColor = .white
         view.addSubview(cardsDeckView)
-        view.addSubview(topStackView)
+//        view.addSubview(topStackView)
 //        view.addSubview(bottomControls)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
 //
 //        cardsDeckView.addSubview(topStackView)
 //        cardsDeckView.addSubview(bottomControls)
         
-        topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
-        bottomControls.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 403 , width: 48, height: 403)
+//        topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
+//        bottomControls.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 403 , width: 48, height: 403)
         
 //        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         
-        view.bringSubviewToFront(topStackView)
+//        view.bringSubviewToFront(topStackView)
 //        view.bringSubviewToFront(bottomControls)
         view.sendSubviewToBack(cardsDeckView)
         
-        topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
+//        topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
         fetchCurrentUser()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("HomeController did appear")
-        //kick the user out when they log out
-        if Auth.auth().currentUser == nil {
-            let registrationController = RegistrationController()
-            registrationController.delegate = self
-            let navController = UINavigationController(rootViewController: registrationController)
-            present(navController, animated: true)
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        print("HomeController did appear")
+//        //kick the user out when they log out
+//        if Auth.auth().currentUser == nil {
+//            let registrationController = RegistrationController()
+//            registrationController.delegate = self
+//            let navController = UINavigationController(rootViewController: registrationController)
+//            present(navController, animated: true)
+//        }
+//    }
     
-    func didFinishLoggingIn() {
-        fetchCurrentUser()
-    }
+//    func didFinishLoggingIn() {
+//        fetchCurrentUser()
+//    }
     
     fileprivate let hud = JGProgressHUD(style: .dark)
     fileprivate var user: User?
@@ -120,36 +121,29 @@ class HomeController: UIViewController, SettingsControllerDelegate, LoginControl
     
     func didTapChatButton(cardViewModel:CardViewModel) {
         print("Home controller:", cardViewModel.attributedString)
-//        let chatRequestController = ChatRequestController()
-//        present(chatRequestController, animated: true)
-        let modalViewController = ModalViewController()
-        modalViewController.modalPresentationStyle = .overCurrentContext
-        present(modalViewController, animated: true)
+        let chatRequestController = ChatRequestController()
+        chatRequestController.cardViewModel = cardViewModel
+        present(chatRequestController, animated: true)
+//        let modalViewController = ModalViewController()
+//        modalViewController.cardViewModel = cardViewModel
+//        modalViewController.modalPresentationStyle = .overCurrentContext
+//        present(modalViewController, animated: true)
 
     }
 
-    @objc func handleSettings () {
-        
-        let settingsController = SettingsController()
-        settingsController.delegate = self
-        let navController = UINavigationController(rootViewController: settingsController)
-        present(navController, animated: true)
-    }
-    
-    func didSaveSettings() {
-        print("notified of dismissal from settingController to homeController")
-        fetchCurrentUser()
-    }
-    
-//    fileprivate func setupFirestoreUserCards() {
-//        cardViewModels.forEach {(cardVM) in
-//            let cardView = CardView(frame: .zero)
-//            cardView.cardViewModel = cardVM
-//            cardsDeckView.addSubview(cardView)
-//            cardView.fillSuperview()
-//            cardsDeckView.sendSubviewToBack(cardView)
-//        }
+//    @objc func handleSettings () {
+//
+//        let settingsController = SettingsController()
+//        settingsController.delegate = self
+//        let navController = UINavigationController(rootViewController: settingsController)
+//        present(navController, animated: true)
 //    }
+    
+//    func didSaveSettings() {
+//        print("notified of dismissal from settingController to homeController")
+//        fetchCurrentUser()
+//    }
+    
 
 }
         
