@@ -9,15 +9,17 @@
 import UIKit
 import Firebase
 import JGProgressHUD
+import Cosmos
+import TinyConstraints
 
 class HomeController: UIViewController, CardViewDelegate {
-
-//SettingsControllerDelegate, LoginControllerDelegate, CardViewDelegate {
+    
     
     let cardsDeckView = UIView()
     var cardViewModels = [CardViewModel]() // empty array
 //    let topStackView = TopNavigationStackView()
-//    let bottomControls = HomeBottomControlStackView()
+        let bottomControls = HomeBottomControlStackView()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,19 +27,14 @@ class HomeController: UIViewController, CardViewDelegate {
         view.backgroundColor = .white
         view.addSubview(cardsDeckView)
 //        view.addSubview(topStackView)
-//        view.addSubview(bottomControls)
+        view.addSubview(bottomControls)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
-//
-//        cardsDeckView.addSubview(topStackView)
-//        cardsDeckView.addSubview(bottomControls)
         
 //        topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
-//        bottomControls.frame = .init(x: view.frame.size.width - 48, y:view.frame.size.height - 403 , width: 48, height: 403)
+        bottomControls.frame = .init(x: view.frame.size.width - 184, y:view.frame.size.height - 403 , width: 184, height: 212)
+        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
+        handleRating()
         
-//        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
-        
-//        view.bringSubviewToFront(topStackView)
-//        view.bringSubviewToFront(bottomControls)
         view.sendSubviewToBack(cardsDeckView)
         
 //        topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
@@ -59,6 +56,8 @@ class HomeController: UIViewController, CardViewDelegate {
 //    func didFinishLoggingIn() {
 //        fetchCurrentUser()
 //    }
+    
+    
     
     fileprivate let hud = JGProgressHUD(style: .dark)
     fileprivate var user: User?
@@ -99,24 +98,58 @@ class HomeController: UIViewController, CardViewDelegate {
                 return
             }
             
+            //set up the nextCard relationship with the card
+            //link list
+            var previousCardView: CardView?
+            
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
                 if user.uid != Auth.auth().currentUser?.uid {
-                    self.setupCardFromUser(user: user)
+                    let cardView = self.setupCardFromUser(user: user)
+                    
+                    previousCardView?.nextCardView = cardView
+                    previousCardView = cardView
+                    
+                    if self.topCardView == nil {
+                        self.topCardView = cardView
+                    }
                 }
         })
 
     }
 }
     
-    fileprivate func setupCardFromUser(user: User) {
+    var topCardView:  CardView?
+    
+    fileprivate func handleRating() {
+        bottomControls.cosmosView.didFinishTouchingCosmos = { rating in
+            print("Rated: \(rating)")
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
+                self.topCardView?.frame = CGRect (x: 0 , y: -600, width: self.topCardView!.frame.width, height: self.topCardView! .frame.height)
+            }) { (_) in
+                self.topCardView?.removeFromSuperview()
+                self.topCardView = self.topCardView?.nextCardView
+                self.bottomControls.cosmosView.rating = 0
+                
+            }
+        }
+    }
+    
+    func didRemoveCard(cardView: CardView) {
+        self.topCardView?.removeFromSuperview()
+        self.topCardView = self.topCardView?.nextCardView
+        self.bottomControls.cosmosView.rating = 0
+    }
+    
+    fileprivate func setupCardFromUser(user: User) -> CardView {
         let cardView = CardView(frame: .zero)
         cardView.delegate = self
         cardView.cardViewModel = user.toCardViewModel()
         cardsDeckView.addSubview(cardView)
         cardView.fillSuperview()
         cardsDeckView.sendSubviewToBack(cardView)
+        return cardView
     }
     
     func didTapChatButton(cardViewModel:CardViewModel) {
@@ -130,19 +163,6 @@ class HomeController: UIViewController, CardViewDelegate {
 //        present(modalViewController, animated: true)
 
     }
-
-//    @objc func handleSettings () {
-//
-//        let settingsController = SettingsController()
-//        settingsController.delegate = self
-//        let navController = UINavigationController(rootViewController: settingsController)
-//        present(navController, animated: true)
-//    }
-    
-//    func didSaveSettings() {
-//        print("notified of dismissal from settingController to homeController")
-//        fetchCurrentUser()
-//    }
     
 
 }

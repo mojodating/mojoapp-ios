@@ -11,9 +11,12 @@ import SDWebImage
 
 protocol CardViewDelegate {
     func didTapChatButton(cardViewModel: CardViewModel)
+    func didRemoveCard(cardView: CardView)
 }
 
 class CardView: UIView {
+    
+    var nextCardView: CardView?
     
     var delegate: CardViewDelegate?
     
@@ -90,10 +93,7 @@ class CardView: UIView {
     
     @objc fileprivate func handlChatRequest() {
         print("Present chat request window")
-        //use a delegate to present
         delegate?.didTapChatButton(cardViewModel: self.cardViewModel)
-        
-        
     }
     
     fileprivate func setupLayout() {
@@ -112,12 +112,11 @@ class CardView: UIView {
         setupGradientLayer()
         
         addSubview(informationLabel)
-        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 96, right: 24))
+        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 96, right: 24))
         informationLabel.textColor = .white
         informationLabel.numberOfLines = 0
         
-        addSubview(chatButton)
-        chatButton.anchor(top: nil, leading: nil, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 96, right: 16), size: .init(width: 44, height: 44))
+//        addSubview(chatButton)
     }
     
     let barsStackView = UIStackView()
@@ -179,6 +178,9 @@ class CardView: UIView {
                 self.transform = .identity
             if shouldDismissCard {
                 self.removeFromSuperview()
+                
+                //reset topView inside of HomeController
+                self.delegate?.didRemoveCard(cardView: self)
             }
 
         }

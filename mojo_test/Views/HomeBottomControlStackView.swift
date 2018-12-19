@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SDWebImage
+import Cosmos
+import TinyConstraints
 
 class HomeBottomControlStackView: UIStackView {
     
@@ -17,8 +20,18 @@ class HomeBottomControlStackView: UIStackView {
         return button
     }
     
-    let ratingButton = createButton(image:#imageLiteral(resourceName: "rating-1"))
-    let profileThumbnail = createButton(image: #imageLiteral(resourceName: "thumbnail-1"))
+    lazy var cosmosView: CosmosView = {
+        var view = CosmosView()
+        view.settings.filledImage = #imageLiteral(resourceName: "filled-star").withRenderingMode(.alwaysOriginal)
+        view.settings.emptyImage = #imageLiteral(resourceName: "empty-star").withRenderingMode(.alwaysOriginal)
+        view.settings.starSize = 32
+        view.settings.starMargin = 4
+        view.settings.fillMode = .full
+        view.rating = 0
+        return view
+    }()
+    
+    let profileThumbnail = createButton(image: #imageLiteral(resourceName: "profile"))
     let chatButton = createButton(image: #imageLiteral(resourceName: "chatbutton-1"))
     let refreshButton = createButton(image: #imageLiteral(resourceName: "review-1"))
     
@@ -26,19 +39,15 @@ class HomeBottomControlStackView: UIStackView {
         super.init(frame:frame)
         axis = .vertical
         distribution = .equalSpacing
-        alignment = .bottom
-        heightAnchor.constraint(equalToConstant:
-            403).isActive = true
-
+        alignment = .trailing
         
-        [ratingButton, profileThumbnail, chatButton, refreshButton].forEach{(button) in
+        [profileThumbnail, chatButton, refreshButton, cosmosView].forEach{(button) in
             self.addArrangedSubview(button)
         }
         
         isLayoutMarginsRelativeArrangement = true
         layoutMargins = .init(top: 0, left: 0, bottom: 16, right: 8)
         
-    
     }
     
     required init(coder: NSCoder) {

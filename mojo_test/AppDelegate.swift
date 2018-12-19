@@ -28,8 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.rootViewController = HomeController()
         
         window?.rootViewController = CustomTabBarController()
-//        window?.rootViewController = SwipingPhotosController(transitionStyle: .scroll, navigationOrientation: .horizontal)
-//        
+       
         return true
     }
 
