@@ -95,7 +95,7 @@ class MeController: UIViewController, SettingsControllerDelegate, LoginControlle
     
     func didSaveSettings() {
         print("notified of dismissal from settingController to homeController")
-//        fetchCurrentUser()
+        fetchCurrentUser()
     }
 
 

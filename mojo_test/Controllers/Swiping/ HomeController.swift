@@ -73,7 +73,23 @@ class HomeController: UIViewController, CardViewDelegate {
                 return
             }
             self.user = user
-            self.fetchUsersFromFirestore()
+            
+            self.fetchSwipes()
+            
+//            self.fetchUsersFromFirestore()
+        }
+    }
+    
+    fileprivate func fetchSwipes() {
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("swipes").document(uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print ("failed to fetch swipes for currently logged in user:", err)
+                return
+            }
+            
+            print("Swipes:", snapshot?.data() ?? "")
         }
     }
     
@@ -90,6 +106,7 @@ class HomeController: UIViewController, CardViewDelegate {
   
 //        let query = Firestore.firestore().collection("users").order(by:"uid").start(after: [lastFetchedUser?.uid ?? ""]).limit(to:2)
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
+        topCardView = nil
 //        let query = Firestore.firestore().collection("users").whereField("age", isLessThan: 26)
         query.getDocuments { (snapshot, err) in
             self.hud.dismiss()
@@ -125,21 +142,95 @@ class HomeController: UIViewController, CardViewDelegate {
     fileprivate func handleRating() {
         bottomControls.cosmosView.didFinishTouchingCosmos = { rating in
             print("Rated: \(rating)")
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
-                self.topCardView?.frame = CGRect (x: 0 , y: -600, width: self.topCardView!.frame.width, height: self.topCardView! .frame.height)
-            }) { (_) in
-                self.topCardView?.removeFromSuperview()
-                self.topCardView = self.topCardView?.nextCardView
-                self.bottomControls.cosmosView.rating = 0
+            
+            guard let uid = Auth.auth().currentUser?.uid else { return }
+            
+            guard let cardUID = self.topCardView?.cardViewModel.uid else { return }
+            
+            let documentData = [cardUID: rating]
+            
+            Firestore.firestore().collection("bouncingLineRating").document(uid).getDocument { (snapshot, err) in
+                if let err = err {
+                    print("failed to fetch rating document", err)
+                    return
+                }
                 
+                if snapshot?.exists == true {
+                    Firestore.firestore().collection("bouncingLineRating").document(uid).updateData(documentData) { (err) in
+                        if let err = err {
+                            print("failed to save rating data", err)
+                            return
+                        }
+                        print("successfully updated rating...")
+                        self.checkIfMadeInTheHouse(cardUID: cardUID)
+                    }
+                } else {
+                    Firestore.firestore().collection("bouncingLineRating").document(uid).setData(documentData) { (err) in
+                        if let err = err {
+                            print("failed to save rating data", err)
+                            return
+                        }
+                        print("successfully saved rating")
+                        self.checkIfMadeInTheHouse(cardUID: cardUID)
+                    }
+                }
             }
+  
+            self.performSwipeAnimation()
         }
+    }
+    
+    fileprivate func checkIfMadeInTheHouse(cardUID: String) {
+        //detect whether user made in the house
+        print("detecting rating")
+//        Firestore.firestore().collection("bouncingLineRating").document(cardUID).getDocument { (snapshot, err) in
+//            if let err = err {
+//                print("Failed to fetch document for card user:", err)
+//                return
+//            }
+//
+//            guard let data = snapshot?.data() else { return }
+//            print (data)
+//
+//            guard let uid = Auth.auth().currentUser?.uid else { return }
+//            let hasMadeInHouse = data[uid] as? Int == ??
+//
+//            if hasMadeInHouse {
+//                print("You are invited to the house")
+//                let hud = JGProgressHUD(style: .dark)
+//                hud.textLabel.text = "You are invited to the house"
+//                hud.show(in: self.view)
+//                hud.dismiss(afterDelay: 4)
+//            }
+//
+//        }
+
     }
     
     func didRemoveCard(cardView: CardView) {
         self.topCardView?.removeFromSuperview()
         self.topCardView = self.topCardView?.nextCardView
         self.bottomControls.cosmosView.rating = 0
+    }
+    
+    fileprivate func performSwipeAnimation() {
+        let translationAnimation = CABasicAnimation(keyPath: "position.y")
+        translationAnimation.toValue = -1700
+        translationAnimation.duration = 0.5
+        translationAnimation.fillMode = .forwards
+        translationAnimation.isRemovedOnCompletion = false
+        
+        let cardView = self.topCardView
+        self.topCardView = cardView?.nextCardView
+        
+        CATransaction.setCompletionBlock({
+            cardView?.removeFromSuperview()
+            self.bottomControls.cosmosView.rating = 0
+        })
+        
+        cardView?.layer.add(translationAnimation, forKey: "translation")
+        
+        CATransaction.commit()
     }
     
     fileprivate func setupCardFromUser(user: User) -> CardView {

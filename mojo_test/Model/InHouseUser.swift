@@ -22,6 +22,6 @@ struct InHouseUser : ProducesCardViewModel {
         
         attributedText.append(NSMutableAttributedString(string: "\(profession)", attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .regular)]))
         
-        return CardViewModel(imageNames: [imageNames], attributedString: attributedText, textAlignment: .left)
+        return CardViewModel(uid:"", imageNames: [imageNames], attributedString: attributedText, textAlignment: .left)
     }
 }

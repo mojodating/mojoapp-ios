@@ -158,32 +158,29 @@ class CardView: UIView {
     
     fileprivate func handleChanged(_ gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: nil)
-        let degrees: CGFloat = translation.y / 20
-//        let angle = degrees * .pi / 90
-//
-//        let rotationalTransformation = CGAffineTransform (rotationAngle: angle)
-//        self.transform = rotationalTransformation.translatedBy(x: translation.x, y: translation.y)
+        let _: CGFloat = translation.y / 20
     }
     
     fileprivate func handleEnded(_ gesture: UIPanGestureRecognizer) {
         let shouldDismissCard = abs (gesture.translation(in: nil).y) > threshold
         
-        UIView.animate(withDuration: 0.3, animations: {
+        let translationAnimation = CABasicAnimation(keyPath: "position.y")
+        translationAnimation.toValue = -1700
+        translationAnimation.duration = 0.5
+        translationAnimation.fillMode = .forwards
+        translationAnimation.isRemovedOnCompletion = false
+        
+        CATransaction.setCompletionBlock({
+            self.transform = .identity
             if shouldDismissCard {
-                self.frame = CGRect (x: 0 , y: -600, width: self.frame.width, height: self.frame.height)
-            } else {
-                self.transform = .identity
-            }
-        }) {(_) in
-                self.transform = .identity
-            if shouldDismissCard {
-                self.removeFromSuperview()
-                
-                //reset topView inside of HomeController
+            self.removeFromSuperview()
                 self.delegate?.didRemoveCard(cardView: self)
-            }
-
-        }
+                }
+        })
+        
+        self.layer.add(translationAnimation, forKey: "translation")
+        
+        CATransaction.commit()
     }
     
     required init?(coder aDecoder: NSCoder) {
