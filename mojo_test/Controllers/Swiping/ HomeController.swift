@@ -12,7 +12,7 @@ import JGProgressHUD
 import Cosmos
 import TinyConstraints
 
-class HomeController: UIViewController, CardViewDelegate {
+class HomeController: UIViewController, CardViewDelegate, LoginControllerDelegate {
     
     
     let cardsDeckView = UIView()
@@ -41,21 +41,21 @@ class HomeController: UIViewController, CardViewDelegate {
         fetchCurrentUser()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        print("HomeController did appear")
-//        //kick the user out when they log out
-//        if Auth.auth().currentUser == nil {
-//            let registrationController = RegistrationController()
-//            registrationController.delegate = self
-//            let navController = UINavigationController(rootViewController: registrationController)
-//            present(navController, animated: true)
-//        }
-//    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("HomeController did appear")
+        //kick the user out when they log out
+        if Auth.auth().currentUser == nil {
+            let registrationController = RegistrationController()
+            registrationController.delegate = self
+            let navController = UINavigationController(rootViewController: registrationController)
+            present(navController, animated: true)
+        }
+    }
     
-//    func didFinishLoggingIn() {
-//        fetchCurrentUser()
-//    }
+    func didFinishLoggingIn() {
+        fetchCurrentUser()
+    }
     
     
     
@@ -80,16 +80,21 @@ class HomeController: UIViewController, CardViewDelegate {
         }
     }
     
+    var swipes = [String: Int]()
+    
     fileprivate func fetchSwipes() {
         
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("swipes").document(uid).getDocument { (snapshot, err) in
+        Firestore.firestore().collection("bouncingLineRating").document(uid).getDocument { (snapshot, err) in
             if let err = err {
                 print ("failed to fetch swipes for currently logged in user:", err)
                 return
             }
             
-            print("Swipes:", snapshot?.data() ?? "")
+            print("Rated:", snapshot?.data() ?? "")
+            guard let data = snapshot?.data() as? [String: Int] else { return }
+            self.swipes = data
+            self.fetchUsersFromFirestore()
         }
     }
     
@@ -122,7 +127,9 @@ class HomeController: UIViewController, CardViewDelegate {
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
-                if user.uid != Auth.auth().currentUser?.uid {
+                let isNotCurrentUser = user.uid != Auth.auth().currentUser?.uid
+                let hasNotSwipedBefore = self.swipes[user.uid!] == nil
+                if isNotCurrentUser && hasNotSwipedBefore {
                     let cardView = self.setupCardFromUser(user: user)
                     
                     previousCardView?.nextCardView = cardView
@@ -248,10 +255,7 @@ class HomeController: UIViewController, CardViewDelegate {
         let chatRequestController = ChatRequestController()
         chatRequestController.cardViewModel = cardViewModel
         present(chatRequestController, animated: true)
-//        let modalViewController = ModalViewController()
-//        modalViewController.cardViewModel = cardViewModel
-//        modalViewController.modalPresentationStyle = .overCurrentContext
-//        present(modalViewController, animated: true)
+
 
     }
     

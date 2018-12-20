@@ -73,6 +73,7 @@ class MeController: UIViewController, SettingsControllerDelegate, LoginControlle
         cardsDeckView.addSubview(cardView)
         cardView.fillSuperview()
         cardsDeckView.sendSubviewToBack(cardView)
+        
     }
     
     fileprivate func setupLayout() {
