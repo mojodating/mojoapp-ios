@@ -12,12 +12,11 @@ import JGProgressHUD
 import Cosmos
 import TinyConstraints
 
-class HomeController: UIViewController, CardViewDelegate, LoginControllerDelegate {
+class HomeController: UIViewController, CardViewDelegate {
     
     
     let cardsDeckView = UIView()
     var cardViewModels = [CardViewModel]() // empty array
-//    let topStackView = TopNavigationStackView()
         let bottomControls = HomeBottomControlStackView()
 
     
@@ -26,36 +25,32 @@ class HomeController: UIViewController, CardViewDelegate, LoginControllerDelegat
  
         view.backgroundColor = .white
         view.addSubview(cardsDeckView)
-//        view.addSubview(topStackView)
         view.addSubview(bottomControls)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
-        
-//        topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
         bottomControls.frame = .init(x: view.frame.size.width - 184, y:view.frame.size.height - 403 , width: 184, height: 212)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         handleRating()
         
         view.sendSubviewToBack(cardsDeckView)
-        
-//        topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
+
         fetchCurrentUser()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("HomeController did appear")
-        //kick the user out when they log out
-        if Auth.auth().currentUser == nil {
-            let registrationController = RegistrationController()
-            registrationController.delegate = self
-            let navController = UINavigationController(rootViewController: registrationController)
-            present(navController, animated: true)
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        print("HomeController did appear")
+//        //kick the user out when they log out
+//        if Auth.auth().currentUser == nil {
+//            let registrationController = RegistrationController()
+//            registrationController.delegate = self
+//            let navController = UINavigationController(rootViewController: registrationController)
+//            present(navController, animated: true)
+//        }
+//    }
     
-    func didFinishLoggingIn() {
-        fetchCurrentUser()
-    }
+//    func didFinishLoggingIn() {
+//        fetchCurrentUser()
+//    }
     
     
     
@@ -74,31 +69,32 @@ class HomeController: UIViewController, CardViewDelegate, LoginControllerDelegat
             }
             self.user = user
             
-            self.fetchSwipes()
+//            self.fetchSwipes()
             
-//            self.fetchUsersFromFirestore()
-        }
-    }
-    
-    var swipes = [String: Int]()
-    
-    fileprivate func fetchSwipes() {
-        
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("bouncingLineRating").document(uid).getDocument { (snapshot, err) in
-            if let err = err {
-                print ("failed to fetch swipes for currently logged in user:", err)
-                return
-            }
-            
-            print("Rated:", snapshot?.data() ?? "")
-            guard let data = snapshot?.data() as? [String: Int] else { return }
-            self.swipes = data
             self.fetchUsersFromFirestore()
         }
     }
     
+//    var rates = [String: Int]()
+//
+//    fileprivate func fetchSwipes() {
+//
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        Firestore.firestore().collection("bouncingLineRating").document(uid).getDocument { (snapshot, err) in
+//            if let err = err {
+//                print ("failed to fetch swipes for currently logged in user:", err)
+//                return
+//            }
+//
+//            print("Rates:", snapshot?.data() ?? "")
+//            guard let data = snapshot?.data() as? [String: Int] else { return }
+//            self.rates = data
+//            self.fetchUsersFromFirestore()
+//        }
+//    }
+//
     @objc fileprivate func handleRefresh() {
+        cardsDeckView.subviews.forEach({$0.removeFromSuperview()})
         fetchUsersFromFirestore()
     }
     
@@ -109,10 +105,9 @@ class HomeController: UIViewController, CardViewDelegate, LoginControllerDelegat
         let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
         let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
   
-//        let query = Firestore.firestore().collection("users").order(by:"uid").start(after: [lastFetchedUser?.uid ?? ""]).limit(to:2)
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
         topCardView = nil
-//        let query = Firestore.firestore().collection("users").whereField("age", isLessThan: 26)
+
         query.getDocuments { (snapshot, err) in
             self.hud.dismiss()
             if let err = err {
@@ -121,15 +116,15 @@ class HomeController: UIViewController, CardViewDelegate, LoginControllerDelegat
             }
             
             //set up the nextCard relationship with the card
-            //link list
             var previousCardView: CardView?
             
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
-                let isNotCurrentUser = user.uid != Auth.auth().currentUser?.uid
-                let hasNotSwipedBefore = self.swipes[user.uid!] == nil
-                if isNotCurrentUser && hasNotSwipedBefore {
+//                let isNotCurrentUser = user.uid != Auth.auth().currentUser?.uid
+//                let hasNotSwipedBefore = self.rates[user.uid!] == nil
+//                if isNotCurrentUser && hasNotSwipedBefore {
+                if user.uid != Auth.auth().currentUser?.uid {
                     let cardView = self.setupCardFromUser(user: user)
                     
                     previousCardView?.nextCardView = cardView
@@ -140,78 +135,69 @@ class HomeController: UIViewController, CardViewDelegate, LoginControllerDelegat
                     }
                 }
         })
-
     }
 }
     
     var topCardView:  CardView?
     
+//    lazy var functions = Functions.functions()
+    
     fileprivate func handleRating() {
         bottomControls.cosmosView.didFinishTouchingCosmos = { rating in
             print("Rated: \(rating)")
             
-            guard let uid = Auth.auth().currentUser?.uid else { return }
-            
             guard let cardUID = self.topCardView?.cardViewModel.uid else { return }
             
-            let documentData = [cardUID: rating]
+//            self.presentInvitationView(cardUID: cardUID)
             
-            Firestore.firestore().collection("bouncingLineRating").document(uid).getDocument { (snapshot, err) in
-                if let err = err {
-                    print("failed to fetch rating document", err)
-                    return
-                }
-                
-                if snapshot?.exists == true {
-                    Firestore.firestore().collection("bouncingLineRating").document(uid).updateData(documentData) { (err) in
-                        if let err = err {
-                            print("failed to save rating data", err)
-                            return
-                        }
-                        print("successfully updated rating...")
-                        self.checkIfMadeInTheHouse(cardUID: cardUID)
-                    }
-                } else {
-                    Firestore.firestore().collection("bouncingLineRating").document(uid).setData(documentData) { (err) in
-                        if let err = err {
-                            print("failed to save rating data", err)
-                            return
-                        }
-                        print("successfully saved rating")
-                        self.checkIfMadeInTheHouse(cardUID: cardUID)
-                    }
-                }
-            }
+//            self.functions.httpsCallable("rate").call(["uid": cardUID, "rate": rating]) { (result, error) in
+//                if let error = error as NSError? {
+//                    if error.domain == FunctionsErrorDomain {
+//                        let code = FunctionsErrorCode(rawValue: error.code)
+//                        let message = error.localizedDescription
+//                        let details = error.userInfo[FunctionsErrorDetailsKey]
+//                    }
+//                }
+//            }
+//            guard let uid = Auth.auth().currentUser?.uid else { return }
+//
+//            let documentData = [cardUID: rating]
+//
+//            Firestore.firestore().collection("bouncingLineRating").document(uid).getDocument { (snapshot, err) in
+//                if let err = err {
+//                    print("failed to fetch rating document", err)
+//                    return
+//                }
+//
+//                if snapshot?.exists == true {
+//                    Firestore.firestore().collection("bouncingLineRating").document(uid).updateData(documentData) { (err) in
+//                        if let err = err {
+//                            print("failed to save rating data", err)
+//                            return
+//                        }
+//                        print("successfully updated rating...")
+////                        self.checkIfMadeInTheHouse(cardUID: cardUID)
+//                    }
+//                } else {
+//                    Firestore.firestore().collection("bouncingLineRating").document(uid).setData(documentData) { (err) in
+//                        if let err = err {
+//                            print("failed to save rating data", err)
+//                            return
+//                        }
+//                        print("successfully saved rating")
+////                        self.checkIfMadeInTheHouse(cardUID: cardUID)
+//                    }
+//                }
+//            }
   
             self.performSwipeAnimation()
         }
     }
     
-    fileprivate func checkIfMadeInTheHouse(cardUID: String) {
-        //detect whether user made in the house
-        print("detecting rating")
-//        Firestore.firestore().collection("bouncingLineRating").document(cardUID).getDocument { (snapshot, err) in
-//            if let err = err {
-//                print("Failed to fetch document for card user:", err)
-//                return
-//            }
-//
-//            guard let data = snapshot?.data() else { return }
-//            print (data)
-//
-//            guard let uid = Auth.auth().currentUser?.uid else { return }
-//            let hasMadeInHouse = data[uid] as? Int == ??
-//
-//            if hasMadeInHouse {
-//                print("You are invited to the house")
-//                let hud = JGProgressHUD(style: .dark)
-//                hud.textLabel.text = "You are invited to the house"
-//                hud.show(in: self.view)
-//                hud.dismiss(afterDelay: 4)
-//            }
-//
-//        }
-
+    fileprivate func presentInvitationView(cardUID:String) {
+        let invitationView = InvitationView()
+        view.addSubview(invitationView)
+        invitationView.fillSuperview()
     }
     
     func didRemoveCard(cardView: CardView) {
@@ -256,13 +242,9 @@ class HomeController: UIViewController, CardViewDelegate, LoginControllerDelegat
         chatRequestController.cardViewModel = cardViewModel
         present(chatRequestController, animated: true)
 
-
     }
     
-
 }
-        
-
     
 
 
