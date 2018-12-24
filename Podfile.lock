@@ -20,6 +20,9 @@ PODS:
   - Firebase/Functions (5.10.0):
     - Firebase/CoreOnly
     - FirebaseFunctions (= 2.1.1)
+  - Firebase/Messaging (5.10.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (= 3.2.0)
   - Firebase/Storage (5.10.0):
     - Firebase/CoreOnly
     - FirebaseStorage (= 3.0.2)
@@ -64,6 +67,12 @@ PODS:
     - FirebaseCore (~> 5.1)
     - GoogleUtilities/Environment (~> 5.3)
     - GoogleUtilities/UserDefaults (~> 5.3)
+  - FirebaseMessaging (3.2.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseInstanceID (~> 3.0)
+    - GoogleUtilities/Environment (~> 5.2)
+    - GoogleUtilities/Reachability (~> 5.2)
+    - Protobuf (~> 3.1)
   - FirebaseStorage (3.0.2):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 5.0)
@@ -141,6 +150,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore (~> 5.10.0)
   - Firebase/Functions
+  - Firebase/Messaging
   - Firebase/Storage (~> 5.10.0)
   - GoogleAppMeasurement (~> 5.2.0)
   - JGProgressHUD (~> 2.0.3)
@@ -159,6 +169,7 @@ SPEC REPOS:
     - FirebaseFirestore
     - FirebaseFunctions
     - FirebaseInstanceID
+    - FirebaseMessaging
     - FirebaseStorage
     - GoogleAppMeasurement
     - GoogleUtilities
@@ -186,6 +197,7 @@ SPEC CHECKSUMS:
   FirebaseFirestore: 45a9a3045a2dc27f23c13bf832556fe287fbe1b5
   FirebaseFunctions: 6c03d7c5d62520be4678dc3fb7957654aab82b4f
   FirebaseInstanceID: e2fa4cb35ef5558c200f7f0ad8a53e212215f93e
+  FirebaseMessaging: 000b32447b461b34b6b912b23ec11be20b503b5b
   FirebaseStorage: fd82e5e5c474897e19972b34b22ac0f589dce04e
   GoogleAppMeasurement: 2b3a023a61239c8d002e6e4fcf4abce8eddce0e0
   GoogleUtilities: 95996bea7c7d9b8fb811b7507669a4a8762f80c7
@@ -202,6 +214,6 @@ SPEC CHECKSUMS:
   SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
   TinyConstraints: dbf7519aefc01ea59d62244300c7718aec68e280
 
-PODFILE CHECKSUM: 8ccd2b560307b9e8daa78d0e2c7b09b34c33e0d7
+PODFILE CHECKSUM: 91104348af6ba9fd1766f8cd10918c53b8db7ad6
 
 COCOAPODS: 1.5.3

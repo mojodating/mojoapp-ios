@@ -33,10 +33,6 @@ class CustomTabBarController: UITabBarController {
         homeController.tabBarItem.title = "HOME"
         homeController.tabBarItem.image = #imageLiteral(resourceName: "first")
         
-//        let layout = UICollectionViewFlowLayout()
-//        let chatController = ChatController(collectionViewLayout: layout)
-//        let navController = UINavigationController(rootViewController: chatController)
-        
         let messagesController = MessagesController()
         let chatNavController = UINavigationController(rootViewController: messagesController)
         chatNavController.tabBarItem.title = "CHAT"
@@ -47,18 +43,12 @@ class CustomTabBarController: UITabBarController {
         meNavController.tabBarItem.title = "ME"
         meNavController.tabBarItem.image = #imageLiteral(resourceName: "first")
         
+        let walletController = WalletController()
+        let walletNavController = UINavigationController(rootViewController: walletController)
+        walletNavController.tabBarItem.title = "WALLET"
+        walletNavController.tabBarItem.image = #imageLiteral(resourceName: "first")
         
-//        let walletController = WalletController()
-//        walletController.tabBarItem.title = "WALLET"
-//        homeController.tabBarItem.image = #imageLiteral(resourceName: "first")
-        
-        viewControllers = [homeController, chatNavController, createDummyControllerWithTitles(title: "WALLET", imageName: "first"), meNavController]
+        viewControllers = [homeController, chatNavController, walletNavController, meNavController]
     }
-    
-    private func createDummyControllerWithTitles(title:String, imageName: String) -> UIViewController {
-        let viewController = UIViewController()
-        viewController.tabBarItem.title = title
-        viewController.tabBarItem.image = UIImage(named: imageName)
-        return viewController
-    }
+
 }

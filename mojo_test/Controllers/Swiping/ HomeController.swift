@@ -126,7 +126,6 @@ class HomeController: UIViewController, CardViewDelegate {
 //                if isNotCurrentUser && hasNotSwipedBefore {
                 if user.uid != Auth.auth().currentUser?.uid {
                     let cardView = self.setupCardFromUser(user: user)
-                    
                     previousCardView?.nextCardView = cardView
                     previousCardView = cardView
                     
@@ -140,7 +139,7 @@ class HomeController: UIViewController, CardViewDelegate {
     
     var topCardView:  CardView?
     
-//    lazy var functions = Functions.functions()
+    lazy var functions = Functions.functions()
     
     fileprivate func handleRating() {
         bottomControls.cosmosView.didFinishTouchingCosmos = { rating in
@@ -150,45 +149,15 @@ class HomeController: UIViewController, CardViewDelegate {
             
 //            self.presentInvitationView(cardUID: cardUID)
             
-//            self.functions.httpsCallable("rate").call(["uid": cardUID, "rate": rating]) { (result, error) in
-//                if let error = error as NSError? {
-//                    if error.domain == FunctionsErrorDomain {
-//                        let code = FunctionsErrorCode(rawValue: error.code)
-//                        let message = error.localizedDescription
-//                        let details = error.userInfo[FunctionsErrorDetailsKey]
-//                    }
-//                }
-//            }
-//            guard let uid = Auth.auth().currentUser?.uid else { return }
-//
-//            let documentData = [cardUID: rating]
-//
-//            Firestore.firestore().collection("bouncingLineRating").document(uid).getDocument { (snapshot, err) in
-//                if let err = err {
-//                    print("failed to fetch rating document", err)
-//                    return
-//                }
-//
-//                if snapshot?.exists == true {
-//                    Firestore.firestore().collection("bouncingLineRating").document(uid).updateData(documentData) { (err) in
-//                        if let err = err {
-//                            print("failed to save rating data", err)
-//                            return
-//                        }
-//                        print("successfully updated rating...")
-////                        self.checkIfMadeInTheHouse(cardUID: cardUID)
-//                    }
-//                } else {
-//                    Firestore.firestore().collection("bouncingLineRating").document(uid).setData(documentData) { (err) in
-//                        if let err = err {
-//                            print("failed to save rating data", err)
-//                            return
-//                        }
-//                        print("successfully saved rating")
-////                        self.checkIfMadeInTheHouse(cardUID: cardUID)
-//                    }
-//                }
-//            }
+            self.functions.httpsCallable("rate").call(["uid": cardUID, "rate": rating]) { (result, error) in
+                if let error = error as NSError? {
+                    if error.domain == FunctionsErrorDomain {
+                        let code = FunctionsErrorCode(rawValue: error.code)
+                        let message = error.localizedDescription
+                        let details = error.userInfo[FunctionsErrorDetailsKey]
+                    }
+                }
+            }
   
             self.performSwipeAnimation()
         }
