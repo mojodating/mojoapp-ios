@@ -41,7 +41,7 @@ class WalletController: UIViewController {
         }()
         let userBalanceLabel: UILabel = {
             let label = UILabel()
-            label.text = "10 Mojo Token"
+            label.text = "10 Mojo Coin"
             label.textAlignment = .center
             label.textColor = .black
             label.font = UIFont.systemFont(ofSize: 24, weight: .bold)

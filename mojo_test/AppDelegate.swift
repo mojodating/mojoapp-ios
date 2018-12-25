@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let gcmMessageIDKey = "gcm.message_id"
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
@@ -29,6 +29,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 //        window?.rootViewController = HomeController()
         window?.rootViewController = CustomTabBarController()
+
+        attempRegisterForNotifications(application: application)
+       
+        return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("Register for notifications:", deviceToken)
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        // 1. Print out error if PNs registration not successful
+        print("Failed to register for remote notifications with error: \(error)")
+    }
+    
+    fileprivate func attempRegisterForNotifications(application: UIApplication) {
+        
+        Messaging.messaging().delegate = self
         
         if #available(iOS 10.0, *) {
             // For iOS 10 display notification (sent via APNS)
@@ -44,10 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             application.registerUserNotificationSettings(settings)
         }
         
-        Messaging.messaging().delegate = self
         application.registerForRemoteNotifications()
-       
-        return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -197,6 +212,7 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     }
 }
 
+var functions = Functions.functions()
 
 extension AppDelegate: MessagingDelegate {
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
@@ -206,6 +222,16 @@ extension AppDelegate: MessagingDelegate {
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
         // TODO: If necessary send token to application server.
         // Note: This callback is fired at each app startup and whenever a new token is generated.
+        
+        functions.httpsCallable("updateToken").call(["token": fcmToken]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    let code = FunctionsErrorCode(rawValue: error.code)
+                    let message = error.localizedDescription
+                    let details = error.userInfo[FunctionsErrorDetailsKey]
+                    }
+                }
+            }
     }
     
     func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
