@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8891671721B0F8E4000267F7 /*  HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /*  HomeController.swift */; };
+		8891671721B0F8E4000267F7 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* homeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
 		8897461321B3411A00DBF6F6 /* TopNavigationStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */; };
@@ -28,7 +28,7 @@
 		8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */; };
 		8897463A21BEF61300DBF6F6 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463921BEF61300DBF6F6 /* Firebase+Utils.swift */; };
 		8897463D21C0856500DBF6F6 /* ChatRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463C21C0856500DBF6F6 /* ChatRequestController.swift */; };
-		8897463F21C194D600DBF6F6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463E21C194D600DBF6F6 /* CustomTabBarController.swift */; };
+		8897463F21C194D600DBF6F6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463E21C194D600DBF6F6 /* MainTabBarController.swift */; };
 		8897464921C327F000DBF6F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8897464821C327F000DBF6F6 /* CoreData.framework */; };
 		8897469D21C378B700DBF6F6 /* mojo_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8897469B21C378B700DBF6F6 /* mojo_test.xcdatamodeld */; };
 		889E0FE121D1F24B00A74140 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FE021D1F24B00A74140 /* NotificationService.swift */; };
@@ -93,7 +93,7 @@
 		3A9154023E1BDE2B631D4978 /* Pods-mojo_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_test.release.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_test/Pods-mojo_test.release.xcconfig"; sourceTree = "<group>"; };
 		3B92FAC75E98011E271C4321 /* Pods_mojo_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8891671621B0F8E4000267F7 /*  HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " HomeController.swift"; sourceTree = "<group>"; };
+		8891671621B0F8E4000267F7 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
 		8897461221B3411A00DBF6F6 /* TopNavigationStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopNavigationStackView.swift; sourceTree = "<group>"; };
@@ -114,7 +114,7 @@
 		8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8897463921BEF61300DBF6F6 /* Firebase+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Firebase+Utils.swift"; path = "../../../../Documents/Mojo/SwipeMatchFirestoreLBTA 2/SwipeMatchFirestoreLBTA/Extensions/Firebase+Utils.swift"; sourceTree = "<group>"; };
 		8897463C21C0856500DBF6F6 /* ChatRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestController.swift; sourceTree = "<group>"; };
-		8897463E21C194D600DBF6F6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		8897463E21C194D600DBF6F6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8897464821C327F000DBF6F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8897469C21C378B700DBF6F6 /* mojo_test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mojo_test.xcdatamodel; sourceTree = "<group>"; };
 		889E0FDE21D1F24B00A74140 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,7 +202,7 @@
 				8897463421BDB15E00DBF6F6 /* Login */,
 				8897462A21B7526000DBF6F6 /* Bindable.swift */,
 				8897462E21B8C3B500DBF6F6 /* SettingsController.swift */,
-				8897463E21C194D600DBF6F6 /* CustomTabBarController.swift */,
+				8897463E21C194D600DBF6F6 /* MainTabBarController.swift */,
 				88AC696221C874BD006E0559 /* MeController.swift */,
 			);
 			path = Controllers;
@@ -299,7 +299,7 @@
 		88AC695F21C83796006E0559 /* Swiping */ = {
 			isa = PBXGroup;
 			children = (
-				8891671621B0F8E4000267F7 /*  HomeController.swift */,
+				8891671621B0F8E4000267F7 /* homeController.swift */,
 				88AC696021C83802006E0559 /* SwipingPhotosController.swift */,
 			);
 			path = Swiping;
@@ -635,7 +635,7 @@
 				8897461721B47C8C00DBF6F6 /* CardView.swift in Sources */,
 				8897462721B7325300DBF6F6 /* RegistrationViewModel.swift in Sources */,
 				8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */,
-				8891671721B0F8E4000267F7 /*  HomeController.swift in Sources */,
+				8891671721B0F8E4000267F7 /* homeController.swift in Sources */,
 				88AC696321C874BD006E0559 /* MeController.swift in Sources */,
 				88AC696921CD8697006E0559 /* HouseUserProfileButton.swift in Sources */,
 				88AC695C21C75491006E0559 /* Message.swift in Sources */,
@@ -645,7 +645,7 @@
 				88AC695A21C72F9F006E0559 /* Extensions+Catches.swift in Sources */,
 				8897462F21B8C3B500DBF6F6 /* SettingsController.swift in Sources */,
 				8897463321B9F55700DBF6F6 /* AgeRangeCell.swift in Sources */,
-				8897463F21C194D600DBF6F6 /* CustomTabBarController.swift in Sources */,
+				8897463F21C194D600DBF6F6 /* MainTabBarController.swift in Sources */,
 				8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */,
 				8897461A21B4BBA200DBF6F6 /* User.swift in Sources */,
 				8897463A21BEF61300DBF6F6 /* Firebase+Utils.swift in Sources */,

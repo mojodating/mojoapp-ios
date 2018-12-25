@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
 //        window?.rootViewController = HomeController()
-        window?.rootViewController = CustomTabBarController()
+        window?.rootViewController = MainTabBarController()
 
         attempRegisterForNotifications(application: application)
        
