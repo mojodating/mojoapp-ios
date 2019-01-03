@@ -7,8 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
 class InvitationView: UIView {
+    
+    var cardUID: String! {
+        didSet {
+            Firestore.firestore().collection("users").document(cardUID).getDocument { (snapshot, err) in
+                if let err = err {
+                    print("failed to fetch users:", err)
+                    return
+                }
+                
+                guard let dictionary = snapshot?.data() else { return }
+                let user = User(dictionary: dictionary)
+                guard let url = URL(string: user.imageUrl1 ?? "") else { return }
+                self.currentUserImageView.sd_setAnimationImages(with: [url])
+                
+                
+            }
+        }
+    }
     
     fileprivate let invitationImageView: UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "invitation"))
@@ -37,7 +56,7 @@ class InvitationView: UIView {
         return label
     }()
     
-    fileprivate let houseUserImageView: UIImageView = {
+    fileprivate let currentUserImageView: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "peter"))
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -71,7 +90,7 @@ class InvitationView: UIView {
         
         let angel = 30 * CGFloat.pi / 180
         
-        houseUserImageView.transform = CGAffineTransform(rotationAngle: -angel).concatenating(CGAffineTransform(translationX: 200, y: 0))
+        currentUserImageView.transform = CGAffineTransform(rotationAngle: -angel).concatenating(CGAffineTransform(translationX: 200, y: 0))
         
         rateSummaryLabel.transform = CGAffineTransform(translationX: -500, y: 0)
         enjouHouseButton.transform = CGAffineTransform(translationX: 500, y: 0)
@@ -80,12 +99,12 @@ class InvitationView: UIView {
             
             //animation 1 - translation back to position
             UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.45, animations: {
-                self.houseUserImageView.transform = CGAffineTransform (rotationAngle: -angel)
+                self.currentUserImageView.transform = CGAffineTransform (rotationAngle: -angel)
             })
             
             //animation 2 - rotation
             UIView.addKeyframe(withRelativeStartTime: 0.6, relativeDuration: 0.4, animations: {
-                self.houseUserImageView.transform = .identity
+                self.currentUserImageView.transform = .identity
             })
             
         }) { (_) in
@@ -101,20 +120,20 @@ class InvitationView: UIView {
         addSubview(invitationImageView)
         addSubview(descriptionLabel)
         addSubview(rateSummaryLabel)
-        addSubview(houseUserImageView)
+        addSubview(currentUserImageView)
         addSubview(enjouHouseButton)
         
         invitationImageView.anchor(top: nil, leading: nil, bottom: descriptionLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 16, right: 0), size: .init(width: 316, height: 137))
         invitationImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
-        descriptionLabel.anchor(top: nil, leading: self.leadingAnchor, bottom: houseUserImageView.topAnchor, trailing: self.trailingAnchor, padding: .init(top: 0, left: 48, bottom: 32, right: 48), size: .init(width: 0, height: 50))
+        descriptionLabel.anchor(top: nil, leading: self.leadingAnchor, bottom: currentUserImageView.topAnchor, trailing: self.trailingAnchor, padding: .init(top: 0, left: 48, bottom: 32, right: 48), size: .init(width: 0, height: 50))
         
-        rateSummaryLabel.anchor(top: houseUserImageView.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 60))
+        rateSummaryLabel.anchor(top: currentUserImageView.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 60))
         
-        houseUserImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .zero, size: .init(width: 140, height: 140))
-        houseUserImageView.layer.cornerRadius = 140 / 2
-        houseUserImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
-        houseUserImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        currentUserImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .zero, size: .init(width: 140, height: 140))
+        currentUserImageView.layer.cornerRadius = 140 / 2
+        currentUserImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        currentUserImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         
         enjouHouseButton.anchor(top: rateSummaryLabel.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 50))
     }

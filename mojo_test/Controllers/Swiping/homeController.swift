@@ -22,6 +22,7 @@ class HomeController: UIViewController, CardViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.isNavigationBarHidden = true
  
         view.backgroundColor = .white
         view.addSubview(cardsDeckView)
@@ -143,7 +144,7 @@ class HomeController: UIViewController, CardViewDelegate {
     
     fileprivate func handleRating() {
         bottomControls.cosmosView.didFinishTouchingCosmos = { rating in
-            print("Rated: \(rating)")
+//            print("Rated: \(rating)")
             
             guard let cardUID = self.topCardView?.cardViewModel.uid else { return }
             
@@ -165,6 +166,7 @@ class HomeController: UIViewController, CardViewDelegate {
     
     fileprivate func presentInvitationView(cardUID:String) {
         let invitationView = InvitationView()
+        invitationView.cardUID = cardUID
         view.addSubview(invitationView)
         invitationView.fillSuperview()
     }
@@ -206,7 +208,7 @@ class HomeController: UIViewController, CardViewDelegate {
     }
     
     func didTapChatButton(cardViewModel:CardViewModel) {
-        print("Home controller:", cardViewModel.attributedString)
+//        print("Home controller:", cardViewModel.attributedString)
         let chatRequestController = ChatRequestController()
         chatRequestController.cardViewModel = cardViewModel
         present(chatRequestController, animated: true)

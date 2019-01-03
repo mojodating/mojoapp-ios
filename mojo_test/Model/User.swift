@@ -14,7 +14,7 @@ struct User: ProducesCardViewModel {
     var name: String?
     var age: Int?
     var profession: String?
-//    let imageNames: [String]
+    var profileImageUrl: String?
     var imageUrl1: String?
     var imageUrl2: String?
     var imageUrl3: String?
@@ -28,6 +28,7 @@ struct User: ProducesCardViewModel {
         self.age = dictionary["age"] as? Int
         self.profession = dictionary["profession"] as? String
         self.name = dictionary["fullname"] as? String ?? ""
+        self.profileImageUrl = dictionary["profileImageUrl"] as? String
         self.imageUrl1 = dictionary["imageUrl1"] as? String
         self.imageUrl2 = dictionary["imageUrl2"] as? String
         self.imageUrl3 = dictionary["imageUrl3"] as? String

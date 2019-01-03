@@ -83,6 +83,7 @@ class RegistrationViewModel {
             "uid": uid,
             "imageUrl1":imageUrl,
             "age": 18,
+            "profileImageUrl": imageUrl,
             "minSeekingAge": SettingsController.defaultMinSeekingAge,
             "maxSeekingAge": SettingsController.defaultMaxSeekingAge,
         ]

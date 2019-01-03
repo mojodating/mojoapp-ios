@@ -1,5 +1,5 @@
 //
-//  MeController.swift
+//  UserProfileController.swift
 //  mojo_test
 //
 //  Created by Yunyun Chen on 12/17/18.
@@ -11,7 +11,7 @@ import Firebase
 import JGProgressHUD
 import SDWebImage
 
-class MeController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate {
+class UserProfileController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate {
     
     let cardsDeckView = UIView()
     var cardViewModel = [CardViewModel]()
@@ -21,17 +21,46 @@ class MeController: UIViewController, SettingsControllerDelegate, LoginControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.isNavigationBarHidden = true
+        view.backgroundColor = .white
+        
+        //set up navigation
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.view.backgroundColor = UIColor.clear
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        
         
         setupLayout()
         
         fetchCurrentUser()
         
+        setupSettingsButton()
+    }
+    
+    fileprivate func setupSettingsButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "gear").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleLogout))
+    }
+    
+    @objc fileprivate func handleLogout() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
+            
+            
+            try? Auth.auth().signOut()
+            
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("MeController did appear")
+        print("UserProfileController did appear")
         //kick the user out when they log out
         if Auth.auth().currentUser == nil {
             let registrationController = RegistrationController()
@@ -59,9 +88,9 @@ class MeController: UIViewController, SettingsControllerDelegate, LoginControlle
             }
             
             //fether our user here
-//            print(snapshot?.data())
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
+            self.navigationItem.title = self.user?.name
             self.setupCardFromUser(user: self.user!)
         }
     }
@@ -86,7 +115,7 @@ class MeController: UIViewController, SettingsControllerDelegate, LoginControlle
         topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
     }
     
-    @objc func handleSettings () {
+    @objc func handleSettings() {
         
         let settingsController = SettingsController()
         settingsController.delegate = self

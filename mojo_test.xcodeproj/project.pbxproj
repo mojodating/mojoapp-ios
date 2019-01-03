@@ -39,7 +39,7 @@
 		88AC695C21C75491006E0559 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695B21C75491006E0559 /* Message.swift */; };
 		88AC695E21C823A2006E0559 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695D21C823A2006E0559 /* UserCell.swift */; };
 		88AC696121C83802006E0559 /* SwipingPhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696021C83802006E0559 /* SwipingPhotosController.swift */; };
-		88AC696321C874BD006E0559 /* MeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696221C874BD006E0559 /* MeController.swift */; };
+		88AC696321C874BD006E0559 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696221C874BD006E0559 /* UserProfileController.swift */; };
 		88AC696721CC8F69006E0559 /* InvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696621CC8F69006E0559 /* InvitationView.swift */; };
 		88AC696921CD8697006E0559 /* HouseUserProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696821CD8697006E0559 /* HouseUserProfileButton.swift */; };
 		88AC696C21CDB873006E0559 /* WalletController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696B21CDB873006E0559 /* WalletController.swift */; };
@@ -126,7 +126,7 @@
 		88AC695B21C75491006E0559 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		88AC695D21C823A2006E0559 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		88AC696021C83802006E0559 /* SwipingPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingPhotosController.swift; sourceTree = "<group>"; };
-		88AC696221C874BD006E0559 /* MeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeController.swift; sourceTree = "<group>"; };
+		88AC696221C874BD006E0559 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
 		88AC696621CC8F69006E0559 /* InvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvitationView.swift; sourceTree = "<group>"; };
 		88AC696821CD8697006E0559 /* HouseUserProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseUserProfileButton.swift; sourceTree = "<group>"; };
 		88AC696B21CDB873006E0559 /* WalletController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletController.swift; sourceTree = "<group>"; };
@@ -194,16 +194,14 @@
 		8891671821B0FA0A000267F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				889E0FEA21DD7A2500A74140 /* User Profile */,
 				88AC696A21CDB848006E0559 /* Wallet */,
 				88AC695F21C83796006E0559 /* Swiping */,
 				88AC695521C71C65006E0559 /* Registration */,
 				889746A821C44AE300DBF6F6 /* Chat */,
-				8897463B21C0852100DBF6F6 /* Chat Requests */,
 				8897463421BDB15E00DBF6F6 /* Login */,
 				8897462A21B7526000DBF6F6 /* Bindable.swift */,
-				8897462E21B8C3B500DBF6F6 /* SettingsController.swift */,
 				8897463E21C194D600DBF6F6 /* MainTabBarController.swift */,
-				88AC696221C874BD006E0559 /* MeController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,19 +259,12 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		8897463B21C0852100DBF6F6 /* Chat Requests */ = {
-			isa = PBXGroup;
-			children = (
-				8897463C21C0856500DBF6F6 /* ChatRequestController.swift */,
-			);
-			path = "Chat Requests";
-			sourceTree = "<group>";
-		};
 		889746A821C44AE300DBF6F6 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				88AC695121C5C358006E0559 /* FriendChatLogController.swift */,
 				88AC695321C6F7E5006E0559 /*  MessagesController.swift */,
+				8897463C21C0856500DBF6F6 /* ChatRequestController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -285,6 +276,15 @@
 				889E0FE221D1F24B00A74140 /* Info.plist */,
 			);
 			path = NotificationService;
+			sourceTree = "<group>";
+		};
+		889E0FEA21DD7A2500A74140 /* User Profile */ = {
+			isa = PBXGroup;
+			children = (
+				88AC696221C874BD006E0559 /* UserProfileController.swift */,
+				8897462E21B8C3B500DBF6F6 /* SettingsController.swift */,
+			);
+			path = "User Profile";
 			sourceTree = "<group>";
 		};
 		88AC695521C71C65006E0559 /* Registration */ = {
@@ -636,7 +636,7 @@
 				8897462721B7325300DBF6F6 /* RegistrationViewModel.swift in Sources */,
 				8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */,
 				8891671721B0F8E4000267F7 /* homeController.swift in Sources */,
-				88AC696321C874BD006E0559 /* MeController.swift in Sources */,
+				88AC696321C874BD006E0559 /* UserProfileController.swift in Sources */,
 				88AC696921CD8697006E0559 /* HouseUserProfileButton.swift in Sources */,
 				88AC695C21C75491006E0559 /* Message.swift in Sources */,
 				88AC696121C83802006E0559 /* SwipingPhotosController.swift in Sources */,

@@ -7,25 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //change tab bar color to transparent
-        let transperentBlackColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
-        
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
-        transperentBlackColor.setFill()
-        UIRectFill(rect)
-        
-        if let image = UIGraphicsGetImageFromCurrentImageContext() {
-            tabBar.backgroundImage = image
+        if Auth.auth().currentUser == nil {
+            
         }
         
-        UIGraphicsEndImageContext()
+        transparentTabBarColor()
         
         //setup our custom view controllers
         
@@ -33,13 +26,13 @@ class MainTabBarController: UITabBarController {
         
         let chatNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: MessagesController())
         
-        let meNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: MeController())
+        let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: UserProfileController())
         
         let walletNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: WalletController())
         
         tabBar.tintColor = .black
         
-        viewControllers = [homeNavController, chatNavController, walletNavController, meNavController]
+        viewControllers = [homeNavController, chatNavController, walletNavController, userProfileNavController]
         
         //modity tab bar item insets
         guard let items = tabBar.items else { return }
@@ -55,6 +48,22 @@ class MainTabBarController: UITabBarController {
         navController.tabBarItem.image = unselectedImage
         navController.tabBarItem.selectedImage = selectedImage
         return navController
+    }
+    
+    fileprivate func transparentTabBarColor() {
+        //change tab bar color to transparent
+        let transperentBlackColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
+        
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
+        transperentBlackColor.setFill()
+        UIRectFill(rect)
+        
+        if let image = UIGraphicsGetImageFromCurrentImageContext() {
+            tabBar.backgroundImage = image
+        }
+        
+        UIGraphicsEndImageContext()
     }
 
 }

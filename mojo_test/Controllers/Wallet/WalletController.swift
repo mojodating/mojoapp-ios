@@ -7,136 +7,78 @@
 //
 
 import UIKit
+import Firebase
 
 class WalletController: UIViewController {
-    
-    fileprivate let currentUserImageView: UIImageView = {
-        let imageView = UIImageView(image: #imageLiteral(resourceName: "peter"))
-        imageView.contentMode = .scaleAspectFill
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 34
-        return imageView
-    }()
-    
-    fileprivate let usernameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "@sussie12"
-        label.textAlignment = .center
-        label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 16)
-        return label
-    }()
-    
-    
-    fileprivate let BalanceStackView: UIStackView = {
-        let stackView = UIStackView()
-        
-        let balanceLabel: UILabel = {
-            let label = UILabel()
-            label.text = "Balance"
-            label.textAlignment = .center
-            label.textColor = .black
-            label.font = UIFont.systemFont(ofSize: 16)
-            return label
-        }()
-        let userBalanceLabel: UILabel = {
-            let label = UILabel()
-            label.text = "10 Mojo Coin"
-            label.textAlignment = .center
-            label.textColor = .black
-            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-            return label
-        }()
-        
-        let dollarBalanceLabel: UILabel = {
-            let label = UILabel()
-            label.text = "$10.00"
-            label.textAlignment = .center
-            label.textColor = .darkGray
-            label.font = UIFont.systemFont(ofSize: 16)
-            return label
-        }()
-        
-        let topUpButton: UIButton = {
-            let button = UIButton(type: .system)
-            button.setTitle("Top up", for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
-            button.layer.cornerRadius = 4
-            return button
-        }()
-        
-        let sendButton: UIButton = {
-            let button = UIButton(type: .system)
-            button.setTitle("Send", for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-            button.setTitleColor(.black, for: .normal)
-            button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            button.layer.borderColor = UIColor.lightGray.cgColor
-            button.layer.borderWidth = 1
-            button.layer.cornerRadius = 4
-            return button
-        }()
-        
-        let cashOutButton: UIButton = {
-            let button = UIButton(type: .system)
-            button.setTitle("Cash out", for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-            button.setTitleColor(.black, for: .normal)
-            button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            button.layer.borderColor = UIColor.lightGray.cgColor
-            button.layer.borderWidth = 1
-            button.layer.cornerRadius = 4
-            return button
-        }()
-        
-        stackView.addArrangedSubview(balanceLabel)
-        stackView.addArrangedSubview(userBalanceLabel)
-        stackView.addArrangedSubview(dollarBalanceLabel)
-        stackView.addArrangedSubview(topUpButton)
-        stackView.addArrangedSubview(sendButton)
-        stackView.addArrangedSubview(cashOutButton)
-        
-        topUpButton.widthAnchor.constraint(equalToConstant: 273).isActive = true
-        topUpButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        sendButton.widthAnchor.constraint(equalToConstant: 273).isActive = true
-        sendButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        cashOutButton.widthAnchor.constraint(equalToConstant: 273).isActive = true
-        cashOutButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-        stackView.axis = .vertical
-        stackView.distribution = .equalSpacing
-        stackView.alignment = .center
-        
-        
-        return stackView
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .white
         
+        fetchCurrentUser()
+        
         setupNavigationBar()
         
-        view.addSubview(currentUserImageView)
-        view.addSubview(usernameLabel)
-        view.addSubview(BalanceStackView)
-        
-        currentUserImageView.anchor(top: nil, leading: nil, bottom: usernameLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 16, right: 0), size: .init(width: 68, height: 68))
-        currentUserImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        usernameLabel.anchor(top: nil, leading: nil, bottom: BalanceStackView.topAnchor, trailing: nil, padding: .init(top: 16, left: 0, bottom: 48, right: 0))
-        usernameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        BalanceStackView.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 268))
-        BalanceStackView.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
-        BalanceStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        setupLayout()
+    }
+    
+    var user: User?
+    lazy var functions = Functions.functions()
+
+    fileprivate func fetchCurrentUser() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print(err)
+                return
+            }
+//          fetch our user here
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
+
+            //fetch user name
+            self.usernameLabel.text = self.user?.name
+            guard let profileImageUrl = self.user?.imageUrl1 else { return }
+
+            //setup ProfileImage
+            guard let url = URL(string: profileImageUrl) else {return}
+
+            URLSession.shared.dataTask(with: url) { (data, response, err) in
+
+                if let err = err {
+                    print("failed to fetch profile image:", err)
+                    return
+                }
+
+                guard let data = data else {return}
+
+                let image = UIImage(data: data)
+
+                DispatchQueue.main.async {
+                    self.currentUserImageView.image = image
+                }
+            }.resume()
+            
+            self.functions.httpsCallable("getBalance").call(["uid": self.user?.uid]) { (result, error) in
+                if let error = error as NSError? {
+                    if error.domain == FunctionsErrorDomain {
+                        let code = FunctionsErrorCode(rawValue: error.code)
+                        let message = error.localizedDescription
+                        let details = error.userInfo[FunctionsErrorDetailsKey]
+                    }
+                }
+                            if let balance = (result?.data as? [String: Any])?["balance"] as? String {
+                                self.userBalanceLabel.text = balance + " Mojo Coin"
+                                print(balance)
+                            }
+            }
+        }
         
         
     }
+
+    
     
     @objc fileprivate func handleTransaction() {
         
@@ -152,4 +94,122 @@ class WalletController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Account", style: .plain, target: self, action: #selector(handleAccount))
     }
     
+    fileprivate func setupLayout() {
+        view.addSubview(currentUserImageView)
+        view.addSubview(usernameLabel)
+        view.addSubview(balanceLabel)
+        view.addSubview(userBalanceLabel)
+        view.addSubview(dollarBalanceLabel)
+        view.addSubview(topUpButton)
+        view.addSubview(sendButton)
+        view.addSubview(cashOutButton)
+        
+        currentUserImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 48, left: 0, bottom: 8, right: 0), size: .init(width: 68, height: 68))
+        currentUserImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        usernameLabel.anchor(top: currentUserImageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
+        
+        usernameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        balanceLabel.anchor(top: nil, leading: nil, bottom: userBalanceLabel.topAnchor, trailing: nil,padding: .init(top: 0, left: 0, bottom: 8, right: 0))
+        balanceLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
+        
+        userBalanceLabel.anchor(top: nil, leading: nil, bottom: dollarBalanceLabel.topAnchor, trailing: nil, padding: .init(top: 8, left: 0, bottom: 8, right: 0))
+        userBalanceLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
+        
+        dollarBalanceLabel.anchor(top: nil, leading: nil, bottom: topUpButton.topAnchor, trailing: nil,padding: .init(top: 8, left: 0, bottom: 16, right: 0))
+        dollarBalanceLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
+        
+        topUpButton.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 32, left: 0, bottom: 0, right: 0), size: .init(width: 273, height: 50))
+        
+        sendButton.anchor(top: topUpButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size: .init(width: 273, height: 50))
+        
+        cashOutButton.anchor(top: sendButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 48, bottom: 0, right: 48), size: .init(width: 273, height: 50))
+        topUpButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
+        topUpButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        
+        sendButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
+        cashOutButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
+        
+    }
+    
+    //Setup stackView Layout
+    
+    fileprivate let currentUserImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .lightGray
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 34
+        return imageView
+    }()
+    
+    fileprivate let usernameLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.textColor = .darkGray
+        label.font = UIFont.systemFont(ofSize: 16)
+        return label
+    }()
+        
+       fileprivate let balanceLabel: UILabel = {
+            let label = UILabel()
+            label.text = "Balance"
+            label.textAlignment = .center
+            label.textColor = .black
+            label.font = UIFont.systemFont(ofSize: 16)
+            return label
+        }()
+       fileprivate let userBalanceLabel: UILabel = {
+            let label = UILabel()
+//            label.text = "10 Mojo Coin"
+            label.textAlignment = .center
+            label.textColor = .black
+            label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+            return label
+        }()
+        
+       fileprivate let dollarBalanceLabel: UILabel = {
+            let label = UILabel()
+            label.text = "$10.00"
+            label.textAlignment = .center
+            label.textColor = .darkGray
+            label.font = UIFont.systemFont(ofSize: 16)
+            return label
+        }()
+        
+       fileprivate let topUpButton: UIButton = {
+            let button = UIButton(type: .system)
+            button.setTitle("Top up", for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+            button.setTitleColor(.white, for: .normal)
+            button.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+            button.layer.cornerRadius = 4
+            return button
+        }()
+        
+       fileprivate let sendButton: UIButton = {
+            let button = UIButton(type: .system)
+            button.setTitle("Send", for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+            button.setTitleColor(.black, for: .normal)
+            button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            button.layer.borderColor = UIColor.lightGray.cgColor
+            button.layer.borderWidth = 1
+            button.layer.cornerRadius = 4
+            return button
+        }()
+        
+       fileprivate let cashOutButton: UIButton = {
+            let button = UIButton(type: .system)
+            button.setTitle("Cash out", for: .normal)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+            button.setTitleColor(.black, for: .normal)
+            button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            button.layer.borderColor = UIColor.lightGray.cgColor
+            button.layer.borderWidth = 1
+            button.layer.cornerRadius = 4
+            return button
+        }()
+
 }
