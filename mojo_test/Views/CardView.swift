@@ -10,6 +10,9 @@ import UIKit
 import SDWebImage
 
 protocol CardViewDelegate {
+    
+    func handleChatRequest(cardViewModel: CardViewModel)
+    
     func didRemoveCard(cardView: CardView)
 }
 
@@ -83,18 +86,26 @@ class CardView: UIView {
         }
     }
     
+    fileprivate let chatRequestButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "9474f3a4-dd2f-4cb9-a225-cb108e4aaeda").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.addTarget(self, action: #selector(handleChatRequest), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc fileprivate func handleChatRequest() {
+
+        self.delegate?.handleChatRequest(cardViewModel: self.cardViewModel)
+    }
     
     fileprivate func setupLayout() {
         
         clipsToBounds = true
-        //custom code
         
         let swipingPhotosView = swipingPhotosController.view!
 
         addSubview(swipingPhotosView)
         swipingPhotosView.fillSuperview()
-        
-//        setupBarsStackView()
         
         //add gradient layer
         setupGradientLayer()
@@ -103,6 +114,9 @@ class CardView: UIView {
         informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 96, right: 24))
         informationLabel.textColor = .white
         informationLabel.numberOfLines = 0
+        
+        addSubview(chatRequestButton)
+        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 16), size: .init(width: 44, height: 44))
         
     }
     

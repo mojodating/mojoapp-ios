@@ -13,17 +13,15 @@ import Cosmos
 import TinyConstraints
 
 class HomeController: UIViewController, CardViewDelegate {
-    
-    
+   
     let cardsDeckView = UIView()
-    var cardViewModels = [CardViewModel]() // empty array
-        let bottomControls = HomeBottomControlStackView()
-
+    var cardViewModels = [CardViewModel]()
+    let bottomControls = HomeBottomControlStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
- 
+        
         view.backgroundColor = .white
         view.addSubview(cardsDeckView)
         view.addSubview(bottomControls)
@@ -31,7 +29,6 @@ class HomeController: UIViewController, CardViewDelegate {
         bottomControls.frame = .init(x: view.frame.size.width - 184, y:view.frame.size.height - 403 , width: 184, height: 212)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         handleRating()
-        bottomControls.chatButton.addTarget(self, action: #selector(handlChatRequest), for: .touchUpInside)
         
         view.sendSubviewToBack(cardsDeckView)
 
@@ -209,11 +206,11 @@ class HomeController: UIViewController, CardViewDelegate {
         return cardView
     }
     
-    @objc fileprivate func handlChatRequest() {
+    func handleChatRequest(cardViewModel: CardViewModel) {
         let controller = ChatRequestController()
+        controller.cardViewModel = cardViewModel
         let navController = UINavigationController(rootViewController: controller)
         present(navController, animated: true)
-        
     }
     
 }

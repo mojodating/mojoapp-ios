@@ -41,7 +41,7 @@ class HomeBottomControlStackView: UIStackView {
         distribution = .equalSpacing
         alignment = .trailing
         
-        [profileThumbnail, chatButton, refreshButton, cosmosView].forEach{(button) in
+        [profileThumbnail, refreshButton, cosmosView].forEach{(button) in
             self.addArrangedSubview(button)
         }
         
