@@ -31,12 +31,14 @@ class HomeController: UIViewController, CardViewDelegate {
         bottomControls.frame = .init(x: view.frame.size.width - 184, y:view.frame.size.height - 403 , width: 184, height: 212)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         handleRating()
+        bottomControls.chatButton.addTarget(self, action: #selector(handlChatRequest), for: .touchUpInside)
         
         view.sendSubviewToBack(cardsDeckView)
 
         fetchCurrentUser()
     }
     
+
 //    override func viewDidAppear(_ animated: Bool) {
 //        super.viewDidAppear(animated)
 //        print("HomeController did appear")
@@ -207,12 +209,11 @@ class HomeController: UIViewController, CardViewDelegate {
         return cardView
     }
     
-    func didTapChatButton(cardViewModel:CardViewModel) {
-//        print("Home controller:", cardViewModel.attributedString)
-        let chatRequestController = ChatRequestController()
-        chatRequestController.cardViewModel = cardViewModel
-        present(chatRequestController, animated: true)
-
+    @objc fileprivate func handlChatRequest() {
+        let controller = ChatRequestController()
+        let navController = UINavigationController(rootViewController: controller)
+        present(navController, animated: true)
+        
     }
     
 }
