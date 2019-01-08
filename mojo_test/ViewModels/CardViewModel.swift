@@ -17,13 +17,15 @@ class CardViewModel {
     //will define the propertise that are view will display/render out
     let uid: String
     let name: String
+    let rate: Int
     let imageUrls: [String]
     let attributedString: NSAttributedString
     let textAlignment: NSTextAlignment
     
-    init(uid: String, name: String, imageNames: [String], attributedString: NSAttributedString, textAlignment: NSTextAlignment) {
+    init(uid: String, name: String, rate: Int, imageNames: [String], attributedString: NSAttributedString, textAlignment: NSTextAlignment) {
         self.uid = uid
         self.name = name
+        self.rate = rate
         self.imageUrls = imageNames
         self.attributedString = attributedString
         self.textAlignment = textAlignment

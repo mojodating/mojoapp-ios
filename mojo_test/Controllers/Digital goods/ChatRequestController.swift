@@ -11,6 +11,29 @@ import Firebase
 
 class ChatRequestController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var digitalGoods = [DigitalGood]()
+    fileprivate func loadData() {
+         Firestore.firestore().collection("drinkTypes").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+                    let drinkType = document.data()
+                    drinkType.forEach({ (key, value) in
+                        
+                        let digitalGood = DigitalGood(drinkType: drinkType)
+                        self.digitalGoods.append(digitalGood)
+
+                    })
+                    
+                    self.menuCollectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    
     var cardViewModel: CardViewModel! {
         didSet{
             userNameLabel.attributedText = cardViewModel.attributedString
@@ -64,16 +87,16 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
     let menuLabel: UILabel = {
         let label = UILabel()
         label.text = "MENU"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return label
     }()
     
     let balanceLabel: UILabel = {
         let label = UILabel()
         label.text = "Your balance: 30 Jo"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return label
     }()
     
@@ -98,6 +121,8 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleCancel))
         
         setupLayout()
+        
+        loadData()
     }
     
     @objc fileprivate func handleCancel() {
@@ -115,6 +140,12 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         view.addSubview(descriptionLabel)
         descriptionLabel.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 24, bottom: 0, right: 24))
         
+        view.addSubview(menuLabel)
+        menuLabel.anchor(top: descriptionLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 24, bottom: 8, right: 0))
+        
+        view.addSubview(balanceLabel)
+        balanceLabel.anchor(top: descriptionLabel.bottomAnchor, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 0, bottom: 8, right: 24))
+        
         // set up collectionView
         view.addSubview(menuCollectionView)
         menuCollectionView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
@@ -124,46 +155,33 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
         
-        menuCollectionView.register(IconCell.self, forCellWithReuseIdentifier: cellId)
+        menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return digitalGoods.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! IconCell
+        let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MenuCell
+        
+        cell.backgroundColor = .white
+        cell.layer.cornerRadius = 8
+
+        cell.digitalGood = digitalGoods[indexPath.item]
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 343, height: 343)
+        
+        return CGSize(width: view.frame.width - 56, height: view.frame.width - 56)
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
     }
-    
-    private class IconCell: UICollectionViewCell {
-        
-//        let drinkImageView: UIImageView = {
-//            let iv = UIImageView()
-//            iv.contentMode = .scaleAspectFill
-//            iv.clipsToBounds = true
-//            iv.layer.cornerRadius = 8
-//        }()
-        
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            backgroundColor = .blue
-        }
-        
-        required init?(coder aDecoder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
-    }
-
-    
 
 }

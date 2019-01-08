@@ -147,7 +147,6 @@ class HomeController: UIViewController, CardViewDelegate {
             
             guard let cardUID = self.topCardView?.cardViewModel.uid else { return }
             
-//            self.presentInvitationView(cardUID: cardUID)
             
             self.functions.httpsCallable("rate").call(["uid": cardUID, "rate": rating]) { (result, error) in
                 if let error = error as NSError? {
@@ -161,13 +160,6 @@ class HomeController: UIViewController, CardViewDelegate {
   
             self.performSwipeAnimation()
         }
-    }
-    
-    fileprivate func presentInvitationView(cardUID:String) {
-        let invitationView = InvitationView()
-        invitationView.cardUID = cardUID
-        view.addSubview(invitationView)
-        invitationView.fillSuperview()
     }
     
     func didRemoveCard(cardView: CardView) {

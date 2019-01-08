@@ -13,17 +13,12 @@ import SDWebImage
 
 class UserProfileController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate {
     
-    let cardsDeckView = UIView()
-    var cardViewModel = [CardViewModel]()
-    let topStackView = TopNavigationStackView()
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
-        //set up navigation
+        //set up navigation to transparent
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
@@ -39,18 +34,33 @@ class UserProfileController: UIViewController, SettingsControllerDelegate, Login
         setupSettingsButton()
     }
     
+    fileprivate let currentUserImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.backgroundColor = .lightGray
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+//        imageView.layer.cornerRadius = 34
+        return imageView
+    }()
+    
     fileprivate func setupSettingsButton() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "gear").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleLogout))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "gear").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleSettingMenu))
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "208322b9-6bf3-4241-9cec-17a73e689bac").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleEditProfile))
     }
     
-    @objc fileprivate func handleLogout() {
+    @objc fileprivate func handleSettingMenu() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
+        alertController.addAction(UIAlertAction(title: "Invite Friends", style: .default, handler: { (_) in
+            
+        }))
+   
         alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
-            
-            
+  
             try? Auth.auth().signOut()
-            
+            self.dismiss(animated: true)
+     
         }))
         
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -68,8 +78,6 @@ class UserProfileController: UIViewController, SettingsControllerDelegate, Login
             let navController = UINavigationController(rootViewController: registrationController)
             present(navController, animated: true)
         }
-        
-        
     }
     
     func didFinishLoggingIn() {
@@ -91,31 +99,26 @@ class UserProfileController: UIViewController, SettingsControllerDelegate, Login
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
             self.navigationItem.title = self.user?.name
-            self.setupCardFromUser(user: self.user!)
         }
     }
     
-    fileprivate func setupCardFromUser(user: User) {
-        let cardView = CardView(frame: .zero)
-        cardView.delegate = self as? CardViewDelegate
-        cardView.cardViewModel = user.toCardViewModel()
-        cardsDeckView.addSubview(cardView)
-        cardView.fillSuperview()
-        cardsDeckView.sendSubviewToBack(cardView)
-        
-    }
+//    fileprivate func setupCardFromUser(user: User) {
+//        let cardView = CardView(frame: .zero)
+//        cardView.delegate = self as? CardViewDelegate
+//        cardView.cardViewModel = user.toCardViewModel()
+//        cardsDeckView.addSubview(cardView)
+//        cardView.fillSuperview()
+//        cardsDeckView.sendSubviewToBack(cardView)
+//
+//    }
     
     fileprivate func setupLayout() {
         
         //add a gradient layer
-        view.addSubview(cardsDeckView)
-        cardsDeckView.fillSuperview()
-        view.addSubview(topStackView)
-        topStackView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 80)
-        topStackView.settingsButton.addTarget(self, action: #selector(handleSettings), for: .touchUpInside)
+        
     }
     
-    @objc func handleSettings() {
+    @objc func handleEditProfile() {
         
         let settingsController = SettingsController()
         settingsController.delegate = self

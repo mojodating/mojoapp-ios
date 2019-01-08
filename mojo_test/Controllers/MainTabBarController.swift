@@ -14,10 +14,6 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if Auth.auth().currentUser == nil {
-            
-        }
-        
         transparentTabBarColor()
         
         //setup our custom view controllers

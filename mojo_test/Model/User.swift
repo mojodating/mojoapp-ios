@@ -19,6 +19,7 @@ struct User: ProducesCardViewModel {
     var imageUrl2: String?
     var imageUrl3: String?
     var uid: String?
+    var rate: Int?
     
     var minSeekingAge: Int?
     var maxSeekingAge: Int?
@@ -35,6 +36,7 @@ struct User: ProducesCardViewModel {
         self.uid = dictionary["uid"] as? String ?? ""
         self.minSeekingAge = dictionary["minSeekingAge"] as? Int
         self.maxSeekingAge = dictionary["maxSeekingAge"] as? Int
+        self.rate = dictionary["bouncingLineRating"] as? Int
     }
     
     func toCardViewModel() -> CardViewModel{
@@ -53,6 +55,6 @@ struct User: ProducesCardViewModel {
         if let url = imageUrl2 {imageUrls.append(url)}
         if let url = imageUrl3 {imageUrls.append(url)}
         
-        return CardViewModel(uid:self.uid ?? "", name: self.name ?? "", imageNames: imageUrls, attributedString: attributedText, textAlignment: .left)
+        return CardViewModel(uid:self.uid ?? "", name: self.name ?? "", rate: self.rate ?? 0, imageNames: imageUrls, attributedString: attributedText, textAlignment: .left)
     }
 }

@@ -31,6 +31,9 @@ extension UIImageView {
                 print(error)
                 return
             }
+            
+//            if url?.absoluteString != self.lastURLUsedToLoadImage { return }
+            
             DispatchQueue.global(qos: .userInitiated).async  {
                 
                 if let downloadedImage = UIImage(data: data!) {

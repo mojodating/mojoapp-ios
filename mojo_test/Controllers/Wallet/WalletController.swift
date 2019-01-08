@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 class WalletController: UIViewController {
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,25 +41,8 @@ class WalletController: UIViewController {
             //fetch user name
             self.usernameLabel.text = self.user?.name
             guard let profileImageUrl = self.user?.imageUrl1 else { return }
-
-            //setup ProfileImage
-            guard let url = URL(string: profileImageUrl) else {return}
-
-            URLSession.shared.dataTask(with: url) { (data, response, err) in
-
-                if let err = err {
-                    print("failed to fetch profile image:", err)
-                    return
-                }
-
-                guard let data = data else {return}
-
-                let image = UIImage(data: data)
-
-                DispatchQueue.main.async {
-                    self.currentUserImageView.image = image
-                }
-            }.resume()
+            
+            self.currentUserImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
             
             self.functions.httpsCallable("getBalance").call(["uid": self.user?.uid]) { (result, error) in
                 if let error = error as NSError? {
@@ -211,5 +195,6 @@ class WalletController: UIViewController {
             button.layer.cornerRadius = 4
             return button
         }()
+    
 
 }

@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-//        window?.rootViewController = HomeController()
+//        window?.rootViewController = WelcomeController()
         window?.rootViewController = MainTabBarController()
 
         attempRegisterForNotifications(application: application)
@@ -200,14 +200,36 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
+        
         let userInfo = response.notification.request.content.userInfo
+        
+        //Respond to Inhouse Notifications
+//        if let cardUID = userInfo["uid"] as? String {
+//            print(cardUID)
+
+            // push the user's invitation page
+            let controller = WelcomeController()
+//            controller.cardUID = cardUID
+        
+            //access main UI from Appdelegate
+            if let mainTabBarController = window?.rootViewController as? MainTabBarController {
+
+                mainTabBarController.selectedIndex = 2
+                
+                mainTabBarController.presentedViewController?.dismiss(animated: true, completion: nil)
+
+                if let walletNavController =
+                mainTabBarController.viewControllers?.first as? UINavigationController {
+                    walletNavController.present(controller, animated: true)
+                }
+            }
+//        }
         
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
-        
+
         // Print full message.
         print(userInfo)
          
@@ -242,4 +264,3 @@ extension AppDelegate: MessagingDelegate {
     }
     
 }
-

@@ -28,6 +28,7 @@ class CardView: UIView {
             swipingPhotosController.cardViewModel = self.cardViewModel
             informationLabel.attributedText = cardViewModel.attributedString
             informationLabel.textAlignment = cardViewModel.textAlignment
+            userProfileView.loadImageUsingCacheWithUrlString(urlString: cardViewModel.imageUrls.first ?? "")
             
             (0..<cardViewModel.imageUrls.count).forEach{ (_) in
                 let barView = UIView()
@@ -86,6 +87,16 @@ class CardView: UIView {
         }
     }
     
+    fileprivate let userProfileView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.clipsToBounds = true
+        view.layer.cornerRadius = 22
+        view.layer.borderWidth = 2
+        view.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        return view
+    }()
+    
     fileprivate let chatRequestButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "9474f3a4-dd2f-4cb9-a225-cb108e4aaeda").withRenderingMode(.alwaysOriginal), for: .normal)
@@ -117,6 +128,9 @@ class CardView: UIView {
         
         addSubview(chatRequestButton)
         chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 16), size: .init(width: 44, height: 44))
+        
+        addSubview(userProfileView)
+        userProfileView.anchor(top: nil, leading: nil, bottom: chatRequestButton.topAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 16), size: .init(width: 44, height: 44))
         
     }
     
