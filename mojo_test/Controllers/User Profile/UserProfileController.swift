@@ -24,9 +24,7 @@ class UserProfileController: UIViewController, SettingsControllerDelegate, Login
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.view.backgroundColor = UIColor.clear
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
-        
-        
+     
         setupLayout()
         
         fetchCurrentUser()
@@ -98,25 +96,47 @@ class UserProfileController: UIViewController, SettingsControllerDelegate, Login
             //fether our user here
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
-            self.navigationItem.title = self.user?.name
+            guard let currentUserName = self.user?.name else { return }
+            self.navigationItem.title = currentUserName
+            self.userNameLabel.text = currentUserName
+            self.userInfoLabel.text = "\(self.user?.age ?? 0), "  + (self.user?.profession ?? "")
+            
         }
     }
     
-//    fileprivate func setupCardFromUser(user: User) {
-//        let cardView = CardView(frame: .zero)
-//        cardView.delegate = self as? CardViewDelegate
-//        cardView.cardViewModel = user.toCardViewModel()
-//        cardsDeckView.addSubview(cardView)
-//        cardView.fillSuperview()
-//        cardsDeckView.sendSubviewToBack(cardView)
-//
-//    }
+    
+    let userNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "UserName"
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
+        return label
+        
+    }()
+    
+    let userInfoLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Age, Profession"
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        return label
+    }()
     
     fileprivate func setupLayout() {
         
-        //add a gradient layer
+        let gradientView = CurrentUserPhotoView()
         
+        view.addSubview(gradientView)
+        gradientView.fillSuperview()
+        
+        view.addSubview(userInfoLabel)
+        userInfoLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 8, right: 0))
+        
+        view.addSubview(userNameLabel)
+        userNameLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: userInfoLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 8, right: 0))
+
     }
+    
     
     @objc func handleEditProfile() {
         
