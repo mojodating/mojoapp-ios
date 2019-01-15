@@ -199,7 +199,7 @@ class HomeController: UIViewController, CardViewDelegate {
     }
     
     func handleChatRequest(cardViewModel: CardViewModel) {
-        let controller = ChatRequestController()
+        let controller = MarketPlaceController()
         controller.cardViewModel = cardViewModel
         let navController = UINavigationController(rootViewController: controller)
         present(navController, animated: true)

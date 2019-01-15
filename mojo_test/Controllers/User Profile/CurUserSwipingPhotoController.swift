@@ -9,24 +9,14 @@
 import UIKit
 import Firebase
 
-class CurUserSwipingPhotoController: UIPageViewController, UIPageViewControllerDataSource {
+class CurUserSwipingPhotoController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
-    var user: User?
     var controllers = [UIViewController]()
-    fileprivate func fetchCurrentUser() {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
-            if let err = err {
-                print(err)
-                return
-            }
-            //          fetch our user here
-            guard let dictionary = snapshot?.data() else { return }
-            self.user = User(dictionary: dictionary)
-            
-            guard let profileImageUrl1 = self.user?.imageUrl1 else { return }
-            guard let profileImageUrl2 = self.user?.imageUrl2 else { return }
-            guard let profileImageUrl3 = self.user?.imageUrl3 else { return }
+    var user: User! {
+        didSet{
+            guard let profileImageUrl1 = self.user.imageUrl1 else { return }
+            guard let profileImageUrl2 = self.user.imageUrl2 else { return }
+            guard let profileImageUrl3 = self.user.imageUrl3 else { return }
             
             self.controllers = [
                 PhotoController(imageUrl: profileImageUrl1),
@@ -38,14 +28,11 @@ class CurUserSwipingPhotoController: UIPageViewController, UIPageViewControllerD
         }
     }
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
 
         view.backgroundColor = .white
-        fetchCurrentUser()
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {

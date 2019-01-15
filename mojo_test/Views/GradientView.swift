@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class CurrentUserPhotoView: UIView {
+    
+    var user: User! {
+        didSet{
+            userSwipingPhotosController.user = self.user
+        }
+    }
     
     let userSwipingPhotosController = CurUserSwipingPhotoController(transitionStyle: .scroll, navigationOrientation: .horizontal)
 
@@ -16,7 +23,7 @@ class CurrentUserPhotoView: UIView {
         super .init(frame: frame)
         
         let userSwipingView = userSwipingPhotosController.view!
-        
+
         addSubview(userSwipingView)
         userSwipingView.fillSuperview()
         

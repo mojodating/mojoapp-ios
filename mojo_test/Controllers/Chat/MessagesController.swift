@@ -9,7 +9,20 @@
 import UIKit
 import Firebase
 
-class MessagesController: UITableViewController {
+class MessagesController: UITableViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    // setup chat request horizontal collectionView
+    
+    let chatRequestCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 30
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .yellow
+        return cv
+    }()
+    
+    let chatRequestCellId = "chatRequestCellId"
     
     let cellId = "cellId"
     
@@ -25,6 +38,17 @@ class MessagesController: UITableViewController {
         fetchUserFromFirestore()
         
         observeMessages()
+        
+        setupChatRequestCollectionViewLayout()
+    }
+    
+    fileprivate func setupChatRequestCollectionViewLayout() {
+        view.addSubview(chatRequestCollectionView)
+        chatRequestCollectionView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, size: .init(width: view.frame.width, height: 200))
+        chatRequestCollectionView.delegate = self
+        chatRequestCollectionView.dataSource = self
+        
+        chatRequestCollectionView.register(ChatRequestCell.self, forCellWithReuseIdentifier: chatRequestCellId)
     }
     
     
@@ -67,8 +91,6 @@ class MessagesController: UITableViewController {
         cell.textLabel?.font = UIFont.systemFont(ofSize: 16)
         cell.detailTextLabel?.text = "Placeholder text content"
         
-
-        
         if let imageUrl1 = user.imageUrl1 {
             cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: imageUrl1)
     
@@ -88,5 +110,20 @@ class MessagesController: UITableViewController {
         controller.user = user
         navigationController?.pushViewController(controller, animated: true)
         
+    }
+    
+    // Chat request
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = chatRequestCollectionView.dequeueReusableCell(withReuseIdentifier: "chatRequestCellId", for: indexPath) as! ChatRequestCell
+        
+        cell.backgroundColor = .blue
+        
+        return cell
     }
 }

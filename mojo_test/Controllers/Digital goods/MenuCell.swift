@@ -17,7 +17,7 @@ class MenuCell: UICollectionViewCell {
             
             drinkImageView.loadImageUsingCacheWithUrlString(urlString: digitalGoodUrl)
             
-            nameLabel.text = digitalGood?.digitalGoodName
+            nameLabel.text = digitalGood?.name
             
             priceLabel.text = "MOJO \(digitalGood?.price ?? 0)"
             

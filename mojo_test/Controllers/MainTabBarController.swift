@@ -9,34 +9,55 @@
 import UIKit
 import Firebase
 
-class MainTabBarController: UITabBarController {
+class MainTabBarController: UITabBarController, LoginControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        transparentTabBarColor()
-        
-        //setup our custom view controllers
-        
-        let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: HomeController())
-        
-        let chatNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: MessagesController())
-        
-        let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: UserProfileController())
-        
-        let walletNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: WalletController())
-        
-        tabBar.tintColor = .black
-        
-        viewControllers = [homeNavController, chatNavController, walletNavController, userProfileNavController]
-        
-        //modity tab bar item insets
-        guard let items = tabBar.items else { return }
-        
-        for item in items {
-            item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
+        if Auth.auth().currentUser == nil {
+            
+            DispatchQueue.main.async {
+                let registrationController = RegistrationController()
+                registrationController.delegate = self
+                let navController = UINavigationController(rootViewController: registrationController)
+                self.present(navController, animated: true)
+            }
+            return
         }
+        didFinishLoggingIn()
     }
+    
+    func didFinishLoggingIn() {
+        setupViewControllers()
+    }
+
+        
+        func setupViewControllers() {
+            
+            transparentTabBarColor()
+            
+            //setup our custom view controllers
+            
+            let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: HomeController())
+            
+            let chatNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: ChatController())
+            
+            let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: UserProfileController())
+            
+            let walletNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: WalletController())
+            
+            tabBar.tintColor = .black
+            
+            viewControllers = [homeNavController, chatNavController, walletNavController, userProfileNavController]
+            
+            //modity tab bar item insets
+            guard let items = tabBar.items else { return }
+            
+            for item in items {
+                item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
+            }
+            
+        }
     
     fileprivate func templateNavController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController {
         let viewController = rootViewController
@@ -62,5 +83,6 @@ class MainTabBarController: UITabBarController {
         UIGraphicsEndImageContext()
     }
 
-}
 
+
+}

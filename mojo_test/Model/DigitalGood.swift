@@ -6,18 +6,20 @@
 //  Copyright © 2019 Yunyun Chen. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct DigitalGood {
     
+    let id: String
     let imageUrl: String
-    let digitalGoodName: String
+    let name: String
     let price : Int
     let description: String
     
     init(drinkType:[String : Any]) {
+        self.id = drinkType["id"] as? String ?? ""
         self.imageUrl = drinkType["imageUrl"] as? String ?? ""
-        self.digitalGoodName = drinkType["name"] as? String ?? ""
+        self.name = drinkType["name"] as? String ?? ""
         self.price = drinkType["price"] as? Int ?? 0
         self.description = drinkType["description"] as? String ?? ""
     }

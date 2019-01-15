@@ -11,7 +11,7 @@ import Firebase
 import JGProgressHUD
 import SDWebImage
 
-class UserProfileController: UIViewController, SettingsControllerDelegate, LoginControllerDelegate {
+class UserProfileController: UIViewController, SettingsControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,32 +55,20 @@ class UserProfileController: UIViewController, SettingsControllerDelegate, Login
         }))
    
         alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
-  
-            try? Auth.auth().signOut()
-            self.dismiss(animated: true)
-     
+            
+                try? Auth.auth().signOut()
+                
+                let registrationController = RegistrationController()
+                let navController = UINavigationController(rootViewController: registrationController)
+                self.present(navController, animated: true)
+
         }))
         
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         present(alertController, animated: true, completion: nil)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        print("UserProfileController did appear")
-        //kick the user out when they log out
-        if Auth.auth().currentUser == nil {
-            let registrationController = RegistrationController()
-            registrationController.delegate = self
-            let navController = UINavigationController(rootViewController: registrationController)
-            present(navController, animated: true)
-        }
-    }
-    
-    func didFinishLoggingIn() {
-        fetchCurrentUser()
-    }
+
     
     var user: User?
     
@@ -100,6 +88,8 @@ class UserProfileController: UIViewController, SettingsControllerDelegate, Login
             self.navigationItem.title = currentUserName
             self.userNameLabel.text = currentUserName
             self.userInfoLabel.text = "\(self.user?.age ?? 0), "  + (self.user?.profession ?? "")
+//            self.userSwipingPhotosController.user = self.user
+            self.gradientView.user = self.user
             
         }
     }
@@ -122,10 +112,16 @@ class UserProfileController: UIViewController, SettingsControllerDelegate, Login
         return label
     }()
     
+//    let userSwipingPhotosController = CurUserSwipingPhotoController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+    
+    let gradientView = CurrentUserPhotoView()
+    
     fileprivate func setupLayout() {
         
-        let gradientView = CurrentUserPhotoView()
-        
+//        let userPhotoView = userSwipingPhotosController.view!
+//        view.addSubview(userPhotoView)
+//        userPhotoView.fillSuperview()
+
         view.addSubview(gradientView)
         gradientView.fillSuperview()
         

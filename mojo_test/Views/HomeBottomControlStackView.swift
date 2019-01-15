@@ -31,6 +31,7 @@ class HomeBottomControlStackView: UIStackView {
         return view
     }()
     
+    
 //    let profileThumbnail = createButton(image: #imageLiteral(resourceName: "profile"))
     let chatButton = createButton(image: #imageLiteral(resourceName: "chatbutton-1"))
     let refreshButton = createButton(image: #imageLiteral(resourceName: "review-1"))

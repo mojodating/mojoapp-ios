@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatRequestController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class MarketPlaceController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var digitalGoods = [DigitalGood]()
     fileprivate func loadData() {
@@ -38,14 +38,44 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         didSet{
             userNameLabel.attributedText = cardViewModel.attributedString
             
-            guard let profileImageUrl = cardViewModel.imageUrls.first, let url = URL(string: profileImageUrl) else { return }
-            
-            profileImageView.sd_setImage(with: url)
-            
+            profileImageView.loadImageUsingCacheWithUrlString(urlString: cardViewModel.imageUrls.first ?? "")
+
             infoLabel.text = "Say Hi To " + cardViewModel.name + "!"
-            
         }
     }
+    
+    var user: User?
+    lazy var functions = Functions.functions()
+    
+    fileprivate func fetchCurrentUser() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print(err)
+                return
+            }
+            //          fetch our user here
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
+            
+            self.functions.httpsCallable("getBalance").call(["uid": self.user?.uid]) { (result, error) in
+                if let error = error as NSError? {
+                    if error.domain == FunctionsErrorDomain {
+                        let code = FunctionsErrorCode(rawValue: error.code)
+                        let message = error.localizedDescription
+                        let details = error.userInfo[FunctionsErrorDetailsKey]
+                    }
+                }
+                if let balance = (result?.data as? [String: Any])?["balance"] as? Int {
+                    self.balanceLabel.text = "Your balance: \(balance) Jo"
+                    print(balance)
+                }
+            }
+        }
+        
+        
+    }
+    
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
@@ -69,7 +99,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         let label = UILabel()
         label.text = "Say Hi to UserName!"
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 28, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         label.numberOfLines = 0
         return label
     }()
@@ -100,6 +130,8 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         return label
     }()
     
+    // Set up collectionView
+    
     let menuCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -120,14 +152,18 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleCancel))
         
+        fetchCurrentUser()
+        
         setupLayout()
         
         loadData()
+        
     }
     
     @objc fileprivate func handleCancel() {
         self.dismiss(animated: true)
     }
+    
     
     fileprivate func setupLayout() {
         view.addSubview(profileImageView)
@@ -146,6 +182,11 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         view.addSubview(balanceLabel)
         balanceLabel.anchor(top: descriptionLabel.bottomAnchor, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 0, bottom: 8, right: 24))
         
+        setupCollectionViewLayout()
+        
+    }
+    
+    fileprivate func setupCollectionViewLayout() {
         // set up collectionView
         view.addSubview(menuCollectionView)
         menuCollectionView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
@@ -156,7 +197,6 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         menuCollectionView.dataSource = self
         
         menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -182,6 +222,14 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let digitalGood = self.digitalGoods[indexPath.row]
+        let controller = SendChatRequestController()
+        controller.cardViewModel = cardViewModel
+        controller.digitalGood = digitalGood
+        navigationController?.pushViewController(controller, animated: true)
     }
 
 }

@@ -52,16 +52,14 @@ class WalletController: UIViewController {
                         let details = error.userInfo[FunctionsErrorDetailsKey]
                     }
                 }
-                            if let balance = (result?.data as? [String: Any])?["balance"] as? String {
-                                self.userBalanceLabel.text = balance + " Mojo Coin"
+                            if let balance = (result?.data as? [String: Any])?["balance"] as? Int {
+                                self.userBalanceLabel.text = "\(balance) Mojo Coin"
                                 print(balance)
                             }
             }
         }
-        
-        
     }
-
+    
     
     
     @objc fileprivate func handleTransaction() {
@@ -136,7 +134,7 @@ class WalletController: UIViewController {
         return label
     }()
         
-       fileprivate let balanceLabel: UILabel = {
+    fileprivate let balanceLabel: UILabel = {
             let label = UILabel()
             label.text = "Balance"
             label.textAlignment = .center
@@ -144,9 +142,9 @@ class WalletController: UIViewController {
             label.font = UIFont.systemFont(ofSize: 16)
             return label
         }()
-       fileprivate let userBalanceLabel: UILabel = {
+    fileprivate let userBalanceLabel: UILabel = {
             let label = UILabel()
-//            label.text = "10 Mojo Coin"
+            label.text = "0 Mojo Coin"
             label.textAlignment = .center
             label.textColor = .black
             label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
@@ -155,7 +153,7 @@ class WalletController: UIViewController {
         
        fileprivate let dollarBalanceLabel: UILabel = {
             let label = UILabel()
-            label.text = "$10.00"
+            label.text = "$0.00"
             label.textAlignment = .center
             label.textColor = .darkGray
             label.font = UIFont.systemFont(ofSize: 16)
@@ -169,8 +167,15 @@ class WalletController: UIViewController {
             button.setTitleColor(.white, for: .normal)
             button.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
             button.layer.cornerRadius = 4
+        button.addTarget(self, action: #selector(handleTopup), for: .touchUpInside)
             return button
         }()
+    
+    @objc fileprivate func handleTopup() {
+        let controller = TopUpController()
+        controller.user = user
+        navigationController?.pushViewController(controller, animated: true)
+    }
         
        fileprivate let sendButton: UIButton = {
             let button = UIButton(type: .system)
