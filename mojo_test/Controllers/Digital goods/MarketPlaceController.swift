@@ -138,6 +138,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
         layout.minimumLineSpacing = 30
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .yellow
+        cv.isPagingEnabled = true
         return cv
     }()
     

@@ -7,8 +7,33 @@
 //
 
 import UIKit
+import Firebase
 
 class PrivateChatController: UICollectionViewController {
+    
+    var user: User?
+    var conversation : Conversation? {
+        didSet {
+            
+            guard let sendUID = conversation?.sender else { return }
+            
+            Firestore.firestore().collection("users").document(sendUID).getDocument { (snapshot, err) in
+                if let err = err {
+                    print(err)
+                    return
+                }
+                //          fetch our user here
+                guard let dictionary = snapshot?.data() else { return }
+                self.user = User(dictionary: dictionary)
+                
+                self.navigationItem.title = self.user?.name
+                
+//                guard let senderImageUrl = self.user?.imageUrl1 else {return}
+//                self.userProfileImage.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
+                
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

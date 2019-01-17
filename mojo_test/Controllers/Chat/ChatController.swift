@@ -68,7 +68,7 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: chatRequestCellId, for: indexPath) as! ChatRequestCell
         
-        cell.delegate = self
+//        cell.delegate = self
         return cell
     }
     
@@ -90,11 +90,13 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         }
     
-    func didTapCell() {
+    func didTapCell(conversation: Conversation) {
         print("show message chat")
         let chatLogController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
+        chatLogController.conversation = conversation
         navigationController?.pushViewController(chatLogController, animated: true)
     }
+
 
     
     }
