@@ -20,6 +20,7 @@ struct User: ProducesCardViewModel {
     var imageUrl3: String?
     var uid: String?
     var rate: Int?
+    var insideHouse: Bool?
     
     var minSeekingAge: Int?
     var maxSeekingAge: Int?
@@ -37,6 +38,7 @@ struct User: ProducesCardViewModel {
         self.minSeekingAge = dictionary["minSeekingAge"] as? Int
         self.maxSeekingAge = dictionary["maxSeekingAge"] as? Int
         self.rate = dictionary["bouncingLineRating"] as? Int
+        self.insideHouse = dictionary["insideHouse"] as? Bool ?? false
     }
     
     func toCardViewModel() -> CardViewModel{

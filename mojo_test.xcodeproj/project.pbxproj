@@ -41,11 +41,11 @@
 		88A3D6C721ECC659008286BC /* ChatRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6C621ECC659008286BC /* ChatRequestCell.swift */; };
 		88A3D6C921ECC8E3008286BC /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6C821ECC8E3008286BC /* ChatController.swift */; };
 		88A3D6CB21ECCC51008286BC /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6CA21ECCC51008286BC /* ChatCell.swift */; };
-		88A3D6CD21EDFF12008286BC /* PrivateChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6CC21EDFF12008286BC /* PrivateChatController.swift */; };
+		88A3D6CF21EE1634008286BC /* PrivateChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6CE21EE1634008286BC /* PrivateChatController.swift */; };
+		88A3D6D321EE47ED008286BC /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6D221EE47ED008286BC /* Conversation.swift */; };
+		88A3D6D521EFA6DF008286BC /* AfterPurchaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6D421EFA6DF008286BC /* AfterPurchaseController.swift */; };
 		88AC695221C5C358006E0559 /* FriendChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695121C5C358006E0559 /* FriendChatLogController.swift */; };
-		88AC695421C6F7E5006E0559 /* MessagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695321C6F7E5006E0559 /* MessagesController.swift */; };
 		88AC695A21C72F9F006E0559 /* Extensions+Catches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695921C72F9F006E0559 /* Extensions+Catches.swift */; };
-		88AC695C21C75491006E0559 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695B21C75491006E0559 /* Message.swift */; };
 		88AC695E21C823A2006E0559 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695D21C823A2006E0559 /* UserCell.swift */; };
 		88AC696121C83802006E0559 /* SwipingPhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696021C83802006E0559 /* SwipingPhotosController.swift */; };
 		88AC696321C874BD006E0559 /* UserProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696221C874BD006E0559 /* UserProfileController.swift */; };
@@ -137,11 +137,11 @@
 		88A3D6C621ECC659008286BC /* ChatRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestCell.swift; sourceTree = "<group>"; };
 		88A3D6C821ECC8E3008286BC /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		88A3D6CA21ECCC51008286BC /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
-		88A3D6CC21EDFF12008286BC /* PrivateChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateChatController.swift; sourceTree = "<group>"; };
+		88A3D6CE21EE1634008286BC /* PrivateChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateChatController.swift; sourceTree = "<group>"; };
+		88A3D6D221EE47ED008286BC /* Conversation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		88A3D6D421EFA6DF008286BC /* AfterPurchaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfterPurchaseController.swift; sourceTree = "<group>"; };
 		88AC695121C5C358006E0559 /* FriendChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendChatLogController.swift; sourceTree = "<group>"; };
-		88AC695321C6F7E5006E0559 /* MessagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesController.swift; sourceTree = "<group>"; };
 		88AC695921C72F9F006E0559 /* Extensions+Catches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Catches.swift"; sourceTree = "<group>"; };
-		88AC695B21C75491006E0559 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		88AC695D21C823A2006E0559 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		88AC696021C83802006E0559 /* SwipingPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingPhotosController.swift; sourceTree = "<group>"; };
 		88AC696221C874BD006E0559 /* UserProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileController.swift; sourceTree = "<group>"; };
@@ -256,8 +256,8 @@
 			children = (
 				8897461921B4BBA200DBF6F6 /* User.swift */,
 				8897461E21B5A88E00DBF6F6 /* InHouseUser.swift */,
-				88AC695B21C75491006E0559 /* Message.swift */,
 				889E0FF321E409CB00A74140 /* DigitalGood.swift */,
+				88A3D6D221EE47ED008286BC /* Conversation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,12 +282,11 @@
 		889746A821C44AE300DBF6F6 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				88AC695321C6F7E5006E0559 /* MessagesController.swift */,
 				88AC695121C5C358006E0559 /* FriendChatLogController.swift */,
 				88A3D6C821ECC8E3008286BC /* ChatController.swift */,
 				88A3D6C621ECC659008286BC /* ChatRequestCell.swift */,
 				88A3D6CA21ECCC51008286BC /* ChatCell.swift */,
-				88A3D6CC21EDFF12008286BC /* PrivateChatController.swift */,
+				88A3D6CE21EE1634008286BC /* PrivateChatController.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -325,6 +324,7 @@
 				8897463C21C0856500DBF6F6 /* MarketPlaceController.swift */,
 				889E0FF121E3E8D400A74140 /* MenuCell.swift */,
 				889E0FFC21E68E8900A74140 /* SendChatRequestController.swift */,
+				88A3D6D421EFA6DF008286BC /* AfterPurchaseController.swift */,
 			);
 			path = "Digital goods";
 			sourceTree = "<group>";
@@ -679,17 +679,16 @@
 				889E0FEE21E165F700A74140 /* WelcomeController.swift in Sources */,
 				8897462721B7325300DBF6F6 /* RegistrationViewModel.swift in Sources */,
 				8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */,
+				88A3D6D321EE47ED008286BC /* Conversation.swift in Sources */,
 				8891671721B0F8E4000267F7 /* homeController.swift in Sources */,
+				88A3D6D521EFA6DF008286BC /* AfterPurchaseController.swift in Sources */,
 				889E0FF821E53DC600A74140 /* CurUserSwipingPhotoController.swift in Sources */,
 				88AC696321C874BD006E0559 /* UserProfileController.swift in Sources */,
 				88AC696921CD8697006E0559 /* HouseUserProfileButton.swift in Sources */,
-				88AC695C21C75491006E0559 /* Message.swift in Sources */,
 				88AC696121C83802006E0559 /* SwipingPhotosController.swift in Sources */,
-				88AC695421C6F7E5006E0559 /* MessagesController.swift in Sources */,
 				88AC695A21C72F9F006E0559 /* Extensions+Catches.swift in Sources */,
 				8897462F21B8C3B500DBF6F6 /* SettingsController.swift in Sources */,
 				8897463321B9F55700DBF6F6 /* AgeRangeCell.swift in Sources */,
-				88A3D6CD21EDFF12008286BC /* PrivateChatController.swift in Sources */,
 				8897463F21C194D600DBF6F6 /* MainTabBarController.swift in Sources */,
 				8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */,
 				8897461A21B4BBA200DBF6F6 /* User.swift in Sources */,
@@ -713,6 +712,7 @@
 				88AC695221C5C358006E0559 /* FriendChatLogController.swift in Sources */,
 				889E0FFA21E6757B00A74140 /* GradientView.swift in Sources */,
 				889E0FF221E3E8D400A74140 /* MenuCell.swift in Sources */,
+				88A3D6CF21EE1634008286BC /* PrivateChatController.swift in Sources */,
 				88AC696C21CDB873006E0559 /* WalletController.swift in Sources */,
 				88A3D6C721ECC659008286BC /* ChatRequestCell.swift in Sources */,
 			);

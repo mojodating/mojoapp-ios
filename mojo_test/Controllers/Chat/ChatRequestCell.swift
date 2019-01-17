@@ -7,16 +7,98 @@
 //
 
 import UIKit
+import Firebase
+
+protocol ChatRequestCellDelegate {
+    func didTapCell()
+}
 
 class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Chat Request(10)"
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        return label
+    var chatRequests = [Conversation]()
+    
+    fileprivate func fetchChatListsFromServer() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).addSnapshotListener { documentSnapshot, error in
+            guard let document = documentSnapshot else {
+                print("Error fetching document: \(error!)")
+                return
+            }
+            guard let data = document.data() else {
+                print("Document data was empty.")
+                return
+            }
+
+           guard let dictionaries = data["conversations"] as? [String: Any] else { return }
+
+                dictionaries.forEach({ (key, value) in
+                    
+                    guard let conv = value as? [String: Any] else {return}
+                    
+                    let conversation = Conversation(conv: conv)
+
+               if (conversation.accepted == false && conversation.sender != uid) {
+                    self.chatRequests.append(conversation)
+               }
+
+            self.collectionView.reloadData()
+        })
+    }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return chatRequests.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RequestCell
+        
+        cell.conversation = chatRequests[indexPath.item]
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 70, height: frame.height - 72)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(123)
+        
+        
+        
+        delegate?.didTapCell()
+        
+        
+    }
+    
+    var delegate: ChatRequestCellDelegate?
+    
+    let showRequestButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Chat Request(15)", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        button.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.3322708161, blue: 0.6531050149, alpha: 1)
+        button.layer.cornerRadius = 16
+        button.setTitleColor(.white, for: .normal)
+        return button
     }()
     
+ 
+    let showSentButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Chat Sent(10)", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        button.layer.cornerRadius = 16
+        button.setTitleColor(.black, for: .normal)
+        return button
+    }()
+
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -35,15 +117,22 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         backgroundColor = .white
         
         setupLayout()
+        
+        fetchChatListsFromServer()
+        
     }
+    
     
     func setupLayout() {
         
-        addSubview(titleLabel)
-        titleLabel.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
+        addSubview(showRequestButton)
+        showRequestButton.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0), size: .init(width: 138, height: 32))
+        
+        addSubview(showSentButton)
+        showSentButton.anchor(top: self.topAnchor, leading: showRequestButton.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 8, bottom: 0, right: 0), size: .init(width: 138, height: 32))
         
         addSubview(collectionView)
-        collectionView.anchor(top: titleLabel.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
+        collectionView.anchor(top: showRequestButton.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -55,30 +144,42 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         fatalError("init(coder:) has not been implemented")
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RequestCell
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 70, height: frame.height - 56)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
-    }
     
     // setup each individual cell in chat request
     
+    
     private class RequestCell:UICollectionViewCell {
+        
+        var user: User?
+        var conversation : Conversation? {
+            didSet {
+                
+                guard let goodImageUrl = conversation?.drinkImage else { return }
+                goodsImage.loadImageUsingCacheWithUrlString(urlString: goodImageUrl)
+                
+                guard let sendUID = conversation?.sender else { return }
+                
+                Firestore.firestore().collection("users").document(sendUID).getDocument { (snapshot, err) in
+                    if let err = err {
+                        print(err)
+                        return
+                    }
+                    //          fetch our user here
+                    guard let dictionary = snapshot?.data() else { return }
+                    self.user = User(dictionary: dictionary)
+                    
+                    self.nameLabel.text = self.user?.name
+                    
+                    guard let senderImageUrl = self.user?.imageUrl1 else {return}
+                    self.userProfileImage.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
+ 
+                }
+            }
+        }
         
         let userProfileImage: UIImageView = {
             let image = UIImageView(image: #imageLiteral(resourceName: "cersi"))
-            image.contentMode = .scaleAspectFit
+            image.contentMode = .scaleAspectFill
             image.layer.cornerRadius = 35
             image.clipsToBounds = true
             return image
@@ -94,14 +195,14 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         }()
         
         let goodsImage: UIImageView = {
-            let image = UIImageView(image: #imageLiteral(resourceName: "drink"))
+            let image = UIImageView(image: #imageLiteral(resourceName: "Like"))
             image.contentMode = .scaleAspectFill
             image.clipsToBounds = true
             return image
         }()
         
         override init(frame: CGRect) {
-            super.init(frame: frame)
+            super.init(frame:frame)
             
             backgroundColor = .white
             

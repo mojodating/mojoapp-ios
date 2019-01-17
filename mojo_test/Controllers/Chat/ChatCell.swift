@@ -11,13 +11,46 @@ import Firebase
 
 class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    var chats = [Conversation]()
+    
+    fileprivate func fetchChatListsFromServer() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).addSnapshotListener { documentSnapshot, error in
+            guard let document = documentSnapshot else {
+                print("Error fetching document: \(error!)")
+                return
+            }
+            guard let data = document.data() else {
+                print("Document data was empty.")
+                return
+            }
+            
+            guard let dictionaries = data["conversations"] as? [String: Any] else { return }
+            
+            dictionaries.forEach({ (key, value) in
+                //                    print("key\(key), Value\(value)")
+                
+                guard let conv = value as? [String: Any] else {return}
+                
+                let conversation = Conversation(conv: conv)
+                print(conversation.receiver)
+                
+                if (conversation.accepted) {
+                    self.chats.append(conversation)
+                }
+                
+                self.collectionView.reloadData()
+            })
+        }
+    }
+
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Chats(2)"
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return label
     }()
-    
+
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -26,58 +59,82 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         cv.backgroundColor = .white
         return cv
     }()
-    
+
     let cellId = "cellId"
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+
         backgroundColor = .white
-        
+
         setupLayout()
-        
+
     }
-    
+
     fileprivate func setupLayout() {
         addSubview(titleLabel)
         titleLabel.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
-        
+
         addSubview(collectionView)
         collectionView.anchor(top: titleLabel.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
-        
+
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+
         collectionView.register(ChatCell.self, forCellWithReuseIdentifier: cellId)
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return chats.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatCell
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: frame.width, height: 86)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 //        let controller = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
 //        navigationController?.
     }
+
+class ChatCell:UICollectionViewCell {
     
-    private class ChatCell:UICollectionViewCell {
+    var user: User?
+    var conversation : Conversation? {
+        didSet {
+            
+            guard let sendUID = conversation?.sender else { return }
+            
+            Firestore.firestore().collection("users").document(sendUID).getDocument { (snapshot, err) in
+                if let err = err {
+                    print(err)
+                    return
+                }
+                //          fetch our user here
+                guard let dictionary = snapshot?.data() else { return }
+                self.user = User(dictionary: dictionary)
+                
+                self.nameLabel.text = self.user?.name
+                
+                guard let senderImageUrl = self.user?.imageUrl1 else {return}
+                self.chatProfileImage.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
+                
+            }
+        }
+    }
         
         let chatProfileImage: UIImageView = {
             let image = UIImageView(image: #imageLiteral(resourceName: "jaime"))

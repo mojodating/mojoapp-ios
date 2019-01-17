@@ -45,15 +45,26 @@ class SendChatRequestController: UIViewController {
             userNameLabel.text = userName
             infoLabel.text = "Say Hi to " + userName + "!"
             
-            getBalance()
             
         }
         
     }
     
+    var user: User?
+    
     fileprivate func getBalance() {
         
-        self.functions.httpsCallable("getBalance").call(["uid": cardViewModel.uid]) { (result, error) in
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print(err)
+                return
+            }
+            //          fetch our user here
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
+        
+        self.functions.httpsCallable("getBalance").call(["uid": self.user?.uid]) { (result, error) in
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
                     let code = FunctionsErrorCode(rawValue: error.code)
@@ -64,30 +75,36 @@ class SendChatRequestController: UIViewController {
             if let balance = (result?.data as? [String: Any])?["balance"] as? Int {
                 
                 let attributedText = NSMutableAttributedString(string: "Your balance", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .regular)])
-                attributedText.append(NSMutableAttributedString(string: "\n\(balance)", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 28, weight: .bold)]))
+                attributedText.append(NSMutableAttributedString(string: "\n\(balance)", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 24, weight: .bold)]))
                 attributedText.append(NSMutableAttributedString(string: " Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .regular)]))
                 self.balanceLabel.attributedText = attributedText
                 
                 print(balance)
-
+                
+                // check balance
                 if balance >= self.drinkPrice {
                     self.payButton.isEnabled = true
                     self.payButton.backgroundColor = #colorLiteral(red: 1, green: 0.3040125447, blue: 0.4915377174, alpha: 1)
-                }
+                    
+                } else {
+                    
                     self.payButton.isEnabled = false
                     self.payButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+                    self.topupButton.isHidden = false
+                    self.topupButton.isEnabled = true
+                    self.warningLabel.isHidden = false
+                }
+                    
+                }
             }
             
         }
         
     }
+
     
-    func checkBalance() {
-        
-    }
-    
-    @objc fileprivate func sendChatRequest() {
-        self.functions.httpsCallable("sendConversationRequest").call(["uid": cardViewModel.uid, "text":inputTextField.text, "drinktypeid":digitalGood?.id]) { (result, error) in
+    @objc func sendChatRequest() {
+        self.functions.httpsCallable("sendConversationRequest").call(["uid": cardViewModel.uid, "text":inputTextField.text ?? "", "drinktypeid":digitalGood?.id ?? ""]) { (result, error) in
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
                     let code = FunctionsErrorCode(rawValue: error.code)
@@ -96,6 +113,11 @@ class SendChatRequestController: UIViewController {
                 }
             }
         }
+        print(inputTextField.text ?? "")
+        
+        let controller = AfterPurchaseController()
+        let navController = UINavigationController(rootViewController: controller)
+        present(navController, animated: true)
     }
 
     override func viewDidLoad() {
@@ -107,6 +129,18 @@ class SendChatRequestController: UIViewController {
         
         setupLayout()
         
+        getBalance()
+        
+        setupTapGesture()
+        
+    }
+    
+    fileprivate func setupTapGesture() {
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapDismiss)))
+    }
+    
+    @objc fileprivate func handleTapDismiss() {
+        self.view.endEditing(true) //dismiss keyboard
     }
     
     let profileImageView: UIImageView = {
@@ -161,6 +195,28 @@ class SendChatRequestController: UIViewController {
         return button
     }()
     
+    let topupButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("Top up", for: .normal)
+        button.backgroundColor = .orange
+        button.layer.cornerRadius = 2
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        button.isEnabled = false
+        button.isHidden = true
+        return button
+    }()
+    
+    let warningLabel: UILabel = {
+        let label = UILabel()
+        label.text = "(Not enough)"
+        label.textColor = .orange
+        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.isHidden = true
+        return label
+    }()
+    
+    
     fileprivate func setupLayout() {
         
         view.addSubview(profileImageView)
@@ -191,10 +247,14 @@ class SendChatRequestController: UIViewController {
         view.addSubview(descriptionLabel)
         descriptionLabel.anchor(top: nameLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 24, bottom: 0, right: 24))
         
-    }
-    
+        view.addSubview(topupButton)
+        topupButton.anchor(top: nil, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 93, height: 32))
+        topupButton.centerYAnchor.constraint(equalTo: balanceLabel.centerYAnchor).isActive = true
+        
+        view.addSubview(warningLabel)
+        warningLabel.anchor(top: nil, leading: balanceLabel.trailingAnchor, bottom: balanceLabel.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 4, bottom: 0, right: 0))
 
-}
+    }
 
     let drinkImageView: UIImageView = {
         let iv = UIImageView()
@@ -230,4 +290,4 @@ class SendChatRequestController: UIViewController {
     }()
     
 
-
+}

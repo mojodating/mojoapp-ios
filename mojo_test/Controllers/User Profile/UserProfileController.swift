@@ -11,7 +11,7 @@ import Firebase
 import JGProgressHUD
 import SDWebImage
 
-class UserProfileController: UIViewController, SettingsControllerDelegate {
+class UserProfileController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,7 +72,7 @@ class UserProfileController: UIViewController, SettingsControllerDelegate {
     
     var user: User?
     
-    fileprivate func fetchCurrentUser() {
+    func fetchCurrentUser() {
         //fetch some firestore data
         guard let uid = Auth.auth().currentUser?.uid else { return }
         Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
@@ -137,15 +137,10 @@ class UserProfileController: UIViewController, SettingsControllerDelegate {
     @objc func handleEditProfile() {
         
         let settingsController = SettingsController()
-        settingsController.delegate = self
         let navController = UINavigationController(rootViewController: settingsController)
         present(navController, animated: true)
     }
     
-    func didSaveSettings() {
-        print("notified of dismissal from settingController to homeController")
-        fetchCurrentUser()
-    }
 
 
 }

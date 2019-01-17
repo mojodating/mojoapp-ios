@@ -9,8 +9,8 @@
 import UIKit
 import Firebase
 
-class MainTabBarController: UITabBarController, LoginControllerDelegate {
-    
+class MainTabBarController: UITabBarController, LoginControllerDelegate, SettingsControllerDelegate {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,14 +24,18 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate {
             }
             return
         }
+        
         didFinishLoggingIn()
     }
     
     func didFinishLoggingIn() {
         setupViewControllers()
     }
-
-        
+    
+    func didSaveSettings() {
+        setupViewControllers()
+    }
+    
         func setupViewControllers() {
             
             transparentTabBarColor()
@@ -42,6 +46,10 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate {
             
             let chatNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: ChatController())
             
+//            let controller = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
+//            let chatNavController = UINavigationController(rootViewController: controller)
+            
+           
             let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: UserProfileController())
             
             let walletNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: WalletController())

@@ -99,6 +99,15 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
         tableView.keyboardDismissMode = .interactive
         
         fetchCurrentUser()
+        setupTapGesture()
+    }
+    
+    fileprivate func setupTapGesture() {
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapDismiss)))
+    }
+    
+    @objc fileprivate func handleTapDismiss() {
+        self.view.endEditing(true) //dismiss keyboard
     }
     
     var user: User?
@@ -313,7 +322,7 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
         hud.textLabel.text = "Saving profile"
         hud.show(in: view)
         
-        Firestore.firestore().collection("users").document(uid).setData(docData) {
+        Firestore.firestore().collection("users").document(uid).updateData(docData) {
             (err) in
             hud.dismiss()
             if let err = err {
@@ -321,12 +330,15 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
                 return
             }
             print ("Finished saving user info")
-            self.dismiss(animated: true, completion: {
                 print ("dismissal complete")
-                self.delegate?.didSaveSettings()
-//              homeController.fetchCurrentUser()
+     
+                guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
                 
-            })
+                mainTabBarController.setupViewControllers()
+                
+                self.dismiss(animated: true, completion: {
+                    self.delegate?.didSaveSettings()
+                })
         }
     }
     

@@ -86,6 +86,7 @@ class RegistrationViewModel {
             "profileImageUrl": imageUrl,
             "minSeekingAge": SettingsController.defaultMinSeekingAge,
             "maxSeekingAge": SettingsController.defaultMaxSeekingAge,
+            "insideHouse": false
         ]
         Firestore.firestore().collection("users").document(uid).setData(docData) {(err) in
             self.bindableIsRegistering.value = false

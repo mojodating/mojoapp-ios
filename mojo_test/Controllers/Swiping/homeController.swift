@@ -12,7 +12,8 @@ import JGProgressHUD
 import Cosmos
 import TinyConstraints
 
-class HomeController: UIViewController, CardViewDelegate {
+class HomeController: UIViewController, CardViewDelegate, SettingsControllerDelegate {
+    
    
     let cardsDeckView = UIView()
     var cardViewModels = [CardViewModel]()
@@ -57,7 +58,7 @@ class HomeController: UIViewController, CardViewDelegate {
     fileprivate let hud = JGProgressHUD(style: .dark)
     fileprivate var user: User?
     
-    fileprivate func fetchCurrentUser() {
+    func fetchCurrentUser() {
         hud.textLabel.text = "Loading"
         hud.show(in: view)
         cardsDeckView.subviews.forEach({$0.removeFromSuperview()})
@@ -203,6 +204,10 @@ class HomeController: UIViewController, CardViewDelegate {
         controller.cardViewModel = cardViewModel
         let navController = UINavigationController(rootViewController: controller)
         present(navController, animated: true)
+    }
+    
+    func didSaveSettings() {
+        fetchCurrentUser()
     }
     
 }
