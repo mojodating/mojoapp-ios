@@ -47,6 +47,7 @@
 		88A3D6DA21F08C28008286BC /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6D921F08C28008286BC /* MenuBar.swift */; };
 		88A3D6DC21F0CB6B008286BC /* RequestsFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6DB21F0CB6B008286BC /* RequestsFeedCell.swift */; };
 		88A3D6DE21F0D267008286BC /* SentFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6DD21F0D267008286BC /* SentFeedCell.swift */; };
+		88A3D6E221F1F8A6008286BC /* WalletAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6E121F1F8A6008286BC /* WalletAccountController.swift */; };
 		88AC695221C5C358006E0559 /* FriendChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695121C5C358006E0559 /* FriendChatLogController.swift */; };
 		88AC695A21C72F9F006E0559 /* Extensions+Catches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695921C72F9F006E0559 /* Extensions+Catches.swift */; };
 		88AC695E21C823A2006E0559 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695D21C823A2006E0559 /* UserCell.swift */; };
@@ -146,6 +147,7 @@
 		88A3D6D921F08C28008286BC /* MenuBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBar.swift; sourceTree = "<group>"; };
 		88A3D6DB21F0CB6B008286BC /* RequestsFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsFeedCell.swift; sourceTree = "<group>"; };
 		88A3D6DD21F0D267008286BC /* SentFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentFeedCell.swift; sourceTree = "<group>"; };
+		88A3D6E121F1F8A6008286BC /* WalletAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletAccountController.swift; sourceTree = "<group>"; };
 		88AC695121C5C358006E0559 /* FriendChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendChatLogController.swift; sourceTree = "<group>"; };
 		88AC695921C72F9F006E0559 /* Extensions+Catches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Catches.swift"; sourceTree = "<group>"; };
 		88AC695D21C823A2006E0559 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			children = (
 				88AC696B21CDB873006E0559 /* WalletController.swift */,
 				88F3903A21E76EB30070096E /* TopUpController.swift */,
+				88A3D6E121F1F8A6008286BC /* WalletAccountController.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -713,6 +716,7 @@
 				8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */,
 				88A3D6DA21F08C28008286BC /* MenuBar.swift in Sources */,
 				8897461F21B5A88E00DBF6F6 /* InHouseUser.swift in Sources */,
+				88A3D6E221F1F8A6008286BC /* WalletAccountController.swift in Sources */,
 				8897462321B7057F00DBF6F6 /* CustomTextField.swift in Sources */,
 				889E0FF421E409CB00A74140 /* DigitalGood.swift in Sources */,
 				88B5C03421AE6F71004EADFC /* AppDelegate.swift in Sources */,

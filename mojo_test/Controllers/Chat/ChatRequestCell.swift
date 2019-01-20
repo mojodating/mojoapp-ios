@@ -14,11 +14,11 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     let cellId = "cellId"
     let sentCellId = "sentCellId"
 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.x)
-        
-        menuBar.lightLightBarLeftAnchor?.constant = scrollView.contentOffset.x / 2
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        print(scrollView.contentOffset.x)
+//
+//        menuBar.lightLightBarLeftAnchor?.constant = scrollView.contentOffset.x / 2
+//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
@@ -26,10 +26,13 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 1 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: sentCellId, for: indexPath)
+            return collectionView.dequeueReusableCell(withReuseIdentifier: sentCellId, for: indexPath) as! SentFeedCell
         }
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RequestsFeedCell
+        
+        cell.delegate = self as! RequestsFeedCellDelegate
+        
 
         return cell
     }
@@ -43,7 +46,10 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         let indexPath = IndexPath(item: menuIndex, section: 0)
         
         collectionView.scrollToItem(at: indexPath, at: .right, animated: true)
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+
     }
 
     

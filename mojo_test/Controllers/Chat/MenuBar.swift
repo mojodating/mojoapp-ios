@@ -39,6 +39,7 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         print(123)
         
+        
 //        let x = CGFloat(indexPath.item) * frame.width / 2
 //        lightLightBarLeftAnchor?.constant = x
         
@@ -97,6 +98,8 @@ class MenuBarCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return label
     }()
+    
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)

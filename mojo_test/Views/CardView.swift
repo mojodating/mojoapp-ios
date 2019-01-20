@@ -122,16 +122,16 @@ class CardView: UIView {
         setupGradientLayer()
         
         addSubview(informationLabel)
-        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 96, right: 24))
+        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 16, right: 0))
         informationLabel.textColor = .white
         informationLabel.numberOfLines = 0
         
         addSubview(chatRequestButton)
-        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 16), size: .init(width: 44, height: 44))
+        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 174, right: 8), size: .init(width: 44, height: 44))
         
         addSubview(userProfileView)
-        userProfileView.anchor(top: nil, leading: nil, bottom: chatRequestButton.topAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 16, right: 16), size: .init(width: 44, height: 44))
-        
+        userProfileView.anchor(top: nil, leading: nil, bottom: chatRequestButton.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 16, right: 0), size: .init(width: 44, height: 44))
+        userProfileView.centerXAnchor.constraint(equalTo: chatRequestButton.centerXAnchor).isActive =  true
     }
     
     let barsStackView = UIStackView()

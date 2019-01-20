@@ -126,7 +126,7 @@ class UserProfileController: UIViewController{
         gradientView.fillSuperview()
         
         view.addSubview(userInfoLabel)
-        userInfoLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 8, right: 0))
+        userInfoLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 16, right: 0))
         
         view.addSubview(userNameLabel)
         userNameLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: userInfoLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 8, right: 0))

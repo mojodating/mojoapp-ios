@@ -66,19 +66,17 @@ class WalletController: UIViewController {
         
     }
     
-    @objc fileprivate func handleAccount() {
-        
-    }
     
     fileprivate func setupNavigationBar() {
         self.navigationItem.title = "Wallet"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Transactions", style: .plain, target: self, action: #selector(handleTransaction))
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Account", style: .plain, target: self, action: #selector(handleAccount))
+//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Account", style: .plain, target: self, action: #selector(handleAccount))
     }
     
     fileprivate func setupLayout() {
         view.addSubview(currentUserImageView)
         view.addSubview(usernameLabel)
+        view.addSubview(accountButton)
         view.addSubview(balanceLabel)
         view.addSubview(userBalanceLabel)
         view.addSubview(dollarBalanceLabel)
@@ -86,53 +84,74 @@ class WalletController: UIViewController {
         view.addSubview(sendButton)
         view.addSubview(cashOutButton)
         
-        currentUserImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 48, left: 0, bottom: 8, right: 0), size: .init(width: 68, height: 68))
+        // user layout
+        
+        currentUserImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 24, left: 0, bottom: 0, right: 0), size: .init(width: 48, height: 48))
         currentUserImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         usernameLabel.anchor(top: currentUserImageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
         
         usernameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        balanceLabel.anchor(top: nil, leading: nil, bottom: userBalanceLabel.topAnchor, trailing: nil,padding: .init(top: 0, left: 0, bottom: 8, right: 0))
+        accountButton.anchor(top: usernameLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
+        
+        accountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        // balance layout
+        
+        balanceLabel.anchor(top: accountButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil,padding: .init(top: 64, left: 0, bottom: 0, right: 0))
         balanceLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
         
-        userBalanceLabel.anchor(top: nil, leading: nil, bottom: dollarBalanceLabel.topAnchor, trailing: nil, padding: .init(top: 8, left: 0, bottom: 8, right: 0))
+        userBalanceLabel.anchor(top: balanceLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
         userBalanceLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
         
-        dollarBalanceLabel.anchor(top: nil, leading: nil, bottom: topUpButton.topAnchor, trailing: nil,padding: .init(top: 8, left: 0, bottom: 16, right: 0))
+        dollarBalanceLabel.anchor(top: userBalanceLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil,padding: .init(top: 8, left: 0, bottom: 0, right: 0))
         dollarBalanceLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
         
-        topUpButton.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 32, left: 0, bottom: 0, right: 0), size: .init(width: 273, height: 50))
+        topUpButton.anchor(top: dollarBalanceLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 20, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width / 4 * 3, height: 50))
         
-        sendButton.anchor(top: topUpButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size: .init(width: 273, height: 50))
+        sendButton.anchor(top: topUpButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width / 4 * 3, height: 50))
         
-        cashOutButton.anchor(top: sendButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 48, bottom: 0, right: 48), size: .init(width: 273, height: 50))
-        topUpButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
-        topUpButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        cashOutButton.anchor(top: sendButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width / 4 * 3, height: 50))
         
         sendButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
+        topUpButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
         cashOutButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
-        
+    
     }
     
-    //Setup stackView Layout
     
-    fileprivate let currentUserImageView: UIImageView = {
+    let currentUserImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .lightGray
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 34
+        imageView.layer.cornerRadius = 24
         return imageView
     }()
     
-    fileprivate let usernameLabel: UILabel = {
+    let usernameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
+    
+    let accountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Account", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        button.setTitleColor(#colorLiteral(red: 0.8765097099, green: 0.3622604107, blue: 0.9166203997, alpha: 1), for: .normal)
+        button.addTarget(self, action: #selector(handleAccount), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc fileprivate func handleAccount() {
+        let controller = WalletAccountController()
+//        let navController = UINavigationController(rootViewController: controller)
+        navigationController?.pushViewController(controller, animated: true)
+    }
         
     fileprivate let balanceLabel: UILabel = {
             let label = UILabel()
@@ -165,15 +184,16 @@ class WalletController: UIViewController {
             button.setTitle("Top up", for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
             button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
+            button.backgroundColor = #colorLiteral(red: 1, green: 0.7380045896, blue: 0.1112664202, alpha: 1)
             button.layer.cornerRadius = 4
         button.addTarget(self, action: #selector(handleTopup), for: .touchUpInside)
             return button
         }()
+
     
     @objc fileprivate func handleTopup() {
         let controller = TopUpController()
-        controller.user = user
+//        controller.user = user
         navigationController?.pushViewController(controller, animated: true)
     }
         

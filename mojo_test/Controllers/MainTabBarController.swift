@@ -25,7 +25,7 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate, Setting
             return
         }
         
-        didFinishLoggingIn()
+        setupViewControllers()
     }
     
     func didFinishLoggingIn() {
