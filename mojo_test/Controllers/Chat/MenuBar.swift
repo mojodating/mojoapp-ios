@@ -11,7 +11,7 @@ import UIKit
 class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
-    let titles = ["Chat Requests", "Chat Sent"]
+    let titles = ["Chat Requests(10)", "Chat Sent"]
     
     var chatRequestCell: ChatRequestCell?
     
@@ -39,9 +39,8 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         print(123)
         
-        
-//        let x = CGFloat(indexPath.item) * frame.width / 2
-//        lightLightBarLeftAnchor?.constant = x
+        let x = CGFloat(indexPath.item) * frame.width / 2
+        lightLightBarLeftAnchor?.constant = x
         
         chatRequestCell?.scrollToMenuIndex(menuIndex: indexPath.item)
         
@@ -51,6 +50,7 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.isScrollEnabled = false
         return cv
     }()
 
@@ -66,20 +66,23 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         setupHighlightBar()
         
+        let selectedInexPath = NSIndexPath(item: 0, section: 0)
+        collectionView.selectItem(at: selectedInexPath as IndexPath, animated: false, scrollPosition: .right)
+        
     }
     
     var lightLightBarLeftAnchor: NSLayoutConstraint?
     
     func setupHighlightBar() {
-        let hightlightBar = UIView()
-        hightlightBar.backgroundColor = .yellow
-        addSubview(hightlightBar)
-        hightlightBar.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 132, height: 32))
-        sendSubviewToBack(hightlightBar)
-        
-        lightLightBarLeftAnchor = hightlightBar.leadingAnchor.constraint(equalTo: self.leadingAnchor)
-        lightLightBarLeftAnchor?.isActive = true
-        
+//        let hightlightBar = UIView()
+//        hightlightBar.backgroundColor = #colorLiteral(red: 1, green: 0.3106257743, blue: 0.6609232404, alpha: 1)
+//        addSubview(hightlightBar)
+//        hightlightBar.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 140, height: 40))
+//        sendSubviewToBack(hightlightBar)
+//
+//        lightLightBarLeftAnchor = hightlightBar.leadingAnchor.constraint(equalTo: self.leadingAnchor)
+//        lightLightBarLeftAnchor?.isActive = true
+
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -90,23 +93,30 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
 
 class MenuBarCell: UICollectionViewCell {
     
-    
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Chat Requests"
-        label.textColor = .darkGray
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 20
+//        label.textColor = .darkGray
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+//        label.backgroundColor = #colorLiteral(red: 1, green: 0.3227794368, blue: 0.7693682347, alpha: 1)
+        label.textAlignment = .center
         return label
     }()
     
-
+    override var isSelected: Bool {
+        didSet {
+            titleLabel.textColor = isSelected ? UIColor.white : UIColor.black
+            titleLabel.backgroundColor = isSelected ? UIColor.init(red: 1, green: 0.3227794368, blue: 0.7693682347, alpha: 1) : UIColor.white
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         backgroundColor = .clear
         addSubview(titleLabel)
-        titleLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 138, height: 40))
+        titleLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 158, height: 40))
         titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }

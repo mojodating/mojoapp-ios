@@ -9,8 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, RequestsFeedCellDelegate {
-    
+class ChatController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate {
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()

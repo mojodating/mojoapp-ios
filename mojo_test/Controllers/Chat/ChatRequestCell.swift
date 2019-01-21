@@ -8,17 +8,16 @@
 
 import UIKit
 import Firebase
+protocol ChatRequestCellDelegate {
+    func didTapCell(conversation : Conversation)
+}
 
-class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
- 
+class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, RequestsFeedCellDelegate {
+    
+    var delegate: ChatRequestCellDelegate?
+    
     let cellId = "cellId"
     let sentCellId = "sentCellId"
-
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        print(scrollView.contentOffset.x)
-//
-//        menuBar.lightLightBarLeftAnchor?.constant = scrollView.contentOffset.x / 2
-//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
@@ -30,10 +29,9 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RequestsFeedCell
-        
-        cell.delegate = self as! RequestsFeedCellDelegate
-        
 
+        cell.delegate = self
+        
         return cell
     }
     
@@ -49,7 +47,14 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-
+        
+        
+    }
+    
+    func didTapCell(conversation: Conversation) {
+        print("passing from second layer")
+        let conversation = conversation
+        delegate?.didTapCell(conversation: conversation)
     }
 
     
@@ -113,3 +118,4 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     
 
 }
+
