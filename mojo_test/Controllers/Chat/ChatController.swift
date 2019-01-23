@@ -32,8 +32,15 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         view.backgroundColor = .white
         
         navigationItem.title = "Chat"
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Feedbacks", style: .plain, target: self, action: #selector(handleFeedbacks))
         
         setupLayout()
+        
+    }
+    
+    @objc fileprivate func handleFeedbacks() {
+        let controller = FeedbacksController(collectionViewLayout: UICollectionViewFlowLayout())
+        navigationController?.pushViewController(controller, animated: true)
         
     }
 

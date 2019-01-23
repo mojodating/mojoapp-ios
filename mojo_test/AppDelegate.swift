@@ -27,7 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-//        window?.rootViewController = WelcomeController()
+//        let controller = SignupMainController()
+//        let navController = UINavigationController(rootViewController: controller)
+//        window?.rootViewController = navController
+        
         window?.rootViewController = MainTabBarController()
 
         attempRegisterForNotifications(application: application)
