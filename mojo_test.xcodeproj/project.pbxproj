@@ -15,6 +15,7 @@
 		8870C53621F74EF000B03F98 /* SignupPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53521F74EF000B03F98 /* SignupPhotoController.swift */; };
 		8870C53821FB039000B03F98 /* RequestMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53721FB039000B03F98 /* RequestMessageCell.swift */; };
 		8870C53A21FB1A7700B03F98 /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */; };
+		8870C53C21FB87CC00B03F98 /* ChatInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */; };
 		8891671721B0F8E4000267F7 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* homeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
@@ -125,6 +126,7 @@
 		8870C53521F74EF000B03F98 /* SignupPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhotoController.swift; sourceTree = "<group>"; };
 		8870C53721FB039000B03F98 /* RequestMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageCell.swift; sourceTree = "<group>"; };
 		8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
+		8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputTextView.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 				88AC696821CD8697006E0559 /* HouseUserProfileButton.swift */,
 				889E0FF921E6757B00A74140 /* GradientView.swift */,
 				8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */,
+				8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -756,6 +759,7 @@
 				8897463121B8E11C00DBF6F6 /* SettingsCell.swift in Sources */,
 				88A3D6E921F5DEAD008286BC /* NewLoginController.swift in Sources */,
 				8870C52B21F7244400B03F98 /* Message.swift in Sources */,
+				8870C53C21FB87CC00B03F98 /* ChatInputTextView.swift in Sources */,
 				8870C53421F74E4F00B03F98 /* SignupNameController.swift in Sources */,
 				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,
 				8870C53221F74D2700B03F98 /* SignupPasswordController.swift in Sources */,

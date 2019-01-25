@@ -51,7 +51,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         collectionView.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
         
-        collectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 80, right: 8)
+        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         
         fetchMessages()
@@ -68,31 +68,31 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         let ref = Firestore.firestore().collection("conversations").document(converstionId).collection("messages")
         
-        ref.getDocuments { (querySnapshot, err) in
-            if let err = err {
-                print(err)
-                return
-            } else {
+            ref.addSnapshotListener { querySnapshot, error in
                 
+                guard (querySnapshot?.documents) != nil else {
+                    print("Error fetching documents: \(error!)")
+                    return
+                }
+
                 for document in querySnapshot!.documents {
-                    
+
                     let msg = document.data()
                     msg.forEach({ (key, value) in
 //                        print(msg)
-                        
                         let message = Message(msg: msg)
                         self.messages.append(message)
-                    
+
                     })
-                    
+
                     self.collectionView.reloadData()
 
                 }
             }
         }
         
-        }
-    
+//        }
+
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
@@ -218,41 +218,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         }
     }
 
-//    lazy var textField: UITextField = {
-//        let tf = UITextField()
-//        tf.placeholder = "Message..."
-//        tf.delegate = self
-//        return tf
-//    }()
-    
-//    @objc func handleSend() {
-//
-//        let senderId = self.conversation?.receiver ?? ""
-//        let receiverId = self.conversation?.sender ?? ""
-//        let message = ["text": textField.text ?? "",
-//                    "sender":senderId,
-//                    "date":Date().timeIntervalSince1970,
-//            "receiver":receiverId
-//        ] as [String : Any]
-//
-//        let conversationId = self.conversation?.id ?? ""
-//        Firestore.firestore().collection("conversations").document(conversationId).collection("messages"
-//            ).addDocument(data: message) { (err) in
-//            if let err = err {
-//                print("Failed to insert comment:", err)
-//                return
-//            }
-//
-//                self.textField.text = nil
-//
-//                print("successfully inserted comment.")
-//
-//        }
-//
-//    }
-//
-//
-//
     override var canBecomeFirstResponder: Bool {
         return true
     }
