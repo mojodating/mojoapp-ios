@@ -62,9 +62,9 @@ class ChatInputAccessaryView: UIView {
     
     @objc func handleSend() {
         
-        guard let messageText = textView.text else {return}
+        guard let message = textView.text else {return}
         
-        delegate?.didSend(for: messageText)
+        delegate?.didSend(for: message)
     }
     
     required init?(coder aDecoder: NSCoder) {

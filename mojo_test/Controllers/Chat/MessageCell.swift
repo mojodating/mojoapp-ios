@@ -10,6 +10,14 @@ import UIKit
 
 class MessageCell: UICollectionViewCell {
     
+
+    var message: Message? {
+        didSet{
+            chatLogLabel.text = message?.text
+            
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         

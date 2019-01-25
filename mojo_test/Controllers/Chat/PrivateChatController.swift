@@ -12,7 +12,7 @@ import Firebase
 class PrivateChatController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITextFieldDelegate, ChatInputAccessaryViewDelegate {
     
     let cellId = "cellId"
-    let requestCellId = "requestCellId"
+//    let requestCellId = "requestCellId"
     
     var user: User?
     var conversation : Conversation? {
@@ -49,7 +49,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         setupLayout()
         
         collectionView.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
+//        collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
         
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
@@ -68,30 +68,25 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         let ref = Firestore.firestore().collection("conversations").document(converstionId).collection("messages")
         
-            ref.addSnapshotListener { querySnapshot, error in
-                
-                guard (querySnapshot?.documents) != nil else {
-                    print("Error fetching documents: \(error!)")
-                    return
-                }
-
-                for document in querySnapshot!.documents {
+        ref.addSnapshotListener { querySnapshot, error in
+            
+            guard let documents = querySnapshot?.documents else {
+                print("Error fetching documents: \(error!)")
+                return
+            }
+                for document in documents {
 
                     let msg = document.data()
-                    msg.forEach({ (key, value) in
+//                    msg.forEach({ (key, value) in
 //                        print(msg)
                         let message = Message(msg: msg)
                         self.messages.append(message)
-
-                    })
-
-                    self.collectionView.reloadData()
+                        self.collectionView.reloadData()
+                    }
 
                 }
             }
-        }
-        
-//        }
+
 
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
