@@ -97,8 +97,6 @@ class RequestsFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
     
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             
-            print(123)
-            
             let conversation = self.chatRequests[indexPath.row]
     
             delegate?.didTapCell(conversation: conversation)

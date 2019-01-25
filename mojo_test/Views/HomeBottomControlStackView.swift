@@ -8,8 +8,6 @@
 
 import UIKit
 import SDWebImage
-import Cosmos
-import TinyConstraints
 
 class HomeBottomControlStackView: UIStackView {
     
@@ -20,19 +18,7 @@ class HomeBottomControlStackView: UIStackView {
         return button
     }
     
-    lazy var cosmosView: CosmosView = {
-        var view = CosmosView()
-        view.settings.filledImage = #imageLiteral(resourceName: "filled-star").withRenderingMode(.alwaysOriginal)
-        view.settings.emptyImage = #imageLiteral(resourceName: "empty-star").withRenderingMode(.alwaysOriginal)
-        view.settings.starSize = 32
-        view.settings.starMargin = 4
-        view.settings.fillMode = .full
-        view.rating = 0
-        return view
-    }()
     
-    
-//    let profileThumbnail = createButton(image: #imageLiteral(resourceName: "profile"))
     let chatButton = createButton(image: #imageLiteral(resourceName: "chatbutton-1"))
     let refreshButton = createButton(image: #imageLiteral(resourceName: "review-1"))
     
@@ -42,7 +28,7 @@ class HomeBottomControlStackView: UIStackView {
         distribution = .equalSpacing
         alignment = .trailing
         
-        [refreshButton, cosmosView].forEach{(button) in
+        [refreshButton].forEach{(button) in
             self.addArrangedSubview(button)
         }
         

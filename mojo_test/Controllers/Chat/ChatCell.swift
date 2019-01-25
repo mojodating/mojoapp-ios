@@ -9,7 +9,13 @@
 import UIKit
 import Firebase
 
+protocol ChatCellDelegate {
+    func didTapCell(conversation : Conversation)
+}
+
 class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    var delegate: ChatCellDelegate?
     
     var chats = [Conversation]()
     
@@ -33,7 +39,6 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
                 guard let conv = value as? [String: Any] else {return}
                 
                 let conversation = Conversation(conv: conv)
-                print(conversation.receiver)
                 
                 if (conversation.accepted) {
                     self.chats.append(conversation)
@@ -68,6 +73,8 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
         backgroundColor = .white
 
         setupLayout()
+        
+        fetchChatListsFromServer()
 
     }
 
@@ -94,6 +101,9 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ChatCell
+        
+        cell.conversation = chats[indexPath.item]
+        
         return cell
     }
 
@@ -106,8 +116,9 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        let controller = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
-//        navigationController?.
+        
+        let conversation = self.chats[indexPath.row]
+        delegate?.didTapCell(conversation: conversation)
     }
 
 class ChatCell:UICollectionViewCell {
@@ -138,7 +149,7 @@ class ChatCell:UICollectionViewCell {
         
         let chatProfileImage: UIImageView = {
             let image = UIImageView(image: #imageLiteral(resourceName: "jaime"))
-            image.contentMode = .scaleAspectFit
+            image.contentMode = .scaleAspectFill
             image.layer.cornerRadius = 28
             image.clipsToBounds = true
             return image

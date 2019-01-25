@@ -13,7 +13,6 @@ import Cosmos
 import TinyConstraints
 
 class HomeController: UIViewController, CardViewDelegate, SettingsControllerDelegate {
-    
    
     let cardsDeckView = UIView()
     var cardViewModels = [CardViewModel]()
@@ -24,17 +23,28 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
         navigationController?.isNavigationBarHidden = true
         
         view.backgroundColor = .white
-        view.addSubview(cardsDeckView)
         view.addSubview(bottomControls)
+        view.addSubview(cardsDeckView)
+        view.addSubview(cosmosView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
-        bottomControls.frame = .init(x: view.frame.size.width - 184, y:view.frame.size.height - 403 , width: 184, height: 212)
+        cosmosView.anchor(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 120, right: 8))
+//        bottomControls.frame = .init(x: view.frame.size.width - 184, y:view.frame.size.height - 403 , width: 184, height: 212)
         bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
         handleRating()
         
-        view.sendSubviewToBack(cardsDeckView)
-
         fetchCurrentUser()
     }
+    
+    lazy var cosmosView: CosmosView = {
+        var view = CosmosView()
+        view.settings.filledImage = #imageLiteral(resourceName: "filled-star").withRenderingMode(.alwaysOriginal)
+        view.settings.emptyImage = #imageLiteral(resourceName: "empty-star").withRenderingMode(.alwaysOriginal)
+        view.settings.starSize = 40
+        view.settings.starMargin = 4
+        view.settings.fillMode = .full
+        view.rating = 0
+        return view
+    }()
     
 
 //    override func viewDidAppear(_ animated: Bool) {
@@ -143,7 +153,7 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
     lazy var functions = Functions.functions()
     
     fileprivate func handleRating() {
-        bottomControls.cosmosView.didFinishTouchingCosmos = { rating in
+        cosmosView.didFinishTouchingCosmos = { rating in
 //            print("Rated: \(rating)")
             
             guard let cardUID = self.topCardView?.cardViewModel.uid else { return }
@@ -166,7 +176,7 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
     func didRemoveCard(cardView: CardView) {
         self.topCardView?.removeFromSuperview()
         self.topCardView = self.topCardView?.nextCardView
-        self.bottomControls.cosmosView.rating = 0
+        self.cosmosView.rating = 0
     }
     
     fileprivate func performSwipeAnimation() {
@@ -181,7 +191,7 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
         
         CATransaction.setCompletionBlock({
             cardView?.removeFromSuperview()
-            self.bottomControls.cosmosView.rating = 0
+            self.cosmosView.rating = 0
         })
         
         cardView?.layer.add(translationAnimation, forKey: "translation")

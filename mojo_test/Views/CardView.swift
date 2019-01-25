@@ -100,9 +100,13 @@ class CardView: UIView {
     fileprivate let chatRequestButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "9474f3a4-dd2f-4cb9-a225-cb108e4aaeda").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.clipsToBounds = true
+        button.isEnabled = true
         button.addTarget(self, action: #selector(handleChatRequest), for: .touchUpInside)
         return button
     }()
+    
+    
     
     @objc fileprivate func handleChatRequest() {
 
@@ -127,11 +131,12 @@ class CardView: UIView {
         informationLabel.numberOfLines = 0
         
         addSubview(chatRequestButton)
-        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 174, right: 8), size: .init(width: 44, height: 44))
+        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 200, right: 8), size: .init(width: 44, height: 44))
         
         addSubview(userProfileView)
         userProfileView.anchor(top: nil, leading: nil, bottom: chatRequestButton.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 16, right: 0), size: .init(width: 44, height: 44))
         userProfileView.centerXAnchor.constraint(equalTo: chatRequestButton.centerXAnchor).isActive =  true
+        
     }
     
     let barsStackView = UIStackView()

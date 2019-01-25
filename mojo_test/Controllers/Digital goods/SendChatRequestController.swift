@@ -111,13 +111,14 @@ class SendChatRequestController: UIViewController {
                     let message = error.localizedDescription
                     let details = error.userInfo[FunctionsErrorDetailsKey]
                 }
+            } else {
+                let controller = AfterPurchaseController()
+                controller.cardViewModel = self.cardViewModel
+                //        let navController = UINavigationController(rootViewController: controller)
+                self.present(controller, animated: true)
             }
         }
-        print(inputTextField.text ?? "")
         
-        let controller = AfterPurchaseController()
-        let navController = UINavigationController(rootViewController: controller)
-        present(navController, animated: true)
     }
 
     override func viewDidLoad() {
@@ -217,7 +218,7 @@ class SendChatRequestController: UIViewController {
     }()
     
     
-    fileprivate func setupLayout() {
+    fileprivate func setupLayout() {        
         
         view.addSubview(profileImageView)
         profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0), size: .init(width: 40, height: 40))
@@ -226,26 +227,12 @@ class SendChatRequestController: UIViewController {
         userNameLabel.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor).isActive = true
         view.addSubview(infoLabel)
         infoLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
-        view.addSubview(inputTextField)
-        inputTextField.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width, height: 130))
         
+        view.addSubview(inputTextField)
+        inputTextField.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width, height: 100))
+
         view.addSubview(balanceLabel)
         balanceLabel.anchor(top: inputTextField.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))
-        
-        view.addSubview(payButton)
-        payButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width, height: 56))
-        
-        view.addSubview(drinkImageView)
-        drinkImageView.anchor(top: balanceLabel.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 72, left: 24, bottom: 0, right: 24), size: .init(width: view.frame.width, height: 240))
-        
-        view.addSubview(nameLabel)
-        nameLabel.anchor(top: drinkImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))
-        
-        view.addSubview(priceLabel)
-        priceLabel.anchor(top: drinkImageView.bottomAnchor, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 24))
-        
-        view.addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: nameLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 24, bottom: 0, right: 24))
         
         view.addSubview(topupButton)
         topupButton.anchor(top: nil, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 93, height: 32))
@@ -253,6 +240,21 @@ class SendChatRequestController: UIViewController {
         
         view.addSubview(warningLabel)
         warningLabel.anchor(top: nil, leading: balanceLabel.trailingAnchor, bottom: balanceLabel.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 4, bottom: 0, right: 0))
+        
+        view.addSubview(payButton)
+        payButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width, height: 50))
+        
+        view.addSubview(descriptionLabel)
+        descriptionLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: payButton.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 24, bottom: 16, right: 24))
+        
+        view.addSubview(priceLabel)
+        priceLabel.anchor(top: nil, leading: nil, bottom: descriptionLabel.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 8, right: 24))
+        
+        view.addSubview(nameLabel)
+        nameLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: descriptionLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 24, bottom: 8, right: 0))
+        
+        view.addSubview(drinkImageView)
+        drinkImageView.anchor(top: nil, leading: view.leadingAnchor, bottom: nameLabel.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 24, bottom: 8, right: 24), size: .init(width: view.frame.width, height: 240))
 
     }
 

@@ -13,6 +13,8 @@
 		8870C53221F74D2700B03F98 /* SignupPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53121F74D2700B03F98 /* SignupPasswordController.swift */; };
 		8870C53421F74E4F00B03F98 /* SignupNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53321F74E4F00B03F98 /* SignupNameController.swift */; };
 		8870C53621F74EF000B03F98 /* SignupPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53521F74EF000B03F98 /* SignupPhotoController.swift */; };
+		8870C53821FB039000B03F98 /* RequestMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53721FB039000B03F98 /* RequestMessageCell.swift */; };
+		8870C53A21FB1A7700B03F98 /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */; };
 		8891671721B0F8E4000267F7 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* homeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
@@ -121,6 +123,8 @@
 		8870C53121F74D2700B03F98 /* SignupPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPasswordController.swift; sourceTree = "<group>"; };
 		8870C53321F74E4F00B03F98 /* SignupNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupNameController.swift; sourceTree = "<group>"; };
 		8870C53521F74EF000B03F98 /* SignupPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhotoController.swift; sourceTree = "<group>"; };
+		8870C53721FB039000B03F98 /* RequestMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageCell.swift; sourceTree = "<group>"; };
+		8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 				88AC695D21C823A2006E0559 /* UserCell.swift */,
 				88AC696821CD8697006E0559 /* HouseUserProfileButton.swift */,
 				889E0FF921E6757B00A74140 /* GradientView.swift */,
+				8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				88A3D6DB21F0CB6B008286BC /* RequestsFeedCell.swift */,
 				88A3D6DD21F0D267008286BC /* SentFeedCell.swift */,
 				8870C52D21F7252900B03F98 /* MessageCell.swift */,
+				8870C53721FB039000B03F98 /* RequestMessageCell.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -753,6 +759,7 @@
 				8870C53421F74E4F00B03F98 /* SignupNameController.swift in Sources */,
 				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,
 				8870C53221F74D2700B03F98 /* SignupPasswordController.swift in Sources */,
+				8870C53821FB039000B03F98 /* RequestMessageCell.swift in Sources */,
 				8897463621BDB24E00DBF6F6 /* LoginController.swift in Sources */,
 				8897469D21C378B700DBF6F6 /* mojo_test.xcdatamodeld in Sources */,
 				8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */,
@@ -774,6 +781,7 @@
 				88A3D6CF21EE1634008286BC /* PrivateChatController.swift in Sources */,
 				88AC696C21CDB873006E0559 /* WalletController.swift in Sources */,
 				8870C53621F74EF000B03F98 /* SignupPhotoController.swift in Sources */,
+				8870C53A21FB1A7700B03F98 /* ChatInputAccessoryView.swift in Sources */,
 				88A3D6C721ECC659008286BC /* ChatRequestCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

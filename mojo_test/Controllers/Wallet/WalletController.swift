@@ -80,13 +80,11 @@ class WalletController: UIViewController {
         view.addSubview(balanceLabel)
         view.addSubview(userBalanceLabel)
         view.addSubview(dollarBalanceLabel)
-        view.addSubview(topUpButton)
-        view.addSubview(sendButton)
-        view.addSubview(cashOutButton)
+        view.addSubview(buttonStackView)
         
         // user layout
         
-        currentUserImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 24, left: 0, bottom: 0, right: 0), size: .init(width: 48, height: 48))
+        currentUserImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: .init(width: 48, height: 48))
         currentUserImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         usernameLabel.anchor(top: currentUserImageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
@@ -99,7 +97,7 @@ class WalletController: UIViewController {
         
         // balance layout
         
-        balanceLabel.anchor(top: accountButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil,padding: .init(top: 64, left: 0, bottom: 0, right: 0))
+        balanceLabel.anchor(top: accountButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil,padding: .init(top: 24, left: 0, bottom: 0, right: 0))
         balanceLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
         
         userBalanceLabel.anchor(top: balanceLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
@@ -108,16 +106,9 @@ class WalletController: UIViewController {
         dollarBalanceLabel.anchor(top: userBalanceLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil,padding: .init(top: 8, left: 0, bottom: 0, right: 0))
         dollarBalanceLabel.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
         
-        topUpButton.anchor(top: dollarBalanceLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 20, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width / 4 * 3, height: 50))
+        buttonStackView.anchor(top: dollarBalanceLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 24, bottom: 0, right: 24), size: .init(width: view.frame.width, height: 50))
         
-        sendButton.anchor(top: topUpButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width / 4 * 3, height: 50))
-        
-        cashOutButton.anchor(top: sendButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width / 4 * 3, height: 50))
-        
-        sendButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
-        topUpButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
-        cashOutButton.centerXAnchor.constraint(equalTo:view.centerXAnchor ).isActive = true
-    
+       
     }
     
     
@@ -178,26 +169,22 @@ class WalletController: UIViewController {
             label.font = UIFont.systemFont(ofSize: 16)
             return label
         }()
+    
+    let buttonStackView: UIStackView = {
+        let sv = UIStackView()
         
-       fileprivate let topUpButton: UIButton = {
+       let topUpButton: UIButton = {
             let button = UIButton(type: .system)
             button.setTitle("Top up", for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
             button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = #colorLiteral(red: 1, green: 0.7380045896, blue: 0.1112664202, alpha: 1)
+            button.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)
             button.layer.cornerRadius = 4
         button.addTarget(self, action: #selector(handleTopup), for: .touchUpInside)
             return button
         }()
 
-    
-    @objc fileprivate func handleTopup() {
-        let controller = TopUpController()
-//        controller.user = user
-        navigationController?.pushViewController(controller, animated: true)
-    }
-        
-       fileprivate let sendButton: UIButton = {
+       let sendButton: UIButton = {
             let button = UIButton(type: .system)
             button.setTitle("Send", for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
@@ -209,7 +196,7 @@ class WalletController: UIViewController {
             return button
         }()
         
-       fileprivate let cashOutButton: UIButton = {
+       let cashOutButton: UIButton = {
             let button = UIButton(type: .system)
             button.setTitle("Cash out", for: .normal)
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
@@ -220,6 +207,25 @@ class WalletController: UIViewController {
             button.layer.cornerRadius = 4
             return button
         }()
+        
+        sv.addArrangedSubview(topUpButton)
+        sv.addArrangedSubview(sendButton)
+        sv.addArrangedSubview(cashOutButton)
+        
+        topUpButton.widthAnchor.constraint(equalTo: sv.widthAnchor, multiplier: 3/10).isActive = true
+        sendButton.widthAnchor.constraint(equalTo: sv.widthAnchor, multiplier: 3/10).isActive = true
+        cashOutButton.widthAnchor.constraint(equalTo: sv.widthAnchor, multiplier: 3/10).isActive = true
+        
+        sv.distribution = .equalSpacing
+        
+        return sv
+    }()
+    
+    @objc fileprivate func handleTopup() {
+        let controller = TopUpController()
+        //        controller.user = user
+        navigationController?.pushViewController(controller, animated: true)
+    }
     
 
 }

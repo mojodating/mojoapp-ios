@@ -36,11 +36,10 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     
     var cardViewModel: CardViewModel! {
         didSet{
-            userNameLabel.attributedText = cardViewModel.attributedString
-            
+                userNameLabel.attributedText = cardViewModel.attributedString
             profileImageView.loadImageUsingCacheWithUrlString(urlString: cardViewModel.imageUrls.first ?? "")
 
-            infoLabel.text = "Say Hi To " + cardViewModel.name + "!"
+            infoLabel.text = "Say Hi To " + cardViewModel.name
         }
     }
     
@@ -88,9 +87,8 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     
     let userNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "@username"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.textColor = #colorLiteral(red: 0.9686274529, green: 0.5610659366, blue: 0.2193926538, alpha: 1)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         label.numberOfLines = 0
         return label
     }()
@@ -108,7 +106,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
         let label = UILabel()
         label.text = "In Mojo we believe saying Hi should not be a spam. Choose a gift to show your sincerity."
         label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
         label.numberOfLines = 0
         return label
     }()
@@ -116,7 +114,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     
     let menuLabel: UILabel = {
         let label = UILabel()
-        label.text = "MENU"
+        label.text = "GIFTS"
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return label
@@ -137,7 +135,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 30
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .yellow
+        cv.backgroundColor = .clear
         cv.isPagingEnabled = true
         return cv
     }()
@@ -147,7 +145,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 0.9739847716, green: 0.9739847716, blue: 0.9739847716, alpha: 1)
         
         navigationItem.title = "Send Chat Request"
         
@@ -168,20 +166,15 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     
     fileprivate func setupLayout() {
         view.addSubview(profileImageView)
-        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 40, left: 24, bottom: 0, right: 0), size: .init(width: 64, height: 64))
+        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0), size: .init(width: 64, height: 64))
         view.addSubview(userNameLabel)
         userNameLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: profileImageView.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 24, bottom: 0, right: 0))
         userNameLabel.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor).isActive = true
         view.addSubview(infoLabel)
         infoLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 32, left: 24, bottom: 0, right: 0))
         view.addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 24, bottom: 0, right: 24))
+        descriptionLabel.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 24, bottom: 0, right: 24))
         
-        view.addSubview(menuLabel)
-        menuLabel.anchor(top: descriptionLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 24, bottom: 8, right: 0))
-        
-        view.addSubview(balanceLabel)
-        balanceLabel.anchor(top: descriptionLabel.bottomAnchor, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 0, bottom: 8, right: 24))
         
         setupCollectionViewLayout()
         
@@ -198,6 +191,12 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
         menuCollectionView.dataSource = self
         
         menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
+        
+        view.addSubview(menuLabel)
+        menuLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: menuCollectionView.topAnchor, trailing: nil, padding: .init(top: 0, left: 24, bottom: 0, right: 0))
+        
+        view.addSubview(balanceLabel)
+        balanceLabel.anchor(top: nil, leading: nil, bottom: menuCollectionView.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 24))
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

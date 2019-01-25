@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate {
+class ChatController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate, ChatCellDelegate {
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -71,6 +71,8 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: chatCellId, for: indexPath) as! ChatCell
+            cell.delegate = self
+            
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: chatRequestCellId, for: indexPath) as! ChatRequestCell
@@ -99,7 +101,6 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     
     func didTapCell(conversation: Conversation) {
-        print("show message chat")
         let chatLogController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
         chatLogController.conversation = conversation
         navigationController?.pushViewController(chatLogController, animated: true)

@@ -9,9 +9,10 @@
 import UIKit
 import Firebase
 
-class PrivateChatController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class PrivateChatController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITextFieldDelegate, ChatInputAccessaryViewDelegate {
     
     let cellId = "cellId"
+    let requestCellId = "requestCellId"
     
     var user: User?
     var conversation : Conversation? {
@@ -41,28 +42,31 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = #colorLiteral(red: 0.9218030841, green: 0.9218030841, blue: 0.9218030841, alpha: 1)
         
         navigationItem.title = "Username"
         
         setupLayout()
         
         collectionView.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
         
-        collectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 20, right: 0)
-        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 20, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 80, right: 8)
+        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         
-        fetchCurrentUserMessages()
-    
+        fetchMessages()
+
     }
     
     var messages = [Message]()
     
-    fileprivate func fetchCurrentUserMessages() {
+    fileprivate func fetchMessages() {
         
-        guard let senderId = Auth.auth().currentUser?.uid else { return }
+//        guard let senderId = Auth.auth().currentUser?.uid else { return }
+//        guard let receiverId = self.conversation?.sender else { return }
+        guard let converstionId = self.conversation?.id else { return }
         
-        let ref = Firestore.firestore().collection("conversations").document(senderId).collection("messages")
+        let ref = Firestore.firestore().collection("conversations").document(converstionId).collection("messages")
         
         ref.getDocuments { (querySnapshot, err) in
             if let err = err {
@@ -77,20 +81,16 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
 //                        print(msg)
                         
                         let message = Message(msg: msg)
-                        
-                        if message.receiver == self.conversation?.sender {
-                            self.messages.append(message)
-                        }
+                        self.messages.append(message)
+                    
                     })
                     
                     self.collectionView.reloadData()
 
                 }
-                
-
             }
+        }
         
-            }
         }
     
     
@@ -99,17 +99,57 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MessageCell
         
         let message = messages[indexPath.item]
         
         cell.chatLogLabel.text = message.text
         
-        
+        setupCell(cell: cell, message: message)
         
         cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message.text).width + 32
         
         return cell
+        
+    }
+    
+//    fileprivate func setupRequestCell(cell:RequestMessageCell, message: Message ) {
+//        if let profileImageUrl = self.user?.imageUrl1 {
+//            cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
+//        }
+//
+//        if let drinkImageUrl = self.conversation?.drinkImage {
+//            cell.drinkImageView.loadImageUsingCacheWithUrlString(urlString: drinkImageUrl)
+//        }
+//
+//        cell.chatLogLabel.text = message.text
+//
+//    }
+    
+    fileprivate func setupCell(cell:MessageCell, message: Message ) {
+        if let profileImageUrl = self.user?.imageUrl1 {
+            cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
+        }
+        
+        
+        if message.sender == Auth.auth().currentUser?.uid {
+            // purple bubble
+            cell.bubbleView.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+            cell.chatLogLabel.textColor = .white
+            cell.profileImageView.isHidden = true
+            cell.bubbleViewRightAnchor?.isActive = true
+            cell.bubbleViewLeftAnchor?.isActive = false
+            
+        } else {
+            //grey bubble
+            
+            cell.bubbleView.backgroundColor = .white
+            cell.chatLogLabel.textColor = .black
+            cell.bubbleViewRightAnchor?.isActive = false
+            cell.bubbleViewLeftAnchor?.isActive = true
+            cell.profileImageView.isHidden = false
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -139,88 +179,88 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         tabBarController?.tabBar.isHidden = false
     }
     
-    lazy var containerView: UIView = {
-        let containerView = UIView()
-        containerView.frame = CGRect(x: 0, y: 0, width: 100, height: 80)
-        containerView.backgroundColor = .white
-        
-        let sendButton = UIButton(type: .system)
-        sendButton.setTitle("Send", for: .normal)
-        sendButton.setTitleColor(#colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1), for: .normal)
-        sendButton.titleLabel?.font = UIFont.systemFont(ofSize: 14 , weight: .semibold)
-        sendButton.addTarget(self, action: #selector(handleSend), for: .touchUpInside)
-        containerView.addSubview(sendButton)
-        sendButton.anchor(top: containerView.topAnchor, leading: nil, bottom: containerView.bottomAnchor, trailing: containerView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 50, height: 0))
-        
-        containerView.addSubview(textField)
-        textField.anchor(top: containerView.topAnchor, leading: containerView.leadingAnchor, bottom: containerView.bottomAnchor, trailing: sendButton.leadingAnchor, padding: .init(top: 0, left: 12, bottom: 30, right: 12), size: .init(width: 0, height: 50))
-        
-        return containerView
+    lazy var containerView: ChatInputAccessaryView = {
+        let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+        let chatInputAccessaryView = ChatInputAccessaryView(frame: frame)
+        chatInputAccessaryView.delegate = self
+        return chatInputAccessaryView
     }()
     
-    let textField: UITextField = {
-        let tf = UITextField()
-        tf.placeholder = "Message..."
-        return tf
-    }()
-    
-    @objc func handleSend() {
-        print("sender:",self.conversation?.receiver ?? "" )
-        print("receiver:", self.conversation?.sender ?? "")
-        print("send messages:", textField.text ?? "")
-
+    func didSend(for message: String) {
+        print("trying to send")
         let senderId = self.conversation?.receiver ?? ""
         let receiverId = self.conversation?.sender ?? ""
-        let message = ["text": textField.text ?? "",
-                    "sender":senderId,
-                    "date":Date().timeIntervalSince1970,
-            "receiver":receiverId
-        ] as [String : Any]
-
-        Firestore.firestore().collection("conversations").document(senderId).collection("messages"
+        let message = ["text": message,
+                       "sender":senderId,
+                       "date":Date().timeIntervalSince1970,
+                       "receiver":receiverId
+            ] as [String : Any]
+        
+        let conversationId = self.conversation?.id ?? ""
+        Firestore.firestore().collection("conversations").document(conversationId).collection("messages"
             ).addDocument(data: message) { (err) in
-            if let err = err {
-                print("Failed to insert comment:", err)
-                return
-            }
+                if let err = err {
+                    print("Failed to insert comment:", err)
+                    return
+                }
                 
-                self.textField.text = nil
-
                 print("successfully inserted comment.")
-                self.fetchCurrentUserMessages()
+                self.containerView.clearTextField()
         }
+        
 
     }
     
     override var inputAccessoryView: UIView? {
         get {
             return containerView
-//            let cameraButton = UIButton(type: .system)
-//                cameraButton.setImage(#imageLiteral(resourceName: "camera").withRenderingMode(.alwaysOriginal), for: .normal)
-//                cameraButton.imageView?.contentMode = .scaleAspectFill
-//            containerView.addSubview(cameraButton)
-//            cameraButton.anchor(top: containerView.topAnchor, leading: containerView.leadingAnchor, bottom: containerView.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 0, height: 0))
-//
-//
-//            let photoButton = UIButton(type: .system)
-//                photoButton.setImage(#imageLiteral(resourceName: "photo").withRenderingMode(.alwaysOriginal), for: .normal)
-//                photoButton.imageView?.contentMode = .scaleAspectFill
-//            containerView.addSubview(photoButton)
-//            cameraButton.anchor(top: containerView.topAnchor, leading: cameraButton.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 32, height: 32))
-            
             
         }
     }
+
+//    lazy var textField: UITextField = {
+//        let tf = UITextField()
+//        tf.placeholder = "Message..."
+//        tf.delegate = self
+//        return tf
+//    }()
     
+//    @objc func handleSend() {
+//
+//        let senderId = self.conversation?.receiver ?? ""
+//        let receiverId = self.conversation?.sender ?? ""
+//        let message = ["text": textField.text ?? "",
+//                    "sender":senderId,
+//                    "date":Date().timeIntervalSince1970,
+//            "receiver":receiverId
+//        ] as [String : Any]
+//
+//        let conversationId = self.conversation?.id ?? ""
+//        Firestore.firestore().collection("conversations").document(conversationId).collection("messages"
+//            ).addDocument(data: message) { (err) in
+//            if let err = err {
+//                print("Failed to insert comment:", err)
+//                return
+//            }
+//
+//                self.textField.text = nil
+//
+//                print("successfully inserted comment.")
+//
+//        }
+//
+//    }
+//
+//
+//
     override var canBecomeFirstResponder: Bool {
         return true
     }
     
     fileprivate func setupLayout() {
-        view.addSubview(cameraButton)
-//        cameraButton.anchor(top: <#T##NSLayoutYAxisAnchor?#>, leading: <#T##NSLayoutXAxisAnchor?#>, bottom: <#T##NSLayoutYAxisAnchor?#>, trailing: <#T##NSLayoutXAxisAnchor?#>)
+        
     }
-    
+
     
         let cameraButton: UIButton = {
             let button = UIButton(type: .system)
@@ -237,7 +277,10 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         }()
         
         
-    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        handleSend()
+//        return true
+//    }
     
 
 
