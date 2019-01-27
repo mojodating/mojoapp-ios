@@ -73,20 +73,20 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         ref.addSnapshotListener { querySnapshot, error in
             
-            guard let documents = querySnapshot?.documents else {
-                print("Error fetching documents: \(error!)")
+            guard let snapshot = querySnapshot else {
+                print("Error fetching snapshots: \(error!)")
                 return
             }
-            for document in documents {
-
-                    let msg = document.data() 
-                        let message = Message(msg: msg)
-                        self.messages.append(message)
-                        self.collectionView.reloadData()
+            snapshot.documentChanges.forEach { diff in
+                if (diff.type == .added) {
+                    let msg = diff.document.data()
+                    let message = Message(msg: msg)
+                    self.messages.append(message)
+                    self.collectionView.reloadData()
                     }
-
                 }
             }
+        }
 
 
     
