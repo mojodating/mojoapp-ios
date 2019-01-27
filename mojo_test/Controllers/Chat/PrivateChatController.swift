@@ -18,9 +18,16 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     var conversation : Conversation? {
         didSet {
             
-            guard let receiverID = conversation?.sender else { return }
+            guard let currentUser = Auth.auth().currentUser?.uid else { return }
+            var chatProfileUID: String?
             
-            Firestore.firestore().collection("users").document(receiverID).getDocument { (snapshot, err) in
+            if currentUser == conversation?.sender {
+                chatProfileUID = conversation?.receiver
+            } else {
+                chatProfileUID = conversation?.sender
+            }
+            
+            Firestore.firestore().collection("users").document(chatProfileUID!).getDocument { (snapshot, err) in
                 if let err = err {
                     print(err)
                     return
@@ -30,10 +37,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 self.user = User(dictionary: dictionary)
                 
                 self.navigationItem.title = self.user?.name
-                
-//                guard let senderImageUrl = self.user?.imageUrl1 else {return}
-//                self.userProfileImage.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
-                
                 
             }
         }
@@ -74,11 +77,9 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 print("Error fetching documents: \(error!)")
                 return
             }
-                for document in documents {
+            for document in documents {
 
-                    let msg = document.data()
-//                    msg.forEach({ (key, value) in
-//                        print(msg)
+                    let msg = document.data() 
                         let message = Message(msg: msg)
                         self.messages.append(message)
                         self.collectionView.reloadData()
@@ -126,7 +127,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         if let profileImageUrl = self.user?.imageUrl1 {
             cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
         }
-        
         
         if message.sender == Auth.auth().currentUser?.uid {
             // purple bubble
@@ -183,12 +183,19 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     
     func didSend(for message: String) {
         print("trying to send")
-        let senderId = self.conversation?.receiver ?? ""
-        let receiverId = self.conversation?.sender ?? ""
+        guard let senderId = Auth.auth().currentUser?.uid else { return }
+        var receiverId: String?
+        
+        if senderId == conversation?.sender {
+            receiverId = conversation?.receiver
+        } else {
+            receiverId = conversation?.sender
+        }
+    
         let message = ["text": message,
                        "sender":senderId,
                        "date":Date().timeIntervalSince1970,
-                       "receiver":receiverId
+                       "receiver":receiverId ?? ""
             ] as [String : Any]
         
         let conversationId = self.conversation?.id ?? ""

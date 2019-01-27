@@ -69,16 +69,22 @@ class MenuCell: UICollectionViewCell {
     }
     
     func setupMenu() {
-        addSubview(drinkImageView)
-        drinkImageView.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 16, left: 24, bottom: 0, right: 24), size: .init(width: self.frame.width, height: 240))
-        
-        addSubview(nameLabel)
-        nameLabel.anchor(top: drinkImageView.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))
-
-        addSubview(priceLabel)
-        priceLabel.anchor(top: drinkImageView.bottomAnchor, leading: nil, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 24))
         
         addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: nameLabel.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 8, left: 24, bottom: 0, right: 24))
+//        descriptionLabel.anchor(top: nameLabel.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 8, left: 24, bottom: 0, right: 24))
+        
+        descriptionLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 24, bottom: 16, right: 24))
+        
+        addSubview(nameLabel)
+        //        nameLabel.anchor(top: drinkImageView.bottomAnchor, leading: self.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))
+        nameLabel.anchor(top: nil, leading: leadingAnchor, bottom: descriptionLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 24, bottom: 8, right: 0))
+        
+        addSubview(priceLabel)
+        //        priceLabel.anchor(top: drinkImageView.bottomAnchor, leading: nil, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 24))
+        priceLabel.anchor(top: nil, leading: nil, bottom: descriptionLabel.topAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 8, right: 24))
+        
+        addSubview(drinkImageView)
+        //        drinkImageView.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 16, left: 24, bottom: 0, right: 24), size: .init(width: self.frame.width, height: 240))
+        drinkImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nameLabel.topAnchor, trailing: trailingAnchor, padding: .init(top: 16, left: 24, bottom: 16, right: 24))
     }
 }

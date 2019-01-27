@@ -37,7 +37,7 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
                 //                    print("key\(key), Value\(value)")
                 
                 guard let conv = value as? [String: Any] else {return}
-                
+            
                 let conversation = Conversation(conv: conv)
                 
                 if (conversation.accepted) {
@@ -127,9 +127,17 @@ class ChatCell:UICollectionViewCell {
     var conversation : Conversation? {
         didSet {
             
-            guard let sendUID = conversation?.sender else { return }
+            guard let currentUser = Auth.auth().currentUser?.uid else { return }
+            var chatProfileUID: String?
             
-            Firestore.firestore().collection("users").document(sendUID).getDocument { (snapshot, err) in
+            if currentUser == conversation?.sender {
+                chatProfileUID = conversation?.receiver
+            } else {
+                chatProfileUID = conversation?.sender
+            }
+            
+
+            Firestore.firestore().collection("users").document(chatProfileUID!).getDocument { (snapshot, err) in
                 if let err = err {
                     print(err)
                     return

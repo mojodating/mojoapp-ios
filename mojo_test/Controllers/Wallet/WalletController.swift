@@ -91,7 +91,7 @@ class WalletController: UIViewController {
         
         usernameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        accountButton.anchor(top: usernameLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
+        accountButton.anchor(top: usernameLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size:  .init(width: 180, height: 32))
         
         accountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
@@ -131,12 +131,16 @@ class WalletController: UIViewController {
     
     let accountButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Account", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-        button.setTitleColor(#colorLiteral(red: 0.8765097099, green: 0.3622604107, blue: 0.9166203997, alpha: 1), for: .normal)
+        button.setTitle("Wallet account", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        button.setTitleColor(UIColor.black, for: .normal)
+        button.layer.cornerRadius = 16
+        button.layer.borderWidth = 1
+        button.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         button.addTarget(self, action: #selector(handleAccount), for: .touchUpInside)
         return button
     }()
+    
     
     @objc fileprivate func handleAccount() {
         let controller = WalletAccountController()

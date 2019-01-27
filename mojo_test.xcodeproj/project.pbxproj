@@ -16,6 +16,7 @@
 		8870C53821FB039000B03F98 /* RequestMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53721FB039000B03F98 /* RequestMessageCell.swift */; };
 		8870C53A21FB1A7700B03F98 /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */; };
 		8870C53C21FB87CC00B03F98 /* ChatInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */; };
+		8870C53E21FC272F00B03F98 /* InviteNewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */; };
 		8891671721B0F8E4000267F7 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* homeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
@@ -60,7 +61,6 @@
 		88A3D6E521F5C979008286BC /* FeedbacksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6E421F5C978008286BC /* FeedbacksController.swift */; };
 		88A3D6E721F5D40D008286BC /* SignupMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6E621F5D40D008286BC /* SignupMainController.swift */; };
 		88A3D6E921F5DEAD008286BC /* NewLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6E821F5DEAD008286BC /* NewLoginController.swift */; };
-		88AC695221C5C358006E0559 /* FriendChatLogController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695121C5C358006E0559 /* FriendChatLogController.swift */; };
 		88AC695A21C72F9F006E0559 /* Extensions+Catches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695921C72F9F006E0559 /* Extensions+Catches.swift */; };
 		88AC695E21C823A2006E0559 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC695D21C823A2006E0559 /* UserCell.swift */; };
 		88AC696121C83802006E0559 /* SwipingPhotosController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AC696021C83802006E0559 /* SwipingPhotosController.swift */; };
@@ -127,6 +127,7 @@
 		8870C53721FB039000B03F98 /* RequestMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMessageCell.swift; sourceTree = "<group>"; };
 		8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
 		8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputTextView.swift; sourceTree = "<group>"; };
+		8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteNewUserController.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
@@ -172,7 +173,6 @@
 		88A3D6E421F5C978008286BC /* FeedbacksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbacksController.swift; sourceTree = "<group>"; };
 		88A3D6E621F5D40D008286BC /* SignupMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupMainController.swift; sourceTree = "<group>"; };
 		88A3D6E821F5DEAD008286BC /* NewLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewLoginController.swift; sourceTree = "<group>"; };
-		88AC695121C5C358006E0559 /* FriendChatLogController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendChatLogController.swift; sourceTree = "<group>"; };
 		88AC695921C72F9F006E0559 /* Extensions+Catches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Catches.swift"; sourceTree = "<group>"; };
 		88AC695D21C823A2006E0559 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		88AC696021C83802006E0559 /* SwipingPhotosController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipingPhotosController.swift; sourceTree = "<group>"; };
@@ -319,7 +319,6 @@
 		889746A821C44AE300DBF6F6 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				88AC695121C5C358006E0559 /* FriendChatLogController.swift */,
 				88A3D6C821ECC8E3008286BC /* ChatController.swift */,
 				88A3D6C621ECC659008286BC /* ChatRequestCell.swift */,
 				88A3D6D921F08C28008286BC /* MenuBar.swift */,
@@ -348,6 +347,7 @@
 				88AC696221C874BD006E0559 /* UserProfileController.swift */,
 				8897462E21B8C3B500DBF6F6 /* SettingsController.swift */,
 				889E0FF721E53DC600A74140 /* CurUserSwipingPhotoController.swift */,
+				8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */,
 			);
 			path = "User Profile";
 			sourceTree = "<group>";
@@ -755,6 +755,7 @@
 				8897461A21B4BBA200DBF6F6 /* User.swift in Sources */,
 				8897463A21BEF61300DBF6F6 /* Firebase+Utils.swift in Sources */,
 				8897463D21C0856500DBF6F6 /* MarketPlaceController.swift in Sources */,
+				8870C53E21FC272F00B03F98 /* InviteNewUserController.swift in Sources */,
 				88A3D6C921ECC8E3008286BC /* ChatController.swift in Sources */,
 				8897463121B8E11C00DBF6F6 /* SettingsCell.swift in Sources */,
 				88A3D6E921F5DEAD008286BC /* NewLoginController.swift in Sources */,
@@ -779,7 +780,6 @@
 				8870C53021F7454800B03F98 /* SignupEmailController.swift in Sources */,
 				88A3D6CB21ECCC51008286BC /* ChatCell.swift in Sources */,
 				88AC695E21C823A2006E0559 /* UserCell.swift in Sources */,
-				88AC695221C5C358006E0559 /* FriendChatLogController.swift in Sources */,
 				889E0FFA21E6757B00A74140 /* GradientView.swift in Sources */,
 				889E0FF221E3E8D400A74140 /* MenuCell.swift in Sources */,
 				88A3D6CF21EE1634008286BC /* PrivateChatController.swift in Sources */,

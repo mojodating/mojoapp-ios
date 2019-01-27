@@ -156,7 +156,7 @@ private class RequestCell:UICollectionViewCell {
     }()
     
     let goodsImage: UIImageView = {
-        let image = UIImageView(image: #imageLiteral(resourceName: "Like"))
+        let image = UIImageView()
         image.contentMode = .scaleAspectFill
         image.clipsToBounds = true
         return image

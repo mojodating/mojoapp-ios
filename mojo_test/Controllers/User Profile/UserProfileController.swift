@@ -18,18 +18,22 @@ class UserProfileController: UIViewController{
         
         view.backgroundColor = .white
         
+        setupNavigation()
+  
+        setupLayout()
+        
+        fetchCurrentUser()
+        
+        setupSettingsButton()
+    }
+    
+    fileprivate func setupNavigation() {
         //set up navigation to transparent
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.view.backgroundColor = UIColor.clear
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-     
-        setupLayout()
-        
-        fetchCurrentUser()
-        
-        setupSettingsButton()
     }
     
     fileprivate let currentUserImageView: UIImageView = {
@@ -47,20 +51,19 @@ class UserProfileController: UIViewController{
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "208322b9-6bf3-4241-9cec-17a73e689bac").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleEditProfile))
     }
     
+    
     @objc fileprivate func handleSettingMenu() {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
-        alertController.addAction(UIAlertAction(title: "Invite Friends", style: .default, handler: { (_) in
+        alertController.addAction(UIAlertAction(title: "Free Tokens", style: .default, handler: { (_) in
+            
+            self.handleInviteNewUser()
             
         }))
    
         alertController.addAction(UIAlertAction(title: "Log Out", style: .destructive, handler: { (_) in
             
-                try? Auth.auth().signOut()
-                
-                let registrationController = RegistrationController()
-                let navController = UINavigationController(rootViewController: registrationController)
-                self.present(navController, animated: true)
+            self.handleLogout()
 
         }))
         
@@ -139,6 +142,20 @@ class UserProfileController: UIViewController{
         let settingsController = SettingsController()
         let navController = UINavigationController(rootViewController: settingsController)
         present(navController, animated: true)
+    }
+    
+    fileprivate func handleInviteNewUser() {
+        let controller = InviteNewUserController()
+        controller.user = self.user
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    fileprivate func handleLogout() {
+        try? Auth.auth().signOut()
+        
+        let registrationController = RegistrationController()
+        let navController = UINavigationController(rootViewController: registrationController)
+        self.present(navController, animated: true)
     }
     
 

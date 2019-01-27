@@ -20,25 +20,42 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
                 for document in querySnapshot!.documents {
 //                    print("\(document.documentID) => \(document.data())")
                     let drinkType = document.data()
-                    drinkType.forEach({ (key, value) in
-                        
+//                    drinkType.forEach({ (key, value) in
+                    
                         let digitalGood = DigitalGood(drinkType: drinkType)
                         self.digitalGoods.append(digitalGood)
-
-                    })
-                    
+ 
                     self.menuCollectionView.reloadData()
                 }
             }
         }
     }
     
-    
     var cardViewModel: CardViewModel! {
         didSet{
-                userNameLabel.attributedText = cardViewModel.attributedString
+//                userNameLabel.attributedText = cardViewModel.attributedString
+            
+            guard let toUID = cardViewModel?.uid else { return }
+            
+            Firestore.firestore().collection("users").document(toUID).getDocument { (snapshot, err) in
+                if let err = err {
+                    print(err)
+                    return
+                }
+                guard let dictionary = snapshot?.data() else { return }
+                self.user = User(dictionary: dictionary)
+                
+                guard let toName = self.user?.name else {return}
+                guard let toUserAge = self.user?.age else {return}
+                guard let toUserProfession = self.user?.profession else {return}
+                
+                let attributedText = NSMutableAttributedString(string: toName, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 20, weight: .black), NSMutableAttributedString.Key.foregroundColor : UIColor.black])
+                attributedText.append(NSMutableAttributedString(string: "\n\(toUserAge), " + toUserProfession, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .regular), NSAttributedString.Key.foregroundColor : UIColor.darkGray]))
+                
+              self.userNameLabel.attributedText = attributedText
+            }
+   
             profileImageView.loadImageUsingCacheWithUrlString(urlString: cardViewModel.imageUrls.first ?? "")
-
             infoLabel.text = "Say Hi To " + cardViewModel.name
         }
     }
@@ -145,7 +162,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = #colorLiteral(red: 0.9739847716, green: 0.9739847716, blue: 0.9739847716, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9509438452, green: 0.9509438452, blue: 0.9509438452, alpha: 1)
         
         navigationItem.title = "Send Chat Request"
         

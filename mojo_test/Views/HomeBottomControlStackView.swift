@@ -19,7 +19,7 @@ class HomeBottomControlStackView: UIStackView {
     }
     
     
-    let chatButton = createButton(image: #imageLiteral(resourceName: "chatbutton-1"))
+//    let chatButton = createButton(image: #imageLiteral(resourceName: "qr"))
     let refreshButton = createButton(image: #imageLiteral(resourceName: "review-1"))
     
     override init (frame: CGRect) {
