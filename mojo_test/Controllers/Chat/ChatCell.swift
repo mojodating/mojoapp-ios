@@ -21,33 +21,61 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     
     fileprivate func fetchChatListsFromServer() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("users").document(uid).addSnapshotListener { documentSnapshot, error in
-            guard let document = documentSnapshot else {
-                print("Error fetching document: \(error!)")
+       let ref = Firestore.firestore().collection("users").whereField("uid", isEqualTo: uid)
+        
+        ref.addSnapshotListener { querySnapshot, error in
+            guard let snapshot = querySnapshot else {
+                print("Error fetching snapshots: \(error!)")
                 return
             }
-            guard let data = document.data() else {
-                print("Document data was empty.")
-                return
-            }
-            
-            guard let dictionaries = data["conversations"] as? [String: Any] else { return }
-            
-            dictionaries.forEach({ (key, value) in
-                //                    print("key\(key), Value\(value)")
-                
-                guard let conv = value as? [String: Any] else {return}
-            
-                let conversation = Conversation(conv: conv)
-                
-                if (conversation.accepted) {
-                    self.chats.append(conversation)
+            snapshot.documentChanges.forEach { diff in
+                if (diff.type == .added) {
+                    
+                    let dictionaries = diff.document.data()
+                    guard let dictionary = dictionaries["conversations"] as? [String : Any] else { return }
+                    dictionary.forEach({ (key, value) in
+                        guard let conv = value as? [String: Any] else {return}
+//
+                    let conversation = Conversation(conv: conv)
+                    if (conversation.accepted) {
+                        self.chats.append(conversation)
+                    }
+                    self.collectionView.reloadData()
+                    })
+//                    print("New city: \(diff.document.data())")
                 }
-                
-                self.collectionView.reloadData()
-            })
+            }
         }
+
+            
+//            ref.addSnapshotListener { documentSnapshot, error in
+//            guard let document = documentSnapshot else {
+//                print("Error fetching document: \(error!)")
+//                return
+//            }
+//            guard let data = document.data() else {
+//                print("Document data was empty.")
+//                return
+//            }
+//
+//            guard let dictionaries = data["conversations"] as? [String: Any] else { return }
+//
+//            dictionaries.forEach({ (key, value) in
+//                //                    print("key\(key), Value\(value)")
+//
+//                guard let conv = value as? [String: Any] else {return}
+//
+//                let conversation = Conversation(conv: conv)
+//
+//                if (conversation.accepted) {
+//                    self.chats.append(conversation)
+//                }
+//
+//                self.collectionView.reloadData()
+//            })
+//        }
     }
+
 
     let titleLabel: UILabel = {
         let label = UILabel()

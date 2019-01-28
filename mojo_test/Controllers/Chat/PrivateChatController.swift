@@ -53,11 +53,15 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         collectionView.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
 //        collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
+        collectionView.alwaysBounceVertical = true
+        collectionView.keyboardDismissMode = .interactive
         
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         
         fetchMessages()
+        
+        
 
     }
     
@@ -105,7 +109,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         setupCell(cell: cell, message: message)
         
         cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message.text).width + 32
-        
+        cell.bubbleHeightAnchor?.constant = estimateFrameForText(text: message.text).height + 20
         return cell
         
     }
@@ -148,13 +152,12 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        var height: CGFloat = 80
+        var height: CGFloat = 150
         
-        if case let text = messages[indexPath.item].text {
-            height = estimateFrameForText(text: text).height + 20
-        }
-        
+        height = estimateFrameForText(text: messages[indexPath.item].text).height + 20
+
         return CGSize(width: view.frame.width, height: height)
+        
     }
     
     fileprivate func estimateFrameForText(text: String) -> CGRect {
@@ -181,7 +184,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         return chatInputAccessaryView
     }()
     
-    func didSend(for message: String) {
+    func didSend(for messageText: String) {
         print("trying to send")
         guard let senderId = Auth.auth().currentUser?.uid else { return }
         var receiverId: String?
@@ -192,25 +195,26 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             receiverId = conversation?.sender
         }
     
-        let message = ["text": message,
+        let message = ["text": messageText,
                        "sender":senderId,
                        "date":Date().timeIntervalSince1970,
                        "receiver":receiverId ?? ""
             ] as [String : Any]
         
         let conversationId = self.conversation?.id ?? ""
-        Firestore.firestore().collection("conversations").document(conversationId).collection("messages"
-            ).addDocument(data: message) { (err) in
-                if let err = err {
-                    print("Failed to insert comment:", err)
-                    return
-                }
-                
-                print("successfully inserted comment.")
-                self.containerView.clearTextField()
-        }
         
-
+        if messageText != "" {
+            Firestore.firestore().collection("conversations").document(conversationId).collection("messages"
+                ).addDocument(data: message) { (err) in
+                    if let err = err {
+                        print("Failed to insert comment:", err)
+                        return
+                    }
+                    
+                    print("successfully inserted comment.")
+                    self.containerView.clearTextField()
+            }
+        }
     }
     
     override var inputAccessoryView: UIView? {
@@ -245,7 +249,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         
 //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        handleSend()
+//        didSend(for: messageText)
 //        return true
 //    }
     

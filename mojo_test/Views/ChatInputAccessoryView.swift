@@ -9,7 +9,7 @@
 import UIKit
 
 protocol ChatInputAccessaryViewDelegate {
-    func didSend(for message: String)
+    func didSend(for messageText: String)
 }
 
 class ChatInputAccessaryView: UIView {
@@ -62,9 +62,9 @@ class ChatInputAccessaryView: UIView {
     
     @objc func handleSend() {
         
-        guard let message = textView.text else {return}
+        guard let messageText = textView.text else {return}
         
-        delegate?.didSend(for: message)
+        delegate?.didSend(for: messageText)
     }
     
     required init?(coder aDecoder: NSCoder) {
