@@ -104,7 +104,7 @@ class SendChatRequestController: UIViewController {
 
     
     @objc func sendChatRequest() {
-        self.functions.httpsCallable("sendConversationRequest").call(["uid": cardViewModel.uid, "text":inputTextField.text ?? "", "drinktypeid":digitalGood?.id ?? ""]) { (result, error) in
+        self.functions.httpsCallable("sendConversationRequest").call(["uid": cardViewModel.uid, "text":inputTextView.text ?? "", "drinktypeid":digitalGood?.id ?? ""]) { (result, error) in
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
                     let code = FunctionsErrorCode(rawValue: error.code)
@@ -177,16 +177,17 @@ class SendChatRequestController: UIViewController {
         return label
     }()
     
-    let inputTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Leave a messages..."
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.layer.borderWidth = 1
-        textField.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
-        textField.layer.cornerRadius = 4
-        return textField
+    let inputTextView: MarketPlaceInputTextView = {
+        let textView = MarketPlaceInputTextView()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+//        textView.layer.borderWidth = 1
+//        textView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        textView.layer.cornerRadius = 4
+        textView.backgroundColor = #colorLiteral(red: 0.9518757931, green: 0.9518757931, blue: 0.9518757931, alpha: 1)
+        textView.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        return textView
     }()
-    
+  
     let payButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("10 Jo - pay and send", for: .normal)
@@ -195,6 +196,7 @@ class SendChatRequestController: UIViewController {
         button.addTarget(self, action: #selector(sendChatRequest), for: .touchUpInside)
         return button
     }()
+
     
     let topupButton: UIButton = {
         let button = UIButton(type: .system)
@@ -228,11 +230,11 @@ class SendChatRequestController: UIViewController {
         view.addSubview(infoLabel)
         infoLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
         
-        view.addSubview(inputTextField)
-        inputTextField.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width, height: 100))
+        view.addSubview(inputTextView)
+        inputTextView.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width, height: 100))
 
         view.addSubview(balanceLabel)
-        balanceLabel.anchor(top: inputTextField.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))
+        balanceLabel.anchor(top: inputTextView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))
         
         view.addSubview(topupButton)
         topupButton.anchor(top: nil, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 93, height: 32))

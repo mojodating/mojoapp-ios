@@ -12,6 +12,7 @@ import Firebase
 class PrivateChatController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITextFieldDelegate, ChatInputAccessaryViewDelegate {
     
     let cellId = "cellId"
+    let SectionHeader = "SectionHeader"
 //    let requestCellId = "requestCellId"
     
     var user: User?
@@ -66,33 +67,36 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }
     
     var messages = [Message]()
-    
+
     fileprivate func fetchMessages() {
-        
-//        guard let senderId = Auth.auth().currentUser?.uid else { return }
-//        guard let receiverId = self.conversation?.sender else { return }
+
         guard let converstionId = self.conversation?.id else { return }
-        
-        let ref = Firestore.firestore().collection("conversations").document(converstionId).collection("messages")
-        
+
+        let ref = Firestore.firestore().collection("conversations").document(converstionId).collection("messages").order(by: "date", descending: false)
+
         ref.addSnapshotListener { querySnapshot, error in
-            
+
             guard let snapshot = querySnapshot else {
                 print("Error fetching snapshots: \(error!)")
                 return
             }
             snapshot.documentChanges.forEach { diff in
                 if (diff.type == .added) {
+                    
                     let msg = diff.document.data()
                     let message = Message(msg: msg)
+                    
                     self.messages.append(message)
+
                     self.collectionView.reloadData()
                     }
                 }
             }
         }
 
-
+//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return 5
+//    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count

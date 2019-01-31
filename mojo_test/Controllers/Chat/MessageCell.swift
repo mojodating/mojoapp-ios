@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MessageCell: UICollectionViewCell {
     
@@ -96,6 +97,8 @@ class MessageCell: UICollectionViewCell {
         iv.translatesAutoresizingMaskIntoConstraints = true
         return iv
     }()
+    
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

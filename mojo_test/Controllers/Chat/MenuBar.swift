@@ -10,8 +10,9 @@ import UIKit
 
 class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    
     let cellId = "cellId"
-    let titles = ["Chat Requests(10)", "Chat Sent"]
+    let titles = ["Chat Requests()", "Chat Sent"]
     
     var chatRequestCell: ChatRequestCell?
     

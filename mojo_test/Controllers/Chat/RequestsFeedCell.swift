@@ -40,10 +40,14 @@ class RequestsFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
                         }
                         self.collectionView.reloadData()
                     })
+                    
                 }
                 if (diff.type == .removed) {
                     print("Removed city: \(diff.document.data())")
                 }
+                
+                
+                
             }
         }
 //            .addSnapshotListener { documentSnapshot, error in

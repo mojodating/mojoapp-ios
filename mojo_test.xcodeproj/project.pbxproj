@@ -17,6 +17,9 @@
 		8870C53A21FB1A7700B03F98 /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */; };
 		8870C53C21FB87CC00B03F98 /* ChatInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */; };
 		8870C53E21FC272F00B03F98 /* InviteNewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */; };
+		8870C540220035B700B03F98 /* MarketPlaceInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */; };
+		8870C54222003F3E00B03F98 /* UserReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54122003F3E00B03F98 /* UserReviewCell.swift */; };
+		8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */; };
 		8891671721B0F8E4000267F7 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* homeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
@@ -128,6 +131,9 @@
 		8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
 		8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputTextView.swift; sourceTree = "<group>"; };
 		8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteNewUserController.swift; sourceTree = "<group>"; };
+		8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPlaceInputTextView.swift; sourceTree = "<group>"; };
+		8870C54122003F3E00B03F98 /* UserReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewCell.swift; sourceTree = "<group>"; };
+		8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPollCell.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
@@ -282,6 +288,7 @@
 				889E0FF921E6757B00A74140 /* GradientView.swift */,
 				8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */,
 				8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */,
+				8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -375,6 +382,8 @@
 			isa = PBXGroup;
 			children = (
 				88A3D6E421F5C978008286BC /* FeedbacksController.swift */,
+				8870C54122003F3E00B03F98 /* UserReviewCell.swift */,
+				8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */,
 			);
 			path = Feedbacks;
 			sourceTree = "<group>";
@@ -730,6 +739,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8870C540220035B700B03F98 /* MarketPlaceInputTextView.swift in Sources */,
+				8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */,
 				8897462B21B7526000DBF6F6 /* Bindable.swift in Sources */,
 				8897461721B47C8C00DBF6F6 /* CardView.swift in Sources */,
 				889E0FEE21E165F700A74140 /* WelcomeController.swift in Sources */,
@@ -758,6 +769,7 @@
 				8870C53E21FC272F00B03F98 /* InviteNewUserController.swift in Sources */,
 				88A3D6C921ECC8E3008286BC /* ChatController.swift in Sources */,
 				8897463121B8E11C00DBF6F6 /* SettingsCell.swift in Sources */,
+				8870C54222003F3E00B03F98 /* UserReviewCell.swift in Sources */,
 				88A3D6E921F5DEAD008286BC /* NewLoginController.swift in Sources */,
 				8870C52B21F7244400B03F98 /* Message.swift in Sources */,
 				8870C53C21FB87CC00B03F98 /* ChatInputTextView.swift in Sources */,

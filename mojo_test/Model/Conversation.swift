@@ -18,6 +18,7 @@ struct Conversation {
     let sender: String
     let receiver: String
     let text: String
+    var mostRecentMessageDate: Date
     
     init(conv:[String : Any]) {
         self.id = conv["id"] as? String ?? ""
@@ -28,5 +29,7 @@ struct Conversation {
         self.sender = conv["sender"] as? String ?? ""
         self.receiver = conv["receiver"] as? String ?? ""
         self.text = conv["text"] as? String ?? ""
+        
+        self.mostRecentMessageDate = conv["mostRecentMessageDate"] as? Date ?? Date()
     }
 }

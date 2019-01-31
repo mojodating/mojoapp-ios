@@ -144,7 +144,7 @@ class WalletController: UIViewController {
     
     @objc fileprivate func handleAccount() {
         let controller = WalletAccountController()
-//        let navController = UINavigationController(rootViewController: controller)
+        controller.user = user
         navigationController?.pushViewController(controller, animated: true)
     }
         

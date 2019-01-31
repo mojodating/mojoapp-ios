@@ -31,18 +31,20 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
             snapshot.documentChanges.forEach { diff in
                 if (diff.type == .added) {
                     
-                    let dictionaries = diff.document.data()
+                    let dictionaries = diff.document.data() 
                     guard let dictionary = dictionaries["conversations"] as? [String : Any] else { return }
                     dictionary.forEach({ (key, value) in
+                
                         guard let conv = value as? [String: Any] else {return}
 //
                     let conversation = Conversation(conv: conv)
                     if (conversation.accepted) {
+                        
                         self.chats.append(conversation)
                     }
                     self.collectionView.reloadData()
                     })
-//                    print("New city: \(diff.document.data())")
+                    self.titleLabel.text = "Chats(\(self.chats.count))"
                 }
             }
         }
@@ -79,7 +81,7 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
 
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Chats(2)"
+        label.text = "Chats()"
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return label
     }()
@@ -151,7 +153,9 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
 
 class ChatCell:UICollectionViewCell {
     
+    
     var user: User?
+    var message: Message?
     var conversation : Conversation? {
         didSet {
             
@@ -164,7 +168,7 @@ class ChatCell:UICollectionViewCell {
                 chatProfileUID = conversation?.sender
             }
             
-
+            
             Firestore.firestore().collection("users").document(chatProfileUID!).getDocument { (snapshot, err) in
                 if let err = err {
                     print(err)
@@ -178,7 +182,37 @@ class ChatCell:UICollectionViewCell {
                 
                 guard let senderImageUrl = self.user?.imageUrl1 else {return}
                 self.chatProfileImage.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
-                
+            }
+            
+                fetchLastMessageFromConversation()
+            
+        }
+    }
+    
+    var messageLog = [Message]()
+    fileprivate func fetchLastMessageFromConversation() {
+        guard let conversationId = conversation?.id else { return }
+        Firestore.firestore().collection("conversations").document(conversationId).collection("messages")
+        .getDocuments { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+        //                        print("\(document.documentID) => \(document.data())")
+                    let msg = document.data()
+                    let message = Message(msg: msg)
+                    self.messageLog.append(message)
+//                    self.messageLog.sort(by: { (message1, message2) -> Bool in
+//                        return message1.date > message2.date
+//                    })
+                    let mostRecentMessage = self.messageLog.last
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "MM/dd/yyyy hh:mm tt"
+                    let dateString = dateFormatter.string(from: (mostRecentMessage?.date)!)
+                    self.timeLabel.text = dateString
+                    self.contentLabel.text = mostRecentMessage?.text
+//                    self.conversation?.mostRecentMessageDate = (mostRecentMessage?.date)!
+                }
             }
         }
     }

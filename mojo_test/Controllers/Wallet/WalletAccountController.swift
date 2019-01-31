@@ -9,6 +9,12 @@
 import UIKit
 
 class WalletAccountController: UIViewController {
+    
+    var user: User? {
+        didSet {
+            nameLabel.text = user?.name
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
