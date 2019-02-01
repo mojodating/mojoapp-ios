@@ -11,6 +11,37 @@ import Firebase
 
 class FeedbacksController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    var feedbacks = [Conversation]()
+    
+    fileprivate func fetchChatUsers() {
+        
+        guard let currentUID = Auth.auth().currentUser?.uid else {return}
+        
+        let ref = Firestore.firestore().collection("users").document(currentUID)
+        
+        ref.getDocument { (document, error) in
+            if let document = document, document.exists {
+                
+                guard let dictionaries = document.data() else { return }
+                guard let dictionary = dictionaries["conversations"] as? [String : Any] else { return }
+                dictionary.forEach({ (key, value) in
+                    
+                    guard let conv = value as? [String: Any] else {return}
+                    //
+                    let conversation = Conversation(conv: conv)
+                    if (conversation.accepted) {
+                        
+                        self.feedbacks.append(conversation)
+                    }
+                    self.collectionView.reloadData()
+                })
+                
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
     let reviewCellId = "reviewCellId"
     let feedbackCellId = "feedbackCellId"
 
@@ -19,6 +50,8 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
 
         collectionView.backgroundColor = .white
         navigationItem.title = "Feedbacks"
+        
+        fetchChatUsers()
         
         collectionView.register(UserReviewCell.self, forCellWithReuseIdentifier: reviewCellId)
         collectionView.register(FeedbackPollCell.self, forCellWithReuseIdentifier: feedbackCellId)
@@ -30,7 +63,7 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 5
+            return feedbacks.count
         }
             return 1
     }
@@ -39,6 +72,7 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: feedbackCellId, for: indexPath) as! FeedbackPollCell
             cell.backgroundColor = .white
+            cell.conversation = feedbacks[indexPath.item]
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reviewCellId, for: indexPath) as! UserReviewCell
@@ -50,7 +84,16 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
         if indexPath.section == 1 {
             return CGSize(width: view.frame.width, height: 60)
         }
-        return CGSize(width: view.frame.width, height: 150)
+        return CGSize(width: view.frame.width, height: 160)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            let controller = UserDetailFeedbackController()
+            let conversation = self.feedbacks[indexPath.row]
+            controller.conversation = conversation
+            navigationController?.pushViewController(controller, animated: true)
+        }
     }
 
 }

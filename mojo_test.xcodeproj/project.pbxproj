@@ -20,6 +20,7 @@
 		8870C540220035B700B03F98 /* MarketPlaceInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */; };
 		8870C54222003F3E00B03F98 /* UserReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54122003F3E00B03F98 /* UserReviewCell.swift */; };
 		8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */; };
+		8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */; };
 		8891671721B0F8E4000267F7 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* homeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
@@ -134,6 +135,7 @@
 		8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPlaceInputTextView.swift; sourceTree = "<group>"; };
 		8870C54122003F3E00B03F98 /* UserReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewCell.swift; sourceTree = "<group>"; };
 		8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPollCell.swift; sourceTree = "<group>"; };
+		8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailFeedbackController.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				88A3D6E421F5C978008286BC /* FeedbacksController.swift */,
 				8870C54122003F3E00B03F98 /* UserReviewCell.swift */,
 				8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */,
+				8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */,
 			);
 			path = Feedbacks;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				88A3D6DE21F0D267008286BC /* SentFeedCell.swift in Sources */,
 				8891671721B0F8E4000267F7 /* homeController.swift in Sources */,
 				88A3D6D521EFA6DF008286BC /* AfterPurchaseController.swift in Sources */,
+				8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */,
 				88A3D6E721F5D40D008286BC /* SignupMainController.swift in Sources */,
 				8870C52E21F7252900B03F98 /* MessageCell.swift in Sources */,
 				88A3D6E521F5C979008286BC /* FeedbacksController.swift in Sources */,

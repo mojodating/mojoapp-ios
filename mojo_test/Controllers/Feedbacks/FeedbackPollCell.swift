@@ -12,6 +12,7 @@ import Firebase
 class FeedbackPollCell: UICollectionViewCell {
     
     var user: User?
+    var message: Message?
     var conversation : Conversation? {
         didSet {
             
@@ -34,27 +35,28 @@ class FeedbackPollCell: UICollectionViewCell {
                 guard let dictionary = snapshot?.data() else { return }
                 self.user = User(dictionary: dictionary)
                 
-                self.titleLabel.text = "How‘s your conversation with " + (self.user?.name ?? "")
+                self.titleLabel.text = "How‘s your conversation with " + (self.user?.name)!
                 
                 guard let senderImageUrl = self.user?.imageUrl1 else {return}
                 self.profileImageView.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
             }
-            
         }
     }
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        addSubview(titleLabel)
-        titleLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 16, bottom: 0, right: 0))
-        
-        addSubview(dateLabel)
-        dateLabel.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 16, bottom: 0, right: 0))
-        
         addSubview(profileImageView)
         profileImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 48, height: 48))
         profileImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+        addSubview(titleLabel)
+        titleLabel.anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: profileImageView.leadingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 16))
+        titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        
+//        addSubview(dateLabel)
+//        dateLabel.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 16, bottom: 0, right: 0))
         
         addSubview(lineView)
         lineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 8), size: .init(width: frame.width, height: 1))
@@ -63,6 +65,7 @@ class FeedbackPollCell: UICollectionViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "How‘s your conversation with UserName"
+        label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return label
     }()
@@ -78,6 +81,7 @@ class FeedbackPollCell: UICollectionViewCell {
     let profileImageView: UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "cersi"))
         iv.layer.cornerRadius = 24
+        iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
         return iv
     }()
