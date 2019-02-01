@@ -9,7 +9,16 @@
 import UIKit
 import Firebase
 
-class WalletController: UIViewController {
+class WalletController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    let cellId = "cellId"
+    
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .white
+        return cv
+    }()
 
     
     override func viewDidLoad() {
@@ -22,6 +31,12 @@ class WalletController: UIViewController {
         setupNavigationBar()
         
         setupLayout()
+        
+        setupCollectionViewLayout()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(GiftCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     var user: User?
@@ -66,6 +81,40 @@ class WalletController: UIViewController {
         
     }
     
+    fileprivate func setupCollectionViewLayout() {
+        view.addSubview(collectionView)
+        collectionView.anchor(top: giftsTitleLabel.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
+        let lineView = UIView()
+        lineView.backgroundColor = .lightGray
+        view.addSubview(lineView)
+        lineView.anchor(top: collectionView.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width, height: 1))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! GiftCell
+        
+        cell.backgroundColor = .white
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = (view.frame.width - 2) / 3
+        return CGSize(width: width, height: width)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+    
     
     fileprivate func setupNavigationBar() {
         self.navigationItem.title = "Wallet"
@@ -81,6 +130,7 @@ class WalletController: UIViewController {
         view.addSubview(userBalanceLabel)
         view.addSubview(dollarBalanceLabel)
         view.addSubview(buttonStackView)
+        view.addSubview(giftsTitleLabel)
         
         // user layout
         
@@ -108,7 +158,8 @@ class WalletController: UIViewController {
         
         buttonStackView.anchor(top: dollarBalanceLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 24, bottom: 0, right: 24), size: .init(width: view.frame.width, height: 50))
         
-       
+       giftsTitleLabel.anchor(top: buttonStackView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 24, left: 0, bottom: 0, right: 0))
+        giftsTitleLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: view.centerXAnchor, multiplier: 1).isActive = true
     }
     
     
@@ -225,11 +276,22 @@ class WalletController: UIViewController {
         return sv
     }()
     
+    fileprivate let giftsTitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Your gifts"
+        label.textAlignment = .center
+        label.textColor = .black
+        label.font = UIFont.systemFont(ofSize: 16)
+        return label
+    }()
+    
     @objc fileprivate func handleTopup() {
         let controller = TopUpController()
         //        controller.user = user
         navigationController?.pushViewController(controller, animated: true)
     }
+    
+    
     
 
 }

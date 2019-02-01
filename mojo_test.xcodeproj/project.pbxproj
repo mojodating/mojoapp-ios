@@ -21,6 +21,7 @@
 		8870C54222003F3E00B03F98 /* UserReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54122003F3E00B03F98 /* UserReviewCell.swift */; };
 		8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */; };
 		8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */; };
+		8870C54822041D1200B03F98 /* GiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54722041D1200B03F98 /* GiftCell.swift */; };
 		8891671721B0F8E4000267F7 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* homeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
@@ -136,6 +137,7 @@
 		8870C54122003F3E00B03F98 /* UserReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewCell.swift; sourceTree = "<group>"; };
 		8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPollCell.swift; sourceTree = "<group>"; };
 		8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailFeedbackController.swift; sourceTree = "<group>"; };
+		8870C54722041D1200B03F98 /* GiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCell.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 				88AC696B21CDB873006E0559 /* WalletController.swift */,
 				88F3903A21E76EB30070096E /* TopUpController.swift */,
 				88A3D6E121F1F8A6008286BC /* WalletAccountController.swift */,
+				8870C54722041D1200B03F98 /* GiftCell.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -743,6 +746,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8870C540220035B700B03F98 /* MarketPlaceInputTextView.swift in Sources */,
+				8870C54822041D1200B03F98 /* GiftCell.swift in Sources */,
 				8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */,
 				8897462B21B7526000DBF6F6 /* Bindable.swift in Sources */,
 				8897461721B47C8C00DBF6F6 /* CardView.swift in Sources */,
