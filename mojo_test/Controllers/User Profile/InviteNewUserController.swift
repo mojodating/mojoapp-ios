@@ -40,7 +40,7 @@ class InviteNewUserController: UIViewController {
         inviteFriendsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         
         view.addSubview(inviteFriendsButton)
-        inviteFriendsButton.anchor(top: nil, leading: view.leadingAnchor, bottom:view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 36, bottom: 48, right: 36), size: .init(width: view.frame.width, height: 56))
+        inviteFriendsButton.anchor(top: inviteFriendsLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 36, left: 36, bottom: 0, right: 36), size: .init(width: view.frame.width, height: 56))
         
         
         

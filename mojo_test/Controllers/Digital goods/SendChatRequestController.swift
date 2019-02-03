@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import JGProgressHUD
 
 class SendChatRequestController: UIViewController {
     
@@ -102,8 +103,9 @@ class SendChatRequestController: UIViewController {
         
     }
 
+
     
-    @objc func sendChatRequest() {
+    @objc func handleSendChatRequest() {
         self.functions.httpsCallable("sendConversationRequest").call(["uid": cardViewModel.uid, "text":inputTextView.text ?? "", "drinktypeid":digitalGood?.id ?? ""]) { (result, error) in
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
@@ -112,13 +114,19 @@ class SendChatRequestController: UIViewController {
                     let details = error.userInfo[FunctionsErrorDetailsKey]
                 }
             } else {
-                let controller = AfterPurchaseController()
-                controller.cardViewModel = self.cardViewModel
-                //        let navController = UINavigationController(rootViewController: controller)
-                self.present(controller, animated: true)
+                let hud = JGProgressHUD(style: .dark)
+                hud.textLabel.text = "Sending your chat request..."
+                hud.show(in: self.view)
+                self.showAfterPurchasedController()
             }
         }
         
+    }
+    
+    fileprivate func showAfterPurchasedController() {
+        let controller = AfterPurchaseController()
+        controller.cardViewModel = self.cardViewModel
+        self.present(controller, animated: true)
     }
 
     override func viewDidLoad() {
@@ -193,7 +201,7 @@ class SendChatRequestController: UIViewController {
         button.setTitle("10 Jo - pay and send", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(sendChatRequest), for: .touchUpInside)
+        button.addTarget(self, action: #selector(handleSendChatRequest), for: .touchUpInside)
         return button
     }()
 

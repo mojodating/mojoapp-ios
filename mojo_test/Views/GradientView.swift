@@ -11,8 +11,8 @@ import Firebase
 
 class CurrentUserPhotoView: UIView {
     
-    var user: User! {
-        didSet{
+    var user: User? {
+        didSet {
             userSwipingPhotosController.user = self.user
         }
     }

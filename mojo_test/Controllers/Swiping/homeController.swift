@@ -12,27 +12,33 @@ import JGProgressHUD
 import Cosmos
 import TinyConstraints
 
-class HomeController: UIViewController, CardViewDelegate, SettingsControllerDelegate {
+class HomeController: UIViewController, CardViewDelegate, editProfileControllerDelegate {
    
     let cardsDeckView = UIView()
     var cardViewModels = [CardViewModel]()
-    let bottomControls = HomeBottomControlStackView()
+//    let bottomControls = HomeBottomControlStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.isNavigationBarHidden = true
         
+        navigationController?.isNavigationBarHidden = true
         view.backgroundColor = .white
-        view.addSubview(bottomControls)
+        
+        setupLayout()
+        
+        handleRating()
+        
+        fetchCurrentUser()
+    }
+    
+    fileprivate func setupLayout() {
         view.addSubview(cardsDeckView)
         view.addSubview(cosmosView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
         cosmosView.anchor(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 120, right: 8))
-//        bottomControls.frame = .init(x: view.frame.size.width - 184, y:view.frame.size.height - 403 , width: 184, height: 212)
-        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
-        handleRating()
-        
-        fetchCurrentUser()
+        //        view.addSubview(bottomControls)
+        //        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
+
     }
     
     lazy var cosmosView: CosmosView = {
@@ -45,25 +51,6 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
         view.rating = 0
         return view
     }()
-    
-
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        print("HomeController did appear")
-//        //kick the user out when they log out
-//        if Auth.auth().currentUser == nil {
-//            let registrationController = RegistrationController()
-//            registrationController.delegate = self
-//            let navController = UINavigationController(rootViewController: registrationController)
-//            present(navController, animated: true)
-//        }
-//    }
-    
-//    func didFinishLoggingIn() {
-//        fetchCurrentUser()
-//    }
-    
-    
     
     fileprivate let hud = JGProgressHUD(style: .dark)
     fileprivate var user: User?
@@ -80,41 +67,21 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
             }
             self.user = user
             
-//            self.fetchSwipes()
-            
             self.fetchUsersFromFirestore()
         }
     }
     
-//    var rates = [String: Int]()
-//
-//    fileprivate func fetchSwipes() {
-//
-//        guard let uid = Auth.auth().currentUser?.uid else { return }
-//        Firestore.firestore().collection("bouncingLineRating").document(uid).getDocument { (snapshot, err) in
-//            if let err = err {
-//                print ("failed to fetch swipes for currently logged in user:", err)
-//                return
-//            }
-//
-//            print("Rates:", snapshot?.data() ?? "")
-//            guard let data = snapshot?.data() as? [String: Int] else { return }
-//            self.rates = data
-//            self.fetchUsersFromFirestore()
-//        }
+//    @objc fileprivate func handleRefresh() {
+//        cardsDeckView.subviews.forEach({$0.removeFromSuperview()})
+//        fetchUsersFromFirestore()
 //    }
-//
-    @objc fileprivate func handleRefresh() {
-        cardsDeckView.subviews.forEach({$0.removeFromSuperview()})
-        fetchUsersFromFirestore()
-    }
     
     var lastFetchedUser: User?
     
     fileprivate func fetchUsersFromFirestore() {
         
-        let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
-        let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
+        let minAge = user?.minSeekingAge ?? EditProfileController.defaultMinSeekingAge
+        let maxAge = user?.maxSeekingAge ?? EditProfileController.defaultMaxSeekingAge
   
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
         topCardView = nil
@@ -144,9 +111,9 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
                         self.topCardView = cardView
                     }
                 }
-        })
+            })
+        }
     }
-}
     
     var topCardView:  CardView?
     
@@ -157,8 +124,7 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
 //            print("Rated: \(rating)")
             
             guard let cardUID = self.topCardView?.cardViewModel.uid else { return }
-            
-            
+      
             self.functions.httpsCallable("rate").call(["uid": cardUID, "rate": rating]) { (result, error) in
                 if let error = error as NSError? {
                     if error.domain == FunctionsErrorDomain {
@@ -216,7 +182,7 @@ class HomeController: UIViewController, CardViewDelegate, SettingsControllerDele
         present(navController, animated: true)
     }
     
-    func didSaveSettings() {
+    func didSaveProfile() {
         fetchCurrentUser()
     }
     

@@ -84,8 +84,8 @@ class RegistrationViewModel {
             "imageUrl1":imageUrl,
             "age": 18,
             "profileImageUrl": imageUrl,
-            "minSeekingAge": SettingsController.defaultMinSeekingAge,
-            "maxSeekingAge": SettingsController.defaultMaxSeekingAge,
+            "minSeekingAge": EditProfileController.defaultMinSeekingAge,
+            "maxSeekingAge": EditProfileController.defaultMaxSeekingAge,
             "insideHouse": false
         ]
         Firestore.firestore().collection("users").document(uid).setData(docData) {(err) in

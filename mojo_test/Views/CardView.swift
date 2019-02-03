@@ -72,6 +72,10 @@ class CardView: UIView {
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
+    fileprivate func disableFunctionalities() {
+        
+    }
+    
 //    var imageIndex = 0
     fileprivate let barDeselectedColor = UIColor(white: 0, alpha: 0.1)
     
@@ -87,7 +91,7 @@ class CardView: UIView {
         }
     }
     
-    fileprivate let userProfileView: UIImageView = {
+    let userProfileView: UIImageView = {
         let view = UIImageView()
         view.contentMode = .scaleAspectFill
         view.clipsToBounds = true
@@ -97,7 +101,7 @@ class CardView: UIView {
         return view
     }()
     
-    fileprivate let chatRequestButton: UIButton = {
+    let chatRequestButton: UIButton = {
         let button = UIButton(type: .system)
         button.setImage(#imageLiteral(resourceName: "chat-btn").withRenderingMode(.alwaysOriginal), for: .normal)
         button.clipsToBounds = true

@@ -56,24 +56,7 @@ class WelcomeController: UIViewController {
             
             guard let profileImageUrl = self.user?.imageUrl1 else { return }
             
-            //setup ProfileImage
-            guard let url = URL(string: profileImageUrl) else {return}
-            
-            URLSession.shared.dataTask(with: url) { (data, response, err) in
-                
-                if let err = err {
-                    print("failed to fetch profile image:", err)
-                    return
-                }
-                
-                guard let data = data else {return}
-                
-                let image = UIImage(data: data)
-                
-                DispatchQueue.main.async {
-                    self.currentUserImageView.image = image
-                }
-                }.resume()
+            self.currentUserImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
             
             guard let userRate = self.user?.rate else { return }
             self.rateSummaryLabel.text = "Your profile got a rating of \(userRate)"

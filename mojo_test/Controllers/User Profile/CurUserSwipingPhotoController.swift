@@ -28,12 +28,16 @@ class CurUserSwipingPhotoController: UIPageViewController, UIPageViewControllerD
         }
     }
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
 
         view.backgroundColor = .white
+        
     }
+
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         let index = self.controllers.firstIndex(where: {$0 == viewController}) ?? 0
@@ -57,6 +61,7 @@ class UserPhotoController: UIViewController {
     
     init(image: UIImage) {
         imageView.image = image
+        imageView.clipsToBounds = true
         super.init(nibName: nil, bundle: nil)
     }
     

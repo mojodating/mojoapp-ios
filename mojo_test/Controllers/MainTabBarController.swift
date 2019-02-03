@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MainTabBarController: UITabBarController, LoginControllerDelegate, SettingsControllerDelegate {
+class MainTabBarController: UITabBarController, LoginControllerDelegate, editProfileControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate, Setting
         setupViewControllers()
     }
     
-    func didSaveSettings() {
+    func didSaveProfile() {
         setupViewControllers()
     }
     
@@ -76,7 +76,7 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate, Setting
     }
     
     fileprivate func transparentTabBarColor() {
-        //change tab bar color to transparent
+        
         let transperentBlackColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
         
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)

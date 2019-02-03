@@ -11,17 +11,17 @@ import Firebase
 import JGProgressHUD
 import SDWebImage
   
-  protocol SettingsControllerDelegate {
-     func didSaveSettings()
+  protocol editProfileControllerDelegate {
+     func didSaveProfile()
   }
   
   class CustomImagePickerController: UIImagePickerController {
     var imageButton: UIButton?
   }
 
-class SettingsController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditProfileController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    var delegate: SettingsControllerDelegate?
+    var delegate: editProfileControllerDelegate?
     
     //instance properties
     lazy var image1Button = createButton(selector: #selector(handleSelectPhoto))
@@ -250,8 +250,8 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
             ageRangeCell.maxSlider.addTarget(self, action: #selector(handleMaxAgeChange), for: .valueChanged)
             
             // we need to set up the labels on our cell here
-            let minAge = user?.minSeekingAge ?? SettingsController.defaultMinSeekingAge
-            let maxAge = user?.maxSeekingAge ?? SettingsController.defaultMaxSeekingAge
+            let minAge = user?.minSeekingAge ?? EditProfileController.defaultMinSeekingAge
+            let maxAge = user?.maxSeekingAge ?? EditProfileController.defaultMaxSeekingAge
             
             ageRangeCell.minLabel.text = "Min \(minAge)"
             ageRangeCell.maxLabel.text = "Max \(maxAge)"
@@ -296,9 +296,8 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
     }
 
     fileprivate func setupNavigationItem() {
-        navigationItem.title = "Setting"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
+        navigationItem.title = "Edit Profile"
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(handleSave))
     }
     
@@ -337,13 +336,20 @@ class SettingsController: UITableViewController, UIImagePickerControllerDelegate
                 mainTabBarController.setupViewControllers()
                 
                 self.dismiss(animated: true, completion: {
-                    self.delegate?.didSaveSettings()
+                    self.delegate?.didSaveProfile()
                 })
         }
     }
     
-    @objc fileprivate func handleCancel() {
-        dismiss(animated: true)
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
     }
 
 }
