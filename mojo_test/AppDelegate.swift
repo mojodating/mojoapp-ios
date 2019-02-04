@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
 //        let controller = SignupMainController()
 //        let navController = UINavigationController(rootViewController: controller)
-//        window?.rootViewController = navController
+//        window?.rootViewController = AfterPurchaseController()
         
         window?.rootViewController = MainTabBarController()
 

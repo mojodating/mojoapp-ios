@@ -31,10 +31,7 @@ class SendChatRequestController: UIViewController {
             
         }
     }
-    
-    
-    
-    
+
     lazy var functions = Functions.functions()
     
     var cardViewModel: CardViewModel! {
@@ -45,10 +42,8 @@ class SendChatRequestController: UIViewController {
             
             userNameLabel.text = userName
             infoLabel.text = "Say Hi to " + userName + "!"
-            
-            
+ 
         }
-        
     }
     
     var user: User?
@@ -106,19 +101,22 @@ class SendChatRequestController: UIViewController {
 
     
     @objc func handleSendChatRequest() {
+        
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Sending your chat request..."
+        hud.show(in: self.view)
         self.functions.httpsCallable("sendConversationRequest").call(["uid": cardViewModel.uid, "text":inputTextView.text ?? "", "drinktypeid":digitalGood?.id ?? ""]) { (result, error) in
+            hud.dismiss()
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
                     let code = FunctionsErrorCode(rawValue: error.code)
                     let message = error.localizedDescription
                     let details = error.userInfo[FunctionsErrorDetailsKey]
                 }
-            } else {
-                let hud = JGProgressHUD(style: .dark)
-                hud.textLabel.text = "Sending your chat request..."
-                hud.show(in: self.view)
-                self.showAfterPurchasedController()
             }
+            
+            self.showAfterPurchasedController()
+
         }
         
     }
@@ -126,7 +124,8 @@ class SendChatRequestController: UIViewController {
     fileprivate func showAfterPurchasedController() {
         let controller = AfterPurchaseController()
         controller.cardViewModel = self.cardViewModel
-        self.present(controller, animated: true)
+//        self.present(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
     }
 
     override func viewDidLoad() {

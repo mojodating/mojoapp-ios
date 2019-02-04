@@ -18,15 +18,19 @@ import SDWebImage
   class CustomImagePickerController: UIImagePickerController {
     var imageButton: UIButton?
   }
-
-class EditProfileController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  
+  class EditProfileController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var delegate: editProfileControllerDelegate?
+
     
     //instance properties
     lazy var image1Button = createButton(selector: #selector(handleSelectPhoto))
     lazy var image2Button = createButton(selector: #selector(handleSelectPhoto))
     lazy var image3Button = createButton(selector: #selector(handleSelectPhoto))
+    lazy var image4Button = createButton(selector: #selector(handleSelectPhoto))
+    lazy var image5Button = createButton(selector: #selector(handleSelectPhoto))
+    lazy var image6Button = createButton(selector: #selector(handleSelectPhoto))
     
     @objc func handleSelectPhoto (button:UIButton) {
         print("Select photo with button:", button)
@@ -72,18 +76,25 @@ class EditProfileController: UITableViewController, UIImagePickerControllerDeleg
                     self.user?.imageUrl1 = url?.absoluteString
                 } else if imageButton == self.image2Button {
                     self.user?.imageUrl2 = url?.absoluteString
-                } else {
+                } else if imageButton == self.image3Button {
                     self.user?.imageUrl3 = url?.absoluteString
+                } else if imageButton == self.image4Button {
+                    self.user?.imageUrl4 = url?.absoluteString
+                } else if imageButton == self.image5Button {
+                    self.user?.imageUrl5 = url?.absoluteString
+                } else {
+                    self.user?.imageUrl6 = url?.absoluteString
                 }
+                    
             })
         }
     }
     
     func createButton(selector: Selector) -> UIButton {
         let button = UIButton(type: .system)
-        button.setTitle("Select Photo", for: .normal)
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 8
+        button.setImage(#imageLiteral(resourceName: "addPhoto").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.backgroundColor = #colorLiteral(red: 0.937254902, green: 0.937254902, blue: 0.9568627451, alpha: 1)
+        button.layer.cornerRadius = 2
         button.addTarget(self, action: selector, for: .touchUpInside)
         button.imageView?.contentMode = .scaleAspectFill
         button.clipsToBounds = true
@@ -94,7 +105,8 @@ class EditProfileController: UITableViewController, UIImagePickerControllerDeleg
         super.viewDidLoad()
         
         setupNavigationItem()
-        tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
+//        tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        tableView.backgroundColor = .white
         tableView.tableFooterView = UIView()
         tableView.keyboardDismissMode = .interactive
         
@@ -150,24 +162,60 @@ class EditProfileController: UITableViewController, UIImagePickerControllerDeleg
             }
         }
         
+        if let imageUrl = user?.imageUrl4, let url = URL(string: imageUrl) {
+            SDWebImageManager.shared().loadImage(with: url, options: .continueInBackground, progress: nil) {
+                (image, _, _, _, _, _)
+                in
+                self.image4Button.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+            }
+        }
         
+        if let imageUrl = user?.imageUrl5, let url = URL(string: imageUrl) {
+            SDWebImageManager.shared().loadImage(with: url, options: .continueInBackground, progress: nil) {
+                (image, _, _, _, _, _)
+                in
+                self.image5Button.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+            }
+        }
+        
+        if let imageUrl = user?.imageUrl6, let url = URL(string: imageUrl) {
+            SDWebImageManager.shared().loadImage(with: url, options: .continueInBackground, progress: nil) {
+                (image, _, _, _, _, _)
+                in
+                self.image6Button.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+            }
+        }
+
     }
     
     
     lazy var header: UIView = {
         let header = UIView()
-        header.addSubview(image1Button)
+//        header.backgroundColor = .white
         let padding: CGFloat = 16
-        image1Button.anchor(top: header.topAnchor, leading: header.leadingAnchor, bottom: header.bottomAnchor, trailing: nil, padding: .init(top: padding, left: padding, bottom: padding, right: 0))
-        image1Button.widthAnchor.constraint(equalTo: header.widthAnchor, multiplier: 0.45).isActive = true
         
-        let stackView = UIStackView(arrangedSubviews: [image2Button, image3Button])
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.spacing = padding
+        let photoRow1StackView = UIStackView(arrangedSubviews: [image1Button, image2Button, image3Button])
+        photoRow1StackView.distribution = .fillEqually
+        photoRow1StackView.spacing = padding
         
-        header.addSubview(stackView)
-        stackView.anchor(top: header.topAnchor, leading: image1Button.trailingAnchor, bottom: header.bottomAnchor, trailing: header.trailingAnchor, padding: .init(top: padding, left: padding, bottom: padding, right: padding))
+        header.addSubview(photoRow1StackView)
+        photoRow1StackView.anchor(top: header.topAnchor, leading: header.leadingAnchor, bottom: nil, trailing: header.trailingAnchor, padding: .init(top: padding, left: padding, bottom: padding, right: padding))
+        photoRow1StackView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        let photoRow2StackView = UIStackView(arrangedSubviews: [image4Button, image5Button, image6Button])
+        photoRow2StackView.distribution = .fillEqually
+        photoRow2StackView.spacing = padding
+        
+        header.addSubview(photoRow2StackView)
+        photoRow2StackView.anchor(top: photoRow1StackView.bottomAnchor, leading: header.leadingAnchor, bottom: nil, trailing: header.trailingAnchor, padding: .init(top: padding, left: padding, bottom: padding, right: padding))
+        photoRow2StackView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        let separatorView = UIView()
+        separatorView.backgroundColor = #colorLiteral(red: 0.9319355397, green: 0.9319355397, blue: 0.9319355397, alpha: 1)
+        header.addSubview(separatorView)
+        separatorView.anchor(top: nil, leading: header.leadingAnchor, bottom: header.bottomAnchor, trailing: header.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+        separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
         return header
     }()
     
@@ -185,34 +233,41 @@ class EditProfileController: UITableViewController, UIImagePickerControllerDeleg
         let headerLabel = HeaderLabel()
         switch section {
         case 1:
-            headerLabel.text = "Name"
+            headerLabel.text = "Full name"
         case 2:
-            headerLabel.text = "Profession"
-        case 3:
             headerLabel.text = "Age"
+        case 3:
+            headerLabel.text = "Profession"
         case 4:
-            headerLabel.text = "Bio"
+            headerLabel.text = "School"
+        case 5:
+            headerLabel.text = "Location"
+        case 6:
+            headerLabel.text = "I identify my gender as ..."
+        case 7:
+            headerLabel.text = "Show me gender of ..."
         default:
-            headerLabel.text = "Seeking Age Range"
+            headerLabel.text = "Show me age of ..."
         }
         headerLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        
+
         return headerLabel
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return 300
+            return 450
         }
         return 40
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 9
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return section == 0 ? 0 : 1
+
     }
     
     @objc fileprivate func handleMinAgeChange(slider: UISlider) {
@@ -244,7 +299,7 @@ class EditProfileController: UITableViewController, UIImagePickerControllerDeleg
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // age range cell
-        if indexPath.section == 5 {
+        if indexPath.section == 8 {
             let ageRangeCell = AgeRangeCell(style: .default, reuseIdentifier: nil)
             ageRangeCell.minSlider.addTarget(self, action: #selector(handleMinAgeChange), for: .valueChanged)
             ageRangeCell.maxSlider.addTarget(self, action: #selector(handleMaxAgeChange), for: .valueChanged)
@@ -259,30 +314,58 @@ class EditProfileController: UITableViewController, UIImagePickerControllerDeleg
             ageRangeCell.maxSlider.value = Float(maxAge)
             return ageRangeCell
         }
+        
+        if indexPath.section == 5 {
+            let locationCell = EditProfileSelectionCell(style: .default, reuseIdentifier: nil)
+            
+            return locationCell
+        }
+        
+        if indexPath.section == 6 {
+            let genderCell = EditProfileSelectionCell(style: .default, reuseIdentifier: nil)
+            
+            return genderCell
+        }
 
-        let cell = SettingsCell(style: .default, reuseIdentifier: nil)
+        if indexPath.section == 7 {
+            let genderPrederenceCell = EditProfileSelectionCell(style: .default, reuseIdentifier: nil)
+            return genderPrederenceCell
+        }
+
+        let cell = EditProfileCell(style: .default, reuseIdentifier: nil)
         
         switch indexPath.section {
         case 1:
-            cell.textField.placeholder = "Enter Name"
+            cell.textField.placeholder = "Enter your full name"
             cell.textField.text = user?.name
             cell.textField.addTarget(self, action: #selector(handleNameChange), for: .editingChanged)
         case 2:
-            cell.textField.placeholder = "Enter Profession"
-            cell.textField.text = user?.profession
-            cell.textField.addTarget(self, action: #selector(handleProfessionChange), for: .editingChanged)
-        case 3:
-            cell.textField.placeholder = "Enter Age"
+            cell.textField.placeholder = "Enter your age"
             cell.textField.addTarget(self, action: #selector(handleAgeChange), for: .editingChanged)
             if let age = user?.age {
                 cell.textField.text = String(age)
-                
             }
-            
+        case 3:
+            cell.textField.placeholder = "Enter your profession"
+            cell.textField.text = user?.profession
+            cell.textField.addTarget(self, action: #selector(handleProfessionChange), for: .editingChanged)
+        case 4:
+            cell.textField.placeholder = "Enter your school"
+            cell.textField.text = user?.school
+            cell.textField.addTarget(self, action: #selector(handleSchoolChange), for: .editingChanged)
         default:
-            cell.textField.placeholder = "Enter Bio"
+            print("")
         }
-        return cell
+            
+        return cell        
+    }
+    
+    
+    fileprivate func openGenderSelection() {
+        
+        let genderSelctionController = GenderSelectionController()
+        
+        navigationController?.pushViewController(genderSelctionController, animated: true)
     }
     
     @objc fileprivate func handleNameChange(textField: UITextField) {
@@ -293,6 +376,13 @@ class EditProfileController: UITableViewController, UIImagePickerControllerDeleg
     }
     @objc fileprivate func handleAgeChange(textField: UITextField) {
         self.user?.age = Int(textField.text ?? "")
+    }
+    @objc fileprivate func handleSchoolChange(textField: UITextField) {
+        self.user?.school = textField.text
+    }
+    
+    @objc fileprivate func handleCountryChange(textField: UITextField) {
+        self.user?.location = textField.text
     }
 
     fileprivate func setupNavigationItem() {
@@ -311,7 +401,11 @@ class EditProfileController: UITableViewController, UIImagePickerControllerDeleg
             "imageUrl1": user?.imageUrl1 ?? "",
             "imageUrl2": user?.imageUrl2 ?? "",
             "imageUrl3": user?.imageUrl3 ?? "",
+            "imageUrl4": user?.imageUrl4 ?? "",
+            "imageUrl5": user?.imageUrl5 ?? "",
+            "imageUrl6": user?.imageUrl6 ?? "",
             "profession": user?.profession ?? "",
+            "school": user?.school ?? "",
             "minSeekingAge": user?.minSeekingAge ?? -1,
             "maxSeekingAge":user?.maxSeekingAge ?? -1
             

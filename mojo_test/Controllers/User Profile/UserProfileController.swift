@@ -11,8 +11,8 @@ import Firebase
 import JGProgressHUD
 import SDWebImage
 
-class UserProfileController: UIViewController, UIGestureRecognizerDelegate {
-    
+class UserProfileController: UIViewController {
+ 
     var user: User?
     func fetchCurrentUser() {
         
@@ -25,14 +25,11 @@ class UserProfileController: UIViewController, UIGestureRecognizerDelegate {
 
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
-            guard let currentUserName = self.user?.name else { return }
-//            self.navigationItem.title = currentUserName
-            self.userNameLabel.text = currentUserName
-            self.userInfoLabel.text = "\(self.user?.age ?? 0), "  + (self.user?.profession ?? "")
-            self.gradientView.user = self.user
+            
             guard let profileImageUrl = self.user?.imageUrl1 else { return }
             self.navProfileView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
             
+            self.setupCardFromUser(user:self.user!)
         }
     }
     
@@ -43,8 +40,6 @@ class UserProfileController: UIViewController, UIGestureRecognizerDelegate {
         view.backgroundColor = .white
         
         setupTransparentNavBar()
-  
-        setupLayout()
         
         fetchCurrentUser()
         
@@ -52,6 +47,16 @@ class UserProfileController: UIViewController, UIGestureRecognizerDelegate {
         
         setupMenuController()
         
+    }
+    
+    fileprivate func setupCardFromUser(user: User) {
+        let cardView = CardView(frame: .zero)
+        cardView.cardViewModel = user.toCardViewModel()
+        view.addSubview(cardView)
+        cardView.fillSuperview()
+        cardView.chatRequestButton.isHidden = true
+        cardView.userProfileView.isHidden = true
+        cardView.gestureRecognizers?.forEach(cardView.removeGestureRecognizer)
     }
     
     
@@ -77,7 +82,6 @@ class UserProfileController: UIViewController, UIGestureRecognizerDelegate {
             // handle close
             performAnimations(transform: .identity)
         }
-        
     }
     
     fileprivate func setupMenuController() {
@@ -90,14 +94,14 @@ class UserProfileController: UIViewController, UIGestureRecognizerDelegate {
     }
     
     fileprivate func setupTransparentNavBar() {
-        //set up navigation to transparent
+        
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.view.backgroundColor = .white
-//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
     
+    // Set up navProfileButton
     
     fileprivate let navProfileView: UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "default-profileUrl"))
@@ -107,6 +111,8 @@ class UserProfileController: UIViewController, UIGestureRecognizerDelegate {
         iv.clipsToBounds = true
         iv.contentMode = .scaleAspectFill
         iv.layer.cornerRadius = 20
+        iv.layer.borderWidth = 2
+        iv.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         iv.isUserInteractionEnabled = true
         return iv
     }()
@@ -125,44 +131,6 @@ class UserProfileController: UIViewController, UIGestureRecognizerDelegate {
         singleTap.numberOfTapsRequired = 1;
         navProfileView.addGestureRecognizer(singleTap)
     }
-    
-    
-    let userNameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "UserName"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 24, weight: .heavy)
-        return label
-        
-    }()
-    
-    let userInfoLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Age, Profession"
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
-        return label
-    }()
-    
-//    let userSwipingPhotosController = CurUserSwipingPhotoController(transitionStyle: .scroll, navigationOrientation: .horizontal)
-    
-    let gradientView = CurrentUserPhotoView()
-    
-    fileprivate func setupLayout() {
-        
-//        let userPhotoView = userSwipingPhotosController.view!
-//        view.addSubview(userPhotoView)
-//        userPhotoView.fillSuperview()
-
-        view.addSubview(gradientView)
-        gradientView.fillSuperview()
-
-        view.addSubview(userInfoLabel)
-        userInfoLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 16, right: 0))
-
-        view.addSubview(userNameLabel)
-        userNameLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: userInfoLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 8, right: 0))
-    }
-    
+ 
     
 }

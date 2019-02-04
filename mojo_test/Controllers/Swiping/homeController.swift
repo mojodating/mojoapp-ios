@@ -35,7 +35,7 @@ class HomeController: UIViewController, CardViewDelegate, editProfileControllerD
         view.addSubview(cardsDeckView)
         view.addSubview(cosmosView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
-        cosmosView.anchor(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 120, right: 8))
+        cosmosView.anchor(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 150, right: 8))
         //        view.addSubview(bottomControls)
         //        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
 
@@ -140,9 +140,10 @@ class HomeController: UIViewController, CardViewDelegate, editProfileControllerD
     }
     
     func didRemoveCard(cardView: CardView) {
-        self.topCardView?.removeFromSuperview()
-        self.topCardView = self.topCardView?.nextCardView
-        self.cosmosView.rating = 0
+            
+            self.topCardView?.removeFromSuperview()
+            self.topCardView = self.topCardView?.nextCardView
+            self.cosmosView.rating = 0
     }
     
     fileprivate func performSwipeAnimation() {

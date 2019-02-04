@@ -97,7 +97,7 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            
+         
         }
     
     func didTapCell(conversation: Conversation) {

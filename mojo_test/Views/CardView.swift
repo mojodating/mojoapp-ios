@@ -43,7 +43,6 @@ class CardView: UIView {
     
     fileprivate func setupImageIndexObserver() {
         cardViewModel.imageIndexObserver = {[weak self] (idx, imageUrl) in
-            print ("changing photo from view model")
 //            if let url = URL(string: imageUrl ?? "") {
 //                self?.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "logo-3x"), options: .continueInBackground)
 //            }
@@ -56,7 +55,7 @@ class CardView: UIView {
     }
             
     //encapsulation
-    fileprivate let swipingPhotosController =   SwipingPhotosController(transitionStyle: .scroll, navigationOrientation: .horizontal)
+    fileprivate let swipingPhotosController = SwipingPhotosController(transitionStyle: .scroll, navigationOrientation: .horizontal)
     fileprivate let gradientLayer = CAGradientLayer()
     fileprivate let informationLabel = UILabel()
     
@@ -69,27 +68,12 @@ class CardView: UIView {
         
         let panGesture = UIPanGestureRecognizer (target: self, action: #selector(handlePan))
         addGestureRecognizer(panGesture)
-        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
     }
     
-    fileprivate func disableFunctionalities() {
-        
-    }
     
 //    var imageIndex = 0
     fileprivate let barDeselectedColor = UIColor(white: 0, alpha: 0.1)
     
-    @objc fileprivate func handleTap(gesture:UITapGestureRecognizer){
-        print("Handling tap and cycling photos")
-        let tapLocation = gesture.location(in: nil)
-        let shouldAdvanceNextPhoto = tapLocation.x > frame.width / 2 ? true : false
-        
-        if shouldAdvanceNextPhoto {
-            cardViewModel.advanceToNextPhoto()
-        } else {
-            cardViewModel.goToPreviousPhoto()
-        }
-    }
     
     let userProfileView: UIImageView = {
         let view = UIImageView()
@@ -135,7 +119,7 @@ class CardView: UIView {
         informationLabel.numberOfLines = 0
         
         addSubview(chatRequestButton)
-        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 200, right: 8), size: .init(width: 40, height: 40))
+        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 240, right: 8), size: .init(width: 40, height: 40))
         
         addSubview(userProfileView)
         userProfileView.anchor(top: nil, leading: nil, bottom: chatRequestButton.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 20, right: 0), size: .init(width: 44, height: 44))
@@ -196,8 +180,8 @@ class CardView: UIView {
         
         CATransaction.setCompletionBlock({
             self.transform = .identity
-            if shouldDismissCard {
-            self.removeFromSuperview()
+            if shouldDismissCard {                
+                self.removeFromSuperview()
                 self.delegate?.didRemoveCard(cardView: self)
                 }
         })

@@ -30,16 +30,19 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
         cardViewModel.imageUrls.forEach { (_) in
             let barView = UIView()
             barView.backgroundColor = deselectedBarColor
-            barView.layer.cornerRadius = 2
+            barView.layer.cornerRadius = 4
+            barView.width(8)
+            barView.height(8)
             barsStackView.addArrangedSubview(barView)
         }
         
-        barsStackView.arrangedSubviews.first?.backgroundColor = .white
+        barsStackView.arrangedSubviews.first?.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.3843137255, blue: 0.7098039216, alpha: 1)
         barsStackView.spacing = 4
         barsStackView.distribution = .fillEqually
         view.addSubview(barsStackView)
         let paddingTop = UIApplication.shared.statusBarFrame.height + 8
-        barsStackView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: paddingTop, left: 8, bottom: 0, right: 8), size: .init(width: 0, height: 4))
+        barsStackView.anchor(top: view.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: paddingTop, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 8))
+        barsStackView.centerXAnchor.constraint(equalToSystemSpacingAfter: view.centerXAnchor, multiplier: 1).isActive = true
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
@@ -47,7 +50,7 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
         let currentPhotoController = viewControllers?.first
         if let index = controllers.firstIndex(where: {$0 == currentPhotoController}) {
             barsStackView.arrangedSubviews.forEach({$0.backgroundColor = deselectedBarColor})
-            barsStackView.arrangedSubviews[index].backgroundColor = .white
+            barsStackView.arrangedSubviews[index].backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.3843137255, blue: 0.7098039216, alpha: 1)
         }
         
     }
@@ -60,8 +63,6 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
         dataSource = self
         delegate = self
         view.backgroundColor = .white
-        
-        
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
@@ -80,7 +81,7 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
 
 class PhotoController: UIViewController {
     
-    let imageView = UIImageView(image: #imageLiteral(resourceName: "4"))
+    let imageView = UIImageView()
     
     //provide initiallizer that take in a url instead
     init(imageUrl: String) {

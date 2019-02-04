@@ -26,21 +26,22 @@
 		8870C54D220600C900B03F98 /* BaseSlidingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54C220600C900B03F98 /* BaseSlidingController.swift */; };
 		8870C54F2206168A00B03F98 /* CustomMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54E2206168A00B03F98 /* CustomMenuHeaderView.swift */; };
 		8870C55322062C5A00B03F98 /* SlidingMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */; };
-		8891671721B0F8E4000267F7 /* homeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* homeController.swift */; };
+		8870C5552207895500B03F98 /* EditProfileSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */; };
+		8870C55822088CD500B03F98 /* GenderSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55722088CD500B03F98 /* GenderSelectionController.swift */; };
+		8891671721B0F8E4000267F7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* HomeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
 		8897461521B4712700DBF6F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8897461421B4712700DBF6F6 /* Images.xcassets */; };
 		8897461721B47C8C00DBF6F6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461621B47C8C00DBF6F6 /* CardView.swift */; };
 		8897461A21B4BBA200DBF6F6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461921B4BBA200DBF6F6 /* User.swift */; };
 		8897461D21B4CA0C00DBF6F6 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461C21B4CA0C00DBF6F6 /* CardViewModel.swift */; };
-		8897461F21B5A88E00DBF6F6 /* InHouseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461E21B5A88E00DBF6F6 /* InHouseUser.swift */; };
 		8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462021B6FAD800DBF6F6 /* RegistrationController.swift */; };
 		8897462321B7057F00DBF6F6 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462221B7057F00DBF6F6 /* CustomTextField.swift */; };
 		8897462721B7325300DBF6F6 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462621B7325300DBF6F6 /* RegistrationViewModel.swift */; };
 		8897462921B73F5E00DBF6F6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8897462821B73F5E00DBF6F6 /* GoogleService-Info.plist */; };
 		8897462B21B7526000DBF6F6 /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462A21B7526000DBF6F6 /* Bindable.swift */; };
 		8897462F21B8C3B500DBF6F6 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897462E21B8C3B500DBF6F6 /* EditProfileController.swift */; };
-		8897463121B8E11C00DBF6F6 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463021B8E11C00DBF6F6 /* SettingsCell.swift */; };
+		8897463121B8E11C00DBF6F6 /* EditProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463021B8E11C00DBF6F6 /* EditProfileCell.swift */; };
 		8897463321B9F55700DBF6F6 /* AgeRangeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463221B9F55700DBF6F6 /* AgeRangeCell.swift */; };
 		8897463621BDB24E00DBF6F6 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463521BDB24E00DBF6F6 /* LoginController.swift */; };
 		8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */; };
@@ -54,8 +55,6 @@
 		889E0FEE21E165F700A74140 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FED21E165F700A74140 /* WelcomeController.swift */; };
 		889E0FF221E3E8D400A74140 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FF121E3E8D400A74140 /* MenuCell.swift */; };
 		889E0FF421E409CB00A74140 /* DigitalGood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FF321E409CB00A74140 /* DigitalGood.swift */; };
-		889E0FF821E53DC600A74140 /* CurUserSwipingPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FF721E53DC600A74140 /* CurUserSwipingPhotoController.swift */; };
-		889E0FFA21E6757B00A74140 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FF921E6757B00A74140 /* GradientView.swift */; };
 		889E0FFD21E68E8900A74140 /* SendChatRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FFC21E68E8900A74140 /* SendChatRequestController.swift */; };
 		88A3D6C721ECC659008286BC /* ChatRequestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6C621ECC659008286BC /* ChatRequestCell.swift */; };
 		88A3D6C921ECC8E3008286BC /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A3D6C821ECC8E3008286BC /* ChatController.swift */; };
@@ -146,21 +145,22 @@
 		8870C54C220600C900B03F98 /* BaseSlidingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingController.swift; sourceTree = "<group>"; };
 		8870C54E2206168A00B03F98 /* CustomMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuHeaderView.swift; sourceTree = "<group>"; };
 		8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuCell.swift; sourceTree = "<group>"; };
-		8891671621B0F8E4000267F7 /* homeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeController.swift; sourceTree = "<group>"; };
+		8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSelectionCell.swift; sourceTree = "<group>"; };
+		8870C55722088CD500B03F98 /* GenderSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionController.swift; sourceTree = "<group>"; };
+		8891671621B0F8E4000267F7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
 		8897461421B4712700DBF6F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
 		8897461621B47C8C00DBF6F6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8897461921B4BBA200DBF6F6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8897461C21B4CA0C00DBF6F6 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
-		8897461E21B5A88E00DBF6F6 /* InHouseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InHouseUser.swift; sourceTree = "<group>"; };
 		8897462021B6FAD800DBF6F6 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 		8897462221B7057F00DBF6F6 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		8897462621B7325300DBF6F6 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		8897462821B73F5E00DBF6F6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Documents/Mojo/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8897462A21B7526000DBF6F6 /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 		8897462E21B8C3B500DBF6F6 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
-		8897463021B8E11C00DBF6F6 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		8897463021B8E11C00DBF6F6 /* EditProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileCell.swift; sourceTree = "<group>"; };
 		8897463221B9F55700DBF6F6 /* AgeRangeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRangeCell.swift; sourceTree = "<group>"; };
 		8897463521BDB24E00DBF6F6 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -175,8 +175,6 @@
 		889E0FED21E165F700A74140 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		889E0FF121E3E8D400A74140 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		889E0FF321E409CB00A74140 /* DigitalGood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalGood.swift; sourceTree = "<group>"; };
-		889E0FF721E53DC600A74140 /* CurUserSwipingPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurUserSwipingPhotoController.swift; sourceTree = "<group>"; };
-		889E0FF921E6757B00A74140 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		889E0FFC21E68E8900A74140 /* SendChatRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendChatRequestController.swift; sourceTree = "<group>"; };
 		88A3D6C621ECC659008286BC /* ChatRequestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestCell.swift; sourceTree = "<group>"; };
 		88A3D6C821ECC8E3008286BC /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
@@ -267,6 +265,15 @@
 			path = "Menu base";
 			sourceTree = "<group>";
 		};
+		8870C55622088C0100B03F98 /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8897462E21B8C3B500DBF6F6 /* EditProfileController.swift */,
+				8870C55722088CD500B03F98 /* GenderSelectionController.swift */,
+			);
+			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
 		8891671821B0FA0A000267F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,15 +308,15 @@
 				8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */,
 				8897461621B47C8C00DBF6F6 /* CardView.swift */,
 				8897462221B7057F00DBF6F6 /* CustomTextField.swift */,
-				8897463021B8E11C00DBF6F6 /* SettingsCell.swift */,
+				8897463021B8E11C00DBF6F6 /* EditProfileCell.swift */,
 				8897463221B9F55700DBF6F6 /* AgeRangeCell.swift */,
 				88AC695D21C823A2006E0559 /* UserCell.swift */,
 				88AC696821CD8697006E0559 /* HouseUserProfileButton.swift */,
-				889E0FF921E6757B00A74140 /* GradientView.swift */,
 				8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */,
 				8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */,
 				8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */,
 				8870C54E2206168A00B03F98 /* CustomMenuHeaderView.swift */,
+				8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -318,7 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				8897461921B4BBA200DBF6F6 /* User.swift */,
-				8897461E21B5A88E00DBF6F6 /* InHouseUser.swift */,
 				889E0FF321E409CB00A74140 /* DigitalGood.swift */,
 				88A3D6D221EE47ED008286BC /* Conversation.swift */,
 				8870C52A21F7244400B03F98 /* Message.swift */,
@@ -372,10 +378,9 @@
 		889E0FEA21DD7A2500A74140 /* User Profile */ = {
 			isa = PBXGroup;
 			children = (
+				8870C55622088C0100B03F98 /* Edit Profile */,
 				8870C54B220600AE00B03F98 /* Menu base */,
 				88AC696221C874BD006E0559 /* UserProfileController.swift */,
-				8897462E21B8C3B500DBF6F6 /* EditProfileController.swift */,
-				889E0FF721E53DC600A74140 /* CurUserSwipingPhotoController.swift */,
 				8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */,
 				8870C5492204A67100B03F98 /* SlidingMenuController.swift */,
 				8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */,
@@ -430,7 +435,7 @@
 		88AC695F21C83796006E0559 /* Swiping */ = {
 			isa = PBXGroup;
 			children = (
-				8891671621B0F8E4000267F7 /* homeController.swift */,
+				8891671621B0F8E4000267F7 /* HomeController.swift */,
 				88AC696021C83802006E0559 /* SwipingPhotosController.swift */,
 			);
 			path = Swiping;
@@ -774,10 +779,11 @@
 				889E0FEE21E165F700A74140 /* WelcomeController.swift in Sources */,
 				8897462721B7325300DBF6F6 /* RegistrationViewModel.swift in Sources */,
 				8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */,
+				8870C55822088CD500B03F98 /* GenderSelectionController.swift in Sources */,
 				88A3D6DC21F0CB6B008286BC /* RequestsFeedCell.swift in Sources */,
 				88A3D6D321EE47ED008286BC /* Conversation.swift in Sources */,
 				88A3D6DE21F0D267008286BC /* SentFeedCell.swift in Sources */,
-				8891671721B0F8E4000267F7 /* homeController.swift in Sources */,
+				8891671721B0F8E4000267F7 /* HomeController.swift in Sources */,
 				88A3D6D521EFA6DF008286BC /* AfterPurchaseController.swift in Sources */,
 				8870C54D220600C900B03F98 /* BaseSlidingController.swift in Sources */,
 				8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */,
@@ -785,7 +791,6 @@
 				8870C55322062C5A00B03F98 /* SlidingMenuCell.swift in Sources */,
 				8870C52E21F7252900B03F98 /* MessageCell.swift in Sources */,
 				88A3D6E521F5C979008286BC /* FeedbacksController.swift in Sources */,
-				889E0FF821E53DC600A74140 /* CurUserSwipingPhotoController.swift in Sources */,
 				88AC696321C874BD006E0559 /* UserProfileController.swift in Sources */,
 				88AC696921CD8697006E0559 /* HouseUserProfileButton.swift in Sources */,
 				88AC696121C83802006E0559 /* SwipingPhotosController.swift in Sources */,
@@ -795,12 +800,13 @@
 				8897463F21C194D600DBF6F6 /* MainTabBarController.swift in Sources */,
 				8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */,
 				8870C54F2206168A00B03F98 /* CustomMenuHeaderView.swift in Sources */,
+				8870C5552207895500B03F98 /* EditProfileSelectionCell.swift in Sources */,
 				8897461A21B4BBA200DBF6F6 /* User.swift in Sources */,
 				8897463A21BEF61300DBF6F6 /* Firebase+Utils.swift in Sources */,
 				8897463D21C0856500DBF6F6 /* MarketPlaceController.swift in Sources */,
 				8870C53E21FC272F00B03F98 /* InviteNewUserController.swift in Sources */,
 				88A3D6C921ECC8E3008286BC /* ChatController.swift in Sources */,
-				8897463121B8E11C00DBF6F6 /* SettingsCell.swift in Sources */,
+				8897463121B8E11C00DBF6F6 /* EditProfileCell.swift in Sources */,
 				8870C54222003F3E00B03F98 /* UserReviewCell.swift in Sources */,
 				88A3D6E921F5DEAD008286BC /* NewLoginController.swift in Sources */,
 				8870C52B21F7244400B03F98 /* Message.swift in Sources */,
@@ -813,7 +819,6 @@
 				8897469D21C378B700DBF6F6 /* mojo_test.xcdatamodeld in Sources */,
 				8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */,
 				88A3D6DA21F08C28008286BC /* MenuBar.swift in Sources */,
-				8897461F21B5A88E00DBF6F6 /* InHouseUser.swift in Sources */,
 				88A3D6E221F1F8A6008286BC /* WalletAccountController.swift in Sources */,
 				8897462321B7057F00DBF6F6 /* CustomTextField.swift in Sources */,
 				889E0FF421E409CB00A74140 /* DigitalGood.swift in Sources */,
@@ -824,7 +829,6 @@
 				8870C53021F7454800B03F98 /* SignupEmailController.swift in Sources */,
 				88A3D6CB21ECCC51008286BC /* ChatCell.swift in Sources */,
 				88AC695E21C823A2006E0559 /* UserCell.swift in Sources */,
-				889E0FFA21E6757B00A74140 /* GradientView.swift in Sources */,
 				889E0FF221E3E8D400A74140 /* MenuCell.swift in Sources */,
 				88A3D6CF21EE1634008286BC /* PrivateChatController.swift in Sources */,
 				88AC696C21CDB873006E0559 /* WalletController.swift in Sources */,

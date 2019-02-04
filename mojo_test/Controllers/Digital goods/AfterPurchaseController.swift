@@ -18,7 +18,6 @@ class AfterPurchaseController: UIViewController {
             userNameLabel.text = userName
             
             titleLabel.text = "Chat request to " + userName + " successfully delivered!"
-            
         }
     }
 
@@ -27,7 +26,7 @@ class AfterPurchaseController: UIViewController {
 
         view.backgroundColor = .white
         
-//        navigationItem.title = "send chat request"
+        self.navigationController?.isNavigationBarHidden = true
         
         setupLayout()
         
@@ -43,19 +42,20 @@ class AfterPurchaseController: UIViewController {
         
         view.addSubview(titleLabel)
         titleLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 48, left: 24, bottom: 0, right: 24))
-        
-        view.addSubview(twoButton)
-        twoButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 36, bottom: 36, right: 36), size: .init(width: view.frame.width, height: 56))
+        view.addSubview(descriptionLabel)
+        descriptionLabel.anchor(top: titleLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 24, bottom: 0, right: 24))
+//        view.addSubview(twoButton)
+//        twoButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 36, bottom: 36, right: 36), size: .init(width: view.frame.width, height: 56))
         
         view.addSubview(oneButton)
-        oneButton.anchor(top: nil, leading: view.leadingAnchor, bottom: twoButton.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 36, bottom: 16, right: 36), size: .init(width: view.frame.width, height: 56))
+        oneButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 36, bottom: 36, right: 36), size: .init(width: view.frame.width, height: 56))
     
     }
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "peter")
-        imageView.layer.cornerRadius = 20
+        imageView.layer.cornerRadius = 24
         imageView.layer.masksToBounds = true
         imageView.contentMode = .scaleAspectFill
         return imageView
@@ -84,31 +84,41 @@ class AfterPurchaseController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.8, green: 0.4509803922, blue: 0.8823529412, alpha: 1)
-        button.layer.cornerRadius = 16
+        button.layer.cornerRadius = 18
         button.addTarget(self, action: #selector(handleBackHome), for: .touchUpInside)
         return button
     }()
     
     @objc func handleBackHome() {
         
+        self.dismiss(animated: true)
     }
     
-    let twoButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("See your chat request", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        button.setTitleColor(.black, for: .normal)
-        button.backgroundColor = .white
-        button.layer.cornerRadius = 16
-        button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        button.layer.borderWidth = 2
-        button.addTarget(self, action: #selector(handleToChat), for: .touchUpInside)
-        return button
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "You can check your chat request under 'Chat > Chat Request' tab."
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+//        label.textColor = .darkGray
+        label.numberOfLines = 0
+        return label
     }()
     
-    @objc func handleToChat() {
-        
-    }
+//    let twoButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setTitle("See your chat request", for: .normal)
+//        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+//        button.setTitleColor(.black, for: .normal)
+//        button.backgroundColor = .white
+//        button.layer.cornerRadius = 18
+//        button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+//        button.layer.borderWidth = 2
+//        button.addTarget(self, action: #selector(handleToChat), for: .touchUpInside)
+//        return button
+//    }()
+//
+//    @objc func handleToChat() {
+//
+//    }
     
     
 

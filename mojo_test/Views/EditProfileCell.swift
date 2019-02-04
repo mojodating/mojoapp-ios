@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingsCell: UITableViewCell {
+class EditProfileCell: UITableViewCell {
     
     class SettingsTextField: UITextField {
         
@@ -33,9 +33,17 @@ class SettingsCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+
  
         addSubview(textField)
         textField.fillSuperview()
+        
+        let separatorView = UIView()
+        separatorView.backgroundColor = #colorLiteral(red: 0.9319355397, green: 0.9319355397, blue: 0.9319355397, alpha: 1)
+        addSubview(separatorView)
+        separatorView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 8))
+        separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
