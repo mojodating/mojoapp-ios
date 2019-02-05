@@ -13,7 +13,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     
     let cellId = "cellId"
     let SectionHeader = "SectionHeader"
-//    let requestCellId = "requestCellId"
+    let requestCellId = "requestCellId"
     
     var user: User?
     var conversation : Conversation? {
@@ -53,11 +53,11 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         setupLayout()
         
         collectionView.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
-//        collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
+        collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
         collectionView.alwaysBounceVertical = true
         collectionView.keyboardDismissMode = .interactive
         
-        collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 80, right: 0)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         
         fetchMessages()
@@ -93,16 +93,27 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 }
             }
         }
-
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 5
-//    }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        if indexPath.row == 0 {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCellId, for: indexPath) as! RequestMessageCell
+            
+            let message = messages[indexPath.item]
+            
+            setupRequestCell(cell: cell, message: message)
+            
+            cell.chatLogLabel.text = message.text
+            
+            cell.bubbleWidthAnchor?.constant = estimateFrameForText(text: message.text).width + 32
+            cell.bubbleHeightAnchor?.constant = estimateFrameForText(text: message.text).height + 20
+            
+            return cell
+        }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MessageCell
         
@@ -118,20 +129,58 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
     }
     
-//    fileprivate func setupRequestCell(cell:RequestMessageCell, message: Message ) {
-//        if let profileImageUrl = self.user?.imageUrl1 {
-//            cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
-//        }
-//
-//        if let drinkImageUrl = self.conversation?.drinkImage {
-//            cell.drinkImageView.loadImageUsingCacheWithUrlString(urlString: drinkImageUrl)
-//        }
-//
-//        cell.chatLogLabel.text = message.text
-//
-//    }
+    fileprivate func setupRequestCell(cell: RequestMessageCell, message: Message ) {
+
+        if let giftImageUrl = self.conversation?.drinkImage {
+            cell.giftImageView.loadImageUsingCacheWithUrlString(urlString: giftImageUrl)
+        }
+        
+        if message.sender == Auth.auth().currentUser?.uid {
+            // purple bubble
+            cell.bubbleView.backgroundColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
+            cell.chatLogLabel.textColor = .black
+            cell.profileImageView.isHidden = true
+            cell.bubbleViewRightAnchor?.isActive = true
+            cell.bubbleViewLeftAnchor?.isActive = false
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM/dd/yyyy hh:mm tt"
+            let dateString = dateFormatter.string(from: (message.date))
+            
+            let attributedString = NSMutableAttributedString(string: "You sent this chat request at \(dateString).", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular)])
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+            cell.descriptionLabel.attributedText = attributedString
+        
+            
+        } else {
+            //grey bubble
+            cell.bubbleView.backgroundColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
+            cell.chatLogLabel.textColor = .black
+            cell.bubbleViewRightAnchor?.isActive = false
+            cell.bubbleViewLeftAnchor?.isActive = true
+            cell.profileImageView.isHidden = false
+            
+            let attributedString = NSMutableAttributedString(string: "By reply you accept the request and the gift. Ignore to reject.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular)])
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+            cell.descriptionLabel.attributedText = attributedString
+        }
+        
+        guard let giftName = self.conversation?.drinkName else {return}
+        guard let giftPrice = self.conversation?.drinkPrice else { return }
+        let attributedString = NSMutableAttributedString(string: "\(giftName) \n\(giftPrice) Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .medium)])
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 4
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        cell.giftInfoLabel.attributedText = attributedString
+        
+    }
     
     fileprivate func setupCell(cell:MessageCell, message: Message ) {
+        
         if let profileImageUrl = self.user?.imageUrl1 {
             cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
         }
@@ -156,9 +205,14 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
         var height: CGFloat = 150
         
         height = estimateFrameForText(text: messages[indexPath.item].text).height + 20
+        
+        if indexPath.row == 0 {
+            return CGSize(width: view.frame.width, height: height + 220)
+        }
 
         return CGSize(width: view.frame.width, height: height)
         
@@ -189,7 +243,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }()
     
     func didSend(for messageText: String) {
-        print("trying to send")
+        
         guard let senderId = Auth.auth().currentUser?.uid else { return }
         var receiverId: String?
         
@@ -236,7 +290,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
     }
 
-    
         let cameraButton: UIButton = {
             let button = UIButton(type: .system)
             button.setImage(#imageLiteral(resourceName: "camera").withRenderingMode(.alwaysOriginal), for: .normal)

@@ -13,32 +13,61 @@ class RequestMessageCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        addSubview(spaceView)
+        spaceView.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 8), size: .init(width: 8, height: 8))
+        
         addSubview(profileImageView)
-        profileImageView.anchor(top: nil, leading: leadingAnchor, bottom: self.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 32, height: 32))
+        profileImageView.anchor(top: safeAreaLayoutGuide.topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 32, height: 32))
         
         addSubview(bubbleView)
-        bubbleView.anchor(top: topAnchor, leading: profileImageView.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 8, bottom: 0, right: 0), size: .init(width: 250, height: self.frame.height))
+        
+        bubbleView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        
+        bubbleHeightAnchor = bubbleView.heightAnchor.constraint(equalToConstant: self.frame.height)
+        bubbleHeightAnchor?.isActive = true
+        
+        bubbleViewRightAnchor = bubbleView.trailingAnchor.constraint(equalTo: spaceView.leadingAnchor)
+        bubbleViewRightAnchor?.isActive = true
         
         bubbleWidthAnchor = bubbleView.widthAnchor.constraint(equalToConstant: 250)
         bubbleWidthAnchor?.isActive = true
         
+        bubbleViewLeftAnchor = bubbleView.leadingAnchor.constraint(equalToSystemSpacingAfter: profileImageView.trailingAnchor, multiplier: 1.2)
+        
+        
         addSubview(chatLogLabel)
-        chatLogLabel.anchor(top: self.topAnchor, leading: bubbleView.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 16, bottom: 0, right: 0), size: .init(width: 250, height: self.frame.height))
+        chatLogLabel.anchor(top: bubbleView.topAnchor, leading: bubbleView.leadingAnchor, bottom: bubbleView.bottomAnchor, trailing: nil, padding: .init(top: 8, left: 16, bottom: 8, right: 0), size: .init(width: 250, height: self.frame.height))
         
-        addSubview(drinkImageView)
-        drinkImageView.anchor(top: bubbleView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 48, bottom: 0, right: 0), size: .init(width: 72, height: 72))
+        addSubview(chatRequestLabel)
+        chatRequestLabel.anchor(top: bubbleView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 4, left: 0, bottom: 0, right: 0))
+        chatRequestLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
         
-        addSubview(actionButton)
-        actionButton.anchor(top: nil, leading: drinkImageView.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 16, bottom: 0, right: 0))
-        actionButton.centerYAnchor.constraint(equalTo: drinkImageView.centerYAnchor).isActive = true
+        
+        addSubview(giftImageView)
+        giftImageView.anchor(top: chatRequestLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 20, left: 48, bottom: 0, right: 0), size: .init(width: 80, height: 80))
+        
+        addSubview(giftInfoLabel)
+        giftInfoLabel.anchor(top: nil, leading: giftImageView.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 16, bottom: 0, right: 0))
+        giftInfoLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: giftImageView.centerYAnchor, multiplier: 1).isActive = true
+        
+//        addSubview(actionButton)
+//        actionButton.anchor(top: giftInfoLabel.bottomAnchor, leading: giftImageView.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 4, left: 16, bottom: 0, right: 0))
         
         addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: drinkImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 48, bottom: 0, right: 48))
+        descriptionLabel.anchor(top: giftImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 20, left: 48, bottom: 0, right: 48))
         
         
     }
     
     var bubbleWidthAnchor: NSLayoutConstraint?
+    var bubbleViewRightAnchor: NSLayoutConstraint?
+    var bubbleViewLeftAnchor: NSLayoutConstraint?
+    var bubbleHeightAnchor: NSLayoutConstraint?
+    
+    let spaceView: UIView = {
+        let view = UIView()
+        return view
+    }()
     
     let chatLogLabel: UILabel = {
         let label = UILabel()
@@ -69,7 +98,7 @@ class RequestMessageCell: UICollectionViewCell {
         return iv
     }()
     
-    let drinkImageView: UIImageView = {
+    let giftImageView: UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "drink"))
         iv.layer.masksToBounds = true
         iv.contentMode = .scaleAspectFill
@@ -77,19 +106,31 @@ class RequestMessageCell: UICollectionViewCell {
         return iv
     }()
     
-    let actionButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Reject chat request", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .medium)
-        return button
-    }()
+//    let actionButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setTitle("Reject chat request", for: .normal)
+//        button.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .medium)
+//        return button
+//    }()
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "Reply to accept. Reject to turn down the gift and chat request. Request will expire in 48 hrs. "
-        label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        label.textColor = .darkGray
+        label.textColor = .lightGray
         label.numberOfLines = 0
+        return label
+    }()
+    
+    let giftInfoLabel : UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        return label
+    }()
+    
+    let chatRequestLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Chat request"
+        label.font = UIFont.systemFont(ofSize: 13, weight: .semibold)
+        label.textColor = .lightGray
         return label
     }()
     

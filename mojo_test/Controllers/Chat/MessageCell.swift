@@ -39,18 +39,9 @@ class MessageCell: UICollectionViewCell {
         bubbleWidthAnchor?.isActive = true
 
         bubbleViewLeftAnchor = bubbleView.leadingAnchor.constraint(equalToSystemSpacingAfter: profileImageView.trailingAnchor, multiplier: 1.2)
+        
         addSubview(chatLogLabel)
         chatLogLabel.anchor(top: bubbleView.topAnchor, leading: bubbleView.leadingAnchor, bottom: bubbleView.bottomAnchor, trailing: nil, padding: .init(top: 8, left: 16, bottom: 8, right: 0), size: .init(width: 250, height: self.frame.height))
-//        chatLogLabel.centerYAnchor.constraint(equalTo: bubbleView.centerYAnchor).isActive = true
-        
-//        let constrains = [chatLogLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16), chatLogLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16), chatLogLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16), chatLogLabel.widthAnchor.constraint(equalToConstant: 250) ]
-//        NSLayoutConstraint.activate(constrains)
-//        chatLogLabel.topAnchor.constraint(equalToSystemSpacingBelow: topAnchor, multiplier: 0.14).isActive = true
-//        chatLogLabel.leadingAnchor.constraint(equalToSystemSpacingAfter: bubbleView.leadingAnchor, multiplier: 0.15).isActive = true
-//        chatLogLabel.trailingAnchor.constraint(equalTo: bubbleView.trailingAnchor).isActive = true
-//        chatLogLabel.widthAnchor.constraint(equalToConstant: 250).isActive = true
-//        chatLogLabel.heightAnchor.constraint(equalToConstant: self.frame.height).isActive = true
-        
         
         addSubview(profileImageView)
         profileImageView.anchor(top: nil, leading: leadingAnchor, bottom: self.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 32, height: 32))
@@ -97,8 +88,6 @@ class MessageCell: UICollectionViewCell {
         iv.translatesAutoresizingMaskIntoConstraints = true
         return iv
     }()
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

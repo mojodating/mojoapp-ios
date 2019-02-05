@@ -14,7 +14,7 @@ struct Conversation {
     let accepted: Bool
     let drinkImage: String
     let drinkName : String
-    let drinkPrice: String
+    let drinkPrice: Int
     let sender: String
     let receiver: String
     let text: String
@@ -24,10 +24,9 @@ struct Conversation {
         self.accepted = conv["accepted"] as? Bool ?? false
         self.drinkImage = conv["drinkImage"] as? String ?? ""
         self.drinkName = conv["drinkName"] as? String ?? ""
-        self.drinkPrice = conv["drinkPrice"] as? String ?? ""
+        self.drinkPrice = conv["drinkPrice"] as? Int ?? 0
         self.sender = conv["sender"] as? String ?? ""
         self.receiver = conv["receiver"] as? String ?? ""
         self.text = conv["text"] as? String ?? ""
-        
     }
 }

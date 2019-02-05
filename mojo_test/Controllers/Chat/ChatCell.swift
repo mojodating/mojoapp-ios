@@ -235,7 +235,7 @@ class ChatCell:UICollectionViewCell {
         let contentLabel: UILabel = {
             let label = UILabel()
             label.text = "Jared's been back from that island for a whole day and he didn't get any toilet…"
-            label.textColor = .darkGray
+            label.textColor = #colorLiteral(red: 0.5490196078, green: 0.5490196078, blue: 0.5490196078, alpha: 1)
             label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
             label.numberOfLines = 0
             return label

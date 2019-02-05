@@ -21,7 +21,8 @@ class RequestsFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
     
     fileprivate func fetchChatListsFromServer() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("users").whereField("uid", isEqualTo: uid).addSnapshotListener { querySnapshot, error in
+        Firestore.firestore().collection("users").whereField("uid", isEqualTo: uid)
+            .addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
                 print("Error fetching snapshots: \(error!)")
                 return
@@ -42,12 +43,6 @@ class RequestsFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
                     })
                     
                 }
-                if (diff.type == .removed) {
-                    print("Removed city: \(diff.document.data())")
-                }
-                
-                
-                
             }
         }
 //            .addSnapshotListener { documentSnapshot, error in
@@ -210,9 +205,7 @@ private class RequestCell:UICollectionViewCell {
         addSubview(goodsImage)
         goodsImage.anchor(top: nameLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 8, bottom: 0, right: 8), size: .init(width: 35, height: 35))
         goodsImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        
-        
-        
+
     }
     
     required init?(coder aDecoder: NSCoder) {

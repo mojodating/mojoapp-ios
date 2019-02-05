@@ -24,7 +24,7 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
     }
     
     fileprivate let barsStackView = UIStackView(arrangedSubviews: [])
-    fileprivate let deselectedBarColor = UIColor(white: 0, alpha: 0.1)
+    fileprivate let deselectedBarColor = UIColor(white: 1, alpha: 0.5)
     
     fileprivate func setupBarViews() {
         cardViewModel.imageUrls.forEach { (_) in
@@ -36,7 +36,7 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
             barsStackView.addArrangedSubview(barView)
         }
         
-        barsStackView.arrangedSubviews.first?.backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.3843137255, blue: 0.7098039216, alpha: 1)
+        barsStackView.arrangedSubviews.first?.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7882352941, blue: 0.8156862745, alpha: 1)
         barsStackView.spacing = 4
         barsStackView.distribution = .fillEqually
         view.addSubview(barsStackView)
@@ -50,7 +50,7 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
         let currentPhotoController = viewControllers?.first
         if let index = controllers.firstIndex(where: {$0 == currentPhotoController}) {
             barsStackView.arrangedSubviews.forEach({$0.backgroundColor = deselectedBarColor})
-            barsStackView.arrangedSubviews[index].backgroundColor = #colorLiteral(red: 0.9725490196, green: 0.3843137255, blue: 0.7098039216, alpha: 1)
+            barsStackView.arrangedSubviews[index].backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7882352941, blue: 0.8156862745, alpha: 1)
         }
         
     }

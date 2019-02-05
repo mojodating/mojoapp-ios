@@ -54,7 +54,7 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
             self.user = User(dictionary: dictionary)
 
             //fetch user name
-            self.usernameLabel.text = self.user?.name
+//            self.usernameLabel.text = self.user?.name
             guard let profileImageUrl = self.user?.imageUrl1 else { return }
             
             self.currentUserImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
@@ -124,7 +124,7 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
     
     fileprivate func setupLayout() {
         view.addSubview(currentUserImageView)
-        view.addSubview(usernameLabel)
+//        view.addSubview(usernameLabel)
         view.addSubview(accountButton)
         view.addSubview(balanceLabel)
         view.addSubview(userBalanceLabel)
@@ -137,11 +137,11 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
         currentUserImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: .init(width: 48, height: 48))
         currentUserImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        usernameLabel.anchor(top: currentUserImageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
+//        usernameLabel.anchor(top: currentUserImageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
+//
+//        usernameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        usernameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        accountButton.anchor(top: usernameLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size:  .init(width: 180, height: 32))
+        accountButton.anchor(top: currentUserImageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0), size:  .init(width: 180, height: 32))
         
         accountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
@@ -172,13 +172,13 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
         return imageView
     }()
     
-    let usernameLabel: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
-        label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 14)
-        return label
-    }()
+//    let usernameLabel: UILabel = {
+//        let label = UILabel()
+//        label.textAlignment = .center
+//        label.textColor = .darkGray
+//        label.font = UIFont.systemFont(ofSize: 14)
+//        return label
+//    }()
     
     let accountButton: UIButton = {
         let button = UIButton(type: .system)
@@ -187,7 +187,7 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
         button.setTitleColor(UIColor.black, for: .normal)
         button.layer.cornerRadius = 16
         button.layer.borderWidth = 1
-        button.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        button.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         button.addTarget(self, action: #selector(handleAccount), for: .touchUpInside)
         return button
     }()
@@ -245,7 +245,7 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
             button.setTitleColor(.black, for: .normal)
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            button.layer.borderColor = UIColor.lightGray.cgColor
+            button.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             button.layer.borderWidth = 1
             button.layer.cornerRadius = 4
             return button
@@ -257,7 +257,7 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
             button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
             button.setTitleColor(.black, for: .normal)
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            button.layer.borderColor = UIColor.lightGray.cgColor
+            button.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             button.layer.borderWidth = 1
             button.layer.cornerRadius = 4
             return button
@@ -278,10 +278,10 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
     
     fileprivate let giftsTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Your gifts"
+        label.text = "GIFTS"
         label.textAlignment = .center
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 16)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return label
     }()
     

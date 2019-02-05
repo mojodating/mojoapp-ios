@@ -108,8 +108,8 @@ class MenuBarCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            titleLabel.textColor = isSelected ? UIColor.white : UIColor.black
-            titleLabel.backgroundColor = isSelected ? UIColor.init(red: 1, green: 0.3227794368, blue: 0.7693682347, alpha: 1) : UIColor.white
+            titleLabel.textColor = isSelected ? UIColor.black : UIColor.black
+            titleLabel.backgroundColor = isSelected ? UIColor.init(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1) : UIColor.white
         }
     }
     
