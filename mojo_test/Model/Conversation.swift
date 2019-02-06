@@ -19,6 +19,8 @@ struct Conversation {
     let receiver: String
     let text: String
     
+    var hasFeedback = false
+    
     init(conv:[String : Any]) {
         self.id = conv["id"] as? String ?? ""
         self.accepted = conv["accepted"] as? Bool ?? false

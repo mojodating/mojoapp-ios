@@ -8,8 +8,11 @@
 
 import UIKit
 import Firebase
+import JGProgressHUD
 
 class UserDetailFeedbackController: UIViewController {
+    
+    var toUid = String()
     
     var user : User?
     var conversation : Conversation? {
@@ -22,7 +25,7 @@ class UserDetailFeedbackController: UIViewController {
             } else {
                 chatProfileUID = conversation?.sender
             }
-            
+            self.toUid = chatProfileUID ?? ""
             Firestore.firestore().collection("users").document(chatProfileUID!).getDocument { (snapshot, err) in
                 if let err = err {
                     print(err)
@@ -37,6 +40,8 @@ class UserDetailFeedbackController: UIViewController {
                 
                 guard let profileUrl = self.user?.imageUrl1 else { return }
                 self.userProfileImageView.loadImageUsingCacheWithUrlString(urlString: profileUrl)
+                
+                
                 
             }
         }
@@ -62,8 +67,9 @@ class UserDetailFeedbackController: UIViewController {
         titleLabel.centerYAnchor.constraint(equalTo: userProfileImageView.centerYAnchor).isActive = true
         
         view.addSubview(buttonStackView)
-        buttonStackView.anchor(top: userProfileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 64, left: 24, bottom: 0, right: 24))
+        buttonStackView.anchor(top: nil, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 24, bottom: 0, right: 24))
         buttonStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        buttonStackView.centerYAnchor.constraint(equalToSystemSpacingBelow: view.centerYAnchor, multiplier: 1).isActive = true
         
         view.addSubview(labelStackView)
         labelStackView.anchor(top: buttonStackView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 12, left: 12, bottom: 0, right: 12))
@@ -85,7 +91,7 @@ class UserDetailFeedbackController: UIViewController {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "How’s your conversation with UserName?"
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         label.numberOfLines = 0
         return label
     }()
@@ -94,8 +100,7 @@ class UserDetailFeedbackController: UIViewController {
         let button = UIButton(type: .system)
         button.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
         button.imageView?.contentMode = .scaleAspectFill
-//        button.width(40)
-//        button.height(40)
+        button.addTarget(self, action: #selector(handleFeedback), for: .touchUpInside)
         button.imageView?.adjustsImageSizeForAccessibilityContentSizeCategory = true
         return button
     }
@@ -104,7 +109,7 @@ class UserDetailFeedbackController: UIViewController {
         let label = UILabel()
         label.text = text
         label.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        label.textColor = .darkGray
+        label.textColor = #colorLiteral(red: 0.5490196078, green: 0.5490196078, blue: 0.5490196078, alpha: 1)
         label.numberOfLines = 0
         label.textAlignment = .center
 
@@ -120,6 +125,7 @@ class UserDetailFeedbackController: UIViewController {
         let mehButtonLabel  = createLabel(text: "Meh")
         let fakeIdButtonLabel  = createLabel(text: "Fake \nidentity")
         let madButtonLabel  = createLabel(text: "Mad")
+        
 
         [likeButtonLabel,loveButtonLabel, dopeButtonLabel, mehButtonLabel, fakeIdButtonLabel, madButtonLabel].forEach{(label) in
             sv.addArrangedSubview(label)
@@ -130,6 +136,7 @@ class UserDetailFeedbackController: UIViewController {
 
         return sv
     }()
+    
     
     let buttonStackView: UIStackView = {
         let sv = UIStackView()
@@ -149,6 +156,30 @@ class UserDetailFeedbackController: UIViewController {
         
         return sv
     }()
+    
+    @objc fileprivate func handleFeedback() {
+        
+        var likeCount = 0
+        
+
+        let feedback: [String: Any] = [
+            "like" : 1
+        ]
+        
+        let hud = JGProgressHUD(style: .dark)
+        Firestore.firestore().collection("feedbackRating").document(toUid).setData(feedback) {
+            (err) in
+            if let err = err {
+                print("Failed to save user settings", err)
+                return
+            }
+            print("submitted feedback")
+            hud.textLabel.text = "feedback submitted"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2)
+        }
+    }
+    
     
     let reportButton: UIButton = {
         let button = UIButton(type: .system)

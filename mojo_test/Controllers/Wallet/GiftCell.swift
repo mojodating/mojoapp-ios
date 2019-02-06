@@ -18,12 +18,12 @@ class GiftCell: UICollectionViewCell {
     
     fileprivate func setupLayout() {
         
-        addSubview(priceLabel)
-        priceLabel.anchor(top: nil, leading: nil, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 8, right: 0))
-        priceLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
+        addSubview(nameLabel)
+        nameLabel.anchor(top: nil, leading: nil, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 8, right: 0))
+        nameLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
         
         addSubview(giftImageView)
-        giftImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: priceLabel.topAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 8, right: 0))
+        giftImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nameLabel.topAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 8, right: 0))
         
     }
     
@@ -34,10 +34,10 @@ class GiftCell: UICollectionViewCell {
         return iv
     }()
     
-    let priceLabel : UILabel = {
+    let nameLabel : UILabel = {
         let label = UILabel()
-        label.text = "10 Jo"
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.text = "Drink"
+        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return label
     }()
     

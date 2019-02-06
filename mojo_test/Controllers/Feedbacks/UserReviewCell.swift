@@ -7,20 +7,35 @@
 //
 
 import UIKit
+import Firebase
 
 class UserReviewCell: UICollectionViewCell {
     
     
-    
+    fileprivate func fetchFeedbacksFromFirestore() {
+        
+    }
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
+        setupLayout()
+        
+        fetchFeedbacksFromFirestore()
+        
+    }
+    
+    fileprivate func setupLayout() {
         addSubview(titleLabel)
         titleLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 8, bottom: 0, right: 0))
         
-        addSubview(buttonStackView)
-        buttonStackView.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 36, left: 8, bottom: 0, right: 8))
+        addSubview(ImageStackView)
+        ImageStackView.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 24, left: 16, bottom: 0, right: 16))
+        
+        addSubview(labelStackView)
+        labelStackView.anchor(top: ImageStackView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
+        labelStackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         addSubview(LineView)
         LineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 2, bottom: 16, right: 2), size: .init(width: frame.width, height: 1))
@@ -34,36 +49,62 @@ class UserReviewCell: UICollectionViewCell {
         return label
     }()
     
-    static func createButton(image: UIImage, text: String) -> UIButton {
-        let button = UIButton(type: .system)
-        button.setImage(image.withRenderingMode(.alwaysOriginal),  for:.normal)
-        button.setTitle(text, for: .normal)
-        button.titleLabel?.textAlignment = .left
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 13, weight: .regular)
-        button.setTitleColor(.black, for: .normal)
-        button.imageView?.contentMode = .scaleAspectFill
-        button.imageView?.adjustsImageSizeForAccessibilityContentSizeCategory = true
-        button.imageView?.width(32)
-        button.imageView?.height(32)
-        return button
+    static func createImageView(image: UIImage) -> UIImageView {
+        let iv = UIImageView(image: image)
+        iv.contentMode = .scaleAspectFill
+        iv.clipsToBounds = true
+//        iv.imageView?.width(32)
+//        iv.imageView?.height(32)
+        return iv
     }
     
     
-    let buttonStackView: UIStackView = {
+    let ImageStackView: UIStackView = {
         let sv = UIStackView()
         
-        let likeButton = createButton(image: #imageLiteral(resourceName: "image 3"), text: " 10")
-        let loveButton = createButton(image: #imageLiteral(resourceName: "image2"), text: " 10")
-        let dopeButton = createButton(image: #imageLiteral(resourceName: "image 5"), text: " 10")
-        let mehButton = createButton(image: #imageLiteral(resourceName: "image 4"), text: " 10")
-        let fakeIdButton = createButton(image: #imageLiteral(resourceName: "image 6"), text: " 10")
-        let madButton = createButton(image: #imageLiteral(resourceName: "image"), text: " 10")
+        let likeImage = createImageView(image: #imageLiteral(resourceName: "image 3"))
+        let loveImage = createImageView(image: #imageLiteral(resourceName: "image2"))
+        let dopeImage = createImageView(image: #imageLiteral(resourceName: "image 5"))
+        let mehImage = createImageView(image: #imageLiteral(resourceName: "image 4"))
+        let fakeIdImage = createImageView(image: #imageLiteral(resourceName: "image 6"))
+        let madImage = createImageView(image: #imageLiteral(resourceName: "image"))
         
-        [likeButton,loveButton, dopeButton, mehButton, fakeIdButton, madButton].forEach{(button) in
-            sv.addArrangedSubview(button)
+        [likeImage,loveImage, dopeImage, mehImage, fakeIdImage, madImage].forEach{(image) in
+            sv.addArrangedSubview(image)
         }
         
         sv.distribution = .equalSpacing
+        return sv
+    }()
+    
+    static func createLabel(text: String) -> UILabel {
+        let label = UILabel()
+        label.text = text
+        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        
+        return label
+    }
+    
+    let labelStackView: UIStackView = {
+        let sv = UIStackView()
+        
+        let likeButtonLabel  = createLabel(text: "0")
+        let loveButtonLabel  = createLabel(text: "0")
+        let dopeButtonLabel  = createLabel(text: "0")
+        let mehButtonLabel  = createLabel(text: "0")
+        let fakeIdButtonLabel  = createLabel(text: "0")
+        let madButtonLabel  = createLabel(text: "0")
+        
+        
+        [likeButtonLabel,loveButtonLabel, dopeButtonLabel, mehButtonLabel, fakeIdButtonLabel, madButtonLabel].forEach{(label) in
+            sv.addArrangedSubview(label)
+        }
+        
+        sv.distribution = .equalSpacing
+        sv.alignment = .firstBaseline
+        
         return sv
     }()
     

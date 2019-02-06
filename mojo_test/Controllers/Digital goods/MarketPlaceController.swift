@@ -18,9 +18,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-//                    print("\(document.documentID) => \(document.data())")
                     let drinkType = document.data()
-//                    drinkType.forEach({ (key, value) in
                     
                         let digitalGood = DigitalGood(drinkType: drinkType)
                         self.digitalGoods.append(digitalGood)

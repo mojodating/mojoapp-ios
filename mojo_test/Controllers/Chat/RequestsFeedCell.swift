@@ -45,31 +45,6 @@ class RequestsFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
                 }
             }
         }
-//            .addSnapshotListener { documentSnapshot, error in
-//            guard let document = documentSnapshot else {
-//                print("Error fetching document: \(error!)")
-//                return
-//            }
-//            guard let data = document.data() else {
-//                print("Document data was empty.")
-//                return
-//            }
-//
-//            guard let dictionaries = data["conversations"] as? [String: Any] else { return }
-//
-//            dictionaries.forEach({ (key, value) in
-//
-//                guard let conv = value as? [String: Any] else {return}
-//
-//                let conversation = Conversation(conv: conv)
-//
-//                if (conversation.accepted == false && conversation.sender != uid) {
-//                    self.chatRequests.append(conversation)
-//                }
-//
-//                self.collectionView.reloadData()
-//            })
-//        }
     }
     
     let collectionView: UICollectionView = {
@@ -105,8 +80,7 @@ class RequestsFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RequestCell
     
-            cell.conversation = chatRequests[indexPath.item]
-    
+            cell.conversation = chatRequests[indexPath.item]    
     
             return cell
         }

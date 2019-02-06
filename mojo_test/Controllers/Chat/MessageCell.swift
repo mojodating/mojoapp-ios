@@ -53,6 +53,7 @@ class MessageCell: UICollectionViewCell {
     var bubbleViewRightAnchor: NSLayoutConstraint?
     var bubbleViewLeftAnchor: NSLayoutConstraint?
     var bubbleHeightAnchor: NSLayoutConstraint?
+
     
     let spaceView: UIView = {
         let view = UIView()

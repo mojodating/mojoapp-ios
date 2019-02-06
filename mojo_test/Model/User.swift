@@ -70,6 +70,10 @@ struct User: ProducesCardViewModel {
         let schoolString = school != nil ? school! : ""
         attributedText.append(NSMutableAttributedString(string: "\n\(schoolString)", attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .medium)]))
         
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 4
+        attributedText.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedText.length))
+        
         var imageUrlsAll = [String]()
 
         if let url = imageUrl1 {imageUrlsAll.append(url)}

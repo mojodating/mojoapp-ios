@@ -48,11 +48,11 @@ class TopUpController: UIViewController {
     let topupButton: UIButton = {
         let button = UIButton(type: .system)
         button.titleLabel?.lineBreakMode=NSLineBreakMode.byWordWrapping
-        let attributedTitle = NSMutableAttributedString(string: "5 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)])
+        let attributedTitle = NSMutableAttributedString(string: "5 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)])
         attributedTitle.append(NSMutableAttributedString(string: "\n$5", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.6235294118, green: 0.7960784314, blue: 0.7411764706, alpha: 1)]))
         button.setAttributedTitle(attributedTitle, for: .normal)
         button.titleLabel?.textAlignment = .center
-        button.layer.borderColor = #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)
+        button.layer.borderColor = #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
         button.layer.borderWidth = 1
         button.layer.cornerRadius = 2
         
@@ -65,11 +65,11 @@ class TopUpController: UIViewController {
         let topupButton1: UIButton = {
             let button = UIButton(type: .system)
             button.titleLabel?.lineBreakMode=NSLineBreakMode.byWordWrapping
-            let attributedTitle = NSMutableAttributedString(string: "5 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)])
+            let attributedTitle = NSMutableAttributedString(string: "5 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)])
             attributedTitle.append(NSMutableAttributedString(string: "\n$5", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.6235294118, green: 0.7960784314, blue: 0.7411764706, alpha: 1)]))
             button.setAttributedTitle(attributedTitle, for: .normal)
             button.titleLabel?.textAlignment = .center
-            button.layer.borderColor = #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)
+            button.layer.borderColor = #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
             button.layer.borderWidth = 1
             button.layer.cornerRadius = 2
             return button
@@ -78,11 +78,11 @@ class TopUpController: UIViewController {
         let topupButton2: UIButton = {
             let button = UIButton(type: .system)
             button.titleLabel?.lineBreakMode=NSLineBreakMode.byWordWrapping
-            let attributedTitle = NSMutableAttributedString(string: "5 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)])
+            let attributedTitle = NSMutableAttributedString(string: "5 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)])
             attributedTitle.append(NSMutableAttributedString(string: "\n$5", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.6235294118, green: 0.7960784314, blue: 0.7411764706, alpha: 1)]))
             button.setAttributedTitle(attributedTitle, for: .normal)
             button.titleLabel?.textAlignment = .center
-            button.layer.borderColor = #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)
+            button.layer.borderColor = #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
             button.layer.borderWidth = 1
             button.layer.cornerRadius = 2
             return button
@@ -91,11 +91,11 @@ class TopUpController: UIViewController {
         let topupButton3: UIButton = {
             let button = UIButton(type: .system)
             button.titleLabel?.lineBreakMode=NSLineBreakMode.byWordWrapping
-            let attributedTitle = NSMutableAttributedString(string: "5 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)])
+            let attributedTitle = NSMutableAttributedString(string: "5 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)])
             attributedTitle.append(NSMutableAttributedString(string: "\n$5", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular), NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.6235294118, green: 0.7960784314, blue: 0.7411764706, alpha: 1)]))
             button.setAttributedTitle(attributedTitle, for: .normal)
             button.titleLabel?.textAlignment = .center
-            button.layer.borderColor = #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)
+            button.layer.borderColor = #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
             button.layer.borderWidth = 1
             button.layer.cornerRadius = 2
             return button
@@ -160,9 +160,9 @@ class TopUpController: UIViewController {
     let payButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Confirm to pay", for: .normal)
-        button.backgroundColor = #colorLiteral(red: 1, green: 0.7380045896, blue: 0.1112664202, alpha: 1)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return button
     }()
 
@@ -210,7 +210,7 @@ class TopUpController: UIViewController {
         view.addSubview(topupLabel)
         topupLabel.anchor(top: dollarBalanceLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 56, left: 24, bottom: 0, right: 0))
         view.addSubview(buttonStackView)
-        buttonStackView.anchor(top: topupLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width, height: 68))
+        buttonStackView.anchor(top: topupLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width, height: 56))
         
         view.addSubview(amountlabel)
         amountlabel.anchor(top: buttonStackView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 24, left: 24, bottom: 0, right: 0))

@@ -84,7 +84,7 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
         if indexPath.section == 1 {
             return CGSize(width: view.frame.width, height: 60)
         }
-        return CGSize(width: view.frame.width, height: 160)
+        return CGSize(width: view.frame.width, height: 176)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

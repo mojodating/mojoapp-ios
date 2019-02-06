@@ -42,27 +42,30 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate, editPro
             
             //setup our custom view controllers
             
-            let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: HomeController())
+            let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "image-5"), selectedImage: #imageLiteral(resourceName: "home"), rootViewController: HomeController())
             
-            let chatNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: ChatController())
+            
+            let chatNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "image-7"), selectedImage: #imageLiteral(resourceName: "imag-1"), rootViewController: ChatController())
             
 //            let controller = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
 //            let chatNavController = UINavigationController(rootViewController: controller)
             
            
-            let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: UserProfileController())
+            let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "image-1"), selectedImage: #imageLiteral(resourceName: "image-3"), rootViewController: UserProfileController())
             
-            let walletNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "first"), selectedImage: #imageLiteral(resourceName: "second"), rootViewController: WalletController())
+            let walletNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "image-4"), selectedImage: #imageLiteral(resourceName: "image-6"), rootViewController: WalletController())
             
             tabBar.tintColor = .black
             
             viewControllers = [homeNavController, chatNavController, walletNavController, userProfileNavController]
+            
             
             //modity tab bar item insets
             guard let items = tabBar.items else { return }
             
             for item in items {
                 item.imageInsets = UIEdgeInsets(top: 4, left: 0, bottom: -4, right: 0)
+                
             }
             
         }
@@ -77,7 +80,7 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate, editPro
     
     fileprivate func transparentTabBarColor() {
         
-        let transperentBlackColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0.1)
+        let transperentBlackColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.15)
         
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)

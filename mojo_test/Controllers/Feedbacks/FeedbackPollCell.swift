@@ -55,9 +55,6 @@ class FeedbackPollCell: UICollectionViewCell {
         titleLabel.anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: profileImageView.leadingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 16))
         titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
-//        addSubview(dateLabel)
-//        dateLabel.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 16, bottom: 0, right: 0))
-        
         addSubview(lineView)
         lineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 8), size: .init(width: frame.width, height: 1))
     }

@@ -87,7 +87,7 @@ class CardView: UIView {
     
     let chatRequestButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "chat-btn").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "chat").withRenderingMode(.alwaysOriginal), for: .normal)
         button.clipsToBounds = true
         button.isEnabled = true
         button.addTarget(self, action: #selector(handleChatRequest), for: .touchUpInside)
@@ -114,7 +114,7 @@ class CardView: UIView {
         setupGradientLayer()
         
         addSubview(informationLabel)
-        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 16, right: 0))
+        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 48, right: 0))
         informationLabel.textColor = .white
         informationLabel.numberOfLines = 0
         

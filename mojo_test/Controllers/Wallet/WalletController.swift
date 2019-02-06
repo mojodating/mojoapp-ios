@@ -34,9 +34,8 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
         
         setupCollectionViewLayout()
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(GiftCell.self, forCellWithReuseIdentifier: cellId)
+        fetchGifts()
+        
     }
     
     var user: User?
@@ -74,30 +73,56 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
             }
         }
     }
-    
-    
-    
+
     @objc fileprivate func handleTransaction() {
         
     }
+    
+    var gifts = [Gift]()
+    fileprivate func fetchGifts() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+    let ref = Firestore.firestore().collection("drinks").whereField("owner", isEqualTo: uid)
+    ref.getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let giftType = document.data()
+                        let gift = Gift(giftType: giftType)
+                        self.gifts.append(gift)
+                        
+                        self.collectionView.reloadData()
+                    }
+                }
+            }
+        }
+    
     
     fileprivate func setupCollectionViewLayout() {
         view.addSubview(collectionView)
         collectionView.anchor(top: giftsTitleLabel.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
         let lineView = UIView()
-        lineView.backgroundColor = .lightGray
+        lineView.backgroundColor = #colorLiteral(red: 0.9239445816, green: 0.9239445816, blue: 0.9239445816, alpha: 1)
         view.addSubview(lineView)
         lineView.anchor(top: collectionView.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width, height: 1))
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(GiftCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return gifts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! GiftCell
         
-        cell.backgroundColor = .white
+        let gift = gifts[indexPath.item]
+        let imageUrl = gift.imageUrl
+        cell.giftImageView.loadImageUsingCacheWithUrlString(urlString: imageUrl)
+        cell.nameLabel.text = gift.name
         
         return cell
     }
@@ -119,7 +144,6 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
     fileprivate func setupNavigationBar() {
         self.navigationItem.title = "Wallet"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Transactions", style: .plain, target: self, action: #selector(handleTransaction))
-//        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Account", style: .plain, target: self, action: #selector(handleAccount))
     }
     
     fileprivate func setupLayout() {
@@ -183,7 +207,7 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
     let accountButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Wallet account", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         button.setTitleColor(UIColor.black, for: .normal)
         button.layer.cornerRadius = 16
         button.layer.borderWidth = 1
@@ -231,9 +255,9 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
        let topUpButton: UIButton = {
             let button = UIButton(type: .system)
             button.setTitle("Top up", for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+            button.setTitleColor(.black, for: .normal)
+            button.backgroundColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
             button.layer.cornerRadius = 4
         button.addTarget(self, action: #selector(handleTopup), for: .touchUpInside)
             return button
@@ -242,7 +266,7 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
        let sendButton: UIButton = {
             let button = UIButton(type: .system)
             button.setTitle("Send", for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
             button.setTitleColor(.black, for: .normal)
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             button.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -254,7 +278,7 @@ class WalletController: UIViewController, UICollectionViewDelegate, UICollection
        let cashOutButton: UIButton = {
             let button = UIButton(type: .system)
             button.setTitle("Cash out", for: .normal)
-            button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+            button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .medium)
             button.setTitleColor(.black, for: .normal)
             button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             button.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)

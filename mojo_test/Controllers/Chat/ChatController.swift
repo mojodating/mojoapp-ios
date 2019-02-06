@@ -36,6 +36,20 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         setupLayout()
         
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "pull to refresh")
+        refreshControl.addTarget(self, action: #selector(handleRefreshPage), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
+    }
+    
+    @objc func handleRefreshPage(refreshControl: UIRefreshControl) {
+        
+        // refresh data
+        guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+        
+        mainTabBarController.setupViewControllers()
+        
+        refreshControl.endRefreshing()
     }
     
     @objc fileprivate func handleFeedbacks() {

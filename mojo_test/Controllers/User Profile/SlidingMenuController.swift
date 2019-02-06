@@ -85,7 +85,8 @@ class SlidingMenuController: UITableViewController {
     
     fileprivate func openEditProfile() {
         let editProfileController = EditProfileController()
-        navigationController?.pushViewController(editProfileController, animated: true)
+        let navController = UINavigationController(rootViewController: editProfileController)
+        present(navController, animated: true)
     }
     
     fileprivate func openFeedbacksController() {

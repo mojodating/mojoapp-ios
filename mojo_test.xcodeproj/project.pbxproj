@@ -28,6 +28,8 @@
 		8870C55322062C5A00B03F98 /* SlidingMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */; };
 		8870C5552207895500B03F98 /* EditProfileSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */; };
 		8870C55822088CD500B03F98 /* GenderSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55722088CD500B03F98 /* GenderSelectionController.swift */; };
+		8870C55A220A2AB100B03F98 /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C559220A2AB000B03F98 /* ViewProfileController.swift */; };
+		8870C55C220A58F600B03F98 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55B220A58F600B03F98 /* Gift.swift */; };
 		8891671721B0F8E4000267F7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* HomeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
@@ -147,6 +149,8 @@
 		8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuCell.swift; sourceTree = "<group>"; };
 		8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSelectionCell.swift; sourceTree = "<group>"; };
 		8870C55722088CD500B03F98 /* GenderSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionController.swift; sourceTree = "<group>"; };
+		8870C559220A2AB000B03F98 /* ViewProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileController.swift; sourceTree = "<group>"; };
+		8870C55B220A58F600B03F98 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
@@ -328,6 +332,7 @@
 				889E0FF321E409CB00A74140 /* DigitalGood.swift */,
 				88A3D6D221EE47ED008286BC /* Conversation.swift */,
 				8870C52A21F7244400B03F98 /* Message.swift */,
+				8870C55B220A58F600B03F98 /* Gift.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				88A3D6D921F08C28008286BC /* MenuBar.swift */,
 				88A3D6CA21ECCC51008286BC /* ChatCell.swift */,
 				88A3D6CE21EE1634008286BC /* PrivateChatController.swift */,
+				8870C559220A2AB000B03F98 /* ViewProfileController.swift */,
 				88A3D6DB21F0CB6B008286BC /* RequestsFeedCell.swift */,
 				88A3D6DD21F0D267008286BC /* SentFeedCell.swift */,
 				8870C52D21F7252900B03F98 /* MessageCell.swift */,
@@ -788,6 +794,7 @@
 				8870C54D220600C900B03F98 /* BaseSlidingController.swift in Sources */,
 				8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */,
 				88A3D6E721F5D40D008286BC /* SignupMainController.swift in Sources */,
+				8870C55C220A58F600B03F98 /* Gift.swift in Sources */,
 				8870C55322062C5A00B03F98 /* SlidingMenuCell.swift in Sources */,
 				8870C52E21F7252900B03F98 /* MessageCell.swift in Sources */,
 				88A3D6E521F5C979008286BC /* FeedbacksController.swift in Sources */,
@@ -828,6 +835,7 @@
 				889E0FFD21E68E8900A74140 /* SendChatRequestController.swift in Sources */,
 				8870C53021F7454800B03F98 /* SignupEmailController.swift in Sources */,
 				88A3D6CB21ECCC51008286BC /* ChatCell.swift in Sources */,
+				8870C55A220A2AB100B03F98 /* ViewProfileController.swift in Sources */,
 				88AC695E21C823A2006E0559 /* UserCell.swift in Sources */,
 				889E0FF221E3E8D400A74140 /* MenuCell.swift in Sources */,
 				88A3D6CF21EE1634008286BC /* PrivateChatController.swift in Sources */,

@@ -103,7 +103,7 @@ import SDWebImage
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupNavigationItem()
 //        tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
         tableView.backgroundColor = .white
@@ -387,9 +387,13 @@ import SDWebImage
 
     fileprivate func setupNavigationItem() {
         navigationItem.title = "Edit Profile"
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleCancel))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(handleSave))
     }
+    @objc fileprivate func handleCancel() {
+        self.dismiss(animated: true)
+    }
+    
     
     @objc fileprivate func handleSave() {
         print("saving our settings")
@@ -436,14 +440,14 @@ import SDWebImage
     }
     
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.tabBar.isHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        tabBarController?.tabBar.isHidden = false
-    }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        tabBarController?.tabBar.isHidden = true
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        tabBarController?.tabBar.isHidden = false
+//    }
 
 }

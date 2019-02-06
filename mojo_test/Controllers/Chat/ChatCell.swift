@@ -48,34 +48,6 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
                 }
             }
         }
-
-            
-//            ref.addSnapshotListener { documentSnapshot, error in
-//            guard let document = documentSnapshot else {
-//                print("Error fetching document: \(error!)")
-//                return
-//            }
-//            guard let data = document.data() else {
-//                print("Document data was empty.")
-//                return
-//            }
-//
-//            guard let dictionaries = data["conversations"] as? [String: Any] else { return }
-//
-//            dictionaries.forEach({ (key, value) in
-//                //                    print("key\(key), Value\(value)")
-//
-//                guard let conv = value as? [String: Any] else {return}
-//
-//                let conversation = Conversation(conv: conv)
-//
-//                if (conversation.accepted) {
-//                    self.chats.append(conversation)
-//                }
-//
-//                self.collectionView.reloadData()
-//            })
-//        }
     }
 
 

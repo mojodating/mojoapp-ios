@@ -41,17 +41,18 @@ class InviteNewUserController: UIViewController {
         
         view.addSubview(inviteFriendsButton)
         inviteFriendsButton.anchor(top: inviteFriendsLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 36, left: 36, bottom: 0, right: 36), size: .init(width: view.frame.width, height: 56))
-        
-        
-        
     }
     
     let inviteFriendsLabel: UILabel = {
         let label = UILabel()
-        label.text = "Earn 10 mojo tokens for each friend you invited on the platform. The more friends that join, the more token you all will get."
-        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        let attributedString = NSMutableAttributedString(string: "Earn 10 mojo tokens for each friend you invited on the platform. The more friends that join, the more token you all will get.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18, weight: .medium)])
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 4
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        label.attributedText = attributedString
         label.textColor = .black
         label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
     
@@ -60,8 +61,8 @@ class InviteNewUserController: UIViewController {
         button.setTitle("Invite friends", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        button.backgroundColor =  #colorLiteral(red: 0.2274509804, green: 0.8235294118, blue: 0.6235294118, alpha: 1)
-        button.layer.cornerRadius = 8
+        button.backgroundColor =  #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
+        button.layer.cornerRadius = 24
         return button
     }()
     

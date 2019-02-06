@@ -38,7 +38,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 self.user = User(dictionary: dictionary)
                 
                 self.navigationItem.title = self.user?.name
-                
             }
         }
     }
@@ -49,6 +48,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         collectionView.backgroundColor = #colorLiteral(red: 0.9218030841, green: 0.9218030841, blue: 0.9218030841, alpha: 1)
         
         navigationItem.title = "Username"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "View profile", style: .plain, target: self, action: #selector(handleViewProfile))
         
         setupLayout()
         
@@ -61,9 +61,13 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
         
         fetchMessages()
-        
-        
-
+    }
+    
+    
+    @objc fileprivate func handleViewProfile() {
+        let viewProfileController = ViewProfileController()
+        viewProfileController.user = self.user
+        present(viewProfileController, animated: true)
     }
     
     var messages = [Message]()
@@ -187,12 +191,12 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         if message.sender == Auth.auth().currentUser?.uid {
             // purple bubble
-            cell.bubbleView.backgroundColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
+            cell.bubbleView.backgroundColor = #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
             cell.chatLogLabel.textColor = .white
             cell.profileImageView.isHidden = true
             cell.bubbleViewRightAnchor?.isActive = true
             cell.bubbleViewLeftAnchor?.isActive = false
-            
+                        
         } else {
             //grey bubble
             
@@ -202,6 +206,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             cell.bubbleViewLeftAnchor?.isActive = true
             cell.profileImageView.isHidden = false
         }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -233,6 +238,9 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         tabBarController?.tabBar.isHidden = false
+        
+        // Refresh the chat page
+        collectionView.reloadData()
     }
     
     lazy var containerView: ChatInputAccessaryView = {
