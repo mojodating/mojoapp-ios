@@ -62,7 +62,7 @@ class InviteNewUserController: UIViewController {
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         button.backgroundColor =  #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
-        button.layer.cornerRadius = 24
+        button.layer.cornerRadius = 4
         return button
     }()
     

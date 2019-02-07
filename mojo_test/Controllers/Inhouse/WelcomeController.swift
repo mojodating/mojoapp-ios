@@ -17,31 +17,17 @@ class WelcomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         
         fetchCurrentUser()
         
         setupLayout()
-//        setupBlurView()
+
         setupAnimations()
+        
+        setupBottomControl()
     }
     
-//    let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
-//
-//    fileprivate func setupBlurView() {
-//
-////        visualEffectView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapDismiss)))
-//        view.addSubview(visualEffectView)
-//        view.sendSubviewToBack(visualEffectView)
-//        visualEffectView.fillSuperview()
-//        visualEffectView.alpha = 0
-//
-//        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-//            self.visualEffectView.alpha = 1
-//        }) { (_) in
-//
-//        }
-//    }
     
     fileprivate func fetchCurrentUser() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -59,31 +45,40 @@ class WelcomeController: UIViewController {
             self.currentUserImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
             
             guard let userRate = self.user?.rate else { return }
-            self.rateSummaryLabel.text = "Your profile got a rating of \(userRate)"
+            self.rateSummaryLabel.text = "Your profile got a rating of \(userRate), beat 90% of users."
         }
+    }
+    
+    fileprivate func setupBottomControl() {
+        view.addSubview(priviousButton)
+        priviousButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 48, bottom: 36, right: 0), size: .init(width: 40, height: 40))
+        
+        view.addSubview(pageControl)
+        pageControl.anchor(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 36, right: 0))
+        pageControl.centerXAnchor.constraint(equalToSystemSpacingAfter: view.centerXAnchor, multiplier: 1).isActive = true
+        
+        view.addSubview(NextButton)
+        NextButton.anchor(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 36, right: 48), size: .init(width: 40, height: 40))
     }
     
     fileprivate func setupLayout() {
         
-        view.addSubview(invitationImageView)
-        view.addSubview(descriptionLabel)
+        view.addSubview(mainTitleLabel)
         view.addSubview(rateSummaryLabel)
         view.addSubview(currentUserImageView)
-        view.addSubview(enjouHouseButton)
+        view.addSubview(mainButton)
         
-        invitationImageView.anchor(top: nil, leading: nil, bottom: descriptionLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 16, right: 0), size: .init(width: 316, height: 137))
-        invitationImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        
-        descriptionLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: currentUserImageView.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 48, bottom: 32, right: 48), size: .init(width: 0, height: 50))
-        
-        rateSummaryLabel.anchor(top: currentUserImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 60))
+        mainTitleLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: currentUserImageView.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 48, right: 0))
+        mainTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
         currentUserImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .zero, size: .init(width: 140, height: 140))
         currentUserImageView.layer.cornerRadius = 140 / 2
         currentUserImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         currentUserImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        enjouHouseButton.anchor(top: rateSummaryLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 50))
+        rateSummaryLabel.anchor(top: currentUserImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 60))
+        
+        mainButton.anchor(top: rateSummaryLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 50))
     }
     
     fileprivate func setupAnimations() {
@@ -93,7 +88,7 @@ class WelcomeController: UIViewController {
         currentUserImageView.transform = CGAffineTransform(rotationAngle: -angel).concatenating(CGAffineTransform(translationX: 200, y: 0))
         
         rateSummaryLabel.transform = CGAffineTransform(translationX: -500, y: 0)
-        enjouHouseButton.transform = CGAffineTransform(translationX: 500, y: 0)
+        mainButton.transform = CGAffineTransform(translationX: 500, y: 0)
         
         UIView.animateKeyframes(withDuration: 1.3, delay: 0, options: .calculationModeCubic, animations: {
             
@@ -112,25 +107,17 @@ class WelcomeController: UIViewController {
         }
         UIView.animate(withDuration: 0.75, delay: 0.6 * 1.3, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
             self.rateSummaryLabel.transform = .identity
-            self.enjouHouseButton.transform = .identity
+            self.mainButton.transform = .identity
         })
     }
     
     
-    fileprivate let invitationImageView: UIImageView = {
-        let iv = UIImageView(image: #imageLiteral(resourceName: "invitation"))
-        iv.contentMode = .scaleAspectFill
-        return iv
-        
-    }()
-    
-    fileprivate let descriptionLabel: UILabel = {
+    let mainTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Now you can chat with people in the house, receive and send cryptocurrencies when making friends!"
-        label.textAlignment = .center
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.text = "Congrats! You are invited to the exclusive Mojo house!🎉"
+        label.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
         label.numberOfLines = 0
+        label.textAlignment = .center
         return label
     }()
     
@@ -138,8 +125,7 @@ class WelcomeController: UIViewController {
         let label = UILabel()
         label.text = "Your profile got a rating of"
         label.textAlignment = .center
-        label.textColor = .white
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.numberOfLines = 0
         return label
     }()
@@ -148,19 +134,41 @@ class WelcomeController: UIViewController {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.layer.borderWidth = 4
-        imageView.layer.borderColor = #colorLiteral(red: 0.9960784314, green: 0.337254902, blue: 0.7529411765, alpha: 1)
+        imageView.backgroundColor = #colorLiteral(red: 0.9374479128, green: 0.9374479128, blue: 0.9374479128, alpha: 1)
         return imageView
     }()
     
-    fileprivate let enjouHouseButton: UIButton = {
+    fileprivate let mainButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Enjoy the House", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.337254902, blue: 0.7529411765, alpha: 1)
-        button.layer.cornerRadius = 8
+        button.setTitle("View your privilege", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
+        button.layer.cornerRadius = 4
         button.addTarget(self, action: #selector(handleDismiss), for: .touchUpInside)
+        return button
+    }()
+    
+    fileprivate let priviousButton : UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "right arrow").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.clipsToBounds = true
+        return button
+    }()
+    
+    fileprivate let pageControl: UIPageControl = {
+        let pc = UIPageControl()
+        pc.currentPage = 0
+        pc.numberOfPages = 4
+        pc.currentPageIndicatorTintColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
+        pc.pageIndicatorTintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        return pc
+    }()
+    
+    fileprivate let NextButton : UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "left image").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.clipsToBounds = true
         return button
     }()
     

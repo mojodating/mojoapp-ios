@@ -119,7 +119,7 @@ class CardView: UIView {
         informationLabel.numberOfLines = 0
         
         addSubview(chatRequestButton)
-        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 240, right: 8), size: .init(width: 40, height: 40))
+        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 180, right: 8), size: .init(width: 40, height: 40))
         
         addSubview(userProfileView)
         userProfileView.anchor(top: nil, leading: nil, bottom: chatRequestButton.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 20, right: 0), size: .init(width: 44, height: 44))

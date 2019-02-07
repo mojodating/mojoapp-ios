@@ -12,7 +12,7 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     
     let cellId = "cellId"
-    let titles = ["Chat Requests()", "Chat Sent"]
+    let titles = ["Chat Requests", "Chat Sent"]
     
     var chatRequestCell: ChatRequestCell?
     
@@ -65,26 +65,12 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
         
         collectionView.register(MenuBarCell.self, forCellWithReuseIdentifier: cellId)
         
-        setupHighlightBar()
-        
         let selectedInexPath = NSIndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedInexPath as IndexPath, animated: false, scrollPosition: .right)
         
     }
     
     var lightLightBarLeftAnchor: NSLayoutConstraint?
-    
-    func setupHighlightBar() {
-//        let hightlightBar = UIView()
-//        hightlightBar.backgroundColor = #colorLiteral(red: 1, green: 0.3106257743, blue: 0.6609232404, alpha: 1)
-//        addSubview(hightlightBar)
-//        hightlightBar.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 140, height: 40))
-//        sendSubviewToBack(hightlightBar)
-//
-//        lightLightBarLeftAnchor = hightlightBar.leadingAnchor.constraint(equalTo: self.leadingAnchor)
-//        lightLightBarLeftAnchor?.isActive = true
-
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -99,9 +85,7 @@ class MenuBarCell: UICollectionViewCell {
         label.text = "Chat Requests"
         label.layer.masksToBounds = true
         label.layer.cornerRadius = 20
-//        label.textColor = .darkGray
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-//        label.backgroundColor = #colorLiteral(red: 1, green: 0.3227794368, blue: 0.7693682347, alpha: 1)
         label.textAlignment = .center
         return label
     }()

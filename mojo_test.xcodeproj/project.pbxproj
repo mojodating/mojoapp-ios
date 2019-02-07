@@ -30,6 +30,7 @@
 		8870C55822088CD500B03F98 /* GenderSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55722088CD500B03F98 /* GenderSelectionController.swift */; };
 		8870C55A220A2AB100B03F98 /* ViewProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C559220A2AB000B03F98 /* ViewProfileController.swift */; };
 		8870C55C220A58F600B03F98 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55B220A58F600B03F98 /* Gift.swift */; };
+		8870C55E220BB44600B03F98 /* HouseOnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55D220BB44600B03F98 /* HouseOnboardingController.swift */; };
 		8891671721B0F8E4000267F7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* HomeController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461121B298F700DBF6F6 /* HomeBottomControlStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */; };
@@ -151,6 +152,7 @@
 		8870C55722088CD500B03F98 /* GenderSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionController.swift; sourceTree = "<group>"; };
 		8870C559220A2AB000B03F98 /* ViewProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewProfileController.swift; sourceTree = "<group>"; };
 		8870C55B220A58F600B03F98 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
+		8870C55D220BB44600B03F98 /* HouseOnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseOnboardingController.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461021B298F700DBF6F6 /* HomeBottomControlStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBottomControlStackView.swift; sourceTree = "<group>"; };
@@ -398,6 +400,7 @@
 			isa = PBXGroup;
 			children = (
 				889E0FED21E165F700A74140 /* WelcomeController.swift */,
+				8870C55D220BB44600B03F98 /* HouseOnboardingController.swift */,
 			);
 			path = Inhouse;
 			sourceTree = "<group>";
@@ -805,6 +808,7 @@
 				8897462F21B8C3B500DBF6F6 /* EditProfileController.swift in Sources */,
 				8897463321B9F55700DBF6F6 /* AgeRangeCell.swift in Sources */,
 				8897463F21C194D600DBF6F6 /* MainTabBarController.swift in Sources */,
+				8870C55E220BB44600B03F98 /* HouseOnboardingController.swift in Sources */,
 				8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */,
 				8870C54F2206168A00B03F98 /* CustomMenuHeaderView.swift in Sources */,
 				8870C5552207895500B03F98 /* EditProfileSelectionCell.swift in Sources */,
