@@ -112,6 +112,15 @@ class LoginController: UIViewController {
         view.backgroundColor = .white
         setupLayout()
         setupBindables()
+        setupTapGesture()
+    }
+    
+    fileprivate func setupTapGesture() {
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapDismiss)))
+    }
+    
+    @objc fileprivate func handleTapDismiss() {
+        self.view.endEditing(true) //dismiss keyboard
     }
     
     
