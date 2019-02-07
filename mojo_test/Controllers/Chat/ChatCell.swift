@@ -21,7 +21,7 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     
     fileprivate func fetchChatListsFromServer() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-       let ref = Firestore.firestore().collection("users").whereField("uid", isEqualTo: uid).order(by: "date", descending: false)
+       let ref = Firestore.firestore().collection("users").whereField("uid", isEqualTo: uid)
         
         ref.addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
@@ -42,6 +42,7 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
                         
                         self.chats.append(conversation)
                     }
+                        
                     self.collectionView.reloadData()
                     })
                     self.titleLabel.text = "Chats(\(self.chats.count))"
@@ -161,6 +162,8 @@ class ChatCell:UICollectionViewCell {
         }
     }
     
+    var lastMessageDate = Date()
+    
     var messageLog = [Message]()
     fileprivate func fetchLastMessageFromConversation() {
         guard let conversationId = conversation?.id else { return }
@@ -184,6 +187,7 @@ class ChatCell:UICollectionViewCell {
                     self.timeLabel.text = dateString
                     self.contentLabel.text = mostRecentMessage?.text
 //                    self.conversation?.mostRecentMessageDate = (mostRecentMessage?.date)!
+                    self.lastMessageDate = (mostRecentMessage?.date)!
                 }
             }
         }

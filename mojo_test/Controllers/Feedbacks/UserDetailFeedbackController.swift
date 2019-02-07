@@ -100,7 +100,6 @@ class UserDetailFeedbackController: UIViewController {
         let button = UIButton(type: .system)
         button.setImage(image.withRenderingMode(.alwaysOriginal), for: .normal)
         button.imageView?.contentMode = .scaleAspectFill
-        button.addTarget(self, action: #selector(handleFeedback), for: .touchUpInside)
         button.imageView?.adjustsImageSizeForAccessibilityContentSizeCategory = true
         return button
     }
@@ -152,14 +151,14 @@ class UserDetailFeedbackController: UIViewController {
            sv.addArrangedSubview(button)
         }
         
+        likeButton.addTarget(self, action: #selector(handleFeedback), for: .touchUpInside)
+        
         sv.distribution = .equalSpacing
         
         return sv
     }()
     
     @objc fileprivate func handleFeedback() {
-        
-        var likeCount = 0
         
 
         let feedback: [String: Any] = [
