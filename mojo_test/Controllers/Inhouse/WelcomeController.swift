@@ -25,7 +25,7 @@ class WelcomeController: UIViewController {
 
         setupAnimations()
         
-        setupBottomControl()
+        navigationItem.title = "welcome to house"
     }
     
     
@@ -45,40 +45,45 @@ class WelcomeController: UIViewController {
             self.currentUserImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
             
             guard let userRate = self.user?.rate else { return }
-            self.rateSummaryLabel.text = "Your profile got a rating of \(userRate), beat 90% of users."
+            guard let rateCount = self.user?.rateCount else { return }
+            var rate = Double()
+               rate = Double(userRate) / Double (rateCount)
+            guard let name = self.user?.name else { return }
+            let attributedString = NSMutableAttributedString(string: "\(name)\n\(rate)", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .medium)])
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+            paragraphStyle.alignment = .center
+            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+            self.userInfoLabel.attributedText = attributedString
         }
-    }
-    
-    fileprivate func setupBottomControl() {
-        view.addSubview(priviousButton)
-        priviousButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 48, bottom: 36, right: 0), size: .init(width: 40, height: 40))
-        
-        view.addSubview(pageControl)
-        pageControl.anchor(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 36, right: 0))
-        pageControl.centerXAnchor.constraint(equalToSystemSpacingAfter: view.centerXAnchor, multiplier: 1).isActive = true
-        
-        view.addSubview(NextButton)
-        NextButton.anchor(top: nil, leading: nil, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 36, right: 48), size: .init(width: 40, height: 40))
     }
     
     fileprivate func setupLayout() {
         
         view.addSubview(mainTitleLabel)
-        view.addSubview(rateSummaryLabel)
+        view.addSubview(rewardLabel)
         view.addSubview(currentUserImageView)
+        view.addSubview(userInfoLabel)
+        view.addSubview(descriptionLabel)
         view.addSubview(mainButton)
         
         mainTitleLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: currentUserImageView.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 48, right: 0))
         mainTitleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        currentUserImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .zero, size: .init(width: 140, height: 140))
+        currentUserImageView.anchor(top: nil, leading: nil, bottom: userInfoLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 16, right: 0), size: .init(width: 140, height: 140))
         currentUserImageView.layer.cornerRadius = 140 / 2
-        currentUserImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//        currentUserImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
         currentUserImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        rateSummaryLabel.anchor(top: currentUserImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 60))
+        userInfoLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
+        userInfoLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: view.centerXAnchor, multiplier: 1).isActive = true
+        userInfoLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: view.centerYAnchor, multiplier: 1).isActive = true
         
-        mainButton.anchor(top: rateSummaryLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 32, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 50))
+        rewardLabel.anchor(top: userInfoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 48, left: 36, bottom: 0, right: 36))
+        
+        descriptionLabel.anchor(top: rewardLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 36, bottom: 0, right: 36))
+        
+        mainButton.anchor(top: descriptionLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 48, left: 48, bottom: 0, right: 48), size: .init(width: 0, height: 50))
     }
     
     fileprivate func setupAnimations() {
@@ -87,7 +92,7 @@ class WelcomeController: UIViewController {
         
         currentUserImageView.transform = CGAffineTransform(rotationAngle: -angel).concatenating(CGAffineTransform(translationX: 200, y: 0))
         
-        rateSummaryLabel.transform = CGAffineTransform(translationX: -500, y: 0)
+        rewardLabel.transform = CGAffineTransform(translationX: -500, y: 0)
         mainButton.transform = CGAffineTransform(translationX: 500, y: 0)
         
         UIView.animateKeyframes(withDuration: 1.3, delay: 0, options: .calculationModeCubic, animations: {
@@ -106,7 +111,7 @@ class WelcomeController: UIViewController {
             
         }
         UIView.animate(withDuration: 0.75, delay: 0.6 * 1.3, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.1, options: .curveEaseOut, animations: {
-            self.rateSummaryLabel.transform = .identity
+            self.rewardLabel.transform = .identity
             self.mainButton.transform = .identity
         })
     }
@@ -121,11 +126,11 @@ class WelcomeController: UIViewController {
         return label
     }()
     
-    fileprivate let rateSummaryLabel: UILabel = {
+    fileprivate let rewardLabel: UILabel = {
         let label = UILabel()
-        label.text = "Your profile got a rating of"
+        label.text = "We are rewarding you 100 Jo coin!"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
         label.numberOfLines = 0
         return label
     }()
@@ -140,7 +145,7 @@ class WelcomeController: UIViewController {
     
     fileprivate let mainButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("View your privilege", for: .normal)
+        button.setTitle("Check your free token", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
@@ -149,31 +154,31 @@ class WelcomeController: UIViewController {
         return button
     }()
     
-    fileprivate let priviousButton : UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "right arrow").withRenderingMode(.alwaysOriginal), for: .normal)
-        button.clipsToBounds = true
-        return button
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        
+        let attributedString = NSMutableAttributedString(string: "Now you are able to receive chat requests and gifts from other users. You can start talk to users you like and purchase gifts with the tokens we reward you. Happy mingle!", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .medium)])
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 4
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        label.attributedText = attributedString
+        label.textColor = .lightGray
+        label.numberOfLines = 0
+        label.textAlignment = .center
+        return label
     }()
     
-    fileprivate let pageControl: UIPageControl = {
-        let pc = UIPageControl()
-        pc.currentPage = 0
-        pc.numberOfPages = 4
-        pc.currentPageIndicatorTintColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
-        pc.pageIndicatorTintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        return pc
+    let userInfoLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
     }()
     
-    fileprivate let NextButton : UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "left image").withRenderingMode(.alwaysOriginal), for: .normal)
-        button.clipsToBounds = true
-        return button
-    }()
     
     @objc fileprivate func handleDismiss() {
         dismiss(animated: true)
+
     }
 
 }

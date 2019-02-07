@@ -201,10 +201,18 @@ class SendChatRequestController: UIViewController {
         button.backgroundColor = .orange
         button.layer.cornerRadius = 2
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        button.addTarget(self, action: #selector(handleTopup), for: .touchUpInside)
         button.isEnabled = false
         button.isHidden = true
         return button
     }()
+    
+    @objc fileprivate func handleTopup() {
+        let topupController = TopUpController()
+        topupController.user = self.user
+        navigationController?.pushViewController(topupController, animated: true)
+        
+    }
     
     let warningLabel: UILabel = {
         let label = UILabel()

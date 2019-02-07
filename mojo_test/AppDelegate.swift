@@ -27,8 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-//        let controller = SignupMainController()
-//        let navController = UINavigationController(rootViewController: controller)
+        
 //        window?.rootViewController = WelcomeController()
         
         window?.rootViewController = MainTabBarController()
@@ -207,12 +206,9 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         let userInfo = response.notification.request.content.userInfo
         
         //Respond to Inhouse Notifications
-//        if let cardUID = userInfo["uid"] as? String {
-//            print(cardUID)
 
             // push the user's invitation page
             let controller = WelcomeController()
-//            controller.cardUID = cardUID
         
             //access main UI from Appdelegate
             if let mainTabBarController = window?.rootViewController as? MainTabBarController {

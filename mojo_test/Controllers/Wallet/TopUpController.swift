@@ -11,6 +11,11 @@ import Firebase
 
 class TopUpController: UIViewController {
     
+    var user: User? {
+        didSet {
+            
+        }
+    }
     
     fileprivate let balanceLabel: UILabel = {
         let label = UILabel()

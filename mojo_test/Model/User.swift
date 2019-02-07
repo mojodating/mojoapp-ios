@@ -23,6 +23,7 @@ struct User: ProducesCardViewModel {
     var imageUrl6: String?
     var uid: String?
     var rate: Int?
+    var rateCount: Int?
     var insideHouse: Bool?
     var school: String?
     
@@ -47,6 +48,7 @@ struct User: ProducesCardViewModel {
         self.minSeekingAge = dictionary["minSeekingAge"] as? Int
         self.maxSeekingAge = dictionary["maxSeekingAge"] as? Int
         self.rate = dictionary["bouncingLineRating"] as? Int
+        self.rateCount = dictionary["bouncingLineRatingCount"] as? Int
         self.insideHouse = dictionary["insideHouse"] as? Bool ?? false
         self.school = dictionary["school"] as? String
         

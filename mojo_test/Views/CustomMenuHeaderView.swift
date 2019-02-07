@@ -24,10 +24,13 @@ class SlidingMenuHeaderView: UIView {
             guard let profileUrl = self.user?.imageUrl1 else { return }
             self.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileUrl)
             self.nameLabel.text = self.user?.name
-
-            guard let userRate = self.user?.rate else { return }
             
-            self.ratingLabel.text = "\(userRate)"
+            guard let userRate = self.user?.rate else { return }
+            guard let rateCount = self.user?.rateCount else { return }
+            var rate = Double()
+            rate = Double(userRate) / Double (rateCount)
+            
+            self.ratingLabel.text = "\(rate)"
 
             if self.user?.insideHouse == true {
                 self.isInHouseLabel.text = "In House"

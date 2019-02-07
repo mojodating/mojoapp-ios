@@ -21,7 +21,7 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     
     fileprivate func fetchChatListsFromServer() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-       let ref = Firestore.firestore().collection("users").whereField("uid", isEqualTo: uid)
+       let ref = Firestore.firestore().collection("users").whereField("uid", isEqualTo: uid).order(by: "date", descending: false)
         
         ref.addSnapshotListener { querySnapshot, error in
             guard let snapshot = querySnapshot else {
