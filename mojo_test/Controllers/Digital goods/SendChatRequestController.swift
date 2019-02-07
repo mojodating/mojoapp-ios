@@ -40,7 +40,6 @@ class SendChatRequestController: UIViewController {
             
             guard let userName = cardViewModel?.name else {return}
             
-            userNameLabel.text = userName
             infoLabel.text = "Say Hi to " + userName + "!"
  
         }
@@ -80,7 +79,7 @@ class SendChatRequestController: UIViewController {
                 // check balance
                 if balance >= self.drinkPrice {
                     self.payButton.isEnabled = true
-                    self.payButton.backgroundColor = #colorLiteral(red: 1, green: 0.3040125447, blue: 0.4915377174, alpha: 1)
+                    self.payButton.backgroundColor = #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
                     
                 } else {
                     
@@ -160,20 +159,12 @@ class SendChatRequestController: UIViewController {
         return imageView
     }()
     
-    let userNameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "@username"
-        label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
-        label.numberOfLines = 0
-        return label
-    }()
     
     let infoLabel: UILabel = {
         let label = UILabel()
-        label.text = "Say Hi to UserName!"
+        label.text = "Chat request to "
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.numberOfLines = 0
         return label
     }()
@@ -187,8 +178,6 @@ class SendChatRequestController: UIViewController {
     let inputTextView: MarketPlaceInputTextView = {
         let textView = MarketPlaceInputTextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
-//        textView.layer.borderWidth = 1
-//        textView.layer.borderColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         textView.layer.cornerRadius = 4
         textView.backgroundColor = #colorLiteral(red: 0.9518757931, green: 0.9518757931, blue: 0.9518757931, alpha: 1)
         textView.font = UIFont.systemFont(ofSize: 16, weight: .medium)
@@ -197,8 +186,8 @@ class SendChatRequestController: UIViewController {
   
     let payButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("10 Jo - pay and send", for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
+        button.setTitle("Pay and send", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(handleSendChatRequest), for: .touchUpInside)
         return button
@@ -231,14 +220,13 @@ class SendChatRequestController: UIViewController {
         
         view.addSubview(profileImageView)
         profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0), size: .init(width: 40, height: 40))
-        view.addSubview(userNameLabel)
-        userNameLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: profileImageView.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0))
-        userNameLabel.centerYAnchor.constraint(equalTo: profileImageView.centerYAnchor).isActive = true
+        
         view.addSubview(infoLabel)
-        infoLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
+        infoLabel.anchor(top: nil, leading: profileImageView.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 16, bottom: 0, right: 0))
+        infoLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: profileImageView.centerYAnchor, multiplier: 1).isActive = true
         
         view.addSubview(inputTextView)
-        inputTextView.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width, height: 100))
+        inputTextView.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width, height: 100))
 
         view.addSubview(balanceLabel)
         balanceLabel.anchor(top: inputTextView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))

@@ -92,10 +92,13 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     
     let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = "In Mojo we believe saying Hi should not be a spam. Choose a gift to show your sincerity."
-        label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        label.textColor = .lightGray
         label.numberOfLines = 0
+        let attributedString = NSMutableAttributedString(string: "In Mojo we believe saying Hi should not be a spam. Choose a gift to show your sincerity.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular)])
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 4
+        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+        label.attributedText = attributedString
         return label
     }()
     
@@ -158,7 +161,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
         view.addSubview(infoLabel)
         infoLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 24, left: 24, bottom: 0, right: 0))
         view.addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 24, bottom: 0, right: 24)) 
+        descriptionLabel.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 24, bottom: 0, right: 24))
         
         setupCollectionViewLayout()
         
@@ -188,7 +191,7 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 24
+        return 32
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
