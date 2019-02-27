@@ -28,31 +28,30 @@ class CardView: UIView {
             swipingPhotosController.cardViewModel = self.cardViewModel
             informationLabel.attributedText = cardViewModel.attributedString
             informationLabel.textAlignment = cardViewModel.textAlignment
-            userProfileView.loadImageUsingCacheWithUrlString(urlString: cardViewModel.imageUrls.first ?? "")
+//            userProfileView.loadImageUsingCacheWithUrlString(urlString: cardViewModel.imageUrls.first ?? "")
             
-            (0..<cardViewModel.imageUrls.count).forEach{ (_) in
-                let barView = UIView()
-                barView.backgroundColor = barDeselectedColor
-                barsStackView.addArrangedSubview(barView)
-            }
-            barsStackView.arrangedSubviews.first?.backgroundColor = .white
-            
-            setupImageIndexObserver()
+//            (0..<cardViewModel.imageUrls.count).forEach{ (_) in
+//                let barView = UIView()
+//                barView.backgroundColor = barDeselectedColor
+//                barsStackView.addArrangedSubview(barView)
+//            }
+//            barsStackView.arrangedSubviews.first?.backgroundColor = .white
+//
+//            setupImageIndexObserver()
         }
     }
     
-    fileprivate func setupImageIndexObserver() {
-        cardViewModel.imageIndexObserver = {[weak self] (idx, imageUrl) in
-//            if let url = URL(string: imageUrl ?? "") {
-//                self?.imageView.sd_setImage(with: url, placeholderImage: #imageLiteral(resourceName: "logo-3x"), options: .continueInBackground)
-//            }
-            
-            self?.barsStackView.arrangedSubviews.forEach({ (v) in
-                v.backgroundColor = self?.barDeselectedColor
-            })
-            self?.barsStackView.arrangedSubviews[idx].backgroundColor = .white
-        }
-    }
+//    fileprivate func setupImageIndexObserver() {
+//        cardViewModel.imageIndexObserver = {[weak self] (idx, imageUrl) in
+//
+//            self?.barsStackView.arrangedSubviews.forEach({ (v) in
+//                v.backgroundColor = self?.barDeselectedColor
+//            })
+//            self?.barsStackView.arrangedSubviews[idx].backgroundColor = .white
+//        }
+//    }
+    
+    
             
     //encapsulation
     fileprivate let swipingPhotosController = SwipingPhotosController(transitionStyle: .scroll, navigationOrientation: .horizontal)
@@ -72,34 +71,27 @@ class CardView: UIView {
     
     
 //    var imageIndex = 0
-    fileprivate let barDeselectedColor = UIColor(white: 0, alpha: 0.1)
+//    fileprivate let barDeselectedColor = UIColor(white: 0, alpha: 0.1)
     
     
-    let userProfileView: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = .scaleAspectFill
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 22
-        view.layer.borderWidth = 2
-        view.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        return view
-    }()
-    
-    let chatRequestButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "chat").withRenderingMode(.alwaysOriginal), for: .normal)
-        button.clipsToBounds = true
-        button.isEnabled = true
-        button.addTarget(self, action: #selector(handleChatRequest), for: .touchUpInside)
-        return button
-    }()
-    
-    
-    
-    @objc fileprivate func handleChatRequest() {
-
-        self.delegate?.handleChatRequest(cardViewModel: self.cardViewModel)
-    }
+//    let userProfileView: UIImageView = {
+//        let view = UIImageView()
+//        view.contentMode = .scaleAspectFill
+//        view.clipsToBounds = true
+//        view.layer.cornerRadius = 22
+//        view.layer.borderWidth = 2
+//        view.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+//        return view
+//    }()
+//
+//    let chatRequestButton: UIButton = {
+//        let button = UIButton(type: .system)
+//        button.setImage(#imageLiteral(resourceName: "chat").withRenderingMode(.alwaysOriginal), for: .normal)
+//        button.clipsToBounds = true
+//        button.isEnabled = true
+//        button.addTarget(self, action: #selector(handleChatRequest), for: .touchUpInside)
+//        return button
+//    }()
     
     fileprivate func setupLayout() {
         
@@ -114,32 +106,40 @@ class CardView: UIView {
         setupGradientLayer()
         
         addSubview(informationLabel)
-        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 48, right: 0))
+        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 72, right: 0))
         informationLabel.textColor = .white
         informationLabel.numberOfLines = 0
         
-        addSubview(chatRequestButton)
-        chatRequestButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 180, right: 8), size: .init(width: 40, height: 40))
+        addSubview(chatButton)
+        chatButton.anchor(top: nil, leading: nil, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 180, right: 8), size: .init(width: 40, height: 40))
+        chatButton.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.937254902, blue: 0.9411764706, alpha: 1)
+        chatButton.setTitleColor(.black, for: .normal)
+        chatButton.addTarget(self, action: #selector(handleChatRequest), for: .touchUpInside)
+//
+//        addSubview(userProfileView)
+//        userProfileView.anchor(top: nil, leading: nil, bottom: chatRequestButton.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 20, right: 0), size: .init(width: 44, height: 44))
+//        userProfileView.centerXAnchor.constraint(equalTo: chatRequestButton.centerXAnchor).isActive =  true
         
-        addSubview(userProfileView)
-        userProfileView.anchor(top: nil, leading: nil, bottom: chatRequestButton.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 20, right: 0), size: .init(width: 44, height: 44))
-        userProfileView.centerXAnchor.constraint(equalTo: chatRequestButton.centerXAnchor).isActive =  true
-        
+    }
+    lazy var chatButton = UIButton(title: "CHAT", cornerRadius: 18, font: .systemFont(ofSize: 14, weight: .bold))
+    
+    @objc fileprivate func handleChatRequest() {
+        self.delegate?.handleChatRequest(cardViewModel: self.cardViewModel)
     }
     
-    let barsStackView = UIStackView()
-   
-    fileprivate func setupBarsStackView() {
-        addSubview(barsStackView)
-        barsStackView.anchor(top: topAnchor, leading: leadingAnchor , bottom: nil, trailing: trailingAnchor, padding: .init(top: 48, left: 160, bottom: 0, right:160), size: .init(width:0, height:4))
-        barsStackView.spacing = 4
-        barsStackView.distribution = .fillEqually
-    }
+//    let barsStackView = UIStackView()
+//
+//    fileprivate func setupBarsStackView() {
+//        addSubview(barsStackView)
+//        barsStackView.anchor(top: topAnchor, leading: leadingAnchor , bottom: nil, trailing: trailingAnchor, padding: .init(top: 48, left: 160, bottom: 0, right:160), size: .init(width:0, height:4))
+//        barsStackView.spacing = 4
+//        barsStackView.distribution = .fillEqually
+//    }
     
     fileprivate func setupGradientLayer() {
 
         gradientLayer.colors = [UIColor.black.cgColor, UIColor.clear.cgColor,UIColor.clear.cgColor, UIColor.black.cgColor,]
-        gradientLayer.locations = [-0.2, 0.2, 0.6,1.1]
+        gradientLayer.locations = [-0.3, 0.2, 0.6,1.2]
         layer.addSublayer(gradientLayer)
     }
     

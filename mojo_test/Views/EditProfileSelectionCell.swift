@@ -19,10 +19,9 @@ class EditProfileSelectionCell: UITableViewCell {
     
     let arrowButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "rightArrow").withRenderingMode(.alwaysOriginal), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "select").withRenderingMode(.alwaysOriginal), for: .normal)
         button.clipsToBounds = true
         button.contentMode = .scaleAspectFill
-//        button.addTarget(self, action: #selector(openSelection), for: .touchUpInside)
         return button
     }()
     
@@ -40,7 +39,7 @@ class EditProfileSelectionCell: UITableViewCell {
         selectionLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: self.centerYAnchor, multiplier: 1).isActive = true
         
         addSubview(arrowButton)
-        arrowButton.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 24))
+        arrowButton.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 24), size: .init(width: 32, height: 32))
         
         let separatorView = UIView()
         separatorView.backgroundColor = #colorLiteral(red: 0.9319355397, green: 0.9319355397, blue: 0.9319355397, alpha: 1)

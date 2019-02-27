@@ -33,9 +33,9 @@ class SlidingMenuHeaderView: UIView {
             self.ratingLabel.text = "\(rate)"
 
             if self.user?.insideHouse == true {
-                self.isInHouseLabel.text = "In House"
+                self.isInHouseLabel.text = "Popular bachelor"
             } else {
-                self.isInHouseLabel.text = "In Bouncer's Line"
+                self.isInHouseLabel.text = ""
             }
         }
     }

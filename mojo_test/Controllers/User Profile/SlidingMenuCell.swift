@@ -10,12 +10,7 @@ import UIKit
 
 class SlidingMenuCell: UITableViewCell {
     
-    let titleLabel : UILabel = {
-        let label = UILabel()
-        label.text = "profile"
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        return label
-    }()
+    let titleLabel = UILabel(text: "profile", font: .systemFont(ofSize: 18, weight: .medium))
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

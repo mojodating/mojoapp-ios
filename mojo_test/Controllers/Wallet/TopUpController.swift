@@ -177,7 +177,7 @@ class TopUpController: UIViewController {
 
         view.backgroundColor = .white
         
-        navigationItem.title = "Balance Top Up"
+        navigationItem.title = "Top up"
         
         setupLayout()
         setupTapGesture()

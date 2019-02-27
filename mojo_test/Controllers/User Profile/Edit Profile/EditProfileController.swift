@@ -105,14 +105,25 @@ import SDWebImage
         super.viewDidLoad()
 
         setupNavigationItem()
-//        tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
-        tableView.backgroundColor = .white
-        tableView.tableFooterView = UIView()
-        tableView.keyboardDismissMode = .interactive
-        
         fetchCurrentUser()
         setupTapGesture()
+        setupLogout()
+        
+        tableView.keyboardDismissMode = .interactive
+        
     }
+    
+    fileprivate func setupLogout() {
+        //        tableView.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        tableView.backgroundColor = .white
+        tableView.tableFooterView = UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        tableView.tableFooterView?.backgroundColor = #colorLiteral(red: 0.9582804569, green: 0.9582804569, blue: 0.9582804569, alpha: 1)
+        tableView.tableFooterView?.addSubview(logoutButton)
+        logoutButton.fillSuperview()
+        logoutButton.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
+    }
+    
+    let logoutButton = UIButton(title: "Log out", cornerRadius: 0, font: .systemFont(ofSize: 16, weight: .medium))
     
     fileprivate func setupTapGesture() {
         view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTapDismiss)))
@@ -323,6 +334,7 @@ import SDWebImage
         
         if indexPath.section == 6 {
             let genderCell = EditProfileSelectionCell(style: .default, reuseIdentifier: nil)
+            genderCell.arrowButton.addTarget(self, action: #selector(handleChooseGender), for: .touchUpInside)
             
             return genderCell
         }
@@ -360,8 +372,13 @@ import SDWebImage
         return cell        
     }
     
+    @objc fileprivate func handleLogout() {
+        try? Auth.auth().signOut()
+        self.dismiss(animated: true)
+    }
     
-    fileprivate func openGenderSelection() {
+    
+    @objc fileprivate func handleChooseGender() {
         
         let genderSelctionController = GenderSelectionController()
         
@@ -438,16 +455,5 @@ import SDWebImage
                 })
         }
     }
-    
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        tabBarController?.tabBar.isHidden = true
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        tabBarController?.tabBar.isHidden = false
-//    }
 
 }

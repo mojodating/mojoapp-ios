@@ -12,7 +12,7 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     
     let cellId = "cellId"
-    let titles = ["Chat Requests", "Chat Sent"]
+    let titles = ["REQUESTS", "SENT"]
     
     var chatRequestCell: ChatRequestCell?
     
@@ -57,7 +57,7 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        collectionView.backgroundColor = .clear
+        collectionView.backgroundColor = .white
         addSubview(collectionView)
         collectionView.fillSuperview()
         collectionView.dataSource = self
@@ -80,20 +80,12 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
 
 class MenuBarCell: UICollectionViewCell {
     
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Chat Requests"
-        label.layer.masksToBounds = true
-        label.layer.cornerRadius = 20
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textAlignment = .center
-        return label
-    }()
+    let titleLabel = UILabel(text: "", font: .boldSystemFont(ofSize: 14))
     
     override var isSelected: Bool {
         didSet {
-            titleLabel.textColor = isSelected ? UIColor.black : UIColor.black
-            titleLabel.backgroundColor = isSelected ? UIColor.init(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1) : UIColor.white
+            titleLabel.textColor = isSelected ? UIColor.black : UIColor.lightGray
+//            titleLabel.backgroundColor = isSelected ? UIColor.init(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1) : UIColor.white
         }
     }
     
@@ -101,9 +93,11 @@ class MenuBarCell: UICollectionViewCell {
         super.init(frame: frame)
         backgroundColor = .clear
         addSubview(titleLabel)
-        titleLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 158, height: 40))
-        titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        titleLabel.anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 24, bottom: 0, right: 0))
+//        titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        titleLabel.textColor = .lightGray
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

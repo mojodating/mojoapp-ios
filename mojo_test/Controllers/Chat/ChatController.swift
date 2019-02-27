@@ -13,7 +13,7 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 16
+        layout.minimumLineSpacing = 8
         layout.scrollDirection = .vertical
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .white
@@ -31,8 +31,7 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         view.backgroundColor = .white
         
-        navigationItem.title = "Chat"
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Feedbacks", style: .plain, target: self, action: #selector(handleFeedbacks))
+        setupNavBar()
         
         setupLayout()
         
@@ -40,6 +39,15 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         refreshControl.attributedTitle = NSAttributedString(string: "pull to refresh")
         refreshControl.addTarget(self, action: #selector(handleRefreshPage), for: .valueChanged)
         collectionView.refreshControl = refreshControl
+    }
+    
+    fileprivate func setupNavBar() {
+        navigationItem.title = "Chat"
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.view.backgroundColor = .white
+        navigationController?.navigationBar.isTranslucent = false
     }
     
     @objc func handleRefreshPage(refreshControl: UIRefreshControl) {
@@ -98,16 +106,16 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
-            return CGSize(width: view.frame.width, height: view.frame.height - 224)
+            return CGSize(width: view.frame.width, height: view.frame.height - 300)
         }
-        return CGSize(width: view.frame.width, height: 224)
+        return CGSize(width: view.frame.width, height: 146)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         if section == 1 {
-            return UIEdgeInsets(top: 8, left: 8, bottom: 0, right: 8)
+            return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
         }
-        return UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

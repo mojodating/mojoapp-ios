@@ -61,16 +61,16 @@ struct User: ProducesCardViewModel {
         
         let ageString = age != nil ? "\(age!)" : "N\\A"
 
-        attributedText.append(NSMutableAttributedString(string: "\n\(ageString), ", attributes: [.font:UIFont.systemFont(ofSize: 18, weight: .medium)]))
+        attributedText.append(NSMutableAttributedString(string: "\n\(ageString), ", attributes: [.font:UIFont.systemFont(ofSize: 16, weight: .regular)]))
         
         let locationString = location != nil ? location! : "Earth"
-        attributedText.append(NSMutableAttributedString(string: "\(locationString), ", attributes: [.font:UIFont.systemFont(ofSize: 18, weight: .medium)]))
-        
-        let professionString = profession != nil ? profession! : "Not Available"
-        attributedText.append(NSMutableAttributedString(string: "\n\(professionString)", attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .medium)]))
+        attributedText.append(NSMutableAttributedString(string: "\(locationString), ", attributes: [.font:UIFont.systemFont(ofSize: 16, weight: .regular)]))
         
         let schoolString = school != nil ? school! : ""
-        attributedText.append(NSMutableAttributedString(string: "\n\(schoolString)", attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .medium)]))
+        attributedText.append(NSMutableAttributedString(string: "\(schoolString)", attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .regular)]))
+        
+        let professionString = profession != nil ? profession! : "Not Available"
+        attributedText.append(NSMutableAttributedString(string: "\n\(professionString)", attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .regular)]))
         
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4

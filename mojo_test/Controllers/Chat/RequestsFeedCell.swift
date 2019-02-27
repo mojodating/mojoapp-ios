@@ -86,7 +86,7 @@ class RequestsFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
         }
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 70, height: frame.height - 72)
+            return CGSize(width: 70, height: frame.height - 48)
         }
     
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -112,8 +112,8 @@ private class RequestCell:UICollectionViewCell {
     var conversation : Conversation? {
         didSet {
             
-            guard let goodImageUrl = conversation?.drinkImage else { return }
-            goodsImage.loadImageUsingCacheWithUrlString(urlString: goodImageUrl)
+//            guard let goodImageUrl = conversation?.drinkImage else { return }
+//            goodsImage.loadImageUsingCacheWithUrlString(urlString: goodImageUrl)
             
             guard let sendUID = conversation?.sender else { return }
             
@@ -135,30 +135,9 @@ private class RequestCell:UICollectionViewCell {
         }
     }
     
-    
-    let userProfileImage: UIImageView = {
-        let image = UIImageView(image: #imageLiteral(resourceName: "cersi"))
-        image.contentMode = .scaleAspectFill
-        image.layer.cornerRadius = 35
-        image.clipsToBounds = true
-        return image
-    }()
-    
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Cersi Lannister"
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        return label
-    }()
-    
-    let goodsImage: UIImageView = {
-        let image = UIImageView()
-        image.contentMode = .scaleAspectFill
-        image.clipsToBounds = true
-        return image
-    }()
+    let userProfileImage = UIImageView(cornerRadius: 35)
+    let nameLabel = UILabel(text: "", font: .systemFont(ofSize: 14))    
+//    let goodsImage = UIImageView(cornerRadius: 0)
     
     override init(frame: CGRect) {
         super.init(frame:frame)
@@ -175,10 +154,10 @@ private class RequestCell:UICollectionViewCell {
         addSubview(nameLabel)
         nameLabel.anchor(top: userProfileImage.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 4, bottom: 0, right: 4))
         nameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        
-        addSubview(goodsImage)
-        goodsImage.anchor(top: nameLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 8, bottom: 0, right: 8), size: .init(width: 35, height: 35))
-        goodsImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        nameLabel.textAlignment = .center
+//        addSubview(goodsImage)
+//        goodsImage.anchor(top: nameLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 8, bottom: 0, right: 8), size: .init(width: 35, height: 35))
+//        goodsImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
 
     }
     

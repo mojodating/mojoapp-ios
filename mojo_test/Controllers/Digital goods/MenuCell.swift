@@ -15,49 +15,22 @@ class MenuCell: UICollectionViewCell {
             
             guard let digitalGoodUrl = digitalGood?.imageUrl else { return }
             
-            drinkImageView.loadImageUsingCacheWithUrlString(urlString: digitalGoodUrl)
+            giftImageView.loadImageUsingCacheWithUrlString(urlString: digitalGoodUrl)
             
             nameLabel.text = digitalGood?.name
             
-            priceLabel.text = "MOJO \(digitalGood?.price ?? 0)"
+            priceLabel.text = "\(digitalGood?.price ?? 0) Jo"
             
             descriptionLabel.text = digitalGood?.description
         }
     }
     
     
-    let drinkImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
-        iv.clipsToBounds = true
-        return iv
-    }()
     
-    let nameLabel: UILabel = {
-        let label = UILabel()
-        label.text = "DRINK ONE"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        return label
-    }()
-    
-    let priceLabel: UILabel = {
-        let label = UILabel()
-//        label.text = "10 MOJO"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        return label
-    }()
-    
-    let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Description"
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        label.textColor = .black
-        label.numberOfLines = 0
-        return label
-        
-    }()
+    let giftImageView = UIImageView(cornerRadius: 0)
+    let nameLabel = UILabel(text: "DRINK ONE", font: .systemFont(ofSize: 24, weight: .bold))
+    let priceLabel = UILabel(text: ".. Jo", font: .systemFont(ofSize: 18, weight: .medium))
+    let descriptionLabel = UILabel(text: "Description", font: .systemFont(ofSize: 16))
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -70,17 +43,20 @@ class MenuCell: UICollectionViewCell {
     
     func setupLayout() {
         
-        addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 32, bottom: 40, right: 32))
+        let overallStackView = VerticalStackView(arrangedSubviews: [
+            giftImageView, UIView(), nameLabel, descriptionLabel
+            ], spacing: 8)
         
-        addSubview(nameLabel)
-        nameLabel.anchor(top: nil, leading: leadingAnchor, bottom: descriptionLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 32, bottom: 8, right: 0))
+        giftImageView.heightAnchor.constraint(equalToConstant: frame.height / 6 * 4).isActive = true
+        
+        addSubview(overallStackView)
+        overallStackView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 24, left: 32, bottom: 0, right: 32))
         
         addSubview(priceLabel)
-        priceLabel.anchor(top: nil, leading: nil, bottom: descriptionLabel.topAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 8, right: 32))
+        priceLabel.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 32))
+        priceLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: nameLabel.centerYAnchor, multiplier: 1).isActive = true
         
-        addSubview(drinkImageView)
-        drinkImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nameLabel.topAnchor, trailing: trailingAnchor, padding: .init(top: 16, left: 24, bottom: 16, right: 24))
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

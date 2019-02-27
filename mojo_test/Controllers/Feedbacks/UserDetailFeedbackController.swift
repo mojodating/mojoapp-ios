@@ -151,31 +151,120 @@ class UserDetailFeedbackController: UIViewController {
            sv.addArrangedSubview(button)
         }
         
-        likeButton.addTarget(self, action: #selector(handleFeedback), for: .touchUpInside)
+        likeButton.addTarget(self, action: #selector(handleLike), for: .touchUpInside)
+        loveButton.addTarget(self, action: #selector(handleLove), for: .touchUpInside)
+        dopeButton.addTarget(self, action: #selector(handleDope), for: .touchUpInside)
+        mehButton.addTarget(self, action: #selector(handleMeh), for: .touchUpInside)
+        fakeIdButton.addTarget(self, action: #selector(handlefakeId), for: .touchUpInside)
+        madButton.addTarget(self, action: #selector(handleMad), for: .touchUpInside)
         
         sv.distribution = .equalSpacing
         
         return sv
     }()
     
-    @objc fileprivate func handleFeedback() {
+    let hud = JGProgressHUD(style: .dark)
+    lazy var functions = Functions.functions()
+    @objc fileprivate func handleLike() {
         
-
-        let feedback: [String: Any] = [
-            "like" : 1
-        ]
+        guard let uid = self.user?.uid else { return }
         
-        let hud = JGProgressHUD(style: .dark)
-        Firestore.firestore().collection("feedbackRating").document(toUid).setData(feedback) {
-            (err) in
-            if let err = err {
-                print("Failed to save user settings", err)
-                return
+        functions.httpsCallable("sendFeedback").call(["uid": uid, "feedback":"Like"]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    _ = FunctionsErrorCode(rawValue: error.code)
+                    _ = error.localizedDescription
+                    _ = error.userInfo[FunctionsErrorDetailsKey]
+                    }
+                }
+            self.hud.textLabel.text = "Feedback submited"
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2)
+        }
+    }
+    @objc fileprivate func handleLove() {
+        
+        guard let uid = self.user?.uid else { return }
+        
+        functions.httpsCallable("sendFeedback").call(["uid": uid, "feedback":"Love"]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    _ = FunctionsErrorCode(rawValue: error.code)
+                    _ = error.localizedDescription
+                    _ = error.userInfo[FunctionsErrorDetailsKey]
+                }
             }
-            print("submitted feedback")
-            hud.textLabel.text = "feedback submitted"
-            hud.show(in: self.view)
-            hud.dismiss(afterDelay: 2)
+            self.hud.textLabel.text = "Feedback submited"
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2)
+        }
+    }
+    @objc fileprivate func handleDope() {
+        
+        guard let uid = self.user?.uid else { return }
+        
+        functions.httpsCallable("sendFeedback").call(["uid": uid, "feedback":"Dope"]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    _ = FunctionsErrorCode(rawValue: error.code)
+                    _ = error.localizedDescription
+                    _ = error.userInfo[FunctionsErrorDetailsKey]
+                }
+            }
+            self.hud.textLabel.text = "Feedback submited"
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2)
+        }
+    }
+    
+    @objc fileprivate func handleMeh() {
+        guard let uid = self.user?.uid else { return }
+        
+        functions.httpsCallable("sendFeedback").call(["uid": uid, "feedback":"Meh"]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    _ = FunctionsErrorCode(rawValue: error.code)
+                    _ = error.localizedDescription
+                    _ = error.userInfo[FunctionsErrorDetailsKey]
+                }
+            }
+            self.hud.textLabel.text = "Feedback submited"
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2)
+        }
+    }
+    
+    @objc fileprivate func handlefakeId() {
+        guard let uid = self.user?.uid else { return }
+        
+        functions.httpsCallable("sendFeedback").call(["uid": uid, "feedback":"fakeId"]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    _ = FunctionsErrorCode(rawValue: error.code)
+                    _ = error.localizedDescription
+                    _ = error.userInfo[FunctionsErrorDetailsKey]
+                }
+            }
+            self.hud.textLabel.text = "Feedback submited"
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2)
+        }
+    }
+    
+    @objc fileprivate func handleMad() {
+        guard let uid = self.user?.uid else { return }
+        
+        functions.httpsCallable("sendFeedback").call(["uid": uid, "feedback":"Mad"]) { (result, error) in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    _ = FunctionsErrorCode(rawValue: error.code)
+                    _ = error.localizedDescription
+                    _ = error.userInfo[FunctionsErrorDetailsKey]
+                }
+            }
+            self.hud.textLabel.text = "Feedback submited"
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2)
         }
     }
     

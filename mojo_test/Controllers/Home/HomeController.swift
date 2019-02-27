@@ -35,7 +35,7 @@ class HomeController: UIViewController, CardViewDelegate, editProfileControllerD
         view.addSubview(cardsDeckView)
         view.addSubview(cosmosView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
-        cosmosView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 8, right: 0))
+        cosmosView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 16, right: 0))
         //        view.addSubview(bottomControls)
         //        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
 
@@ -45,7 +45,7 @@ class HomeController: UIViewController, CardViewDelegate, editProfileControllerD
         var view = CosmosView()
         view.settings.filledImage = #imageLiteral(resourceName: "filled-star").withRenderingMode(.alwaysOriginal)
         view.settings.emptyImage = #imageLiteral(resourceName: "empty-star").withRenderingMode(.alwaysOriginal)
-        view.settings.starSize = 32
+        view.settings.starSize = 40
         view.settings.starMargin = 4
         view.settings.fillMode = .full
         view.rating = 0
@@ -128,9 +128,9 @@ class HomeController: UIViewController, CardViewDelegate, editProfileControllerD
             self.functions.httpsCallable("rate").call(["uid": cardUID, "rate": rating]) { (result, error) in
                 if let error = error as NSError? {
                     if error.domain == FunctionsErrorDomain {
-                        let code = FunctionsErrorCode(rawValue: error.code)
-                        let message = error.localizedDescription
-                        let details = error.userInfo[FunctionsErrorDetailsKey]
+                        _ = FunctionsErrorCode(rawValue: error.code)
+                        _ = error.localizedDescription
+                        _ = error.userInfo[FunctionsErrorDetailsKey]
                     }
                 }
             }

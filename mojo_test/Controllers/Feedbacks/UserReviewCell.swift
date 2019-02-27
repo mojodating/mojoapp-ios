@@ -13,7 +13,17 @@ class UserReviewCell: UICollectionViewCell {
     
     
     fileprivate func fetchFeedbacksFromFirestore() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
         
+        let ref = Firestore.firestore().collection(uid).document("feedback")
+        ref.getDocument { (document, error) in
+            if let document = document, document.exists {
+                guard let dictionary = document.data() else { return }
+                print(dictionary)
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
 
     

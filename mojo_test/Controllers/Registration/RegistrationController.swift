@@ -117,6 +117,10 @@ class RegistrationController: UIViewController {
             
             print("Finished registering")
             
+            guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+            
+            mainTabBarController.setupViewControllers()
+            
             self?.dismiss(animated: true, completion: {
                 self?.delegate?.didFinishLoggingIn()
             })

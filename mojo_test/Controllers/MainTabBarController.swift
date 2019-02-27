@@ -28,32 +28,19 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate, editPro
         setupViewControllers()
     }
     
-    func didFinishLoggingIn() {
-        setupViewControllers()
-    }
-    
-    func didSaveProfile() {
-        setupViewControllers()
-    }
-    
         func setupViewControllers() {
             
-            transparentTabBarColor()
+            changeTabBarColor()
             
             //setup our custom view controllers
             
-            let homeNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "image-5"), selectedImage: #imageLiteral(resourceName: "home"), rootViewController: HomeController())
+            let homeNavController = createNavController(unselectedImage: #imageLiteral(resourceName: "image-5"), selectedImage: #imageLiteral(resourceName: "home"), viewController: MainController())
             
+            let chatNavController = createNavController(unselectedImage: #imageLiteral(resourceName: "image-7"), selectedImage: #imageLiteral(resourceName: "imag-1"), viewController: ChatController())
             
-            let chatNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "image-7"), selectedImage: #imageLiteral(resourceName: "imag-1"), rootViewController: ChatController())
+            let userProfileNavController = createNavController(unselectedImage: #imageLiteral(resourceName: "image-1"), selectedImage: #imageLiteral(resourceName: "image-3"), viewController: UserProfileController())
             
-//            let controller = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
-//            let chatNavController = UINavigationController(rootViewController: controller)
-            
-           
-            let userProfileNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "image-1"), selectedImage: #imageLiteral(resourceName: "image-3"), rootViewController: UserProfileController())
-            
-            let walletNavController = templateNavController(unselectedImage: #imageLiteral(resourceName: "image-4"), selectedImage: #imageLiteral(resourceName: "image-6"), rootViewController: WalletController())
+            let walletNavController = createNavController(unselectedImage: #imageLiteral(resourceName: "image-4"), selectedImage: #imageLiteral(resourceName: "image-6"), viewController: WalletController())
             
             tabBar.tintColor = .black
             
@@ -70,17 +57,16 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate, editPro
             
         }
     
-    fileprivate func templateNavController(unselectedImage: UIImage, selectedImage: UIImage, rootViewController: UIViewController) -> UINavigationController {
-        let viewController = rootViewController
+    fileprivate func createNavController(unselectedImage: UIImage, selectedImage: UIImage, viewController: UIViewController) -> UIViewController {
         let navController = UINavigationController(rootViewController: viewController)
         navController.tabBarItem.image = unselectedImage
         navController.tabBarItem.selectedImage = selectedImage
         return navController
     }
     
-    fileprivate func transparentTabBarColor() {
+    fileprivate func changeTabBarColor() {
         
-        let transperentBlackColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.15)
+        let transperentBlackColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
         
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)
@@ -94,6 +80,14 @@ class MainTabBarController: UITabBarController, LoginControllerDelegate, editPro
         UIGraphicsEndImageContext()
     }
 
-
+    func didFinishLoggingIn() {
+        setupViewControllers()
+    }
+    
+    func didSaveProfile() {
+        setupViewControllers()
+    }
+    
+    
 
 }

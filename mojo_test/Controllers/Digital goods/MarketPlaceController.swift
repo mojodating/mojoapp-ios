@@ -12,7 +12,7 @@ import Firebase
 class MarketPlaceController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var digitalGoods = [DigitalGood]()
-    fileprivate func loadData() {
+    fileprivate func fetchGifts() {
          Firestore.firestore().collection("drinkTypes").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -31,104 +31,55 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
     
     var cardViewModel: CardViewModel! {
         didSet{
-            
-            guard let toUID = cardViewModel?.uid else { return }
-   
             profileImageView.loadImageUsingCacheWithUrlString(urlString: cardViewModel.imageUrls.first ?? "")
             infoLabel.text = "Say Hi To " + cardViewModel.name
         }
     }
     
-    var user: User?
+    var user: User? {
+        didSet {
+            guard let profileUrl = user?.imageUrl1 else { return }
+            profileImageView.loadImageUsingCacheWithUrlString(urlString: profileUrl)
+            guard let name = user?.name else { return }
+            let attributedString = NSMutableAttributedString(string: "Choose a gift for \n\(name)", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 24)])
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
+            infoLabel.attributedText = attributedString
+        }
+    }
+    
     lazy var functions = Functions.functions()
     
-    fileprivate func fetchCurrentUser() {
+    fileprivate func getBalance() {
         guard let uid = Auth.auth().currentUser?.uid else { return }
-        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
-            if let err = err {
-                print(err)
-                return
-            }
-            //          fetch our user here
-            guard let dictionary = snapshot?.data() else { return }
-            self.user = User(dictionary: dictionary)
-            
-            self.functions.httpsCallable("getBalance").call(["uid": self.user?.uid]) { (result, error) in
+        
+            self.functions.httpsCallable("getBalance").call(["uid": uid]) { (result, error) in
                 if let error = error as NSError? {
                     if error.domain == FunctionsErrorDomain {
-                        let code = FunctionsErrorCode(rawValue: error.code)
-                        let message = error.localizedDescription
-                        let details = error.userInfo[FunctionsErrorDetailsKey]
+                        _ = FunctionsErrorCode(rawValue: error.code)
+                        _ = error.localizedDescription
+                        _ = error.userInfo[FunctionsErrorDetailsKey]
                     }
                 }
                 if let balance = (result?.data as? [String: Any])?["balance"] as? Int {
-                    self.balanceLabel.text = "Your balance: \(balance) Jo"
+                    self.balanceLabel.text = "Your Balance: \(balance) Jo"
                     print(balance)
                 }
             }
-        }
-        
-        
     }
-    
-    
-    let profileImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: "peter")
-        imageView.layer.cornerRadius = 32
-        imageView.layer.masksToBounds = true
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
-    
-    let infoLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Say Hi to UserName!"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .lightGray
-        label.numberOfLines = 0
-        let attributedString = NSMutableAttributedString(string: "In Mojo we believe saying Hi should not be a spam. Choose a gift to show your sincerity.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular)])
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 4
-        attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-        label.attributedText = attributedString
-        return label
-    }()
-    
-    
-    let menuLabel: UILabel = {
-        let label = UILabel()
-        label.text = "GIFTS"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        return label
-    }()
-    
-    let balanceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Your balance: 30 Jo"
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        return label
-    }()
     
     // Set up collectionView
     
     let menuCollectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
+        let layout = snappingLayout()
         layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .clear
-        cv.isPagingEnabled = true
+//        cv.isPagingEnabled = true
         return cv
     }()
+//    let menuCollectionView = HorizentalSnappingView()
     
     let cellId = "cellId"
     
@@ -138,14 +89,17 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
         view.backgroundColor = #colorLiteral(red: 0.9218030841, green: 0.9218030841, blue: 0.9218030841, alpha: 1)
         
         navigationItem.title = "Send Chat Request"
-        
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleCancel))
         
-        fetchCurrentUser()
+        getBalance()
         
         setupLayout()
         
-        loadData()
+        fetchGifts()
+        
+        menuCollectionView.delegate = self
+        menuCollectionView.dataSource = self
+        menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
         
     }
     
@@ -153,45 +107,35 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
         self.dismiss(animated: true)
     }
     
+    let profileImageView = UIImageView(cornerRadius: 50)
+    let infoLabel = UILabel()
+    let giftShopLabel = UILabel(text: "GIFT SHOP", font: .systemFont(ofSize: 16, weight: .semibold))
+    let balanceLabel = UILabel(text: "Your Balance: ..", font: .systemFont(ofSize: 16, weight: .regular))
     
     fileprivate func setupLayout() {
         view.addSubview(profileImageView)
-        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0), size: .init(width: 64, height: 64))
+        profileImageView.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0), size: .init(width: 100, height: 100))
+        profileImageView.backgroundColor = #colorLiteral(red: 0.9960784314, green: 0.9333333333, blue: 0.5058823529, alpha: 1)
         
         view.addSubview(infoLabel)
-        infoLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 24, left: 24, bottom: 0, right: 0))
-        view.addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: infoLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 24, bottom: 0, right: 24))
+        infoLabel.anchor(top: nil, leading: profileImageView.trailingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 20, bottom: 0, right: 16))
+        infoLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: profileImageView.centerYAnchor, multiplier: 1).isActive = true
+        infoLabel.numberOfLines = 0
         
-        setupCollectionViewLayout()
-        
-    }
-    
-    fileprivate func setupCollectionViewLayout() {
-        // set up collectionView
-        view.addSubview(menuCollectionView)
-        menuCollectionView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
-        menuCollectionView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        menuCollectionView.heightAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        
-        menuCollectionView.delegate = self
-        menuCollectionView.dataSource = self
-        
-        menuCollectionView.register(MenuCell.self, forCellWithReuseIdentifier: cellId)
-        
-        view.addSubview(menuLabel)
-        menuLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: menuCollectionView.topAnchor, trailing: nil, padding: .init(top: 0, left: 24, bottom: 0, right: 0))
+        view.addSubview(giftShopLabel)
+        giftShopLabel.anchor(top: profileImageView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 36, left: 24, bottom: 0, right: 0))
         
         view.addSubview(balanceLabel)
-        balanceLabel.anchor(top: nil, leading: nil, bottom: menuCollectionView.topAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 24))
+        balanceLabel.anchor(top: profileImageView.bottomAnchor, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 36, left: 0, bottom: 0, right: 24))
+        
+        // set up collectionView
+        view.addSubview(menuCollectionView)
+        menuCollectionView.anchor(top: giftShopLabel.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return digitalGoods.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 32
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -199,25 +143,34 @@ class MarketPlaceController: UIViewController, UICollectionViewDelegate, UIColle
 
         cell.digitalGood = digitalGoods[indexPath.item]
         cell.backgroundColor = .white
+        
         return cell
     }
     
+    let leftRightPadding: CGFloat = 12
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.frame.width - 32, height: view.frame.width - 32)
+        return CGSize(width: view.frame.width - 48, height: menuCollectionView.frame.height - leftRightPadding * 2)
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return leftRightPadding
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        return UIEdgeInsets(top: 0, left: leftRightPadding, bottom: 0, right: leftRightPadding)
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let digitalGood = self.digitalGoods[indexPath.row]
         let controller = SendChatRequestController()
-        controller.cardViewModel = cardViewModel
+        controller.user = self.user
         controller.digitalGood = digitalGood
         navigationController?.pushViewController(controller, animated: true)
     }
 
 }
+
+

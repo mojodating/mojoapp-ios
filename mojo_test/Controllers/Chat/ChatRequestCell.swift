@@ -36,7 +36,7 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.width, height: 224)
+        return CGSize(width: frame.width, height: 146)
     }
     
     func scrollToMenuIndex(menuIndex: Int) {
@@ -95,16 +95,14 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     func setupLayout() {
         
         addSubview(menuBar)
-        menuBar.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 48))
+        menuBar.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 44))
         
         addSubview(collectionView)
-        collectionView.anchor(top: menuBar.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
+        collectionView.anchor(top: menuBar.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
-//        collectionView.register(RequestCell.self, forCellWithReuseIdentifier: cellId)
-//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(RequestsFeedCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(SentFeedCell.self, forCellWithReuseIdentifier: sentCellId)
     }

@@ -26,8 +26,8 @@ class ViewProfileController: UIViewController {
         cardView.cardViewModel = user.toCardViewModel()
         view.addSubview(cardView)
         cardView.fillSuperview()
-        cardView.chatRequestButton.isHidden = true
-        cardView.userProfileView.isHidden = true
+//        cardView.chatRequestButton.isHidden = true
+//        cardView.userProfileView.isHidden = true
         cardView.gestureRecognizers?.forEach(cardView.removeGestureRecognizer)
     }
     

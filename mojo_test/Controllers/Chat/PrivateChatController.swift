@@ -12,15 +12,13 @@ import Firebase
 class PrivateChatController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITextFieldDelegate, ChatInputAccessaryViewDelegate {
     
     let cellId = "cellId"
-    let SectionHeader = "SectionHeader"
     let requestCellId = "requestCellId"
     
-    var user: User?
+    var chatProfileUID: String?
     var conversation : Conversation? {
         didSet {
             
             guard let currentUser = Auth.auth().currentUser?.uid else { return }
-            var chatProfileUID: String?
             
             if currentUser == conversation?.sender {
                 chatProfileUID = conversation?.receiver
@@ -28,27 +26,32 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 chatProfileUID = conversation?.sender
             }
             
-            Firestore.firestore().collection("users").document(chatProfileUID!).getDocument { (snapshot, err) in
-                if let err = err {
-                    print(err)
-                    return
-                }
-                //          fetch our user here
-                guard let dictionary = snapshot?.data() else { return }
-                self.user = User(dictionary: dictionary)
-                
-                self.navigationItem.title = self.user?.name
+        }
+    }
+    
+    var user: User?
+    fileprivate func fetchChatPartner() {
+        Firestore.firestore().collection("users").document(chatProfileUID ?? "").getDocument { (snapshot, err) in
+            if let err = err {
+                print(err)
+                return
             }
+            //          fetch our user here
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
+            guard let userName = self.user?.name else { return }
+            self.nameTitleButton.setTitle("\(userName) ", for: .normal)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        collectionView.backgroundColor = #colorLiteral(red: 0.9218030841, green: 0.9218030841, blue: 0.9218030841, alpha: 1)
+        collectionView.backgroundColor = .white
         
-        navigationItem.title = "Username"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "View profile", style: .plain, target: self, action: #selector(handleViewProfile))
+        setupNavigation()
+        
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "View profile", style: .plain, target: self, action: #selector(handleViewProfile))
         
         setupLayout()
         
@@ -59,6 +62,8 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 80, right: 0)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
+        
+        fetchChatPartner()
         
         fetchMessages()
     }
@@ -134,45 +139,41 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }
     
     fileprivate func setupRequestCell(cell: RequestMessageCell, message: Message ) {
+        // fetch requestor profile photo
+        if let requestorUID = self.conversation?.sender {
+            Firestore.firestore().collection("users").document(requestorUID).getDocument { (snapshot, err) in
+                if let err = err {
+                    print(err)
+                    return
+                }
+                //          fetch our user here
+                guard let dictionary = snapshot?.data() else { return }
+                self.user = User(dictionary: dictionary)
+                
+                guard let requestorProfileUrl = self.user?.imageUrl1 else {return}
+                cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: requestorProfileUrl)
+            }
+        }
+        
 
         if let giftImageUrl = self.conversation?.drinkImage {
             cell.giftImageView.loadImageUsingCacheWithUrlString(urlString: giftImageUrl)
         }
+        cell.bubbleView.backgroundColor = #colorLiteral(red: 0.9518757931, green: 0.9518757931, blue: 0.9518757931, alpha: 1)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy hh:mm tt"
+        let dateString = dateFormatter.string(from: (message.date))
         
         if message.sender == Auth.auth().currentUser?.uid {
             // purple bubble
-            cell.bubbleView.backgroundColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
-            cell.chatLogLabel.textColor = .black
-            cell.profileImageView.isHidden = true
-            cell.bubbleViewRightAnchor?.isActive = true
-            cell.bubbleViewLeftAnchor?.isActive = false
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/yyyy hh:mm tt"
-            let dateString = dateFormatter.string(from: (message.date))
-            
-            let attributedString = NSMutableAttributedString(string: "You sent this chat request at \(dateString).", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular)])
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = 4
-            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-            cell.descriptionLabel.attributedText = attributedString
-        
-            
+            cell.descriptionLabel.text = "You sent this chat request at \(dateString)."
+          
         } else {
-            //grey bubble
-            cell.bubbleView.backgroundColor = #colorLiteral(red: 1, green: 0.8980392157, blue: 0.3529411765, alpha: 1)
-            cell.chatLogLabel.textColor = .black
-            cell.bubbleViewRightAnchor?.isActive = false
-            cell.bubbleViewLeftAnchor?.isActive = true
-            cell.profileImageView.isHidden = false
-            
-            let attributedString = NSMutableAttributedString(string: "By reply you accept the request and the gift. Ignore to reject.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .regular)])
-            let paragraphStyle = NSMutableParagraphStyle()
-            paragraphStyle.lineSpacing = 4
-            attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
-            cell.descriptionLabel.attributedText = attributedString
+            cell.descriptionLabel.text = "By reply you accept the request and the gift. Or reject."
         }
         
+        // fetch gift Info
         guard let giftName = self.conversation?.drinkName else {return}
         guard let giftPrice = self.conversation?.drinkPrice else { return }
         let attributedString = NSMutableAttributedString(string: "\(giftName) \n\(giftPrice) Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14, weight: .medium)])
@@ -185,26 +186,36 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     
     fileprivate func setupCell(cell:MessageCell, message: Message ) {
         
-        if let profileImageUrl = self.user?.imageUrl1 {
-            cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: profileImageUrl)
-        }
-        
         if message.sender == Auth.auth().currentUser?.uid {
-            // purple bubble
-            cell.bubbleView.backgroundColor = #colorLiteral(red: 0.07450980392, green: 0.5607843137, blue: 0.2745098039, alpha: 1)
-            cell.chatLogLabel.textColor = .white
+            // color bubble
+            cell.bubbleView.backgroundColor = #colorLiteral(red: 0.9518757931, green: 0.9518757931, blue: 0.9518757931, alpha: 1)
+            cell.chatLogLabel.textColor = .black
             cell.profileImageView.isHidden = true
             cell.bubbleViewRightAnchor?.isActive = true
             cell.bubbleViewLeftAnchor?.isActive = false
                         
         } else {
-            //grey bubble
-            
-            cell.bubbleView.backgroundColor = .white
+            //white bubble
+            cell.bubbleView.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.9137254902, blue: 0.9254901961, alpha: 1)
             cell.chatLogLabel.textColor = .black
             cell.bubbleViewRightAnchor?.isActive = false
             cell.bubbleViewLeftAnchor?.isActive = true
             cell.profileImageView.isHidden = false
+        }
+        
+        // fetch userProfile
+        let senderUID = message.sender
+        Firestore.firestore().collection("users").document(senderUID).getDocument { (snapshot, err) in
+            if let err = err {
+                print(err)
+                return
+            }
+            //          fetch our user here
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
+            
+            guard let senderImageUrl = self.user?.imageUrl1 else {return}
+            cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
         }
         
     }
@@ -216,7 +227,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         height = estimateFrameForText(text: messages[indexPath.item].text).height + 20
         
         if indexPath.row == 0 {
-            return CGSize(width: view.frame.width, height: height + 220)
+            return CGSize(width: view.frame.width, height: height + 240)
         }
 
         return CGSize(width: view.frame.width, height: height)
@@ -317,6 +328,23 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
 //        didSend(for: messageText)
 //        return true
 //    }
+    
+    let nameTitleButton = UIButton(title: "", cornerRadius: 0, font: .systemFont(ofSize: 18, weight: .semibold))
+    fileprivate func setupNavigation() {
+        nameTitleButton.setTitleColor(.black, for: .normal)
+        nameTitleButton.setImage(#imageLiteral(resourceName: "rightArrow").withRenderingMode(.alwaysOriginal), for: .normal)
+        nameTitleButton.frame = CGRect(x: 0, y: -2, width: 130, height: 20)
+        nameTitleButton.semanticContentAttribute = UIApplication.shared
+            .userInterfaceLayoutDirection == .rightToLeft ? .forceLeftToRight : .forceRightToLeft
+        nameTitleButton.addTarget(self, action: #selector(handleViewProfile), for: .touchUpInside)
+        self.navigationItem.titleView = nameTitleButton
+        
+//        if #available(iOS 11.0, *) {
+//            navigationItem.largeTitleDisplayMode = .never
+//            navigationController?.navigationBar.prefersLargeTitles = false
+//        }
+        
+    }
     
 
 

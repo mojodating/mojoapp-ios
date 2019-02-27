@@ -28,7 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-//        window?.rootViewController = WelcomeController()
+//        let controller = PeepsController(collectionViewLayout: UICollectionViewFlowLayout())
+//        let navController = UINavigationController(rootViewController: controller)
+//        window?.rootViewController = navController
         
         window?.rootViewController = MainTabBarController()
 
@@ -250,9 +252,9 @@ extension AppDelegate: MessagingDelegate {
         functions.httpsCallable("updateToken").call(["token": fcmToken]) { (result, error) in
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
-                    let code = FunctionsErrorCode(rawValue: error.code)
-                    let message = error.localizedDescription
-                    let details = error.userInfo[FunctionsErrorDetailsKey]
+                    _ = FunctionsErrorCode(rawValue: error.code)
+                    _ = error.localizedDescription
+                    _ = error.userInfo[FunctionsErrorDetailsKey]
                     }
                 }
             }

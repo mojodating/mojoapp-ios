@@ -45,19 +45,14 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
                         
                     self.collectionView.reloadData()
                     })
-                    self.titleLabel.text = "Chats(\(self.chats.count))"
+                    self.titleLabel.text = "CHATS(\(self.chats.count))"
                 }
             }
         }
     }
 
-
-    let titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Chats()"
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        return label
-    }()
+    
+    let titleLabel = UILabel(text: "", font: .boldSystemFont(ofSize: 14))
 
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -83,10 +78,10 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
 
     fileprivate func setupLayout() {
         addSubview(titleLabel)
-        titleLabel.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
+        titleLabel.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 24, bottom: 0, right: 0))
 
         addSubview(collectionView)
-        collectionView.anchor(top: titleLabel.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
+        collectionView.anchor(top: titleLabel.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 4, left: 0, bottom: 0, right: 0))
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -111,7 +106,7 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: frame.width, height: 86)
+        return CGSize(width: frame.width, height: 80)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -121,6 +116,7 @@ class ChatCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionView
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let conversation = self.chats[indexPath.row]
+        
         delegate?.didTapCell(conversation: conversation)
     }
 
@@ -167,7 +163,7 @@ class ChatCell:UICollectionViewCell {
     var messageLog = [Message]()
     fileprivate func fetchLastMessageFromConversation() {
         guard let conversationId = conversation?.id else { return }
-        Firestore.firestore().collection("conversations").document(conversationId).collection("messages")
+        Firestore.firestore().collection("conversations").document(conversationId).collection("messages").order(by: "date", descending: false)
         .getDocuments { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -193,37 +189,11 @@ class ChatCell:UICollectionViewCell {
         }
     }
         
-        let chatProfileImage: UIImageView = {
-            let image = UIImageView(image: #imageLiteral(resourceName: "jaime"))
-            image.contentMode = .scaleAspectFill
-            image.layer.cornerRadius = 28
-            image.clipsToBounds = true
-            return image
-        }()
-        
-        let nameLabel: UILabel = {
-            let label = UILabel()
-            label.text = "Jaime Lannister"
-            label.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
-            return label
-        }()
-        
-        let contentLabel: UILabel = {
-            let label = UILabel()
-            label.text = "Jared's been back from that island for a whole day and he didn't get any toilet…"
-            label.textColor = #colorLiteral(red: 0.5490196078, green: 0.5490196078, blue: 0.5490196078, alpha: 1)
-            label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-            label.numberOfLines = 0
-            return label
-        }()
-        
-        let timeLabel: UILabel = {
-            let label = UILabel()
-            label.text = "Yesterday"
-            label.font = UIFont.systemFont(ofSize: 14, weight: .regular)
-            label.textColor = .lightGray
-            return label
-        }()
+
+    let chatProfileImage = UIImageView(cornerRadius: 28)
+    let nameLabel = UILabel(text: "", font: .systemFont(ofSize: 18, weight: .semibold))    
+    let contentLabel = UILabel(text: "", font: .systemFont(ofSize: 14))
+    let timeLabel = UILabel(text: "", font: .systemFont(ofSize: 14))
         
         let arrowImage: UIImageView = {
             let image = UIImageView(image: #imageLiteral(resourceName: "rightArrow"))
@@ -253,9 +223,12 @@ class ChatCell:UICollectionViewCell {
             
             addSubview(contentLabel)
             contentLabel.anchor(top: nameLabel.bottomAnchor, leading: chatProfileImage.trailingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 4, left: 8, bottom: 0, right: 32))
+            contentLabel.textColor = #colorLiteral(red: 0.5490196078, green: 0.5490196078, blue: 0.5490196078, alpha: 1)
+            contentLabel.numberOfLines = 0
             
             addSubview(timeLabel)
             timeLabel.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 32))
+            timeLabel.textColor = .lightGray
             
             addSubview(arrowImage)
             arrowImage.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 16))

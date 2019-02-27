@@ -28,7 +28,6 @@ extension UIImageView {
             (data, response, error) in
             
             if error != nil {
-                print(error)
                 return
             }
             
@@ -39,7 +38,9 @@ extension UIImageView {
                 if let downloadedImage = UIImage(data: data!) {
                     imageCache.setObject(downloadedImage, forKey: urlString as AnyObject)
                     
-                    self.image = downloadedImage
+                    DispatchQueue.main.async {
+                        self.image = downloadedImage
+                    }
 
                 }
                 
