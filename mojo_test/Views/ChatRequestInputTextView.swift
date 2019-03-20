@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MarketPlaceInputTextView: UITextView {
+class ChatRequestInputTextView: UITextView {
     
     fileprivate let placeholderLabel: UILabel = {
         let label = UILabel()
-        label.text = "Leave a message..."
+        label.text = "Add a message..."
         label.textColor = .lightGray
         return label
     }()

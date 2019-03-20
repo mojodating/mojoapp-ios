@@ -9,9 +9,11 @@
 import UIKit
 import Cosmos
 import TinyConstraints
+import SDWebImage
 
 protocol ProfileCellDelegate {
     func didTapChat(user: User)
+    func didTapProfileImage(user: User)
 }
 
 class ProfileCell: UICollectionViewCell {
@@ -21,19 +23,22 @@ class ProfileCell: UICollectionViewCell {
     var cardViewModel: CardViewModel!
     var user: User? {
         didSet {
-//            self.cardViewModel = user?.toCardViewModel()
-//            self.infoLabel.attributedText = cardViewModel.attributedString
-//            swipingPhotosController.cardViewModel = self.cardViewModel
             cardView.cardViewModel = user?.toCardViewModel()
+            guard let profileImageUrl = user?.imageUrl1 else { return }
+            if let url = URL(string: profileImageUrl) {
+                profileImageView.sd_setImage(with: url)
+            }
         }
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-
-        self.dropShadow()
         
         setupLayout()
+        
+        layer.shadowOpacity = 0.3
+        layer.shadowRadius = 10
+        layer.shadowOffset = .init(width: 0, height: 10)
         
     }
     
@@ -44,27 +49,41 @@ class ProfileCell: UICollectionViewCell {
         addSubview(cardView)
         cardView.layer.cornerRadius = 16
         cardView.fillSuperview()
-        cardView.chatButton.isHidden = true
-        cardView.gestureRecognizers?.forEach(cardView.removeGestureRecognizer)
 
         addSubview(cosmosView)
-        cosmosView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 12, bottom: 152, right: 0))
+        cosmosView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 12, bottom: 180, right: 0))
+        
+        addSubview(profileImageView)
+        profileImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 48, height: 48))
+        profileImageView.centerYAnchor.constraint(equalToSystemSpacingBelow: cosmosView.centerYAnchor, multiplier: 1).isActive = true
+        profileImageView.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleOpenProfileDetail))
+        singleTap.numberOfTapsRequired = 1
+        profileImageView.isUserInteractionEnabled = true
+        profileImageView.addGestureRecognizer(singleTap)
+        
         addSubview(chatButton)
-        chatButton.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 4, right: 16), size: .init(width: 80, height: 36))
-        chatButton.centerYAnchor.constraint(equalToSystemSpacingBelow: cosmosView.centerYAnchor, multiplier: 1).isActive = true
-        
-        chatButton.backgroundColor = #colorLiteral(red: 0.7647058824, green: 0.937254902, blue: 0.9411764706, alpha: 1)
-        chatButton.setTitleColor(.black, for: .normal)
+        chatButton.anchor(top: profileImageView.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: .init(width: 40, height: 40))
+        chatButton.centerXAnchor.constraint(equalToSystemSpacingAfter: profileImageView.centerXAnchor, multiplier: 1).isActive = true
         chatButton.addTarget(self, action: #selector(handleChatRequest), for: .touchUpInside)
-        
+        chatButton.setImage(#imageLiteral(resourceName: "chat-1").withRenderingMode(.alwaysOriginal), for: .normal)
         
     }
     @objc fileprivate func handleChatRequest() {
         guard let user = self.user else { return }
         self.delegate?.didTapChat(user: user)
     }
+    
+    @objc fileprivate func handleOpenProfileDetail() {
+        guard let user = self.user else { return }
+        self.delegate?.didTapProfileImage(user: user)
+    }
+    
+    lazy var profileImageView = UIImageView(cornerRadius: 24)
 
-    lazy var chatButton = UIButton(title: "CHAT", cornerRadius: 18, font: .systemFont(ofSize: 14, weight: .bold))
+    lazy var chatButton = UIButton(type: .system)
     
     lazy var cosmosView: CosmosView = {
         var view = CosmosView()
@@ -76,20 +95,6 @@ class ProfileCell: UICollectionViewCell {
         view.rating = 0
         return view
     }()
-    
-    func dropShadow(scale: Bool = true) {
-        layer.masksToBounds = false
-        layer.shadowColor = UIColor.darkGray.cgColor
-        layer.shadowOpacity = 0.6
-        layer.shadowOffset = CGSize(width: 4, height: 4)
-        layer.shadowRadius = 18
-        
-        layer.shadowPath = UIBezierPath(rect: bounds).cgPath
-        layer.shouldRasterize = true
-        layer.rasterizationScale = scale ? UIScreen.main.scale : 1
-    }
-    
-    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

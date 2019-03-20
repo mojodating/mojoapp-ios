@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class SentFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
@@ -124,15 +125,17 @@ class SentFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
                     self.nameLabel.text = self.user?.name
                     
                     guard let senderImageUrl = self.user?.imageUrl1 else {return}
-                    self.userProfileImage.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
+                    if let senderImageUrl = URL(string: senderImageUrl) {
+                        self.profileImageView.sd_setImage(with: senderImageUrl)
+                    }
+
                     
                 }
             }
         }
         
-        let userProfileImage = UIImageView(cornerRadius: 35)
+        let profileImageView = UIImageView(cornerRadius: 35)
         let nameLabel = UILabel(text: "", font: .systemFont(ofSize: 13))
-//        let goodsImage = UIImageView(cornerRadius: 0)
         
         override init(frame: CGRect) {
             super.init(frame:frame)
@@ -143,17 +146,13 @@ class SentFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         }
         
         fileprivate func setupCell() {
-            addSubview(userProfileImage)
-            userProfileImage.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: frame.width, height: frame.width))
+            addSubview(profileImageView)
+            profileImageView.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: frame.width, height: frame.width))
             
             addSubview(nameLabel)
-            nameLabel.anchor(top: userProfileImage.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 4, bottom: 0, right: 4))
+            nameLabel.anchor(top: profileImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 4, bottom: 0, right: 4))
             nameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
             nameLabel.textAlignment = .center
-            
-//            addSubview(goodsImage)
-//            goodsImage.anchor(top: nameLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 8, left: 8, bottom: 0, right: 8), size: .init(width: 35, height: 35))
-//            goodsImage.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
      
         }
         

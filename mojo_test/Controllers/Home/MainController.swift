@@ -17,15 +17,26 @@ class MainController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.backgroundColor = #colorLiteral(red: 0.9585977157, green: 0.9585977157, blue: 0.9585977157, alpha: 1)
+        fetchCurrentUser()
+        
+        collectionView.backgroundColor = #colorLiteral(red: 0.9322652284, green: 0.9322652284, blue: 0.9322652284, alpha: 1)
         
         setupNavigation()
         
         collectionView.register(ProfileCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.contentInset = UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16)
+        collectionView.allowsMultipleSelection = true
         
-        fetchCurrentUser()
-        
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "pull to refresh")
+        refreshControl.addTarget(self, action: #selector(handleRefreshPage), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
+    }
+    
+    @objc fileprivate func handleRefreshPage(refreshControl: UIRefreshControl) {
+        guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+        mainTabBarController.setupViewControllers()
+        refreshControl.endRefreshing()
     }
     
     fileprivate let hud = JGProgressHUD(style: .dark)
@@ -50,10 +61,17 @@ class MainController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
     
     fileprivate func fetchUsersFromFirestore() {
         
+//        let seekingGender = user?.genderSeeking ?? EditProfileController.defaultSeekingGender
         let minAge = user?.minSeekingAge ?? EditProfileController.defaultMinSeekingAge
         let maxAge = user?.maxSeekingAge ?? EditProfileController.defaultMaxSeekingAge
         
         let query = Firestore.firestore().collection("users").whereField("age", isGreaterThanOrEqualTo: minAge).whereField("age", isLessThanOrEqualTo: maxAge)
+        
+//        if seekingGender == "All" {
+//            query.whereField("genderSeeking", isEqualTo: "All")
+//        } else {
+//            query.whereField("gender", isEqualTo: seekingGender)
+//        }
         
         query.getDocuments { (snapshot, err) in
             self.hud.dismiss()
@@ -79,13 +97,13 @@ class MainController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
     }
-    
+    lazy var functions = Functions.functions()
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ProfileCell
         cell.user = users[indexPath.item]
         cell.delegate = self
         cell.cosmosView.didTouchCosmos = { rating in
-                        print("Rated: \(rating)")
+            print("Rated: \(rating)")
             
             guard let cardUID = cell.user?.uid else { return }
             print(cardUID)
@@ -101,21 +119,19 @@ class MainController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
             cell.cosmosView.isUserInteractionEnabled = false
             self.hud.textLabel.text = "Submitted"
             self.hud.show(in: self.view)
-            self.hud.dismiss(afterDelay: 1)
+            self.hud.dismiss(afterDelay: 0.5)
         }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSize(width: view.frame.width - 32, height: view.frame.height / 4 * 3)
+        return CGSize(width: view.frame.width - 56, height: view.frame.height / 4 * 3)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 32
     }
-    
-    lazy var functions = Functions.functions()
     
     let navProfileView = UIImageView(cornerRadius: 20)
     
@@ -125,8 +141,6 @@ class MainController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.view.backgroundColor = #colorLiteral(red: 0.9585977157, green: 0.9585977157, blue: 0.9585977157, alpha: 1)
-//        navigationController?.navigationBar.isTranslucent = false
-        
 //        setupNavProfileView()
         
     }
@@ -156,13 +170,18 @@ class MainController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
     }
     
     func didTapChat(user: User) {
-        let chatRequestController = MarketPlaceController()
+        let chatRequestController = ChatRequestController()
         chatRequestController.user = user
         let navController = UINavigationController(rootViewController: chatRequestController)
         present(navController, animated: true)
     }
     
-    
+    func didTapProfileImage(user: User) {
+        
+        let userDetailController = UserDetailController()
+        userDetailController.user = user
+        present(userDetailController, animated: true)        
+    }
     
 
 }

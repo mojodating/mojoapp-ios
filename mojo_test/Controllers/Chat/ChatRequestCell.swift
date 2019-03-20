@@ -52,7 +52,6 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     }
     
     func didTapCell(conversation: Conversation) {
-        print("passing from second layer")
         let conversation = conversation
         delegate?.didTapCell(conversation: conversation)
     }
@@ -72,8 +71,7 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     
     lazy var menuBar: MenuBar = {
         let mb = MenuBar()
-        mb.chatRequestCell = self
-        
+        mb.chatRequestCell = self        
         return mb
     }()
     

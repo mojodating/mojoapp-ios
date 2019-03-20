@@ -155,8 +155,8 @@ class SendChatRequestController: UIViewController {
     let priceLabel = UILabel(text: ".. Jo", font: .systemFont(ofSize: 18, weight: .medium))
     let descriptionLabel = UILabel(text: "Description", font: .systemFont(ofSize: 16))
     
-    let inputTextView: MarketPlaceInputTextView = {
-        let textView = MarketPlaceInputTextView()
+    let inputTextView: ChatRequestInputTextView = {
+        let textView = ChatRequestInputTextView()
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.layer.cornerRadius = 4
         textView.backgroundColor = #colorLiteral(red: 0.9518757931, green: 0.9518757931, blue: 0.9518757931, alpha: 1)
@@ -191,7 +191,6 @@ class SendChatRequestController: UIViewController {
         let topupController = TopUpController()
         topupController.user = self.user
         navigationController?.pushViewController(topupController, animated: true)
-        
     }
 
     

@@ -1,5 +1,5 @@
 //
-//  SignupPasswordController.swift
+//  SignupEmailController.swift
 //  mojo_test
 //
 //  Created by Yunyun Chen on 1/22/19.
@@ -8,14 +8,15 @@
 
 import UIKit
 
-class SignupPasswordController: UIViewController {
-
+class SignupEmailController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupLayout()
         
         setupTapGesture()
+        
     }
     
     fileprivate func setupTapGesture() {
@@ -44,16 +45,28 @@ class SignupPasswordController: UIViewController {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Set up a password"
+        label.text = "Sign up Mojo"
         label.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         return label
     }()
     
     let emailTextField: UITextField = {
         let tf = UITextField()
-        tf.placeholder = "Password"
+        tf.placeholder = "Enter your email"
+        tf.keyboardType = .emailAddress
+        tf.addTarget( self, action: #selector(handleTextChange), for: .editingChanged)
         return tf
     }()
+    
+    let registrationViewModel = RegistrationViewModel()
+    
+    @objc fileprivate func handleTextChange(textField: UITextField) {
+        if textField == emailTextField {
+            registrationViewModel.email = textField.text
+            
+        }
+//        checkFormValidity()
+    }
     
     let lineView: UIView = {
         let lv = UIView()
@@ -67,14 +80,28 @@ class SignupPasswordController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
         button.setTitleColor(#colorLiteral(red: 0.8, green: 0.4509803922, blue: 0.8823529412, alpha: 1), for: .normal)
         button.clipsToBounds = true
+        button.isEnabled = true
         button.addTarget(self, action: #selector(handleSignupNext), for: .touchUpInside)
         return button
     }()
     
+    func checkFormValidity() {
+        
+        if emailTextField.text?.isEmpty == false {
+            nextButton.isEnabled = true
+            nextButton.setTitleColor(#colorLiteral(red: 0.8, green: 0.4509803922, blue: 0.8823529412, alpha: 1), for: .normal)
+        } else {
+            nextButton.isEnabled = false
+            nextButton.setTitleColor(#colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1), for: .normal)
+        }
+        
+    }
+    
     @objc fileprivate func handleSignupNext() {
-        let controller = SignupNameController()
+        let controller = SignupPasswordController()
         navigationController?.pushViewController(controller, animated: true)
     }
+
     
 
 }

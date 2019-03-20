@@ -41,29 +41,23 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collectionView.refreshControl = refreshControl
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     fileprivate func setupNavBar() {
         navigationItem.title = "Chat"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.view.backgroundColor = .white
-        navigationController?.navigationBar.isTranslucent = false
     }
     
-    @objc func handleRefreshPage(refreshControl: UIRefreshControl) {
-        
-        // refresh data
+    @objc func handleRefreshPage(refreshControl: UIRefreshControl) {        
         guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
-        
         mainTabBarController.setupViewControllers()
-        
         refreshControl.endRefreshing()
-    }
-    
-    @objc fileprivate func handleFeedbacks() {
-        let controller = FeedbacksController(collectionViewLayout: UICollectionViewFlowLayout())
-        navigationController?.pushViewController(controller, animated: true)
-        
     }
 
     

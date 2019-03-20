@@ -33,3 +33,11 @@ extension UIButton {
         self.titleLabel?.font = font
     }
 }
+
+extension Date {
+    static func StringFromCustomDate(costumDate: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM d, yy, h:mm a"
+        return dateFormatter.string(from: costumDate)
+    }
+}

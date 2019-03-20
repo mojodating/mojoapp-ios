@@ -85,7 +85,6 @@ import SDWebImage
                 } else {
                     self.user?.imageUrl6 = url?.absoluteString
                 }
-                    
             })
         }
     }
@@ -103,14 +102,19 @@ import SDWebImage
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setupNavigationItem()
+        
         fetchCurrentUser()
+        setupNavigationItem()
         setupTapGesture()
         setupLogout()
         
         tableView.keyboardDismissMode = .interactive
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchCurrentUser()
     }
     
     fileprivate func setupLogout() {
@@ -199,6 +203,12 @@ import SDWebImage
 
     }
     
+    let delete1Button = UIButton(title: "Delete", cornerRadius: 0, font: .systemFont(ofSize: 14))
+    let delete2Button = UIButton(title: "Delete", cornerRadius: 0, font: .systemFont(ofSize: 14))
+    let delete3Button = UIButton(title: "Delete", cornerRadius: 0, font: .systemFont(ofSize: 14))
+    let delete4Button = UIButton(title: "Delete", cornerRadius: 0, font: .systemFont(ofSize: 14))
+    let delete5Button = UIButton(title: "Delete", cornerRadius: 0, font: .systemFont(ofSize: 14))
+    let delete6Button = UIButton(title: "Delete", cornerRadius: 0, font: .systemFont(ofSize: 14))
     
     lazy var header: UIView = {
         let header = UIView()
@@ -213,13 +223,27 @@ import SDWebImage
         photoRow1StackView.anchor(top: header.topAnchor, leading: header.leadingAnchor, bottom: nil, trailing: header.trailingAnchor, padding: .init(top: padding, left: padding, bottom: padding, right: padding))
         photoRow1StackView.heightAnchor.constraint(equalToConstant: 200).isActive = true
         
+        let deleteButtonStackView = UIStackView(arrangedSubviews: [
+            delete1Button, delete2Button, delete3Button
+            ])
+        deleteButtonStackView.distribution = .fillEqually
+        header.addSubview(deleteButtonStackView)
+        deleteButtonStackView.anchor(top: photoRow1StackView.bottomAnchor, leading: header.leadingAnchor, bottom: nil, trailing: header.trailingAnchor)
+        
         let photoRow2StackView = UIStackView(arrangedSubviews: [image4Button, image5Button, image6Button])
         photoRow2StackView.distribution = .fillEqually
         photoRow2StackView.spacing = padding
         
         header.addSubview(photoRow2StackView)
-        photoRow2StackView.anchor(top: photoRow1StackView.bottomAnchor, leading: header.leadingAnchor, bottom: nil, trailing: header.trailingAnchor, padding: .init(top: padding, left: padding, bottom: padding, right: padding))
+        photoRow2StackView.anchor(top: deleteButtonStackView.bottomAnchor, leading: header.leadingAnchor, bottom: nil, trailing: header.trailingAnchor, padding: .init(top: padding, left: padding, bottom: padding, right: padding))
         photoRow2StackView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        let deleteButton2StackView = UIStackView(arrangedSubviews: [
+            delete4Button, delete5Button, delete6Button
+            ])
+        deleteButton2StackView.distribution = .fillEqually
+        header.addSubview(deleteButton2StackView)
+        deleteButton2StackView.anchor(top: photoRow2StackView.bottomAnchor, leading: header.leadingAnchor, bottom: nil, trailing: header.trailingAnchor)
         
         let separatorView = UIView()
         separatorView.backgroundColor = #colorLiteral(red: 0.9319355397, green: 0.9319355397, blue: 0.9319355397, alpha: 1)
@@ -227,8 +251,163 @@ import SDWebImage
         separatorView.anchor(top: nil, leading: header.leadingAnchor, bottom: header.bottomAnchor, trailing: header.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
         separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
         
+        delete1Button.addTarget(self, action: #selector(deletePhoto1), for: .touchUpInside)
+        delete2Button.addTarget(self, action: #selector(deletePhoto2), for: .touchUpInside)
+        delete3Button.addTarget(self, action: #selector(deletePhoto3), for: .touchUpInside)
+        delete4Button.addTarget(self, action: #selector(deletePhoto4), for: .touchUpInside)
+        delete5Button.addTarget(self, action: #selector(deletePhoto5), for: .touchUpInside)
+        delete6Button.addTarget(self, action: #selector(deletePhoto6), for: .touchUpInside)
+        
         return header
     }()
+    
+    let uid = Auth.auth().currentUser?.uid
+    
+    @objc fileprivate func deletePhoto1() {
+        
+        let imageData: [String: Any] = [
+            "imageUrl1": self.user?.imageUrl2 ?? "",
+            "imageUrl2": self.user?.imageUrl3 ?? "",
+            "imageUrl3": self.user?.imageUrl4 ?? "",
+            "imageUrl4": self.user?.imageUrl5 ?? "",
+            "imageUrl5": self.user?.imageUrl6 ?? "",
+            "imageUrl6": FieldValue.delete(),
+            ]
+        
+        Firestore.firestore().collection("users").document(uid!)
+        .updateData(imageData) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = "Deleting Photo"
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 1)
+                }
+        }
+        
+        fetchCurrentUser()
+        
+    }
+    
+    @objc fileprivate func deletePhoto2() {
+        
+        let imageData: [String: Any] = [
+            "imageUrl2": self.user?.imageUrl3 ?? "",
+            "imageUrl3": self.user?.imageUrl4 ?? "",
+            "imageUrl4": self.user?.imageUrl5 ?? "",
+            "imageUrl5": self.user?.imageUrl6 ?? "",
+            "imageUrl6": FieldValue.delete(),
+            ]
+        
+        Firestore.firestore().collection("users").document(uid!)
+            .updateData(imageData) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = "Deleting Photo"
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 1)
+                }
+        }
+        
+        fetchCurrentUser()
+        
+    }
+    
+    @objc fileprivate func deletePhoto3() {
+        
+        let imageData: [String: Any] = [
+            "imageUrl3": self.user?.imageUrl4 ?? "",
+            "imageUrl4": self.user?.imageUrl5 ?? "",
+            "imageUrl5": self.user?.imageUrl6 ?? "",
+            "imageUrl6": FieldValue.delete(),
+            ]
+        
+        Firestore.firestore().collection("users").document(uid!)
+            .updateData(imageData) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = "Deleting Photo"
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 1)
+                    self.fetchCurrentUser()
+                }
+        }
+    }
+    
+    @objc fileprivate func deletePhoto4() {
+        
+        let imageData: [String: Any] = [
+            "imageUrl4": self.user?.imageUrl5 ?? "",
+            "imageUrl5": self.user?.imageUrl6 ?? "",
+            "imageUrl6": FieldValue.delete(),
+            ]
+        
+        Firestore.firestore().collection("users").document(uid!)
+            .updateData(imageData) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = "Deleting Photo"
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 1)
+                }
+        }
+        
+        fetchCurrentUser()
+        
+    }
+    
+    @objc fileprivate func deletePhoto5() {
+        
+        let imageData: [String: Any] = [
+            "imageUrl5": self.user?.imageUrl6 ?? "",
+            "imageUrl6": FieldValue.delete(),
+            ]
+        
+        Firestore.firestore().collection("users").document(uid!)
+            .updateData(imageData) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = "Deleting Photo"
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 1)
+                }
+        }
+        
+        fetchCurrentUser()
+        
+    }
+    
+    @objc fileprivate func deletePhoto6() {
+        
+        let imageData: [String: Any] = [
+            "imageUrl6": FieldValue.delete(),
+            ]
+        
+        Firestore.firestore().collection("users").document(uid!)
+            .updateData(imageData) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    let hud = JGProgressHUD(style: .dark)
+                    hud.textLabel.text = "Deleting Photo"
+                    hud.show(in: self.view)
+                    hud.dismiss(afterDelay: 1)
+                }
+        }
+        
+        fetchCurrentUser()
+        
+    }
+    
     
     class HeaderLabel: UILabel {
         override func drawText(in rect: CGRect) {
@@ -244,7 +423,7 @@ import SDWebImage
         let headerLabel = HeaderLabel()
         switch section {
         case 1:
-            headerLabel.text = "Full name"
+            headerLabel.text = "Name"
         case 2:
             headerLabel.text = "Age"
         case 3:
@@ -267,7 +446,7 @@ import SDWebImage
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if section == 0 {
-            return 450
+            return 500
         }
         return 40
     }
@@ -306,6 +485,7 @@ import SDWebImage
     
     static let defaultMinSeekingAge = 18
     static let defaultMaxSeekingAge = 50
+    static let defaultSeekingGender = "All"
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -325,23 +505,20 @@ import SDWebImage
             ageRangeCell.maxSlider.value = Float(maxAge)
             return ageRangeCell
         }
-        
-        if indexPath.section == 5 {
-            let locationCell = EditProfileSelectionCell(style: .default, reuseIdentifier: nil)
-            
-            return locationCell
-        }
+    
         
         if indexPath.section == 6 {
             let genderCell = EditProfileSelectionCell(style: .default, reuseIdentifier: nil)
-            genderCell.arrowButton.addTarget(self, action: #selector(handleChooseGender), for: .touchUpInside)
-            
+            genderCell.button.addTarget(self, action: #selector(handleChooseGender), for: .touchUpInside)
+            genderCell.button.setTitle(user?.gender ?? "Select gender", for: .normal)
             return genderCell
         }
 
         if indexPath.section == 7 {
-            let genderPrederenceCell = EditProfileSelectionCell(style: .default, reuseIdentifier: nil)
-            return genderPrederenceCell
+            let genderSeekingCell = EditProfileSelectionCell(style: .default, reuseIdentifier: nil)
+            genderSeekingCell.button.addTarget(self, action: #selector(handleGenderSeeking), for: .touchUpInside)
+            genderSeekingCell.button.setTitle(user?.genderSeeking ?? "Select...", for: .normal)
+            return genderSeekingCell
         }
 
         let cell = EditProfileCell(style: .default, reuseIdentifier: nil)
@@ -365,6 +542,10 @@ import SDWebImage
             cell.textField.placeholder = "Enter your school"
             cell.textField.text = user?.school
             cell.textField.addTarget(self, action: #selector(handleSchoolChange), for: .editingChanged)
+        case 5:
+            cell.textField.placeholder = "City, Country"
+            cell.textField.text = user?.location
+            cell.textField.addTarget(self, action: #selector(handleLocationChange), for: .editingChanged)
         default:
             print("")
         }
@@ -377,13 +558,15 @@ import SDWebImage
         self.dismiss(animated: true)
     }
     
-    
     @objc fileprivate func handleChooseGender() {
-        
         let genderSelctionController = GenderSelectionController()
-        
         navigationController?.pushViewController(genderSelctionController, animated: true)
     }
+    @objc fileprivate func handleGenderSeeking() {
+        let genderSeekingController = GenderSeekingController()
+        navigationController?.pushViewController(genderSeekingController, animated: true)
+    }
+    
     
     @objc fileprivate func handleNameChange(textField: UITextField) {
         self.user?.name = textField.text
@@ -397,8 +580,7 @@ import SDWebImage
     @objc fileprivate func handleSchoolChange(textField: UITextField) {
         self.user?.school = textField.text
     }
-    
-    @objc fileprivate func handleCountryChange(textField: UITextField) {
+    @objc fileprivate func handleLocationChange(textField: UITextField) {
         self.user?.location = textField.text
     }
 
@@ -411,9 +593,7 @@ import SDWebImage
         self.dismiss(animated: true)
     }
     
-    
     @objc fileprivate func handleSave() {
-        print("saving our settings")
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let docData: [String: Any] = [
             "uid": uid,
@@ -427,6 +607,8 @@ import SDWebImage
             "imageUrl6": user?.imageUrl6 ?? "",
             "profession": user?.profession ?? "",
             "school": user?.school ?? "",
+            "gender": user?.gender ?? "",
+            "location": user?.location ?? "",
             "minSeekingAge": user?.minSeekingAge ?? -1,
             "maxSeekingAge":user?.maxSeekingAge ?? -1
             
@@ -445,11 +627,11 @@ import SDWebImage
             }
             print ("Finished saving user info")
                 print ("dismissal complete")
-     
+
                 guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
-                
+
                 mainTabBarController.setupViewControllers()
-                
+
                 self.dismiss(animated: true, completion: {
                     self.delegate?.didSaveProfile()
                 })

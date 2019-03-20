@@ -22,10 +22,30 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
         
         setupNavigationBar()
         
-        fetchGifts()
+        fetchCurrentUser()
         
         collectionView.register(WalletHeaderCell.self, forCellWithReuseIdentifier: headerCellId)
-        collectionView.register(GiftCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(UserGiftCell.self, forCellWithReuseIdentifier: cellId)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        gifts.removeAll()
+        fetchGifts()
+    }
+    
+    var user: User?
+    fileprivate func fetchCurrentUser() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        Firestore.firestore().collection("users").document(uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print(err)
+                return
+            }
+            
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
+        }
     }
     
     var gifts = [Gift]()
@@ -41,7 +61,6 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
                         let giftType = document.data()
                         let gift = Gift(giftType: giftType)
                         self.gifts.append(gift)
-                        
                         self.collectionView.reloadData()
                     }
                 }
@@ -64,20 +83,25 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.section == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! GiftCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UserGiftCell
             
             let gift = gifts[indexPath.item]
             let imageUrl = gift.imageUrl
-            cell.giftImageView.loadImageUsingCacheWithUrlString(urlString: imageUrl)
+            if let imageUrl = URL(string: imageUrl) {
+                cell.giftImageView.sd_setImage(with: imageUrl)
+            }
             cell.nameLabel.text = gift.name
             
             return cell
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: headerCellId, for: indexPath) as! WalletHeaderCell
+        
         cell.accountButton.addTarget(self, action: #selector(handleAccount), for: .touchUpInside)
         cell.topUpButton.addTarget(self, action: #selector(handleTopup), for: .touchUpInside)
         cell.freeTokenButton.addTarget(self, action: #selector(handleFreeToken), for: .touchUpInside)
+        
+        
         return cell
     }
     
@@ -104,12 +128,35 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
         return 1
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.section != 0 {
+            collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+            let gift = gifts[indexPath.row]
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+            
+            alertController.addAction(UIAlertAction(title: "Send to ..", style: .default, handler: { (_) in
+                let sendGiftController = SendGiftController()
+                sendGiftController.gift = gift
+                self.navigationController?.pushViewController(sendGiftController, animated: true)
+            }))
+            
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            
+            present(alertController, animated: true, completion: nil)
+        }
+        
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        if indexPath.section != 0 {
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = .clear
+        }
+    }
+    
     
     fileprivate func setupNavigationBar() {
         self.navigationItem.title = "Wallet"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Transactions", style: .plain, target: self, action: #selector(handleTransaction))        
-        // nav background color
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.view.backgroundColor = .white
@@ -117,6 +164,7 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
   
     @objc fileprivate func handleAccount() {
         let walletAccountController = WalletAccountController()
+        walletAccountController.user = self.user
         navigationController?.pushViewController(walletAccountController, animated: true)
     }
     @objc fileprivate func handleTopup() {
@@ -126,6 +174,7 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     @objc fileprivate func handleFreeToken() {
         let inviteNewUserController = InviteNewUserController()
+        inviteNewUserController.user = self.user
         navigationController?.pushViewController(inviteNewUserController, animated: true)
     }
 

@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8817623F222BC4BB00743689 /* GenderSeekingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8817623E222BC4BB00743689 /* GenderSeekingController.swift */; };
+		8817624122308D6C00743689 /* PrivateChatDateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8817624022308D6C00743689 /* PrivateChatDateHeaderView.swift */; };
+		881762432234BE5600743689 /* UserDetailOldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762422234BE5500743689 /* UserDetailOldController.swift */; };
+		881762452235B22F00743689 /* ChatRequestInputAccessaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762442235B22F00743689 /* ChatRequestInputAccessaryView.swift */; };
+		881762472235BE8300743689 /* GiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762462235BE8300743689 /* GiftCell.swift */; };
+		881762492235EF5E00743689 /* GiftHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762482235EF5E00743689 /* GiftHeaderCell.swift */; };
+		881762512236F25F00743689 /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762502236F25F00743689 /* UserDetailController.swift */; };
+		881762532236F2CA00743689 /* UserDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762522236F2CA00743689 /* UserDetailHeaderCell.swift */; };
+		881762552236F3FE00743689 /* UserDetailInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762542236F3FE00743689 /* UserDetailInfoCell.swift */; };
 		8819A38D221CF5CF00A65758 /* HorizontalSnappingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8819A38C221CF5CF00A65758 /* HorizontalSnappingController.swift */; };
+		8829C51D223B17F8001D2044 /* ChatRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C51C223B17F8001D2044 /* ChatRequestController.swift */; };
+		8829C51F22400053001D2044 /* TransactionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C51E22400052001D2044 /* TransactionsController.swift */; };
+		8829C521224005EA001D2044 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C520224005EA001D2044 /* TransactionCell.swift */; };
+		8829C52322400C4A001D2044 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C52222400C4A001D2044 /* Transaction.swift */; };
+		8829C52522402CB1001D2044 /* SendGiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C52422402CB1001D2044 /* SendGiftController.swift */; };
+		8829C52722404095001D2044 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C52622404095001D2044 /* ContactCell.swift */; };
 		8870C52B21F7244400B03F98 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C52A21F7244400B03F98 /* Message.swift */; };
 		8870C52E21F7252900B03F98 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C52D21F7252900B03F98 /* MessageCell.swift */; };
 		8870C53021F7454800B03F98 /* SignupEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C52F21F7454800B03F98 /* SignupEmailController.swift */; };
@@ -18,13 +33,12 @@
 		8870C53A21FB1A7700B03F98 /* ChatInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */; };
 		8870C53C21FB87CC00B03F98 /* ChatInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */; };
 		8870C53E21FC272F00B03F98 /* InviteNewUserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */; };
-		8870C540220035B700B03F98 /* MarketPlaceInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */; };
+		8870C540220035B700B03F98 /* ChatRequestInputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C53F220035B700B03F98 /* ChatRequestInputTextView.swift */; };
 		8870C54222003F3E00B03F98 /* UserReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54122003F3E00B03F98 /* UserReviewCell.swift */; };
 		8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */; };
 		8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */; };
-		8870C54822041D1200B03F98 /* GiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54722041D1200B03F98 /* GiftCell.swift */; };
+		8870C54822041D1200B03F98 /* UserGiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54722041D1200B03F98 /* UserGiftCell.swift */; };
 		8870C54A2204A67100B03F98 /* SlidingMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C5492204A67100B03F98 /* SlidingMenuController.swift */; };
-		8870C54D220600C900B03F98 /* BaseSlidingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54C220600C900B03F98 /* BaseSlidingController.swift */; };
 		8870C54F2206168A00B03F98 /* CustomMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54E2206168A00B03F98 /* CustomMenuHeaderView.swift */; };
 		8870C55322062C5A00B03F98 /* SlidingMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */; };
 		8870C5552207895500B03F98 /* EditProfileSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */; };
@@ -136,7 +150,22 @@
 		3A9154023E1BDE2B631D4978 /* Pods-mojo_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_test.release.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_test/Pods-mojo_test.release.xcconfig"; sourceTree = "<group>"; };
 		3B92FAC75E98011E271C4321 /* Pods_mojo_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8817623E222BC4BB00743689 /* GenderSeekingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSeekingController.swift; sourceTree = "<group>"; };
+		8817624022308D6C00743689 /* PrivateChatDateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateChatDateHeaderView.swift; sourceTree = "<group>"; };
+		881762422234BE5500743689 /* UserDetailOldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailOldController.swift; sourceTree = "<group>"; };
+		881762442235B22F00743689 /* ChatRequestInputAccessaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestInputAccessaryView.swift; sourceTree = "<group>"; };
+		881762462235BE8300743689 /* GiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCell.swift; sourceTree = "<group>"; };
+		881762482235EF5E00743689 /* GiftHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftHeaderCell.swift; sourceTree = "<group>"; };
+		881762502236F25F00743689 /* UserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
+		881762522236F2CA00743689 /* UserDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailHeaderCell.swift; sourceTree = "<group>"; };
+		881762542236F3FE00743689 /* UserDetailInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailInfoCell.swift; sourceTree = "<group>"; };
 		8819A38C221CF5CF00A65758 /* HorizontalSnappingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingController.swift; sourceTree = "<group>"; };
+		8829C51C223B17F8001D2044 /* ChatRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestController.swift; sourceTree = "<group>"; };
+		8829C51E22400052001D2044 /* TransactionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsController.swift; sourceTree = "<group>"; };
+		8829C520224005EA001D2044 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		8829C52222400C4A001D2044 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		8829C52422402CB1001D2044 /* SendGiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendGiftController.swift; sourceTree = "<group>"; };
+		8829C52622404095001D2044 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		8870C52A21F7244400B03F98 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8870C52D21F7252900B03F98 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		8870C52F21F7454800B03F98 /* SignupEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEmailController.swift; sourceTree = "<group>"; };
@@ -147,13 +176,12 @@
 		8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputAccessoryView.swift; sourceTree = "<group>"; };
 		8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputTextView.swift; sourceTree = "<group>"; };
 		8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteNewUserController.swift; sourceTree = "<group>"; };
-		8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketPlaceInputTextView.swift; sourceTree = "<group>"; };
+		8870C53F220035B700B03F98 /* ChatRequestInputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestInputTextView.swift; sourceTree = "<group>"; };
 		8870C54122003F3E00B03F98 /* UserReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviewCell.swift; sourceTree = "<group>"; };
 		8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPollCell.swift; sourceTree = "<group>"; };
 		8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailFeedbackController.swift; sourceTree = "<group>"; };
-		8870C54722041D1200B03F98 /* GiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCell.swift; sourceTree = "<group>"; };
+		8870C54722041D1200B03F98 /* UserGiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGiftCell.swift; sourceTree = "<group>"; };
 		8870C5492204A67100B03F98 /* SlidingMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuController.swift; sourceTree = "<group>"; };
-		8870C54C220600C900B03F98 /* BaseSlidingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlidingController.swift; sourceTree = "<group>"; };
 		8870C54E2206168A00B03F98 /* CustomMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuHeaderView.swift; sourceTree = "<group>"; };
 		8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuCell.swift; sourceTree = "<group>"; };
 		8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSelectionCell.swift; sourceTree = "<group>"; };
@@ -277,12 +305,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8870C54B220600AE00B03F98 /* Menu base */ = {
+		8829C52A224189E7001D2044 /* Registration new UI */ = {
 			isa = PBXGroup;
 			children = (
-				8870C54C220600C900B03F98 /* BaseSlidingController.swift */,
+				88A3D6E621F5D40D008286BC /* SignupMainController.swift */,
+				8870C52F21F7454800B03F98 /* SignupEmailController.swift */,
+				8870C53121F74D2700B03F98 /* SignupPasswordController.swift */,
+				8870C53321F74E4F00B03F98 /* SignupNameController.swift */,
+				8870C53521F74EF000B03F98 /* SignupPhotoController.swift */,
+				88A3D6E821F5DEAD008286BC /* NewLoginController.swift */,
 			);
-			path = "Menu base";
+			path = "Registration new UI";
 			sourceTree = "<group>";
 		};
 		8870C55622088C0100B03F98 /* Edit Profile */ = {
@@ -290,6 +323,7 @@
 			children = (
 				8897462E21B8C3B500DBF6F6 /* EditProfileController.swift */,
 				8870C55722088CD500B03F98 /* GenderSelectionController.swift */,
+				8817623E222BC4BB00743689 /* GenderSeekingController.swift */,
 				88C6A46C2226117300703EBD /* LogoutCell.swift */,
 			);
 			path = "Edit Profile";
@@ -301,12 +335,13 @@
 				88AC695F21C83796006E0559 /* Home */,
 				889E0FF021E3E8A600A74140 /* Digital goods */,
 				889E0FEF21E170F500A74140 /* Inhouse */,
+				88AC695521C71C65006E0559 /* Registration */,
+				8897463421BDB15E00DBF6F6 /* Login */,
+				8829C52A224189E7001D2044 /* Registration new UI */,
 				889E0FEA21DD7A2500A74140 /* User Profile */,
 				88AC696A21CDB848006E0559 /* Wallet */,
-				88AC695521C71C65006E0559 /* Registration */,
 				889746A821C44AE300DBF6F6 /* Chat */,
 				88A3D6E321F5C939008286BC /* Feedbacks */,
-				8897463421BDB15E00DBF6F6 /* Login */,
 				8897462A21B7526000DBF6F6 /* Bindable.swift */,
 				8897463E21C194D600DBF6F6 /* MainTabBarController.swift */,
 				8870C56B2217291200B03F98 /* BaseListController.swift */,
@@ -337,7 +372,8 @@
 				88AC696821CD8697006E0559 /* HouseUserProfileButton.swift */,
 				8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */,
 				8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */,
-				8870C53F220035B700B03F98 /* MarketPlaceInputTextView.swift */,
+				8870C53F220035B700B03F98 /* ChatRequestInputTextView.swift */,
+				881762442235B22F00743689 /* ChatRequestInputAccessaryView.swift */,
 				8870C54E2206168A00B03F98 /* CustomMenuHeaderView.swift */,
 				8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */,
 				8870C5652213B32100B03F98 /* VerticalStackView.swift */,
@@ -353,6 +389,7 @@
 				88A3D6D221EE47ED008286BC /* Conversation.swift */,
 				8870C52A21F7244400B03F98 /* Message.swift */,
 				8870C55B220A58F600B03F98 /* Gift.swift */,
+				8829C52222400C4A001D2044 /* Transaction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -370,7 +407,6 @@
 			children = (
 				8897463521BDB24E00DBF6F6 /* LoginController.swift */,
 				8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */,
-				88A3D6E821F5DEAD008286BC /* NewLoginController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -388,6 +424,7 @@
 				88A3D6DD21F0D267008286BC /* SentFeedCell.swift */,
 				8870C52D21F7252900B03F98 /* MessageCell.swift */,
 				8870C53721FB039000B03F98 /* RequestMessageCell.swift */,
+				8817624022308D6C00743689 /* PrivateChatDateHeaderView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -405,9 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				8870C55622088C0100B03F98 /* Edit Profile */,
-				8870C54B220600AE00B03F98 /* Menu base */,
 				88AC696221C874BD006E0559 /* UserProfileController.swift */,
-				8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */,
 				8870C5492204A67100B03F98 /* SlidingMenuController.swift */,
 				8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */,
 			);
@@ -450,11 +485,6 @@
 			children = (
 				8897462021B6FAD800DBF6F6 /* RegistrationController.swift */,
 				8897462621B7325300DBF6F6 /* RegistrationViewModel.swift */,
-				88A3D6E621F5D40D008286BC /* SignupMainController.swift */,
-				8870C52F21F7454800B03F98 /* SignupEmailController.swift */,
-				8870C53121F74D2700B03F98 /* SignupPasswordController.swift */,
-				8870C53321F74E4F00B03F98 /* SignupNameController.swift */,
-				8870C53521F74EF000B03F98 /* SignupPhotoController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -466,6 +496,13 @@
 				88AC696021C83802006E0559 /* SwipingPhotosController.swift */,
 				8870C5672214C72D00B03F98 /* MainController.swift */,
 				8870C5692215D73000B03F98 /* ProfileCell.swift */,
+				881762422234BE5500743689 /* UserDetailOldController.swift */,
+				881762462235BE8300743689 /* GiftCell.swift */,
+				881762482235EF5E00743689 /* GiftHeaderCell.swift */,
+				881762502236F25F00743689 /* UserDetailController.swift */,
+				881762522236F2CA00743689 /* UserDetailHeaderCell.swift */,
+				881762542236F3FE00743689 /* UserDetailInfoCell.swift */,
+				8829C51C223B17F8001D2044 /* ChatRequestController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -475,9 +512,14 @@
 			children = (
 				88AC696B21CDB873006E0559 /* WalletController.swift */,
 				8870C56322135DEE00B03F98 /* WalletHeaderCell.swift */,
-				8870C54722041D1200B03F98 /* GiftCell.swift */,
+				8870C53D21FC272F00B03F98 /* InviteNewUserController.swift */,
+				8870C54722041D1200B03F98 /* UserGiftCell.swift */,
 				88F3903A21E76EB30070096E /* TopUpController.swift */,
 				88A3D6E121F1F8A6008286BC /* WalletAccountController.swift */,
+				8829C51E22400052001D2044 /* TransactionsController.swift */,
+				8829C520224005EA001D2044 /* TransactionCell.swift */,
+				8829C52422402CB1001D2044 /* SendGiftController.swift */,
+				8829C52622404095001D2044 /* ContactCell.swift */,
 			);
 			path = Wallet;
 			sourceTree = "<group>";
@@ -800,13 +842,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8870C540220035B700B03F98 /* MarketPlaceInputTextView.swift in Sources */,
+				8870C540220035B700B03F98 /* ChatRequestInputTextView.swift in Sources */,
 				8870C54A2204A67100B03F98 /* SlidingMenuController.swift in Sources */,
-				8870C54822041D1200B03F98 /* GiftCell.swift in Sources */,
+				8870C54822041D1200B03F98 /* UserGiftCell.swift in Sources */,
 				8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */,
+				881762432234BE5600743689 /* UserDetailOldController.swift in Sources */,
+				881762492235EF5E00743689 /* GiftHeaderCell.swift in Sources */,
+				8829C51F22400053001D2044 /* TransactionsController.swift in Sources */,
 				8897462B21B7526000DBF6F6 /* Bindable.swift in Sources */,
+				8829C52722404095001D2044 /* ContactCell.swift in Sources */,
 				8897461721B47C8C00DBF6F6 /* CardView.swift in Sources */,
 				889E0FEE21E165F700A74140 /* WelcomeController.swift in Sources */,
+				8829C51D223B17F8001D2044 /* ChatRequestController.swift in Sources */,
+				8817623F222BC4BB00743689 /* GenderSeekingController.swift in Sources */,
 				8819A38D221CF5CF00A65758 /* HorizontalSnappingController.swift in Sources */,
 				8870C56E22173A0300B03F98 /* Extensions + layout.swift in Sources */,
 				8897462721B7325300DBF6F6 /* RegistrationViewModel.swift in Sources */,
@@ -818,7 +866,6 @@
 				88A3D6DE21F0D267008286BC /* SentFeedCell.swift in Sources */,
 				8891671721B0F8E4000267F7 /* HomeController.swift in Sources */,
 				88A3D6D521EFA6DF008286BC /* AfterPurchaseController.swift in Sources */,
-				8870C54D220600C900B03F98 /* BaseSlidingController.swift in Sources */,
 				8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */,
 				88A3D6E721F5D40D008286BC /* SignupMainController.swift in Sources */,
 				8870C55C220A58F600B03F98 /* Gift.swift in Sources */,
@@ -827,15 +874,19 @@
 				88A3D6E521F5C979008286BC /* FeedbacksController.swift in Sources */,
 				88AC696321C874BD006E0559 /* UserProfileController.swift in Sources */,
 				88AC696921CD8697006E0559 /* HouseUserProfileButton.swift in Sources */,
+				881762552236F3FE00743689 /* UserDetailInfoCell.swift in Sources */,
+				8829C521224005EA001D2044 /* TransactionCell.swift in Sources */,
 				88AC696121C83802006E0559 /* SwipingPhotosController.swift in Sources */,
 				88C6A46D2226117300703EBD /* LogoutCell.swift in Sources */,
 				88AC695A21C72F9F006E0559 /* Extensions+Catches.swift in Sources */,
 				8897462F21B8C3B500DBF6F6 /* EditProfileController.swift in Sources */,
 				8897463321B9F55700DBF6F6 /* AgeRangeCell.swift in Sources */,
 				8897463F21C194D600DBF6F6 /* MainTabBarController.swift in Sources */,
+				881762472235BE8300743689 /* GiftCell.swift in Sources */,
 				8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */,
 				8870C54F2206168A00B03F98 /* CustomMenuHeaderView.swift in Sources */,
 				8870C5552207895500B03F98 /* EditProfileSelectionCell.swift in Sources */,
+				8829C52522402CB1001D2044 /* SendGiftController.swift in Sources */,
 				8897461A21B4BBA200DBF6F6 /* User.swift in Sources */,
 				8897463A21BEF61300DBF6F6 /* Firebase+Utils.swift in Sources */,
 				8897463D21C0856500DBF6F6 /* MarketPlaceController.swift in Sources */,
@@ -847,12 +898,16 @@
 				88A3D6E921F5DEAD008286BC /* NewLoginController.swift in Sources */,
 				8870C52B21F7244400B03F98 /* Message.swift in Sources */,
 				8870C53C21FB87CC00B03F98 /* ChatInputTextView.swift in Sources */,
+				8817624122308D6C00743689 /* PrivateChatDateHeaderView.swift in Sources */,
+				881762452235B22F00743689 /* ChatRequestInputAccessaryView.swift in Sources */,
+				881762532236F2CA00743689 /* UserDetailHeaderCell.swift in Sources */,
 				8870C53421F74E4F00B03F98 /* SignupNameController.swift in Sources */,
 				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,
 				8870C56C2217291200B03F98 /* BaseListController.swift in Sources */,
 				8870C53221F74D2700B03F98 /* SignupPasswordController.swift in Sources */,
 				8870C53821FB039000B03F98 /* RequestMessageCell.swift in Sources */,
 				8897463621BDB24E00DBF6F6 /* LoginController.swift in Sources */,
+				8829C52322400C4A001D2044 /* Transaction.swift in Sources */,
 				8897469D21C378B700DBF6F6 /* mojo_test.xcdatamodeld in Sources */,
 				8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */,
 				88A3D6DA21F08C28008286BC /* MenuBar.swift in Sources */,
@@ -870,6 +925,7 @@
 				8870C5662213B32100B03F98 /* VerticalStackView.swift in Sources */,
 				88AC695E21C823A2006E0559 /* UserCell.swift in Sources */,
 				889E0FF221E3E8D400A74140 /* MenuCell.swift in Sources */,
+				881762512236F25F00743689 /* UserDetailController.swift in Sources */,
 				88A3D6CF21EE1634008286BC /* PrivateChatController.swift in Sources */,
 				88AC696C21CDB873006E0559 /* WalletController.swift in Sources */,
 				8870C53621F74EF000B03F98 /* SignupPhotoController.swift in Sources */,

@@ -8,11 +8,13 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class PrivateChatController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITextFieldDelegate, ChatInputAccessaryViewDelegate {
     
     let cellId = "cellId"
     let requestCellId = "requestCellId"
+    let headerId = "headerId"
     
     var chatProfileUID: String?
     var conversation : Conversation? {
@@ -36,14 +38,14 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 print(err)
                 return
             }
-            //          fetch our user here
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
             guard let userName = self.user?.name else { return }
-            self.nameTitleButton.setTitle("\(userName) ", for: .normal)
+//            self.nameTitleButton.setTitle("\(userName) ", for: .normal)
+            self.navigationItem.title = userName
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,23 +53,28 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         setupNavigation()
         
-//        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "View profile", style: .plain, target: self, action: #selector(handleViewProfile))
-        
-        setupLayout()
-        
-        collectionView.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
-        collectionView.alwaysBounceVertical = true
-        collectionView.keyboardDismissMode = .interactive
-        
-        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 80, right: 0)
-        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
+        setupCollectionView()
         
         fetchChatPartner()
         
         fetchMessages()
+        
+//        markMessageAsSeen()
     }
     
+    fileprivate func setupNavigation() {
+        
+    }
+    
+    fileprivate func setupCollectionView() {
+        collectionView.register(MessageCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
+        collectionView.alwaysBounceVertical = true
+        collectionView.keyboardDismissMode = .interactive
+        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 80, right: 8)
+        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
+        collectionView.register(PrivateChatDateHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
+    }
     
     @objc fileprivate func handleViewProfile() {
         let viewProfileController = ViewProfileController()
@@ -81,7 +88,8 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
 
         guard let converstionId = self.conversation?.id else { return }
 
-        let ref = Firestore.firestore().collection("conversations").document(converstionId).collection("messages").order(by: "date", descending: false)
+        let ref = Firestore.firestore().collection("conversations").document(converstionId).collection("messages")
+            .order(by: "date", descending: false)
 
         ref.addSnapshotListener { querySnapshot, error in
 
@@ -89,30 +97,84 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 print("Error fetching snapshots: \(error!)")
                 return
             }
+            
             snapshot.documentChanges.forEach { diff in
                 if (diff.type == .added) {
                     
                     let msg = diff.document.data()
                     let message = Message(msg: msg)
-                    
                     self.messages.append(message)
-
                     self.collectionView.reloadData()
                     }
                 }
+//            self.groupMessageByDate()
             }
         }
     
+    fileprivate func markMessageAsSeen() {
+        
+        let messageId = self.messages.last?.id
+        let conversationId = self.conversation?.id ?? ""
+        Firestore.firestore().collection("conversations").document(conversationId).collection("messages"
+            ).document(messageId ?? "")
+            .updateData([
+                "seen": true,
+            ]) { (err) in
+                if let err = err {
+                    print("Failed to mark message", err)
+                    return
+            }
+        }
+    }
+    
+//    var groupedMessages = [[Message]]()
+//
+//    fileprivate func groupMessageByDate() {
+//
+//        let grouped = Dictionary(grouping: messages) { (message) -> Date in
+//            return message.date
+//        }
+//
+//        let sortedKeys = grouped.keys.sorted(by: <)
+//        sortedKeys.forEach { (key) in
+//            let values = grouped[key]
+//            groupedMessages.append(values ?? [])
+//            self.collectionView.reloadData()
+//        }
+//
+//    }
+    
+//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+//        return groupedMessages.count
+//    }
+    
+//    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+//        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! PrivateChatDateHeaderView
+//
+//        if let firstMessageInSection = groupedMessages[indexPath.section].first {
+//            headerView.dateLabel.text = Date.StringFromCustomDate(costumDate: firstMessageInSection.date)
+//        }
+//
+//        return headerView
+//    }
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return groupedMessages[section].count
         return messages.count
     }
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+//        return CGSize(width: 200, height: 40)
+//    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+//        if indexPath.section == 0 && indexPath.row == 0{
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCellId, for: indexPath) as! RequestMessageCell
             
             let message = messages[indexPath.item]
+//            let message = groupedMessages[indexPath.section][indexPath.row]
             
             setupRequestCell(cell: cell, message: message)
             
@@ -127,7 +189,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MessageCell
         
         let message = messages[indexPath.item]
-        
+//        let message = groupedMessages[indexPath.section][indexPath.row]
         cell.chatLogLabel.text = message.text
         
         setupCell(cell: cell, message: message)
@@ -151,26 +213,27 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 self.user = User(dictionary: dictionary)
                 
                 guard let requestorProfileUrl = self.user?.imageUrl1 else {return}
-                cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: requestorProfileUrl)
+                if let requestProfileUrl = URL(string: requestorProfileUrl) {
+                    cell.profileImageView.sd_setImage(with: requestProfileUrl)
+                }
             }
         }
         
 
-        if let giftImageUrl = self.conversation?.drinkImage {
-            cell.giftImageView.loadImageUsingCacheWithUrlString(urlString: giftImageUrl)
+        guard let giftImageUrl = self.conversation?.drinkImage else { return }
+        if let giftImageUrl = URL(string: giftImageUrl) {
+            cell.giftImageView.sd_setImage(with: giftImageUrl)
         }
         cell.bubbleView.backgroundColor = #colorLiteral(red: 0.9518757931, green: 0.9518757931, blue: 0.9518757931, alpha: 1)
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy hh:mm tt"
-        let dateString = dateFormatter.string(from: (message.date))
+        let dateString = Date.StringFromCustomDate(costumDate: message.date)
         
         if message.sender == Auth.auth().currentUser?.uid {
             // purple bubble
             cell.descriptionLabel.text = "You sent this chat request at \(dateString)."
           
         } else {
-            cell.descriptionLabel.text = "By reply you accept the request and the gift. Or reject."
+            cell.descriptionLabel.text = "By reply you accept the request and the gift. Or reject this user and gift."
         }
         
         // fetch gift Info
@@ -181,6 +244,16 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         paragraphStyle.lineSpacing = 4
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
         cell.giftInfoLabel.attributedText = attributedString
+        
+        if collectionView.numberOfSections > 1 {
+            cell.rejectButton.isHidden = true
+        } else {
+            cell.rejectButton.isHidden = false
+            cell.rejectButton.addTarget(self, action: #selector(handleRejectRequest), for: .touchUpInside)
+        }
+    }
+    
+    @objc fileprivate func handleRejectRequest() {
         
     }
     
@@ -214,19 +287,20 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
             
-            guard let senderImageUrl = self.user?.imageUrl1 else {return}
-            cell.profileImageView.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
-        }
-        
+            guard let imageUrl = self.user?.imageUrl1 else {return}
+            if let imageUrl = URL(string: imageUrl) {
+                 cell.profileImageView.sd_setImage(with: imageUrl)
+            }
+        }        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         var height: CGFloat = 150
         
-        height = estimateFrameForText(text: messages[indexPath.item].text).height + 20
+        height = estimateFrameForText(text: messages[indexPath.item].text).height + 36
         
-        if indexPath.row == 0 {
+        if indexPath.section == 0 && indexPath.row == 0 {
             return CGSize(width: view.frame.width, height: height + 240)
         }
 
@@ -271,29 +345,28 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         } else {
             receiverId = conversation?.sender
         }
-    
-        let message = ["text": messageText,
-                       "sender":senderId,
-                       "date":Date().timeIntervalSince1970,
-                       "receiver":receiverId ?? ""
-            ] as [String : Any]
         
         let conversationId = self.conversation?.id ?? ""
         
-        if messageText != "" {
-            Firestore.firestore().collection("conversations").document(conversationId).collection("messages"
-                ).addDocument(data: message) { (err) in
+        let ref = Firestore.firestore().collection("conversations").document(conversationId).collection("messages")
+        
+        let message = ["text": messageText,
+                       "sender":senderId,
+                       "date":Date().timeIntervalSince1970,
+                       "receiver":receiverId ?? "",
+                       ] as [String : Any]
+         if messageText != "" {
+            ref.addDocument(data: message){ (err) in
                     if let err = err {
-                        print("Failed to insert comment:", err)
+                        print("Failed to add message:", err)
                         return
                     }
                     
-                    print("successfully inserted comment.")
+                print("successfully add message.")
                     self.containerView.clearTextField()
             }
         }
     }
-    
     override var inputAccessoryView: UIView? {
         get {
             return containerView
@@ -305,9 +378,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         return true
     }
     
-    fileprivate func setupLayout() {
-        
-    }
 
         let cameraButton: UIButton = {
             let button = UIButton(type: .system)
@@ -328,23 +398,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
 //        didSend(for: messageText)
 //        return true
 //    }
-    
-    let nameTitleButton = UIButton(title: "", cornerRadius: 0, font: .systemFont(ofSize: 18, weight: .semibold))
-    fileprivate func setupNavigation() {
-        nameTitleButton.setTitleColor(.black, for: .normal)
-        nameTitleButton.setImage(#imageLiteral(resourceName: "rightArrow").withRenderingMode(.alwaysOriginal), for: .normal)
-        nameTitleButton.frame = CGRect(x: 0, y: -2, width: 130, height: 20)
-        nameTitleButton.semanticContentAttribute = UIApplication.shared
-            .userInterfaceLayoutDirection == .rightToLeft ? .forceLeftToRight : .forceRightToLeft
-        nameTitleButton.addTarget(self, action: #selector(handleViewProfile), for: .touchUpInside)
-        self.navigationItem.titleView = nameTitleButton
-        
-//        if #available(iOS 11.0, *) {
-//            navigationItem.largeTitleDisplayMode = .never
-//            navigationController?.navigationBar.prefersLargeTitles = false
-//        }
-        
-    }
     
 
 

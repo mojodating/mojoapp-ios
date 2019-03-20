@@ -10,36 +10,25 @@ import UIKit
 
 class EditProfileSelectionCell: UITableViewCell {
     
-    let selectionLabel : UILabel = {
-        let label = UILabel()
-        label.text = "Selection item"
-        label.textColor = .darkGray
-        return label
-    }()
-    
-    let arrowButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(#imageLiteral(resourceName: "select").withRenderingMode(.alwaysOriginal), for: .normal)
-        button.clipsToBounds = true
-        button.contentMode = .scaleAspectFill
-        return button
-    }()
-    
-    
+    let button = UIButton(title: "Choose...   ", cornerRadius: 0, font: .systemFont(ofSize: 18, weight: .regular))
+
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         
         setupLayout()
     }
     
     fileprivate func setupLayout() {
-        addSubview(selectionLabel)
-        selectionLabel.anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 24, bottom: 0, right: 0))
-        selectionLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: self.centerYAnchor, multiplier: 1).isActive = true
+        addSubview(button)
+        button.fillSuperview(padding: .init(top: 4, left: 24, bottom: 4, right: 0))
         
-        addSubview(arrowButton)
-        arrowButton.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 24), size: .init(width: 32, height: 32))
+        button.setTitleColor(.black, for: .normal)
+        button.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        button.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
+        button.contentHorizontalAlignment = .left
         
         let separatorView = UIView()
         separatorView.backgroundColor = #colorLiteral(red: 0.9319355397, green: 0.9319355397, blue: 0.9319355397, alpha: 1)

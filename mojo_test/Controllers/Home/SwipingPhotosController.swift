@@ -20,14 +20,16 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
                 let photoController = PhotoController(imageUrl: imageUrl)
                 return photoController
             })
-
-            setViewControllers([controllers.first!], direction: .forward, animated: false)
-            _ = configurePageControl
+            if let firstController = controllers.first {
+                setViewControllers([firstController], direction: .forward, animated: false)
+                _ = configurePageControl
+            }
+//            setViewControllers([controllers.first], direction: .forward, animated: false)
+            
         }
     }
     
     var pageControl = UIPageControl()
-
 
     private lazy var configurePageControl: Void = {
         pageControl = UIPageControl(frame: CGRect(x: 0,y: 0,width: 20,height: 50))
@@ -86,7 +88,6 @@ class PhotoController: UIViewController {
         if let url = URL(string: imageUrl) {
             imageView.sd_setImage(with: url)
     }
-//        imageView.loadImageUsingCacheWithUrlString(urlString: imageUrl)
         
         super.init(nibName: nil, bundle: nil)
     }
@@ -109,36 +110,3 @@ class PhotoController: UIViewController {
     
 }
 
-
-//    fileprivate let barsStackView = UIStackView(arrangedSubviews: [])
-//    fileprivate let deselectedBarColor = UIColor(white: 1, alpha: 0.5)
-//
-//    fileprivate func setupBarViews() {
-//        cardViewModel.imageUrls.forEach { (imageUrl) in
-//
-//                let barView = UIView()
-//                barView.backgroundColor = deselectedBarColor
-//                barView.layer.cornerRadius = 4
-//                barView.width(8)
-//                barView.height(8)
-//                barsStackView.addArrangedSubview(barView)
-//            }
-//        barsStackView.arrangedSubviews.first?.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7882352941, blue: 0.8156862745, alpha: 1)
-//        barsStackView.spacing = 4
-//        barsStackView.distribution = .fillEqually
-//
-//        view.addSubview(barsStackView)
-//        let paddingTop = UIApplication.shared.statusBarFrame.height
-//        barsStackView.anchor(top: view.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: paddingTop, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 8))
-//        barsStackView.centerXAnchor.constraint(equalToSystemSpacingAfter: view.centerXAnchor, multiplier: 1).isActive = true
-//    }
-//
-//    private func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-//
-//        let currentPhotoController = viewControllers?.first
-//        if let index = controllers.firstIndex(where: {$0 == currentPhotoController}) {
-//            barsStackView.arrangedSubviews.forEach({$0.backgroundColor = deselectedBarColor})
-//            barsStackView.arrangedSubviews[index].backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.7882352941, blue: 0.8156862745, alpha: 1)
-//        }
-//
-//    }

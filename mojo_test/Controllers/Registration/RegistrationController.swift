@@ -36,12 +36,9 @@ class RegistrationController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Select Photo", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
-        button.backgroundColor = .white
-        button.setTitleColor(.black, for: .normal)
-        button.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        button.backgroundColor = #colorLiteral(red: 0.9640902602, green: 0.9640902602, blue: 0.9640902602, alpha: 1)
+        button.setTitleColor(.lightGray, for: .normal)
         button.layer.cornerRadius = 8
-        button.layer.borderWidth = 1
-        button.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside )
         button.imageView?.contentMode = .scaleAspectFill
         button.clipsToBounds = true
@@ -57,17 +54,15 @@ class RegistrationController: UIViewController {
     
     let fullNameTextField: CustomTextField = {
         let tf = CustomTextField(padding: 16)
-        tf.placeholder = "Enter full name"
-        tf.backgroundColor = .white
+        tf.placeholder = "Username"
         tf.addTarget( self, action: #selector(handleTextChange), for: .editingChanged)
         return tf
     } ()
     
     let emailTextField: CustomTextField = {
         let tf = CustomTextField(padding: 16)
-        tf.placeholder = "Enter email"
+        tf.placeholder = "Email"
         tf.keyboardType = .emailAddress
-        tf.backgroundColor = .white
         tf.addTarget( self, action: #selector(handleTextChange), for: .editingChanged)
         return tf
     }()
@@ -76,7 +71,13 @@ class RegistrationController: UIViewController {
         let tf = CustomTextField(padding: 16 )
         tf.placeholder = "Set up a password"
         tf.isSecureTextEntry = true
-        tf.backgroundColor = .white
+        tf.addTarget( self, action: #selector(handleTextChange), for: .editingChanged)
+        return tf
+    }()
+    
+    let inviteCodeField: CustomTextField = {
+        let tf = CustomTextField(padding: 16 )
+        tf.placeholder = "Have an invitation code? (Optional)"
         tf.addTarget( self, action: #selector(handleTextChange), for: .editingChanged)
         return tf
     }()
@@ -87,8 +88,10 @@ class RegistrationController: UIViewController {
             registrationViewModel.fullName = textField.text
         } else if textField == emailTextField {
             registrationViewModel.email = textField.text
-        } else {
+        } else if textField == passwordTextField {
             registrationViewModel.password = textField.text
+        } else {
+            registrationViewModel.inviteCode = textField.text
         }
     }
     
@@ -97,10 +100,10 @@ class RegistrationController: UIViewController {
         button.setTitle("Sign up mojo", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-        button.backgroundColor = #colorLiteral(red: 1, green: 0.3299229163, blue: 0.6192239214, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.6039215686, blue: 0.9176470588, alpha: 1)
         button.isEnabled = false
-        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        button.layer.cornerRadius = 4
+        button.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()
@@ -108,28 +111,37 @@ class RegistrationController: UIViewController {
     let registeringHUD = JGProgressHUD(style: .dark)
     
     @objc fileprivate func handleRegister() {
-        self.handleTapDismiss()
-        registrationViewModel.performRegistration { [weak self] (err) in
-            if let err = err {
-                self?.showHUDWithError(error: err)
-                return
+        if selectPhotoButton.currentImage == nil {
+            hud.textLabel.text = "Please choose a photo"
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay:3)
+            return
+        } else {
+            self.handleTapDismiss()
+            registrationViewModel.performRegistration { [weak self] (err) in
+                if let err = err {
+                    self?.showHUDWithError(error: err)
+                    return
+                }
+                
+                print("Finished registering")
+                
+                guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
+                
+                mainTabBarController.setupViewControllers()
+                
+                self?.dismiss(animated: true, completion: {
+                    self?.delegate?.didFinishLoggingIn()
+                })
             }
-            
-            print("Finished registering")
-            
-            guard let mainTabBarController = UIApplication.shared.keyWindow?.rootViewController as? MainTabBarController else { return }
-            
-            mainTabBarController.setupViewControllers()
-            
-            self?.dismiss(animated: true, completion: {
-                self?.delegate?.didFinishLoggingIn()
-            })
         }
+        
+        
     }
     
+    let hud = JGProgressHUD (style: .dark)
     fileprivate func showHUDWithError(error: Error) {
         registeringHUD.dismiss()
-        let hud = JGProgressHUD (style: .dark)
         hud.textLabel.text = "Failed Registration"
         hud.detailTextLabel.text = error.localizedDescription
         hud.show(in: self.view)
@@ -164,7 +176,7 @@ class RegistrationController: UIViewController {
         }
         registrationViewModel.bindableIsRegistering.bind { [unowned self] (isRegistering) in
             if isRegistering == true {
-                self.registeringHUD.textLabel.text = "Register"
+                self.registeringHUD.textLabel.text = "Registering"
                 self.registeringHUD.show(in: self.view)
             }else {
                 self.registeringHUD.dismiss()
@@ -211,13 +223,14 @@ class RegistrationController: UIViewController {
         self.view.transform = CGAffineTransform(translationX: 0, y: -difference - 8)
         
     }
-    
+    let titleLabel = UILabel(text: "Mojo", font: .systemFont(ofSize: 24, weight: .black))
     
     lazy var stackView = UIStackView(arrangedSubviews: [
         selectPhotoButton,
         fullNameTextField,
         emailTextField,
         passwordTextField,
+        inviteCodeField,
         registerButton
         ])
     
@@ -240,14 +253,22 @@ class RegistrationController: UIViewController {
     fileprivate func setupLayout() {
         navigationController?.isNavigationBarHidden = true
         
+        view.addSubview(titleLabel)
+        titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
+        titleLabel.textAlignment = .center
+        
         view.addSubview(stackView)
         stackView.axis = .vertical
         stackView.spacing = 8
         stackView.anchor(top: nil, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 32, bottom: 0, right: 32))
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        selectPhotoButton.heightAnchor.constraint(equalToConstant: view.frame.height - 460).isActive = true
+        
         
         view.addSubview(goToLoginButton)
         goToLoginButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor)
+        
+        
     }
 
 }

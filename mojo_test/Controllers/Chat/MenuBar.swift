@@ -38,8 +38,6 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print(123)
-        
         let x = CGFloat(indexPath.item) * frame.width / 2
         lightLightBarLeftAnchor?.constant = x
         

@@ -176,12 +176,12 @@ class HomeController: UIViewController, CardViewDelegate, editProfileControllerD
         return cardView
     }
     
-    func handleChatRequest(cardViewModel: CardViewModel) {
-        let controller = MarketPlaceController()
-        controller.cardViewModel = cardViewModel
-        let navController = UINavigationController(rootViewController: controller)
-        present(navController, animated: true)
-    }
+//    func handleChatRequest(cardViewModel: CardViewModel) {
+//        let controller = MarketPlaceController()
+//        controller.cardViewModel = cardViewModel
+//        let navController = UINavigationController(rootViewController: controller)
+//        present(navController, animated: true)
+//    }
     
     func didSaveProfile() {
         fetchCurrentUser()

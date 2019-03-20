@@ -26,8 +26,11 @@ struct User: ProducesCardViewModel {
     var rateCount: Int?
     var insideHouse: Bool?
     var school: String?
-    
+    var gender: String?
+    var genderSeeking: String?
     var location: String?
+    var invitationCode: String?
+    var address: String?
     
     var minSeekingAge: Int?
     var maxSeekingAge: Int?
@@ -51,9 +54,11 @@ struct User: ProducesCardViewModel {
         self.rateCount = dictionary["bouncingLineRatingCount"] as? Int
         self.insideHouse = dictionary["insideHouse"] as? Bool ?? false
         self.school = dictionary["school"] as? String
-        
-        
+        self.gender = dictionary["gender"] as? String
+        self.genderSeeking = dictionary["genderSeeking"] as? String
         self.location = dictionary["location"] as? String
+        self.invitationCode = dictionary["invitationCode"] as? String
+        self.address = dictionary["address"] as? String
     }
     
     func toCardViewModel() -> CardViewModel{
@@ -63,11 +68,11 @@ struct User: ProducesCardViewModel {
 
         attributedText.append(NSMutableAttributedString(string: "\n\(ageString), ", attributes: [.font:UIFont.systemFont(ofSize: 16, weight: .regular)]))
         
-        let locationString = location != nil ? location! : "Earth"
+        let locationString = location != nil ? location! : ""
         attributedText.append(NSMutableAttributedString(string: "\(locationString), ", attributes: [.font:UIFont.systemFont(ofSize: 16, weight: .regular)]))
         
         let schoolString = school != nil ? school! : ""
-        attributedText.append(NSMutableAttributedString(string: "\(schoolString)", attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .regular)]))
+        attributedText.append(NSMutableAttributedString(string: "\n\(schoolString)", attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .regular)]))
         
         let professionString = profession != nil ? profession! : "Not Available"
         attributedText.append(NSMutableAttributedString(string: "\n\(professionString)", attributes: [.font: UIFont.systemFont(ofSize: 16, weight: .regular)]))

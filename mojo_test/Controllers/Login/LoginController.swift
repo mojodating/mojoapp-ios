@@ -19,10 +19,6 @@ class LoginController: UIViewController {
 
     let emailTextField: CustomTextField = {
         let tf = CustomTextField(padding: 24)
-        tf.layer.cornerRadius = 8
-        tf.layer.borderWidth = 1
-        tf.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        tf.heightAnchor.constraint(equalToConstant: 32)
         tf.placeholder = "Enter email"
         tf.keyboardType = .emailAddress
         tf.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
@@ -33,13 +29,12 @@ class LoginController: UIViewController {
         let tf = CustomTextField(padding: 24)
         tf.placeholder = "Enter password"
         tf.isSecureTextEntry = true
-        tf.layer.cornerRadius = 8
-        tf.layer.borderWidth = 1
-        tf.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         tf.heightAnchor.constraint(equalToConstant: 32)
         tf.addTarget(self, action: #selector(handleTextChange), for: .editingChanged)
         return tf
     }()
+    
+    let titleLabel = UILabel(text: "Mojo", font: .systemFont(ofSize: 24, weight: .black))
     
     lazy var verticalStackView: UIStackView = {
         let sv = UIStackView(arrangedSubviews: [
@@ -62,12 +57,12 @@ class LoginController: UIViewController {
     
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-        button.backgroundColor = #colorLiteral(red: 0.8549019694, green: 0.250980407, blue: 0.4784313738, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.6039215686, blue: 0.9176470588, alpha: 1)
         button.isEnabled = false
-        button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         button.layer.cornerRadius = 8
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
@@ -75,7 +70,10 @@ class LoginController: UIViewController {
     
     @objc fileprivate func handleLogin() {
         loginViewModel.performLogin { (err) in
-            self.loginHUD.dismiss()
+//            self.loginHUD.dismiss()
+            self.loginHUD.textLabel.text = "Email or password is wrong"
+            self.loginHUD.show(in: self.view)
+            self.loginHUD.dismiss(afterDelay: 3)
             if let err = err {
                 print("failed to log in:", err)
                 return
@@ -97,7 +95,7 @@ class LoginController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Go to signup", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         button.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
         return button
     }()
@@ -105,7 +103,7 @@ class LoginController: UIViewController {
     @objc fileprivate func handleBack() {
         navigationController?.popViewController(animated: true)
     }
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
             
@@ -131,12 +129,12 @@ class LoginController: UIViewController {
         loginViewModel.isFormValid.bind { [unowned self] (isFormValid) in
             guard let isFormValid = isFormValid else { return }
             self.loginButton.isEnabled = isFormValid
-            self.loginButton.backgroundColor = isFormValid ? #colorLiteral(red: 0.8235294118, green: 0, blue: 0.3254901961, alpha: 1) : .lightGray
+            self.loginButton.backgroundColor = isFormValid ? #colorLiteral(red: 0.1333333333, green: 0.6039215686, blue: 0.9176470588, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
             self.loginButton.setTitleColor(isFormValid ? .white : .gray, for: .normal)
         }
         loginViewModel.isLoggingIn.bind { [unowned self] (isRegistering) in
             if isRegistering == true {
-                self.loginHUD.textLabel.text = "Register"
+                self.loginHUD.textLabel.text = "Logging in"
                 self.loginHUD.show(in: self.view)
             } else {
                 self.loginHUD.dismiss()
@@ -146,6 +144,11 @@ class LoginController: UIViewController {
     
     fileprivate func setupLayout() {
         navigationController?.isNavigationBarHidden = true
+        
+        view.addSubview(titleLabel)
+        titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 24, left: 0, bottom: 0, right: 0))
+        titleLabel.textAlignment = .center
+        
         view.addSubview(verticalStackView)
         verticalStackView.anchor(top: nil, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 50, bottom: 0, right: 50))
         verticalStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true

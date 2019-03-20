@@ -13,10 +13,6 @@ class RequestMessageCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-//        addSubview(chatRequestLabel)
-//        chatRequestLabel.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 16, left: 0, bottom: 0, right: 0))
-//        chatRequestLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
-        
         addSubview(descriptionLabel)
         descriptionLabel.anchor(top: topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 300, height: 0))
         descriptionLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
@@ -33,21 +29,15 @@ class RequestMessageCell: UICollectionViewCell {
         profileImageView.anchor(top: descriptionLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 36, left: 8, bottom: 0, right: 0), size: .init(width: 48, height: 48))
         profileImageView.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
         
-        
 
         bubbleView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 36).isActive = true
 
         bubbleHeightAnchor = bubbleView.heightAnchor.constraint(equalToConstant: self.frame.height)
         bubbleHeightAnchor?.isActive = true
 
-//        bubbleViewRightAnchor = bubbleView.trailingAnchor.constraint(equalTo: spaceView.leadingAnchor)
-//        bubbleViewRightAnchor?.isActive = true
-
         bubbleWidthAnchor = bubbleView.widthAnchor.constraint(equalToConstant: 250)
         bubbleWidthAnchor?.isActive = true
         
-//        bubbleViewLeftAnchor = bubbleView.leadingAnchor.constraint(equalToSystemSpacingAfter: profileImageView.trailingAnchor, multiplier: 1.2)
-//        bubbleViewLeftAnchor =
         bubbleView.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 8).isActive = true
         
         addSubview(chatLogLabel)
@@ -64,13 +54,14 @@ class RequestMessageCell: UICollectionViewCell {
         giftInfoLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: giftImageView.centerYAnchor, multiplier: 1).isActive = true
         giftInfoLabel.numberOfLines = 0
         
+        addSubview(rejectButton)
+        rejectButton.anchor(top: giftImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 48, bottom: 0, right: 0))
+        
         
         
     }
     
     var bubbleWidthAnchor: NSLayoutConstraint?
-//    var bubbleViewRightAnchor: NSLayoutConstraint?
-//    var bubbleViewLeftAnchor: NSLayoutConstraint?
     var bubbleHeightAnchor: NSLayoutConstraint?
     
     let bubbleView: UIView = {
@@ -89,6 +80,7 @@ class RequestMessageCell: UICollectionViewCell {
     let descriptionLabel = UILabel(text: "", font: .systemFont(ofSize: 13))
     let giftInfoLabel = UILabel()
     let chatRequestLabel = UILabel(text: "CHAT REQUEST", font: .systemFont(ofSize: 13, weight: .bold))
+    let rejectButton = UIButton(title: "Reject Request", cornerRadius: 0, font: .systemFont(ofSize: 14))
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

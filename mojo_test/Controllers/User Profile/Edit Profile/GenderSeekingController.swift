@@ -1,8 +1,8 @@
 //
-//  GenderSelectionController.swift
+//  GenderSeekingController.swift
 //  mojo_test
 //
-//  Created by Yunyun Chen on 2/4/19.
+//  Created by Yunyun Chen on 3/3/19.
 //  Copyright © 2019 Yunyun Chen. All rights reserved.
 //
 
@@ -10,18 +10,18 @@ import UIKit
 import Firebase
 import JGProgressHUD
 
-class GenderSelectionController: UITableViewController {
+class GenderSeekingController: UITableViewController {
     
     var user: User?
     
-    let genders = ["Men", "Woman", "Other"]
+    let genders = ["Men", "Woman", "All"]
     let cellId = "cellId"
-    var choosedGender = String()
+    var genderSeeking = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        navigationItem.title = "My Gender"
+        navigationItem.title = "Show me gender of"
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,14 +29,14 @@ class GenderSelectionController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = SelectionCell(style: .default, reuseIdentifier: "cellId")
+        let cell = GenderSeekingCell(style: .default, reuseIdentifier: "cellId")
         cell.titleLabel.text = genders[indexPath.item]
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.choosedGender = genders[indexPath.row]
+        self.genderSeeking = genders[indexPath.row]
         tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
         handleSave()
     }
@@ -48,7 +48,7 @@ class GenderSelectionController: UITableViewController {
     fileprivate func handleSave() {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let docData: [String: Any] = [
-            "gender": self.choosedGender
+            "genderSeeking": self.genderSeeking
         ]
         
         let hud = JGProgressHUD(style: .dark)
@@ -63,13 +63,11 @@ class GenderSelectionController: UITableViewController {
             hud.textLabel.text = "Saved!"
             hud.show(in: self.view)
             hud.dismiss(afterDelay: 2)
-        }
-        
+        }        
     }
-
 }
 
-class SelectionCell: UITableViewCell {
+class GenderSeekingCell: UITableViewCell {
     
     let titleLabel = UILabel(text: "", font: .systemFont(ofSize: 18))
     

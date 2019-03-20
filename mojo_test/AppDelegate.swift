@@ -28,14 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-//        let controller = PeepsController(collectionViewLayout: UICollectionViewFlowLayout())
-//        let navController = UINavigationController(rootViewController: controller)
-//        window?.rootViewController = navController
-        
         window?.rootViewController = MainTabBarController()
 
-        attempRegisterForNotifications(application: application)
-        
+        attempRegisterForNotifications(application: application)        
        
         return true
     }

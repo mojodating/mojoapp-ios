@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import JGProgressHUD
 import SDWebImage
 
 class UserProfileController: UIViewController {
@@ -26,7 +25,7 @@ class UserProfileController: UIViewController {
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
             
-            self.setupCardFromUser(user:self.user!)
+            self.setupCardFromUser(user: self.user!)
             
             guard let profileImageUrl = self.user?.imageUrl1 else { return }
             if let url = URL(string: profileImageUrl) {
@@ -35,10 +34,10 @@ class UserProfileController: UIViewController {
             
             guard let userRate = self.user?.rate else { return }
             guard let rateCount = self.user?.rateCount else { return }
-            var rate = Double()
-            rate = Double(userRate) / Double (rateCount)
+            let rate = Double(userRate) / Double (rateCount)
+            guard let roundedRate = Double(String(format: "%.1f", rate)) else { return }
             
-            self.ratingLabel.text = "\(rate)"
+            self.ratingLabel.text = "\(roundedRate)"
             
         }
     }
@@ -47,19 +46,16 @@ class UserProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        fetchCurrentUser()
+        
         view.backgroundColor = .white
         
-//        setupTransparentNavBar()
         navigationItem.title = "Profile"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         setupNavProfileView()
         
         setupLayout()
-        
-        fetchCurrentUser()
-        
-//        setupMenuController()
         
     }
     
@@ -76,12 +72,7 @@ class UserProfileController: UIViewController {
     
     fileprivate func setupLayout() {
         
-        //        addTargetToNavProfileImage()
-        
-        //        let barButtonItem = UIBarButtonItem(customView: navProfileView)
-        //        navigationItem.leftBarButtonItem = barButtonItem
         let userInfoStackView = UIStackView(arrangedSubviews: [
-//            navProfileView,
             ratingLabel,
             feedbacksButton
             ])
@@ -105,7 +96,6 @@ class UserProfileController: UIViewController {
         cardView.cardViewModel = user.toCardViewModel()
         cardDeckView.addSubview(cardView)
         cardView.fillSuperview()
-        cardView.chatButton.isHidden = true
         cardView.gestureRecognizers?.forEach(cardView.removeGestureRecognizer)
     }
     
@@ -150,6 +140,18 @@ class UserProfileController: UIViewController {
         addTargetToNavProfileImage()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navProfileView.isHidden = false
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navProfileView.isHidden = true
+    }
+
+    
     fileprivate func addTargetToNavProfileImage() {
                 let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleEditProfile))
                 singleTap.numberOfTapsRequired = 1;
@@ -161,49 +163,5 @@ class UserProfileController: UIViewController {
         let navController = UINavigationController(rootViewController: editProfileController)
         present(navController, animated: true)
     }
-    
-    
-//    let menuController = SlidingMenuController()
-//
-//    fileprivate let menuWidth: CGFloat = 300
-//
-//    fileprivate func performAnimations(transform: CGAffineTransform) {
-//        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-//
-//            self.menuController.view.transform = transform
-//            self.navigationController?.view.transform = transform
-////            self.view.transform = transform
-//        })
-//    }
-//
-//    @objc func handleOpenMenu() {
-//
-//        if menuController.view.frame == CGRect(x: -menuWidth, y: 0, width: 300, height: self.view.frame.height) {
-//            // handle open
-//            performAnimations(transform: CGAffineTransform(translationX: self.menuWidth, y: 0))
-//        } else {
-//            // handle close
-//            performAnimations(transform: .identity)
-//        }
-//    }
-//
-//    fileprivate func setupMenuController() {
-//        //initial position
-//        menuController.view.frame = CGRect(x: -menuWidth, y: 0, width: 300, height: self.view.frame.height)
-//
-//        let mainWindow = UIApplication.shared.keyWindow
-//        mainWindow?.addSubview(menuController.view)
-//        addChild(menuController)
-//    }
-    
-//    fileprivate func setupTransparentNavBar() {
-//
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.isTranslucent = true
-//        navigationController?.view.backgroundColor = .white
-//    }
-    
- 
     
 }

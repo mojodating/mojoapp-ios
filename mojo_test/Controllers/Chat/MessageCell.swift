@@ -42,9 +42,6 @@ class MessageCell: UICollectionViewCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-
-        addSubview(spaceView)
-        spaceView.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 8), size: .init(width: 8, height: 8))
         
         addSubview(bubbleView)
         bubbleView.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -52,7 +49,7 @@ class MessageCell: UICollectionViewCell {
         bubbleHeightAnchor = bubbleView.heightAnchor.constraint(equalToConstant: self.frame.height)
         bubbleHeightAnchor?.isActive = true
 
-        bubbleViewRightAnchor = bubbleView.trailingAnchor.constraint(equalTo: spaceView.leadingAnchor)
+        bubbleViewRightAnchor = bubbleView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -8)
         bubbleViewRightAnchor?.isActive = true
 
         bubbleWidthAnchor = bubbleView.widthAnchor.constraint(equalToConstant: 250)
@@ -64,8 +61,9 @@ class MessageCell: UICollectionViewCell {
         chatLogLabel.anchor(top: bubbleView.topAnchor, leading: bubbleView.leadingAnchor, bottom: bubbleView.bottomAnchor, trailing: nil, padding: .init(top: 8, left: 16, bottom: 8, right: 0), size: .init(width: 250, height: self.frame.height))
         
         addSubview(profileImageView)
-        profileImageView.anchor(top: nil, leading: leadingAnchor, bottom: self.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0), size: .init(width: 32, height: 32))
+        profileImageView.anchor(top: self.topAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 4, left: 8, bottom: 0, right: 0), size: .init(width: 32, height: 32))
         profileImageView.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
+        
        
     }
     
@@ -74,11 +72,6 @@ class MessageCell: UICollectionViewCell {
     var bubbleViewLeftAnchor: NSLayoutConstraint?
     var bubbleHeightAnchor: NSLayoutConstraint?
 
-    
-    let spaceView: UIView = {
-        let view = UIView()
-        return view
-    }()
     
     let chatLogLabel: UILabel = {
        let label = UILabel()
@@ -91,7 +84,6 @@ class MessageCell: UICollectionViewCell {
         return label
     }()
     
-    
     let bubbleView: UIView = {
        let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -99,7 +91,6 @@ class MessageCell: UICollectionViewCell {
         view.layer.masksToBounds = true
         return view
     }()
-
     
     let profileImageView = UIImageView(cornerRadius: 16)
     

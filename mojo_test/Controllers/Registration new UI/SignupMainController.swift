@@ -51,7 +51,7 @@ class SignupMainController: UIViewController {
     }()
     
     let SignupButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.setTitle("Sign up with Email", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
         button.setTitleColor(.white, for: .normal)
@@ -63,12 +63,12 @@ class SignupMainController: UIViewController {
     }()
     
     @objc fileprivate func handleSignup() {
-        let controller = SignupEmailController()
-        navigationController?.pushViewController(controller, animated: true)
+        let emailController = SignupEmailController()
+        navigationController?.pushViewController(emailController, animated: true)
     }
     
     let LoginButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.setTitle("Log In", for: .normal)
         button.setTitleColor(.black, for: .normal)
         button.clipsToBounds = true
@@ -78,8 +78,8 @@ class SignupMainController: UIViewController {
     }()
     
     @objc fileprivate func handleLogin() {
-        let controller = NewLoginController()
-        navigationController?.pushViewController(controller, animated: true)
+        let loginController = NewLoginController()
+        navigationController?.pushViewController(loginController, animated: true)
     }
     
     let warningLabel: UILabel = {
