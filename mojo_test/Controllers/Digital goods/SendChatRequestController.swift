@@ -108,18 +108,17 @@ class SendChatRequestController: UIViewController {
                 }
             }
             
-            self.showAfterPurchasedController()
+//            self.showAfterPurchasedController()
 
         }
         
     }
     
-    fileprivate func showAfterPurchasedController() {
-        let controller = AfterPurchaseController()
-        controller.cardViewModel = self.cardViewModel
-//        self.present(controller, animated: true)
-        navigationController?.pushViewController(controller, animated: true)
-    }
+//    fileprivate func showAfterPurchasedController() {
+//        let controller = AfterPurchaseController()
+//        controller.cardViewModel = self.cardViewModel
+//        navigationController?.pushViewController(controller, animated: true)
+//    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

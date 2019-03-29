@@ -29,10 +29,12 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
                     guard let conv = value as? [String: Any] else {return}
                     //
                     let conversation = Conversation(conv: conv)
-                    if (conversation.accepted) {
-                        
+                    if (conversation.accepted && conversation.hasFeedback == false) {
                         self.feedbacks.append(conversation)
                     }
+                    self.feedbacks = self.feedbacks.sorted(by: { (conv1, conv2) -> Bool in
+                        conv1.lastUpdated > conv2.lastUpdated
+                    })
                     self.collectionView.reloadData()
                 })
                 
@@ -51,10 +53,22 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
         collectionView.backgroundColor = .white
         navigationItem.title = "Feedbacks"
         
-        fetchChatUsers()
+//        fetchChatUsers()
         
         collectionView.register(UserReviewCell.self, forCellWithReuseIdentifier: reviewCellId)
         collectionView.register(FeedbackPollCell.self, forCellWithReuseIdentifier: feedbackCellId)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+        feedbacks.removeAll()
+        fetchChatUsers()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
     }
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -84,7 +98,7 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
         if indexPath.section == 1 {
             return CGSize(width: view.frame.width, height: 60)
         }
-        return CGSize(width: view.frame.width, height: 176)
+        return CGSize(width: view.frame.width, height: 140)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -95,17 +109,6 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
             navigationController?.pushViewController(controller, animated: true)
         }
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        tabBarController?.tabBar.isHidden = true
-//        
-//    }
-//
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        tabBarController?.tabBar.isHidden = false
-//    }
 
 }
 

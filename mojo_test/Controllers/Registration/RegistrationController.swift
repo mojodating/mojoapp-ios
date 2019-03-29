@@ -38,7 +38,7 @@ class RegistrationController: UIViewController {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
         button.backgroundColor = #colorLiteral(red: 0.9640902602, green: 0.9640902602, blue: 0.9640902602, alpha: 1)
         button.setTitleColor(.lightGray, for: .normal)
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 2
         button.addTarget(self, action: #selector(handleSelectPhoto), for: .touchUpInside )
         button.imageView?.contentMode = .scaleAspectFill
         button.clipsToBounds = true
@@ -100,10 +100,10 @@ class RegistrationController: UIViewController {
         button.setTitle("Sign up mojo", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-        button.backgroundColor = #colorLiteral(red: 0.1333333333, green: 0.6039215686, blue: 0.9176470588, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0, green: 0.5664333767, blue: 1, alpha: 1)
         button.isEnabled = false
-        button.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        button.layer.cornerRadius = 8
+        button.heightAnchor.constraint(equalToConstant: 46).isActive = true
+        button.layer.cornerRadius = 2
         button.addTarget(self, action: #selector(handleRegister), for: .touchUpInside)
         return button
     }()

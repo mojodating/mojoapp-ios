@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class FeedbackPollCell: UICollectionViewCell {
     
@@ -38,7 +39,9 @@ class FeedbackPollCell: UICollectionViewCell {
                 self.titleLabel.text = "How‘s your conversation with " + (self.user?.name)!
                 
                 guard let senderImageUrl = self.user?.imageUrl1 else {return}
-                self.profileImageView.loadImageUsingCacheWithUrlString(urlString: senderImageUrl)
+                if let imageUrl = URL(string: senderImageUrl) {
+                    self.profileImageView.sd_setImage(with: imageUrl)
+                }
             }
         }
     }

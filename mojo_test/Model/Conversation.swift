@@ -18,10 +18,10 @@ struct Conversation {
     let sender: String
     let receiver: String
     let text: String
-    var lastMessageDate: Date
+    var lastUpdated: Date
     let seen: Bool
-    
-    var hasFeedback = false
+    let rejected: Bool
+    let hasFeedback: Bool
     
     init(conv:[String : Any]) {
         self.id = conv["id"] as? String ?? ""
@@ -33,7 +33,10 @@ struct Conversation {
         self.receiver = conv["receiver"] as? String ?? ""
         self.text = conv["text"] as? String ?? ""
         self.seen = conv["seen"] as? Bool ?? false
-        let secondsFrom1970 = conv["lastMessageDate"] as? Double ?? 0
-        self.lastMessageDate = Date(timeIntervalSince1970: secondsFrom1970)
+        self.rejected = conv["rejected"] as? Bool ?? false
+        self.hasFeedback = conv["hasFeedback"] as? Bool ?? false
+        
+        let secondsFrom1970 = conv["lastUpdated"] as? Double ?? 0
+        self.lastUpdated = Date(timeIntervalSince1970: secondsFrom1970)
     }
 }

@@ -12,7 +12,7 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     
     
     let cellId = "cellId"
-    let titles = ["REQUESTS", "SENT"]
+    let titles = ["REQUEST", "SENT"]
     
     var chatRequestCell: ChatRequestCell?
     

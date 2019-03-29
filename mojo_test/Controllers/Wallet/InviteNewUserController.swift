@@ -82,7 +82,7 @@ class InviteNewUserController: UIViewController, MFMessageComposeViewControllerD
     let inviteFriendsLabel: UILabel = {
         let label = UILabel()
         let attributedString = NSMutableAttributedString(string: "Get Free 10 Jo", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 22, weight: .medium)])
-        attributedString.append(NSMutableAttributedString(string: "\nEarn 10 mojo tokens for each friend you invited on the platform. The more friends that join, the more token you all will get.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16)]))
+        attributedString.append(NSMutableAttributedString(string: "\nWant more mojo? Every friend you get to join is worth 10 tokens, for both of you. Hit your peeps up!.", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16)]))
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = 4
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))

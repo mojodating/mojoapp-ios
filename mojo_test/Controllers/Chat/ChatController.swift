@@ -9,30 +9,18 @@
 import UIKit
 import Firebase
 
-class ChatController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate, ChatCellDelegate {
-    
-    let collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        layout.minimumLineSpacing = 8
-        layout.scrollDirection = .vertical
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .white
-        return cv
-    }()
+class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate {
     
     let chatRequestCellId = "chatRequestCellId"
-
     let chatCellId = "chatCellId"
-    
-    
+    let emptyLabel = UILabel(text: "Start your first chat", font: .systemFont(ofSize: 14))
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .white
-        
+        collectionView.backgroundColor = .white
+//        fetchChatListsFromServer()
         setupNavBar()
-        
         setupLayout()
         
         let refreshControl = UIRefreshControl()
@@ -43,15 +31,22 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        chats.removeAll()
+        fetchChatListsFromServer()
     }
     
     fileprivate func setupNavBar() {
         navigationItem.title = "Chat"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.view.backgroundColor = .white
+        
+//        navigationController?.navigationBar.tintColor = .white
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.isTranslucent = false
+//        navigationController?.view.backgroundColor = .white
+//        navigationController?.navigationBar.clipsToBounds = true
+//        navigationController?.navigationBar.isTranslucent = false
+
     }
     
     @objc func handleRefreshPage(refreshControl: UIRefreshControl) {        
@@ -62,32 +57,71 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     
     fileprivate func setupLayout() {
-        view.addSubview(collectionView)
-        collectionView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor)
-
-        collectionView.delegate = self
-        collectionView.dataSource = self
-
+        
         collectionView.register(ChatRequestCell.self, forCellWithReuseIdentifier: chatRequestCellId)
         collectionView.register(ChatCell.self, forCellWithReuseIdentifier: chatCellId)
+        
+        view.addSubview(emptyLabel)
+        emptyLabel.fillSuperview()
+        emptyLabel.textAlignment = .center
+        emptyLabel.textColor = .lightGray
+        emptyLabel.isHidden = true
+    }
 
+    var chats = [Conversation]()
+    
+    func fetchChatListsFromServer() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let ref = Firestore.firestore().collection("users").whereField("uid", isEqualTo: uid)
+        
+        ref.addSnapshotListener { querySnapshot, error in
+            guard let snapshot = querySnapshot else {
+                print("Error fetching snapshots: \(error!)")
+                return
+            }
+            snapshot.documentChanges.forEach { diff in
+                if (diff.type == .added) {
+                    
+                    let dictionaries = diff.document.data()
+                    guard let dictionary = dictionaries["conversations"] as? [String : Any] else { return }
+                    dictionary.forEach({ (key, value) in
+                        
+                        guard let conv = value as? [String: Any] else {return}
+                        
+                        let conversation = Conversation(conv: conv)
+                        
+                        if (conversation.accepted) {
+                            self.chats.append(conversation)
+                        }
+                        self.chats = self.chats.sorted(by: { (conv1, conv2) -> Bool in
+                            conv1.lastUpdated > conv2.lastUpdated
+                        })
+                        self.collectionView.reloadData()
+                        
+                    })
+                    if (self.chats.count == 0) {
+                        self.emptyLabel.isHidden = false
+                    }
+                }
+            }
+        }
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return 1
+            return chats.count
         }
         return 1
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: chatCellId, for: indexPath) as! ChatCell
-            cell.delegate = self
+            cell.conversation = chats[indexPath.item]
             
             return cell
         }
@@ -100,9 +134,9 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if indexPath.section == 1 {
-            return CGSize(width: view.frame.width, height: view.frame.height - 300)
+            return CGSize(width: view.frame.width, height: 80)
         }
-        return CGSize(width: view.frame.width, height: 146)
+        return CGSize(width: view.frame.width, height: 190)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -112,19 +146,21 @@ class ChatController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let conversation = self.chats[indexPath.row]
+        let chatLogController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
+        chatLogController.conversation = conversation
+        navigationController?.pushViewController(chatLogController, animated: true)
         }
     
     func didTapCell(conversation: Conversation) {
         let chatLogController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
         chatLogController.conversation = conversation
         navigationController?.pushViewController(chatLogController, animated: true)
+
     }
-
-
     
-    }
+}
 
 
 

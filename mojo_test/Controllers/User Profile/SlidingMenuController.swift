@@ -31,10 +31,10 @@ class SlidingMenuController: UITableViewController {
         
     }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = SlidingMenuHeaderView()
-        return headerView
-    }
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = SlidingMenuHeaderView()
+//        return headerView
+//    }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 220

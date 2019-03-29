@@ -76,6 +76,7 @@ class UserDetailController: BaseListController, UICollectionViewDelegateFlowLayo
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: infoCellID, for: indexPath) as! UserDetailInfoCell
             cell.userInfoLabel.attributedText = cardViewModel.attributedString
+            cell.userAboutLabel.text = user?.bio
             
             return cell
         }
@@ -90,7 +91,7 @@ class UserDetailController: BaseListController, UICollectionViewDelegateFlowLayo
         if indexPath.section == 1 {
             return CGSize(width: view.frame.width, height: view.frame.height)
         }
-        return CGSize(width: view.frame.width, height: view.frame.width + 36)
+        return CGSize(width: view.frame.width, height: view.frame.width + 72)
     }
 
     @objc fileprivate func handleTapDismiss() {

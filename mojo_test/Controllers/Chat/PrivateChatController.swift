@@ -10,16 +10,23 @@ import UIKit
 import Firebase
 import SDWebImage
 
+protocol PrivateChatControllerDelegate {
+    func didDeleteConversation(conversation: Conversation)
+}
+
 class PrivateChatController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UITextFieldDelegate, ChatInputAccessaryViewDelegate {
+    
+    var delegate: PrivateChatControllerDelegate?
     
     let cellId = "cellId"
     let requestCellId = "requestCellId"
     let headerId = "headerId"
+    var conversitionId: String?
     
     var chatProfileUID: String?
     var conversation : Conversation? {
         didSet {
-            
+            self.conversitionId = conversation?.id
             guard let currentUser = Auth.auth().currentUser?.uid else { return }
             
             if currentUser == conversation?.sender {
@@ -27,7 +34,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             } else {
                 chatProfileUID = conversation?.sender
             }
-            
+            self.checkIfChatBlocked()
         }
     }
     
@@ -48,6 +55,10 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        fetchChatPartner()
+        
+        fetchMessages()
 
         collectionView.backgroundColor = .white
         
@@ -55,15 +66,29 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         setupCollectionView()
         
-        fetchChatPartner()
         
-        fetchMessages()
-        
-//        markMessageAsSeen()
     }
     
+    fileprivate func checkIfChatBlocked() {
+        if self.conversation?.rejected == true {
+            self.containerView.isHidden = true
+            self.blockedLabel.isHidden = false
+        } else {
+            self.containerView.isHidden = false
+            self.blockedLabel.isHidden = true
+        }
+        view.addSubview(blockedLabel)
+        blockedLabel.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 36, bottom: 16, right: 36))
+        blockedLabel.numberOfLines = 0
+        blockedLabel.textColor = .lightGray
+        blockedLabel.textAlignment = .center
+    
+    }
+    let blockedLabel = UILabel(text: "Not able to send message. The conversation is blocked", font: .systemFont(ofSize: 14))
+    
     fileprivate func setupNavigation() {
-        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "details").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleChatDetails))
+
     }
     
     fileprivate func setupCollectionView() {
@@ -77,16 +102,17 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }
     
     @objc fileprivate func handleViewProfile() {
-        let viewProfileController = ViewProfileController()
-        viewProfileController.user = self.user
-        present(viewProfileController, animated: true)
+        let userDetailController = UserDetailController()
+        userDetailController.user = self.user
+        userDetailController.chatRequestButton.isHidden = true
+        present(userDetailController, animated: true)
     }
     
     var messages = [Message]()
 
     fileprivate func fetchMessages() {
 
-        guard let converstionId = self.conversation?.id else { return }
+        guard let converstionId = self.conversitionId else { return }
 
         let ref = Firestore.firestore().collection("conversations").document(converstionId).collection("messages")
             .order(by: "date", descending: false)
@@ -105,26 +131,37 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                     let message = Message(msg: msg)
                     self.messages.append(message)
                     self.collectionView.reloadData()
+                    self.markMessageAsSeen(message: message)
                     }
                 }
 //            self.groupMessageByDate()
             }
         }
     
-    fileprivate func markMessageAsSeen() {
+    fileprivate func markMessageAsSeen(message: Message) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        guard let conversationId = self.conversation?.id else { return }
         
-        let messageId = self.messages.last?.id
-        let conversationId = self.conversation?.id ?? ""
-        Firestore.firestore().collection("conversations").document(conversationId).collection("messages"
-            ).document(messageId ?? "")
-            .updateData([
-                "seen": true,
-            ]) { (err) in
+        let timeSenderRef =  Firestore.firestore().collection("users").document(uid)
+        timeSenderRef.updateData([
+            "conversations.\(conversationId).seen": true,
+            ]) { err in
                 if let err = err {
-                    print("Failed to mark message", err)
-                    return
-            }
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                }
         }
+//        timeReceiveRef.updateData([
+//            "conversations.\(conversationId).lastUpdated": Date().timeIntervalSince1970,
+//            "conversations.\(conversationId).lastMessageSeen": false,
+//            ]) { err in
+//                if let err = err {
+//                    print("Error updating document: \(err)")
+//                } else {
+//                    print("Document successfully updated")
+//                }
+//        }
     }
     
 //    var groupedMessages = [[Message]]()
@@ -201,7 +238,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }
     
     fileprivate func setupRequestCell(cell: RequestMessageCell, message: Message ) {
-        // fetch requestor profile photo
         if let requestorUID = self.conversation?.sender {
             Firestore.firestore().collection("users").document(requestorUID).getDocument { (snapshot, err) in
                 if let err = err {
@@ -218,7 +254,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 }
             }
         }
-        
 
         guard let giftImageUrl = self.conversation?.drinkImage else { return }
         if let giftImageUrl = URL(string: giftImageUrl) {
@@ -233,7 +268,12 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             cell.descriptionLabel.text = "You sent this chat request at \(dateString)."
           
         } else {
-            cell.descriptionLabel.text = "By reply you accept the request and the gift. Or reject this user and gift."
+            if messages.count == 1 {
+                cell.descriptionLabel.text = "Simply reply this conversation to accept this request and gift. To turn down both, select 'reject'."
+            } else {
+                cell.descriptionLabel.text = "Chat Request"
+            }
+            
         }
         
         // fetch gift Info
@@ -245,17 +285,71 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
         cell.giftInfoLabel.attributedText = attributedString
         
-        if collectionView.numberOfSections > 1 {
-            cell.rejectButton.isHidden = true
-        } else {
+        if messages.count == 1 {
             cell.rejectButton.isHidden = false
             cell.rejectButton.addTarget(self, action: #selector(handleRejectRequest), for: .touchUpInside)
+        } else {
+            cell.rejectButton.isHidden = true
         }
     }
     
+    @objc fileprivate func handleChatDetails() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "View profile", style: .default, handler: { (_) in
+            self.handleViewProfile()
+        }))
+        alertController.addAction(UIAlertAction(title: "Block user", style: .destructive, handler: { (_) in
+            self.performRejectRequest()
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
     @objc fileprivate func handleRejectRequest() {
+        let alertController = UIAlertController(title: "Are you sure to reject this chat request and gift?", message: nil, preferredStyle: .actionSheet)
+        alertController.addAction(UIAlertAction(title: "Reject request", style: .destructive, handler: { (_) in
+            self.performRejectRequest()
+        }))
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
         
     }
+    
+    fileprivate func performRejectRequest() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        guard let receiverUid = self.chatProfileUID else { return }
+        guard let conversationId = self.conversitionId else { return }
+        
+        Firestore.firestore().collection("users").document(uid).updateData([
+            "conversations.\(conversationId).rejected": true,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                    
+                    if self.conversation?.accepted == false {
+                        self.navigationController?.popViewController(animated: true)
+                    } else {
+                        self.containerView.isHidden = true
+                        self.blockedLabel.isHidden = false
+                    }
+                }
+        }
+        Firestore.firestore().collection("users").document(receiverUid).updateData([
+            "conversations.\(conversationId).rejected": true,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                }
+        }
+    }
+    
+    
     
     fileprivate func setupCell(cell:MessageCell, message: Message ) {
         
@@ -291,7 +385,8 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             if let imageUrl = URL(string: imageUrl) {
                  cell.profileImageView.sd_setImage(with: imageUrl)
             }
-        }        
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -323,9 +418,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         tabBarController?.tabBar.isHidden = false
-        
-        // Refresh the chat page
-        collectionView.reloadData()
     }
     
     lazy var containerView: ChatInputAccessaryView = {
@@ -365,6 +457,28 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 print("successfully add message.")
                     self.containerView.clearTextField()
             }
+        }
+        
+        let timeSenderRef =  Firestore.firestore().collection("users").document(senderId)
+        let timeReceiveRef = Firestore.firestore().collection("users").document(receiverId ?? "")
+            timeSenderRef.updateData([
+            "conversations.\(conversationId).lastUpdated": Date().timeIntervalSince1970,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                }
+        }
+        timeReceiveRef.updateData([
+            "conversations.\(conversationId).lastUpdated": Date().timeIntervalSince1970,
+            "conversations.\(conversationId).seen": false,
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                }
         }
     }
     override var inputAccessoryView: UIView? {

@@ -36,11 +36,11 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
         self.pageControl.numberOfPages = controllers.count
         self.pageControl.currentPage = 0
         self.pageControl.alpha = 0.8
-        self.pageControl.tintColor = UIColor.white
+        self.pageControl.tintColor = UIColor.lightGray
         self.pageControl.pageIndicatorTintColor = UIColor(white: 1, alpha: 0.8)
-        self.pageControl.currentPageIndicatorTintColor = UIColor.blue
+        self.pageControl.currentPageIndicatorTintColor = .black
         self.view.addSubview(pageControl)
-        let paddingTop = UIApplication.shared.statusBarFrame.height
+        let paddingTop = UIApplication.shared.statusBarFrame.height 
         pageControl.anchor(top: view.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: .init(top: paddingTop, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 8))
         pageControl.centerXAnchor.constraint(equalToSystemSpacingAfter: view.centerXAnchor, multiplier: 1).isActive = true
     }()
@@ -62,7 +62,7 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
 
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
-        self.pageControl.currentPage = controllers.index(of: pageContentViewController)!
+        self.pageControl.currentPage = controllers.index(of: pageContentViewController) ?? 0
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {

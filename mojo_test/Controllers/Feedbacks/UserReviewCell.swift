@@ -43,10 +43,6 @@ class UserReviewCell: UICollectionViewCell {
         addSubview(ImageStackView)
         ImageStackView.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 24, left: 16, bottom: 0, right: 16))
         
-        addSubview(labelStackView)
-        labelStackView.anchor(top: ImageStackView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 0, bottom: 0, right: 0))
-        labelStackView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        
         addSubview(LineView)
         LineView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 2, bottom: 16, right: 2), size: .init(width: frame.width, height: 1))
     }
@@ -63,8 +59,8 @@ class UserReviewCell: UICollectionViewCell {
         let iv = UIImageView(image: image)
         iv.contentMode = .scaleAspectFill
         iv.clipsToBounds = true
-//        iv.imageView?.width(32)
-//        iv.imageView?.height(32)
+        iv.width(48)
+        iv.height(48)
         return iv
     }
     
@@ -73,13 +69,13 @@ class UserReviewCell: UICollectionViewCell {
         let sv = UIStackView()
         
         let likeImage = createImageView(image: #imageLiteral(resourceName: "image 3"))
-        let loveImage = createImageView(image: #imageLiteral(resourceName: "image2"))
-        let dopeImage = createImageView(image: #imageLiteral(resourceName: "image 5"))
+        let likeCountLabel = UILabel(text: "0", font: .systemFont(ofSize: 14, weight: .medium))
         let mehImage = createImageView(image: #imageLiteral(resourceName: "image 4"))
-        let fakeIdImage = createImageView(image: #imageLiteral(resourceName: "image 6"))
-        let madImage = createImageView(image: #imageLiteral(resourceName: "image"))
+        let mehCountLabel = UILabel(text: "0", font: .systemFont(ofSize: 14, weight: .medium))
+        let madImage = createImageView(image: #imageLiteral(resourceName: "mad"))
+        let madCountLabel = UILabel(text: "0", font: .systemFont(ofSize: 14, weight: .medium))
         
-        [likeImage,loveImage, dopeImage, mehImage, fakeIdImage, madImage].forEach{(image) in
+        [likeImage, likeCountLabel, mehImage, mehCountLabel, madImage, madCountLabel].forEach{(image) in
             sv.addArrangedSubview(image)
         }
         
@@ -87,36 +83,6 @@ class UserReviewCell: UICollectionViewCell {
         return sv
     }()
     
-    static func createLabel(text: String) -> UILabel {
-        let label = UILabel()
-        label.text = text
-        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        
-        return label
-    }
-    
-    let labelStackView: UIStackView = {
-        let sv = UIStackView()
-        
-        let likeButtonLabel  = createLabel(text: "0")
-        let loveButtonLabel  = createLabel(text: "0")
-        let dopeButtonLabel  = createLabel(text: "0")
-        let mehButtonLabel  = createLabel(text: "0")
-        let fakeIdButtonLabel  = createLabel(text: "0")
-        let madButtonLabel  = createLabel(text: "0")
-        
-        
-        [likeButtonLabel,loveButtonLabel, dopeButtonLabel, mehButtonLabel, fakeIdButtonLabel, madButtonLabel].forEach{(label) in
-            sv.addArrangedSubview(label)
-        }
-        
-        sv.distribution = .equalSpacing
-        sv.alignment = .firstBaseline
-        
-        return sv
-    }()
     
     let LineView : UIView = {
         let lv = UIView()

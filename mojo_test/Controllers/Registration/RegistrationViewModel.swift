@@ -16,28 +16,10 @@ class RegistrationViewModel {
     var bindableIsFormValid = Bindable<Bool> ()
 
     
-    var fullName: String? {
-        didSet{
-            checkFormValidity()
-        } }
+    var fullName: String? {didSet{checkFormValidity()} }
     var email: String? { didSet{ checkFormValidity() } }
     var password: String? { didSet{ checkFormValidity() } }
-    var inviteCode: String?{ didSet{checkInvitedUser()}}
-    
-    func checkInvitedUser() {
-        let ref = Firestore.firestore().collection("users").whereField("invitationCode", isEqualTo: self.inviteCode ?? "")
-        ref.getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                querySnapshot?.documents.forEach({ (documentSnapshot) in
-                let userDictionary = documentSnapshot.data()
-                let user = User(dictionary: userDictionary)
-                self.inviteCode = user.uid
-                })
-            }
-        }
-    }
+    var inviteCode: String?
     
     func checkFormValidity() {
         let isFormValid = fullName?.isEmpty == false && email?.isEmpty == false && password?.isEmpty == false && bindableImage.value != nil && isValidEmail(testStr: email ?? "") && isValidPassword(testStr: password ?? "")

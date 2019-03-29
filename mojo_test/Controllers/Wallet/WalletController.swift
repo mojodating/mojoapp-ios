@@ -14,6 +14,7 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     let cellId = "cellId"
     let headerCellId = "headerCellId"
+    let emptyLabel = UILabel(text: "You will receive gifts in your wallet when accept chat request from other users. You can send your gifts to your friends on mojo.", font: .systemFont(ofSize: 14))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +27,23 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
         
         collectionView.register(WalletHeaderCell.self, forCellWithReuseIdentifier: headerCellId)
         collectionView.register(UserGiftCell.self, forCellWithReuseIdentifier: cellId)
+        
+        setupLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         gifts.removeAll()
         fetchGifts()
+    }
+    
+    fileprivate func setupLayout() {
+        view.addSubview(emptyLabel)
+        emptyLabel.fillSuperview(padding: .init(top: 0, left: 36, bottom: 0, right: 36))
+        emptyLabel.textAlignment = .center
+        emptyLabel.numberOfLines = 0
+        emptyLabel.textColor = .lightGray
+        emptyLabel.isHidden = true
     }
     
     var user: User?
@@ -54,18 +66,21 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
         
     let ref = Firestore.firestore().collection("drinks").whereField("owner", isEqualTo: uid)
     ref.getDocuments() { (querySnapshot, err) in
-                if let err = err {
-                    print("Error getting documents: \(err)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        let giftType = document.data()
-                        let gift = Gift(giftType: giftType)
-                        self.gifts.append(gift)
-                        self.collectionView.reloadData()
-                    }
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    let giftType = document.data()
+                    let gift = Gift(giftType: giftType)
+                    self.gifts.append(gift)
+                    self.collectionView.reloadData()
                 }
             }
+        if (self.gifts.count == 0) {
+            self.emptyLabel.isHidden = false
         }
+        }
+    }
    
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -157,9 +172,9 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
     fileprivate func setupNavigationBar() {
         self.navigationItem.title = "Wallet"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.view.backgroundColor = .white
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.view.backgroundColor = .white
     }
   
     @objc fileprivate func handleAccount() {

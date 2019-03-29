@@ -12,7 +12,7 @@ class ChatRequestInputTextView: UITextView {
     
     fileprivate let placeholderLabel: UILabel = {
         let label = UILabel()
-        label.text = "Add a message..."
+        label.text = "Add a message - show you like them! "
         label.textColor = .lightGray
         return label
     }()

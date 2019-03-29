@@ -27,7 +27,7 @@ class EditProfileSelectionCell: UITableViewCell {
         
         button.setTitleColor(.black, for: .normal)
         button.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        button.widthAnchor.constraint(equalToConstant: self.frame.width).isActive = true
+        button.widthAnchor.constraint(equalToConstant: self.frame.width - 24).isActive = true
         button.contentHorizontalAlignment = .left
         
         let separatorView = UIView()

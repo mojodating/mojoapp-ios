@@ -24,15 +24,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settings = db.settings
         settings.areTimestampsInSnapshotsEnabled = true
         db.settings = settings
-        
+            
         window = UIWindow()
         window?.makeKeyAndVisible()
-        
         window?.rootViewController = MainTabBarController()
+        attempRegisterForNotifications(application: application)
 
-        attempRegisterForNotifications(application: application)        
-       
         return true
+       
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
@@ -202,25 +201,25 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         
         let userInfo = response.notification.request.content.userInfo
         
-        //Respond to Inhouse Notifications
-
-            // push the user's invitation page
-            let controller = WelcomeController()
+//        if let senderId = userInfo["gcm.notification.from"] as? String {
         
+//            let privateChatController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
+//            privateChatController.chatProfileUID = senderId
+            let homeController = HomeController()
+            
             //access main UI from Appdelegate
             if let mainTabBarController = window?.rootViewController as? MainTabBarController {
-
-                mainTabBarController.selectedIndex = 2
+                
+                mainTabBarController.selectedIndex = 0
                 
                 mainTabBarController.presentedViewController?.dismiss(animated: true, completion: nil)
-
-                if let walletNavController =
-                mainTabBarController.viewControllers?.first as? UINavigationController {
-                    walletNavController.present(controller, animated: true)
+                
+                if let homeNavController = mainTabBarController.viewControllers?.first as? UINavigationController {
+                    homeNavController.pushViewController(homeController, animated: true)
                 }
-            }
-//        }
-        
+//            }
+        }
+    
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")

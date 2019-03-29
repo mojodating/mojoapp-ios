@@ -16,9 +16,7 @@ import UIKit
         self.padding = padding
         super.init(frame: .zero)
         backgroundColor = #colorLiteral(red: 0.9640902602, green: 0.9640902602, blue: 0.9640902602, alpha: 1)
-        layer.cornerRadius = 8
-//        layer.borderWidth = 1
-//        layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        layer.cornerRadius = 2
 
     }
     

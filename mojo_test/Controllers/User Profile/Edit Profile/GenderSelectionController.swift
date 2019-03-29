@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import JGProgressHUD
 
 class GenderSelectionController: UITableViewController {
     
@@ -22,6 +21,7 @@ class GenderSelectionController: UITableViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         navigationItem.title = "My Gender"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(handleSave))
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,34 +38,30 @@ class GenderSelectionController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.choosedGender = genders[indexPath.row]
         tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
-        handleSave()
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
     }
     
-    fileprivate func handleSave() {
+    
+    @objc fileprivate func handleSave() {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         let docData: [String: Any] = [
             "gender": self.choosedGender
         ]
         
-        let hud = JGProgressHUD(style: .dark)
         Firestore.firestore().collection("users").document(uid).updateData(docData) {
             (err) in
-            hud.dismiss()
             if let err = err {
                 print("Failed to save user settings", err)
                 return
             }
             print ("Finished saving user gender")
-            hud.textLabel.text = "Saved!"
-            hud.show(in: self.view)
-            hud.dismiss(afterDelay: 2)
+            self.navigationController?.popViewController(animated: true)
         }
-        
     }
+    
 
 }
 

@@ -43,6 +43,7 @@ class ProfileCell: UICollectionViewCell {
     }
     
     let cardView = CardView(frame: .zero)
+    let badge = UIImageView(image: #imageLiteral(resourceName: "popular"))
     
     fileprivate func setupLayout() {
         
@@ -51,12 +52,11 @@ class ProfileCell: UICollectionViewCell {
         cardView.fillSuperview()
 
         addSubview(cosmosView)
-        cosmosView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 12, bottom: 180, right: 0))
+        cosmosView.anchor(top: nil, leading: leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 12, bottom: 122, right: 0))
         
         addSubview(profileImageView)
         profileImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 48, height: 48))
         profileImageView.centerYAnchor.constraint(equalToSystemSpacingBelow: cosmosView.centerYAnchor, multiplier: 1).isActive = true
-        profileImageView.backgroundColor = #colorLiteral(red: 0.721568644, green: 0.8862745166, blue: 0.5921568871, alpha: 1)
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleOpenProfileDetail))

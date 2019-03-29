@@ -59,7 +59,7 @@ class CardView: UIView {
         setupGradientLayer()
         
         addSubview(informationLabel)
-        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 72, right: 70))
+        informationLabel.anchor(top: nil, leading: leadingAnchor, bottom: safeAreaLayoutGuide.bottomAnchor, trailing: trailingAnchor, padding: .init(top: 0, left: 16, bottom: 24, right: 70))
         informationLabel.textColor = .white
         informationLabel.numberOfLines = 0
 
@@ -68,7 +68,7 @@ class CardView: UIView {
     fileprivate func setupGradientLayer() {
 
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor,]
-        gradientLayer.locations = [0.6,1.2]
+        gradientLayer.locations = [0.5,1.2]
         layer.addSublayer(gradientLayer)
     }
     

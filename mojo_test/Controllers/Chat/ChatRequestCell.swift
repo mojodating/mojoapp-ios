@@ -55,9 +55,6 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         let conversation = conversation
         delegate?.didTapCell(conversation: conversation)
     }
-
-    
-//    let cellId = "cellId"
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,8 +62,7 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         backgroundColor = .white
         
         setupLayout()
-        
-        
+
     }
     
     lazy var menuBar: MenuBar = {
@@ -74,9 +70,7 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         mb.chatRequestCell = self        
         return mb
     }()
-    
-    
-    
+
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -89,28 +83,29 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         return cv
     }()
     
+    let titleLabel = UILabel(text: "CHAT", font: .boldSystemFont(ofSize: 14))
     
     func setupLayout() {
-        
         addSubview(menuBar)
         menuBar.anchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: nil, trailing: self.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0), size: .init(width: 0, height: 44))
         
+        addSubview(titleLabel)
+        titleLabel.anchor(top: nil, leading: self.leadingAnchor, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 24, bottom: 0, right: 0))
+        
         addSubview(collectionView)
-        collectionView.anchor(top: menuBar.bottomAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+        collectionView.anchor(top: menuBar.bottomAnchor, leading: self.leadingAnchor, bottom: titleLabel.topAnchor, trailing: self.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 24, right: 0))
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
         collectionView.register(RequestsFeedCell.self, forCellWithReuseIdentifier: cellId)
         collectionView.register(SentFeedCell.self, forCellWithReuseIdentifier: sentCellId)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    // setup each individual cell in chat request
     
 
 }

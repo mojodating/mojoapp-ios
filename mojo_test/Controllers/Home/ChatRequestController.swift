@@ -30,15 +30,15 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         fetchGifts()
         getBalance()
         setupLayout()
+        setupNotificationObservers()
         
     }
     
-    let titleLabel = UILabel(text: "Choose a Gift", font: .systemFont(ofSize: 24, weight: .heavy))
-    let messageLabel = UILabel(text: "Add a Message", font: .systemFont(ofSize: 24, weight: .heavy))
+    let titleLabel = UILabel(text: "Choose a Gift", font: .systemFont(ofSize: 24, weight: .black))
     let giftsCellId = "giftsCellId"
-    fileprivate let collectionView: UICollectionView = {
+    let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
+//        layout.scrollDirection = .horizontal
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .white
         return cv
@@ -55,13 +55,14 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         textView.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return textView
     }()
-    let descriptionLabel = UILabel(text: "You will find your chat request under Chat Tab", font: .systemFont(ofSize: 12))
-    let warningLabel = UILabel(text: "(Not enough)", font: .systemFont(ofSize: 16, weight: .semibold))
+    let descriptionLabel = UILabel(text: "It requires a gift to send chat request. They will receive gift only if they accept this request.\n\nYou will find your request history and gifts you purchased under 'Chat' Tab.", font: .systemFont(ofSize: 12))
+    let warningLabel = UILabel(text: "(Not enough)", font: .systemFont(ofSize: 16, weight: .medium))
 
     
     fileprivate func setupLayout() {
         view.addSubview(titleLabel)
         titleLabel.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
+//        titleLabel.textColor = .lightGray
         view.addSubview(balanceLabel)
         balanceLabel.anchor(top: titleLabel.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 16, left: 16, bottom: 0, right: 0))
         balanceLabel.numberOfLines = 0
@@ -69,11 +70,11 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         warningLabel.anchor(top: nil, leading: balanceLabel.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 8, bottom: 0, right: 0))
         warningLabel.centerYAnchor.constraint(equalToSystemSpacingBelow: balanceLabel.centerYAnchor, multiplier: 1).isActive = true
         warningLabel.isHidden = true
-        warningLabel.textColor = .orange
+        warningLabel.textColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
         view.addSubview(topupButton)
         topupButton.anchor(top: nil, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 80, height: 32))
         topupButton.centerYAnchor.constraint(equalTo: balanceLabel.centerYAnchor).isActive = true
-        topupButton.backgroundColor = .orange
+        topupButton.backgroundColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
         topupButton.setTitleColor(.white, for: .normal)
         topupButton.addTarget(self, action: #selector(handleTopup), for: .touchUpInside)
         
@@ -86,14 +87,14 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(GiftCell.self, forCellWithReuseIdentifier: giftsCellId)
-        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 16, right: 0)
-        collectionView.heightAnchor.constraint(equalToConstant: 350).isActive = true
+        let width = (view.frame.width - 2) / 3
+        collectionView.heightAnchor.constraint(equalToConstant: width * 2).isActive = true
         
         view.addSubview(inputTextView)
         inputTextView.anchor(top: collectionView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 0, bottom: 0, right: 0), size: .init(width: view.frame.width , height: 100))
         
         view.addSubview(descriptionLabel)
-        descriptionLabel.anchor(top: inputTextView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 16, left: 16, bottom: 0, right: 16))
+        descriptionLabel.anchor(top: inputTextView.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 8, left: 8, bottom: 0, right: 16))
         descriptionLabel.textColor = .lightGray
         descriptionLabel.numberOfLines = 0
         
@@ -101,13 +102,16 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         payButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, size: .init(width: view.frame.width, height: 50))
         payButton.setTitleColor(.white, for: .normal)
         payButton.addTarget(self, action: #selector(handleSendChatRequest), for: .touchUpInside)
+        payButton.isEnabled = false
+        payButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
 
     }
 
     
     var digitalGoods = [DigitalGood]()
     fileprivate func fetchGifts() {
-        Firestore.firestore().collection("drinkTypes").getDocuments() { (querySnapshot, err) in
+        Firestore.firestore().collection("drinkTypes").order(by: "price", descending: false)
+            .getDocuments(){ (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
@@ -144,7 +148,8 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
+        let width = (view.frame.width - 2) / 3
+        return CGSize(width: width, height: width)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -156,8 +161,8 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
     }
     var giftPrice: Int?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9922668147, green: 0.9574156984, blue: 0.9535622223, alpha: 1)
-        let digitalGood = self.digitalGoods[indexPath.row]
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9922668147, green: 0.9791984675, blue: 0.9093998959, alpha: 1)
+        let digitalGood = self.digitalGoods[indexPath.item]
         self.digitalGood = digitalGood
         giftPrice = digitalGood.price
         
@@ -176,6 +181,30 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         navigationController?.pushViewController(topupController, animated: true)
     }
     
+    fileprivate func setupNotificationObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc private func handleKeyboardHide() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping:1, initialSpringVelocity:1, options: .curveEaseOut, animations: {
+            self.view.transform = .identity
+        })
+    }
+    
+    @objc fileprivate func handleKeyboardShow(notification:Notification) {
+        guard let value = notification.userInfo? [UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else
+        { return }
+        let keyboardFrame = value.cgRectValue
+        //the gap from register button to the keyboard
+        let difference = keyboardFrame.height
+        self.view.transform = CGAffineTransform(translationX: 0, y: -difference)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     var digitalGood: DigitalGood?
     @objc fileprivate func handleSendChatRequest() {
         let hud = JGProgressHUD(style: .dark)
@@ -183,7 +212,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         hud.show(in: self.view)
         
         if inputTextView.text != "" && digitalGood?.id != "" {
-            self.functions.httpsCallable("sendConversationRequest").call(["uid": user?.uid, "text":inputTextView.text ?? "", "drinktypeid":digitalGood?.id ?? ""]) { (result, error) in
+            self.functions.httpsCallable("sendConversationRequest").call(["uid": user?.uid ?? "", "text":inputTextView.text ?? "", "drinktypeid":digitalGood?.id ?? ""]) { (result, error) in
                 if let error = error as NSError? {
                     if error.domain == FunctionsErrorDomain {
                         _ = FunctionsErrorCode(rawValue: error.code)
@@ -192,7 +221,6 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
                     }
                 }
                 
-                //            self.showAfterPurchasedController()
                 hud.textLabel.text = "Sent"
                 hud.show(in: self.view)
                 hud.dismiss(afterDelay: 2)

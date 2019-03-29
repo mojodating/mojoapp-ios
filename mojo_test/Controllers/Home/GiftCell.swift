@@ -13,7 +13,7 @@ class GiftCell: UICollectionViewCell {
     
     override var isSelected: Bool {
         didSet {
-            self.backgroundColor = #colorLiteral(red: 0.9922668147, green: 0.9574156984, blue: 0.9535622223, alpha: 1)
+            self.backgroundColor = #colorLiteral(red: 0.9922668147, green: 0.9791984675, blue: 0.9093998959, alpha: 1)
         }
     }
     
@@ -39,7 +39,8 @@ class GiftCell: UICollectionViewCell {
         backgroundColor = .clear
         
         addSubview(giftImageView)
-        giftImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 4, left: 4, bottom: 4, right: 0), size: .init(width: 50, height: 50))
+        let width = (frame.height / 5 * 3)
+        giftImageView.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 4, bottom: 4, right: 0), size: .init(width: width, height: width))
         
         addSubview(nameLabel)
         nameLabel.anchor(top: giftImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 4, left: 4, bottom: 0, right: 4))
@@ -47,7 +48,7 @@ class GiftCell: UICollectionViewCell {
         
         
         addSubview(priceLabel)
-        priceLabel.anchor(top: nameLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor)
+        priceLabel.anchor(top: nameLabel.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 4, left: 8, bottom: 8, right: 8))
         priceLabel.textAlignment = .center
     }
     
