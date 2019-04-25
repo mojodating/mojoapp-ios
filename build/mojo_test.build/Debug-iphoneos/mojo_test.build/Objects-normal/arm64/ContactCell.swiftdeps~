@@ -8,6 +8,7 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - !private "=="
+- !private "??"
 - "AssignmentPrecedence"
 - !private "Auth"
 - !private "BooleanLiteralType"
@@ -24,18 +25,25 @@ depends-top-level:
 - "UILabel"
 - "UITableViewCell"
 - "UIView"
+- !private "URL"
 - "User"
 - !private "_ColorLiteralType"
 - !private "fatalError"
+- !private "print"
 depends-member:
+- !private ["So7FIRAuthC", "auth"]
+- !private ["So7FIRAuthC", "currentUser"]
 - ["SK", "init"]
 - ["SK", "init"]
+- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "Auth"]
 - ["So15CALayerDelegateP", "CellStyle"]
 - !private ["So15CALayerDelegateP", "Firestore"]
 - ["So15CALayerDelegateP", "UIImageView"]
 - ["So15CALayerDelegateP", "UILabel"]
 - ["So15CALayerDelegateP", "UIView"]
+- !private ["So15CALayerDelegateP", "URL"]
+- !private ["So15CALayerDelegateP", "User"]
 - ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "anchor"]
@@ -48,9 +56,13 @@ depends-member:
 - ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "leadingAnchor"]
 - !private ["So15CALayerDelegateP", "lineView"]
+- !private ["So15CALayerDelegateP", "print"]
 - !private ["So15CALayerDelegateP", "profileImageView"]
+- !private ["So15CALayerDelegateP", "sd_setImage"]
+- !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "titleLabel"]
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
+- !private ["So15CALayerDelegateP", "user"]
 - !private ["So6CGRectV", "width"]
 - !private ["So6CGSizeV", "init"]
 - !private ["So6CGSizeV", "init"]
@@ -60,30 +72,73 @@ depends-member:
 - ["s7CVarArgP", "UIImageView"]
 - ["s7CVarArgP", "UILabel"]
 - ["s7CVarArgP", "UIView"]
+- !private ["s7CVarArgP", "URL"]
+- !private ["s7CVarArgP", "User"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "addSubview"]
 - !private ["s7CVarArgP", "anchor"]
+- !private ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "bottomAnchor"]
 - !private ["s7CVarArgP", "centerYAnchor"]
+- !private ["s7CVarArgP", "collection"]
 - !private ["s7CVarArgP", "constraint"]
 - !private ["s7CVarArgP", "conversation"]
+- !private ["s7CVarArgP", "currentUser"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "document"]
 - !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "firestore"]
 - !private ["s7CVarArgP", "frame"]
+- !private ["s7CVarArgP", "getDocument"]
 - ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isActive"]
 - !private ["s7CVarArgP", "leadingAnchor"]
 - !private ["s7CVarArgP", "lineView"]
+- !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "profileImageView"]
+- !private ["s7CVarArgP", "sd_setImage"]
 - ["s7CVarArgP", "systemFont"]
+- !private ["s7CVarArgP", "text"]
 - !private ["s7CVarArgP", "titleLabel"]
 - !private ["s7CVarArgP", "trailingAnchor"]
+- !private ["s7CVarArgP", "uid"]
+- !private ["s7CVarArgP", "user"]
 - ["Sl", "init"]
 - ["Sl", "init"]
+- !private ["So22FIRCollectionReferenceC", "document"]
 - ["SL", "init"]
 - ["SL", "init"]
 - ["SL", "medium"]
+- !private ["15TinyConstraints13ConstrainableP", "Auth"]
+- ["15TinyConstraints13ConstrainableP", "CellStyle"]
+- !private ["15TinyConstraints13ConstrainableP", "Firestore"]
+- ["15TinyConstraints13ConstrainableP", "UIImageView"]
+- ["15TinyConstraints13ConstrainableP", "UILabel"]
+- ["15TinyConstraints13ConstrainableP", "UIView"]
+- !private ["15TinyConstraints13ConstrainableP", "URL"]
+- !private ["15TinyConstraints13ConstrainableP", "User"]
+- ["15TinyConstraints13ConstrainableP", ""]
+- !private ["15TinyConstraints13ConstrainableP", "addSubview"]
+- !private ["15TinyConstraints13ConstrainableP", "anchor"]
+- !private ["15TinyConstraints13ConstrainableP", "backgroundColor"]
+- !private ["15TinyConstraints13ConstrainableP", "bottomAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "centerYAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "conversation"]
+- !private ["15TinyConstraints13ConstrainableP", "fatalError"]
+- !private ["15TinyConstraints13ConstrainableP", "frame"]
+- ["15TinyConstraints13ConstrainableP", "init"]
+- !private ["15TinyConstraints13ConstrainableP", "leadingAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "lineView"]
+- !private ["15TinyConstraints13ConstrainableP", "print"]
+- !private ["15TinyConstraints13ConstrainableP", "profileImageView"]
+- !private ["15TinyConstraints13ConstrainableP", "sd_setImage"]
+- !private ["15TinyConstraints13ConstrainableP", "text"]
+- !private ["15TinyConstraints13ConstrainableP", "titleLabel"]
+- !private ["15TinyConstraints13ConstrainableP", "trailingAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "user"]
 - !private ["9mojo_test11ContactCellC", "Auth"]
 - ["9mojo_test11ContactCellC", "Conversation"]
 - !private ["9mojo_test11ContactCellC", "Firestore"]
@@ -94,6 +149,7 @@ depends-member:
 - ["9mojo_test11ContactCellC", "UILabel"]
 - ["9mojo_test11ContactCellC", "UITableViewCell"]
 - ["9mojo_test11ContactCellC", "UIView"]
+- !private ["9mojo_test11ContactCellC", "URL"]
 - ["9mojo_test11ContactCellC", "User"]
 - !private ["9mojo_test11ContactCellC", "addSubview"]
 - !private ["9mojo_test11ContactCellC", "bottomAnchor"]
@@ -106,6 +162,7 @@ depends-member:
 - !private ["9mojo_test11ContactCellC", "leadingAnchor"]
 - ["9mojo_test11ContactCellC", "lineView"]
 - ["9mojo_test11ContactCellC", "message"]
+- !private ["9mojo_test11ContactCellC", "print"]
 - ["9mojo_test11ContactCellC", "profileImageView"]
 - ["9mojo_test11ContactCellC", "titleLabel"]
 - !private ["9mojo_test11ContactCellC", "trailingAnchor"]
@@ -118,29 +175,45 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "UIImageView"]
 - ["s28CustomDebugStringConvertibleP", "UILabel"]
 - ["s28CustomDebugStringConvertibleP", "UIView"]
+- !private ["s28CustomDebugStringConvertibleP", "URL"]
+- !private ["s28CustomDebugStringConvertibleP", "User"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "addSubview"]
 - !private ["s28CustomDebugStringConvertibleP", "anchor"]
+- !private ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "centerYAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "collection"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
 - !private ["s28CustomDebugStringConvertibleP", "conversation"]
+- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "document"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "firestore"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
+- !private ["s28CustomDebugStringConvertibleP", "getDocument"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "lineView"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "profileImageView"]
+- !private ["s28CustomDebugStringConvertibleP", "sd_setImage"]
 - ["s28CustomDebugStringConvertibleP", "systemFont"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
 - !private ["s28CustomDebugStringConvertibleP", "titleLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "uid"]
+- !private ["s28CustomDebugStringConvertibleP", "user"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "width"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "width"]
@@ -150,28 +223,47 @@ depends-member:
 - ["s23CustomStringConvertibleP", "UIImageView"]
 - ["s23CustomStringConvertibleP", "UILabel"]
 - ["s23CustomStringConvertibleP", "UIView"]
+- !private ["s23CustomStringConvertibleP", "URL"]
+- !private ["s23CustomStringConvertibleP", "User"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "anchor"]
+- !private ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
 - !private ["s23CustomStringConvertibleP", "centerYAnchor"]
+- !private ["s23CustomStringConvertibleP", "collection"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
 - !private ["s23CustomStringConvertibleP", "conversation"]
+- !private ["s23CustomStringConvertibleP", "currentUser"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "document"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "firestore"]
 - !private ["s23CustomStringConvertibleP", "frame"]
+- !private ["s23CustomStringConvertibleP", "getDocument"]
 - ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - !private ["s23CustomStringConvertibleP", "leadingAnchor"]
 - !private ["s23CustomStringConvertibleP", "lineView"]
+- !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "profileImageView"]
+- !private ["s23CustomStringConvertibleP", "sd_setImage"]
 - ["s23CustomStringConvertibleP", "systemFont"]
+- !private ["s23CustomStringConvertibleP", "text"]
 - !private ["s23CustomStringConvertibleP", "titleLabel"]
 - !private ["s23CustomStringConvertibleP", "trailingAnchor"]
+- !private ["s23CustomStringConvertibleP", "uid"]
+- !private ["s23CustomStringConvertibleP", "user"]
+- !private ["Se", "_getBuiltinLogicValue"]
 - ["Se", "init"]
 - ["Se", "init"]
 - !private ["Se", "width"]
+- !private ["So20FIRDocumentReferenceC", "getDocument"]
+- !private ["So19FIRDocumentSnapshotC", "data"]
+- !private ["SE", "_getBuiltinLogicValue"]
 - ["SE", "init"]
 - ["SE", "init"]
 - !private ["SE", "width"]
@@ -181,59 +273,93 @@ depends-member:
 - ["SQ", "UIImageView"]
 - ["SQ", "UILabel"]
 - ["SQ", "UIView"]
+- !private ["SQ", "URL"]
+- !private ["SQ", "User"]
 - ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "anchor"]
+- !private ["SQ", "auth"]
 - !private ["SQ", "backgroundColor"]
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "centerYAnchor"]
+- !private ["SQ", "collection"]
 - !private ["SQ", "constraint"]
 - !private ["SQ", "conversation"]
+- !private ["SQ", "currentUser"]
+- !private ["SQ", "data"]
+- !private ["SQ", "document"]
 - !private ["SQ", "fatalError"]
+- !private ["SQ", "firestore"]
 - !private ["SQ", "frame"]
+- !private ["SQ", "getDocument"]
 - ["SQ", "init"]
 - ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "leadingAnchor"]
 - !private ["SQ", "lineView"]
 - ["SQ", "medium"]
+- !private ["SQ", "print"]
 - !private ["SQ", "profileImageView"]
+- !private ["SQ", "sd_setImage"]
 - ["SQ", "systemFont"]
+- !private ["SQ", "text"]
 - !private ["SQ", "titleLabel"]
 - !private ["SQ", "trailingAnchor"]
+- !private ["SQ", "uid"]
+- !private ["SQ", "user"]
 - !private ["SQ", "width"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s26ExpressibleByStringLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So12FIRFirestoreC", "collection"]
+- !private ["So12FIRFirestoreC", "firestore"]
 - !private ["SH", "Auth"]
 - ["SH", "CellStyle"]
 - !private ["SH", "Firestore"]
 - ["SH", "UIImageView"]
 - ["SH", "UILabel"]
 - ["SH", "UIView"]
+- !private ["SH", "URL"]
+- !private ["SH", "User"]
 - ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "addSubview"]
 - !private ["SH", "anchor"]
+- !private ["SH", "auth"]
 - !private ["SH", "backgroundColor"]
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "centerYAnchor"]
+- !private ["SH", "collection"]
 - !private ["SH", "constraint"]
 - !private ["SH", "conversation"]
+- !private ["SH", "currentUser"]
+- !private ["SH", "data"]
+- !private ["SH", "document"]
 - !private ["SH", "fatalError"]
+- !private ["SH", "firestore"]
 - !private ["SH", "frame"]
+- !private ["SH", "getDocument"]
 - ["SH", "init"]
 - ["SH", "init"]
 - !private ["SH", "isActive"]
 - !private ["SH", "leadingAnchor"]
 - !private ["SH", "lineView"]
 - ["SH", "medium"]
+- !private ["SH", "print"]
 - !private ["SH", "profileImageView"]
+- !private ["SH", "sd_setImage"]
 - ["SH", "systemFont"]
+- !private ["SH", "text"]
 - !private ["SH", "titleLabel"]
 - !private ["SH", "trailingAnchor"]
+- !private ["SH", "uid"]
+- !private ["SH", "user"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
@@ -244,6 +370,8 @@ depends-member:
 - ["So8NSCodingP", "UIImageView"]
 - ["So8NSCodingP", "UILabel"]
 - ["So8NSCodingP", "UIView"]
+- !private ["So8NSCodingP", "URL"]
+- !private ["So8NSCodingP", "User"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "addSubview"]
 - !private ["So8NSCodingP", "anchor"]
@@ -256,9 +384,13 @@ depends-member:
 - ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "leadingAnchor"]
 - !private ["So8NSCodingP", "lineView"]
+- !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "profileImageView"]
+- !private ["So8NSCodingP", "sd_setImage"]
+- !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "titleLabel"]
 - !private ["So8NSCodingP", "trailingAnchor"]
+- !private ["So8NSCodingP", "user"]
 - ["So9NSCopyingP", "systemFont"]
 - !private ["So14NSLayoutAnchorC", "constraint"]
 - !private ["So18NSLayoutConstraintC", "isActive"]
@@ -274,25 +406,37 @@ depends-member:
 - ["So8NSObjectC", "UILabel"]
 - ["So8NSObjectC", "UITableViewCell"]
 - ["So8NSObjectC", "UIView"]
+- !private ["So8NSObjectC", "URL"]
 - ["So8NSObjectC", "User"]
 - !private ["So8NSObjectC", "addSubview"]
 - !private ["So8NSObjectC", "anchor"]
+- !private ["So8NSObjectC", "auth"]
 - !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "bottomAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
+- !private ["So8NSObjectC", "collection"]
 - !private ["So8NSObjectC", "constraint"]
 - ["So8NSObjectC", "conversation"]
+- !private ["So8NSObjectC", "currentUser"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "document"]
 - !private ["So8NSObjectC", "fatalError"]
+- !private ["So8NSObjectC", "firestore"]
 - !private ["So8NSObjectC", "frame"]
+- !private ["So8NSObjectC", "getDocument"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isActive"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - ["So8NSObjectC", "lineView"]
 - ["So8NSObjectC", "message"]
+- !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "profileImageView"]
+- !private ["So8NSObjectC", "sd_setImage"]
 - ["So8NSObjectC", "systemFont"]
+- !private ["So8NSObjectC", "text"]
 - ["So8NSObjectC", "titleLabel"]
 - !private ["So8NSObjectC", "trailingAnchor"]
+- !private ["So8NSObjectC", "uid"]
 - ["So8NSObjectC", "user"]
 - !private ["So8NSObjectP", "Auth"]
 - ["So8NSObjectP", "CellStyle"]
@@ -300,27 +444,46 @@ depends-member:
 - ["So8NSObjectP", "UIImageView"]
 - ["So8NSObjectP", "UILabel"]
 - ["So8NSObjectP", "UIView"]
+- !private ["So8NSObjectP", "URL"]
+- !private ["So8NSObjectP", "User"]
 - ["So8NSObjectP", ""]
 - !private ["So8NSObjectP", "addSubview"]
 - !private ["So8NSObjectP", "anchor"]
+- !private ["So8NSObjectP", "auth"]
 - !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "bottomAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
+- !private ["So8NSObjectP", "collection"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "conversation"]
+- !private ["So8NSObjectP", "currentUser"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "document"]
 - !private ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "firestore"]
 - !private ["So8NSObjectP", "frame"]
+- !private ["So8NSObjectP", "getDocument"]
 - ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isActive"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - !private ["So8NSObjectP", "lineView"]
+- !private ["So8NSObjectP", "print"]
 - !private ["So8NSObjectP", "profileImageView"]
+- !private ["So8NSObjectP", "sd_setImage"]
 - ["So8NSObjectP", "systemFont"]
+- !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "titleLabel"]
 - !private ["So8NSObjectP", "trailingAnchor"]
+- !private ["So8NSObjectP", "uid"]
+- !private ["So8NSObjectP", "user"]
+- !private ["9mojo_test21ProducesCardViewModelP", "imageUrl1"]
+- !private ["9mojo_test21ProducesCardViewModelP", "init"]
+- !private ["9mojo_test21ProducesCardViewModelP", "name"]
+- !private ["So8FIRQueryC", "document"]
 - ["Sm", "init"]
 - ["Sm", "init"]
 - ["SY", "medium"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
 - ["ST", "init"]
 - ["ST", "init"]
 - !private ["s12StaticStringV", "init"]
@@ -336,6 +499,7 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "anchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "centerYAnchor"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "sd_setImage"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "trailingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "Auth"]
 - ["So29UIAccessibilityIdentificationP", "CellStyle"]
@@ -343,6 +507,8 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "UIImageView"]
 - ["So29UIAccessibilityIdentificationP", "UILabel"]
 - ["So29UIAccessibilityIdentificationP", "UIView"]
+- !private ["So29UIAccessibilityIdentificationP", "URL"]
+- !private ["So29UIAccessibilityIdentificationP", "User"]
 - ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "anchor"]
@@ -355,15 +521,21 @@ depends-member:
 - ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "lineView"]
+- !private ["So29UIAccessibilityIdentificationP", "print"]
 - !private ["So29UIAccessibilityIdentificationP", "profileImageView"]
+- !private ["So29UIAccessibilityIdentificationP", "sd_setImage"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "titleLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", "user"]
 - !private ["So12UIAppearanceP", "Auth"]
 - ["So12UIAppearanceP", "CellStyle"]
 - !private ["So12UIAppearanceP", "Firestore"]
 - ["So12UIAppearanceP", "UIImageView"]
 - ["So12UIAppearanceP", "UILabel"]
 - ["So12UIAppearanceP", "UIView"]
+- !private ["So12UIAppearanceP", "URL"]
+- !private ["So12UIAppearanceP", "User"]
 - ["So12UIAppearanceP", ""]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "anchor"]
@@ -376,15 +548,21 @@ depends-member:
 - ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "leadingAnchor"]
 - !private ["So12UIAppearanceP", "lineView"]
+- !private ["So12UIAppearanceP", "print"]
 - !private ["So12UIAppearanceP", "profileImageView"]
+- !private ["So12UIAppearanceP", "sd_setImage"]
+- !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "titleLabel"]
 - !private ["So12UIAppearanceP", "trailingAnchor"]
+- !private ["So12UIAppearanceP", "user"]
 - !private ["So21UIAppearanceContainerP", "Auth"]
 - ["So21UIAppearanceContainerP", "CellStyle"]
 - !private ["So21UIAppearanceContainerP", "Firestore"]
 - ["So21UIAppearanceContainerP", "UIImageView"]
 - ["So21UIAppearanceContainerP", "UILabel"]
 - ["So21UIAppearanceContainerP", "UIView"]
+- !private ["So21UIAppearanceContainerP", "URL"]
+- !private ["So21UIAppearanceContainerP", "User"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "addSubview"]
 - !private ["So21UIAppearanceContainerP", "anchor"]
@@ -397,18 +575,25 @@ depends-member:
 - ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "leadingAnchor"]
 - !private ["So21UIAppearanceContainerP", "lineView"]
+- !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "profileImageView"]
+- !private ["So21UIAppearanceContainerP", "sd_setImage"]
+- !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "titleLabel"]
 - !private ["So21UIAppearanceContainerP", "trailingAnchor"]
+- !private ["So21UIAppearanceContainerP", "user"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "anchor"]
 - !private ["So30UIContentSizeCategoryAdjustingP", "centerYAnchor"]
 - ["So30UIContentSizeCategoryAdjustingP", "init"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
 - !private ["So17UICoordinateSpaceP", "Auth"]
 - ["So17UICoordinateSpaceP", "CellStyle"]
 - !private ["So17UICoordinateSpaceP", "Firestore"]
 - ["So17UICoordinateSpaceP", "UIImageView"]
 - ["So17UICoordinateSpaceP", "UILabel"]
 - ["So17UICoordinateSpaceP", "UIView"]
+- !private ["So17UICoordinateSpaceP", "URL"]
+- !private ["So17UICoordinateSpaceP", "User"]
 - ["So17UICoordinateSpaceP", ""]
 - !private ["So17UICoordinateSpaceP", "addSubview"]
 - !private ["So17UICoordinateSpaceP", "anchor"]
@@ -421,15 +606,21 @@ depends-member:
 - ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "leadingAnchor"]
 - !private ["So17UICoordinateSpaceP", "lineView"]
+- !private ["So17UICoordinateSpaceP", "print"]
 - !private ["So17UICoordinateSpaceP", "profileImageView"]
+- !private ["So17UICoordinateSpaceP", "sd_setImage"]
+- !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So17UICoordinateSpaceP", "titleLabel"]
 - !private ["So17UICoordinateSpaceP", "trailingAnchor"]
+- !private ["So17UICoordinateSpaceP", "user"]
 - !private ["So13UIDynamicItemP", "Auth"]
 - ["So13UIDynamicItemP", "CellStyle"]
 - !private ["So13UIDynamicItemP", "Firestore"]
 - ["So13UIDynamicItemP", "UIImageView"]
 - ["So13UIDynamicItemP", "UILabel"]
 - ["So13UIDynamicItemP", "UIView"]
+- !private ["So13UIDynamicItemP", "URL"]
+- !private ["So13UIDynamicItemP", "User"]
 - ["So13UIDynamicItemP", ""]
 - !private ["So13UIDynamicItemP", "addSubview"]
 - !private ["So13UIDynamicItemP", "anchor"]
@@ -442,9 +633,13 @@ depends-member:
 - ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "leadingAnchor"]
 - !private ["So13UIDynamicItemP", "lineView"]
+- !private ["So13UIDynamicItemP", "print"]
 - !private ["So13UIDynamicItemP", "profileImageView"]
+- !private ["So13UIDynamicItemP", "sd_setImage"]
+- !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "titleLabel"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
+- !private ["So13UIDynamicItemP", "user"]
 - !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
@@ -453,6 +648,8 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "UIImageView"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
 - ["So18UIFocusEnvironmentP", "UIView"]
+- !private ["So18UIFocusEnvironmentP", "URL"]
+- !private ["So18UIFocusEnvironmentP", "User"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "addSubview"]
 - !private ["So18UIFocusEnvironmentP", "anchor"]
@@ -465,15 +662,21 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "leadingAnchor"]
 - !private ["So18UIFocusEnvironmentP", "lineView"]
+- !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "profileImageView"]
+- !private ["So18UIFocusEnvironmentP", "sd_setImage"]
+- !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "titleLabel"]
 - !private ["So18UIFocusEnvironmentP", "trailingAnchor"]
+- !private ["So18UIFocusEnvironmentP", "user"]
 - !private ["So11UIFocusItemP", "Auth"]
 - ["So11UIFocusItemP", "CellStyle"]
 - !private ["So11UIFocusItemP", "Firestore"]
 - ["So11UIFocusItemP", "UIImageView"]
 - ["So11UIFocusItemP", "UILabel"]
 - ["So11UIFocusItemP", "UIView"]
+- !private ["So11UIFocusItemP", "URL"]
+- !private ["So11UIFocusItemP", "User"]
 - ["So11UIFocusItemP", ""]
 - !private ["So11UIFocusItemP", "addSubview"]
 - !private ["So11UIFocusItemP", "anchor"]
@@ -486,15 +689,21 @@ depends-member:
 - ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "leadingAnchor"]
 - !private ["So11UIFocusItemP", "lineView"]
+- !private ["So11UIFocusItemP", "print"]
 - !private ["So11UIFocusItemP", "profileImageView"]
+- !private ["So11UIFocusItemP", "sd_setImage"]
+- !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "titleLabel"]
 - !private ["So11UIFocusItemP", "trailingAnchor"]
+- !private ["So11UIFocusItemP", "user"]
 - !private ["So20UIFocusItemContainerP", "Auth"]
 - ["So20UIFocusItemContainerP", "CellStyle"]
 - !private ["So20UIFocusItemContainerP", "Firestore"]
 - ["So20UIFocusItemContainerP", "UIImageView"]
 - ["So20UIFocusItemContainerP", "UILabel"]
 - ["So20UIFocusItemContainerP", "UIView"]
+- !private ["So20UIFocusItemContainerP", "URL"]
+- !private ["So20UIFocusItemContainerP", "User"]
 - ["So20UIFocusItemContainerP", ""]
 - !private ["So20UIFocusItemContainerP", "addSubview"]
 - !private ["So20UIFocusItemContainerP", "anchor"]
@@ -507,9 +716,13 @@ depends-member:
 - ["So20UIFocusItemContainerP", "init"]
 - !private ["So20UIFocusItemContainerP", "leadingAnchor"]
 - !private ["So20UIFocusItemContainerP", "lineView"]
+- !private ["So20UIFocusItemContainerP", "print"]
 - !private ["So20UIFocusItemContainerP", "profileImageView"]
+- !private ["So20UIFocusItemContainerP", "sd_setImage"]
+- !private ["So20UIFocusItemContainerP", "text"]
 - !private ["So20UIFocusItemContainerP", "titleLabel"]
 - !private ["So20UIFocusItemContainerP", "trailingAnchor"]
+- !private ["So20UIFocusItemContainerP", "user"]
 - ["So6UIFontC", "systemFont"]
 - !private ["So27UIGestureRecognizerDelegateP", "Auth"]
 - ["So27UIGestureRecognizerDelegateP", "CellStyle"]
@@ -517,6 +730,8 @@ depends-member:
 - ["So27UIGestureRecognizerDelegateP", "UIImageView"]
 - ["So27UIGestureRecognizerDelegateP", "UILabel"]
 - ["So27UIGestureRecognizerDelegateP", "UIView"]
+- !private ["So27UIGestureRecognizerDelegateP", "URL"]
+- !private ["So27UIGestureRecognizerDelegateP", "User"]
 - ["So27UIGestureRecognizerDelegateP", ""]
 - !private ["So27UIGestureRecognizerDelegateP", "addSubview"]
 - !private ["So27UIGestureRecognizerDelegateP", "bottomAnchor"]
@@ -527,22 +742,28 @@ depends-member:
 - !private ["So27UIGestureRecognizerDelegateP", "init"]
 - !private ["So27UIGestureRecognizerDelegateP", "leadingAnchor"]
 - !private ["So27UIGestureRecognizerDelegateP", "lineView"]
+- !private ["So27UIGestureRecognizerDelegateP", "print"]
 - !private ["So27UIGestureRecognizerDelegateP", "profileImageView"]
 - !private ["So27UIGestureRecognizerDelegateP", "titleLabel"]
 - !private ["So27UIGestureRecognizerDelegateP", "trailingAnchor"]
+- !private ["So27UIGestureRecognizerDelegateP", "user"]
 - !private ["So11UIImageViewC", "anchor"]
 - !private ["So11UIImageViewC", "centerYAnchor"]
 - ["So11UIImageViewC", "init"]
+- !private ["So11UIImageViewC", "sd_setImage"]
 - !private ["So11UIImageViewC", "trailingAnchor"]
 - !private ["So7UILabelC", "anchor"]
 - !private ["So7UILabelC", "centerYAnchor"]
 - ["So7UILabelC", "init"]
+- !private ["So7UILabelC", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "Auth"]
 - ["So30UIPasteConfigurationSupportingP", "CellStyle"]
 - !private ["So30UIPasteConfigurationSupportingP", "Firestore"]
 - ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - ["So30UIPasteConfigurationSupportingP", "UILabel"]
 - ["So30UIPasteConfigurationSupportingP", "UIView"]
+- !private ["So30UIPasteConfigurationSupportingP", "URL"]
+- !private ["So30UIPasteConfigurationSupportingP", "User"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
 - !private ["So30UIPasteConfigurationSupportingP", "anchor"]
@@ -555,9 +776,13 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "leadingAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "lineView"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "profileImageView"]
+- !private ["So30UIPasteConfigurationSupportingP", "sd_setImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "titleLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "user"]
 - !private ["So11UIResponderC", "Auth"]
 - ["So11UIResponderC", "CellStyle"]
 - ["So11UIResponderC", "Conversation"]
@@ -569,6 +794,7 @@ depends-member:
 - ["So11UIResponderC", "UILabel"]
 - ["So11UIResponderC", "UITableViewCell"]
 - ["So11UIResponderC", "UIView"]
+- !private ["So11UIResponderC", "URL"]
 - ["So11UIResponderC", "User"]
 - !private ["So11UIResponderC", "addSubview"]
 - !private ["So11UIResponderC", "anchor"]
@@ -582,7 +808,10 @@ depends-member:
 - !private ["So11UIResponderC", "leadingAnchor"]
 - ["So11UIResponderC", "lineView"]
 - ["So11UIResponderC", "message"]
+- !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "profileImageView"]
+- !private ["So11UIResponderC", "sd_setImage"]
+- !private ["So11UIResponderC", "text"]
 - ["So11UIResponderC", "titleLabel"]
 - !private ["So11UIResponderC", "trailingAnchor"]
 - ["So11UIResponderC", "user"]
@@ -592,6 +821,8 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - ["So30UIResponderStandardEditActionsP", "UILabel"]
 - ["So30UIResponderStandardEditActionsP", "UIView"]
+- !private ["So30UIResponderStandardEditActionsP", "URL"]
+- !private ["So30UIResponderStandardEditActionsP", "User"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "addSubview"]
 - !private ["So30UIResponderStandardEditActionsP", "anchor"]
@@ -604,9 +835,13 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "leadingAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "lineView"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "profileImageView"]
+- !private ["So30UIResponderStandardEditActionsP", "sd_setImage"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "titleLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "trailingAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "user"]
 - !private ["So15UITableViewCellC", "Auth"]
 - ["So15UITableViewCellC", "CellStyle"]
 - ["So15UITableViewCellC", "Conversation"]
@@ -618,6 +853,7 @@ depends-member:
 - ["So15UITableViewCellC", "UILabel"]
 - ["So15UITableViewCellC", "UITableViewCell"]
 - ["So15UITableViewCellC", "UIView"]
+- !private ["So15UITableViewCellC", "URL"]
 - ["So15UITableViewCellC", "User"]
 - ["So15UITableViewCellC", ""]
 - !private ["So15UITableViewCellC", "addSubview"]
@@ -630,6 +866,7 @@ depends-member:
 - !private ["So15UITableViewCellC", "leadingAnchor"]
 - ["So15UITableViewCellC", "lineView"]
 - ["So15UITableViewCellC", "message"]
+- !private ["So15UITableViewCellC", "print"]
 - ["So15UITableViewCellC", "profileImageView"]
 - ["So15UITableViewCellC", "titleLabel"]
 - !private ["So15UITableViewCellC", "trailingAnchor"]
@@ -640,6 +877,8 @@ depends-member:
 - ["So18UITraitEnvironmentP", "UIImageView"]
 - ["So18UITraitEnvironmentP", "UILabel"]
 - ["So18UITraitEnvironmentP", "UIView"]
+- !private ["So18UITraitEnvironmentP", "URL"]
+- !private ["So18UITraitEnvironmentP", "User"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "addSubview"]
 - !private ["So18UITraitEnvironmentP", "anchor"]
@@ -652,15 +891,21 @@ depends-member:
 - ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "leadingAnchor"]
 - !private ["So18UITraitEnvironmentP", "lineView"]
+- !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "profileImageView"]
+- !private ["So18UITraitEnvironmentP", "sd_setImage"]
+- !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "titleLabel"]
 - !private ["So18UITraitEnvironmentP", "trailingAnchor"]
+- !private ["So18UITraitEnvironmentP", "user"]
 - !private ["So23UIUserActivityRestoringP", "Auth"]
 - ["So23UIUserActivityRestoringP", "CellStyle"]
 - !private ["So23UIUserActivityRestoringP", "Firestore"]
 - ["So23UIUserActivityRestoringP", "UIImageView"]
 - ["So23UIUserActivityRestoringP", "UILabel"]
 - ["So23UIUserActivityRestoringP", "UIView"]
+- !private ["So23UIUserActivityRestoringP", "URL"]
+- !private ["So23UIUserActivityRestoringP", "User"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "addSubview"]
 - !private ["So23UIUserActivityRestoringP", "anchor"]
@@ -673,9 +918,13 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "leadingAnchor"]
 - !private ["So23UIUserActivityRestoringP", "lineView"]
+- !private ["So23UIUserActivityRestoringP", "print"]
 - !private ["So23UIUserActivityRestoringP", "profileImageView"]
+- !private ["So23UIUserActivityRestoringP", "sd_setImage"]
+- !private ["So23UIUserActivityRestoringP", "text"]
 - !private ["So23UIUserActivityRestoringP", "titleLabel"]
 - !private ["So23UIUserActivityRestoringP", "trailingAnchor"]
+- !private ["So23UIUserActivityRestoringP", "user"]
 - !private ["So6UIViewC", "Auth"]
 - ["So6UIViewC", "CellStyle"]
 - ["So6UIViewC", "Conversation"]
@@ -687,6 +936,7 @@ depends-member:
 - ["So6UIViewC", "UILabel"]
 - ["So6UIViewC", "UITableViewCell"]
 - ["So6UIViewC", "UIView"]
+- !private ["So6UIViewC", "URL"]
 - ["So6UIViewC", "User"]
 - !private ["So6UIViewC", "addSubview"]
 - !private ["So6UIViewC", "anchor"]
@@ -700,10 +950,19 @@ depends-member:
 - !private ["So6UIViewC", "leadingAnchor"]
 - ["So6UIViewC", "lineView"]
 - ["So6UIViewC", "message"]
+- !private ["So6UIViewC", "print"]
 - ["So6UIViewC", "profileImageView"]
+- !private ["So6UIViewC", "sd_setImage"]
+- !private ["So6UIViewC", "text"]
 - ["So6UIViewC", "titleLabel"]
 - !private ["So6UIViewC", "trailingAnchor"]
 - ["So6UIViewC", "user"]
+- !private ["10Foundation3URLV", "init"]
+- !private ["9mojo_test4UserV", "imageUrl1"]
+- !private ["9mojo_test4UserV", "init"]
+- !private ["9mojo_test4UserV", "name"]
+- !private ["So7FIRUserC", "uid"]
+- !private ["So11FIRUserInfoP", "uid"]
 - ["So12UIFontWeighta", "medium"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "Auth"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "CellStyle"]
@@ -711,6 +970,8 @@ depends-member:
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "UIImageView"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "UILabel"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "UIView"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "URL"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "User"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "anchor"]
@@ -723,9 +984,14 @@ depends-member:
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "lineView"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "print"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "profileImageView"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "sd_setImage"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "user"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
@@ -734,6 +1000,7 @@ depends-member:
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "medium"]
@@ -743,24 +1010,39 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIImageView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "User"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "anchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerYAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "collection"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "conversation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "document"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "firestore"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDocument"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isActive"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lineView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "profileImageView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sd_setImage"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "systemFont"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "medium"]
@@ -770,13 +1052,17 @@ depends-member:
 - ["s16_SwiftStringViewP", "init"]
 - ["5UIKit01_A23NumericRawRepresentableP", "medium"]
 depends-nominal:
+- !private "So7FIRAuthC"
 - "SK"
+- !private "Sb"
 - "So15CALayerDelegateP"
 - !private "So6CGRectV"
 - !private "So6CGSizeV"
 - "s7CVarArgP"
 - "Sl"
+- !private "So22FIRCollectionReferenceC"
 - "SL"
+- "15TinyConstraints13ConstrainableP"
 - "9mojo_test11ContactCellC"
 - !private "9mojo_test12ConversationV"
 - "s28CustomDebugStringConvertibleP"
@@ -784,11 +1070,15 @@ depends-nominal:
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "Se"
+- !private "So20FIRDocumentReferenceC"
+- !private "So19FIRDocumentSnapshotC"
 - "SE"
 - "SQ"
+- !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So12FIRFirestoreC"
 - "SH"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
@@ -799,8 +1089,11 @@ depends-nominal:
 - !private "So19NSLayoutYAxisAnchorC"
 - "So8NSObjectC"
 - "So8NSObjectP"
+- !private "9mojo_test21ProducesCardViewModelP"
+- !private "So8FIRQueryC"
 - "Sm"
 - "SY"
+- !private "10Foundation20ReferenceConvertibleP"
 - "ST"
 - !private "s12StaticStringV"
 - "SS"
@@ -829,12 +1122,18 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
+- !private "10Foundation3URLV"
+- !private "9mojo_test4UserV"
+- !private "So7FIRUserC"
+- !private "So11FIRUserInfoP"
 - "So12UIFontWeighta"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - "s39_ExpressibleByBuiltinUTF16StringLiteralP"
 - "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
 - "s33_ExpressibleByStringInterpolationP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
@@ -860,7 +1159,145 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Headers/Cosmos-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+ForceDecode.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSImage+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImageView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImageView+HighlightedWebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDImageCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRHTTPSCallable.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageFrame.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSData+ImageContentType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDImageCacheConfig.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FIRMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeZoomAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIView+WebCacheOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageTransition.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDAnimatedImageRep.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageGIFCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageImageIOCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCodersManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImagePrefetcher.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoderHelper.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRError.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-Defines.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Headers/Cosmos-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDImageIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDPieIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndeterminateIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDRingIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDErrorIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDSuccessIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDShadow.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
 - "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"

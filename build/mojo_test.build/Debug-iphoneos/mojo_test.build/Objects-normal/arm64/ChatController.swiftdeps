@@ -34,6 +34,7 @@ depends-top-level:
 - !private "MainTabBarController"
 - !private "NSAttributedString"
 - !private "PrivateChatController"
+- "SentFeedCellDelegate"
 - !private "String"
 - "StringLiteralType"
 - !private "UIApplication"
@@ -1073,6 +1074,35 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["10Foundation20ReferenceConvertibleP", "section"]
 - !private ["9mojo_test24RequestsFeedCellDelegateP", "delegate"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "Auth"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "CGSize"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "ChatCell"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "ChatRequestCell"]
+- ["9mojo_test20SentFeedCellDelegateP", "Conversation"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "Firestore"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "NSAttributedString"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "PrivateChatController"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "UIApplication"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "UICollectionViewFlowLayout"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "UIEdgeInsets"]
+- ["9mojo_test20SentFeedCellDelegateP", "UILabel"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "UIRefreshControl"]
+- ["9mojo_test20SentFeedCellDelegateP", ""]
+- !private ["9mojo_test20SentFeedCellDelegateP", "chatCellId"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "chatRequestCellId"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "chats"]
+- ["9mojo_test20SentFeedCellDelegateP", "collectionView"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "delegate"]
+- ["9mojo_test20SentFeedCellDelegateP", "didTapCell"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "emptyLabel"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "fetchChatListsFromServer"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "handleRefreshPage"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "navigationController"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "navigationItem"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "print"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "setupLayout"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "setupNavBar"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "view"]
 - !private ["ST", "append"]
 - !private ["ST", "count"]
 - !private ["ST", "forEach"]
@@ -2180,6 +2210,7 @@ depends-nominal:
 - !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "9mojo_test24RequestsFeedCellDelegateP"
+- "9mojo_test20SentFeedCellDelegateP"
 - "ST"
 - !private "s10SetAlgebraP"
 - "SS"
@@ -2420,4 +2451,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "af12cc7c929e91fa0c9e0964dc58838f"
+interface-hash: "3e1a86476012dc45ba60feefcc3923a4"

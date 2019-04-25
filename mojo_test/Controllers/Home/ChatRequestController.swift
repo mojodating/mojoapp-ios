@@ -133,6 +133,13 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: giftsCellId, for: indexPath) as! GiftCell
         cell.digitalGood = digitalGoods[indexPath.item]
+        
+        if (self.selectedIndexPath != nil && indexPath == self.selectedIndexPath) {
+            cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 0.3355896832)
+        } else {
+                cell.backgroundColor = .clear
+            }
+        
         return cell
     }
     
@@ -149,20 +156,23 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         return 1
     }
     
+    var selectedIndexPath: IndexPath?
     var giftPrice: Int?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 0.3355896832)
         let digitalGood = self.digitalGoods[indexPath.item]
         self.digitalGood = digitalGood
         self.giftPrice = digitalGood.price
         self.payButton.setTitle("\(giftPrice ?? 8) Jo / Pay and Send", for: .normal)
-        self.checkIfBalanceEnough()        
+        self.selectedIndexPath = indexPath
+        
+        self.checkIfBalanceEnough()
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         collectionView.cellForItem(at: indexPath)?.backgroundColor = .clear
-        collectionView.reloadItems(at: collectionView.indexPathsForVisibleItems)
+        self.selectedIndexPath = nil
+        collectionView.reloadData()
     }
     
     @objc fileprivate func handleCancel() {

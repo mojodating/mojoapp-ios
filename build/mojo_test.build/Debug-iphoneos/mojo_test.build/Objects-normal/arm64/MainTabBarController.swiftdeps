@@ -526,6 +526,7 @@ depends-member:
 - !private ["9mojo_test22RegistrationControllerC", "deinit"]
 - !private ["9mojo_test22RegistrationControllerC", "delegate"]
 - !private ["9mojo_test22RegistrationControllerC", "init"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "init"]
 - !private ["ST", "init"]
 - !private ["ST", "init"]
 - !private ["SS", "init"]
@@ -1093,6 +1094,7 @@ depends-nominal:
 - !private "9mojo_test19ProfileCellDelegateP"
 - !private "Sm"
 - !private "9mojo_test22RegistrationControllerC"
+- !private "9mojo_test20SentFeedCellDelegateP"
 - !private "ST"
 - !private "SS"
 - !private "Sy"

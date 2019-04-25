@@ -62,15 +62,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LQa/Skc5dQJJ25HiaL542Is883A=
+		4FzrENgZW/SGiwJFRL/34p7xal0=
 		</data>
 		<key>JGProgressHUD.bundle/Info.plist</key>
 		<data>
-		vMgWQ0YJqGLhDsPSsqUAAuB89Zs=
+		gNuTHqf3reQ748wa2cQXNOlL+bw=
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		Jkyxm/Y3Hr67XFoNA8FGv0QtOYA=
+		doQN0K26NLhpL4gsrC3oUXvONcE=
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		nrYyRIGwXGSxjmp9Fedn70O/Sd8=
+		iy1JT8Y1+YnvtMcHOeJZkEfYaj0=
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeResources</key>
 		<data>
@@ -277,22 +277,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			vMgWQ0YJqGLhDsPSsqUAAuB89Zs=
+			gNuTHqf3reQ748wa2cQXNOlL+bw=
 			</data>
 			<key>hash2</key>
 			<data>
-			KB8yK7sbT1NKS37TePcbfs/XmW3h3Mk6HMetQPRe9SI=
+			Zyxp9xxQ/S21QDhh9j2Rn40m1Ix6hAuEsgnjN9RBYpY=
 			</data>
 		</dict>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Jkyxm/Y3Hr67XFoNA8FGv0QtOYA=
+			doQN0K26NLhpL4gsrC3oUXvONcE=
 			</data>
 			<key>hash2</key>
 			<data>
-			kFoHWZbBEOHkzIE+ZsrpofDrfNVGfxTFbBn8bonK5Gg=
+			K0LynvSvRZO/rDwQv0g/h6JYfpOVJFtK5BmTB0TAjqA=
 			</data>
 		</dict>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeRequirements</key>
@@ -310,11 +310,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			nrYyRIGwXGSxjmp9Fedn70O/Sd8=
+			iy1JT8Y1+YnvtMcHOeJZkEfYaj0=
 			</data>
 			<key>hash2</key>
 			<data>
-			5pjl7pEE38Qi+UayA8Efk4Pp8TTlf2oZ2dC/jX1hRpw=
+			by2F72rfG+WGJ8W3Mqnfgr4UN4yY7DH+LlxwhdEUc8E=
 			</data>
 		</dict>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeResources</key>

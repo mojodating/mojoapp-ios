@@ -210,20 +210,11 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
             if let mainTabBarController = window?.rootViewController as? MainTabBarController {
                 
                 mainTabBarController.selectedIndex = 1
-                let tabArray = mainTabBarController.tabBar.items! as NSArray
-                let tabItem = tabArray.object(at: 1) as! UITabBarItem
-                tabItem.badgeValue = userInfo["gcm.notification.badge"] as? String
                 mainTabBarController.presentedViewController?.dismiss(animated: true, completion: nil)
                 
                 if let chatNavController = mainTabBarController.viewControllers?[1] as? UINavigationController {
                     chatNavController.pushViewController(privateChatController, animated: true)
                 }
-            }
-        } else {
-            if let mainTabBarController = window?.rootViewController as? MainTabBarController {
-                
-                mainTabBarController.selectedIndex = 2
-                mainTabBarController.presentedViewController?.dismiss(animated: true, completion: nil)
             }
         }
     

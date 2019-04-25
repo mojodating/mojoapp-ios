@@ -45,7 +45,7 @@ depends-member:
 - !private ["So7CALayerC", "shadowOpacity"]
 - !private ["So7CALayerC", "shadowRadius"]
 - ["So15CALayerDelegateP", "CardView"]
-- ["So15CALayerDelegateP", "CosmosView"]
+- !private ["So15CALayerDelegateP", "CosmosView"]
 - ["So15CALayerDelegateP", "UIButton"]
 - ["So15CALayerDelegateP", "UIImageView"]
 - !private ["So15CALayerDelegateP", "UITapGestureRecognizer"]
@@ -72,8 +72,10 @@ depends-member:
 - !private ["So15CALayerDelegateP", "layer"]
 - !private ["So15CALayerDelegateP", "leadingAnchor"]
 - !private ["So15CALayerDelegateP", "profileImageView"]
+- !private ["So15CALayerDelegateP", "rating"]
 - !private ["So15CALayerDelegateP", "sd_setImage"]
 - !private ["So15CALayerDelegateP", "setImage"]
+- !private ["So15CALayerDelegateP", "settings"]
 - !private ["So15CALayerDelegateP", "setupLayout"]
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
 - !private ["So15CALayerDelegateP", "user"]
@@ -87,7 +89,7 @@ depends-member:
 - !private ["So6CGSizeV", "init"]
 - !private ["So6CGSizeV", "init"]
 - ["s7CVarArgP", "CardView"]
-- ["s7CVarArgP", "CosmosView"]
+- !private ["s7CVarArgP", "CosmosView"]
 - ["s7CVarArgP", "UIButton"]
 - ["s7CVarArgP", "UIImageView"]
 - !private ["s7CVarArgP", "UITapGestureRecognizer"]
@@ -122,8 +124,10 @@ depends-member:
 - !private ["s7CVarArgP", "leadingAnchor"]
 - !private ["s7CVarArgP", "numberOfTapsRequired"]
 - !private ["s7CVarArgP", "profileImageView"]
+- !private ["s7CVarArgP", "rating"]
 - !private ["s7CVarArgP", "sd_setImage"]
 - !private ["s7CVarArgP", "setImage"]
+- !private ["s7CVarArgP", "settings"]
 - !private ["s7CVarArgP", "setupLayout"]
 - !private ["s7CVarArgP", "shadowOffset"]
 - !private ["s7CVarArgP", "shadowOpacity"]
@@ -140,8 +144,53 @@ depends-member:
 - ["Sl", "init"]
 - ["SL", "init"]
 - ["SL", "init"]
+- ["15TinyConstraints13ConstrainableP", "CardView"]
+- !private ["15TinyConstraints13ConstrainableP", "CosmosView"]
+- ["15TinyConstraints13ConstrainableP", "UIButton"]
+- ["15TinyConstraints13ConstrainableP", "UIImageView"]
+- !private ["15TinyConstraints13ConstrainableP", "UITapGestureRecognizer"]
+- !private ["15TinyConstraints13ConstrainableP", "URL"]
+- ["15TinyConstraints13ConstrainableP", ""]
+- !private ["15TinyConstraints13ConstrainableP", "addGestureRecognizer"]
+- !private ["15TinyConstraints13ConstrainableP", "addSubview"]
+- !private ["15TinyConstraints13ConstrainableP", "addTarget"]
+- !private ["15TinyConstraints13ConstrainableP", "anchor"]
+- !private ["15TinyConstraints13ConstrainableP", "bottomAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "cardView"]
+- !private ["15TinyConstraints13ConstrainableP", "cardViewModel"]
+- !private ["15TinyConstraints13ConstrainableP", "centerXAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "centerYAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "chatButton"]
+- !private ["15TinyConstraints13ConstrainableP", "cosmosView"]
+- !private ["15TinyConstraints13ConstrainableP", "delegate"]
+- !private ["15TinyConstraints13ConstrainableP", "fatalError"]
+- !private ["15TinyConstraints13ConstrainableP", "fillSuperview"]
+- !private ["15TinyConstraints13ConstrainableP", "handleChatRequest"]
+- !private ["15TinyConstraints13ConstrainableP", "handleOpenProfileDetail"]
+- ["15TinyConstraints13ConstrainableP", "init"]
+- !private ["15TinyConstraints13ConstrainableP", "isUserInteractionEnabled"]
+- !private ["15TinyConstraints13ConstrainableP", "layer"]
+- !private ["15TinyConstraints13ConstrainableP", "leadingAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "profileImageView"]
+- !private ["15TinyConstraints13ConstrainableP", "rating"]
+- !private ["15TinyConstraints13ConstrainableP", "sd_setImage"]
+- !private ["15TinyConstraints13ConstrainableP", "setImage"]
+- !private ["15TinyConstraints13ConstrainableP", "settings"]
+- !private ["15TinyConstraints13ConstrainableP", "setupLayout"]
+- !private ["15TinyConstraints13ConstrainableP", "trailingAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "user"]
+- !private ["6Cosmos0A8SettingsV", "emptyImage"]
+- !private ["6Cosmos0A8SettingsV", "fillMode"]
+- !private ["6Cosmos0A8SettingsV", "filledImage"]
+- !private ["6Cosmos0A8SettingsV", "starMargin"]
+- !private ["6Cosmos0A8SettingsV", "starSize"]
+- !private ["6Cosmos0A4ViewC", "anchor"]
+- !private ["6Cosmos0A4ViewC", "centerYAnchor"]
+- !private ["6Cosmos0A4ViewC", "init"]
+- !private ["6Cosmos0A4ViewC", "rating"]
+- !private ["6Cosmos0A4ViewC", "settings"]
 - ["s28CustomDebugStringConvertibleP", "CardView"]
-- ["s28CustomDebugStringConvertibleP", "CosmosView"]
+- !private ["s28CustomDebugStringConvertibleP", "CosmosView"]
 - ["s28CustomDebugStringConvertibleP", "UIButton"]
 - ["s28CustomDebugStringConvertibleP", "UIImageView"]
 - !private ["s28CustomDebugStringConvertibleP", "UITapGestureRecognizer"]
@@ -175,8 +224,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "numberOfTapsRequired"]
 - !private ["s28CustomDebugStringConvertibleP", "profileImageView"]
+- !private ["s28CustomDebugStringConvertibleP", "rating"]
 - !private ["s28CustomDebugStringConvertibleP", "sd_setImage"]
 - !private ["s28CustomDebugStringConvertibleP", "setImage"]
+- !private ["s28CustomDebugStringConvertibleP", "settings"]
 - !private ["s28CustomDebugStringConvertibleP", "setupLayout"]
 - !private ["s28CustomDebugStringConvertibleP", "shadowOffset"]
 - !private ["s28CustomDebugStringConvertibleP", "shadowOpacity"]
@@ -194,7 +245,7 @@ depends-member:
 - ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "zero"]
 - ["s23CustomStringConvertibleP", "CardView"]
-- ["s23CustomStringConvertibleP", "CosmosView"]
+- !private ["s23CustomStringConvertibleP", "CosmosView"]
 - ["s23CustomStringConvertibleP", "UIButton"]
 - ["s23CustomStringConvertibleP", "UIImageView"]
 - !private ["s23CustomStringConvertibleP", "UITapGestureRecognizer"]
@@ -229,8 +280,10 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "leadingAnchor"]
 - !private ["s23CustomStringConvertibleP", "numberOfTapsRequired"]
 - !private ["s23CustomStringConvertibleP", "profileImageView"]
+- !private ["s23CustomStringConvertibleP", "rating"]
 - !private ["s23CustomStringConvertibleP", "sd_setImage"]
 - !private ["s23CustomStringConvertibleP", "setImage"]
+- !private ["s23CustomStringConvertibleP", "settings"]
 - !private ["s23CustomStringConvertibleP", "setupLayout"]
 - !private ["s23CustomStringConvertibleP", "shadowOffset"]
 - !private ["s23CustomStringConvertibleP", "shadowOpacity"]
@@ -247,7 +300,7 @@ depends-member:
 - ["SE", "init"]
 - ["SE", "zero"]
 - ["SQ", "CardView"]
-- ["SQ", "CosmosView"]
+- !private ["SQ", "CosmosView"]
 - ["SQ", "UIButton"]
 - ["SQ", "UIImageView"]
 - !private ["SQ", "UITapGestureRecognizer"]
@@ -273,6 +326,7 @@ depends-member:
 - !private ["SQ", "delegate"]
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "fillSuperview"]
+- !private ["SQ", "full"]
 - !private ["SQ", "handleChatRequest"]
 - !private ["SQ", "handleOpenProfileDetail"]
 - ["SQ", "init"]
@@ -284,8 +338,10 @@ depends-member:
 - !private ["SQ", "normal"]
 - !private ["SQ", "numberOfTapsRequired"]
 - !private ["SQ", "profileImageView"]
+- !private ["SQ", "rating"]
 - !private ["SQ", "sd_setImage"]
 - !private ["SQ", "setImage"]
+- !private ["SQ", "settings"]
 - !private ["SQ", "setupLayout"]
 - !private ["SQ", "shadowOffset"]
 - !private ["SQ", "shadowOpacity"]
@@ -307,7 +363,7 @@ depends-member:
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["SH", "CardView"]
-- ["SH", "CosmosView"]
+- !private ["SH", "CosmosView"]
 - ["SH", "UIButton"]
 - ["SH", "UIImageView"]
 - !private ["SH", "UITapGestureRecognizer"]
@@ -333,6 +389,7 @@ depends-member:
 - !private ["SH", "delegate"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "fillSuperview"]
+- !private ["SH", "full"]
 - !private ["SH", "handleChatRequest"]
 - !private ["SH", "handleOpenProfileDetail"]
 - ["SH", "init"]
@@ -343,8 +400,10 @@ depends-member:
 - !private ["SH", "leadingAnchor"]
 - !private ["SH", "numberOfTapsRequired"]
 - !private ["SH", "profileImageView"]
+- !private ["SH", "rating"]
 - !private ["SH", "sd_setImage"]
 - !private ["SH", "setImage"]
+- !private ["SH", "settings"]
 - !private ["SH", "setupLayout"]
 - !private ["SH", "shadowOffset"]
 - !private ["SH", "shadowOpacity"]
@@ -359,7 +418,7 @@ depends-member:
 - ["s10MirrorPathP", "init"]
 - ["s10MirrorPathP", "init"]
 - ["So8NSCodingP", "CardView"]
-- ["So8NSCodingP", "CosmosView"]
+- !private ["So8NSCodingP", "CosmosView"]
 - ["So8NSCodingP", "UIButton"]
 - ["So8NSCodingP", "UIImageView"]
 - !private ["So8NSCodingP", "UITapGestureRecognizer"]
@@ -389,8 +448,10 @@ depends-member:
 - !private ["So8NSCodingP", "layer"]
 - !private ["So8NSCodingP", "leadingAnchor"]
 - !private ["So8NSCodingP", "profileImageView"]
+- !private ["So8NSCodingP", "rating"]
 - !private ["So8NSCodingP", "sd_setImage"]
 - !private ["So8NSCodingP", "setImage"]
+- !private ["So8NSCodingP", "settings"]
 - !private ["So8NSCodingP", "setupLayout"]
 - !private ["So8NSCodingP", "shadowOffset"]
 - !private ["So8NSCodingP", "shadowOpacity"]
@@ -431,7 +492,8 @@ depends-member:
 - ["So8NSObjectC", "chatButton.storage"]
 - !private ["So8NSObjectC", "constraint"]
 - !private ["So8NSObjectC", "cornerRadius"]
-- !private ["So8NSObjectC", "cosmosView"]
+- ["So8NSObjectC", "cosmosView"]
+- ["So8NSObjectC", "cosmosView.storage"]
 - ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "fillSuperview"]
@@ -445,8 +507,10 @@ depends-member:
 - !private ["So8NSObjectC", "numberOfTapsRequired"]
 - ["So8NSObjectC", "profileImageView"]
 - ["So8NSObjectC", "profileImageView.storage"]
+- !private ["So8NSObjectC", "rating"]
 - !private ["So8NSObjectC", "sd_setImage"]
 - !private ["So8NSObjectC", "setImage"]
+- !private ["So8NSObjectC", "settings"]
 - ["So8NSObjectC", "setupLayout"]
 - !private ["So8NSObjectC", "shadowOffset"]
 - !private ["So8NSObjectC", "shadowOpacity"]
@@ -455,7 +519,7 @@ depends-member:
 - ["So8NSObjectC", "user"]
 - !private ["So8NSObjectC", "withRenderingMode"]
 - ["So8NSObjectP", "CardView"]
-- ["So8NSObjectP", "CosmosView"]
+- !private ["So8NSObjectP", "CosmosView"]
 - ["So8NSObjectP", "UIButton"]
 - ["So8NSObjectP", "UIImageView"]
 - !private ["So8NSObjectP", "UITapGestureRecognizer"]
@@ -488,8 +552,10 @@ depends-member:
 - !private ["So8NSObjectP", "leadingAnchor"]
 - !private ["So8NSObjectP", "numberOfTapsRequired"]
 - !private ["So8NSObjectP", "profileImageView"]
+- !private ["So8NSObjectP", "rating"]
 - !private ["So8NSObjectP", "sd_setImage"]
 - !private ["So8NSObjectP", "setImage"]
+- !private ["So8NSObjectP", "settings"]
 - !private ["So8NSObjectP", "setupLayout"]
 - !private ["So8NSObjectP", "shadowOffset"]
 - !private ["So8NSObjectP", "shadowOpacity"]
@@ -526,7 +592,9 @@ depends-member:
 - ["9mojo_test11ProfileCellC", "cardViewModel"]
 - ["9mojo_test11ProfileCellC", "chatButton"]
 - !private ["9mojo_test11ProfileCellC", "chatButton.storage"]
-- !private ["9mojo_test11ProfileCellC", "cosmosView"]
+- ["9mojo_test11ProfileCellC", "cosmosView"]
+- !private ["9mojo_test11ProfileCellC", "cosmosView.storage"]
+- !private ["9mojo_test11ProfileCellC", "deinit"]
 - ["9mojo_test11ProfileCellC", "delegate"]
 - !private ["9mojo_test11ProfileCellC", "fatalError"]
 - !private ["9mojo_test11ProfileCellC", "handleChatRequest"]
@@ -545,6 +613,7 @@ depends-member:
 - ["Sm", "init"]
 - ["Sm", "init"]
 - !private ["SY", "alwaysOriginal"]
+- !private ["SY", "full"]
 - !private ["SY", "normal"]
 - ["SY", "system"]
 - !private ["SY", "touchUpInside"]
@@ -554,6 +623,7 @@ depends-member:
 - ["ST", "init"]
 - !private ["s10SetAlgebraP", "normal"]
 - !private ["s10SetAlgebraP", "touchUpInside"]
+- !private ["6Cosmos12StarFillModeO", "full"]
 - !private ["So14UIControlStateV", "normal"]
 - !private ["s12StaticStringV", "init"]
 - !private ["s12StaticStringV", "init"]
@@ -577,7 +647,7 @@ depends-member:
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "sd_setImage"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setImage"]
 - ["So29UIAccessibilityIdentificationP", "CardView"]
-- ["So29UIAccessibilityIdentificationP", "CosmosView"]
+- !private ["So29UIAccessibilityIdentificationP", "CosmosView"]
 - ["So29UIAccessibilityIdentificationP", "UIButton"]
 - ["So29UIAccessibilityIdentificationP", "UIImageView"]
 - !private ["So29UIAccessibilityIdentificationP", "UITapGestureRecognizer"]
@@ -604,14 +674,16 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "layer"]
 - !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "profileImageView"]
+- !private ["So29UIAccessibilityIdentificationP", "rating"]
 - !private ["So29UIAccessibilityIdentificationP", "sd_setImage"]
 - !private ["So29UIAccessibilityIdentificationP", "setImage"]
+- !private ["So29UIAccessibilityIdentificationP", "settings"]
 - !private ["So29UIAccessibilityIdentificationP", "setupLayout"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "user"]
 - !private ["So29UIAccessibilityIdentificationP", "withRenderingMode"]
 - ["So12UIAppearanceP", "CardView"]
-- ["So12UIAppearanceP", "CosmosView"]
+- !private ["So12UIAppearanceP", "CosmosView"]
 - ["So12UIAppearanceP", "UIButton"]
 - ["So12UIAppearanceP", "UIImageView"]
 - !private ["So12UIAppearanceP", "UITapGestureRecognizer"]
@@ -638,13 +710,15 @@ depends-member:
 - !private ["So12UIAppearanceP", "layer"]
 - !private ["So12UIAppearanceP", "leadingAnchor"]
 - !private ["So12UIAppearanceP", "profileImageView"]
+- !private ["So12UIAppearanceP", "rating"]
 - !private ["So12UIAppearanceP", "sd_setImage"]
 - !private ["So12UIAppearanceP", "setImage"]
+- !private ["So12UIAppearanceP", "settings"]
 - !private ["So12UIAppearanceP", "setupLayout"]
 - !private ["So12UIAppearanceP", "trailingAnchor"]
 - !private ["So12UIAppearanceP", "user"]
 - ["So21UIAppearanceContainerP", "CardView"]
-- ["So21UIAppearanceContainerP", "CosmosView"]
+- !private ["So21UIAppearanceContainerP", "CosmosView"]
 - ["So21UIAppearanceContainerP", "UIButton"]
 - ["So21UIAppearanceContainerP", "UIImageView"]
 - !private ["So21UIAppearanceContainerP", "UITapGestureRecognizer"]
@@ -671,8 +745,10 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "layer"]
 - !private ["So21UIAppearanceContainerP", "leadingAnchor"]
 - !private ["So21UIAppearanceContainerP", "profileImageView"]
+- !private ["So21UIAppearanceContainerP", "rating"]
 - !private ["So21UIAppearanceContainerP", "sd_setImage"]
 - !private ["So21UIAppearanceContainerP", "setImage"]
+- !private ["So21UIAppearanceContainerP", "settings"]
 - !private ["So21UIAppearanceContainerP", "setupLayout"]
 - !private ["So21UIAppearanceContainerP", "trailingAnchor"]
 - !private ["So21UIAppearanceContainerP", "user"]
@@ -699,7 +775,8 @@ depends-member:
 - ["So24UICollectionReusableViewC", "cardViewModel"]
 - ["So24UICollectionReusableViewC", "chatButton"]
 - ["So24UICollectionReusableViewC", "chatButton.storage"]
-- !private ["So24UICollectionReusableViewC", "cosmosView"]
+- ["So24UICollectionReusableViewC", "cosmosView"]
+- ["So24UICollectionReusableViewC", "cosmosView.storage"]
 - ["So24UICollectionReusableViewC", "delegate"]
 - !private ["So24UICollectionReusableViewC", "fatalError"]
 - ["So24UICollectionReusableViewC", "handleChatRequest"]
@@ -731,7 +808,8 @@ depends-member:
 - ["So20UICollectionViewCellC", "cardViewModel"]
 - ["So20UICollectionViewCellC", "chatButton"]
 - ["So20UICollectionViewCellC", "chatButton.storage"]
-- !private ["So20UICollectionViewCellC", "cosmosView"]
+- ["So20UICollectionViewCellC", "cosmosView"]
+- ["So20UICollectionViewCellC", "cosmosView.storage"]
 - ["So20UICollectionViewCellC", "delegate"]
 - !private ["So20UICollectionViewCellC", "fatalError"]
 - ["So20UICollectionViewCellC", "handleChatRequest"]
@@ -750,7 +828,7 @@ depends-member:
 - ["So9UIControlC", "init"]
 - !private ["So9UIControlC", "setImage"]
 - ["So17UICoordinateSpaceP", "CardView"]
-- ["So17UICoordinateSpaceP", "CosmosView"]
+- !private ["So17UICoordinateSpaceP", "CosmosView"]
 - ["So17UICoordinateSpaceP", "UIButton"]
 - ["So17UICoordinateSpaceP", "UIImageView"]
 - !private ["So17UICoordinateSpaceP", "UITapGestureRecognizer"]
@@ -777,13 +855,15 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "layer"]
 - !private ["So17UICoordinateSpaceP", "leadingAnchor"]
 - !private ["So17UICoordinateSpaceP", "profileImageView"]
+- !private ["So17UICoordinateSpaceP", "rating"]
 - !private ["So17UICoordinateSpaceP", "sd_setImage"]
 - !private ["So17UICoordinateSpaceP", "setImage"]
+- !private ["So17UICoordinateSpaceP", "settings"]
 - !private ["So17UICoordinateSpaceP", "setupLayout"]
 - !private ["So17UICoordinateSpaceP", "trailingAnchor"]
 - !private ["So17UICoordinateSpaceP", "user"]
 - ["So13UIDynamicItemP", "CardView"]
-- ["So13UIDynamicItemP", "CosmosView"]
+- !private ["So13UIDynamicItemP", "CosmosView"]
 - ["So13UIDynamicItemP", "UIButton"]
 - ["So13UIDynamicItemP", "UIImageView"]
 - !private ["So13UIDynamicItemP", "UITapGestureRecognizer"]
@@ -810,15 +890,17 @@ depends-member:
 - !private ["So13UIDynamicItemP", "layer"]
 - !private ["So13UIDynamicItemP", "leadingAnchor"]
 - !private ["So13UIDynamicItemP", "profileImageView"]
+- !private ["So13UIDynamicItemP", "rating"]
 - !private ["So13UIDynamicItemP", "sd_setImage"]
 - !private ["So13UIDynamicItemP", "setImage"]
+- !private ["So13UIDynamicItemP", "settings"]
 - !private ["So13UIDynamicItemP", "setupLayout"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So13UIDynamicItemP", "user"]
 - !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So12UIEdgeInsetsV", "init"]
 - ["So18UIFocusEnvironmentP", "CardView"]
-- ["So18UIFocusEnvironmentP", "CosmosView"]
+- !private ["So18UIFocusEnvironmentP", "CosmosView"]
 - ["So18UIFocusEnvironmentP", "UIButton"]
 - ["So18UIFocusEnvironmentP", "UIImageView"]
 - !private ["So18UIFocusEnvironmentP", "UITapGestureRecognizer"]
@@ -845,13 +927,15 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "layer"]
 - !private ["So18UIFocusEnvironmentP", "leadingAnchor"]
 - !private ["So18UIFocusEnvironmentP", "profileImageView"]
+- !private ["So18UIFocusEnvironmentP", "rating"]
 - !private ["So18UIFocusEnvironmentP", "sd_setImage"]
 - !private ["So18UIFocusEnvironmentP", "setImage"]
+- !private ["So18UIFocusEnvironmentP", "settings"]
 - !private ["So18UIFocusEnvironmentP", "setupLayout"]
 - !private ["So18UIFocusEnvironmentP", "trailingAnchor"]
 - !private ["So18UIFocusEnvironmentP", "user"]
 - ["So11UIFocusItemP", "CardView"]
-- ["So11UIFocusItemP", "CosmosView"]
+- !private ["So11UIFocusItemP", "CosmosView"]
 - ["So11UIFocusItemP", "UIButton"]
 - ["So11UIFocusItemP", "UIImageView"]
 - !private ["So11UIFocusItemP", "UITapGestureRecognizer"]
@@ -878,13 +962,15 @@ depends-member:
 - !private ["So11UIFocusItemP", "layer"]
 - !private ["So11UIFocusItemP", "leadingAnchor"]
 - !private ["So11UIFocusItemP", "profileImageView"]
+- !private ["So11UIFocusItemP", "rating"]
 - !private ["So11UIFocusItemP", "sd_setImage"]
 - !private ["So11UIFocusItemP", "setImage"]
+- !private ["So11UIFocusItemP", "settings"]
 - !private ["So11UIFocusItemP", "setupLayout"]
 - !private ["So11UIFocusItemP", "trailingAnchor"]
 - !private ["So11UIFocusItemP", "user"]
 - ["So20UIFocusItemContainerP", "CardView"]
-- ["So20UIFocusItemContainerP", "CosmosView"]
+- !private ["So20UIFocusItemContainerP", "CosmosView"]
 - ["So20UIFocusItemContainerP", "UIButton"]
 - ["So20UIFocusItemContainerP", "UIImageView"]
 - !private ["So20UIFocusItemContainerP", "UITapGestureRecognizer"]
@@ -911,8 +997,10 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "layer"]
 - !private ["So20UIFocusItemContainerP", "leadingAnchor"]
 - !private ["So20UIFocusItemContainerP", "profileImageView"]
+- !private ["So20UIFocusItemContainerP", "rating"]
 - !private ["So20UIFocusItemContainerP", "sd_setImage"]
 - !private ["So20UIFocusItemContainerP", "setImage"]
+- !private ["So20UIFocusItemContainerP", "settings"]
 - !private ["So20UIFocusItemContainerP", "setupLayout"]
 - !private ["So20UIFocusItemContainerP", "trailingAnchor"]
 - !private ["So20UIFocusItemContainerP", "user"]
@@ -930,7 +1018,7 @@ depends-member:
 - !private ["So11UIImageViewC", "sd_setImage"]
 - !private ["So39UIItemProviderPresentationSizeProvidingP", "withRenderingMode"]
 - ["So30UIPasteConfigurationSupportingP", "CardView"]
-- ["So30UIPasteConfigurationSupportingP", "CosmosView"]
+- !private ["So30UIPasteConfigurationSupportingP", "CosmosView"]
 - ["So30UIPasteConfigurationSupportingP", "UIButton"]
 - ["So30UIPasteConfigurationSupportingP", "UIImageView"]
 - !private ["So30UIPasteConfigurationSupportingP", "UITapGestureRecognizer"]
@@ -957,8 +1045,10 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "layer"]
 - !private ["So30UIPasteConfigurationSupportingP", "leadingAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "profileImageView"]
+- !private ["So30UIPasteConfigurationSupportingP", "rating"]
 - !private ["So30UIPasteConfigurationSupportingP", "sd_setImage"]
 - !private ["So30UIPasteConfigurationSupportingP", "setImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "settings"]
 - !private ["So30UIPasteConfigurationSupportingP", "setupLayout"]
 - !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "user"]
@@ -985,7 +1075,8 @@ depends-member:
 - !private ["So11UIResponderC", "centerYAnchor"]
 - ["So11UIResponderC", "chatButton"]
 - ["So11UIResponderC", "chatButton.storage"]
-- !private ["So11UIResponderC", "cosmosView"]
+- ["So11UIResponderC", "cosmosView"]
+- ["So11UIResponderC", "cosmosView.storage"]
 - ["So11UIResponderC", "delegate"]
 - !private ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "fillSuperview"]
@@ -997,13 +1088,15 @@ depends-member:
 - !private ["So11UIResponderC", "leadingAnchor"]
 - ["So11UIResponderC", "profileImageView"]
 - ["So11UIResponderC", "profileImageView.storage"]
+- !private ["So11UIResponderC", "rating"]
 - !private ["So11UIResponderC", "sd_setImage"]
 - !private ["So11UIResponderC", "setImage"]
+- !private ["So11UIResponderC", "settings"]
 - ["So11UIResponderC", "setupLayout"]
 - !private ["So11UIResponderC", "trailingAnchor"]
 - ["So11UIResponderC", "user"]
 - ["So30UIResponderStandardEditActionsP", "CardView"]
-- ["So30UIResponderStandardEditActionsP", "CosmosView"]
+- !private ["So30UIResponderStandardEditActionsP", "CosmosView"]
 - ["So30UIResponderStandardEditActionsP", "UIButton"]
 - ["So30UIResponderStandardEditActionsP", "UIImageView"]
 - !private ["So30UIResponderStandardEditActionsP", "UITapGestureRecognizer"]
@@ -1030,8 +1123,10 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "layer"]
 - !private ["So30UIResponderStandardEditActionsP", "leadingAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "profileImageView"]
+- !private ["So30UIResponderStandardEditActionsP", "rating"]
 - !private ["So30UIResponderStandardEditActionsP", "sd_setImage"]
 - !private ["So30UIResponderStandardEditActionsP", "setImage"]
+- !private ["So30UIResponderStandardEditActionsP", "settings"]
 - !private ["So30UIResponderStandardEditActionsP", "setupLayout"]
 - !private ["So30UIResponderStandardEditActionsP", "trailingAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "user"]
@@ -1043,7 +1138,7 @@ depends-member:
 - !private ["So22UITapGestureRecognizerC", "init"]
 - !private ["So22UITapGestureRecognizerC", "numberOfTapsRequired"]
 - ["So18UITraitEnvironmentP", "CardView"]
-- ["So18UITraitEnvironmentP", "CosmosView"]
+- !private ["So18UITraitEnvironmentP", "CosmosView"]
 - ["So18UITraitEnvironmentP", "UIButton"]
 - ["So18UITraitEnvironmentP", "UIImageView"]
 - !private ["So18UITraitEnvironmentP", "UITapGestureRecognizer"]
@@ -1070,13 +1165,15 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "layer"]
 - !private ["So18UITraitEnvironmentP", "leadingAnchor"]
 - !private ["So18UITraitEnvironmentP", "profileImageView"]
+- !private ["So18UITraitEnvironmentP", "rating"]
 - !private ["So18UITraitEnvironmentP", "sd_setImage"]
 - !private ["So18UITraitEnvironmentP", "setImage"]
+- !private ["So18UITraitEnvironmentP", "settings"]
 - !private ["So18UITraitEnvironmentP", "setupLayout"]
 - !private ["So18UITraitEnvironmentP", "trailingAnchor"]
 - !private ["So18UITraitEnvironmentP", "user"]
 - ["So23UIUserActivityRestoringP", "CardView"]
-- ["So23UIUserActivityRestoringP", "CosmosView"]
+- !private ["So23UIUserActivityRestoringP", "CosmosView"]
 - ["So23UIUserActivityRestoringP", "UIButton"]
 - ["So23UIUserActivityRestoringP", "UIImageView"]
 - !private ["So23UIUserActivityRestoringP", "UITapGestureRecognizer"]
@@ -1103,8 +1200,10 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "layer"]
 - !private ["So23UIUserActivityRestoringP", "leadingAnchor"]
 - !private ["So23UIUserActivityRestoringP", "profileImageView"]
+- !private ["So23UIUserActivityRestoringP", "rating"]
 - !private ["So23UIUserActivityRestoringP", "sd_setImage"]
 - !private ["So23UIUserActivityRestoringP", "setImage"]
+- !private ["So23UIUserActivityRestoringP", "settings"]
 - !private ["So23UIUserActivityRestoringP", "setupLayout"]
 - !private ["So23UIUserActivityRestoringP", "trailingAnchor"]
 - !private ["So23UIUserActivityRestoringP", "user"]
@@ -1131,7 +1230,8 @@ depends-member:
 - !private ["So6UIViewC", "centerYAnchor"]
 - ["So6UIViewC", "chatButton"]
 - ["So6UIViewC", "chatButton.storage"]
-- !private ["So6UIViewC", "cosmosView"]
+- ["So6UIViewC", "cosmosView"]
+- ["So6UIViewC", "cosmosView.storage"]
 - ["So6UIViewC", "delegate"]
 - !private ["So6UIViewC", "fatalError"]
 - !private ["So6UIViewC", "fillSuperview"]
@@ -1143,8 +1243,10 @@ depends-member:
 - !private ["So6UIViewC", "leadingAnchor"]
 - ["So6UIViewC", "profileImageView"]
 - ["So6UIViewC", "profileImageView.storage"]
+- !private ["So6UIViewC", "rating"]
 - !private ["So6UIViewC", "sd_setImage"]
 - !private ["So6UIViewC", "setImage"]
+- !private ["So6UIViewC", "settings"]
 - ["So6UIViewC", "setupLayout"]
 - !private ["So6UIViewC", "trailingAnchor"]
 - ["So6UIViewC", "user"]
@@ -1153,7 +1255,7 @@ depends-member:
 - !private ["9mojo_test4UserV", "imageUrl1"]
 - !private ["9mojo_test4UserV", "toCardViewModel"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "CardView"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosView"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosView"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "UIButton"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "UIImageView"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "UITapGestureRecognizer"]
@@ -1180,8 +1282,10 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "layer"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "profileImageView"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rating"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "sd_setImage"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "setImage"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "settings"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "setupLayout"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "user"]
@@ -1199,7 +1303,7 @@ depends-member:
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "CardView"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "CosmosView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CosmosView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIButton"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIImageView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UITapGestureRecognizer"]
@@ -1232,8 +1336,10 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "numberOfTapsRequired"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "profileImageView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "rating"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sd_setImage"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "settings"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setupLayout"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shadowOffset"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shadowOpacity"]
@@ -1260,6 +1366,9 @@ depends-nominal:
 - "9mojo_test8CardViewC"
 - "Sl"
 - "SL"
+- "15TinyConstraints13ConstrainableP"
+- !private "6Cosmos0A8SettingsV"
+- !private "6Cosmos0A4ViewC"
 - "s28CustomDebugStringConvertibleP"
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
@@ -1296,6 +1405,7 @@ depends-nominal:
 - !private "So20UIImageRenderingModeV"
 - "ST"
 - !private "s10SetAlgebraP"
+- !private "6Cosmos12StarFillModeO"
 - !private "So14UIControlStateV"
 - !private "s12StaticStringV"
 - "SS"
@@ -1360,7 +1470,145 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Headers/Cosmos-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+ForceDecode.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSImage+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImageView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImageView+HighlightedWebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDImageCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRHTTPSCallable.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageFrame.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSData+ImageContentType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDImageCacheConfig.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FIRMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeZoomAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIView+WebCacheOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageTransition.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDAnimatedImageRep.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageGIFCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageImageIOCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCodersManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImagePrefetcher.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoderHelper.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRError.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-Defines.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Headers/Cosmos-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDImageIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDPieIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndeterminateIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDRingIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDErrorIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDSuccessIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDShadow.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
 - "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"

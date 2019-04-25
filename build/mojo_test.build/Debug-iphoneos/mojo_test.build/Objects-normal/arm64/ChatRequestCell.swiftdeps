@@ -29,6 +29,7 @@ depends-top-level:
 - !private "RequestsFeedCell"
 - "RequestsFeedCellDelegate"
 - !private "SentFeedCell"
+- "SentFeedCellDelegate"
 - "StringLiteralType"
 - "UICollectionView"
 - "UICollectionViewCell"
@@ -836,6 +837,53 @@ depends-member:
 - ["9mojo_test24RequestsFeedCellDelegateP", "viewForZoomingInScrollView"]
 - ["So31UICollectionViewScrollDirectionV", "horizontal"]
 - !private ["So30UICollectionViewScrollPositionV", "right"]
+- !private ["9mojo_test12SentFeedCellC", "delegate"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "CGSize"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "IndexPath"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "MenuBar"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "RequestsFeedCell"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "SentFeedCell"]
+- ["9mojo_test20SentFeedCellDelegateP", "UICollectionView"]
+- ["9mojo_test20SentFeedCellDelegateP", "UICollectionViewFlowLayout"]
+- ["9mojo_test20SentFeedCellDelegateP", "UILabel"]
+- ["9mojo_test20SentFeedCellDelegateP", ""]
+- !private ["9mojo_test20SentFeedCellDelegateP", "addSubview"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "backgroundColor"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "bottomAnchor"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "cellId"]
+- ["9mojo_test20SentFeedCellDelegateP", "collectionView"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "delegate"]
+- ["9mojo_test20SentFeedCellDelegateP", "didTapCell"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "fatalError"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "frame"]
+- ["9mojo_test20SentFeedCellDelegateP", "indexPathForPreferredFocusedView"]
+- ["9mojo_test20SentFeedCellDelegateP", "indexPathForPreferredFocusedViewInCollectionView"]
+- ["9mojo_test20SentFeedCellDelegateP", "indexTitles"]
+- ["9mojo_test20SentFeedCellDelegateP", "indexTitlesForCollectionView"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "leadingAnchor"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "menuBar"]
+- ["9mojo_test20SentFeedCellDelegateP", "numberOfSections"]
+- ["9mojo_test20SentFeedCellDelegateP", "numberOfSectionsInCollectionView"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewDidChangeAdjustedContentInset"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewDidEndDecelerating"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewDidEndDragging"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewDidEndScrollingAnimation"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewDidEndZooming"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewDidScroll"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewDidScrollToTop"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewDidZoom"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewShouldScrollToTop"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewWillBeginDecelerating"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewWillBeginDragging"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewWillBeginZooming"]
+- ["9mojo_test20SentFeedCellDelegateP", "scrollViewWillEndDragging"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "sentCellId"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "setupLayout"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "titleLabel"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "topAnchor"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "trailingAnchor"]
+- ["9mojo_test20SentFeedCellDelegateP", "viewForZooming"]
+- ["9mojo_test20SentFeedCellDelegateP", "viewForZoomingInScrollView"]
 - ["ST", "init"]
 - ["ST", "init"]
 - !private ["ST", "item"]
@@ -2192,6 +2240,8 @@ depends-nominal:
 - "9mojo_test24RequestsFeedCellDelegateP"
 - "So31UICollectionViewScrollDirectionV"
 - !private "So30UICollectionViewScrollPositionV"
+- !private "9mojo_test12SentFeedCellC"
+- "9mojo_test20SentFeedCellDelegateP"
 - "ST"
 - !private "s10SetAlgebraP"
 - !private "s12StaticStringV"
@@ -2413,4 +2463,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "b2978ac251bbc21c0cdc224d12df156f"
+interface-hash: "5667f249a5ed3353241cd33c00d9da1a"

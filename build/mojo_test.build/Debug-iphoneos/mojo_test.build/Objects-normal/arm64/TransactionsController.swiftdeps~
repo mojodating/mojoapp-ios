@@ -24,13 +24,19 @@ depends-top-level:
 - "UITableViewCell"
 - "UITableViewController"
 - "User"
+- !private "print"
 depends-member:
+- !private ["Sa", "append"]
 - !private ["Sa", "count"]
 - ["Sa", "init"]
 - !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "append"]
 - !private ["s13ArrayProtocolP", "count"]
 - ["s13ArrayProtocolP", "init"]
 - !private ["s13ArrayProtocolP", "subscript"]
+- ["So7FIRAuthC", "auth"]
+- ["So7FIRAuthC", "currentUser"]
+- !private ["SK", "append"]
 - !private ["SK", "count"]
 - ["SK", "init"]
 - !private ["SK", "init"]
@@ -39,6 +45,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "backgroundColor"]
 - !private ["So15CALayerDelegateP", "heightAnchor"]
 - !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "reloadData"]
 - !private ["So15CALayerDelegateP", "separatorStyle"]
 - !private ["So15CALayerDelegateP", "text"]
 - !private ["So15CALayerDelegateP", "txLabel"]
@@ -47,17 +54,31 @@ depends-member:
 - !private ["s7CVarArgP", "Firestore"]
 - ["s7CVarArgP", "Transaction"]
 - !private ["s7CVarArgP", "TransactionCell"]
+- !private ["s7CVarArgP", "User"]
 - ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "append"]
+- ["s7CVarArgP", "auth"]
 - !private ["s7CVarArgP", "backgroundColor"]
+- !private ["s7CVarArgP", "collection"]
 - !private ["s7CVarArgP", "constraint"]
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "currentUID"]
+- ["s7CVarArgP", "currentUser"]
+- !private ["s7CVarArgP", "data"]
+- !private ["s7CVarArgP", "document"]
+- !private ["s7CVarArgP", "documents"]
 - !private ["s7CVarArgP", "fetchCurrentAddr"]
+- !private ["s7CVarArgP", "fetchTransactions"]
+- !private ["s7CVarArgP", "firestore"]
+- !private ["s7CVarArgP", "getDocument"]
+- !private ["s7CVarArgP", "getDocuments"]
 - !private ["s7CVarArgP", "heightAnchor"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isActive"]
 - !private ["s7CVarArgP", "navigationItem"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "reloadData"]
 - !private ["s7CVarArgP", "separatorStyle"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "tableView"]
@@ -65,35 +86,62 @@ depends-member:
 - !private ["s7CVarArgP", "title"]
 - !private ["s7CVarArgP", "transactions"]
 - !private ["s7CVarArgP", "txLabel"]
+- ["s7CVarArgP", "uid"]
 - !private ["s7CVarArgP", "user"]
 - !private ["s7CVarArgP", "valueLabel"]
 - !private ["s7CVarArgP", "view"]
 - !private ["s7CVarArgP", "viewDidLoad"]
+- !private ["s7CVarArgP", "whereField"]
 - !private ["s7CVarArgP", "white"]
 - !private ["So20UITableViewCellStyleV", "default"]
+- !private ["Sl", "append"]
 - !private ["Sl", "count"]
 - ["Sl", "init"]
 - !private ["Sl", "init"]
 - !private ["Sl", "row"]
 - !private ["Sl", "subscript"]
+- !private ["So22FIRCollectionReferenceC", "document"]
+- !private ["So22FIRCollectionReferenceC", "whereField"]
 - !private ["SL", "init"]
 - !private ["SL", "init"]
 - !private ["SL", "row"]
+- !private ["15TinyConstraints13ConstrainableP", "backgroundColor"]
+- !private ["15TinyConstraints13ConstrainableP", "heightAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "init"]
+- !private ["15TinyConstraints13ConstrainableP", "reloadData"]
+- !private ["15TinyConstraints13ConstrainableP", "separatorStyle"]
+- !private ["15TinyConstraints13ConstrainableP", "text"]
+- !private ["15TinyConstraints13ConstrainableP", "txLabel"]
+- !private ["15TinyConstraints13ConstrainableP", "valueLabel"]
 - ["s28CustomDebugStringConvertibleP", "Auth"]
 - !private ["s28CustomDebugStringConvertibleP", "Firestore"]
 - ["s28CustomDebugStringConvertibleP", "Transaction"]
 - !private ["s28CustomDebugStringConvertibleP", "TransactionCell"]
+- !private ["s28CustomDebugStringConvertibleP", "User"]
 - ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- ["s28CustomDebugStringConvertibleP", "auth"]
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "collection"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "currentUID"]
+- ["s28CustomDebugStringConvertibleP", "currentUser"]
+- !private ["s28CustomDebugStringConvertibleP", "data"]
+- !private ["s28CustomDebugStringConvertibleP", "document"]
+- !private ["s28CustomDebugStringConvertibleP", "documents"]
 - !private ["s28CustomDebugStringConvertibleP", "fetchCurrentAddr"]
+- !private ["s28CustomDebugStringConvertibleP", "fetchTransactions"]
+- !private ["s28CustomDebugStringConvertibleP", "firestore"]
+- !private ["s28CustomDebugStringConvertibleP", "getDocument"]
+- !private ["s28CustomDebugStringConvertibleP", "getDocuments"]
 - !private ["s28CustomDebugStringConvertibleP", "heightAnchor"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "navigationItem"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "reloadData"]
 - !private ["s28CustomDebugStringConvertibleP", "row"]
 - !private ["s28CustomDebugStringConvertibleP", "separatorStyle"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
@@ -102,17 +150,21 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "title"]
 - !private ["s28CustomDebugStringConvertibleP", "transactions"]
 - !private ["s28CustomDebugStringConvertibleP", "txLabel"]
+- ["s28CustomDebugStringConvertibleP", "uid"]
 - !private ["s28CustomDebugStringConvertibleP", "user"]
 - !private ["s28CustomDebugStringConvertibleP", "valueLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "view"]
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
+- !private ["s28CustomDebugStringConvertibleP", "whereField"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "backgroundColor"]
 - !private ["s17CustomReflectableP", "count"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "reloadData"]
 - !private ["s17CustomReflectableP", "row"]
 - !private ["s17CustomReflectableP", "separatorStyle"]
 - !private ["s17CustomReflectableP", "subscript"]
@@ -121,17 +173,31 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "Firestore"]
 - ["s23CustomStringConvertibleP", "Transaction"]
 - !private ["s23CustomStringConvertibleP", "TransactionCell"]
+- !private ["s23CustomStringConvertibleP", "User"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "append"]
+- ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
+- !private ["s23CustomStringConvertibleP", "collection"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "currentUID"]
+- ["s23CustomStringConvertibleP", "currentUser"]
+- !private ["s23CustomStringConvertibleP", "data"]
+- !private ["s23CustomStringConvertibleP", "document"]
+- !private ["s23CustomStringConvertibleP", "documents"]
 - !private ["s23CustomStringConvertibleP", "fetchCurrentAddr"]
+- !private ["s23CustomStringConvertibleP", "fetchTransactions"]
+- !private ["s23CustomStringConvertibleP", "firestore"]
+- !private ["s23CustomStringConvertibleP", "getDocument"]
+- !private ["s23CustomStringConvertibleP", "getDocuments"]
 - !private ["s23CustomStringConvertibleP", "heightAnchor"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - !private ["s23CustomStringConvertibleP", "navigationItem"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "reloadData"]
 - !private ["s23CustomStringConvertibleP", "row"]
 - !private ["s23CustomStringConvertibleP", "separatorStyle"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
@@ -140,23 +206,31 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "title"]
 - !private ["s23CustomStringConvertibleP", "transactions"]
 - !private ["s23CustomStringConvertibleP", "txLabel"]
+- ["s23CustomStringConvertibleP", "uid"]
 - !private ["s23CustomStringConvertibleP", "user"]
 - !private ["s23CustomStringConvertibleP", "valueLabel"]
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
+- !private ["s23CustomStringConvertibleP", "whereField"]
 - !private ["s23CustomStringConvertibleP", "white"]
+- !private ["Se", "append"]
 - !private ["Se", "backgroundColor"]
 - !private ["Se", "count"]
 - ["Se", "init"]
 - !private ["Se", "init"]
+- !private ["Se", "reloadData"]
 - !private ["Se", "row"]
 - !private ["Se", "separatorStyle"]
 - !private ["Se", "subscript"]
 - !private ["Se", "white"]
+- !private ["So20FIRDocumentReferenceC", "getDocument"]
+- !private ["So19FIRDocumentSnapshotC", "data"]
+- !private ["SE", "append"]
 - !private ["SE", "backgroundColor"]
 - !private ["SE", "count"]
 - ["SE", "init"]
 - !private ["SE", "init"]
+- !private ["SE", "reloadData"]
 - !private ["SE", "row"]
 - !private ["SE", "separatorStyle"]
 - !private ["SE", "subscript"]
@@ -165,19 +239,33 @@ depends-member:
 - !private ["SQ", "Firestore"]
 - ["SQ", "Transaction"]
 - !private ["SQ", "TransactionCell"]
+- !private ["SQ", "User"]
 - ["SQ", ""]
+- !private ["SQ", "append"]
+- ["SQ", "auth"]
 - !private ["SQ", "backgroundColor"]
+- !private ["SQ", "collection"]
 - !private ["SQ", "constraint"]
 - !private ["SQ", "count"]
 - !private ["SQ", "currentUID"]
+- ["SQ", "currentUser"]
+- !private ["SQ", "data"]
 - !private ["SQ", "default"]
+- !private ["SQ", "document"]
+- !private ["SQ", "documents"]
 - !private ["SQ", "fetchCurrentAddr"]
+- !private ["SQ", "fetchTransactions"]
+- !private ["SQ", "firestore"]
+- !private ["SQ", "getDocument"]
+- !private ["SQ", "getDocuments"]
 - !private ["SQ", "heightAnchor"]
 - ["SQ", "init"]
 - !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "navigationItem"]
 - !private ["SQ", "none"]
+- !private ["SQ", "print"]
+- !private ["SQ", "reloadData"]
 - !private ["SQ", "row"]
 - !private ["SQ", "separatorStyle"]
 - !private ["SQ", "subscript"]
@@ -186,11 +274,14 @@ depends-member:
 - !private ["SQ", "title"]
 - !private ["SQ", "transactions"]
 - !private ["SQ", "txLabel"]
+- ["SQ", "uid"]
 - !private ["SQ", "user"]
 - !private ["SQ", "valueLabel"]
 - !private ["SQ", "view"]
 - !private ["SQ", "viewDidLoad"]
+- !private ["SQ", "whereField"]
 - !private ["SQ", "white"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "row"]
@@ -198,29 +289,46 @@ depends-member:
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
+- !private ["s23ExpressibleByNilLiteralP", "reloadData"]
 - !private ["s23ExpressibleByNilLiteralP", "separatorStyle"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So12FIRFirestoreC", "collection"]
+- !private ["So12FIRFirestoreC", "firestore"]
 - ["SH", "Auth"]
 - !private ["SH", "Firestore"]
 - ["SH", "Transaction"]
 - !private ["SH", "TransactionCell"]
+- !private ["SH", "User"]
 - ["SH", ""]
+- !private ["SH", "append"]
+- ["SH", "auth"]
 - !private ["SH", "backgroundColor"]
+- !private ["SH", "collection"]
 - !private ["SH", "constraint"]
 - !private ["SH", "count"]
 - !private ["SH", "currentUID"]
+- ["SH", "currentUser"]
+- !private ["SH", "data"]
 - !private ["SH", "default"]
+- !private ["SH", "document"]
+- !private ["SH", "documents"]
 - !private ["SH", "fetchCurrentAddr"]
+- !private ["SH", "fetchTransactions"]
+- !private ["SH", "firestore"]
+- !private ["SH", "getDocument"]
+- !private ["SH", "getDocuments"]
 - !private ["SH", "heightAnchor"]
 - ["SH", "init"]
 - !private ["SH", "init"]
 - !private ["SH", "isActive"]
 - !private ["SH", "navigationItem"]
 - !private ["SH", "none"]
+- !private ["SH", "print"]
+- !private ["SH", "reloadData"]
 - !private ["SH", "row"]
 - !private ["SH", "separatorStyle"]
 - !private ["SH", "subscript"]
@@ -229,16 +337,19 @@ depends-member:
 - !private ["SH", "title"]
 - !private ["SH", "transactions"]
 - !private ["SH", "txLabel"]
+- ["SH", "uid"]
 - !private ["SH", "user"]
 - !private ["SH", "valueLabel"]
 - !private ["SH", "view"]
 - !private ["SH", "viewDidLoad"]
+- !private ["SH", "whereField"]
 - !private ["SH", "white"]
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s10MirrorPathP", "init"]
+- !private ["SM", "append"]
 - !private ["SM", "count"]
 - ["SM", "init"]
 - !private ["SM", "row"]
@@ -247,14 +358,18 @@ depends-member:
 - !private ["So8NSCodingP", "Firestore"]
 - ["So8NSCodingP", "Transaction"]
 - !private ["So8NSCodingP", "TransactionCell"]
+- !private ["So8NSCodingP", "User"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "currentUID"]
 - !private ["So8NSCodingP", "fetchCurrentAddr"]
+- !private ["So8NSCodingP", "fetchTransactions"]
 - !private ["So8NSCodingP", "heightAnchor"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "navigationItem"]
+- !private ["So8NSCodingP", "print"]
+- !private ["So8NSCodingP", "reloadData"]
 - !private ["So8NSCodingP", "separatorStyle"]
 - !private ["So8NSCodingP", "tableView"]
 - !private ["So8NSCodingP", "text"]
@@ -271,12 +386,15 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "Firestore"]
 - ["So26NSExtensionRequestHandlingP", "Transaction"]
 - !private ["So26NSExtensionRequestHandlingP", "TransactionCell"]
+- !private ["So26NSExtensionRequestHandlingP", "User"]
 - ["So26NSExtensionRequestHandlingP", ""]
 - !private ["So26NSExtensionRequestHandlingP", "currentUID"]
 - !private ["So26NSExtensionRequestHandlingP", "fetchCurrentAddr"]
+- !private ["So26NSExtensionRequestHandlingP", "fetchTransactions"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationItem"]
+- !private ["So26NSExtensionRequestHandlingP", "print"]
 - !private ["So26NSExtensionRequestHandlingP", "tableView"]
 - !private ["So26NSExtensionRequestHandlingP", "transactions"]
 - !private ["So26NSExtensionRequestHandlingP", "user"]
@@ -296,62 +414,99 @@ depends-member:
 - ["So8NSObjectC", "UITableView"]
 - ["So8NSObjectC", "UITableViewCell"]
 - ["So8NSObjectC", "User"]
+- ["So8NSObjectC", "auth"]
 - !private ["So8NSObjectC", "backgroundColor"]
+- !private ["So8NSObjectC", "collection"]
 - !private ["So8NSObjectC", "constraint"]
-- !private ["So8NSObjectC", "currentUID"]
+- ["So8NSObjectC", "currentUID"]
+- ["So8NSObjectC", "currentUser"]
+- !private ["So8NSObjectC", "data"]
+- !private ["So8NSObjectC", "document"]
+- !private ["So8NSObjectC", "documents"]
 - ["So8NSObjectC", "fetchCurrentAddr"]
 - ["So8NSObjectC", "fetchTransactions"]
 - ["So8NSObjectC", "fetchUsers"]
+- !private ["So8NSObjectC", "firestore"]
+- !private ["So8NSObjectC", "getDocument"]
+- !private ["So8NSObjectC", "getDocuments"]
 - !private ["So8NSObjectC", "heightAnchor"]
 - ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isActive"]
 - !private ["So8NSObjectC", "navigationItem"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "reloadData"]
 - !private ["So8NSObjectC", "separatorStyle"]
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "title"]
 - ["So8NSObjectC", "transactions"]
 - !private ["So8NSObjectC", "txLabel"]
+- ["So8NSObjectC", "uid"]
 - ["So8NSObjectC", "user"]
 - !private ["So8NSObjectC", "valueLabel"]
 - !private ["So8NSObjectC", "view"]
 - ["So8NSObjectC", "viewDidLoad"]
+- !private ["So8NSObjectC", "whereField"]
 - !private ["So8NSObjectC", "white"]
 - ["So8NSObjectP", "Auth"]
 - !private ["So8NSObjectP", "Firestore"]
 - ["So8NSObjectP", "Transaction"]
 - !private ["So8NSObjectP", "TransactionCell"]
+- !private ["So8NSObjectP", "User"]
 - ["So8NSObjectP", ""]
+- ["So8NSObjectP", "auth"]
 - !private ["So8NSObjectP", "backgroundColor"]
+- !private ["So8NSObjectP", "collection"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "currentUID"]
+- ["So8NSObjectP", "currentUser"]
+- !private ["So8NSObjectP", "data"]
+- !private ["So8NSObjectP", "document"]
+- !private ["So8NSObjectP", "documents"]
 - !private ["So8NSObjectP", "fetchCurrentAddr"]
+- !private ["So8NSObjectP", "fetchTransactions"]
+- !private ["So8NSObjectP", "firestore"]
+- !private ["So8NSObjectP", "getDocument"]
+- !private ["So8NSObjectP", "getDocuments"]
 - !private ["So8NSObjectP", "heightAnchor"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isActive"]
 - !private ["So8NSObjectP", "navigationItem"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "reloadData"]
 - !private ["So8NSObjectP", "separatorStyle"]
 - !private ["So8NSObjectP", "tableView"]
 - !private ["So8NSObjectP", "text"]
 - !private ["So8NSObjectP", "title"]
 - !private ["So8NSObjectP", "transactions"]
 - !private ["So8NSObjectP", "txLabel"]
+- ["So8NSObjectP", "uid"]
 - !private ["So8NSObjectP", "user"]
 - !private ["So8NSObjectP", "valueLabel"]
 - !private ["So8NSObjectP", "view"]
 - !private ["So8NSObjectP", "viewDidLoad"]
+- !private ["So8NSObjectP", "whereField"]
 - !private ["So8NSObjectP", "white"]
 - !private ["So14NSSecureCodingP", "white"]
 - !private ["Sq", "backgroundColor"]
+- !private ["Sq", "reloadData"]
 - !private ["Sq", "separatorStyle"]
 - !private ["Sq", "white"]
 - !private ["9mojo_test21ProducesCardViewModelP", "address"]
+- !private ["9mojo_test21ProducesCardViewModelP", "init"]
+- !private ["So8FIRQueryC", "document"]
+- !private ["So8FIRQueryC", "getDocuments"]
+- !private ["So8FIRQueryC", "whereField"]
+- !private ["So24FIRQueryDocumentSnapshotC", "data"]
+- !private ["So16FIRQuerySnapshotC", "documents"]
+- !private ["Sk", "append"]
 - !private ["Sk", "count"]
 - ["Sk", "init"]
 - !private ["Sk", "row"]
 - !private ["Sk", "subscript"]
+- !private ["Sm", "append"]
 - !private ["Sm", "count"]
 - ["Sm", "init"]
 - !private ["Sm", "init"]
@@ -360,6 +515,7 @@ depends-member:
 - !private ["SY", "none"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["So29UITableViewCellSeparatorStyleV", "none"]
+- !private ["ST", "append"]
 - !private ["ST", "count"]
 - ["ST", "init"]
 - !private ["ST", "init"]
@@ -374,6 +530,7 @@ depends-member:
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["s20TextOutputStreamableP", "init"]
 - !private ["9mojo_test11TransactionV", "fromUid"]
+- !private ["9mojo_test11TransactionV", "init"]
 - !private ["9mojo_test11TransactionV", "toAddr"]
 - !private ["9mojo_test11TransactionV", "value"]
 - !private ["9mojo_test15TransactionCellC", "deinit"]
@@ -390,13 +547,14 @@ depends-member:
 - ["9mojo_test22TransactionsControllerC", "UITableView"]
 - ["9mojo_test22TransactionsControllerC", "UITableViewCell"]
 - ["9mojo_test22TransactionsControllerC", "User"]
-- !private ["9mojo_test22TransactionsControllerC", "currentUID"]
+- ["9mojo_test22TransactionsControllerC", "currentUID"]
 - !private ["9mojo_test22TransactionsControllerC", "deinit"]
 - !private ["9mojo_test22TransactionsControllerC", "fetchCurrentAddr"]
 - !private ["9mojo_test22TransactionsControllerC", "fetchTransactions"]
 - !private ["9mojo_test22TransactionsControllerC", "fetchUsers"]
 - ["9mojo_test22TransactionsControllerC", "init"]
 - !private ["9mojo_test22TransactionsControllerC", "navigationItem"]
+- !private ["9mojo_test22TransactionsControllerC", "print"]
 - ["9mojo_test22TransactionsControllerC", "tableView"]
 - ["9mojo_test22TransactionsControllerC", "transactions"]
 - ["9mojo_test22TransactionsControllerC", "user"]
@@ -405,6 +563,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
 - !private ["So29UIAccessibilityIdentificationP", "heightAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "reloadData"]
 - !private ["So29UIAccessibilityIdentificationP", "separatorStyle"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "txLabel"]
@@ -412,6 +571,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "backgroundColor"]
 - !private ["So12UIAppearanceP", "heightAnchor"]
 - !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "reloadData"]
 - !private ["So12UIAppearanceP", "separatorStyle"]
 - !private ["So12UIAppearanceP", "text"]
 - !private ["So12UIAppearanceP", "txLabel"]
@@ -420,14 +580,18 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "Firestore"]
 - ["So21UIAppearanceContainerP", "Transaction"]
 - !private ["So21UIAppearanceContainerP", "TransactionCell"]
+- !private ["So21UIAppearanceContainerP", "User"]
 - ["So21UIAppearanceContainerP", ""]
 - !private ["So21UIAppearanceContainerP", "backgroundColor"]
 - !private ["So21UIAppearanceContainerP", "currentUID"]
 - !private ["So21UIAppearanceContainerP", "fetchCurrentAddr"]
+- !private ["So21UIAppearanceContainerP", "fetchTransactions"]
 - !private ["So21UIAppearanceContainerP", "heightAnchor"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "navigationItem"]
+- !private ["So21UIAppearanceContainerP", "print"]
+- !private ["So21UIAppearanceContainerP", "reloadData"]
 - !private ["So21UIAppearanceContainerP", "separatorStyle"]
 - !private ["So21UIAppearanceContainerP", "tableView"]
 - !private ["So21UIAppearanceContainerP", "text"]
@@ -442,12 +606,15 @@ depends-member:
 - !private ["So18UIContentContainerP", "Firestore"]
 - ["So18UIContentContainerP", "Transaction"]
 - !private ["So18UIContentContainerP", "TransactionCell"]
+- !private ["So18UIContentContainerP", "User"]
 - ["So18UIContentContainerP", ""]
 - !private ["So18UIContentContainerP", "currentUID"]
 - !private ["So18UIContentContainerP", "fetchCurrentAddr"]
+- !private ["So18UIContentContainerP", "fetchTransactions"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "navigationItem"]
+- !private ["So18UIContentContainerP", "print"]
 - !private ["So18UIContentContainerP", "tableView"]
 - !private ["So18UIContentContainerP", "transactions"]
 - !private ["So18UIContentContainerP", "user"]
@@ -457,14 +624,17 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "backgroundColor"]
 - !private ["So17UICoordinateSpaceP", "heightAnchor"]
 - !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "reloadData"]
 - !private ["So17UICoordinateSpaceP", "separatorStyle"]
 - !private ["So17UICoordinateSpaceP", "text"]
 - !private ["So17UICoordinateSpaceP", "txLabel"]
 - !private ["So17UICoordinateSpaceP", "valueLabel"]
+- !private ["So23UIDataSourceTranslatingP", "reloadData"]
 - !private ["So23UIDataSourceTranslatingP", "separatorStyle"]
 - !private ["So13UIDynamicItemP", "backgroundColor"]
 - !private ["So13UIDynamicItemP", "heightAnchor"]
 - !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "reloadData"]
 - !private ["So13UIDynamicItemP", "separatorStyle"]
 - !private ["So13UIDynamicItemP", "text"]
 - !private ["So13UIDynamicItemP", "txLabel"]
@@ -473,14 +643,18 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "Firestore"]
 - ["So18UIFocusEnvironmentP", "Transaction"]
 - !private ["So18UIFocusEnvironmentP", "TransactionCell"]
+- !private ["So18UIFocusEnvironmentP", "User"]
 - ["So18UIFocusEnvironmentP", ""]
 - !private ["So18UIFocusEnvironmentP", "backgroundColor"]
 - !private ["So18UIFocusEnvironmentP", "currentUID"]
 - !private ["So18UIFocusEnvironmentP", "fetchCurrentAddr"]
+- !private ["So18UIFocusEnvironmentP", "fetchTransactions"]
 - !private ["So18UIFocusEnvironmentP", "heightAnchor"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "navigationItem"]
+- !private ["So18UIFocusEnvironmentP", "print"]
+- !private ["So18UIFocusEnvironmentP", "reloadData"]
 - !private ["So18UIFocusEnvironmentP", "separatorStyle"]
 - !private ["So18UIFocusEnvironmentP", "tableView"]
 - !private ["So18UIFocusEnvironmentP", "text"]
@@ -493,6 +667,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "backgroundColor"]
 - !private ["So11UIFocusItemP", "heightAnchor"]
 - !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "reloadData"]
 - !private ["So11UIFocusItemP", "separatorStyle"]
 - !private ["So11UIFocusItemP", "text"]
 - !private ["So11UIFocusItemP", "txLabel"]
@@ -500,10 +675,12 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "backgroundColor"]
 - !private ["So20UIFocusItemContainerP", "heightAnchor"]
 - !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "reloadData"]
 - !private ["So20UIFocusItemContainerP", "separatorStyle"]
 - !private ["So20UIFocusItemContainerP", "text"]
 - !private ["So20UIFocusItemContainerP", "txLabel"]
 - !private ["So20UIFocusItemContainerP", "valueLabel"]
+- !private ["So30UIFocusItemScrollableContainerP", "reloadData"]
 - !private ["So30UIFocusItemScrollableContainerP", "separatorStyle"]
 - !private ["So27UIGestureRecognizerDelegateP", "heightAnchor"]
 - !private ["So27UIGestureRecognizerDelegateP", "init"]
@@ -515,14 +692,18 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "Firestore"]
 - ["So30UIPasteConfigurationSupportingP", "Transaction"]
 - !private ["So30UIPasteConfigurationSupportingP", "TransactionCell"]
+- !private ["So30UIPasteConfigurationSupportingP", "User"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
 - !private ["So30UIPasteConfigurationSupportingP", "currentUID"]
 - !private ["So30UIPasteConfigurationSupportingP", "fetchCurrentAddr"]
+- !private ["So30UIPasteConfigurationSupportingP", "fetchTransactions"]
 - !private ["So30UIPasteConfigurationSupportingP", "heightAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationItem"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
 - !private ["So30UIPasteConfigurationSupportingP", "separatorStyle"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableView"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
@@ -542,7 +723,7 @@ depends-member:
 - ["So11UIResponderC", "UITableViewCell"]
 - ["So11UIResponderC", "User"]
 - !private ["So11UIResponderC", "backgroundColor"]
-- !private ["So11UIResponderC", "currentUID"]
+- ["So11UIResponderC", "currentUID"]
 - ["So11UIResponderC", "fetchCurrentAddr"]
 - ["So11UIResponderC", "fetchTransactions"]
 - ["So11UIResponderC", "fetchUsers"]
@@ -550,6 +731,8 @@ depends-member:
 - ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "navigationItem"]
+- !private ["So11UIResponderC", "print"]
+- !private ["So11UIResponderC", "reloadData"]
 - !private ["So11UIResponderC", "separatorStyle"]
 - ["So11UIResponderC", "tableView"]
 - !private ["So11UIResponderC", "text"]
@@ -563,14 +746,18 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "Firestore"]
 - ["So30UIResponderStandardEditActionsP", "Transaction"]
 - !private ["So30UIResponderStandardEditActionsP", "TransactionCell"]
+- !private ["So30UIResponderStandardEditActionsP", "User"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
 - !private ["So30UIResponderStandardEditActionsP", "currentUID"]
 - !private ["So30UIResponderStandardEditActionsP", "fetchCurrentAddr"]
+- !private ["So30UIResponderStandardEditActionsP", "fetchTransactions"]
 - !private ["So30UIResponderStandardEditActionsP", "heightAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationItem"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "reloadData"]
 - !private ["So30UIResponderStandardEditActionsP", "separatorStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "tableView"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
@@ -580,38 +767,47 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "valueLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "view"]
 - !private ["So30UIResponderStandardEditActionsP", "viewDidLoad"]
+- !private ["So12UIScrollViewC", "reloadData"]
 - !private ["So12UIScrollViewC", "separatorStyle"]
 - ["So20UIScrollViewDelegateP", "Auth"]
 - !private ["So20UIScrollViewDelegateP", "Firestore"]
 - ["So20UIScrollViewDelegateP", "Transaction"]
 - !private ["So20UIScrollViewDelegateP", "TransactionCell"]
+- !private ["So20UIScrollViewDelegateP", "User"]
 - ["So20UIScrollViewDelegateP", ""]
 - !private ["So20UIScrollViewDelegateP", "currentUID"]
 - !private ["So20UIScrollViewDelegateP", "fetchCurrentAddr"]
+- !private ["So20UIScrollViewDelegateP", "fetchTransactions"]
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "navigationItem"]
+- !private ["So20UIScrollViewDelegateP", "print"]
 - !private ["So20UIScrollViewDelegateP", "tableView"]
 - !private ["So20UIScrollViewDelegateP", "transactions"]
 - !private ["So20UIScrollViewDelegateP", "user"]
 - !private ["So20UIScrollViewDelegateP", "view"]
 - !private ["So20UIScrollViewDelegateP", "viewDidLoad"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "reloadData"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "separatorStyle"]
 - ["So16UIStateRestoringP", "Auth"]
 - !private ["So16UIStateRestoringP", "Firestore"]
 - ["So16UIStateRestoringP", "Transaction"]
 - !private ["So16UIStateRestoringP", "TransactionCell"]
+- !private ["So16UIStateRestoringP", "User"]
 - ["So16UIStateRestoringP", ""]
 - !private ["So16UIStateRestoringP", "currentUID"]
 - !private ["So16UIStateRestoringP", "fetchCurrentAddr"]
+- !private ["So16UIStateRestoringP", "fetchTransactions"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "navigationItem"]
+- !private ["So16UIStateRestoringP", "print"]
 - !private ["So16UIStateRestoringP", "tableView"]
 - !private ["So16UIStateRestoringP", "transactions"]
 - !private ["So16UIStateRestoringP", "user"]
 - !private ["So16UIStateRestoringP", "view"]
 - !private ["So16UIStateRestoringP", "viewDidLoad"]
+- !private ["So11UITableViewC", "reloadData"]
 - !private ["So11UITableViewC", "separatorStyle"]
 - !private ["So15UITableViewCellC", "heightAnchor"]
 - !private ["So15UITableViewCellC", "init"]
@@ -627,13 +823,14 @@ depends-member:
 - ["So21UITableViewControllerC", "UITableViewCell"]
 - ["So21UITableViewControllerC", "User"]
 - ["So21UITableViewControllerC", ""]
-- !private ["So21UITableViewControllerC", "currentUID"]
+- ["So21UITableViewControllerC", "currentUID"]
 - ["So21UITableViewControllerC", "fetchCurrentAddr"]
 - ["So21UITableViewControllerC", "fetchTransactions"]
 - ["So21UITableViewControllerC", "fetchUsers"]
 - ["So21UITableViewControllerC", "init"]
 - !private ["So21UITableViewControllerC", "init"]
 - !private ["So21UITableViewControllerC", "navigationItem"]
+- !private ["So21UITableViewControllerC", "print"]
 - ["So21UITableViewControllerC", "tableView"]
 - ["So21UITableViewControllerC", "transactions"]
 - ["So21UITableViewControllerC", "user"]
@@ -643,12 +840,15 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "Firestore"]
 - ["So21UITableViewDataSourceP", "Transaction"]
 - !private ["So21UITableViewDataSourceP", "TransactionCell"]
+- !private ["So21UITableViewDataSourceP", "User"]
 - ["So21UITableViewDataSourceP", ""]
 - !private ["So21UITableViewDataSourceP", "currentUID"]
 - !private ["So21UITableViewDataSourceP", "fetchCurrentAddr"]
+- !private ["So21UITableViewDataSourceP", "fetchTransactions"]
 - !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "init"]
 - !private ["So21UITableViewDataSourceP", "navigationItem"]
+- !private ["So21UITableViewDataSourceP", "print"]
 - !private ["So21UITableViewDataSourceP", "tableView"]
 - !private ["So21UITableViewDataSourceP", "transactions"]
 - !private ["So21UITableViewDataSourceP", "user"]
@@ -658,12 +858,15 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "Firestore"]
 - ["So19UITableViewDelegateP", "Transaction"]
 - !private ["So19UITableViewDelegateP", "TransactionCell"]
+- !private ["So19UITableViewDelegateP", "User"]
 - ["So19UITableViewDelegateP", ""]
 - !private ["So19UITableViewDelegateP", "currentUID"]
 - !private ["So19UITableViewDelegateP", "fetchCurrentAddr"]
+- !private ["So19UITableViewDelegateP", "fetchTransactions"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "init"]
 - !private ["So19UITableViewDelegateP", "navigationItem"]
+- !private ["So19UITableViewDelegateP", "print"]
 - !private ["So19UITableViewDelegateP", "tableView"]
 - !private ["So19UITableViewDelegateP", "transactions"]
 - !private ["So19UITableViewDelegateP", "user"]
@@ -673,14 +876,18 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "Firestore"]
 - ["So18UITraitEnvironmentP", "Transaction"]
 - !private ["So18UITraitEnvironmentP", "TransactionCell"]
+- !private ["So18UITraitEnvironmentP", "User"]
 - ["So18UITraitEnvironmentP", ""]
 - !private ["So18UITraitEnvironmentP", "backgroundColor"]
 - !private ["So18UITraitEnvironmentP", "currentUID"]
 - !private ["So18UITraitEnvironmentP", "fetchCurrentAddr"]
+- !private ["So18UITraitEnvironmentP", "fetchTransactions"]
 - !private ["So18UITraitEnvironmentP", "heightAnchor"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "navigationItem"]
+- !private ["So18UITraitEnvironmentP", "print"]
+- !private ["So18UITraitEnvironmentP", "reloadData"]
 - !private ["So18UITraitEnvironmentP", "separatorStyle"]
 - !private ["So18UITraitEnvironmentP", "tableView"]
 - !private ["So18UITraitEnvironmentP", "text"]
@@ -694,14 +901,18 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "Firestore"]
 - ["So23UIUserActivityRestoringP", "Transaction"]
 - !private ["So23UIUserActivityRestoringP", "TransactionCell"]
+- !private ["So23UIUserActivityRestoringP", "User"]
 - ["So23UIUserActivityRestoringP", ""]
 - !private ["So23UIUserActivityRestoringP", "backgroundColor"]
 - !private ["So23UIUserActivityRestoringP", "currentUID"]
 - !private ["So23UIUserActivityRestoringP", "fetchCurrentAddr"]
+- !private ["So23UIUserActivityRestoringP", "fetchTransactions"]
 - !private ["So23UIUserActivityRestoringP", "heightAnchor"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "navigationItem"]
+- !private ["So23UIUserActivityRestoringP", "print"]
+- !private ["So23UIUserActivityRestoringP", "reloadData"]
 - !private ["So23UIUserActivityRestoringP", "separatorStyle"]
 - !private ["So23UIUserActivityRestoringP", "tableView"]
 - !private ["So23UIUserActivityRestoringP", "text"]
@@ -714,6 +925,7 @@ depends-member:
 - !private ["So6UIViewC", "backgroundColor"]
 - !private ["So6UIViewC", "heightAnchor"]
 - !private ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "separatorStyle"]
 - !private ["So6UIViewC", "text"]
 - !private ["So6UIViewC", "txLabel"]
@@ -727,26 +939,32 @@ depends-member:
 - ["So16UIViewControllerC", "UITableView"]
 - ["So16UIViewControllerC", "UITableViewCell"]
 - ["So16UIViewControllerC", "User"]
-- !private ["So16UIViewControllerC", "currentUID"]
+- ["So16UIViewControllerC", "currentUID"]
 - ["So16UIViewControllerC", "fetchCurrentAddr"]
 - ["So16UIViewControllerC", "fetchTransactions"]
 - ["So16UIViewControllerC", "fetchUsers"]
 - ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "navigationItem"]
+- !private ["So16UIViewControllerC", "print"]
 - ["So16UIViewControllerC", "tableView"]
 - ["So16UIViewControllerC", "transactions"]
 - ["So16UIViewControllerC", "user"]
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["9mojo_test4UserV", "address"]
+- !private ["9mojo_test4UserV", "init"]
+- ["So7FIRUserC", "uid"]
+- ["So11FIRUserInfoP", "uid"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "heightAnchor"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadData"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "separatorStyle"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "txLabel"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "valueLabel"]
+- !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "count"]
 - ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
@@ -761,6 +979,7 @@ depends-member:
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
@@ -768,31 +987,48 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Firestore"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Transaction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "TransactionCell"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "User"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "collection"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUID"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "document"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "documents"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fetchCurrentAddr"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fetchTransactions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "firestore"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDocument"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getDocuments"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "heightAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isActive"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "navigationItem"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "separatorStyle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "transactions"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "txLabel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "valueLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "view"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "whereField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "reloadData"]
 - !private ["s21_ObjectiveCBridgeableP", "row"]
 - !private ["s21_ObjectiveCBridgeableP", "separatorStyle"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
@@ -802,17 +1038,22 @@ depends-member:
 depends-nominal:
 - "Sa"
 - "s13ArrayProtocolP"
+- "So7FIRAuthC"
 - "SK"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "So20UITableViewCellStyleV"
 - "Sl"
+- !private "So22FIRCollectionReferenceC"
 - !private "SL"
+- !private "15TinyConstraints13ConstrainableP"
 - "s28CustomDebugStringConvertibleP"
 - !private "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - "Se"
+- !private "So20FIRDocumentReferenceC"
+- !private "So19FIRDocumentSnapshotC"
 - "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
@@ -820,6 +1061,7 @@ depends-nominal:
 - !private "s23ExpressibleByNilLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So12FIRFirestoreC"
 - "SH"
 - !private "10Foundation9IndexPathV"
 - !private "s25LosslessStringConvertibleP"
@@ -838,6 +1080,9 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "Sq"
 - !private "9mojo_test21ProducesCardViewModelP"
+- !private "So8FIRQueryC"
+- !private "So24FIRQueryDocumentSnapshotC"
+- !private "So16FIRQuerySnapshotC"
 - "Sk"
 - "Sm"
 - !private "SY"
@@ -884,6 +1129,8 @@ depends-nominal:
 - !private "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "9mojo_test4UserV"
+- "So7FIRUserC"
+- "So11FIRUserInfoP"
 - !private "s37_DefaultCustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
 - !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
@@ -914,7 +1161,145 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Headers/Cosmos-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+ForceDecode.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSImage+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImageView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImageView+HighlightedWebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDImageCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRHTTPSCallable.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageFrame.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/NSData+ImageContentType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDImageCacheConfig.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FIRMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeZoomAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIView+WebCacheOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageTransition.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDAnimatedImageRep.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageGIFCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageImageIOCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCodersManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImagePrefetcher.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoderHelper.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRError.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-Defines.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Headers/Cosmos-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDImageIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDPieIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndeterminateIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDRingIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDErrorIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDSuccessIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDShadow.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
 - "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"

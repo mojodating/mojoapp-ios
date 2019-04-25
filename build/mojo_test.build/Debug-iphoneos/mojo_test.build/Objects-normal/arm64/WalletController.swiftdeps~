@@ -624,6 +624,7 @@ depends-member:
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["So12FIRFirestoreC", "collection"]
 - !private ["So12FIRFirestoreC", "firestore"]
+- !private ["9mojo_test4GiftV", "blocked"]
 - !private ["9mojo_test4GiftV", "imageUrl"]
 - !private ["9mojo_test4GiftV", "init"]
 - !private ["9mojo_test4GiftV", "name"]

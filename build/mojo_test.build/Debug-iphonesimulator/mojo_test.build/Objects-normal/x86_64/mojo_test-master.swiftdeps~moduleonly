@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
 options: "0652e43078aa642723775593a2affa4b"
-build_time: [1556210231, 202244000]
+build_time: [1556226589, 774963000]
 inputs:
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Views/ChatRequestInputTextView.swift": [1553722873, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Wallet/UserGiftCell.swift": [1555519960, 0]
@@ -10,7 +10,7 @@ inputs:
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Bindable.swift": [1543978309, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Wallet/ContactCell.swift": [1552945312, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Views/CardView.swift": [1553209093, 0]
-  "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Home/ChatRequestController.swift": [1556210229, 0]
+  "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Home/ChatRequestController.swift": [1556226588, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/User Profile/Edit Profile/GenderSeekingController.swift": [1553705244, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Extensions/Extensions + layout.swift": [1552589998, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Registration/RegistrationViewModel.swift": [1553888584, 0]
@@ -65,7 +65,7 @@ inputs:
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Wallet/WalletAccountController.swift": [1553014374, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Views/CustomTextField.swift": [1553806257, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Model/DigitalGood.swift": [1547074055, 0]
-  "/Users/yunyunchen1/dev/mojo-test/mojo_test/AppDelegate.swift": [1556122901, 0]
+  "/Users/yunyunchen1/dev/mojo-test/mojo_test/AppDelegate.swift": [1556221040, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/ViewModels/CardViewModel.swift": [1546897109, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Wallet/TopUpController.swift": [1550602512, 0]
   "/Users/yunyunchen1/dev/mojo-test/mojo_test/Controllers/Registration new UI/SignupEmailController.swift": [1553027164, 0]

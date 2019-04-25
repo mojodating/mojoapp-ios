@@ -7,7 +7,6 @@ provides-member:
 - ["9mojo_test16FeedbackPollCellC", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "+"
 - !private "=="
 - "AssignmentPrecedence"
 - !private "Auth"
@@ -127,7 +126,6 @@ depends-member:
 - !private ["So22FIRCollectionReferenceC", "document"]
 - ["SL", "init"]
 - ["SL", "init"]
-- ["SL", "medium"]
 - ["SL", "regular"]
 - !private ["15TinyConstraints13ConstrainableP", "Auth"]
 - !private ["15TinyConstraints13ConstrainableP", "Firestore"]
@@ -315,7 +313,6 @@ depends-member:
 - !private ["SQ", "leadingAnchor"]
 - ["SQ", "lightGray"]
 - !private ["SQ", "lineView"]
-- ["SQ", "medium"]
 - ["SQ", "numberOfLines"]
 - !private ["SQ", "print"]
 - !private ["SQ", "profileImageView"]
@@ -405,7 +402,6 @@ depends-member:
 - !private ["SH", "leadingAnchor"]
 - ["SH", "lightGray"]
 - !private ["SH", "lineView"]
-- ["SH", "medium"]
 - ["SH", "numberOfLines"]
 - !private ["SH", "print"]
 - !private ["SH", "profileImageView"]
@@ -570,7 +566,6 @@ depends-member:
 - !private ["So8FIRQueryC", "document"]
 - ["Sm", "init"]
 - ["Sm", "init"]
-- ["SY", "medium"]
 - ["SY", "regular"]
 - ["SY", "scaleAspectFill"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
@@ -592,8 +587,8 @@ depends-member:
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "contentMode"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "layer"]
-- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "leadingAnchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "sd_setImage"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "trailingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "Auth"]
 - !private ["So29UIAccessibilityIdentificationP", "Firestore"]
 - ["So29UIAccessibilityIdentificationP", "UIFont"]
@@ -924,8 +919,8 @@ depends-member:
 - ["So11UIImageViewC", "contentMode"]
 - ["So11UIImageViewC", "init"]
 - ["So11UIImageViewC", "layer"]
-- !private ["So11UIImageViewC", "leadingAnchor"]
 - !private ["So11UIImageViewC", "sd_setImage"]
+- !private ["So11UIImageViewC", "trailingAnchor"]
 - !private ["So7UILabelC", "anchor"]
 - !private ["So7UILabelC", "centerYAnchor"]
 - ["So7UILabelC", "font"]
@@ -1143,7 +1138,6 @@ depends-member:
 - !private ["9mojo_test4UserV", "name"]
 - !private ["So7FIRUserC", "uid"]
 - !private ["So11FIRUserInfoP", "uid"]
-- ["So12UIFontWeighta", "medium"]
 - ["So12UIFontWeighta", "regular"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "Auth"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "Firestore"]
@@ -1190,7 +1184,6 @@ depends-member:
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s35_HasCustomAnyHashableRepresentationP", "medium"]
 - ["s35_HasCustomAnyHashableRepresentationP", "regular"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Auth"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Firestore"]
@@ -1241,14 +1234,11 @@ depends-member:
 - ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "lightGray"]
-- ["s21_ObjectiveCBridgeableP", "medium"]
 - ["s21_ObjectiveCBridgeableP", "regular"]
 - !private ["s21_ObjectiveCBridgeableP", "width"]
-- ["s20_SwiftNewtypeWrapperP", "medium"]
 - ["s20_SwiftNewtypeWrapperP", "regular"]
 - ["s16_SwiftStringViewP", "init"]
 - ["s16_SwiftStringViewP", "init"]
-- ["5UIKit01_A23NumericRawRepresentableP", "medium"]
 - ["5UIKit01_A23NumericRawRepresentableP", "regular"]
 depends-nominal:
 - !private "So7FIRAuthC"
@@ -1521,4 +1511,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "47d2e4c04f6b2405098fe96b1fc37d14"
+interface-hash: "683adfe896e2404bbb9cb67639e6bac6"

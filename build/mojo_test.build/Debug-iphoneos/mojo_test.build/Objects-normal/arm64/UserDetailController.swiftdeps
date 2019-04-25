@@ -36,6 +36,7 @@ depends-top-level:
 - "UserDetailController"
 - !private "UserDetailHeaderCell"
 - !private "UserDetailInfoCell"
+- !private "_ColorLiteralType"
 - !private "_ImageLiteralType"
 depends-member:
 - ["9mojo_test18BaseListControllerC", "CGSize"]

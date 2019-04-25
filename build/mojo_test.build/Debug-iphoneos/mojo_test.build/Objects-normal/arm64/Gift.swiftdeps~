@@ -9,6 +9,8 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "??"
 - "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
 - "CastingPrecedence"
 - "Gift"
 - "String"
@@ -52,7 +54,9 @@ depends-member:
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["9mojo_test4GiftV", "Bool"]
 - ["9mojo_test4GiftV", "String"]
+- ["9mojo_test4GiftV", "blocked"]
 - ["9mojo_test4GiftV", "id"]
 - ["9mojo_test4GiftV", "imageUrl"]
 - ["9mojo_test4GiftV", "init"]
@@ -299,4 +303,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "1adb47704146df95886ac12c6294aa67"
+interface-hash: "8bbb7e619b6567218b4057787dbef378"

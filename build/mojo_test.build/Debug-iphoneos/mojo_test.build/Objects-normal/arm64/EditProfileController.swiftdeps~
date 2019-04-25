@@ -798,7 +798,6 @@ depends-member:
 - ["9mojo_test21EditProfileControllerC", "editProfileControllerDelegate"]
 - !private ["9mojo_test21EditProfileControllerC", "evaluateMinMax"]
 - !private ["9mojo_test21EditProfileControllerC", "fetchCurrentUser"]
-- !private ["9mojo_test21EditProfileControllerC", "fetchUserData"]
 - !private ["9mojo_test21EditProfileControllerC", "handleAgeChange"]
 - !private ["9mojo_test21EditProfileControllerC", "handleBioChange"]
 - !private ["9mojo_test21EditProfileControllerC", "handleCancel"]
@@ -1597,7 +1596,6 @@ depends-member:
 - !private ["So8NSObjectC", "endEditing"]
 - ["So8NSObjectC", "evaluateMinMax"]
 - ["So8NSObjectC", "fetchCurrentUser"]
-- ["So8NSObjectC", "fetchUserData"]
 - !private ["So8NSObjectC", "fillSuperview"]
 - !private ["So8NSObjectC", "firestore"]
 - !private ["So8NSObjectC", "font"]
@@ -3020,7 +3018,6 @@ depends-member:
 - !private ["So11UIResponderC", "endEditing"]
 - ["So11UIResponderC", "evaluateMinMax"]
 - ["So11UIResponderC", "fetchCurrentUser"]
-- ["So11UIResponderC", "fetchUserData"]
 - !private ["So11UIResponderC", "fillSuperview"]
 - !private ["So11UIResponderC", "font"]
 - !private ["So11UIResponderC", "frame"]
@@ -3505,7 +3502,6 @@ depends-member:
 - ["So21UITableViewControllerC", "editProfileControllerDelegate"]
 - ["So21UITableViewControllerC", "evaluateMinMax"]
 - ["So21UITableViewControllerC", "fetchCurrentUser"]
-- ["So21UITableViewControllerC", "fetchUserData"]
 - ["So21UITableViewControllerC", "handleAgeChange"]
 - ["So21UITableViewControllerC", "handleBioChange"]
 - ["So21UITableViewControllerC", "handleCancel"]
@@ -4101,7 +4097,6 @@ depends-member:
 - ["So16UIViewControllerC", "editProfileControllerDelegate"]
 - ["So16UIViewControllerC", "evaluateMinMax"]
 - ["So16UIViewControllerC", "fetchCurrentUser"]
-- ["So16UIViewControllerC", "fetchUserData"]
 - ["So16UIViewControllerC", "handleAgeChange"]
 - ["So16UIViewControllerC", "handleBioChange"]
 - ["So16UIViewControllerC", "handleCancel"]
@@ -4796,4 +4791,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "e84b5d25c29df6f84467edb274c82082"
+interface-hash: "0399195894655f3d246e2d4acce6cae8"
