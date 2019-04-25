@@ -39,6 +39,7 @@ depends-top-level:
 - !private "UIStackView"
 - "UIViewController"
 - !private "URL"
+- "UnicodeScalarType"
 - "User"
 - "UserDetailFeedbackController"
 - "_ImageLiteralType"

@@ -882,6 +882,7 @@ depends-member:
 - !private ["9mojo_test24RequestsFeedCellDelegateP", "scrollToMenuIndex"]
 - ["So31UICollectionViewScrollDirectionV", "horizontal"]
 - !private ["So30UICollectionViewScrollPositionV", "right"]
+- !private ["9mojo_test20SentFeedCellDelegateP", "scrollToMenuIndex"]
 - ["ST", "init"]
 - ["ST", "init"]
 - !private ["ST", "item"]
@@ -2140,6 +2141,7 @@ depends-nominal:
 - !private "9mojo_test24RequestsFeedCellDelegateP"
 - "So31UICollectionViewScrollDirectionV"
 - !private "So30UICollectionViewScrollPositionV"
+- !private "9mojo_test20SentFeedCellDelegateP"
 - "ST"
 - !private "s10SetAlgebraP"
 - !private "s13SignedNumericP"

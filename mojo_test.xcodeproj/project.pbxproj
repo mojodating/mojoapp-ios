@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8817623F222BC4BB00743689 /* GenderSeekingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8817623E222BC4BB00743689 /* GenderSeekingController.swift */; };
 		8817624122308D6C00743689 /* PrivateChatDateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8817624022308D6C00743689 /* PrivateChatDateHeaderView.swift */; };
-		881762452235B22F00743689 /* ChatRequestInputAccessaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762442235B22F00743689 /* ChatRequestInputAccessaryView.swift */; };
 		881762472235BE8300743689 /* GiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762462235BE8300743689 /* GiftCell.swift */; };
 		881762492235EF5E00743689 /* GiftHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762482235EF5E00743689 /* GiftHeaderCell.swift */; };
 		881762512236F25F00743689 /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762502236F25F00743689 /* UserDetailController.swift */; };
@@ -22,7 +21,6 @@
 		8829C52522402CB1001D2044 /* SendGiftController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C52422402CB1001D2044 /* SendGiftController.swift */; };
 		8829C52722404095001D2044 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C52622404095001D2044 /* ContactCell.swift */; };
 		8829C52E22482B58001D2044 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C52D22482B58001D2044 /* ChatCell.swift */; };
-		8829C535224D8211001D2044 /* onboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8829C534224D8211001D2044 /* onboard.swift */; };
 		8870C52B21F7244400B03F98 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C52A21F7244400B03F98 /* Message.swift */; };
 		8870C52E21F7252900B03F98 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C52D21F7252900B03F98 /* MessageCell.swift */; };
 		8870C53021F7454800B03F98 /* SignupEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C52F21F7454800B03F98 /* SignupEmailController.swift */; };
@@ -38,8 +36,6 @@
 		8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */; };
 		8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */; };
 		8870C54822041D1200B03F98 /* UserGiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C54722041D1200B03F98 /* UserGiftCell.swift */; };
-		8870C54A2204A67100B03F98 /* SlidingMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C5492204A67100B03F98 /* SlidingMenuController.swift */; };
-		8870C55322062C5A00B03F98 /* SlidingMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */; };
 		8870C5552207895500B03F98 /* EditProfileSelectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */; };
 		8870C55822088CD500B03F98 /* GenderSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55722088CD500B03F98 /* GenderSelectionController.swift */; };
 		8870C55C220A58F600B03F98 /* Gift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C55B220A58F600B03F98 /* Gift.swift */; };
@@ -141,7 +137,6 @@
 		878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8817623E222BC4BB00743689 /* GenderSeekingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSeekingController.swift; sourceTree = "<group>"; };
 		8817624022308D6C00743689 /* PrivateChatDateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateChatDateHeaderView.swift; sourceTree = "<group>"; };
-		881762442235B22F00743689 /* ChatRequestInputAccessaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRequestInputAccessaryView.swift; sourceTree = "<group>"; };
 		881762462235BE8300743689 /* GiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftCell.swift; sourceTree = "<group>"; };
 		881762482235EF5E00743689 /* GiftHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftHeaderCell.swift; sourceTree = "<group>"; };
 		881762502236F25F00743689 /* UserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
@@ -154,7 +149,6 @@
 		8829C52422402CB1001D2044 /* SendGiftController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendGiftController.swift; sourceTree = "<group>"; };
 		8829C52622404095001D2044 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		8829C52D22482B58001D2044 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
-		8829C534224D8211001D2044 /* onboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboard.swift; sourceTree = "<group>"; };
 		8870C52A21F7244400B03F98 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		8870C52D21F7252900B03F98 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		8870C52F21F7454800B03F98 /* SignupEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupEmailController.swift; sourceTree = "<group>"; };
@@ -170,8 +164,6 @@
 		8870C54322003FDE00B03F98 /* FeedbackPollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackPollCell.swift; sourceTree = "<group>"; };
 		8870C54522036E1100B03F98 /* UserDetailFeedbackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailFeedbackController.swift; sourceTree = "<group>"; };
 		8870C54722041D1200B03F98 /* UserGiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGiftCell.swift; sourceTree = "<group>"; };
-		8870C5492204A67100B03F98 /* SlidingMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuController.swift; sourceTree = "<group>"; };
-		8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlidingMenuCell.swift; sourceTree = "<group>"; };
 		8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSelectionCell.swift; sourceTree = "<group>"; };
 		8870C55722088CD500B03F98 /* GenderSelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionController.swift; sourceTree = "<group>"; };
 		8870C55B220A58F600B03F98 /* Gift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gift.swift; sourceTree = "<group>"; };
@@ -346,7 +338,6 @@
 				8870C53921FB1A7700B03F98 /* ChatInputAccessoryView.swift */,
 				8870C53B21FB87CC00B03F98 /* ChatInputTextView.swift */,
 				8870C53F220035B700B03F98 /* ChatRequestInputTextView.swift */,
-				881762442235B22F00743689 /* ChatRequestInputAccessaryView.swift */,
 				8870C5542207895500B03F98 /* EditProfileSelectionCell.swift */,
 				8870C5652213B32100B03F98 /* VerticalStackView.swift */,
 			);
@@ -362,7 +353,6 @@
 				8870C52A21F7244400B03F98 /* Message.swift */,
 				8870C55B220A58F600B03F98 /* Gift.swift */,
 				8829C52222400C4A001D2044 /* Transaction.swift */,
-				8829C534224D8211001D2044 /* onboard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -415,8 +405,6 @@
 			children = (
 				8870C55622088C0100B03F98 /* Edit Profile */,
 				88AC696221C874BD006E0559 /* UserProfileController.swift */,
-				8870C5492204A67100B03F98 /* SlidingMenuController.swift */,
-				8870C55222062C5A00B03F98 /* SlidingMenuCell.swift */,
 			);
 			path = "User Profile";
 			sourceTree = "<group>";
@@ -792,9 +780,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8829C535224D8211001D2044 /* onboard.swift in Sources */,
 				8870C540220035B700B03F98 /* ChatRequestInputTextView.swift in Sources */,
-				8870C54A2204A67100B03F98 /* SlidingMenuController.swift in Sources */,
 				8870C54822041D1200B03F98 /* UserGiftCell.swift in Sources */,
 				8870C54422003FDE00B03F98 /* FeedbackPollCell.swift in Sources */,
 				881762492235EF5E00743689 /* GiftHeaderCell.swift in Sources */,
@@ -816,7 +802,6 @@
 				8880BECA2254002C00FB7FD3 /* EditNameInputController.swift in Sources */,
 				88A3D6E721F5D40D008286BC /* SignupMainController.swift in Sources */,
 				8870C55C220A58F600B03F98 /* Gift.swift in Sources */,
-				8870C55322062C5A00B03F98 /* SlidingMenuCell.swift in Sources */,
 				8870C52E21F7252900B03F98 /* MessageCell.swift in Sources */,
 				88A3D6E521F5C979008286BC /* FeedbacksController.swift in Sources */,
 				88AC696321C874BD006E0559 /* UserProfileController.swift in Sources */,
@@ -843,7 +828,6 @@
 				8870C52B21F7244400B03F98 /* Message.swift in Sources */,
 				8870C53C21FB87CC00B03F98 /* ChatInputTextView.swift in Sources */,
 				8817624122308D6C00743689 /* PrivateChatDateHeaderView.swift in Sources */,
-				881762452235B22F00743689 /* ChatRequestInputAccessaryView.swift in Sources */,
 				881762532236F2CA00743689 /* UserDetailHeaderCell.swift in Sources */,
 				8870C53421F74E4F00B03F98 /* SignupNameController.swift in Sources */,
 				8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */,

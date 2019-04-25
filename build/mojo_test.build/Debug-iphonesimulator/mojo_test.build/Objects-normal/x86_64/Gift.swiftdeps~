@@ -56,7 +56,7 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["9mojo_test4GiftV", "Bool"]
 - ["9mojo_test4GiftV", "String"]
-- ["9mojo_test4GiftV", "block"]
+- ["9mojo_test4GiftV", "blocked"]
 - ["9mojo_test4GiftV", "id"]
 - ["9mojo_test4GiftV", "imageUrl"]
 - ["9mojo_test4GiftV", "init"]
@@ -303,4 +303,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "96a4b75802ff874f0791f2bdb9589d4e"
+interface-hash: "8bbb7e619b6567218b4057787dbef378"

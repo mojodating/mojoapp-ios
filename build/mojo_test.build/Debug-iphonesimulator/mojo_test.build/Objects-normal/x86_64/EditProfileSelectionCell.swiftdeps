@@ -11,11 +11,11 @@ depends-top-level:
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
 - "EditProfileSelectionCell"
-- "FloatLiteralType"
-- "IntegerLiteralType"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "NSCoder"
 - "String"
-- "StringLiteralType"
+- !private "StringLiteralType"
 - "UIButton"
 - "UITableViewCell"
 - !private "UIView"
@@ -183,7 +183,7 @@ depends-member:
 - !private ["9mojo_test24EditProfileSelectionCellC", "addSubview"]
 - !private ["9mojo_test24EditProfileSelectionCellC", "bottomAnchor"]
 - ["9mojo_test24EditProfileSelectionCellC", "button"]
-- !private ["9mojo_test24EditProfileSelectionCellC", "deinit"]
+- ["9mojo_test24EditProfileSelectionCellC", "deinit"]
 - !private ["9mojo_test24EditProfileSelectionCellC", "fatalError"]
 - !private ["9mojo_test24EditProfileSelectionCellC", "frame"]
 - ["9mojo_test24EditProfileSelectionCellC", "init"]

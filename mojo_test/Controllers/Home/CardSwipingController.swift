@@ -16,7 +16,6 @@ class CardSwipingController: UIViewController, CardViewDelegate, editProfileCont
    
     let cardsDeckView = UIView()
     var cardViewModels = [CardViewModel]()
-//    let bottomControls = HomeBottomControlStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +35,6 @@ class CardSwipingController: UIViewController, CardViewDelegate, editProfileCont
         view.addSubview(cosmosView)
         cardsDeckView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
         cosmosView.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: nil, padding: .init(top: 0, left: 16, bottom: 16, right: 0))
-        //        view.addSubview(bottomControls)
-        //        bottomControls.refreshButton.addTarget(self, action: #selector(handleRefresh), for: .touchUpInside)
 
     }
     
@@ -71,11 +68,6 @@ class CardSwipingController: UIViewController, CardViewDelegate, editProfileCont
         }
     }
     
-//    @objc fileprivate func handleRefresh() {
-//        cardsDeckView.subviews.forEach({$0.removeFromSuperview()})
-//        fetchUsersFromFirestore()
-//    }
-    
     var lastFetchedUser: User?
     
     fileprivate func fetchUsersFromFirestore() {
@@ -99,9 +91,6 @@ class CardSwipingController: UIViewController, CardViewDelegate, editProfileCont
             snapshot?.documents.forEach({ (documentSnapshot) in
                 let userDictionary = documentSnapshot.data()
                 let user = User(dictionary: userDictionary)
-//                let isNotCurrentUser = user.uid != Auth.auth().currentUser?.uid
-//                let hasNotSwipedBefore = self.rates[user.uid!] == nil
-//                if isNotCurrentUser && hasNotSwipedBefore {
                 if user.uid != Auth.auth().currentUser?.uid {
                     let cardView = self.setupCardFromUser(user: user)
                     previousCardView?.nextCardView = cardView
@@ -121,7 +110,6 @@ class CardSwipingController: UIViewController, CardViewDelegate, editProfileCont
     
     fileprivate func handleRating() {
         cosmosView.didFinishTouchingCosmos = { rating in
-//            print("Rated: \(rating)")
             
             guard let cardUID = self.topCardView?.cardViewModel.uid else { return }
       
@@ -175,13 +163,6 @@ class CardSwipingController: UIViewController, CardViewDelegate, editProfileCont
         cardsDeckView.sendSubviewToBack(cardView)
         return cardView
     }
-    
-//    func handleChatRequest(cardViewModel: CardViewModel) {
-//        let controller = MarketPlaceController()
-//        controller.cardViewModel = cardViewModel
-//        let navController = UINavigationController(rootViewController: controller)
-//        present(navController, animated: true)
-//    }
     
     func didSaveProfile() {
         fetchCurrentUser()

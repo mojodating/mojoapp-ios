@@ -47,7 +47,7 @@ class UserDetailController: BaseListController, UICollectionViewDelegateFlowLayo
         
         view.addSubview(chatRequestButton)
         chatRequestButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, size: .init(width: view.frame.width, height: 50))
-        chatRequestButton.backgroundColor = #colorLiteral(red: 0.9840267933, green: 0.9859146527, blue: 0.524038941, alpha: 1)
+        chatRequestButton.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.9450980392, blue: 0.6, alpha: 1)
         chatRequestButton.setTitleColor(.black, for: .normal)
         chatRequestButton.addTarget(self, action: #selector(handleOpenRequest), for: .touchUpInside)
        

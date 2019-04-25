@@ -1,6 +1,4 @@
-/Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/onboard.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/ChatRequestInputTextView.o
-/Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/SlidingMenuController.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/UserGiftCell.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/FeedbackPollCell.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/GiftHeaderCell.o
@@ -22,7 +20,6 @@
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/EditNameInputController.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/SignupMainController.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/Gift.o
-/Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/SlidingMenuCell.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/MessageCell.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/FeedbacksController.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/UserProfileController.o
@@ -49,7 +46,6 @@
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/Message.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/ChatInputTextView.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/PrivateChatDateHeaderView.o
-/Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/ChatRequestInputAccessaryView.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/UserDetailHeaderCell.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/SignupNameController.o
 /Users/yunyunchen1/dev/mojo-test/build/mojo_test.build/Debug-iphonesimulator/mojo_test.build/Objects-normal/x86_64/Extensions+UIView.o

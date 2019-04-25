@@ -157,8 +157,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         self.digitalGood = digitalGood
         self.giftPrice = digitalGood.price
         self.payButton.setTitle("\(giftPrice ?? 8) Jo / Pay and Send", for: .normal)
-        self.checkIfBalanceEnough()
-        
+        self.checkIfBalanceEnough()        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {

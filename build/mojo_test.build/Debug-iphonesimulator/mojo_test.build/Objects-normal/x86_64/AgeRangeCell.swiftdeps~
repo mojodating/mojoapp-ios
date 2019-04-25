@@ -36,7 +36,7 @@ depends-member:
 - ["9mojo_test12AgeRangeCellC", "UITableViewCell"]
 - !private ["9mojo_test12AgeRangeCellC", "addSubview"]
 - !private ["9mojo_test12AgeRangeCellC", "bottomAnchor"]
-- !private ["9mojo_test12AgeRangeCellC", "deinit"]
+- ["9mojo_test12AgeRangeCellC", "deinit"]
 - !private ["9mojo_test12AgeRangeCellC", "fatalError"]
 - ["9mojo_test12AgeRangeCellC", "init"]
 - !private ["9mojo_test12AgeRangeCellC", "leadingAnchor"]

@@ -24,8 +24,6 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
                 setViewControllers([firstController], direction: .forward, animated: false)
                 _ = configurePageControl
             }
-//            setViewControllers([controllers.first], direction: .forward, animated: false)
-            
         }
     }
     

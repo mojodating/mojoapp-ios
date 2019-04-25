@@ -837,6 +837,7 @@ depends-member:
 - ["9mojo_test24RequestsFeedCellDelegateP", "viewForZoomingInScrollView"]
 - ["So31UICollectionViewScrollDirectionV", "horizontal"]
 - !private ["So30UICollectionViewScrollPositionV", "right"]
+- !private ["9mojo_test12SentFeedCellC", "delegate"]
 - !private ["9mojo_test20SentFeedCellDelegateP", "CGSize"]
 - !private ["9mojo_test20SentFeedCellDelegateP", "IndexPath"]
 - !private ["9mojo_test20SentFeedCellDelegateP", "MenuBar"]
@@ -2239,6 +2240,7 @@ depends-nominal:
 - "9mojo_test24RequestsFeedCellDelegateP"
 - "So31UICollectionViewScrollDirectionV"
 - !private "So30UICollectionViewScrollPositionV"
+- !private "9mojo_test12SentFeedCellC"
 - "9mojo_test20SentFeedCellDelegateP"
 - "ST"
 - !private "s10SetAlgebraP"
