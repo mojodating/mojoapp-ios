@@ -177,9 +177,9 @@ import SDWebImage
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchUserData()
+        
     }
-    
+
     
     fileprivate func setupLogout() {
         tableView.backgroundColor = .white
@@ -213,17 +213,6 @@ import SDWebImage
             self.tableView.reloadData()
         }
     
-    }
-    
-    fileprivate func fetchUserData() {
-        Firestore.firestore().fetchCurrentUser { (user, err) in
-            if let err = err {
-                print("Failed to fetch user:", err)
-                return
-            }
-            self.user = user
-            self.tableView.reloadData()
-        }
     }
     
     fileprivate func loadUserPhotos() {

@@ -11,12 +11,6 @@ import SDWebImage
 
 class GiftCell: UICollectionViewCell {
     
-    override var isSelected: Bool {
-        didSet {
-            self.backgroundColor = #colorLiteral(red: 0.9922668147, green: 0.9791984675, blue: 0.9093998959, alpha: 1)
-        }
-    }
-    
     var digitalGood: DigitalGood?  {
         didSet{
             
@@ -35,6 +29,8 @@ class GiftCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        layer.cornerRadius = 8
         
         backgroundColor = .clear
         

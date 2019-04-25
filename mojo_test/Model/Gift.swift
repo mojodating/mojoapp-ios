@@ -13,11 +13,13 @@ struct Gift {
     let id: String
     let imageUrl: String
     let name: String
+    let blocked: Bool?
   
     
     init(giftType:[String : Any]) {
         self.id = giftType["id"] as? String ?? ""
         self.imageUrl = giftType["imageUrl"] as? String ?? ""
         self.name = giftType["name"] as? String ?? ""
+        self.blocked = giftType["blocked"] as? Bool ?? false
     }
 }

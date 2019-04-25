@@ -131,6 +131,9 @@ class UserDetailFeedbackController: UIViewController {
         
         guard let uid = self.user?.uid else { return }
         
+        self.hud.textLabel.text = "Submitting.."
+        self.hud.show(in: self.view)
+        
         functions.httpsCallable("sendFeedback").call(["uid": uid, "feedback":feedbackString]) { (result, error) in
             if let error = error as NSError? {
                 if error.domain == FunctionsErrorDomain {
@@ -157,13 +160,17 @@ class UserDetailFeedbackController: UIViewController {
                 if let err = err {
                     print("Error updating document: \(err)")
                 } else {
-                    print("Document successfully updated")
                     
-                    self.navigationController?.popViewController(animated: true)
+                    self.dissmissController()
                 }
         }
     }
     
+    fileprivate func dissmissController() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
     
     let reportButton: UIButton = {
         let button = UIButton(type: .system)

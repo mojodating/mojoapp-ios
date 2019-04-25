@@ -1,0 +1,35 @@
+dependencies: \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/src/cpp/client/client_interceptor.cc \
+  /Users/yunyunchen1/dev/mojo-test/Pods/Target\ Support\ Files/gRPC-C++/gRPC-C++-prefix.pch \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/client_interceptor.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/interceptor.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/grpc_types.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/port_platform.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/compression_types.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/gpr_types.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/slice.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/gpr_slice.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/status.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/byte_buffer.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/byte_buffer.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/config.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/core_codegen_interface.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/byte_buffer_reader.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/sync.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/sync_generic.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/atm.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/atm_gcc_atomic.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/sync_posix.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/status.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/status_code_enum.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/serialization_traits.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/slice.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/string_ref.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/metadata_map.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/log.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/rpc_method.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/channel_interface.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/impl/codegen/connectivity_state.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/call.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/call_hook.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-C++/include/grpcpp/impl/codegen/time.h

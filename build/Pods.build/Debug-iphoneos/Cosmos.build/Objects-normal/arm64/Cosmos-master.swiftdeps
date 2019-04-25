@@ -1,0 +1,19 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "5ca1e3099a77e6f33b146b288203ec42"
+build_time: [1554065352, 654489000]
+inputs:
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosAccessibility.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosDefaultSettings.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosLayerHelper.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosLayers.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosLocalizedRating.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosRating.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosSettings.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosSize.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosText.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosTouch.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/Helpers/CosmosTouchTarget.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/CosmosView.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/Helpers/RightToLeft.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/StarFillMode.swift": [1548145604, 0]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/Cosmos/Cosmos/StarLayer.swift": [1548145604, 0]

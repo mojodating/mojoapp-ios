@@ -1,0 +1,1281 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "ChatInputAccessaryViewDelegate"
+- "ChatInputAccessaryView"
+provides-nominal:
+- "9mojo_test30ChatInputAccessaryViewDelegateP"
+- "9mojo_test22ChatInputAccessaryViewC"
+provides-member:
+- ["9mojo_test30ChatInputAccessaryViewDelegateP", ""]
+- ["9mojo_test22ChatInputAccessaryViewC", ""]
+provides-dynamic-lookup:
+- "handleSend"
+- "intrinsicContentSize"
+depends-top-level:
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
+- "CGRect"
+- "CGSize"
+- "ChatInputAccessaryView"
+- "ChatInputAccessaryViewDelegate"
+- "ChatInputTextView"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "NSCoder"
+- "String"
+- "StringLiteralType"
+- "UIButton"
+- "UIFont"
+- "UIView"
+- "_ColorLiteralType"
+- !private "fatalError"
+depends-member:
+- !private ["So18UIViewAutoresizingV", "flexibleHeight"]
+- ["SK", "init"]
+- ["SK", "init"]
+- ["So12UIButtonTypeV", "system"]
+- ["So15CALayerDelegateP", "ChatInputTextView"]
+- ["So15CALayerDelegateP", "UIButton"]
+- ["So15CALayerDelegateP", "UIFont"]
+- ["So15CALayerDelegateP", ""]
+- !private ["So15CALayerDelegateP", "addSubview"]
+- ["So15CALayerDelegateP", "addTarget"]
+- !private ["So15CALayerDelegateP", "anchor"]
+- !private ["So15CALayerDelegateP", "autoresizingMask"]
+- !private ["So15CALayerDelegateP", "backgroundColor"]
+- !private ["So15CALayerDelegateP", "delegate"]
+- !private ["So15CALayerDelegateP", "fatalError"]
+- ["So15CALayerDelegateP", "font"]
+- ["So15CALayerDelegateP", "handleSend"]
+- ["So15CALayerDelegateP", "init"]
+- ["So15CALayerDelegateP", "isScrollEnabled"]
+- !private ["So15CALayerDelegateP", "leadingAnchor"]
+- !private ["So15CALayerDelegateP", "safeAreaLayoutGuide"]
+- ["So15CALayerDelegateP", "self"]
+- !private ["So15CALayerDelegateP", "sendButton"]
+- ["So15CALayerDelegateP", "setTitle"]
+- ["So15CALayerDelegateP", "setTitleColor"]
+- !private ["So15CALayerDelegateP", "showPlaceHolderLabel"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["So15CALayerDelegateP", "textView"]
+- ["So15CALayerDelegateP", "titleLabel"]
+- !private ["So15CALayerDelegateP", "topAnchor"]
+- !private ["So15CALayerDelegateP", "trailingAnchor"]
+- !private ["So6CGSizeV", "init"]
+- !private ["So6CGSizeV", "init"]
+- !private ["So6CGSizeV", "zero"]
+- ["s7CVarArgP", "ChatInputTextView"]
+- ["s7CVarArgP", "UIButton"]
+- ["s7CVarArgP", "UIFont"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addSubview"]
+- ["s7CVarArgP", "addTarget"]
+- !private ["s7CVarArgP", "anchor"]
+- !private ["s7CVarArgP", "autoresizingMask"]
+- !private ["s7CVarArgP", "backgroundColor"]
+- !private ["s7CVarArgP", "bottomAnchor"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "fatalError"]
+- ["s7CVarArgP", "font"]
+- ["s7CVarArgP", "handleSend"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "isScrollEnabled"]
+- !private ["s7CVarArgP", "leadingAnchor"]
+- !private ["s7CVarArgP", "safeAreaLayoutGuide"]
+- ["s7CVarArgP", "self"]
+- !private ["s7CVarArgP", "sendButton"]
+- ["s7CVarArgP", "setTitle"]
+- ["s7CVarArgP", "setTitleColor"]
+- !private ["s7CVarArgP", "showPlaceHolderLabel"]
+- ["s7CVarArgP", "systemFont"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "textView"]
+- ["s7CVarArgP", "titleLabel"]
+- !private ["s7CVarArgP", "topAnchor"]
+- !private ["s7CVarArgP", "trailingAnchor"]
+- !private ["s7CVarArgP", "white"]
+- ["9mojo_test22ChatInputAccessaryViewC", "CGRect"]
+- ["9mojo_test22ChatInputAccessaryViewC", "CGSize"]
+- ["9mojo_test22ChatInputAccessaryViewC", "ChatInputAccessaryViewDelegate"]
+- ["9mojo_test22ChatInputAccessaryViewC", "ChatInputTextView"]
+- ["9mojo_test22ChatInputAccessaryViewC", "NSCoder"]
+- ["9mojo_test22ChatInputAccessaryViewC", "UIButton"]
+- ["9mojo_test22ChatInputAccessaryViewC", "UIFont"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "addSubview"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "autoresizingMask"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "backgroundColor"]
+- ["9mojo_test22ChatInputAccessaryViewC", "clearTextField"]
+- ["9mojo_test22ChatInputAccessaryViewC", "deinit"]
+- ["9mojo_test22ChatInputAccessaryViewC", "delegate"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "fatalError"]
+- ["9mojo_test22ChatInputAccessaryViewC", "handleSend"]
+- ["9mojo_test22ChatInputAccessaryViewC", "init"]
+- ["9mojo_test22ChatInputAccessaryViewC", "intrinsicContentSize"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "leadingAnchor"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "safeAreaLayoutGuide"]
+- ["9mojo_test22ChatInputAccessaryViewC", "self"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "sendButton"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "textView"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "topAnchor"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "trailingAnchor"]
+- ["9mojo_test30ChatInputAccessaryViewDelegateP", "String"]
+- ["9mojo_test30ChatInputAccessaryViewDelegateP", "didSend"]
+- !private ["9mojo_test17ChatInputTextViewC", "anchor"]
+- ["9mojo_test17ChatInputTextViewC", "deinit"]
+- ["9mojo_test17ChatInputTextViewC", "font"]
+- ["9mojo_test17ChatInputTextViewC", "init"]
+- ["9mojo_test17ChatInputTextViewC", "isScrollEnabled"]
+- !private ["9mojo_test17ChatInputTextViewC", "showPlaceHolderLabel"]
+- !private ["9mojo_test17ChatInputTextViewC", "text"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- ["SL", "init"]
+- ["SL", "init"]
+- ["SL", "semibold"]
+- ["15TinyConstraints13ConstrainableP", "ChatInputTextView"]
+- ["15TinyConstraints13ConstrainableP", "UIButton"]
+- ["15TinyConstraints13ConstrainableP", "UIFont"]
+- ["15TinyConstraints13ConstrainableP", ""]
+- !private ["15TinyConstraints13ConstrainableP", "addSubview"]
+- ["15TinyConstraints13ConstrainableP", "addTarget"]
+- !private ["15TinyConstraints13ConstrainableP", "anchor"]
+- !private ["15TinyConstraints13ConstrainableP", "autoresizingMask"]
+- !private ["15TinyConstraints13ConstrainableP", "backgroundColor"]
+- !private ["15TinyConstraints13ConstrainableP", "bottomAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "delegate"]
+- !private ["15TinyConstraints13ConstrainableP", "fatalError"]
+- ["15TinyConstraints13ConstrainableP", "font"]
+- ["15TinyConstraints13ConstrainableP", "handleSend"]
+- ["15TinyConstraints13ConstrainableP", "init"]
+- ["15TinyConstraints13ConstrainableP", "isScrollEnabled"]
+- !private ["15TinyConstraints13ConstrainableP", "leadingAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "safeAreaLayoutGuide"]
+- ["15TinyConstraints13ConstrainableP", "self"]
+- !private ["15TinyConstraints13ConstrainableP", "sendButton"]
+- ["15TinyConstraints13ConstrainableP", "setTitle"]
+- ["15TinyConstraints13ConstrainableP", "setTitleColor"]
+- !private ["15TinyConstraints13ConstrainableP", "showPlaceHolderLabel"]
+- !private ["15TinyConstraints13ConstrainableP", "text"]
+- !private ["15TinyConstraints13ConstrainableP", "textView"]
+- ["15TinyConstraints13ConstrainableP", "titleLabel"]
+- !private ["15TinyConstraints13ConstrainableP", "topAnchor"]
+- !private ["15TinyConstraints13ConstrainableP", "trailingAnchor"]
+- ["s28CustomDebugStringConvertibleP", "ChatInputTextView"]
+- ["s28CustomDebugStringConvertibleP", "UIButton"]
+- ["s28CustomDebugStringConvertibleP", "UIFont"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addSubview"]
+- ["s28CustomDebugStringConvertibleP", "addTarget"]
+- !private ["s28CustomDebugStringConvertibleP", "anchor"]
+- !private ["s28CustomDebugStringConvertibleP", "autoresizingMask"]
+- !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- ["s28CustomDebugStringConvertibleP", "font"]
+- ["s28CustomDebugStringConvertibleP", "handleSend"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "isScrollEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "safeAreaLayoutGuide"]
+- ["s28CustomDebugStringConvertibleP", "self"]
+- !private ["s28CustomDebugStringConvertibleP", "sendButton"]
+- ["s28CustomDebugStringConvertibleP", "setTitle"]
+- ["s28CustomDebugStringConvertibleP", "setTitleColor"]
+- !private ["s28CustomDebugStringConvertibleP", "showPlaceHolderLabel"]
+- ["s28CustomDebugStringConvertibleP", "systemFont"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "textView"]
+- ["s28CustomDebugStringConvertibleP", "titleLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "topAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
+- !private ["s28CustomDebugStringConvertibleP", "white"]
+- !private ["s28CustomDebugStringConvertibleP", "zero"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "zero"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "white"]
+- !private ["s17CustomReflectableP", "zero"]
+- ["s23CustomStringConvertibleP", "ChatInputTextView"]
+- ["s23CustomStringConvertibleP", "UIButton"]
+- ["s23CustomStringConvertibleP", "UIFont"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addSubview"]
+- ["s23CustomStringConvertibleP", "addTarget"]
+- !private ["s23CustomStringConvertibleP", "anchor"]
+- !private ["s23CustomStringConvertibleP", "autoresizingMask"]
+- !private ["s23CustomStringConvertibleP", "backgroundColor"]
+- !private ["s23CustomStringConvertibleP", "bottomAnchor"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- ["s23CustomStringConvertibleP", "font"]
+- ["s23CustomStringConvertibleP", "handleSend"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "isScrollEnabled"]
+- !private ["s23CustomStringConvertibleP", "leadingAnchor"]
+- !private ["s23CustomStringConvertibleP", "safeAreaLayoutGuide"]
+- ["s23CustomStringConvertibleP", "self"]
+- !private ["s23CustomStringConvertibleP", "sendButton"]
+- ["s23CustomStringConvertibleP", "setTitle"]
+- ["s23CustomStringConvertibleP", "setTitleColor"]
+- !private ["s23CustomStringConvertibleP", "showPlaceHolderLabel"]
+- ["s23CustomStringConvertibleP", "systemFont"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "textView"]
+- ["s23CustomStringConvertibleP", "titleLabel"]
+- !private ["s23CustomStringConvertibleP", "topAnchor"]
+- !private ["s23CustomStringConvertibleP", "trailingAnchor"]
+- !private ["s23CustomStringConvertibleP", "white"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "white"]
+- !private ["Se", "zero"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "white"]
+- !private ["SE", "zero"]
+- ["SQ", "ChatInputTextView"]
+- ["SQ", "UIButton"]
+- ["SQ", "UIFont"]
+- ["SQ", ""]
+- !private ["SQ", "addSubview"]
+- ["SQ", "addTarget"]
+- !private ["SQ", "anchor"]
+- !private ["SQ", "autoresizingMask"]
+- !private ["SQ", "backgroundColor"]
+- !private ["SQ", "bottomAnchor"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "flexibleHeight"]
+- ["SQ", "font"]
+- ["SQ", "handleSend"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- ["SQ", "isScrollEnabled"]
+- !private ["SQ", "leadingAnchor"]
+- ["SQ", "normal"]
+- !private ["SQ", "safeAreaLayoutGuide"]
+- ["SQ", "self"]
+- ["SQ", "semibold"]
+- !private ["SQ", "sendButton"]
+- ["SQ", "setTitle"]
+- ["SQ", "setTitleColor"]
+- !private ["SQ", "showPlaceHolderLabel"]
+- ["SQ", "system"]
+- ["SQ", "systemFont"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textView"]
+- ["SQ", "titleLabel"]
+- !private ["SQ", "topAnchor"]
+- ["SQ", "touchUpInside"]
+- !private ["SQ", "trailingAnchor"]
+- !private ["SQ", "white"]
+- !private ["SQ", "zero"]
+- ["So15UIControlEventsV", "touchUpInside"]
+- !private ["s25ExpressibleByArrayLiteralP", "flexibleHeight"]
+- ["s25ExpressibleByArrayLiteralP", "normal"]
+- ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s23ExpressibleByNilLiteralP", "white"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["SH", "ChatInputTextView"]
+- ["SH", "UIButton"]
+- ["SH", "UIFont"]
+- ["SH", ""]
+- !private ["SH", "addSubview"]
+- ["SH", "addTarget"]
+- !private ["SH", "anchor"]
+- !private ["SH", "autoresizingMask"]
+- !private ["SH", "backgroundColor"]
+- !private ["SH", "bottomAnchor"]
+- !private ["SH", "delegate"]
+- !private ["SH", "fatalError"]
+- ["SH", "font"]
+- ["SH", "handleSend"]
+- ["SH", "init"]
+- ["SH", "init"]
+- ["SH", "isScrollEnabled"]
+- !private ["SH", "leadingAnchor"]
+- !private ["SH", "safeAreaLayoutGuide"]
+- ["SH", "self"]
+- ["SH", "semibold"]
+- !private ["SH", "sendButton"]
+- ["SH", "setTitle"]
+- ["SH", "setTitleColor"]
+- !private ["SH", "showPlaceHolderLabel"]
+- ["SH", "system"]
+- ["SH", "systemFont"]
+- !private ["SH", "text"]
+- !private ["SH", "textView"]
+- ["SH", "titleLabel"]
+- !private ["SH", "topAnchor"]
+- !private ["SH", "trailingAnchor"]
+- !private ["SH", "white"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["So8NSCodingP", "ChatInputTextView"]
+- ["So8NSCodingP", "UIButton"]
+- ["So8NSCodingP", "UIFont"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "addSubview"]
+- ["So8NSCodingP", "addTarget"]
+- !private ["So8NSCodingP", "anchor"]
+- !private ["So8NSCodingP", "autoresizingMask"]
+- !private ["So8NSCodingP", "backgroundColor"]
+- !private ["So8NSCodingP", "bottomAnchor"]
+- !private ["So8NSCodingP", "delegate"]
+- !private ["So8NSCodingP", "fatalError"]
+- ["So8NSCodingP", "font"]
+- ["So8NSCodingP", "handleSend"]
+- ["So8NSCodingP", "init"]
+- ["So8NSCodingP", "isScrollEnabled"]
+- !private ["So8NSCodingP", "leadingAnchor"]
+- !private ["So8NSCodingP", "safeAreaLayoutGuide"]
+- ["So8NSCodingP", "self"]
+- !private ["So8NSCodingP", "sendButton"]
+- ["So8NSCodingP", "setTitle"]
+- ["So8NSCodingP", "setTitleColor"]
+- !private ["So8NSCodingP", "showPlaceHolderLabel"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "textView"]
+- ["So8NSCodingP", "titleLabel"]
+- !private ["So8NSCodingP", "topAnchor"]
+- !private ["So8NSCodingP", "trailingAnchor"]
+- !private ["So8NSCodingP", "white"]
+- ["So9NSCopyingP", "systemFont"]
+- !private ["So9NSCopyingP", "white"]
+- !private ["So21NSItemProviderReadingP", "white"]
+- !private ["So21NSItemProviderWritingP", "white"]
+- ["So8NSObjectC", "CGRect"]
+- ["So8NSObjectC", "CGSize"]
+- ["So8NSObjectC", "ChatInputAccessaryViewDelegate"]
+- ["So8NSObjectC", "ChatInputTextView"]
+- ["So8NSObjectC", "NSCoder"]
+- ["So8NSObjectC", "UIButton"]
+- ["So8NSObjectC", "UIFont"]
+- !private ["So8NSObjectC", "addSubview"]
+- ["So8NSObjectC", "addTarget"]
+- !private ["So8NSObjectC", "anchor"]
+- !private ["So8NSObjectC", "autoresizingMask"]
+- !private ["So8NSObjectC", "backgroundColor"]
+- !private ["So8NSObjectC", "bottomAnchor"]
+- ["So8NSObjectC", "clearTextField"]
+- ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "font"]
+- ["So8NSObjectC", "handleSend"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "intrinsicContentSize"]
+- ["So8NSObjectC", "isScrollEnabled"]
+- !private ["So8NSObjectC", "leadingAnchor"]
+- !private ["So8NSObjectC", "safeAreaLayoutGuide"]
+- ["So8NSObjectC", "self"]
+- ["So8NSObjectC", "sendButton"]
+- ["So8NSObjectC", "setTitle"]
+- ["So8NSObjectC", "setTitleColor"]
+- !private ["So8NSObjectC", "showPlaceHolderLabel"]
+- ["So8NSObjectC", "systemFont"]
+- !private ["So8NSObjectC", "text"]
+- ["So8NSObjectC", "textView"]
+- ["So8NSObjectC", "titleLabel"]
+- !private ["So8NSObjectC", "topAnchor"]
+- !private ["So8NSObjectC", "trailingAnchor"]
+- !private ["So8NSObjectC", "white"]
+- ["So8NSObjectP", "ChatInputTextView"]
+- ["So8NSObjectP", "UIButton"]
+- ["So8NSObjectP", "UIFont"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addSubview"]
+- ["So8NSObjectP", "addTarget"]
+- !private ["So8NSObjectP", "anchor"]
+- !private ["So8NSObjectP", "autoresizingMask"]
+- !private ["So8NSObjectP", "backgroundColor"]
+- !private ["So8NSObjectP", "bottomAnchor"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "fatalError"]
+- ["So8NSObjectP", "font"]
+- ["So8NSObjectP", "handleSend"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "isScrollEnabled"]
+- !private ["So8NSObjectP", "leadingAnchor"]
+- !private ["So8NSObjectP", "safeAreaLayoutGuide"]
+- ["So8NSObjectP", "self"]
+- !private ["So8NSObjectP", "sendButton"]
+- ["So8NSObjectP", "setTitle"]
+- ["So8NSObjectP", "setTitleColor"]
+- !private ["So8NSObjectP", "showPlaceHolderLabel"]
+- ["So8NSObjectP", "systemFont"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textView"]
+- ["So8NSObjectP", "titleLabel"]
+- !private ["So8NSObjectP", "topAnchor"]
+- !private ["So8NSObjectP", "trailingAnchor"]
+- !private ["So8NSObjectP", "white"]
+- !private ["So14NSSecureCodingP", "white"]
+- !private ["s9OptionSetP", "flexibleHeight"]
+- ["s9OptionSetP", "normal"]
+- ["s9OptionSetP", "touchUpInside"]
+- !private ["Sq", "white"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["SY", "flexibleHeight"]
+- ["SY", "normal"]
+- ["SY", "semibold"]
+- ["SY", "system"]
+- ["SY", "touchUpInside"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["s10SetAlgebraP", "flexibleHeight"]
+- ["s10SetAlgebraP", "normal"]
+- ["s10SetAlgebraP", "touchUpInside"]
+- ["So14UIControlStateV", "normal"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "anchor"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
+- !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "leadingAnchor"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setTitle"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "setTitleColor"]
+- ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "titleLabel"]
+- ["So29UIAccessibilityIdentificationP", "ChatInputTextView"]
+- ["So29UIAccessibilityIdentificationP", "UIButton"]
+- ["So29UIAccessibilityIdentificationP", "UIFont"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "addSubview"]
+- ["So29UIAccessibilityIdentificationP", "addTarget"]
+- !private ["So29UIAccessibilityIdentificationP", "anchor"]
+- !private ["So29UIAccessibilityIdentificationP", "autoresizingMask"]
+- !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
+- !private ["So29UIAccessibilityIdentificationP", "delegate"]
+- !private ["So29UIAccessibilityIdentificationP", "fatalError"]
+- ["So29UIAccessibilityIdentificationP", "font"]
+- ["So29UIAccessibilityIdentificationP", "handleSend"]
+- ["So29UIAccessibilityIdentificationP", "init"]
+- ["So29UIAccessibilityIdentificationP", "isScrollEnabled"]
+- !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", "safeAreaLayoutGuide"]
+- ["So29UIAccessibilityIdentificationP", "self"]
+- !private ["So29UIAccessibilityIdentificationP", "sendButton"]
+- ["So29UIAccessibilityIdentificationP", "setTitle"]
+- ["So29UIAccessibilityIdentificationP", "setTitleColor"]
+- !private ["So29UIAccessibilityIdentificationP", "showPlaceHolderLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So29UIAccessibilityIdentificationP", "textView"]
+- ["So29UIAccessibilityIdentificationP", "titleLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
+- !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
+- ["So12UIAppearanceP", "ChatInputTextView"]
+- ["So12UIAppearanceP", "UIButton"]
+- ["So12UIAppearanceP", "UIFont"]
+- ["So12UIAppearanceP", ""]
+- !private ["So12UIAppearanceP", "addSubview"]
+- ["So12UIAppearanceP", "addTarget"]
+- !private ["So12UIAppearanceP", "anchor"]
+- !private ["So12UIAppearanceP", "autoresizingMask"]
+- !private ["So12UIAppearanceP", "backgroundColor"]
+- !private ["So12UIAppearanceP", "delegate"]
+- !private ["So12UIAppearanceP", "fatalError"]
+- ["So12UIAppearanceP", "font"]
+- ["So12UIAppearanceP", "handleSend"]
+- ["So12UIAppearanceP", "init"]
+- ["So12UIAppearanceP", "isScrollEnabled"]
+- !private ["So12UIAppearanceP", "leadingAnchor"]
+- !private ["So12UIAppearanceP", "safeAreaLayoutGuide"]
+- ["So12UIAppearanceP", "self"]
+- !private ["So12UIAppearanceP", "sendButton"]
+- ["So12UIAppearanceP", "setTitle"]
+- ["So12UIAppearanceP", "setTitleColor"]
+- !private ["So12UIAppearanceP", "showPlaceHolderLabel"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So12UIAppearanceP", "textView"]
+- ["So12UIAppearanceP", "titleLabel"]
+- !private ["So12UIAppearanceP", "topAnchor"]
+- !private ["So12UIAppearanceP", "trailingAnchor"]
+- ["So21UIAppearanceContainerP", "ChatInputTextView"]
+- ["So21UIAppearanceContainerP", "UIButton"]
+- ["So21UIAppearanceContainerP", "UIFont"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "addSubview"]
+- ["So21UIAppearanceContainerP", "addTarget"]
+- !private ["So21UIAppearanceContainerP", "anchor"]
+- !private ["So21UIAppearanceContainerP", "autoresizingMask"]
+- !private ["So21UIAppearanceContainerP", "backgroundColor"]
+- !private ["So21UIAppearanceContainerP", "delegate"]
+- !private ["So21UIAppearanceContainerP", "fatalError"]
+- ["So21UIAppearanceContainerP", "font"]
+- ["So21UIAppearanceContainerP", "handleSend"]
+- ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", "isScrollEnabled"]
+- !private ["So21UIAppearanceContainerP", "leadingAnchor"]
+- !private ["So21UIAppearanceContainerP", "safeAreaLayoutGuide"]
+- ["So21UIAppearanceContainerP", "self"]
+- !private ["So21UIAppearanceContainerP", "sendButton"]
+- ["So21UIAppearanceContainerP", "setTitle"]
+- ["So21UIAppearanceContainerP", "setTitleColor"]
+- !private ["So21UIAppearanceContainerP", "showPlaceHolderLabel"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "textView"]
+- ["So21UIAppearanceContainerP", "titleLabel"]
+- !private ["So21UIAppearanceContainerP", "topAnchor"]
+- !private ["So21UIAppearanceContainerP", "trailingAnchor"]
+- ["So8UIButtonC", "addTarget"]
+- !private ["So8UIButtonC", "anchor"]
+- ["So8UIButtonC", "init"]
+- !private ["So8UIButtonC", "leadingAnchor"]
+- ["So8UIButtonC", "setTitle"]
+- ["So8UIButtonC", "setTitleColor"]
+- ["So8UIButtonC", "titleLabel"]
+- !private ["So7UIColorC", "white"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "anchor"]
+- ["So30UIContentSizeCategoryAdjustingP", "font"]
+- ["So30UIContentSizeCategoryAdjustingP", "init"]
+- ["So30UIContentSizeCategoryAdjustingP", "isScrollEnabled"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "showPlaceHolderLabel"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- ["So9UIControlC", "addTarget"]
+- !private ["So9UIControlC", "anchor"]
+- ["So9UIControlC", "init"]
+- !private ["So9UIControlC", "leadingAnchor"]
+- ["So9UIControlC", "setTitle"]
+- ["So9UIControlC", "setTitleColor"]
+- ["So9UIControlC", "titleLabel"]
+- ["So17UICoordinateSpaceP", "ChatInputTextView"]
+- ["So17UICoordinateSpaceP", "UIButton"]
+- ["So17UICoordinateSpaceP", "UIFont"]
+- ["So17UICoordinateSpaceP", ""]
+- !private ["So17UICoordinateSpaceP", "addSubview"]
+- ["So17UICoordinateSpaceP", "addTarget"]
+- !private ["So17UICoordinateSpaceP", "anchor"]
+- !private ["So17UICoordinateSpaceP", "autoresizingMask"]
+- !private ["So17UICoordinateSpaceP", "backgroundColor"]
+- !private ["So17UICoordinateSpaceP", "delegate"]
+- !private ["So17UICoordinateSpaceP", "fatalError"]
+- ["So17UICoordinateSpaceP", "font"]
+- ["So17UICoordinateSpaceP", "handleSend"]
+- ["So17UICoordinateSpaceP", "init"]
+- ["So17UICoordinateSpaceP", "isScrollEnabled"]
+- !private ["So17UICoordinateSpaceP", "leadingAnchor"]
+- !private ["So17UICoordinateSpaceP", "safeAreaLayoutGuide"]
+- ["So17UICoordinateSpaceP", "self"]
+- !private ["So17UICoordinateSpaceP", "sendButton"]
+- ["So17UICoordinateSpaceP", "setTitle"]
+- ["So17UICoordinateSpaceP", "setTitleColor"]
+- !private ["So17UICoordinateSpaceP", "showPlaceHolderLabel"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So17UICoordinateSpaceP", "textView"]
+- ["So17UICoordinateSpaceP", "titleLabel"]
+- !private ["So17UICoordinateSpaceP", "topAnchor"]
+- !private ["So17UICoordinateSpaceP", "trailingAnchor"]
+- ["So13UIDynamicItemP", "ChatInputTextView"]
+- ["So13UIDynamicItemP", "UIButton"]
+- ["So13UIDynamicItemP", "UIFont"]
+- ["So13UIDynamicItemP", ""]
+- !private ["So13UIDynamicItemP", "addSubview"]
+- ["So13UIDynamicItemP", "addTarget"]
+- !private ["So13UIDynamicItemP", "anchor"]
+- !private ["So13UIDynamicItemP", "autoresizingMask"]
+- !private ["So13UIDynamicItemP", "backgroundColor"]
+- !private ["So13UIDynamicItemP", "delegate"]
+- !private ["So13UIDynamicItemP", "fatalError"]
+- ["So13UIDynamicItemP", "font"]
+- ["So13UIDynamicItemP", "handleSend"]
+- ["So13UIDynamicItemP", "init"]
+- ["So13UIDynamicItemP", "isScrollEnabled"]
+- !private ["So13UIDynamicItemP", "leadingAnchor"]
+- !private ["So13UIDynamicItemP", "safeAreaLayoutGuide"]
+- ["So13UIDynamicItemP", "self"]
+- !private ["So13UIDynamicItemP", "sendButton"]
+- ["So13UIDynamicItemP", "setTitle"]
+- ["So13UIDynamicItemP", "setTitleColor"]
+- !private ["So13UIDynamicItemP", "showPlaceHolderLabel"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So13UIDynamicItemP", "textView"]
+- ["So13UIDynamicItemP", "titleLabel"]
+- !private ["So13UIDynamicItemP", "topAnchor"]
+- !private ["So13UIDynamicItemP", "trailingAnchor"]
+- !private ["So12UIEdgeInsetsV", "init"]
+- !private ["So12UIEdgeInsetsV", "init"]
+- ["So18UIFocusEnvironmentP", "ChatInputTextView"]
+- ["So18UIFocusEnvironmentP", "UIButton"]
+- ["So18UIFocusEnvironmentP", "UIFont"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "addSubview"]
+- ["So18UIFocusEnvironmentP", "addTarget"]
+- !private ["So18UIFocusEnvironmentP", "anchor"]
+- !private ["So18UIFocusEnvironmentP", "autoresizingMask"]
+- !private ["So18UIFocusEnvironmentP", "backgroundColor"]
+- !private ["So18UIFocusEnvironmentP", "delegate"]
+- !private ["So18UIFocusEnvironmentP", "fatalError"]
+- ["So18UIFocusEnvironmentP", "font"]
+- ["So18UIFocusEnvironmentP", "handleSend"]
+- ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", "isScrollEnabled"]
+- !private ["So18UIFocusEnvironmentP", "leadingAnchor"]
+- !private ["So18UIFocusEnvironmentP", "safeAreaLayoutGuide"]
+- ["So18UIFocusEnvironmentP", "self"]
+- !private ["So18UIFocusEnvironmentP", "sendButton"]
+- ["So18UIFocusEnvironmentP", "setTitle"]
+- ["So18UIFocusEnvironmentP", "setTitleColor"]
+- !private ["So18UIFocusEnvironmentP", "showPlaceHolderLabel"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "textView"]
+- ["So18UIFocusEnvironmentP", "titleLabel"]
+- !private ["So18UIFocusEnvironmentP", "topAnchor"]
+- !private ["So18UIFocusEnvironmentP", "trailingAnchor"]
+- ["So11UIFocusItemP", "ChatInputTextView"]
+- ["So11UIFocusItemP", "UIButton"]
+- ["So11UIFocusItemP", "UIFont"]
+- ["So11UIFocusItemP", ""]
+- !private ["So11UIFocusItemP", "addSubview"]
+- ["So11UIFocusItemP", "addTarget"]
+- !private ["So11UIFocusItemP", "anchor"]
+- !private ["So11UIFocusItemP", "autoresizingMask"]
+- !private ["So11UIFocusItemP", "backgroundColor"]
+- !private ["So11UIFocusItemP", "delegate"]
+- !private ["So11UIFocusItemP", "fatalError"]
+- ["So11UIFocusItemP", "font"]
+- ["So11UIFocusItemP", "handleSend"]
+- ["So11UIFocusItemP", "init"]
+- ["So11UIFocusItemP", "isScrollEnabled"]
+- !private ["So11UIFocusItemP", "leadingAnchor"]
+- !private ["So11UIFocusItemP", "safeAreaLayoutGuide"]
+- ["So11UIFocusItemP", "self"]
+- !private ["So11UIFocusItemP", "sendButton"]
+- ["So11UIFocusItemP", "setTitle"]
+- ["So11UIFocusItemP", "setTitleColor"]
+- !private ["So11UIFocusItemP", "showPlaceHolderLabel"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So11UIFocusItemP", "textView"]
+- ["So11UIFocusItemP", "titleLabel"]
+- !private ["So11UIFocusItemP", "topAnchor"]
+- !private ["So11UIFocusItemP", "trailingAnchor"]
+- ["So20UIFocusItemContainerP", "ChatInputTextView"]
+- ["So20UIFocusItemContainerP", "UIButton"]
+- ["So20UIFocusItemContainerP", "UIFont"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addSubview"]
+- ["So20UIFocusItemContainerP", "addTarget"]
+- !private ["So20UIFocusItemContainerP", "anchor"]
+- !private ["So20UIFocusItemContainerP", "autoresizingMask"]
+- !private ["So20UIFocusItemContainerP", "backgroundColor"]
+- !private ["So20UIFocusItemContainerP", "delegate"]
+- !private ["So20UIFocusItemContainerP", "fatalError"]
+- ["So20UIFocusItemContainerP", "font"]
+- ["So20UIFocusItemContainerP", "handleSend"]
+- ["So20UIFocusItemContainerP", "init"]
+- ["So20UIFocusItemContainerP", "isScrollEnabled"]
+- !private ["So20UIFocusItemContainerP", "leadingAnchor"]
+- !private ["So20UIFocusItemContainerP", "safeAreaLayoutGuide"]
+- ["So20UIFocusItemContainerP", "self"]
+- !private ["So20UIFocusItemContainerP", "sendButton"]
+- ["So20UIFocusItemContainerP", "setTitle"]
+- ["So20UIFocusItemContainerP", "setTitleColor"]
+- !private ["So20UIFocusItemContainerP", "showPlaceHolderLabel"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So20UIFocusItemContainerP", "textView"]
+- ["So20UIFocusItemContainerP", "titleLabel"]
+- !private ["So20UIFocusItemContainerP", "topAnchor"]
+- !private ["So20UIFocusItemContainerP", "trailingAnchor"]
+- !private ["So30UIFocusItemScrollableContainerP", "anchor"]
+- ["So30UIFocusItemScrollableContainerP", "font"]
+- ["So30UIFocusItemScrollableContainerP", "init"]
+- ["So30UIFocusItemScrollableContainerP", "isScrollEnabled"]
+- !private ["So30UIFocusItemScrollableContainerP", "showPlaceHolderLabel"]
+- !private ["So30UIFocusItemScrollableContainerP", "text"]
+- ["So6UIFontC", "systemFont"]
+- !private ["So10UIKeyInputP", "anchor"]
+- ["So10UIKeyInputP", "font"]
+- ["So10UIKeyInputP", "init"]
+- ["So10UIKeyInputP", "isScrollEnabled"]
+- !private ["So10UIKeyInputP", "showPlaceHolderLabel"]
+- !private ["So10UIKeyInputP", "text"]
+- ["So7UILabelC", "font"]
+- !private ["So13UILayoutGuideC", "bottomAnchor"]
+- ["So30UIPasteConfigurationSupportingP", "ChatInputTextView"]
+- ["So30UIPasteConfigurationSupportingP", "UIButton"]
+- ["So30UIPasteConfigurationSupportingP", "UIFont"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
+- ["So30UIPasteConfigurationSupportingP", "addTarget"]
+- !private ["So30UIPasteConfigurationSupportingP", "anchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "autoresizingMask"]
+- !private ["So30UIPasteConfigurationSupportingP", "backgroundColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "delegate"]
+- !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- ["So30UIPasteConfigurationSupportingP", "font"]
+- ["So30UIPasteConfigurationSupportingP", "handleSend"]
+- ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", "isScrollEnabled"]
+- !private ["So30UIPasteConfigurationSupportingP", "leadingAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "safeAreaLayoutGuide"]
+- ["So30UIPasteConfigurationSupportingP", "self"]
+- !private ["So30UIPasteConfigurationSupportingP", "sendButton"]
+- ["So30UIPasteConfigurationSupportingP", "setTitle"]
+- ["So30UIPasteConfigurationSupportingP", "setTitleColor"]
+- !private ["So30UIPasteConfigurationSupportingP", "showPlaceHolderLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "textView"]
+- ["So30UIPasteConfigurationSupportingP", "titleLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "topAnchor"]
+- !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
+- ["So11UIResponderC", "CGRect"]
+- ["So11UIResponderC", "CGSize"]
+- ["So11UIResponderC", "ChatInputAccessaryViewDelegate"]
+- ["So11UIResponderC", "ChatInputTextView"]
+- ["So11UIResponderC", "NSCoder"]
+- ["So11UIResponderC", "UIButton"]
+- ["So11UIResponderC", "UIFont"]
+- !private ["So11UIResponderC", "addSubview"]
+- ["So11UIResponderC", "addTarget"]
+- !private ["So11UIResponderC", "anchor"]
+- !private ["So11UIResponderC", "autoresizingMask"]
+- !private ["So11UIResponderC", "backgroundColor"]
+- ["So11UIResponderC", "clearTextField"]
+- ["So11UIResponderC", "delegate"]
+- !private ["So11UIResponderC", "fatalError"]
+- ["So11UIResponderC", "font"]
+- ["So11UIResponderC", "handleSend"]
+- ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "intrinsicContentSize"]
+- ["So11UIResponderC", "isScrollEnabled"]
+- !private ["So11UIResponderC", "leadingAnchor"]
+- !private ["So11UIResponderC", "safeAreaLayoutGuide"]
+- ["So11UIResponderC", "self"]
+- ["So11UIResponderC", "sendButton"]
+- ["So11UIResponderC", "setTitle"]
+- ["So11UIResponderC", "setTitleColor"]
+- !private ["So11UIResponderC", "showPlaceHolderLabel"]
+- !private ["So11UIResponderC", "text"]
+- ["So11UIResponderC", "textView"]
+- ["So11UIResponderC", "titleLabel"]
+- !private ["So11UIResponderC", "topAnchor"]
+- !private ["So11UIResponderC", "trailingAnchor"]
+- ["So30UIResponderStandardEditActionsP", "ChatInputTextView"]
+- ["So30UIResponderStandardEditActionsP", "UIButton"]
+- ["So30UIResponderStandardEditActionsP", "UIFont"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "addSubview"]
+- ["So30UIResponderStandardEditActionsP", "addTarget"]
+- !private ["So30UIResponderStandardEditActionsP", "anchor"]
+- !private ["So30UIResponderStandardEditActionsP", "autoresizingMask"]
+- !private ["So30UIResponderStandardEditActionsP", "backgroundColor"]
+- !private ["So30UIResponderStandardEditActionsP", "delegate"]
+- !private ["So30UIResponderStandardEditActionsP", "fatalError"]
+- ["So30UIResponderStandardEditActionsP", "font"]
+- ["So30UIResponderStandardEditActionsP", "handleSend"]
+- ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", "isScrollEnabled"]
+- !private ["So30UIResponderStandardEditActionsP", "leadingAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "safeAreaLayoutGuide"]
+- ["So30UIResponderStandardEditActionsP", "self"]
+- !private ["So30UIResponderStandardEditActionsP", "sendButton"]
+- ["So30UIResponderStandardEditActionsP", "setTitle"]
+- ["So30UIResponderStandardEditActionsP", "setTitleColor"]
+- !private ["So30UIResponderStandardEditActionsP", "showPlaceHolderLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "textView"]
+- ["So30UIResponderStandardEditActionsP", "titleLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "topAnchor"]
+- !private ["So30UIResponderStandardEditActionsP", "trailingAnchor"]
+- !private ["So12UIScrollViewC", "anchor"]
+- ["So12UIScrollViewC", "font"]
+- ["So12UIScrollViewC", "init"]
+- ["So12UIScrollViewC", "isScrollEnabled"]
+- !private ["So12UIScrollViewC", "showPlaceHolderLabel"]
+- !private ["So12UIScrollViewC", "text"]
+- ["So35UISpringLoadedInteractionSupportingP", "addTarget"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "anchor"]
+- ["So35UISpringLoadedInteractionSupportingP", "init"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "leadingAnchor"]
+- ["So35UISpringLoadedInteractionSupportingP", "setTitle"]
+- ["So35UISpringLoadedInteractionSupportingP", "setTitleColor"]
+- ["So35UISpringLoadedInteractionSupportingP", "titleLabel"]
+- !private ["So15UITextDraggableP", "anchor"]
+- ["So15UITextDraggableP", "font"]
+- ["So15UITextDraggableP", "init"]
+- ["So15UITextDraggableP", "isScrollEnabled"]
+- !private ["So15UITextDraggableP", "showPlaceHolderLabel"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "anchor"]
+- ["So15UITextDroppableP", "font"]
+- ["So15UITextDroppableP", "init"]
+- ["So15UITextDroppableP", "isScrollEnabled"]
+- !private ["So15UITextDroppableP", "showPlaceHolderLabel"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextInputP", "anchor"]
+- ["So11UITextInputP", "font"]
+- ["So11UITextInputP", "init"]
+- ["So11UITextInputP", "isScrollEnabled"]
+- !private ["So11UITextInputP", "showPlaceHolderLabel"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", "anchor"]
+- ["So17UITextInputTraitsP", "font"]
+- ["So17UITextInputTraitsP", "init"]
+- ["So17UITextInputTraitsP", "isScrollEnabled"]
+- !private ["So17UITextInputTraitsP", "showPlaceHolderLabel"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", "anchor"]
+- ["So34UITextPasteConfigurationSupportingP", "font"]
+- ["So34UITextPasteConfigurationSupportingP", "init"]
+- ["So34UITextPasteConfigurationSupportingP", "isScrollEnabled"]
+- !private ["So34UITextPasteConfigurationSupportingP", "showPlaceHolderLabel"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So10UITextViewC", "anchor"]
+- ["So10UITextViewC", "font"]
+- ["So10UITextViewC", "init"]
+- ["So10UITextViewC", "isScrollEnabled"]
+- !private ["So10UITextViewC", "showPlaceHolderLabel"]
+- !private ["So10UITextViewC", "text"]
+- ["So18UITraitEnvironmentP", "ChatInputTextView"]
+- ["So18UITraitEnvironmentP", "UIButton"]
+- ["So18UITraitEnvironmentP", "UIFont"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "addSubview"]
+- ["So18UITraitEnvironmentP", "addTarget"]
+- !private ["So18UITraitEnvironmentP", "anchor"]
+- !private ["So18UITraitEnvironmentP", "autoresizingMask"]
+- !private ["So18UITraitEnvironmentP", "backgroundColor"]
+- !private ["So18UITraitEnvironmentP", "delegate"]
+- !private ["So18UITraitEnvironmentP", "fatalError"]
+- ["So18UITraitEnvironmentP", "font"]
+- ["So18UITraitEnvironmentP", "handleSend"]
+- ["So18UITraitEnvironmentP", "init"]
+- ["So18UITraitEnvironmentP", "isScrollEnabled"]
+- !private ["So18UITraitEnvironmentP", "leadingAnchor"]
+- !private ["So18UITraitEnvironmentP", "safeAreaLayoutGuide"]
+- ["So18UITraitEnvironmentP", "self"]
+- !private ["So18UITraitEnvironmentP", "sendButton"]
+- ["So18UITraitEnvironmentP", "setTitle"]
+- ["So18UITraitEnvironmentP", "setTitleColor"]
+- !private ["So18UITraitEnvironmentP", "showPlaceHolderLabel"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "textView"]
+- ["So18UITraitEnvironmentP", "titleLabel"]
+- !private ["So18UITraitEnvironmentP", "topAnchor"]
+- !private ["So18UITraitEnvironmentP", "trailingAnchor"]
+- ["So23UIUserActivityRestoringP", "ChatInputTextView"]
+- ["So23UIUserActivityRestoringP", "UIButton"]
+- ["So23UIUserActivityRestoringP", "UIFont"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addSubview"]
+- ["So23UIUserActivityRestoringP", "addTarget"]
+- !private ["So23UIUserActivityRestoringP", "anchor"]
+- !private ["So23UIUserActivityRestoringP", "autoresizingMask"]
+- !private ["So23UIUserActivityRestoringP", "backgroundColor"]
+- !private ["So23UIUserActivityRestoringP", "delegate"]
+- !private ["So23UIUserActivityRestoringP", "fatalError"]
+- ["So23UIUserActivityRestoringP", "font"]
+- ["So23UIUserActivityRestoringP", "handleSend"]
+- ["So23UIUserActivityRestoringP", "init"]
+- ["So23UIUserActivityRestoringP", "isScrollEnabled"]
+- !private ["So23UIUserActivityRestoringP", "leadingAnchor"]
+- !private ["So23UIUserActivityRestoringP", "safeAreaLayoutGuide"]
+- ["So23UIUserActivityRestoringP", "self"]
+- !private ["So23UIUserActivityRestoringP", "sendButton"]
+- ["So23UIUserActivityRestoringP", "setTitle"]
+- ["So23UIUserActivityRestoringP", "setTitleColor"]
+- !private ["So23UIUserActivityRestoringP", "showPlaceHolderLabel"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textView"]
+- ["So23UIUserActivityRestoringP", "titleLabel"]
+- !private ["So23UIUserActivityRestoringP", "topAnchor"]
+- !private ["So23UIUserActivityRestoringP", "trailingAnchor"]
+- ["So6UIViewC", "CGRect"]
+- ["So6UIViewC", "CGSize"]
+- ["So6UIViewC", "ChatInputAccessaryViewDelegate"]
+- ["So6UIViewC", "ChatInputTextView"]
+- ["So6UIViewC", "NSCoder"]
+- ["So6UIViewC", "UIButton"]
+- ["So6UIViewC", "UIFont"]
+- ["So6UIViewC", ""]
+- !private ["So6UIViewC", "addSubview"]
+- ["So6UIViewC", "addTarget"]
+- !private ["So6UIViewC", "anchor"]
+- !private ["So6UIViewC", "autoresizingMask"]
+- !private ["So6UIViewC", "backgroundColor"]
+- ["So6UIViewC", "clearTextField"]
+- ["So6UIViewC", "delegate"]
+- !private ["So6UIViewC", "fatalError"]
+- ["So6UIViewC", "font"]
+- ["So6UIViewC", "handleSend"]
+- ["So6UIViewC", "init"]
+- ["So6UIViewC", "intrinsicContentSize"]
+- ["So6UIViewC", "isScrollEnabled"]
+- !private ["So6UIViewC", "leadingAnchor"]
+- !private ["So6UIViewC", "safeAreaLayoutGuide"]
+- ["So6UIViewC", "self"]
+- ["So6UIViewC", "sendButton"]
+- ["So6UIViewC", "setTitle"]
+- ["So6UIViewC", "setTitleColor"]
+- !private ["So6UIViewC", "showPlaceHolderLabel"]
+- !private ["So6UIViewC", "text"]
+- ["So6UIViewC", "textView"]
+- ["So6UIViewC", "titleLabel"]
+- !private ["So6UIViewC", "topAnchor"]
+- !private ["So6UIViewC", "trailingAnchor"]
+- ["So12UIFontWeighta", "semibold"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "ChatInputTextView"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "UIButton"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "UIFont"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "addTarget"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "anchor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "autoresizingMask"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "delegate"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fatalError"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "font"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "handleSend"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "isScrollEnabled"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "safeAreaLayoutGuide"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "self"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "sendButton"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "setTitle"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "setTitleColor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "showPlaceHolderLabel"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textView"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "white"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "semibold"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "ChatInputTextView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UIButton"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UIFont"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "addTarget"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "anchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "autoresizingMask"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "font"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "handleSend"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "isScrollEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "safeAreaLayoutGuide"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "self"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "sendButton"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "setTitle"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "setTitleColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "showPlaceHolderLabel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "systemFont"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "textView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "titleLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "topAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "semibold"]
+- !private ["s21_ObjectiveCBridgeableP", "white"]
+- !private ["s21_ObjectiveCBridgeableP", "zero"]
+- ["s20_SwiftNewtypeWrapperP", "semibold"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- ["5UIKit01_A23NumericRawRepresentableP", "semibold"]
+depends-nominal:
+- !private "So18UIViewAutoresizingV"
+- "SK"
+- "So12UIButtonTypeV"
+- "So15CALayerDelegateP"
+- !private "So6CGSizeV"
+- "s7CVarArgP"
+- "9mojo_test22ChatInputAccessaryViewC"
+- "9mojo_test30ChatInputAccessaryViewDelegateP"
+- "9mojo_test17ChatInputTextViewC"
+- "Sl"
+- "SL"
+- "15TinyConstraints13ConstrainableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- "SE"
+- "SQ"
+- "So15UIControlEventsV"
+- "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- "s9OptionSetP"
+- !private "Sq"
+- "Sm"
+- "SY"
+- "ST"
+- "s10SetAlgebraP"
+- "So14UIControlStateV"
+- !private "s12StaticStringV"
+- "SS"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So8UIButtonC"
+- !private "So7UIColorC"
+- "So30UIContentSizeCategoryAdjustingP"
+- "So9UIControlC"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- !private "So12UIEdgeInsetsV"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
+- "So30UIFocusItemScrollableContainerP"
+- "So6UIFontC"
+- "So10UIKeyInputP"
+- "So7UILabelC"
+- !private "So13UILayoutGuideC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So12UIScrollViewC"
+- "So35UISpringLoadedInteractionSupportingP"
+- "So15UITextDraggableP"
+- "So15UITextDroppableP"
+- "So11UITextInputP"
+- "So17UITextInputTraitsP"
+- "So34UITextPasteConfigurationSupportingP"
+- "So10UITextViewC"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- "So12UIFontWeighta"
+- "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s26_ExpressibleByColorLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s20_SwiftNewtypeWrapperP"
+- "s16_SwiftStringViewP"
+- "5UIKit01_A23NumericRawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/x86_64.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Headers/Cosmos-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+ForceDecode.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSImage+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImageView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImageView+HighlightedWebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDImageCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRHTTPSCallable.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageFrame.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSData+ImageContentType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDImageCacheConfig.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FIRMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeZoomAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIView+WebCacheOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageTransition.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDAnimatedImageRep.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageGIFCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageImageIOCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCodersManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImagePrefetcher.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoderHelper.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRError.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-Defines.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Headers/Cosmos-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDImageIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDPieIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndeterminateIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDRingIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDErrorIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDSuccessIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDShadow.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "90154dbb80dc58ca6c8d092edb6b6d56"

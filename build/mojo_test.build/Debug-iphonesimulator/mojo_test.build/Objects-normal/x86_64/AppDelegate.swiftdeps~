@@ -1,0 +1,1800 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "AppDelegate"
+- "functions"
+provides-nominal:
+- "9mojo_test11AppDelegateC"
+provides-member:
+- ["9mojo_test11AppDelegateC", ""]
+provides-dynamic-lookup:
+- "application"
+- "applicationDidBecomeActive"
+- "applicationDidEnterBackground"
+- "applicationWillEnterForeground"
+- "applicationWillResignActive"
+- "applicationWillTerminate"
+- "messaging"
+- "userNotificationCenter"
+- "window"
+depends-top-level:
+- !private "=="
+- "AnyHashable"
+- "AppDelegate"
+- !private "Array"
+- "AssignmentPrecedence"
+- "Bool"
+- !private "BooleanLiteralType"
+- "CastingPrecedence"
+- "Data"
+- !private "Dictionary"
+- "Error"
+- !private "FirebaseApp"
+- !private "Firestore"
+- "FloatLiteralType"
+- "Functions"
+- !private "FunctionsErrorCode"
+- !private "FunctionsErrorDetailsKey"
+- !private "FunctionsErrorDomain"
+- "IntegerLiteralType"
+- !private "MainTabBarController"
+- "Messaging"
+- "MessagingDelegate"
+- "MessagingRemoteMessage"
+- !private "NSArray"
+- !private "NSError"
+- "NSPersistentContainer"
+- !private "Notification"
+- !private "NotificationCenter"
+- !private "PrivateChatController"
+- "String"
+- "StringLiteralType"
+- "UIApplication"
+- "UIApplicationDelegate"
+- "UIBackgroundFetchResult"
+- !private "UICollectionViewFlowLayout"
+- !private "UINavigationController"
+- "UIResponder"
+- !private "UITabBarItem"
+- !private "UIUserNotificationSettings"
+- "UIWindow"
+- !private "UNAuthorizationOptions"
+- "UNNotification"
+- "UNNotificationPresentationOptions"
+- "UNNotificationResponse"
+- "UNUserNotificationCenter"
+- "UNUserNotificationCenterDelegate"
+- "Void"
+- !private "fatalError"
+- "functions"
+- !private "print"
+depends-member:
+- ["9mojo_test11AppDelegateC", "AnyHashable"]
+- ["9mojo_test11AppDelegateC", "Bool"]
+- ["9mojo_test11AppDelegateC", "Data"]
+- ["9mojo_test11AppDelegateC", "Error"]
+- !private ["9mojo_test11AppDelegateC", "FirebaseApp"]
+- !private ["9mojo_test11AppDelegateC", "Firestore"]
+- !private ["9mojo_test11AppDelegateC", "FunctionsErrorCode"]
+- !private ["9mojo_test11AppDelegateC", "FunctionsErrorDetailsKey"]
+- !private ["9mojo_test11AppDelegateC", "FunctionsErrorDomain"]
+- !private ["9mojo_test11AppDelegateC", "MainTabBarController"]
+- ["9mojo_test11AppDelegateC", "Messaging"]
+- ["9mojo_test11AppDelegateC", "MessagingRemoteMessage"]
+- !private ["9mojo_test11AppDelegateC", "NSArray"]
+- !private ["9mojo_test11AppDelegateC", "NSError"]
+- ["9mojo_test11AppDelegateC", "NSPersistentContainer"]
+- !private ["9mojo_test11AppDelegateC", "Notification"]
+- !private ["9mojo_test11AppDelegateC", "NotificationCenter"]
+- !private ["9mojo_test11AppDelegateC", "PrivateChatController"]
+- ["9mojo_test11AppDelegateC", "String"]
+- ["9mojo_test11AppDelegateC", "UIApplication"]
+- ["9mojo_test11AppDelegateC", "UIBackgroundFetchResult"]
+- !private ["9mojo_test11AppDelegateC", "UICollectionViewFlowLayout"]
+- !private ["9mojo_test11AppDelegateC", "UINavigationController"]
+- !private ["9mojo_test11AppDelegateC", "UITabBarItem"]
+- !private ["9mojo_test11AppDelegateC", "UIUserNotificationSettings"]
+- ["9mojo_test11AppDelegateC", "UIWindow"]
+- !private ["9mojo_test11AppDelegateC", "UNAuthorizationOptions"]
+- ["9mojo_test11AppDelegateC", "UNNotification"]
+- ["9mojo_test11AppDelegateC", "UNNotificationPresentationOptions"]
+- ["9mojo_test11AppDelegateC", "UNNotificationResponse"]
+- ["9mojo_test11AppDelegateC", "UNUserNotificationCenter"]
+- ["9mojo_test11AppDelegateC", "Void"]
+- ["9mojo_test11AppDelegateC", "application"]
+- ["9mojo_test11AppDelegateC", "applicationDidBecomeActive"]
+- ["9mojo_test11AppDelegateC", "applicationDidEnterBackground"]
+- ["9mojo_test11AppDelegateC", "applicationDidFinishLaunching"]
+- ["9mojo_test11AppDelegateC", "applicationDidReceiveMemoryWarning"]
+- ["9mojo_test11AppDelegateC", "applicationProtectedDataDidBecomeAvailable"]
+- ["9mojo_test11AppDelegateC", "applicationProtectedDataWillBecomeUnavailable"]
+- ["9mojo_test11AppDelegateC", "applicationShouldRequestHealthAuthorization"]
+- ["9mojo_test11AppDelegateC", "applicationSignificantTimeChange"]
+- ["9mojo_test11AppDelegateC", "applicationWillEnterForeground"]
+- ["9mojo_test11AppDelegateC", "applicationWillResignActive"]
+- ["9mojo_test11AppDelegateC", "applicationWillTerminate"]
+- !private ["9mojo_test11AppDelegateC", "attempRegisterForNotifications"]
+- ["9mojo_test11AppDelegateC", "deinit"]
+- !private ["9mojo_test11AppDelegateC", "fatalError"]
+- !private ["9mojo_test11AppDelegateC", "functions"]
+- ["9mojo_test11AppDelegateC", "gcmMessageIDKey"]
+- ["9mojo_test11AppDelegateC", "init"]
+- ["9mojo_test11AppDelegateC", "messaging"]
+- ["9mojo_test11AppDelegateC", "persistentContainer"]
+- !private ["9mojo_test11AppDelegateC", "persistentContainer.storage"]
+- !private ["9mojo_test11AppDelegateC", "print"]
+- ["9mojo_test11AppDelegateC", "saveContext"]
+- ["9mojo_test11AppDelegateC", "userNotificationCenter"]
+- ["9mojo_test11AppDelegateC", "window"]
+- !private ["Sa", "subscript"]
+- !private ["s13ArrayProtocolP", "subscript"]
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["SK", "subscript"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "items"]
+- !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
+- !private ["So15CALayerDelegateP", "rootViewController"]
+- !private ["s7CVarArgP", "FirebaseApp"]
+- !private ["s7CVarArgP", "Firestore"]
+- !private ["s7CVarArgP", "FunctionsErrorCode"]
+- !private ["s7CVarArgP", "FunctionsErrorDetailsKey"]
+- !private ["s7CVarArgP", "FunctionsErrorDomain"]
+- ["s7CVarArgP", "LaunchOptionsKey"]
+- !private ["s7CVarArgP", "MainTabBarController"]
+- !private ["s7CVarArgP", "Messaging"]
+- !private ["s7CVarArgP", "NSPersistentContainer"]
+- !private ["s7CVarArgP", "Notification"]
+- !private ["s7CVarArgP", "NotificationCenter"]
+- !private ["s7CVarArgP", "PrivateChatController"]
+- !private ["s7CVarArgP", "UIBackgroundFetchResult"]
+- !private ["s7CVarArgP", "UICollectionViewFlowLayout"]
+- !private ["s7CVarArgP", "UIUserNotificationSettings"]
+- !private ["s7CVarArgP", "UIWindow"]
+- !private ["s7CVarArgP", "UNUserNotificationCenter"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "appData"]
+- ["s7CVarArgP", "application"]
+- ["s7CVarArgP", "applicationDidBecomeActive"]
+- ["s7CVarArgP", "applicationDidEnterBackground"]
+- ["s7CVarArgP", "applicationDidFinishLaunching"]
+- ["s7CVarArgP", "applicationDidReceiveMemoryWarning"]
+- ["s7CVarArgP", "applicationProtectedDataDidBecomeAvailable"]
+- ["s7CVarArgP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["s7CVarArgP", "applicationShouldRequestHealthAuthorization"]
+- ["s7CVarArgP", "applicationSignificantTimeChange"]
+- ["s7CVarArgP", "applicationWillEnterForeground"]
+- ["s7CVarArgP", "applicationWillResignActive"]
+- ["s7CVarArgP", "applicationWillTerminate"]
+- !private ["s7CVarArgP", "areTimestampsInSnapshotsEnabled"]
+- !private ["s7CVarArgP", "attempRegisterForNotifications"]
+- !private ["s7CVarArgP", "badgeValue"]
+- !private ["s7CVarArgP", "call"]
+- !private ["s7CVarArgP", "code"]
+- !private ["s7CVarArgP", "configure"]
+- !private ["s7CVarArgP", "content"]
+- !private ["s7CVarArgP", "conversitionId"]
+- !private ["s7CVarArgP", "current"]
+- !private ["s7CVarArgP", "default"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "dismiss"]
+- !private ["s7CVarArgP", "domain"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "firestore"]
+- ["s7CVarArgP", "functions"]
+- !private ["s7CVarArgP", "gcmMessageIDKey"]
+- !private ["s7CVarArgP", "hasChanges"]
+- !private ["s7CVarArgP", "httpsCallable"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "items"]
+- !private ["s7CVarArgP", "loadPersistentStores"]
+- !private ["s7CVarArgP", "localizedDescription"]
+- !private ["s7CVarArgP", "makeKeyAndVisible"]
+- ["s7CVarArgP", "messaging"]
+- !private ["s7CVarArgP", "notification"]
+- !private ["s7CVarArgP", "object"]
+- !private ["s7CVarArgP", "persistentContainer"]
+- !private ["s7CVarArgP", "post"]
+- !private ["s7CVarArgP", "presentedViewController"]
+- !private ["s7CVarArgP", "print"]
+- !private ["s7CVarArgP", "pushViewController"]
+- !private ["s7CVarArgP", "registerForRemoteNotifications"]
+- !private ["s7CVarArgP", "registerUserNotificationSettings"]
+- !private ["s7CVarArgP", "request"]
+- !private ["s7CVarArgP", "requestAuthorization"]
+- !private ["s7CVarArgP", "rootViewController"]
+- !private ["s7CVarArgP", "save"]
+- !private ["s7CVarArgP", "saveContext"]
+- !private ["s7CVarArgP", "selectedIndex"]
+- !private ["s7CVarArgP", "settings"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "tabBar"]
+- !private ["s7CVarArgP", "userInfo"]
+- ["s7CVarArgP", "userNotificationCenter"]
+- !private ["s7CVarArgP", "viewContext"]
+- !private ["s7CVarArgP", "viewControllers"]
+- ["s7CVarArgP", "window"]
+- !private ["9mojo_test30ChatInputAccessaryViewDelegateP", "conversitionId"]
+- !private ["9mojo_test30ChatInputAccessaryViewDelegateP", "init"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- !private ["Sl", "subscript"]
+- ["SL", "init"]
+- ["SL", "init"]
+- !private ["15TinyConstraints13ConstrainableP", "init"]
+- !private ["15TinyConstraints13ConstrainableP", "items"]
+- !private ["15TinyConstraints13ConstrainableP", "makeKeyAndVisible"]
+- !private ["15TinyConstraints13ConstrainableP", "rootViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "FirebaseApp"]
+- !private ["s28CustomDebugStringConvertibleP", "Firestore"]
+- !private ["s28CustomDebugStringConvertibleP", "FunctionsErrorCode"]
+- !private ["s28CustomDebugStringConvertibleP", "FunctionsErrorDetailsKey"]
+- !private ["s28CustomDebugStringConvertibleP", "FunctionsErrorDomain"]
+- ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
+- !private ["s28CustomDebugStringConvertibleP", "MainTabBarController"]
+- !private ["s28CustomDebugStringConvertibleP", "Messaging"]
+- !private ["s28CustomDebugStringConvertibleP", "NSPersistentContainer"]
+- !private ["s28CustomDebugStringConvertibleP", "Name"]
+- !private ["s28CustomDebugStringConvertibleP", "Notification"]
+- !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
+- !private ["s28CustomDebugStringConvertibleP", "PrivateChatController"]
+- !private ["s28CustomDebugStringConvertibleP", "UIBackgroundFetchResult"]
+- !private ["s28CustomDebugStringConvertibleP", "UICollectionViewFlowLayout"]
+- !private ["s28CustomDebugStringConvertibleP", "UIUserNotificationSettings"]
+- !private ["s28CustomDebugStringConvertibleP", "UIWindow"]
+- !private ["s28CustomDebugStringConvertibleP", "UNUserNotificationCenter"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "appData"]
+- ["s28CustomDebugStringConvertibleP", "application"]
+- ["s28CustomDebugStringConvertibleP", "applicationDidBecomeActive"]
+- ["s28CustomDebugStringConvertibleP", "applicationDidEnterBackground"]
+- ["s28CustomDebugStringConvertibleP", "applicationDidFinishLaunching"]
+- ["s28CustomDebugStringConvertibleP", "applicationDidReceiveMemoryWarning"]
+- ["s28CustomDebugStringConvertibleP", "applicationProtectedDataDidBecomeAvailable"]
+- ["s28CustomDebugStringConvertibleP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["s28CustomDebugStringConvertibleP", "applicationShouldRequestHealthAuthorization"]
+- ["s28CustomDebugStringConvertibleP", "applicationSignificantTimeChange"]
+- ["s28CustomDebugStringConvertibleP", "applicationWillEnterForeground"]
+- ["s28CustomDebugStringConvertibleP", "applicationWillResignActive"]
+- ["s28CustomDebugStringConvertibleP", "applicationWillTerminate"]
+- !private ["s28CustomDebugStringConvertibleP", "areTimestampsInSnapshotsEnabled"]
+- !private ["s28CustomDebugStringConvertibleP", "attempRegisterForNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "badgeValue"]
+- !private ["s28CustomDebugStringConvertibleP", "call"]
+- !private ["s28CustomDebugStringConvertibleP", "code"]
+- !private ["s28CustomDebugStringConvertibleP", "configure"]
+- !private ["s28CustomDebugStringConvertibleP", "content"]
+- !private ["s28CustomDebugStringConvertibleP", "conversitionId"]
+- !private ["s28CustomDebugStringConvertibleP", "current"]
+- !private ["s28CustomDebugStringConvertibleP", "default"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "dismiss"]
+- !private ["s28CustomDebugStringConvertibleP", "domain"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "firestore"]
+- ["s28CustomDebugStringConvertibleP", "functions"]
+- !private ["s28CustomDebugStringConvertibleP", "gcmMessageIDKey"]
+- !private ["s28CustomDebugStringConvertibleP", "hasChanges"]
+- !private ["s28CustomDebugStringConvertibleP", "httpsCallable"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "items"]
+- !private ["s28CustomDebugStringConvertibleP", "loadPersistentStores"]
+- !private ["s28CustomDebugStringConvertibleP", "localizedDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "makeKeyAndVisible"]
+- ["s28CustomDebugStringConvertibleP", "messaging"]
+- !private ["s28CustomDebugStringConvertibleP", "notification"]
+- !private ["s28CustomDebugStringConvertibleP", "object"]
+- !private ["s28CustomDebugStringConvertibleP", "persistentContainer"]
+- !private ["s28CustomDebugStringConvertibleP", "post"]
+- !private ["s28CustomDebugStringConvertibleP", "presentedViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "print"]
+- !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "registerForRemoteNotifications"]
+- !private ["s28CustomDebugStringConvertibleP", "registerUserNotificationSettings"]
+- !private ["s28CustomDebugStringConvertibleP", "request"]
+- !private ["s28CustomDebugStringConvertibleP", "requestAuthorization"]
+- !private ["s28CustomDebugStringConvertibleP", "rootViewController"]
+- !private ["s28CustomDebugStringConvertibleP", "save"]
+- !private ["s28CustomDebugStringConvertibleP", "saveContext"]
+- !private ["s28CustomDebugStringConvertibleP", "selectedIndex"]
+- !private ["s28CustomDebugStringConvertibleP", "settings"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "tabBar"]
+- !private ["s28CustomDebugStringConvertibleP", "userInfo"]
+- ["s28CustomDebugStringConvertibleP", "userNotificationCenter"]
+- !private ["s28CustomDebugStringConvertibleP", "viewContext"]
+- !private ["s28CustomDebugStringConvertibleP", "viewControllers"]
+- ["s28CustomDebugStringConvertibleP", "window"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "Name"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "object"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "FirebaseApp"]
+- !private ["s23CustomStringConvertibleP", "Firestore"]
+- !private ["s23CustomStringConvertibleP", "FunctionsErrorCode"]
+- !private ["s23CustomStringConvertibleP", "FunctionsErrorDetailsKey"]
+- !private ["s23CustomStringConvertibleP", "FunctionsErrorDomain"]
+- ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
+- !private ["s23CustomStringConvertibleP", "MainTabBarController"]
+- !private ["s23CustomStringConvertibleP", "Messaging"]
+- !private ["s23CustomStringConvertibleP", "NSPersistentContainer"]
+- !private ["s23CustomStringConvertibleP", "Name"]
+- !private ["s23CustomStringConvertibleP", "Notification"]
+- !private ["s23CustomStringConvertibleP", "NotificationCenter"]
+- !private ["s23CustomStringConvertibleP", "PrivateChatController"]
+- !private ["s23CustomStringConvertibleP", "UIBackgroundFetchResult"]
+- !private ["s23CustomStringConvertibleP", "UICollectionViewFlowLayout"]
+- !private ["s23CustomStringConvertibleP", "UIUserNotificationSettings"]
+- !private ["s23CustomStringConvertibleP", "UIWindow"]
+- !private ["s23CustomStringConvertibleP", "UNUserNotificationCenter"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "appData"]
+- ["s23CustomStringConvertibleP", "application"]
+- ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
+- ["s23CustomStringConvertibleP", "applicationDidEnterBackground"]
+- ["s23CustomStringConvertibleP", "applicationDidFinishLaunching"]
+- ["s23CustomStringConvertibleP", "applicationDidReceiveMemoryWarning"]
+- ["s23CustomStringConvertibleP", "applicationProtectedDataDidBecomeAvailable"]
+- ["s23CustomStringConvertibleP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["s23CustomStringConvertibleP", "applicationShouldRequestHealthAuthorization"]
+- ["s23CustomStringConvertibleP", "applicationSignificantTimeChange"]
+- ["s23CustomStringConvertibleP", "applicationWillEnterForeground"]
+- ["s23CustomStringConvertibleP", "applicationWillResignActive"]
+- ["s23CustomStringConvertibleP", "applicationWillTerminate"]
+- !private ["s23CustomStringConvertibleP", "areTimestampsInSnapshotsEnabled"]
+- !private ["s23CustomStringConvertibleP", "attempRegisterForNotifications"]
+- !private ["s23CustomStringConvertibleP", "badgeValue"]
+- !private ["s23CustomStringConvertibleP", "call"]
+- !private ["s23CustomStringConvertibleP", "code"]
+- !private ["s23CustomStringConvertibleP", "configure"]
+- !private ["s23CustomStringConvertibleP", "content"]
+- !private ["s23CustomStringConvertibleP", "conversitionId"]
+- !private ["s23CustomStringConvertibleP", "current"]
+- !private ["s23CustomStringConvertibleP", "default"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "dismiss"]
+- !private ["s23CustomStringConvertibleP", "domain"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "firestore"]
+- ["s23CustomStringConvertibleP", "functions"]
+- !private ["s23CustomStringConvertibleP", "gcmMessageIDKey"]
+- !private ["s23CustomStringConvertibleP", "hasChanges"]
+- !private ["s23CustomStringConvertibleP", "httpsCallable"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "items"]
+- !private ["s23CustomStringConvertibleP", "loadPersistentStores"]
+- !private ["s23CustomStringConvertibleP", "localizedDescription"]
+- !private ["s23CustomStringConvertibleP", "makeKeyAndVisible"]
+- ["s23CustomStringConvertibleP", "messaging"]
+- !private ["s23CustomStringConvertibleP", "notification"]
+- !private ["s23CustomStringConvertibleP", "object"]
+- !private ["s23CustomStringConvertibleP", "persistentContainer"]
+- !private ["s23CustomStringConvertibleP", "post"]
+- !private ["s23CustomStringConvertibleP", "presentedViewController"]
+- !private ["s23CustomStringConvertibleP", "print"]
+- !private ["s23CustomStringConvertibleP", "pushViewController"]
+- !private ["s23CustomStringConvertibleP", "registerForRemoteNotifications"]
+- !private ["s23CustomStringConvertibleP", "registerUserNotificationSettings"]
+- !private ["s23CustomStringConvertibleP", "request"]
+- !private ["s23CustomStringConvertibleP", "requestAuthorization"]
+- !private ["s23CustomStringConvertibleP", "rootViewController"]
+- !private ["s23CustomStringConvertibleP", "save"]
+- !private ["s23CustomStringConvertibleP", "saveContext"]
+- !private ["s23CustomStringConvertibleP", "selectedIndex"]
+- !private ["s23CustomStringConvertibleP", "settings"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "tabBar"]
+- !private ["s23CustomStringConvertibleP", "userInfo"]
+- ["s23CustomStringConvertibleP", "userNotificationCenter"]
+- !private ["s23CustomStringConvertibleP", "viewContext"]
+- !private ["s23CustomStringConvertibleP", "viewControllers"]
+- ["s23CustomStringConvertibleP", "window"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["Se", "subscript"]
+- !private ["SD", "subscript"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "FirebaseApp"]
+- !private ["SQ", "Firestore"]
+- !private ["SQ", "FunctionsErrorCode"]
+- !private ["SQ", "FunctionsErrorDetailsKey"]
+- !private ["SQ", "FunctionsErrorDomain"]
+- ["SQ", "LaunchOptionsKey"]
+- !private ["SQ", "MainTabBarController"]
+- !private ["SQ", "Messaging"]
+- !private ["SQ", "NSPersistentContainer"]
+- !private ["SQ", "Name"]
+- !private ["SQ", "Notification"]
+- !private ["SQ", "NotificationCenter"]
+- !private ["SQ", "PrivateChatController"]
+- !private ["SQ", "UIBackgroundFetchResult"]
+- !private ["SQ", "UICollectionViewFlowLayout"]
+- !private ["SQ", "UIUserNotificationSettings"]
+- !private ["SQ", "UIWindow"]
+- !private ["SQ", "UNUserNotificationCenter"]
+- ["SQ", ""]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "alert"]
+- !private ["SQ", "appData"]
+- ["SQ", "application"]
+- ["SQ", "applicationDidBecomeActive"]
+- ["SQ", "applicationDidEnterBackground"]
+- ["SQ", "applicationDidFinishLaunching"]
+- ["SQ", "applicationDidReceiveMemoryWarning"]
+- ["SQ", "applicationProtectedDataDidBecomeAvailable"]
+- ["SQ", "applicationProtectedDataWillBecomeUnavailable"]
+- ["SQ", "applicationShouldRequestHealthAuthorization"]
+- ["SQ", "applicationSignificantTimeChange"]
+- ["SQ", "applicationWillEnterForeground"]
+- ["SQ", "applicationWillResignActive"]
+- ["SQ", "applicationWillTerminate"]
+- !private ["SQ", "areTimestampsInSnapshotsEnabled"]
+- !private ["SQ", "attempRegisterForNotifications"]
+- !private ["SQ", "badge"]
+- !private ["SQ", "badgeValue"]
+- !private ["SQ", "call"]
+- !private ["SQ", "code"]
+- !private ["SQ", "configure"]
+- !private ["SQ", "content"]
+- !private ["SQ", "conversitionId"]
+- !private ["SQ", "current"]
+- !private ["SQ", "default"]
+- !private ["SQ", "delegate"]
+- !private ["SQ", "dismiss"]
+- !private ["SQ", "domain"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "firestore"]
+- ["SQ", "functions"]
+- !private ["SQ", "gcmMessageIDKey"]
+- !private ["SQ", "hasChanges"]
+- !private ["SQ", "httpsCallable"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- !private ["SQ", "items"]
+- !private ["SQ", "loadPersistentStores"]
+- !private ["SQ", "localizedDescription"]
+- !private ["SQ", "makeKeyAndVisible"]
+- ["SQ", "messaging"]
+- !private ["SQ", "newData"]
+- !private ["SQ", "notification"]
+- !private ["SQ", "object"]
+- !private ["SQ", "persistentContainer"]
+- !private ["SQ", "post"]
+- !private ["SQ", "presentedViewController"]
+- !private ["SQ", "print"]
+- !private ["SQ", "pushViewController"]
+- !private ["SQ", "registerForRemoteNotifications"]
+- !private ["SQ", "registerUserNotificationSettings"]
+- !private ["SQ", "request"]
+- !private ["SQ", "requestAuthorization"]
+- !private ["SQ", "rootViewController"]
+- !private ["SQ", "save"]
+- !private ["SQ", "saveContext"]
+- !private ["SQ", "selectedIndex"]
+- !private ["SQ", "settings"]
+- !private ["SQ", "sound"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "tabBar"]
+- !private ["SQ", "userInfo"]
+- ["SQ", "userNotificationCenter"]
+- !private ["SQ", "viewContext"]
+- !private ["SQ", "viewControllers"]
+- ["SQ", "window"]
+- !private ["s5ErrorP", "code"]
+- !private ["s5ErrorP", "domain"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["s5ErrorP", "userInfo"]
+- !private ["s25ExpressibleByArrayLiteralP", "alert"]
+- !private ["s25ExpressibleByArrayLiteralP", "badge"]
+- !private ["s25ExpressibleByArrayLiteralP", "object"]
+- !private ["s25ExpressibleByArrayLiteralP", "sound"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["So6FIRAppC", "configure"]
+- !private ["So12FIRFirestoreC", "firestore"]
+- !private ["So12FIRFirestoreC", "settings"]
+- !private ["So20FIRFirestoreSettingsC", "areTimestampsInSnapshotsEnabled"]
+- ["So12FIRFunctionsC", "functions"]
+- !private ["So12FIRFunctionsC", "httpsCallable"]
+- !private ["So21FIRFunctionsErrorCodeV", "init"]
+- !private ["So16FIRHTTPSCallableC", "call"]
+- !private ["SH", "FirebaseApp"]
+- !private ["SH", "Firestore"]
+- !private ["SH", "FunctionsErrorCode"]
+- !private ["SH", "FunctionsErrorDetailsKey"]
+- !private ["SH", "FunctionsErrorDomain"]
+- ["SH", "LaunchOptionsKey"]
+- !private ["SH", "MainTabBarController"]
+- !private ["SH", "Messaging"]
+- !private ["SH", "NSPersistentContainer"]
+- !private ["SH", "Name"]
+- !private ["SH", "Notification"]
+- !private ["SH", "NotificationCenter"]
+- !private ["SH", "PrivateChatController"]
+- !private ["SH", "UIBackgroundFetchResult"]
+- !private ["SH", "UICollectionViewFlowLayout"]
+- !private ["SH", "UIUserNotificationSettings"]
+- !private ["SH", "UIWindow"]
+- !private ["SH", "UNUserNotificationCenter"]
+- ["SH", ""]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "appData"]
+- ["SH", "application"]
+- ["SH", "applicationDidBecomeActive"]
+- ["SH", "applicationDidEnterBackground"]
+- ["SH", "applicationDidFinishLaunching"]
+- ["SH", "applicationDidReceiveMemoryWarning"]
+- ["SH", "applicationProtectedDataDidBecomeAvailable"]
+- ["SH", "applicationProtectedDataWillBecomeUnavailable"]
+- ["SH", "applicationShouldRequestHealthAuthorization"]
+- ["SH", "applicationSignificantTimeChange"]
+- ["SH", "applicationWillEnterForeground"]
+- ["SH", "applicationWillResignActive"]
+- ["SH", "applicationWillTerminate"]
+- !private ["SH", "areTimestampsInSnapshotsEnabled"]
+- !private ["SH", "attempRegisterForNotifications"]
+- !private ["SH", "badgeValue"]
+- !private ["SH", "call"]
+- !private ["SH", "code"]
+- !private ["SH", "configure"]
+- !private ["SH", "content"]
+- !private ["SH", "conversitionId"]
+- !private ["SH", "current"]
+- !private ["SH", "default"]
+- !private ["SH", "delegate"]
+- !private ["SH", "dismiss"]
+- !private ["SH", "domain"]
+- !private ["SH", "fatalError"]
+- !private ["SH", "firestore"]
+- ["SH", "functions"]
+- !private ["SH", "gcmMessageIDKey"]
+- !private ["SH", "hasChanges"]
+- !private ["SH", "httpsCallable"]
+- ["SH", "init"]
+- ["SH", "init"]
+- !private ["SH", "items"]
+- !private ["SH", "loadPersistentStores"]
+- !private ["SH", "localizedDescription"]
+- !private ["SH", "makeKeyAndVisible"]
+- ["SH", "messaging"]
+- !private ["SH", "newData"]
+- !private ["SH", "notification"]
+- !private ["SH", "object"]
+- !private ["SH", "persistentContainer"]
+- !private ["SH", "post"]
+- !private ["SH", "presentedViewController"]
+- !private ["SH", "print"]
+- !private ["SH", "pushViewController"]
+- !private ["SH", "registerForRemoteNotifications"]
+- !private ["SH", "registerUserNotificationSettings"]
+- !private ["SH", "request"]
+- !private ["SH", "requestAuthorization"]
+- !private ["SH", "rootViewController"]
+- !private ["SH", "save"]
+- !private ["SH", "saveContext"]
+- !private ["SH", "selectedIndex"]
+- !private ["SH", "settings"]
+- !private ["SH", "subscript"]
+- !private ["SH", "tabBar"]
+- !private ["SH", "userInfo"]
+- ["SH", "userNotificationCenter"]
+- !private ["SH", "viewContext"]
+- !private ["SH", "viewControllers"]
+- ["SH", "window"]
+- !private ["9mojo_test23LoginControllerDelegateP", "init"]
+- !private ["9mojo_test23LoginControllerDelegateP", "presentedViewController"]
+- !private ["9mojo_test23LoginControllerDelegateP", "selectedIndex"]
+- !private ["9mojo_test23LoginControllerDelegateP", "tabBar"]
+- !private ["9mojo_test23LoginControllerDelegateP", "viewControllers"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- !private ["9mojo_test20MainTabBarControllerC", "deinit"]
+- !private ["9mojo_test20MainTabBarControllerC", "init"]
+- !private ["9mojo_test20MainTabBarControllerC", "presentedViewController"]
+- !private ["9mojo_test20MainTabBarControllerC", "selectedIndex"]
+- !private ["9mojo_test20MainTabBarControllerC", "tabBar"]
+- !private ["9mojo_test20MainTabBarControllerC", "viewControllers"]
+- !private ["So12FIRMessagingC", "delegate"]
+- !private ["So12FIRMessagingC", "messaging"]
+- !private ["So20FIRMessagingDelegateP", "FirebaseApp"]
+- !private ["So20FIRMessagingDelegateP", "Firestore"]
+- !private ["So20FIRMessagingDelegateP", "FunctionsErrorCode"]
+- !private ["So20FIRMessagingDelegateP", "FunctionsErrorDetailsKey"]
+- !private ["So20FIRMessagingDelegateP", "FunctionsErrorDomain"]
+- !private ["So20FIRMessagingDelegateP", "MainTabBarController"]
+- !private ["So20FIRMessagingDelegateP", "Messaging"]
+- !private ["So20FIRMessagingDelegateP", "NSPersistentContainer"]
+- !private ["So20FIRMessagingDelegateP", "Notification"]
+- !private ["So20FIRMessagingDelegateP", "NotificationCenter"]
+- !private ["So20FIRMessagingDelegateP", "PrivateChatController"]
+- !private ["So20FIRMessagingDelegateP", "UIBackgroundFetchResult"]
+- !private ["So20FIRMessagingDelegateP", "UICollectionViewFlowLayout"]
+- !private ["So20FIRMessagingDelegateP", "UIUserNotificationSettings"]
+- !private ["So20FIRMessagingDelegateP", "UIWindow"]
+- !private ["So20FIRMessagingDelegateP", "UNUserNotificationCenter"]
+- ["So20FIRMessagingDelegateP", ""]
+- ["So20FIRMessagingDelegateP", "application"]
+- ["So20FIRMessagingDelegateP", "applicationDidBecomeActive"]
+- ["So20FIRMessagingDelegateP", "applicationDidEnterBackground"]
+- ["So20FIRMessagingDelegateP", "applicationDidFinishLaunching"]
+- ["So20FIRMessagingDelegateP", "applicationDidReceiveMemoryWarning"]
+- ["So20FIRMessagingDelegateP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So20FIRMessagingDelegateP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So20FIRMessagingDelegateP", "applicationShouldRequestHealthAuthorization"]
+- ["So20FIRMessagingDelegateP", "applicationSignificantTimeChange"]
+- ["So20FIRMessagingDelegateP", "applicationWillEnterForeground"]
+- ["So20FIRMessagingDelegateP", "applicationWillResignActive"]
+- ["So20FIRMessagingDelegateP", "applicationWillTerminate"]
+- !private ["So20FIRMessagingDelegateP", "attempRegisterForNotifications"]
+- !private ["So20FIRMessagingDelegateP", "fatalError"]
+- !private ["So20FIRMessagingDelegateP", "functions"]
+- !private ["So20FIRMessagingDelegateP", "gcmMessageIDKey"]
+- ["So20FIRMessagingDelegateP", "messaging"]
+- !private ["So20FIRMessagingDelegateP", "persistentContainer"]
+- !private ["So20FIRMessagingDelegateP", "print"]
+- !private ["So20FIRMessagingDelegateP", "saveContext"]
+- ["So20FIRMessagingDelegateP", "userNotificationCenter"]
+- ["So20FIRMessagingDelegateP", "window"]
+- !private ["So25FIRMessagingRemoteMessageC", "appData"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["SM", "subscript"]
+- !private ["So7NSArrayC", "object"]
+- !private ["So8NSCodingP", "badgeValue"]
+- !private ["So8NSCodingP", "code"]
+- !private ["So8NSCodingP", "content"]
+- !private ["So8NSCodingP", "conversitionId"]
+- !private ["So8NSCodingP", "dismiss"]
+- !private ["So8NSCodingP", "domain"]
+- !private ["So8NSCodingP", "hasChanges"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "items"]
+- !private ["So8NSCodingP", "localizedDescription"]
+- !private ["So8NSCodingP", "makeKeyAndVisible"]
+- !private ["So8NSCodingP", "notification"]
+- !private ["So8NSCodingP", "object"]
+- !private ["So8NSCodingP", "presentedViewController"]
+- !private ["So8NSCodingP", "pushViewController"]
+- !private ["So8NSCodingP", "request"]
+- !private ["So8NSCodingP", "rootViewController"]
+- !private ["So8NSCodingP", "save"]
+- !private ["So8NSCodingP", "selectedIndex"]
+- !private ["So8NSCodingP", "tabBar"]
+- !private ["So8NSCodingP", "userInfo"]
+- !private ["So8NSCodingP", "viewControllers"]
+- !private ["So9NSCopyingP", "areTimestampsInSnapshotsEnabled"]
+- !private ["So9NSCopyingP", "code"]
+- !private ["So9NSCopyingP", "content"]
+- !private ["So9NSCopyingP", "domain"]
+- !private ["So9NSCopyingP", "localizedDescription"]
+- !private ["So9NSCopyingP", "notification"]
+- !private ["So9NSCopyingP", "object"]
+- !private ["So9NSCopyingP", "request"]
+- !private ["So9NSCopyingP", "userInfo"]
+- !private ["So7NSErrorC", "code"]
+- !private ["So7NSErrorC", "domain"]
+- !private ["So7NSErrorC", "localizedDescription"]
+- !private ["So7NSErrorC", "userInfo"]
+- !private ["So26NSExtensionRequestHandlingP", "conversitionId"]
+- !private ["So26NSExtensionRequestHandlingP", "dismiss"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "presentedViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
+- !private ["So26NSExtensionRequestHandlingP", "selectedIndex"]
+- !private ["So26NSExtensionRequestHandlingP", "tabBar"]
+- !private ["So26NSExtensionRequestHandlingP", "viewControllers"]
+- !private ["So17NSFastEnumerationP", "object"]
+- !private ["So9NSLockingP", "hasChanges"]
+- !private ["So9NSLockingP", "save"]
+- !private ["So22NSManagedObjectContextC", "hasChanges"]
+- !private ["So22NSManagedObjectContextC", "save"]
+- !private ["So16NSMutableCopyingP", "object"]
+- !private ["So16NSMutableCopyingP", "userInfo"]
+- ["So8NSObjectC", "AnyHashable"]
+- ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "Data"]
+- ["So8NSObjectC", "Error"]
+- !private ["So8NSObjectC", "FirebaseApp"]
+- !private ["So8NSObjectC", "Firestore"]
+- !private ["So8NSObjectC", "FunctionsErrorCode"]
+- !private ["So8NSObjectC", "FunctionsErrorDetailsKey"]
+- !private ["So8NSObjectC", "FunctionsErrorDomain"]
+- ["So8NSObjectC", "LaunchOptionsKey"]
+- !private ["So8NSObjectC", "MainTabBarController"]
+- ["So8NSObjectC", "Messaging"]
+- ["So8NSObjectC", "MessagingRemoteMessage"]
+- !private ["So8NSObjectC", "NSArray"]
+- !private ["So8NSObjectC", "NSError"]
+- ["So8NSObjectC", "NSPersistentContainer"]
+- !private ["So8NSObjectC", "Notification"]
+- !private ["So8NSObjectC", "NotificationCenter"]
+- !private ["So8NSObjectC", "PrivateChatController"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "UIApplication"]
+- ["So8NSObjectC", "UIBackgroundFetchResult"]
+- !private ["So8NSObjectC", "UICollectionViewFlowLayout"]
+- !private ["So8NSObjectC", "UINavigationController"]
+- !private ["So8NSObjectC", "UITabBarItem"]
+- !private ["So8NSObjectC", "UIUserNotificationSettings"]
+- ["So8NSObjectC", "UIWindow"]
+- !private ["So8NSObjectC", "UNAuthorizationOptions"]
+- ["So8NSObjectC", "UNNotification"]
+- ["So8NSObjectC", "UNNotificationPresentationOptions"]
+- ["So8NSObjectC", "UNNotificationResponse"]
+- ["So8NSObjectC", "UNUserNotificationCenter"]
+- ["So8NSObjectC", "Void"]
+- !private ["So8NSObjectC", "appData"]
+- ["So8NSObjectC", "application"]
+- ["So8NSObjectC", "applicationDidBecomeActive"]
+- ["So8NSObjectC", "applicationDidEnterBackground"]
+- ["So8NSObjectC", "applicationDidFinishLaunching"]
+- ["So8NSObjectC", "applicationDidReceiveMemoryWarning"]
+- ["So8NSObjectC", "applicationProtectedDataDidBecomeAvailable"]
+- ["So8NSObjectC", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So8NSObjectC", "applicationShouldRequestHealthAuthorization"]
+- ["So8NSObjectC", "applicationSignificantTimeChange"]
+- ["So8NSObjectC", "applicationWillEnterForeground"]
+- ["So8NSObjectC", "applicationWillResignActive"]
+- ["So8NSObjectC", "applicationWillTerminate"]
+- !private ["So8NSObjectC", "areTimestampsInSnapshotsEnabled"]
+- ["So8NSObjectC", "attempRegisterForNotifications"]
+- !private ["So8NSObjectC", "badgeValue"]
+- !private ["So8NSObjectC", "call"]
+- !private ["So8NSObjectC", "code"]
+- !private ["So8NSObjectC", "configure"]
+- !private ["So8NSObjectC", "content"]
+- !private ["So8NSObjectC", "conversitionId"]
+- !private ["So8NSObjectC", "current"]
+- !private ["So8NSObjectC", "default"]
+- !private ["So8NSObjectC", "delegate"]
+- !private ["So8NSObjectC", "dismiss"]
+- !private ["So8NSObjectC", "domain"]
+- !private ["So8NSObjectC", "fatalError"]
+- !private ["So8NSObjectC", "firestore"]
+- ["So8NSObjectC", "functions"]
+- ["So8NSObjectC", "gcmMessageIDKey"]
+- !private ["So8NSObjectC", "hasChanges"]
+- !private ["So8NSObjectC", "httpsCallable"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "items"]
+- !private ["So8NSObjectC", "loadPersistentStores"]
+- !private ["So8NSObjectC", "localizedDescription"]
+- !private ["So8NSObjectC", "makeKeyAndVisible"]
+- ["So8NSObjectC", "messaging"]
+- !private ["So8NSObjectC", "notification"]
+- !private ["So8NSObjectC", "object"]
+- ["So8NSObjectC", "persistentContainer"]
+- ["So8NSObjectC", "persistentContainer.storage"]
+- !private ["So8NSObjectC", "post"]
+- !private ["So8NSObjectC", "presentedViewController"]
+- !private ["So8NSObjectC", "print"]
+- !private ["So8NSObjectC", "pushViewController"]
+- !private ["So8NSObjectC", "registerForRemoteNotifications"]
+- !private ["So8NSObjectC", "registerUserNotificationSettings"]
+- !private ["So8NSObjectC", "request"]
+- !private ["So8NSObjectC", "requestAuthorization"]
+- !private ["So8NSObjectC", "rootViewController"]
+- !private ["So8NSObjectC", "save"]
+- ["So8NSObjectC", "saveContext"]
+- !private ["So8NSObjectC", "selectedIndex"]
+- !private ["So8NSObjectC", "settings"]
+- !private ["So8NSObjectC", "tabBar"]
+- !private ["So8NSObjectC", "userInfo"]
+- ["So8NSObjectC", "userNotificationCenter"]
+- !private ["So8NSObjectC", "viewContext"]
+- !private ["So8NSObjectC", "viewControllers"]
+- ["So8NSObjectC", "window"]
+- !private ["So8NSObjectP", "FirebaseApp"]
+- !private ["So8NSObjectP", "Firestore"]
+- !private ["So8NSObjectP", "FunctionsErrorCode"]
+- !private ["So8NSObjectP", "FunctionsErrorDetailsKey"]
+- !private ["So8NSObjectP", "FunctionsErrorDomain"]
+- ["So8NSObjectP", "LaunchOptionsKey"]
+- !private ["So8NSObjectP", "MainTabBarController"]
+- !private ["So8NSObjectP", "Messaging"]
+- !private ["So8NSObjectP", "NSPersistentContainer"]
+- !private ["So8NSObjectP", "Notification"]
+- !private ["So8NSObjectP", "NotificationCenter"]
+- !private ["So8NSObjectP", "PrivateChatController"]
+- !private ["So8NSObjectP", "UIBackgroundFetchResult"]
+- !private ["So8NSObjectP", "UICollectionViewFlowLayout"]
+- !private ["So8NSObjectP", "UIUserNotificationSettings"]
+- !private ["So8NSObjectP", "UIWindow"]
+- !private ["So8NSObjectP", "UNUserNotificationCenter"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "appData"]
+- ["So8NSObjectP", "application"]
+- ["So8NSObjectP", "applicationDidBecomeActive"]
+- ["So8NSObjectP", "applicationDidEnterBackground"]
+- ["So8NSObjectP", "applicationDidFinishLaunching"]
+- ["So8NSObjectP", "applicationDidReceiveMemoryWarning"]
+- ["So8NSObjectP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So8NSObjectP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So8NSObjectP", "applicationShouldRequestHealthAuthorization"]
+- ["So8NSObjectP", "applicationSignificantTimeChange"]
+- ["So8NSObjectP", "applicationWillEnterForeground"]
+- ["So8NSObjectP", "applicationWillResignActive"]
+- ["So8NSObjectP", "applicationWillTerminate"]
+- !private ["So8NSObjectP", "areTimestampsInSnapshotsEnabled"]
+- !private ["So8NSObjectP", "attempRegisterForNotifications"]
+- !private ["So8NSObjectP", "badgeValue"]
+- !private ["So8NSObjectP", "call"]
+- !private ["So8NSObjectP", "code"]
+- !private ["So8NSObjectP", "configure"]
+- !private ["So8NSObjectP", "content"]
+- !private ["So8NSObjectP", "conversitionId"]
+- !private ["So8NSObjectP", "current"]
+- !private ["So8NSObjectP", "default"]
+- !private ["So8NSObjectP", "delegate"]
+- !private ["So8NSObjectP", "dismiss"]
+- !private ["So8NSObjectP", "domain"]
+- !private ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "firestore"]
+- ["So8NSObjectP", "functions"]
+- !private ["So8NSObjectP", "gcmMessageIDKey"]
+- !private ["So8NSObjectP", "hasChanges"]
+- !private ["So8NSObjectP", "httpsCallable"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "items"]
+- !private ["So8NSObjectP", "loadPersistentStores"]
+- !private ["So8NSObjectP", "localizedDescription"]
+- !private ["So8NSObjectP", "makeKeyAndVisible"]
+- ["So8NSObjectP", "messaging"]
+- !private ["So8NSObjectP", "notification"]
+- !private ["So8NSObjectP", "object"]
+- !private ["So8NSObjectP", "persistentContainer"]
+- !private ["So8NSObjectP", "post"]
+- !private ["So8NSObjectP", "presentedViewController"]
+- !private ["So8NSObjectP", "print"]
+- !private ["So8NSObjectP", "pushViewController"]
+- !private ["So8NSObjectP", "registerForRemoteNotifications"]
+- !private ["So8NSObjectP", "registerUserNotificationSettings"]
+- !private ["So8NSObjectP", "request"]
+- !private ["So8NSObjectP", "requestAuthorization"]
+- !private ["So8NSObjectP", "rootViewController"]
+- !private ["So8NSObjectP", "save"]
+- !private ["So8NSObjectP", "saveContext"]
+- !private ["So8NSObjectP", "selectedIndex"]
+- !private ["So8NSObjectP", "settings"]
+- !private ["So8NSObjectP", "tabBar"]
+- !private ["So8NSObjectP", "userInfo"]
+- ["So8NSObjectP", "userNotificationCenter"]
+- !private ["So8NSObjectP", "viewContext"]
+- !private ["So8NSObjectP", "viewControllers"]
+- ["So8NSObjectP", "window"]
+- !private ["So21NSPersistentContainerC", "init"]
+- !private ["So21NSPersistentContainerC", "loadPersistentStores"]
+- !private ["So21NSPersistentContainerC", "viewContext"]
+- !private ["So14NSSecureCodingP", "code"]
+- !private ["So14NSSecureCodingP", "content"]
+- !private ["So14NSSecureCodingP", "domain"]
+- !private ["So14NSSecureCodingP", "localizedDescription"]
+- !private ["So14NSSecureCodingP", "notification"]
+- !private ["So14NSSecureCodingP", "object"]
+- !private ["So14NSSecureCodingP", "request"]
+- !private ["So14NSSecureCodingP", "userInfo"]
+- !private ["So18NSNotificationNamea", "init"]
+- !private ["10Foundation12NotificationV", "Name"]
+- !private ["So20NSNotificationCenterC", "default"]
+- !private ["So20NSNotificationCenterC", "post"]
+- !private ["s9OptionSetP", "alert"]
+- !private ["s9OptionSetP", "badge"]
+- !private ["s9OptionSetP", "sound"]
+- !private ["9mojo_test21PrivateChatControllerC", "conversitionId"]
+- !private ["9mojo_test21PrivateChatControllerC", "deinit"]
+- !private ["9mojo_test21PrivateChatControllerC", "init"]
+- !private ["Sk", "subscript"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "alert"]
+- !private ["SY", "badge"]
+- !private ["SY", "init"]
+- !private ["SY", "newData"]
+- !private ["SY", "sound"]
+- !private ["10Foundation20ReferenceConvertibleP", "Name"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["ST", "object"]
+- !private ["ST", "subscript"]
+- !private ["s10SetAlgebraP", "alert"]
+- !private ["s10SetAlgebraP", "badge"]
+- !private ["s10SetAlgebraP", "sound"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "badgeValue"]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "items"]
+- !private ["So29UIAccessibilityIdentificationP", "makeKeyAndVisible"]
+- !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
+- !private ["So12UIAppearanceP", "badgeValue"]
+- !private ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "items"]
+- !private ["So12UIAppearanceP", "makeKeyAndVisible"]
+- !private ["So12UIAppearanceP", "rootViewController"]
+- !private ["So21UIAppearanceContainerP", "conversitionId"]
+- !private ["So21UIAppearanceContainerP", "dismiss"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "items"]
+- !private ["So21UIAppearanceContainerP", "makeKeyAndVisible"]
+- !private ["So21UIAppearanceContainerP", "presentedViewController"]
+- !private ["So21UIAppearanceContainerP", "pushViewController"]
+- !private ["So21UIAppearanceContainerP", "rootViewController"]
+- !private ["So21UIAppearanceContainerP", "selectedIndex"]
+- !private ["So21UIAppearanceContainerP", "tabBar"]
+- !private ["So21UIAppearanceContainerP", "viewControllers"]
+- ["So13UIApplicationC", "LaunchOptionsKey"]
+- !private ["So13UIApplicationC", "registerForRemoteNotifications"]
+- !private ["So13UIApplicationC", "registerUserNotificationSettings"]
+- !private ["So21UIApplicationDelegateP", "FirebaseApp"]
+- !private ["So21UIApplicationDelegateP", "Firestore"]
+- !private ["So21UIApplicationDelegateP", "FunctionsErrorCode"]
+- !private ["So21UIApplicationDelegateP", "FunctionsErrorDetailsKey"]
+- !private ["So21UIApplicationDelegateP", "FunctionsErrorDomain"]
+- !private ["So21UIApplicationDelegateP", "MainTabBarController"]
+- !private ["So21UIApplicationDelegateP", "Messaging"]
+- !private ["So21UIApplicationDelegateP", "NSPersistentContainer"]
+- !private ["So21UIApplicationDelegateP", "Notification"]
+- !private ["So21UIApplicationDelegateP", "NotificationCenter"]
+- !private ["So21UIApplicationDelegateP", "PrivateChatController"]
+- !private ["So21UIApplicationDelegateP", "UIBackgroundFetchResult"]
+- !private ["So21UIApplicationDelegateP", "UICollectionViewFlowLayout"]
+- !private ["So21UIApplicationDelegateP", "UIUserNotificationSettings"]
+- !private ["So21UIApplicationDelegateP", "UIWindow"]
+- !private ["So21UIApplicationDelegateP", "UNUserNotificationCenter"]
+- ["So21UIApplicationDelegateP", ""]
+- ["So21UIApplicationDelegateP", "application"]
+- ["So21UIApplicationDelegateP", "applicationDidBecomeActive"]
+- ["So21UIApplicationDelegateP", "applicationDidEnterBackground"]
+- ["So21UIApplicationDelegateP", "applicationDidFinishLaunching"]
+- ["So21UIApplicationDelegateP", "applicationDidReceiveMemoryWarning"]
+- ["So21UIApplicationDelegateP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So21UIApplicationDelegateP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So21UIApplicationDelegateP", "applicationShouldRequestHealthAuthorization"]
+- ["So21UIApplicationDelegateP", "applicationSignificantTimeChange"]
+- ["So21UIApplicationDelegateP", "applicationWillEnterForeground"]
+- ["So21UIApplicationDelegateP", "applicationWillResignActive"]
+- ["So21UIApplicationDelegateP", "applicationWillTerminate"]
+- !private ["So21UIApplicationDelegateP", "attempRegisterForNotifications"]
+- !private ["So21UIApplicationDelegateP", "fatalError"]
+- !private ["So21UIApplicationDelegateP", "functions"]
+- !private ["So21UIApplicationDelegateP", "gcmMessageIDKey"]
+- ["So21UIApplicationDelegateP", "messaging"]
+- !private ["So21UIApplicationDelegateP", "persistentContainer"]
+- !private ["So21UIApplicationDelegateP", "print"]
+- !private ["So21UIApplicationDelegateP", "saveContext"]
+- ["So21UIApplicationDelegateP", "userNotificationCenter"]
+- ["So21UIApplicationDelegateP", "window"]
+- !private ["So23UIBackgroundFetchResultV", "newData"]
+- !private ["So9UIBarItemC", "badgeValue"]
+- !private ["So26UICollectionViewControllerC", "conversitionId"]
+- !private ["So26UICollectionViewControllerC", "init"]
+- !private ["So26UICollectionViewDataSourceP", "conversitionId"]
+- !private ["So26UICollectionViewDataSourceP", "init"]
+- !private ["So24UICollectionViewDelegateP", "conversitionId"]
+- !private ["So24UICollectionViewDelegateP", "init"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "conversitionId"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "init"]
+- !private ["So26UICollectionViewFlowLayoutC", "init"]
+- !private ["So22UICollectionViewLayoutC", "init"]
+- !private ["So18UIContentContainerP", "conversitionId"]
+- !private ["So18UIContentContainerP", "dismiss"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "presentedViewController"]
+- !private ["So18UIContentContainerP", "pushViewController"]
+- !private ["So18UIContentContainerP", "selectedIndex"]
+- !private ["So18UIContentContainerP", "tabBar"]
+- !private ["So18UIContentContainerP", "viewControllers"]
+- !private ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "items"]
+- !private ["So17UICoordinateSpaceP", "makeKeyAndVisible"]
+- !private ["So17UICoordinateSpaceP", "rootViewController"]
+- !private ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "items"]
+- !private ["So13UIDynamicItemP", "makeKeyAndVisible"]
+- !private ["So13UIDynamicItemP", "rootViewController"]
+- !private ["So18UIFocusEnvironmentP", "conversitionId"]
+- !private ["So18UIFocusEnvironmentP", "dismiss"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "items"]
+- !private ["So18UIFocusEnvironmentP", "makeKeyAndVisible"]
+- !private ["So18UIFocusEnvironmentP", "presentedViewController"]
+- !private ["So18UIFocusEnvironmentP", "pushViewController"]
+- !private ["So18UIFocusEnvironmentP", "rootViewController"]
+- !private ["So18UIFocusEnvironmentP", "selectedIndex"]
+- !private ["So18UIFocusEnvironmentP", "tabBar"]
+- !private ["So18UIFocusEnvironmentP", "viewControllers"]
+- !private ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "items"]
+- !private ["So11UIFocusItemP", "makeKeyAndVisible"]
+- !private ["So11UIFocusItemP", "rootViewController"]
+- !private ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "items"]
+- !private ["So20UIFocusItemContainerP", "makeKeyAndVisible"]
+- !private ["So20UIFocusItemContainerP", "rootViewController"]
+- !private ["So22UINavigationControllerC", "pushViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "FirebaseApp"]
+- !private ["So30UIPasteConfigurationSupportingP", "Firestore"]
+- !private ["So30UIPasteConfigurationSupportingP", "FunctionsErrorCode"]
+- !private ["So30UIPasteConfigurationSupportingP", "FunctionsErrorDetailsKey"]
+- !private ["So30UIPasteConfigurationSupportingP", "FunctionsErrorDomain"]
+- ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
+- !private ["So30UIPasteConfigurationSupportingP", "MainTabBarController"]
+- !private ["So30UIPasteConfigurationSupportingP", "Messaging"]
+- !private ["So30UIPasteConfigurationSupportingP", "NSPersistentContainer"]
+- !private ["So30UIPasteConfigurationSupportingP", "Notification"]
+- !private ["So30UIPasteConfigurationSupportingP", "NotificationCenter"]
+- !private ["So30UIPasteConfigurationSupportingP", "PrivateChatController"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIBackgroundFetchResult"]
+- !private ["So30UIPasteConfigurationSupportingP", "UICollectionViewFlowLayout"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIUserNotificationSettings"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIWindow"]
+- !private ["So30UIPasteConfigurationSupportingP", "UNUserNotificationCenter"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So30UIPasteConfigurationSupportingP", "application"]
+- ["So30UIPasteConfigurationSupportingP", "applicationDidBecomeActive"]
+- ["So30UIPasteConfigurationSupportingP", "applicationDidEnterBackground"]
+- ["So30UIPasteConfigurationSupportingP", "applicationDidFinishLaunching"]
+- ["So30UIPasteConfigurationSupportingP", "applicationDidReceiveMemoryWarning"]
+- ["So30UIPasteConfigurationSupportingP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So30UIPasteConfigurationSupportingP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So30UIPasteConfigurationSupportingP", "applicationShouldRequestHealthAuthorization"]
+- ["So30UIPasteConfigurationSupportingP", "applicationSignificantTimeChange"]
+- ["So30UIPasteConfigurationSupportingP", "applicationWillEnterForeground"]
+- ["So30UIPasteConfigurationSupportingP", "applicationWillResignActive"]
+- ["So30UIPasteConfigurationSupportingP", "applicationWillTerminate"]
+- !private ["So30UIPasteConfigurationSupportingP", "attempRegisterForNotifications"]
+- !private ["So30UIPasteConfigurationSupportingP", "conversitionId"]
+- !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
+- !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- !private ["So30UIPasteConfigurationSupportingP", "functions"]
+- !private ["So30UIPasteConfigurationSupportingP", "gcmMessageIDKey"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "items"]
+- !private ["So30UIPasteConfigurationSupportingP", "makeKeyAndVisible"]
+- ["So30UIPasteConfigurationSupportingP", "messaging"]
+- !private ["So30UIPasteConfigurationSupportingP", "persistentContainer"]
+- !private ["So30UIPasteConfigurationSupportingP", "presentedViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "print"]
+- !private ["So30UIPasteConfigurationSupportingP", "pushViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "registerForRemoteNotifications"]
+- !private ["So30UIPasteConfigurationSupportingP", "registerUserNotificationSettings"]
+- !private ["So30UIPasteConfigurationSupportingP", "rootViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "saveContext"]
+- !private ["So30UIPasteConfigurationSupportingP", "selectedIndex"]
+- !private ["So30UIPasteConfigurationSupportingP", "tabBar"]
+- ["So30UIPasteConfigurationSupportingP", "userNotificationCenter"]
+- !private ["So30UIPasteConfigurationSupportingP", "viewControllers"]
+- ["So30UIPasteConfigurationSupportingP", "window"]
+- ["So11UIResponderC", "AnyHashable"]
+- ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "Data"]
+- ["So11UIResponderC", "Error"]
+- !private ["So11UIResponderC", "FirebaseApp"]
+- !private ["So11UIResponderC", "Firestore"]
+- !private ["So11UIResponderC", "FunctionsErrorCode"]
+- !private ["So11UIResponderC", "FunctionsErrorDetailsKey"]
+- !private ["So11UIResponderC", "FunctionsErrorDomain"]
+- ["So11UIResponderC", "LaunchOptionsKey"]
+- !private ["So11UIResponderC", "MainTabBarController"]
+- ["So11UIResponderC", "Messaging"]
+- ["So11UIResponderC", "MessagingRemoteMessage"]
+- !private ["So11UIResponderC", "NSArray"]
+- !private ["So11UIResponderC", "NSError"]
+- ["So11UIResponderC", "NSPersistentContainer"]
+- !private ["So11UIResponderC", "Notification"]
+- !private ["So11UIResponderC", "NotificationCenter"]
+- !private ["So11UIResponderC", "PrivateChatController"]
+- ["So11UIResponderC", "String"]
+- ["So11UIResponderC", "UIApplication"]
+- ["So11UIResponderC", "UIBackgroundFetchResult"]
+- !private ["So11UIResponderC", "UICollectionViewFlowLayout"]
+- !private ["So11UIResponderC", "UINavigationController"]
+- !private ["So11UIResponderC", "UITabBarItem"]
+- !private ["So11UIResponderC", "UIUserNotificationSettings"]
+- ["So11UIResponderC", "UIWindow"]
+- !private ["So11UIResponderC", "UNAuthorizationOptions"]
+- ["So11UIResponderC", "UNNotification"]
+- ["So11UIResponderC", "UNNotificationPresentationOptions"]
+- ["So11UIResponderC", "UNNotificationResponse"]
+- ["So11UIResponderC", "UNUserNotificationCenter"]
+- ["So11UIResponderC", "Void"]
+- ["So11UIResponderC", ""]
+- ["So11UIResponderC", "application"]
+- ["So11UIResponderC", "applicationDidBecomeActive"]
+- ["So11UIResponderC", "applicationDidEnterBackground"]
+- ["So11UIResponderC", "applicationDidFinishLaunching"]
+- ["So11UIResponderC", "applicationDidReceiveMemoryWarning"]
+- ["So11UIResponderC", "applicationProtectedDataDidBecomeAvailable"]
+- ["So11UIResponderC", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So11UIResponderC", "applicationShouldRequestHealthAuthorization"]
+- ["So11UIResponderC", "applicationSignificantTimeChange"]
+- ["So11UIResponderC", "applicationWillEnterForeground"]
+- ["So11UIResponderC", "applicationWillResignActive"]
+- ["So11UIResponderC", "applicationWillTerminate"]
+- ["So11UIResponderC", "attempRegisterForNotifications"]
+- !private ["So11UIResponderC", "conversitionId"]
+- !private ["So11UIResponderC", "dismiss"]
+- !private ["So11UIResponderC", "fatalError"]
+- !private ["So11UIResponderC", "functions"]
+- ["So11UIResponderC", "gcmMessageIDKey"]
+- ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "items"]
+- !private ["So11UIResponderC", "makeKeyAndVisible"]
+- ["So11UIResponderC", "messaging"]
+- ["So11UIResponderC", "persistentContainer"]
+- ["So11UIResponderC", "persistentContainer.storage"]
+- !private ["So11UIResponderC", "presentedViewController"]
+- !private ["So11UIResponderC", "print"]
+- !private ["So11UIResponderC", "pushViewController"]
+- !private ["So11UIResponderC", "registerForRemoteNotifications"]
+- !private ["So11UIResponderC", "registerUserNotificationSettings"]
+- !private ["So11UIResponderC", "rootViewController"]
+- ["So11UIResponderC", "saveContext"]
+- !private ["So11UIResponderC", "selectedIndex"]
+- !private ["So11UIResponderC", "tabBar"]
+- ["So11UIResponderC", "userNotificationCenter"]
+- !private ["So11UIResponderC", "viewControllers"]
+- ["So11UIResponderC", "window"]
+- !private ["So30UIResponderStandardEditActionsP", "FirebaseApp"]
+- !private ["So30UIResponderStandardEditActionsP", "Firestore"]
+- !private ["So30UIResponderStandardEditActionsP", "FunctionsErrorCode"]
+- !private ["So30UIResponderStandardEditActionsP", "FunctionsErrorDetailsKey"]
+- !private ["So30UIResponderStandardEditActionsP", "FunctionsErrorDomain"]
+- ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
+- !private ["So30UIResponderStandardEditActionsP", "MainTabBarController"]
+- !private ["So30UIResponderStandardEditActionsP", "Messaging"]
+- !private ["So30UIResponderStandardEditActionsP", "NSPersistentContainer"]
+- !private ["So30UIResponderStandardEditActionsP", "Notification"]
+- !private ["So30UIResponderStandardEditActionsP", "NotificationCenter"]
+- !private ["So30UIResponderStandardEditActionsP", "PrivateChatController"]
+- !private ["So30UIResponderStandardEditActionsP", "UIBackgroundFetchResult"]
+- !private ["So30UIResponderStandardEditActionsP", "UICollectionViewFlowLayout"]
+- !private ["So30UIResponderStandardEditActionsP", "UIUserNotificationSettings"]
+- !private ["So30UIResponderStandardEditActionsP", "UIWindow"]
+- !private ["So30UIResponderStandardEditActionsP", "UNUserNotificationCenter"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So30UIResponderStandardEditActionsP", "application"]
+- ["So30UIResponderStandardEditActionsP", "applicationDidBecomeActive"]
+- ["So30UIResponderStandardEditActionsP", "applicationDidEnterBackground"]
+- ["So30UIResponderStandardEditActionsP", "applicationDidFinishLaunching"]
+- ["So30UIResponderStandardEditActionsP", "applicationDidReceiveMemoryWarning"]
+- ["So30UIResponderStandardEditActionsP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So30UIResponderStandardEditActionsP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So30UIResponderStandardEditActionsP", "applicationShouldRequestHealthAuthorization"]
+- ["So30UIResponderStandardEditActionsP", "applicationSignificantTimeChange"]
+- ["So30UIResponderStandardEditActionsP", "applicationWillEnterForeground"]
+- ["So30UIResponderStandardEditActionsP", "applicationWillResignActive"]
+- ["So30UIResponderStandardEditActionsP", "applicationWillTerminate"]
+- !private ["So30UIResponderStandardEditActionsP", "attempRegisterForNotifications"]
+- !private ["So30UIResponderStandardEditActionsP", "conversitionId"]
+- !private ["So30UIResponderStandardEditActionsP", "dismiss"]
+- !private ["So30UIResponderStandardEditActionsP", "fatalError"]
+- !private ["So30UIResponderStandardEditActionsP", "functions"]
+- !private ["So30UIResponderStandardEditActionsP", "gcmMessageIDKey"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "items"]
+- !private ["So30UIResponderStandardEditActionsP", "makeKeyAndVisible"]
+- ["So30UIResponderStandardEditActionsP", "messaging"]
+- !private ["So30UIResponderStandardEditActionsP", "persistentContainer"]
+- !private ["So30UIResponderStandardEditActionsP", "presentedViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "print"]
+- !private ["So30UIResponderStandardEditActionsP", "pushViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "registerForRemoteNotifications"]
+- !private ["So30UIResponderStandardEditActionsP", "registerUserNotificationSettings"]
+- !private ["So30UIResponderStandardEditActionsP", "rootViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "saveContext"]
+- !private ["So30UIResponderStandardEditActionsP", "selectedIndex"]
+- !private ["So30UIResponderStandardEditActionsP", "tabBar"]
+- ["So30UIResponderStandardEditActionsP", "userNotificationCenter"]
+- !private ["So30UIResponderStandardEditActionsP", "viewControllers"]
+- ["So30UIResponderStandardEditActionsP", "window"]
+- !private ["So20UIScrollViewDelegateP", "conversitionId"]
+- !private ["So20UIScrollViewDelegateP", "init"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "badgeValue"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "items"]
+- !private ["So16UIStateRestoringP", "conversitionId"]
+- !private ["So16UIStateRestoringP", "dismiss"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "presentedViewController"]
+- !private ["So16UIStateRestoringP", "pushViewController"]
+- !private ["So16UIStateRestoringP", "selectedIndex"]
+- !private ["So16UIStateRestoringP", "tabBar"]
+- !private ["So16UIStateRestoringP", "viewControllers"]
+- !private ["So8UITabBarC", "items"]
+- !private ["So18UITabBarControllerC", "init"]
+- !private ["So18UITabBarControllerC", "presentedViewController"]
+- !private ["So18UITabBarControllerC", "selectedIndex"]
+- !private ["So18UITabBarControllerC", "tabBar"]
+- !private ["So18UITabBarControllerC", "viewControllers"]
+- !private ["So16UITabBarDelegateP", "init"]
+- !private ["So16UITabBarDelegateP", "presentedViewController"]
+- !private ["So16UITabBarDelegateP", "selectedIndex"]
+- !private ["So16UITabBarDelegateP", "tabBar"]
+- !private ["So16UITabBarDelegateP", "viewControllers"]
+- !private ["So12UITabBarItemC", "badgeValue"]
+- !private ["So19UITextFieldDelegateP", "conversitionId"]
+- !private ["So19UITextFieldDelegateP", "init"]
+- !private ["So18UITraitEnvironmentP", "conversitionId"]
+- !private ["So18UITraitEnvironmentP", "dismiss"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "items"]
+- !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
+- !private ["So18UITraitEnvironmentP", "presentedViewController"]
+- !private ["So18UITraitEnvironmentP", "pushViewController"]
+- !private ["So18UITraitEnvironmentP", "rootViewController"]
+- !private ["So18UITraitEnvironmentP", "selectedIndex"]
+- !private ["So18UITraitEnvironmentP", "tabBar"]
+- !private ["So18UITraitEnvironmentP", "viewControllers"]
+- !private ["So23UIUserActivityRestoringP", "FirebaseApp"]
+- !private ["So23UIUserActivityRestoringP", "Firestore"]
+- !private ["So23UIUserActivityRestoringP", "FunctionsErrorCode"]
+- !private ["So23UIUserActivityRestoringP", "FunctionsErrorDetailsKey"]
+- !private ["So23UIUserActivityRestoringP", "FunctionsErrorDomain"]
+- ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
+- !private ["So23UIUserActivityRestoringP", "MainTabBarController"]
+- !private ["So23UIUserActivityRestoringP", "Messaging"]
+- !private ["So23UIUserActivityRestoringP", "NSPersistentContainer"]
+- !private ["So23UIUserActivityRestoringP", "Notification"]
+- !private ["So23UIUserActivityRestoringP", "NotificationCenter"]
+- !private ["So23UIUserActivityRestoringP", "PrivateChatController"]
+- !private ["So23UIUserActivityRestoringP", "UIBackgroundFetchResult"]
+- !private ["So23UIUserActivityRestoringP", "UICollectionViewFlowLayout"]
+- !private ["So23UIUserActivityRestoringP", "UIUserNotificationSettings"]
+- !private ["So23UIUserActivityRestoringP", "UIWindow"]
+- !private ["So23UIUserActivityRestoringP", "UNUserNotificationCenter"]
+- ["So23UIUserActivityRestoringP", ""]
+- ["So23UIUserActivityRestoringP", "application"]
+- ["So23UIUserActivityRestoringP", "applicationDidBecomeActive"]
+- ["So23UIUserActivityRestoringP", "applicationDidEnterBackground"]
+- ["So23UIUserActivityRestoringP", "applicationDidFinishLaunching"]
+- ["So23UIUserActivityRestoringP", "applicationDidReceiveMemoryWarning"]
+- ["So23UIUserActivityRestoringP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So23UIUserActivityRestoringP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So23UIUserActivityRestoringP", "applicationShouldRequestHealthAuthorization"]
+- ["So23UIUserActivityRestoringP", "applicationSignificantTimeChange"]
+- ["So23UIUserActivityRestoringP", "applicationWillEnterForeground"]
+- ["So23UIUserActivityRestoringP", "applicationWillResignActive"]
+- ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
+- !private ["So23UIUserActivityRestoringP", "attempRegisterForNotifications"]
+- !private ["So23UIUserActivityRestoringP", "conversitionId"]
+- !private ["So23UIUserActivityRestoringP", "dismiss"]
+- !private ["So23UIUserActivityRestoringP", "fatalError"]
+- !private ["So23UIUserActivityRestoringP", "functions"]
+- !private ["So23UIUserActivityRestoringP", "gcmMessageIDKey"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "items"]
+- !private ["So23UIUserActivityRestoringP", "makeKeyAndVisible"]
+- ["So23UIUserActivityRestoringP", "messaging"]
+- !private ["So23UIUserActivityRestoringP", "persistentContainer"]
+- !private ["So23UIUserActivityRestoringP", "presentedViewController"]
+- !private ["So23UIUserActivityRestoringP", "print"]
+- !private ["So23UIUserActivityRestoringP", "pushViewController"]
+- !private ["So23UIUserActivityRestoringP", "registerForRemoteNotifications"]
+- !private ["So23UIUserActivityRestoringP", "registerUserNotificationSettings"]
+- !private ["So23UIUserActivityRestoringP", "rootViewController"]
+- !private ["So23UIUserActivityRestoringP", "saveContext"]
+- !private ["So23UIUserActivityRestoringP", "selectedIndex"]
+- !private ["So23UIUserActivityRestoringP", "tabBar"]
+- ["So23UIUserActivityRestoringP", "userNotificationCenter"]
+- !private ["So23UIUserActivityRestoringP", "viewControllers"]
+- ["So23UIUserActivityRestoringP", "window"]
+- !private ["So26UIUserNotificationSettingsC", "init"]
+- !private ["So22UIUserNotificationTypeV", "alert"]
+- !private ["So22UIUserNotificationTypeV", "badge"]
+- !private ["So22UIUserNotificationTypeV", "sound"]
+- !private ["So6UIViewC", "init"]
+- !private ["So6UIViewC", "items"]
+- !private ["So6UIViewC", "makeKeyAndVisible"]
+- !private ["So6UIViewC", "rootViewController"]
+- !private ["So16UIViewControllerC", "conversitionId"]
+- !private ["So16UIViewControllerC", "dismiss"]
+- !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "presentedViewController"]
+- !private ["So16UIViewControllerC", "pushViewController"]
+- !private ["So16UIViewControllerC", "selectedIndex"]
+- !private ["So16UIViewControllerC", "tabBar"]
+- !private ["So16UIViewControllerC", "viewControllers"]
+- !private ["So8UIWindowC", "init"]
+- !private ["So8UIWindowC", "makeKeyAndVisible"]
+- !private ["So8UIWindowC", "rootViewController"]
+- !private ["So22UNAuthorizationOptionsV", "alert"]
+- !private ["So22UNAuthorizationOptionsV", "badge"]
+- !private ["So22UNAuthorizationOptionsV", "sound"]
+- !private ["So14UNNotificationC", "request"]
+- !private ["So21UNNotificationContentC", "userInfo"]
+- !private ["So33UNNotificationPresentationOptionsV", "alert"]
+- !private ["So21UNNotificationRequestC", "content"]
+- !private ["So22UNNotificationResponseC", "notification"]
+- !private ["So24UNUserNotificationCenterC", "current"]
+- !private ["So24UNUserNotificationCenterC", "delegate"]
+- !private ["So24UNUserNotificationCenterC", "requestAuthorization"]
+- !private ["So32UNUserNotificationCenterDelegateP", "FirebaseApp"]
+- !private ["So32UNUserNotificationCenterDelegateP", "Firestore"]
+- !private ["So32UNUserNotificationCenterDelegateP", "FunctionsErrorCode"]
+- !private ["So32UNUserNotificationCenterDelegateP", "FunctionsErrorDetailsKey"]
+- !private ["So32UNUserNotificationCenterDelegateP", "FunctionsErrorDomain"]
+- !private ["So32UNUserNotificationCenterDelegateP", "MainTabBarController"]
+- !private ["So32UNUserNotificationCenterDelegateP", "Messaging"]
+- !private ["So32UNUserNotificationCenterDelegateP", "NSPersistentContainer"]
+- !private ["So32UNUserNotificationCenterDelegateP", "Notification"]
+- !private ["So32UNUserNotificationCenterDelegateP", "NotificationCenter"]
+- !private ["So32UNUserNotificationCenterDelegateP", "PrivateChatController"]
+- !private ["So32UNUserNotificationCenterDelegateP", "UIBackgroundFetchResult"]
+- !private ["So32UNUserNotificationCenterDelegateP", "UICollectionViewFlowLayout"]
+- !private ["So32UNUserNotificationCenterDelegateP", "UIUserNotificationSettings"]
+- !private ["So32UNUserNotificationCenterDelegateP", "UIWindow"]
+- !private ["So32UNUserNotificationCenterDelegateP", "UNUserNotificationCenter"]
+- ["So32UNUserNotificationCenterDelegateP", ""]
+- ["So32UNUserNotificationCenterDelegateP", "application"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationDidBecomeActive"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationDidEnterBackground"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationDidFinishLaunching"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationDidReceiveMemoryWarning"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationProtectedDataDidBecomeAvailable"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationShouldRequestHealthAuthorization"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationSignificantTimeChange"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationWillEnterForeground"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationWillResignActive"]
+- ["So32UNUserNotificationCenterDelegateP", "applicationWillTerminate"]
+- !private ["So32UNUserNotificationCenterDelegateP", "attempRegisterForNotifications"]
+- !private ["So32UNUserNotificationCenterDelegateP", "fatalError"]
+- !private ["So32UNUserNotificationCenterDelegateP", "functions"]
+- !private ["So32UNUserNotificationCenterDelegateP", "gcmMessageIDKey"]
+- ["So32UNUserNotificationCenterDelegateP", "messaging"]
+- !private ["So32UNUserNotificationCenterDelegateP", "persistentContainer"]
+- !private ["So32UNUserNotificationCenterDelegateP", "print"]
+- !private ["So32UNUserNotificationCenterDelegateP", "saveContext"]
+- ["So32UNUserNotificationCenterDelegateP", "userNotificationCenter"]
+- ["So32UNUserNotificationCenterDelegateP", "window"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "items"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "makeKeyAndVisible"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "object"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FirebaseApp"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Firestore"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FunctionsErrorCode"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FunctionsErrorDetailsKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FunctionsErrorDomain"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "MainTabBarController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Messaging"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSPersistentContainer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Notification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "PrivateChatController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBackgroundFetchResult"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UICollectionViewFlowLayout"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIUserNotificationSettings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIWindow"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UNUserNotificationCenter"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "appData"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "application"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidBecomeActive"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidEnterBackground"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidFinishLaunching"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationDidReceiveMemoryWarning"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationProtectedDataDidBecomeAvailable"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationProtectedDataWillBecomeUnavailable"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationShouldRequestHealthAuthorization"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationSignificantTimeChange"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillEnterForeground"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillResignActive"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "applicationWillTerminate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "areTimestampsInSnapshotsEnabled"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "attempRegisterForNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "badgeValue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "call"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "code"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "configure"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "content"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "conversitionId"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "domain"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "firestore"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "functions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "gcmMessageIDKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "hasChanges"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "httpsCallable"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "items"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "loadPersistentStores"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "localizedDescription"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "makeKeyAndVisible"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "messaging"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "notification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "object"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "persistentContainer"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "post"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "presentedViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pushViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerForRemoteNotifications"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "registerUserNotificationSettings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "request"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "requestAuthorization"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "rootViewController"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "save"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "saveContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectedIndex"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "settings"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "tabBar"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "userNotificationCenter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewControllers"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "window"]
+- !private ["s21_ObjectiveCBridgeableP", "Name"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s20_SwiftNewtypeWrapperP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- !private ["9mojo_test29editProfileControllerDelegateP", "init"]
+- !private ["9mojo_test29editProfileControllerDelegateP", "presentedViewController"]
+- !private ["9mojo_test29editProfileControllerDelegateP", "selectedIndex"]
+- !private ["9mojo_test29editProfileControllerDelegateP", "tabBar"]
+- !private ["9mojo_test29editProfileControllerDelegateP", "viewControllers"]
+depends-nominal:
+- "9mojo_test11AppDelegateC"
+- !private "Sa"
+- !private "s13ArrayProtocolP"
+- "SK"
+- !private "Sb"
+- !private "So15CALayerDelegateP"
+- "s7CVarArgP"
+- !private "9mojo_test30ChatInputAccessaryViewDelegateP"
+- "Sl"
+- "SL"
+- !private "15TinyConstraints13ConstrainableP"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- !private "SD"
+- "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "So6FIRAppC"
+- !private "So12FIRFirestoreC"
+- !private "So20FIRFirestoreSettingsC"
+- "So12FIRFunctionsC"
+- !private "So21FIRFunctionsErrorCodeV"
+- !private "So16FIRHTTPSCallableC"
+- "SH"
+- !private "9mojo_test23LoginControllerDelegateP"
+- "s25LosslessStringConvertibleP"
+- !private "9mojo_test20MainTabBarControllerC"
+- !private "So12FIRMessagingC"
+- "So20FIRMessagingDelegateP"
+- !private "So25FIRMessagingRemoteMessageC"
+- "s10MirrorPathP"
+- !private "SM"
+- !private "So7NSArrayC"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So26NSExtensionRequestHandlingP"
+- !private "So17NSFastEnumerationP"
+- !private "So9NSLockingP"
+- !private "So22NSManagedObjectContextC"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So21NSPersistentContainerC"
+- !private "So14NSSecureCodingP"
+- !private "So18NSNotificationNamea"
+- !private "10Foundation12NotificationV"
+- !private "So20NSNotificationCenterC"
+- !private "s9OptionSetP"
+- !private "9mojo_test21PrivateChatControllerC"
+- !private "Sk"
+- "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- "ST"
+- !private "s10SetAlgebraP"
+- !private "s12StaticStringV"
+- "SS"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- "So13UIApplicationC"
+- "So21UIApplicationDelegateP"
+- !private "So23UIBackgroundFetchResultV"
+- !private "So9UIBarItemC"
+- !private "So26UICollectionViewControllerC"
+- !private "So26UICollectionViewDataSourceP"
+- !private "So24UICollectionViewDelegateP"
+- !private "So34UICollectionViewDelegateFlowLayoutP"
+- !private "So26UICollectionViewFlowLayoutC"
+- !private "So22UICollectionViewLayoutC"
+- !private "So18UIContentContainerP"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So22UINavigationControllerC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So20UIScrollViewDelegateP"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- !private "So16UIStateRestoringP"
+- !private "So8UITabBarC"
+- !private "So18UITabBarControllerC"
+- !private "So16UITabBarDelegateP"
+- !private "So12UITabBarItemC"
+- !private "So19UITextFieldDelegateP"
+- !private "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- !private "So26UIUserNotificationSettingsC"
+- !private "So22UIUserNotificationTypeV"
+- !private "So6UIViewC"
+- !private "So16UIViewControllerC"
+- !private "So8UIWindowC"
+- !private "So22UNAuthorizationOptionsV"
+- !private "So14UNNotificationC"
+- !private "So21UNNotificationContentC"
+- !private "So33UNNotificationPresentationOptionsV"
+- !private "So21UNNotificationRequestC"
+- !private "So22UNNotificationResponseC"
+- !private "So24UNUserNotificationCenterC"
+- "So32UNUserNotificationCenterDelegateP"
+- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+- "s16_SwiftStringViewP"
+- !private "9mojo_test29editProfileControllerDelegateP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/x86_64.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Headers/Cosmos-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+ForceDecode.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSImage+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImageView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImageView+HighlightedWebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDImageCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRHTTPSCallable.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageFrame.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSData+ImageContentType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDImageCacheConfig.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FIRMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeZoomAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIView+WebCacheOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageTransition.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDAnimatedImageRep.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageGIFCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageImageIOCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCodersManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImagePrefetcher.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoderHelper.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRError.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-Defines.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Headers/Cosmos-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDImageIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDPieIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndeterminateIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDRingIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDErrorIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDSuccessIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDShadow.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "5201892db096dafbe5fabb72090a5523"

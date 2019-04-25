@@ -90,7 +90,6 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reviewCellId, for: indexPath) as! UserReviewCell
-
         return cell
     }
     
@@ -98,7 +97,7 @@ class FeedbacksController: UICollectionViewController, UICollectionViewDelegateF
         if indexPath.section == 1 {
             return CGSize(width: view.frame.width, height: 60)
         }
-        return CGSize(width: view.frame.width, height: 140)
+        return CGSize(width: view.frame.width, height: 180)
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

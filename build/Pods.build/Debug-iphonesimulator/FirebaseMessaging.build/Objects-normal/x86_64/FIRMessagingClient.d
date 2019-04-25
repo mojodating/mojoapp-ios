@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingClient.m \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseMessaging.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingClient.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/Public/FIRMessaging.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/GoogleUtilities.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityChecker.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingConnection.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingConstants.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingDataMessageManager.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingDefines.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingLogger.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMMessageCode.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingRegistrar.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingCheckinService.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingRmqManager.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingTopicsCommon.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingUtilities.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/NSError+FIRMessaging.h

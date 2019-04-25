@@ -1,0 +1,326 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CosmosLayerHelper"
+provides-nominal:
+- "6Cosmos0A11LayerHelperC"
+provides-member:
+- ["6Cosmos0A11LayerHelperC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AssignmentPrecedence"
+- "CATextLayer"
+- !private "CFString"
+- !private "CGFont"
+- !private "CGPoint"
+- !private "CGRect"
+- "CastingPrecedence"
+- "CosmosLayerHelper"
+- !private "Dictionary"
+- !private "NSAttributedString"
+- !private "NSString"
+- "String"
+- "UIColor"
+- "UIFont"
+- !private "UIScreen"
+depends-member:
+- !private ["So7CALayerC", "anchorPoint"]
+- !private ["So7CALayerC", "bounds"]
+- !private ["So7CALayerC", "contentsScale"]
+- !private ["So7CALayerC", "font"]
+- !private ["So7CALayerC", "fontSize"]
+- !private ["So7CALayerC", "foregroundColor"]
+- !private ["So7CALayerC", "init"]
+- !private ["So7CALayerC", "string"]
+- !private ["So13CAMediaTimingP", "anchorPoint"]
+- !private ["So13CAMediaTimingP", "bounds"]
+- !private ["So13CAMediaTimingP", "contentsScale"]
+- !private ["So13CAMediaTimingP", "font"]
+- !private ["So13CAMediaTimingP", "fontSize"]
+- !private ["So13CAMediaTimingP", "foregroundColor"]
+- !private ["So13CAMediaTimingP", "init"]
+- !private ["So13CAMediaTimingP", "string"]
+- !private ["So11CATextLayerC", "anchorPoint"]
+- !private ["So11CATextLayerC", "bounds"]
+- !private ["So11CATextLayerC", "contentsScale"]
+- !private ["So11CATextLayerC", "font"]
+- !private ["So11CATextLayerC", "fontSize"]
+- !private ["So11CATextLayerC", "foregroundColor"]
+- !private ["So11CATextLayerC", "init"]
+- !private ["So11CATextLayerC", "string"]
+- !private ["So9CGFontRefa", "init"]
+- !private ["So7CGPointV", "init"]
+- !private ["So6CGRectV", "init"]
+- !private ["s7CVarArgP", "Key"]
+- !private ["s7CVarArgP", "anchorPoint"]
+- !private ["s7CVarArgP", "bounds"]
+- !private ["s7CVarArgP", "cgColor"]
+- !private ["s7CVarArgP", "contentsScale"]
+- !private ["s7CVarArgP", "font"]
+- !private ["s7CVarArgP", "fontName"]
+- !private ["s7CVarArgP", "fontSize"]
+- !private ["s7CVarArgP", "foregroundColor"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "pointSize"]
+- !private ["s7CVarArgP", "scale"]
+- !private ["s7CVarArgP", "size"]
+- !private ["s7CVarArgP", "string"]
+- ["6Cosmos0A11LayerHelperC", "CATextLayer"]
+- !private ["6Cosmos0A11LayerHelperC", "CFString"]
+- !private ["6Cosmos0A11LayerHelperC", "CGFont"]
+- !private ["6Cosmos0A11LayerHelperC", "CGPoint"]
+- !private ["6Cosmos0A11LayerHelperC", "CGRect"]
+- !private ["6Cosmos0A11LayerHelperC", "NSAttributedString"]
+- !private ["6Cosmos0A11LayerHelperC", "NSString"]
+- ["6Cosmos0A11LayerHelperC", "String"]
+- ["6Cosmos0A11LayerHelperC", "UIColor"]
+- ["6Cosmos0A11LayerHelperC", "UIFont"]
+- !private ["6Cosmos0A11LayerHelperC", "UIScreen"]
+- ["6Cosmos0A11LayerHelperC", "createTextLayer"]
+- ["6Cosmos0A11LayerHelperC", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "Key"]
+- !private ["s28CustomDebugStringConvertibleP", "anchorPoint"]
+- !private ["s28CustomDebugStringConvertibleP", "bounds"]
+- !private ["s28CustomDebugStringConvertibleP", "cgColor"]
+- !private ["s28CustomDebugStringConvertibleP", "contentsScale"]
+- !private ["s28CustomDebugStringConvertibleP", "font"]
+- !private ["s28CustomDebugStringConvertibleP", "fontName"]
+- !private ["s28CustomDebugStringConvertibleP", "fontSize"]
+- !private ["s28CustomDebugStringConvertibleP", "foregroundColor"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "pointSize"]
+- !private ["s28CustomDebugStringConvertibleP", "scale"]
+- !private ["s28CustomDebugStringConvertibleP", "size"]
+- !private ["s28CustomDebugStringConvertibleP", "string"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "size"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Key"]
+- !private ["s23CustomStringConvertibleP", "anchorPoint"]
+- !private ["s23CustomStringConvertibleP", "bounds"]
+- !private ["s23CustomStringConvertibleP", "cgColor"]
+- !private ["s23CustomStringConvertibleP", "contentsScale"]
+- !private ["s23CustomStringConvertibleP", "font"]
+- !private ["s23CustomStringConvertibleP", "fontName"]
+- !private ["s23CustomStringConvertibleP", "fontSize"]
+- !private ["s23CustomStringConvertibleP", "foregroundColor"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "pointSize"]
+- !private ["s23CustomStringConvertibleP", "scale"]
+- !private ["s23CustomStringConvertibleP", "size"]
+- !private ["s23CustomStringConvertibleP", "string"]
+- !private ["Se", "init"]
+- !private ["SE", "init"]
+- !private ["SQ", "Key"]
+- !private ["SQ", "anchorPoint"]
+- !private ["SQ", "bounds"]
+- !private ["SQ", "cgColor"]
+- !private ["SQ", "contentsScale"]
+- !private ["SQ", "font"]
+- !private ["SQ", "fontName"]
+- !private ["SQ", "fontSize"]
+- !private ["SQ", "foregroundColor"]
+- !private ["SQ", "init"]
+- !private ["SQ", "main"]
+- !private ["SQ", "pointSize"]
+- !private ["SQ", "scale"]
+- !private ["SQ", "size"]
+- !private ["SQ", "string"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "size"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "size"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "size"]
+- !private ["SH", "Key"]
+- !private ["SH", "anchorPoint"]
+- !private ["SH", "bounds"]
+- !private ["SH", "cgColor"]
+- !private ["SH", "contentsScale"]
+- !private ["SH", "font"]
+- !private ["SH", "fontName"]
+- !private ["SH", "fontSize"]
+- !private ["SH", "foregroundColor"]
+- !private ["SH", "init"]
+- !private ["SH", "main"]
+- !private ["SH", "pointSize"]
+- !private ["SH", "scale"]
+- !private ["SH", "size"]
+- !private ["SH", "string"]
+- !private ["So21NSAttributedStringKeya", "font"]
+- !private ["So18NSAttributedStringC", "Key"]
+- !private ["So8NSCodingP", "Key"]
+- !private ["So8NSCodingP", "anchorPoint"]
+- !private ["So8NSCodingP", "bounds"]
+- !private ["So8NSCodingP", "cgColor"]
+- !private ["So8NSCodingP", "contentsScale"]
+- !private ["So8NSCodingP", "font"]
+- !private ["So8NSCodingP", "fontSize"]
+- !private ["So8NSCodingP", "foregroundColor"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "size"]
+- !private ["So8NSCodingP", "string"]
+- !private ["So9NSCopyingP", "Key"]
+- !private ["So9NSCopyingP", "cgColor"]
+- !private ["So9NSCopyingP", "fontName"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "pointSize"]
+- !private ["So9NSCopyingP", "size"]
+- !private ["So21NSItemProviderReadingP", "Key"]
+- !private ["So21NSItemProviderReadingP", "cgColor"]
+- !private ["So21NSItemProviderReadingP", "init"]
+- !private ["So21NSItemProviderReadingP", "size"]
+- !private ["So21NSItemProviderWritingP", "Key"]
+- !private ["So21NSItemProviderWritingP", "cgColor"]
+- !private ["So21NSItemProviderWritingP", "init"]
+- !private ["So21NSItemProviderWritingP", "size"]
+- !private ["So16NSMutableCopyingP", "Key"]
+- !private ["So16NSMutableCopyingP", "init"]
+- !private ["So16NSMutableCopyingP", "size"]
+- !private ["So8NSObjectC", "Key"]
+- !private ["So8NSObjectC", "anchorPoint"]
+- !private ["So8NSObjectC", "bounds"]
+- !private ["So8NSObjectC", "cgColor"]
+- !private ["So8NSObjectC", "contentsScale"]
+- !private ["So8NSObjectC", "font"]
+- !private ["So8NSObjectC", "fontName"]
+- !private ["So8NSObjectC", "fontSize"]
+- !private ["So8NSObjectC", "foregroundColor"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "pointSize"]
+- !private ["So8NSObjectC", "scale"]
+- !private ["So8NSObjectC", "size"]
+- !private ["So8NSObjectC", "string"]
+- !private ["So8NSObjectP", "Key"]
+- !private ["So8NSObjectP", "anchorPoint"]
+- !private ["So8NSObjectP", "bounds"]
+- !private ["So8NSObjectP", "cgColor"]
+- !private ["So8NSObjectP", "contentsScale"]
+- !private ["So8NSObjectP", "font"]
+- !private ["So8NSObjectP", "fontName"]
+- !private ["So8NSObjectP", "fontSize"]
+- !private ["So8NSObjectP", "foregroundColor"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "pointSize"]
+- !private ["So8NSObjectP", "scale"]
+- !private ["So8NSObjectP", "size"]
+- !private ["So8NSObjectP", "string"]
+- !private ["So14NSSecureCodingP", "Key"]
+- !private ["So14NSSecureCodingP", "anchorPoint"]
+- !private ["So14NSSecureCodingP", "bounds"]
+- !private ["So14NSSecureCodingP", "cgColor"]
+- !private ["So14NSSecureCodingP", "contentsScale"]
+- !private ["So14NSSecureCodingP", "font"]
+- !private ["So14NSSecureCodingP", "fontSize"]
+- !private ["So14NSSecureCodingP", "foregroundColor"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "size"]
+- !private ["So14NSSecureCodingP", "string"]
+- !private ["So8NSStringC", "init"]
+- !private ["So8NSStringC", "size"]
+- !private ["SY", "font"]
+- !private ["So7UIColorC", "cgColor"]
+- !private ["So6UIFontC", "fontName"]
+- !private ["So6UIFontC", "pointSize"]
+- !private ["So8UIScreenC", "main"]
+- !private ["So8UIScreenC", "scale"]
+- !private ["So18UITraitEnvironmentP", "main"]
+- !private ["So18UITraitEnvironmentP", "scale"]
+- !private ["14CoreFoundation9_CFObjectP", "init"]
+- !private ["s26_ExpressibleByColorLiteralP", "cgColor"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "font"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "size"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Key"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "anchorPoint"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bounds"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cgColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "contentsScale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "font"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fontName"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fontSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "foregroundColor"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "pointSize"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "scale"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "size"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "string"]
+- !private ["s21_ObjectiveCBridgeableP", "font"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s20_SwiftNewtypeWrapperP", "font"]
+depends-nominal:
+- !private "So7CALayerC"
+- !private "So13CAMediaTimingP"
+- !private "So11CATextLayerC"
+- !private "So9CGFontRefa"
+- !private "So7CGPointV"
+- !private "So6CGRectV"
+- !private "s7CVarArgP"
+- "6Cosmos0A11LayerHelperC"
+- !private "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- !private "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SE"
+- !private "SQ"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "SH"
+- !private "So21NSAttributedStringKeya"
+- !private "So18NSAttributedStringC"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- !private "So8NSObjectC"
+- !private "So8NSObjectP"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "SY"
+- !private "So7UIColorC"
+- !private "So6UIFontC"
+- !private "So8UIScreenC"
+- !private "So18UITraitEnvironmentP"
+- !private "14CoreFoundation9_CFObjectP"
+- !private "s26_ExpressibleByColorLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- !private "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s20_SwiftNewtypeWrapperP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Target Support Files/Cosmos/Cosmos-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/Cosmos.build/unextended-module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "1b515d195201edcecb0d3e18ecd08893"

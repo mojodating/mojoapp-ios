@@ -13,6 +13,7 @@ class UserGiftCell: UICollectionViewCell {
         super.init(frame: frame)
         
         setupLayout()
+        layer.cornerRadius = 8
         
     }
     

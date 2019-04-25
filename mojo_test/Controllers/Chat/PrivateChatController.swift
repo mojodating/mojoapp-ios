@@ -22,7 +22,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     let requestCellId = "requestCellId"
     let headerId = "headerId"
     var conversitionId: String?
-    
     var chatProfileUID: String?
     var conversation : Conversation? {
         didSet {
@@ -48,7 +47,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
             guard let userName = self.user?.name else { return }
-//            self.nameTitleButton.setTitle("\(userName) ", for: .normal)
             self.navigationItem.title = userName
         }
     }
@@ -66,7 +64,24 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
         setupCollectionView()
         
-        
+        setupNotificationObservers()
+  
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = true
+    }
+    
+    // Jump to new message
+    var isLoading: Bool = false
+
+    internal override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        if !isLoading {
+            let indexToScrollTo = IndexPath(item: messages.count - 1, section: 0)
+            self.collectionView.scrollToItem(at: indexToScrollTo, at: .bottom, animated: false)
+            isLoading = true
+        }
     }
     
     fileprivate func checkIfChatBlocked() {
@@ -96,12 +111,32 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
         collectionView.alwaysBounceVertical = true
         collectionView.keyboardDismissMode = .interactive
-        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 80, right: 8)
-        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 80, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 8, right: 8)
+        collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
         collectionView.register(PrivateChatDateHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
-    @objc fileprivate func handleViewProfile() {
+    fileprivate func setupNotificationObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        }
+    
+    @objc private func handleKeyboardHide() {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping:1, initialSpringVelocity:1, options: .curveEaseOut, animations:{
+                self.view.transform = .identity
+        })
+        }
+    
+    @objc fileprivate func handleKeyboardShow(notification:Notification) {
+        guard let value = notification.userInfo? [UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else
+            { return }
+        let keyboardFrame = value.cgRectValue
+
+        self.view.transform = CGAffineTransform(translationX: 0, y: -keyboardFrame.height)
+    }
+    
+    
+    @objc func handleViewProfile() {
         let userDetailController = UserDetailController()
         userDetailController.user = self.user
         userDetailController.chatRequestButton.isHidden = true
@@ -130,6 +165,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                     let msg = diff.document.data()
                     let message = Message(msg: msg)
                     self.messages.append(message)
+                    self.isLoading = false
                     self.collectionView.reloadData()
                     self.markMessageAsSeen(message: message)
                     }
@@ -149,69 +185,21 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                 if let err = err {
                     print("Error updating document: \(err)")
                 } else {
-                    print("Document successfully updated")
                 }
         }
-//        timeReceiveRef.updateData([
-//            "conversations.\(conversationId).lastUpdated": Date().timeIntervalSince1970,
-//            "conversations.\(conversationId).lastMessageSeen": false,
-//            ]) { err in
-//                if let err = err {
-//                    print("Error updating document: \(err)")
-//                } else {
-//                    print("Document successfully updated")
-//                }
-//        }
     }
     
-//    var groupedMessages = [[Message]]()
-//
-//    fileprivate func groupMessageByDate() {
-//
-//        let grouped = Dictionary(grouping: messages) { (message) -> Date in
-//            return message.date
-//        }
-//
-//        let sortedKeys = grouped.keys.sorted(by: <)
-//        sortedKeys.forEach { (key) in
-//            let values = grouped[key]
-//            groupedMessages.append(values ?? [])
-//            self.collectionView.reloadData()
-//        }
-//
-//    }
-    
-//    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return groupedMessages.count
-//    }
-    
-//    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-//        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! PrivateChatDateHeaderView
-//
-//        if let firstMessageInSection = groupedMessages[indexPath.section].first {
-//            headerView.dateLabel.text = Date.StringFromCustomDate(costumDate: firstMessageInSection.date)
-//        }
-//
-//        return headerView
-//    }
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return groupedMessages[section].count
         return messages.count
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize(width: 200, height: 40)
-//    }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-//        if indexPath.section == 0 && indexPath.row == 0{
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: requestCellId, for: indexPath) as! RequestMessageCell
             
             let message = messages[indexPath.item]
-//            let message = groupedMessages[indexPath.section][indexPath.row]
             
             setupRequestCell(cell: cell, message: message)
             
@@ -226,7 +214,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MessageCell
         
         let message = messages[indexPath.item]
-//        let message = groupedMessages[indexPath.section][indexPath.row]
         cell.chatLogLabel.text = message.text
         
         setupCell(cell: cell, message: message)
@@ -237,6 +224,8 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         
     }
     
+    var chatSender: User?
+    
     fileprivate func setupRequestCell(cell: RequestMessageCell, message: Message ) {
         if let requestorUID = self.conversation?.sender {
             Firestore.firestore().collection("users").document(requestorUID).getDocument { (snapshot, err) in
@@ -244,16 +233,21 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                     print(err)
                     return
                 }
-                //          fetch our user here
+
                 guard let dictionary = snapshot?.data() else { return }
-                self.user = User(dictionary: dictionary)
+                self.chatSender = User(dictionary: dictionary)
                 
-                guard let requestorProfileUrl = self.user?.imageUrl1 else {return}
+                guard let requestorProfileUrl = self.chatSender?.imageUrl1 else {return}
                 if let requestProfileUrl = URL(string: requestorProfileUrl) {
                     cell.profileImageView.sd_setImage(with: requestProfileUrl)
                 }
             }
         }
+        cell.profileImageView.isUserInteractionEnabled = true
+        let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleViewRequesterProfile))
+        singleTap.numberOfTapsRequired = 1
+        cell.profileImageView.addGestureRecognizer(singleTap)
+        
 
         guard let giftImageUrl = self.conversation?.drinkImage else { return }
         if let giftImageUrl = URL(string: giftImageUrl) {
@@ -273,7 +267,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             } else {
                 cell.descriptionLabel.text = "Chat Request"
             }
-            
         }
         
         // fetch gift Info
@@ -291,6 +284,13 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         } else {
             cell.rejectButton.isHidden = true
         }
+    }
+    
+    @objc fileprivate func handleViewRequesterProfile() {
+        let userDetailController = UserDetailController()
+        userDetailController.user = self.chatSender
+        userDetailController.chatRequestButton.isHidden = true
+        present(userDetailController, animated: true)
     }
     
     @objc fileprivate func handleChatDetails() {
@@ -350,7 +350,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     }
     
     
-    
     fileprivate func setupCell(cell:MessageCell, message: Message ) {
         
         if message.sender == Auth.auth().currentUser?.uid {
@@ -368,11 +367,14 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             cell.bubbleViewRightAnchor?.isActive = false
             cell.bubbleViewLeftAnchor?.isActive = true
             cell.profileImageView.isHidden = false
+            cell.profileImageView.isUserInteractionEnabled = true
+            let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleViewProfile))
+            singleTap.numberOfTapsRequired = 1
+            cell.profileImageView.addGestureRecognizer(singleTap)
         }
         
         // fetch userProfile
-        let senderUID = message.sender
-        Firestore.firestore().collection("users").document(senderUID).getDocument { (snapshot, err) in
+        Firestore.firestore().collection("users").document(chatProfileUID ?? "").getDocument { (snapshot, err) in
             if let err = err {
                 print(err)
                 return
@@ -380,22 +382,21 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             //          fetch our user here
             guard let dictionary = snapshot?.data() else { return }
             self.user = User(dictionary: dictionary)
-            
+
             guard let imageUrl = self.user?.imageUrl1 else {return}
             if let imageUrl = URL(string: imageUrl) {
                  cell.profileImageView.sd_setImage(with: imageUrl)
             }
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        var height: CGFloat = 150
+        var height: CGFloat = 500
         
-        height = estimateFrameForText(text: messages[indexPath.item].text).height + 36
+        height = estimateFrameForText(text: messages[indexPath.item].text).height + 20
         
-        if indexPath.section == 0 && indexPath.row == 0 {
+        if indexPath.row == 0 {
             return CGSize(width: view.frame.width, height: height + 240)
         }
 
@@ -408,11 +409,6 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         
         return NSString(string: text).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 16, weight: .medium)], context:  nil)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tabBarController?.tabBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -484,14 +480,12 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     override var inputAccessoryView: UIView? {
         get {
             return containerView
-            
         }
     }
 
     override var canBecomeFirstResponder: Bool {
         return true
     }
-    
 
         let cameraButton: UIButton = {
             let button = UIButton(type: .system)
@@ -506,13 +500,5 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             button.imageView?.contentMode = .scaleAspectFill
             return button
         }()
-        
-        
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        didSend(for: messageText)
-//        return true
-//    }
-    
-
 
 }

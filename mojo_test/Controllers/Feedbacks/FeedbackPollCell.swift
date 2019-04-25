@@ -36,7 +36,7 @@ class FeedbackPollCell: UICollectionViewCell {
                 guard let dictionary = snapshot?.data() else { return }
                 self.user = User(dictionary: dictionary)
                 
-                self.titleLabel.text = "How‘s your conversation with " + (self.user?.name)!
+                self.titleLabel.text = self.user?.name
                 
                 guard let senderImageUrl = self.user?.imageUrl1 else {return}
                 if let imageUrl = URL(string: senderImageUrl) {
@@ -51,11 +51,11 @@ class FeedbackPollCell: UICollectionViewCell {
         super.init(frame: frame)
         
         addSubview(profileImageView)
-        profileImageView.anchor(top: nil, leading: nil, bottom: nil, trailing: trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 48, height: 48))
+        profileImageView.anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 16, bottom: 0, right: 0), size: .init(width: 48, height: 48))
         profileImageView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         addSubview(titleLabel)
-        titleLabel.anchor(top: nil, leading: leadingAnchor, bottom: nil, trailing: profileImageView.leadingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 16))
+        titleLabel.anchor(top: nil, leading: profileImageView.trailingAnchor, bottom: nil, trailing: nil, padding: .init(top: 0, left: 16, bottom: 0, right: 0))
         titleLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         
         addSubview(lineView)
@@ -64,9 +64,9 @@ class FeedbackPollCell: UICollectionViewCell {
     
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "How‘s your conversation with UserName"
+        label.text = ""
         label.numberOfLines = 0
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         return label
     }()
     

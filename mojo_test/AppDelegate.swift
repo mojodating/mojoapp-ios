@@ -201,23 +201,30 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         
         let userInfo = response.notification.request.content.userInfo
         
-//        if let senderId = userInfo["gcm.notification.from"] as? String {
-        
-//            let privateChatController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
-//            privateChatController.chatProfileUID = senderId
-            let homeController = HomeController()
+        if let conversationId = userInfo["gcm.notification.conversationId"] as? String {
+            
+            let privateChatController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
+            privateChatController.conversitionId = conversationId
             
             //access main UI from Appdelegate
             if let mainTabBarController = window?.rootViewController as? MainTabBarController {
                 
-                mainTabBarController.selectedIndex = 0
-                
+                mainTabBarController.selectedIndex = 1
+                let tabArray = mainTabBarController.tabBar.items! as NSArray
+                let tabItem = tabArray.object(at: 1) as! UITabBarItem
+                tabItem.badgeValue = userInfo["gcm.notification.badge"] as? String
                 mainTabBarController.presentedViewController?.dismiss(animated: true, completion: nil)
                 
-                if let homeNavController = mainTabBarController.viewControllers?.first as? UINavigationController {
-                    homeNavController.pushViewController(homeController, animated: true)
+                if let chatNavController = mainTabBarController.viewControllers?[1] as? UINavigationController {
+                    chatNavController.pushViewController(privateChatController, animated: true)
                 }
-//            }
+            }
+        } else {
+            if let mainTabBarController = window?.rootViewController as? MainTabBarController {
+                
+                mainTabBarController.selectedIndex = 2
+                mainTabBarController.presentedViewController?.dismiss(animated: true, completion: nil)
+            }
         }
     
         // Print message ID.
@@ -225,9 +232,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
             print("Message ID: \(messageID)")
         }
 
-        // Print full message.
-        print(userInfo)
-         
+//        print(userInfo)
+        
         completionHandler()
     }
 }

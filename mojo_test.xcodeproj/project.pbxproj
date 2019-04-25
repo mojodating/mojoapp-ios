@@ -49,6 +49,7 @@
 		8870C56A2215D73000B03F98 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C5692215D73000B03F98 /* ProfileCell.swift */; };
 		8870C56C2217291200B03F98 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C56B2217291200B03F98 /* BaseListController.swift */; };
 		8870C56E22173A0300B03F98 /* Extensions + layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870C56D22173A0300B03F98 /* Extensions + layout.swift */; };
+		8880BECA2254002C00FB7FD3 /* EditNameInputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8880BEC92254002C00FB7FD3 /* EditNameInputController.swift */; };
 		8891671721B0F8E4000267F7 /* CardSwipingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8891671621B0F8E4000267F7 /* CardSwipingController.swift */; };
 		8897460E21B28C0A00DBF6F6 /* Extensions+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */; };
 		8897461521B4712700DBF6F6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8897461421B4712700DBF6F6 /* Images.xcassets */; };
@@ -67,8 +68,6 @@
 		8897463821BDBFE200DBF6F6 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */; };
 		8897463A21BEF61300DBF6F6 /* Firebase+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463921BEF61300DBF6F6 /* Firebase+Utils.swift */; };
 		8897463F21C194D600DBF6F6 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8897463E21C194D600DBF6F6 /* MainTabBarController.swift */; };
-		8897464921C327F000DBF6F6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8897464821C327F000DBF6F6 /* CoreData.framework */; };
-		8897469D21C378B700DBF6F6 /* mojo_test.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8897469B21C378B700DBF6F6 /* mojo_test.xcdatamodeld */; };
 		889E0FE121D1F24B00A74140 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FE021D1F24B00A74140 /* NotificationService.swift */; };
 		889E0FE521D1F24B00A74140 /* NotificationService.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 889E0FDE21D1F24B00A74140 /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		889E0FF421E409CB00A74140 /* DigitalGood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889E0FF321E409CB00A74140 /* DigitalGood.swift */; };
@@ -182,6 +181,7 @@
 		8870C5692215D73000B03F98 /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		8870C56B2217291200B03F98 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		8870C56D22173A0300B03F98 /* Extensions + layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + layout.swift"; sourceTree = "<group>"; };
+		8880BEC92254002C00FB7FD3 /* EditNameInputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNameInputController.swift; sourceTree = "<group>"; };
 		8891671621B0F8E4000267F7 /* CardSwipingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSwipingController.swift; sourceTree = "<group>"; };
 		8897460D21B28C0A00DBF6F6 /* Extensions+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions+UIView.swift"; sourceTree = "<group>"; };
 		8897461421B4712700DBF6F6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = SOURCE_ROOT; };
@@ -200,8 +200,6 @@
 		8897463721BDBFE200DBF6F6 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8897463921BEF61300DBF6F6 /* Firebase+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Firebase+Utils.swift"; path = "../../../../Documents/Mojo/SwipeMatchFirestoreLBTA 2/SwipeMatchFirestoreLBTA/Extensions/Firebase+Utils.swift"; sourceTree = "<group>"; };
 		8897463E21C194D600DBF6F6 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		8897464821C327F000DBF6F6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		8897469C21C378B700DBF6F6 /* mojo_test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = mojo_test.xcdatamodel; sourceTree = "<group>"; };
 		889E0FDE21D1F24B00A74140 /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		889E0FE021D1F24B00A74140 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		889E0FE221D1F24B00A74140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -252,7 +250,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8897464921C327F000DBF6F6 /* CoreData.framework in Frameworks */,
 				97A73E34B5A7000F26E2048D /* Pods_mojo_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +274,6 @@
 		20175603A15FC16853BB0BDC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8897464821C327F000DBF6F6 /* CoreData.framework */,
 				3B92FAC75E98011E271C4321 /* Pods_mojo_test.framework */,
 				878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */,
 				F1A46049713FFD8EF38D2B91 /* Pods_mojo_testUITests.framework */,
@@ -305,6 +301,7 @@
 				8870C55722088CD500B03F98 /* GenderSelectionController.swift */,
 				8817623E222BC4BB00743689 /* GenderSeekingController.swift */,
 				88C6A46C2226117300703EBD /* LogoutCell.swift */,
+				8880BEC92254002C00FB7FD3 /* EditNameInputController.swift */,
 			);
 			path = "Edit Profile";
 			sourceTree = "<group>";
@@ -517,7 +514,6 @@
 				8897461421B4712700DBF6F6 /* Images.xcassets */,
 				88B5C04121AE6F73004EADFC /* Info.plist */,
 				8897462821B73F5E00DBF6F6 /* GoogleService-Info.plist */,
-				8897469B21C378B700DBF6F6 /* mojo_test.xcdatamodeld */,
 			);
 			path = mojo_test;
 			sourceTree = "<group>";
@@ -817,6 +813,7 @@
 				88A3D6DE21F0D267008286BC /* SentFeedCell.swift in Sources */,
 				8891671721B0F8E4000267F7 /* CardSwipingController.swift in Sources */,
 				8870C54622036E1100B03F98 /* UserDetailFeedbackController.swift in Sources */,
+				8880BECA2254002C00FB7FD3 /* EditNameInputController.swift in Sources */,
 				88A3D6E721F5D40D008286BC /* SignupMainController.swift in Sources */,
 				8870C55C220A58F600B03F98 /* Gift.swift in Sources */,
 				8870C55322062C5A00B03F98 /* SlidingMenuCell.swift in Sources */,
@@ -856,7 +853,6 @@
 				8870C53821FB039000B03F98 /* RequestMessageCell.swift in Sources */,
 				8897463621BDB24E00DBF6F6 /* LoginController.swift in Sources */,
 				8829C52322400C4A001D2044 /* Transaction.swift in Sources */,
-				8897469D21C378B700DBF6F6 /* mojo_test.xcdatamodeld in Sources */,
 				8897462121B6FAD800DBF6F6 /* RegistrationController.swift in Sources */,
 				88A3D6DA21F08C28008286BC /* MenuBar.swift in Sources */,
 				8870C5682214C72D00B03F98 /* HomeController.swift in Sources */,
@@ -1092,20 +1088,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B39CED528515D07CDD5588E9 /* Pods-mojo_test.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = mojo_test/mojo_test.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D5RXZZT78;
 				INFOPLIST_FILE = mojo_test/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mojodating.prealpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1113,20 +1106,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A9154023E1BDE2B631D4978 /* Pods-mojo_test.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = mojo_test/mojo_test.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6D5RXZZT78;
 				INFOPLIST_FILE = mojo_test/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mojodating.prealpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1261,19 +1251,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		8897469B21C378B700DBF6F6 /* mojo_test.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				8897469C21C378B700DBF6F6 /* mojo_test.xcdatamodel */,
-			);
-			currentVersion = 8897469C21C378B700DBF6F6 /* mojo_test.xcdatamodel */;
-			path = mojo_test.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 88B5C02821AE6F71004EADFC /* Project object */;
 }

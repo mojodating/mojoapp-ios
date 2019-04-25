@@ -1,0 +1,36 @@
+dependencies: \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessaging.m \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseMessaging.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/Public/FIRMessaging.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessaging_Private.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingClient.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingConstants.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingContextManagerService.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingDataMessageManager.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingDefines.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingLogger.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMMessageCode.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingPubSub.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingReceiver.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingRemoteNotificationsProxy.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingRmqManager.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingSyncMessageManager.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingUtilities.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/FIRMessagingVersionUtilities.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Private/FIRAppInternal.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Private/FIRErrors.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Private/FIRErrorCode.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/GoogleUtilities.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/Pods/GoogleUtilities/GoogleUtilities/Reachability/Private/GULReachabilityChecker.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseMessaging/Firebase/Messaging/NSError+FIRMessaging.h

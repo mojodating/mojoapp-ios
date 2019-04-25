@@ -1,0 +1,744 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "RegistrationViewModel"
+provides-nominal:
+- "9mojo_test21RegistrationViewModelC"
+provides-member:
+- ["9mojo_test21RegistrationViewModelC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- !private "&&"
+- !private "=="
+- !private "??"
+- "AssignmentPrecedence"
+- !private "Auth"
+- "Bindable"
+- "Bool"
+- !private "BooleanLiteralType"
+- !private "CastingPrecedence"
+- !private "Data"
+- !private "EditProfileController"
+- "Error"
+- !private "FloatLiteralType"
+- "Functions"
+- !private "FunctionsErrorCode"
+- !private "FunctionsErrorDetailsKey"
+- !private "FunctionsErrorDomain"
+- !private "NSError"
+- !private "NSPredicate"
+- "RegistrationViewModel"
+- !private "Storage"
+- "String"
+- !private "StringLiteralType"
+- "UIImage"
+- !private "UUID"
+- "User"
+- !private "print"
+depends-member:
+- !private ["So7FIRAuthC", "auth"]
+- !private ["So7FIRAuthC", "createUser"]
+- !private ["So7FIRAuthC", "currentUser"]
+- !private ["So17FIRAuthDataResultC", "user"]
+- !private ["SK", "init"]
+- !private ["SK", "init"]
+- !private ["SK", "isEmpty"]
+- ["9mojo_test8BindableC", "init"]
+- !private ["9mojo_test8BindableC", "value"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
+- !private ["s7CVarArgP", "auth"]
+- !private ["s7CVarArgP", "call"]
+- !private ["s7CVarArgP", "code"]
+- !private ["s7CVarArgP", "createUser"]
+- !private ["s7CVarArgP", "currentUser"]
+- !private ["s7CVarArgP", "defaultMaxSeekingAge"]
+- !private ["s7CVarArgP", "defaultMinSeekingAge"]
+- !private ["s7CVarArgP", "domain"]
+- !private ["s7CVarArgP", "downloadURL"]
+- !private ["s7CVarArgP", "evaluate"]
+- ["s7CVarArgP", "functions"]
+- !private ["s7CVarArgP", "httpsCallable"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isEmpty"]
+- !private ["s7CVarArgP", "jpegData"]
+- !private ["s7CVarArgP", "localizedDescription"]
+- !private ["s7CVarArgP", "putData"]
+- !private ["s7CVarArgP", "reference"]
+- !private ["s7CVarArgP", "storage"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "uid"]
+- !private ["s7CVarArgP", "user"]
+- !private ["s7CVarArgP", "userInfo"]
+- !private ["Sl", "init"]
+- !private ["Sl", "init"]
+- !private ["Sl", "isEmpty"]
+- !private ["Sl", "subscript"]
+- !private ["SL", "init"]
+- !private ["SL", "init"]
+- !private ["SL", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "absoluteString"]
+- !private ["s28CustomDebugStringConvertibleP", "auth"]
+- !private ["s28CustomDebugStringConvertibleP", "call"]
+- !private ["s28CustomDebugStringConvertibleP", "code"]
+- !private ["s28CustomDebugStringConvertibleP", "createUser"]
+- !private ["s28CustomDebugStringConvertibleP", "currentUser"]
+- !private ["s28CustomDebugStringConvertibleP", "defaultMaxSeekingAge"]
+- !private ["s28CustomDebugStringConvertibleP", "defaultMinSeekingAge"]
+- !private ["s28CustomDebugStringConvertibleP", "domain"]
+- !private ["s28CustomDebugStringConvertibleP", "downloadURL"]
+- !private ["s28CustomDebugStringConvertibleP", "evaluate"]
+- ["s28CustomDebugStringConvertibleP", "functions"]
+- !private ["s28CustomDebugStringConvertibleP", "httpsCallable"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
+- !private ["s28CustomDebugStringConvertibleP", "jpegData"]
+- !private ["s28CustomDebugStringConvertibleP", "localizedDescription"]
+- !private ["s28CustomDebugStringConvertibleP", "putData"]
+- !private ["s28CustomDebugStringConvertibleP", "reference"]
+- !private ["s28CustomDebugStringConvertibleP", "storage"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "uid"]
+- !private ["s28CustomDebugStringConvertibleP", "user"]
+- !private ["s28CustomDebugStringConvertibleP", "userInfo"]
+- !private ["s28CustomDebugStringConvertibleP", "uuidString"]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s29CustomPlaygroundQuickLookableP", "absoluteString"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s29CustomPlaygroundQuickLookableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "isEmpty"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "uuidString"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "absoluteString"]
+- !private ["s23CustomStringConvertibleP", "auth"]
+- !private ["s23CustomStringConvertibleP", "call"]
+- !private ["s23CustomStringConvertibleP", "code"]
+- !private ["s23CustomStringConvertibleP", "createUser"]
+- !private ["s23CustomStringConvertibleP", "currentUser"]
+- !private ["s23CustomStringConvertibleP", "defaultMaxSeekingAge"]
+- !private ["s23CustomStringConvertibleP", "defaultMinSeekingAge"]
+- !private ["s23CustomStringConvertibleP", "domain"]
+- !private ["s23CustomStringConvertibleP", "downloadURL"]
+- !private ["s23CustomStringConvertibleP", "evaluate"]
+- ["s23CustomStringConvertibleP", "functions"]
+- !private ["s23CustomStringConvertibleP", "httpsCallable"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isEmpty"]
+- !private ["s23CustomStringConvertibleP", "jpegData"]
+- !private ["s23CustomStringConvertibleP", "localizedDescription"]
+- !private ["s23CustomStringConvertibleP", "putData"]
+- !private ["s23CustomStringConvertibleP", "reference"]
+- !private ["s23CustomStringConvertibleP", "storage"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "uid"]
+- !private ["s23CustomStringConvertibleP", "user"]
+- !private ["s23CustomStringConvertibleP", "userInfo"]
+- !private ["s23CustomStringConvertibleP", "uuidString"]
+- !private ["10Foundation4DataV", "init"]
+- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["Se", "absoluteString"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "isEmpty"]
+- !private ["Se", "subscript"]
+- !private ["Se", "uuidString"]
+- !private ["SD", "subscript"]
+- !private ["9mojo_test21EditProfileControllerC", "defaultMaxSeekingAge"]
+- !private ["9mojo_test21EditProfileControllerC", "defaultMinSeekingAge"]
+- !private ["SE", "_getBuiltinLogicValue"]
+- !private ["SE", "absoluteString"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "isEmpty"]
+- !private ["SE", "subscript"]
+- !private ["SE", "uuidString"]
+- !private ["SQ", "_getBuiltinLogicValue"]
+- !private ["SQ", "absoluteString"]
+- !private ["SQ", "auth"]
+- !private ["SQ", "call"]
+- !private ["SQ", "code"]
+- !private ["SQ", "createUser"]
+- !private ["SQ", "currentUser"]
+- !private ["SQ", "defaultMaxSeekingAge"]
+- !private ["SQ", "defaultMinSeekingAge"]
+- !private ["SQ", "domain"]
+- !private ["SQ", "downloadURL"]
+- !private ["SQ", "evaluate"]
+- ["SQ", "functions"]
+- !private ["SQ", "httpsCallable"]
+- !private ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "isEmpty"]
+- !private ["SQ", "jpegData"]
+- !private ["SQ", "localizedDescription"]
+- !private ["SQ", "putData"]
+- !private ["SQ", "reference"]
+- !private ["SQ", "storage"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "uid"]
+- !private ["SQ", "user"]
+- !private ["SQ", "userInfo"]
+- !private ["SQ", "uuidString"]
+- !private ["s5ErrorP", "code"]
+- !private ["s5ErrorP", "domain"]
+- !private ["s5ErrorP", "localizedDescription"]
+- !private ["s5ErrorP", "userInfo"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "isEmpty"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "isEmpty"]
+- ["So12FIRFunctionsC", "functions"]
+- !private ["So12FIRFunctionsC", "httpsCallable"]
+- !private ["So21FIRFunctionsErrorCodeV", "init"]
+- !private ["So16FIRHTTPSCallableC", "call"]
+- !private ["SH", "_getBuiltinLogicValue"]
+- !private ["SH", "absoluteString"]
+- !private ["SH", "auth"]
+- !private ["SH", "call"]
+- !private ["SH", "code"]
+- !private ["SH", "createUser"]
+- !private ["SH", "currentUser"]
+- !private ["SH", "defaultMaxSeekingAge"]
+- !private ["SH", "defaultMinSeekingAge"]
+- !private ["SH", "domain"]
+- !private ["SH", "downloadURL"]
+- !private ["SH", "evaluate"]
+- ["SH", "functions"]
+- !private ["SH", "httpsCallable"]
+- !private ["SH", "init"]
+- !private ["SH", "init"]
+- !private ["SH", "isEmpty"]
+- !private ["SH", "jpegData"]
+- !private ["SH", "localizedDescription"]
+- !private ["SH", "putData"]
+- !private ["SH", "reference"]
+- !private ["SH", "storage"]
+- !private ["SH", "subscript"]
+- !private ["SH", "uid"]
+- !private ["SH", "user"]
+- !private ["SH", "userInfo"]
+- !private ["SH", "uuidString"]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "init"]
+- !private ["s25LosslessStringConvertibleP", "isEmpty"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "init"]
+- !private ["s10MirrorPathP", "isEmpty"]
+- !private ["SM", "init"]
+- !private ["So8NSCodingP", "code"]
+- !private ["So8NSCodingP", "defaultMaxSeekingAge"]
+- !private ["So8NSCodingP", "defaultMinSeekingAge"]
+- !private ["So8NSCodingP", "domain"]
+- !private ["So8NSCodingP", "evaluate"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "isEmpty"]
+- !private ["So8NSCodingP", "jpegData"]
+- !private ["So8NSCodingP", "localizedDescription"]
+- !private ["So8NSCodingP", "userInfo"]
+- !private ["So9NSCopyingP", "code"]
+- !private ["So9NSCopyingP", "domain"]
+- !private ["So9NSCopyingP", "evaluate"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So9NSCopyingP", "isEmpty"]
+- !private ["So9NSCopyingP", "localizedDescription"]
+- !private ["So9NSCopyingP", "userInfo"]
+- !private ["So7NSErrorC", "code"]
+- !private ["So7NSErrorC", "domain"]
+- !private ["So7NSErrorC", "localizedDescription"]
+- !private ["So7NSErrorC", "userInfo"]
+- !private ["So26NSExtensionRequestHandlingP", "defaultMaxSeekingAge"]
+- !private ["So26NSExtensionRequestHandlingP", "defaultMinSeekingAge"]
+- !private ["So21NSItemProviderReadingP", "isEmpty"]
+- !private ["So21NSItemProviderReadingP", "jpegData"]
+- !private ["So21NSItemProviderWritingP", "isEmpty"]
+- !private ["So21NSItemProviderWritingP", "jpegData"]
+- !private ["So16NSMutableCopyingP", "isEmpty"]
+- !private ["So8NSObjectC", "auth"]
+- !private ["So8NSObjectC", "call"]
+- !private ["So8NSObjectC", "code"]
+- !private ["So8NSObjectC", "createUser"]
+- !private ["So8NSObjectC", "currentUser"]
+- !private ["So8NSObjectC", "defaultMaxSeekingAge"]
+- !private ["So8NSObjectC", "defaultMinSeekingAge"]
+- !private ["So8NSObjectC", "domain"]
+- !private ["So8NSObjectC", "downloadURL"]
+- !private ["So8NSObjectC", "evaluate"]
+- ["So8NSObjectC", "functions"]
+- !private ["So8NSObjectC", "httpsCallable"]
+- !private ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isEmpty"]
+- !private ["So8NSObjectC", "jpegData"]
+- !private ["So8NSObjectC", "localizedDescription"]
+- !private ["So8NSObjectC", "putData"]
+- !private ["So8NSObjectC", "reference"]
+- !private ["So8NSObjectC", "storage"]
+- !private ["So8NSObjectC", "uid"]
+- !private ["So8NSObjectC", "user"]
+- !private ["So8NSObjectC", "userInfo"]
+- !private ["So8NSObjectP", "auth"]
+- !private ["So8NSObjectP", "call"]
+- !private ["So8NSObjectP", "code"]
+- !private ["So8NSObjectP", "createUser"]
+- !private ["So8NSObjectP", "currentUser"]
+- !private ["So8NSObjectP", "defaultMaxSeekingAge"]
+- !private ["So8NSObjectP", "defaultMinSeekingAge"]
+- !private ["So8NSObjectP", "domain"]
+- !private ["So8NSObjectP", "downloadURL"]
+- !private ["So8NSObjectP", "evaluate"]
+- ["So8NSObjectP", "functions"]
+- !private ["So8NSObjectP", "httpsCallable"]
+- !private ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "isEmpty"]
+- !private ["So8NSObjectP", "jpegData"]
+- !private ["So8NSObjectP", "localizedDescription"]
+- !private ["So8NSObjectP", "putData"]
+- !private ["So8NSObjectP", "reference"]
+- !private ["So8NSObjectP", "storage"]
+- !private ["So8NSObjectP", "uid"]
+- !private ["So8NSObjectP", "user"]
+- !private ["So8NSObjectP", "userInfo"]
+- !private ["So11NSPredicateC", "evaluate"]
+- !private ["So11NSPredicateC", "init"]
+- !private ["So14NSSecureCodingP", "code"]
+- !private ["So14NSSecureCodingP", "domain"]
+- !private ["So14NSSecureCodingP", "evaluate"]
+- !private ["So14NSSecureCodingP", "init"]
+- !private ["So14NSSecureCodingP", "isEmpty"]
+- !private ["So14NSSecureCodingP", "jpegData"]
+- !private ["So14NSSecureCodingP", "localizedDescription"]
+- !private ["So14NSSecureCodingP", "userInfo"]
+- !private ["So8NSStringC", "isEmpty"]
+- !private ["Sk", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "init"]
+- !private ["Sm", "isEmpty"]
+- !private ["SY", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "absoluteString"]
+- !private ["10Foundation20ReferenceConvertibleP", "init"]
+- !private ["10Foundation20ReferenceConvertibleP", "uuidString"]
+- !private ["9mojo_test21RegistrationViewModelC", "Auth"]
+- ["9mojo_test21RegistrationViewModelC", "Bindable"]
+- ["9mojo_test21RegistrationViewModelC", "Bool"]
+- !private ["9mojo_test21RegistrationViewModelC", "Data"]
+- !private ["9mojo_test21RegistrationViewModelC", "EditProfileController"]
+- ["9mojo_test21RegistrationViewModelC", "Error"]
+- ["9mojo_test21RegistrationViewModelC", "Functions"]
+- !private ["9mojo_test21RegistrationViewModelC", "FunctionsErrorCode"]
+- !private ["9mojo_test21RegistrationViewModelC", "FunctionsErrorDetailsKey"]
+- !private ["9mojo_test21RegistrationViewModelC", "FunctionsErrorDomain"]
+- !private ["9mojo_test21RegistrationViewModelC", "NSError"]
+- !private ["9mojo_test21RegistrationViewModelC", "NSPredicate"]
+- !private ["9mojo_test21RegistrationViewModelC", "Storage"]
+- ["9mojo_test21RegistrationViewModelC", "String"]
+- ["9mojo_test21RegistrationViewModelC", "UIImage"]
+- !private ["9mojo_test21RegistrationViewModelC", "UUID"]
+- ["9mojo_test21RegistrationViewModelC", "User"]
+- ["9mojo_test21RegistrationViewModelC", "bindableImage"]
+- ["9mojo_test21RegistrationViewModelC", "bindableIsFormValid"]
+- ["9mojo_test21RegistrationViewModelC", "bindableIsRegistering"]
+- ["9mojo_test21RegistrationViewModelC", "checkFormValidity"]
+- ["9mojo_test21RegistrationViewModelC", "email"]
+- ["9mojo_test21RegistrationViewModelC", "fullName"]
+- ["9mojo_test21RegistrationViewModelC", "functions"]
+- !private ["9mojo_test21RegistrationViewModelC", "functions.storage"]
+- ["9mojo_test21RegistrationViewModelC", "init"]
+- ["9mojo_test21RegistrationViewModelC", "inviteCode"]
+- ["9mojo_test21RegistrationViewModelC", "isValidEmail"]
+- ["9mojo_test21RegistrationViewModelC", "isValidPassword"]
+- ["9mojo_test21RegistrationViewModelC", "password"]
+- ["9mojo_test21RegistrationViewModelC", "performRegistration"]
+- !private ["9mojo_test21RegistrationViewModelC", "print"]
+- !private ["9mojo_test21RegistrationViewModelC", "saveImageToFirebase"]
+- !private ["9mojo_test21RegistrationViewModelC", "saveInfoToFirestore"]
+- ["9mojo_test21RegistrationViewModelC", "user"]
+- !private ["ST", "init"]
+- !private ["ST", "init"]
+- !private ["ST", "isEmpty"]
+- !private ["ST", "subscript"]
+- !private ["So10FIRStorageC", "reference"]
+- !private ["So10FIRStorageC", "storage"]
+- !private ["So19FIRStorageReferenceC", "downloadURL"]
+- !private ["So19FIRStorageReferenceC", "putData"]
+- !private ["SS", "init"]
+- !private ["SS", "init"]
+- !private ["SS", "isEmpty"]
+- !private ["Sy", "init"]
+- !private ["Sy", "init"]
+- !private ["Sy", "isEmpty"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "init"]
+- !private ["s16TextOutputStreamP", "isEmpty"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "init"]
+- !private ["s20TextOutputStreamableP", "isEmpty"]
+- !private ["So29UIAccessibilityIdentificationP", "jpegData"]
+- !private ["So21UIAppearanceContainerP", "defaultMaxSeekingAge"]
+- !private ["So21UIAppearanceContainerP", "defaultMinSeekingAge"]
+- !private ["So18UIContentContainerP", "defaultMaxSeekingAge"]
+- !private ["So18UIContentContainerP", "defaultMinSeekingAge"]
+- !private ["So18UIFocusEnvironmentP", "defaultMaxSeekingAge"]
+- !private ["So18UIFocusEnvironmentP", "defaultMinSeekingAge"]
+- !private ["So7UIImageC", "jpegData"]
+- !private ["So31UIImagePickerControllerDelegateP", "defaultMaxSeekingAge"]
+- !private ["So31UIImagePickerControllerDelegateP", "defaultMinSeekingAge"]
+- !private ["So39UIItemProviderPresentationSizeProvidingP", "jpegData"]
+- !private ["So30UINavigationControllerDelegateP", "defaultMaxSeekingAge"]
+- !private ["So30UINavigationControllerDelegateP", "defaultMinSeekingAge"]
+- !private ["So30UIPasteConfigurationSupportingP", "defaultMaxSeekingAge"]
+- !private ["So30UIPasteConfigurationSupportingP", "defaultMinSeekingAge"]
+- !private ["So11UIResponderC", "defaultMaxSeekingAge"]
+- !private ["So11UIResponderC", "defaultMinSeekingAge"]
+- !private ["So30UIResponderStandardEditActionsP", "defaultMaxSeekingAge"]
+- !private ["So30UIResponderStandardEditActionsP", "defaultMinSeekingAge"]
+- !private ["So20UIScrollViewDelegateP", "defaultMaxSeekingAge"]
+- !private ["So20UIScrollViewDelegateP", "defaultMinSeekingAge"]
+- !private ["So16UIStateRestoringP", "defaultMaxSeekingAge"]
+- !private ["So16UIStateRestoringP", "defaultMinSeekingAge"]
+- !private ["So21UITableViewControllerC", "defaultMaxSeekingAge"]
+- !private ["So21UITableViewControllerC", "defaultMinSeekingAge"]
+- !private ["So21UITableViewDataSourceP", "defaultMaxSeekingAge"]
+- !private ["So21UITableViewDataSourceP", "defaultMinSeekingAge"]
+- !private ["So19UITableViewDelegateP", "defaultMaxSeekingAge"]
+- !private ["So19UITableViewDelegateP", "defaultMinSeekingAge"]
+- !private ["So18UITraitEnvironmentP", "defaultMaxSeekingAge"]
+- !private ["So18UITraitEnvironmentP", "defaultMinSeekingAge"]
+- !private ["So23UIUserActivityRestoringP", "defaultMaxSeekingAge"]
+- !private ["So23UIUserActivityRestoringP", "defaultMinSeekingAge"]
+- !private ["So16UIViewControllerC", "defaultMaxSeekingAge"]
+- !private ["So16UIViewControllerC", "defaultMinSeekingAge"]
+- !private ["10Foundation3URLV", "absoluteString"]
+- !private ["10Foundation4UUIDV", "init"]
+- !private ["10Foundation4UUIDV", "uuidString"]
+- !private ["So7FIRUserC", "uid"]
+- !private ["So11FIRUserInfoP", "uid"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "isEmpty"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "isEmpty"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "isEmpty"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "isEmpty"]
+- !private ["s34_ExpressibleByFileReferenceLiteralP", "absoluteString"]
+- !private ["s26_ExpressibleByImageLiteralP", "jpegData"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s33_ExpressibleByStringInterpolationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "isEmpty"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "auth"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "call"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "code"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "createUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "defaultMaxSeekingAge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "defaultMinSeekingAge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "domain"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "downloadURL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "evaluate"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "functions"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "httpsCallable"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "jpegData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "localizedDescription"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "putData"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reference"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "storage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "uid"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "absoluteString"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "uuidString"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s16_SwiftStringViewP", "isEmpty"]
+depends-nominal:
+- !private "So7FIRAuthC"
+- !private "So17FIRAuthDataResultC"
+- !private "SK"
+- "9mojo_test8BindableC"
+- !private "Sb"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation4DataV"
+- !private "Se"
+- !private "SD"
+- !private "9mojo_test21EditProfileControllerC"
+- !private "SE"
+- "SQ"
+- !private "s5ErrorP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "So12FIRFunctionsC"
+- !private "So21FIRFunctionsErrorCodeV"
+- !private "So16FIRHTTPSCallableC"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "s10MirrorPathP"
+- !private "SM"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So7NSErrorC"
+- !private "So26NSExtensionRequestHandlingP"
+- !private "So21NSItemProviderReadingP"
+- !private "So21NSItemProviderWritingP"
+- !private "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So11NSPredicateC"
+- !private "So14NSSecureCodingP"
+- !private "So8NSStringC"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "10Foundation20ReferenceConvertibleP"
+- "9mojo_test21RegistrationViewModelC"
+- !private "ST"
+- !private "So10FIRStorageC"
+- !private "So19FIRStorageReferenceC"
+- !private "SS"
+- !private "Sy"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So21UIAppearanceContainerP"
+- !private "So18UIContentContainerP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So7UIImageC"
+- !private "So31UIImagePickerControllerDelegateP"
+- !private "So39UIItemProviderPresentationSizeProvidingP"
+- !private "So30UINavigationControllerDelegateP"
+- !private "So30UIPasteConfigurationSupportingP"
+- !private "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So20UIScrollViewDelegateP"
+- !private "So16UIStateRestoringP"
+- !private "So21UITableViewControllerC"
+- !private "So21UITableViewDataSourceP"
+- !private "So19UITableViewDelegateP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- !private "So16UIViewControllerC"
+- !private "10Foundation3URLV"
+- !private "10Foundation4UUIDV"
+- !private "So7FIRUserC"
+- !private "So11FIRUserInfoP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s34_ExpressibleByFileReferenceLiteralP"
+- !private "s26_ExpressibleByImageLiteralP"
+- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/x86_64.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+GIF.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Headers/Cosmos-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-umbrella.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRSnapshotMetadata.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRCollectionReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentReference.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSource.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+ForceDecode.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentChange.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSImage+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSButton+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImageView+WebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImageView+HighlightedWebCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDImageCache.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRHTTPSCallable.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageFrame.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthAPNSTokenType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/NSData+ImageContentType.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/Firebase.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthUIDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldValue.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDImageCacheConfig.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FIRMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRWriteBatch.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFieldPath.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageDownloadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageUploadTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageObservableTask.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthCredential.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRLoggerLevel.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuthVersion.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDFadeZoomAnimation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIView+WebCacheOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloaderOperation.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRListenerRegistration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRAnalyticsConfiguration.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTransaction.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageTransition.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAdditionalUserInfo.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDAnimatedImageRep.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRTimestamp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIRApp.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageDownloader.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIROAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGitHubAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRGoogleAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRPhoneAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRFacebookAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIREmailAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRTwitterAuthProvider.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageGIFCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageImageIOCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoder.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCodersManager.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImagePrefetcher.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCoderHelper.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRUser.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRError.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-Defines.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRActionCodeSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthSettings.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FIRFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FIROptions.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRFirestoreErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthErrors.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageConstants.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+MultiFormat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImageCompat.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Headers/Cosmos-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-Swift.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthDataResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FIRAuthTokenResult.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRGeoPoint.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FIRStorageTaskSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRDocumentSnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuerySnapshot.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/UIImage+MemoryCacheCost.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDImageIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDPieIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDIndeterminateIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDRingIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDErrorIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDSuccessIndicatorView.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUDShadow.h"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FIRQuery.h"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/module.modulemap"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "5056d8868c88fddb9c1c6147509462ec"

@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate {
+class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate, SentFeedCellDelegate {
     
     let chatRequestCellId = "chatRequestCellId"
     let chatCellId = "chatCellId"
@@ -19,7 +19,6 @@ class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, Ch
         super.viewDidLoad()
 
         collectionView.backgroundColor = .white
-//        fetchChatListsFromServer()
         setupNavBar()
         setupLayout()
         
@@ -38,14 +37,6 @@ class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, Ch
     fileprivate func setupNavBar() {
         navigationItem.title = "Chat"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        
-//        navigationController?.navigationBar.tintColor = .white
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.navigationBar.isTranslucent = false
-//        navigationController?.view.backgroundColor = .white
-//        navigationController?.navigationBar.clipsToBounds = true
-//        navigationController?.navigationBar.isTranslucent = false
 
     }
     
@@ -157,7 +148,6 @@ class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, Ch
         let chatLogController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
         chatLogController.conversation = conversation
         navigationController?.pushViewController(chatLogController, animated: true)
-
     }
     
 }

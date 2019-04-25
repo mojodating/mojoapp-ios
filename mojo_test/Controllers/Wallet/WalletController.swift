@@ -72,7 +72,9 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
                 for document in querySnapshot!.documents {
                     let giftType = document.data()
                     let gift = Gift(giftType: giftType)
-                    self.gifts.append(gift)
+                    if gift.blocked != true {
+                        self.gifts.append(gift)
+                    }
                     self.collectionView.reloadData()
                 }
             }
@@ -145,17 +147,21 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section != 0 {
-            collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+            collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 0.3355896832)
             let gift = gifts[indexPath.row]
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             
             alertController.addAction(UIAlertAction(title: "Send to ..", style: .default, handler: { (_) in
                 let sendGiftController = SendGiftController()
                 sendGiftController.gift = gift
-                self.navigationController?.pushViewController(sendGiftController, animated: true)
+            self.navigationController?.pushViewController(sendGiftController, animated: true)
+                
+                collectionView.cellForItem(at: indexPath)?.backgroundColor = .clear
             }))
             
-            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+                collectionView.cellForItem(at: indexPath)?.backgroundColor = .clear
+            }))
             
             present(alertController, animated: true, completion: nil)
         }
@@ -172,9 +178,6 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
     fileprivate func setupNavigationBar() {
         self.navigationItem.title = "Wallet"
         self.navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        navigationController?.navigationBar.shadowImage = UIImage()
-//        navigationController?.view.backgroundColor = .white
     }
   
     @objc fileprivate func handleAccount() {

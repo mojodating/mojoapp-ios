@@ -1,0 +1,47 @@
+dependencies: \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/src/core/tsi/alts/crypt/aes_gcm.cc \
+  /Users/yunyunchen1/dev/mojo-test/Pods/Target\ Support\ Files/gRPC-Core/gRPC-Core-prefix.pch \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/support/port_platform.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/port_platform.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/src/core/tsi/grpc_shadow_boringssl.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/src/core/tsi/alts/crypt/gsec.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/grpc.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/status.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/status.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/byte_buffer.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/byte_buffer.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/grpc_types.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/compression_types.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/gpr_types.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/slice.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/gpr_slice.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/slice_buffer.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/slice.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/support/sync.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/sync.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/sync_generic.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/atm.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/atm_gcc_atomic.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/sync_posix.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/connectivity_state.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/impl/codegen/propagation_bits.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/support/time.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/bio.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/base.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/is_boringssl.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/opensslconf.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/buffer.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/buf.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/err.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/ex_data.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/stack.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/type_check.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/thread.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/evp.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/aead.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/base64.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/cipher.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/digest.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/nid.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/hmac.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/include/grpc/support/alloc.h

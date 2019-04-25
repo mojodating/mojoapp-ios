@@ -1,0 +1,500 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "GiftHeaderCell"
+provides-nominal:
+- "9mojo_test14GiftHeaderCellC"
+provides-member:
+- ["9mojo_test14GiftHeaderCellC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "Array"
+- "AssignmentPrecedence"
+- "CGRect"
+- "FloatLiteralType"
+- "GiftHeaderCell"
+- "IntegerLiteralType"
+- "NSCoder"
+- "StringLiteralType"
+- "UICollectionViewCell"
+- "UILabel"
+- !private "UIStackView"
+- !private "fatalError"
+depends-member:
+- ["SK", "init"]
+- ["SK", "init"]
+- !private ["So15CALayerDelegateP", "GiftHeaderLabel"]
+- ["So15CALayerDelegateP", "UILabel"]
+- !private ["So15CALayerDelegateP", "UIStackView"]
+- ["So15CALayerDelegateP", ""]
+- !private ["So15CALayerDelegateP", "addSubview"]
+- !private ["So15CALayerDelegateP", "balanceLabel"]
+- !private ["So15CALayerDelegateP", "distribution"]
+- !private ["So15CALayerDelegateP", "fatalError"]
+- !private ["So15CALayerDelegateP", "fillSuperview"]
+- ["So15CALayerDelegateP", "init"]
+- !private ["s7CVarArgP", "GiftHeaderLabel"]
+- ["s7CVarArgP", "UILabel"]
+- !private ["s7CVarArgP", "UIStackView"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addSubview"]
+- !private ["s7CVarArgP", "balanceLabel"]
+- !private ["s7CVarArgP", "distribution"]
+- !private ["s7CVarArgP", "fatalError"]
+- !private ["s7CVarArgP", "fillSuperview"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "init"]
+- ["s7CVarArgP", "systemFont"]
+- ["Sl", "init"]
+- ["Sl", "init"]
+- ["SL", "init"]
+- ["SL", "init"]
+- ["SL", "medium"]
+- ["SL", "semibold"]
+- !private ["s28CustomDebugStringConvertibleP", "GiftHeaderLabel"]
+- ["s28CustomDebugStringConvertibleP", "UILabel"]
+- !private ["s28CustomDebugStringConvertibleP", "UIStackView"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addSubview"]
+- !private ["s28CustomDebugStringConvertibleP", "balanceLabel"]
+- !private ["s28CustomDebugStringConvertibleP", "distribution"]
+- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- !private ["s28CustomDebugStringConvertibleP", "fillSuperview"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- ["s28CustomDebugStringConvertibleP", "systemFont"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "GiftHeaderLabel"]
+- ["s23CustomStringConvertibleP", "UILabel"]
+- !private ["s23CustomStringConvertibleP", "UIStackView"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addSubview"]
+- !private ["s23CustomStringConvertibleP", "balanceLabel"]
+- !private ["s23CustomStringConvertibleP", "distribution"]
+- !private ["s23CustomStringConvertibleP", "fatalError"]
+- !private ["s23CustomStringConvertibleP", "fillSuperview"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "init"]
+- ["s23CustomStringConvertibleP", "systemFont"]
+- ["Se", "init"]
+- ["Se", "init"]
+- !private ["So23UIStackViewDistributionV", "fill"]
+- ["SE", "init"]
+- ["SE", "init"]
+- !private ["SQ", "GiftHeaderLabel"]
+- ["SQ", "UILabel"]
+- !private ["SQ", "UIStackView"]
+- ["SQ", ""]
+- !private ["SQ", "addSubview"]
+- !private ["SQ", "balanceLabel"]
+- !private ["SQ", "distribution"]
+- !private ["SQ", "fatalError"]
+- !private ["SQ", "fill"]
+- !private ["SQ", "fillSuperview"]
+- ["SQ", "init"]
+- ["SQ", "init"]
+- ["SQ", "medium"]
+- ["SQ", "semibold"]
+- ["SQ", "systemFont"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["9mojo_test14GiftHeaderCellC", "CGRect"]
+- ["9mojo_test14GiftHeaderCellC", "GiftHeaderLabel"]
+- ["9mojo_test14GiftHeaderCellC", "NSCoder"]
+- ["9mojo_test14GiftHeaderCellC", "UILabel"]
+- !private ["9mojo_test14GiftHeaderCellC", "UIStackView"]
+- !private ["9mojo_test14GiftHeaderCellC", "addSubview"]
+- ["9mojo_test14GiftHeaderCellC", "balanceLabel"]
+- !private ["9mojo_test14GiftHeaderCellC", "fatalError"]
+- ["9mojo_test14GiftHeaderCellC", "init"]
+- !private ["SH", "GiftHeaderLabel"]
+- ["SH", "UILabel"]
+- !private ["SH", "UIStackView"]
+- ["SH", ""]
+- !private ["SH", "addSubview"]
+- !private ["SH", "balanceLabel"]
+- !private ["SH", "distribution"]
+- !private ["SH", "fatalError"]
+- !private ["SH", "fill"]
+- !private ["SH", "fillSuperview"]
+- ["SH", "init"]
+- ["SH", "init"]
+- ["SH", "medium"]
+- ["SH", "semibold"]
+- ["SH", "systemFont"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["So8NSCodingP", "GiftHeaderLabel"]
+- ["So8NSCodingP", "UILabel"]
+- !private ["So8NSCodingP", "UIStackView"]
+- ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "addSubview"]
+- !private ["So8NSCodingP", "balanceLabel"]
+- !private ["So8NSCodingP", "distribution"]
+- !private ["So8NSCodingP", "fatalError"]
+- !private ["So8NSCodingP", "fillSuperview"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "systemFont"]
+- ["So8NSObjectC", "CGRect"]
+- ["So8NSObjectC", "GiftHeaderLabel"]
+- ["So8NSObjectC", "NSCoder"]
+- ["So8NSObjectC", "UILabel"]
+- !private ["So8NSObjectC", "UIStackView"]
+- !private ["So8NSObjectC", "addSubview"]
+- ["So8NSObjectC", "balanceLabel"]
+- !private ["So8NSObjectC", "distribution"]
+- !private ["So8NSObjectC", "fatalError"]
+- !private ["So8NSObjectC", "fillSuperview"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "systemFont"]
+- !private ["So8NSObjectP", "GiftHeaderLabel"]
+- ["So8NSObjectP", "UILabel"]
+- !private ["So8NSObjectP", "UIStackView"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "addSubview"]
+- !private ["So8NSObjectP", "balanceLabel"]
+- !private ["So8NSObjectP", "distribution"]
+- !private ["So8NSObjectP", "fatalError"]
+- !private ["So8NSObjectP", "fillSuperview"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "systemFont"]
+- ["Sm", "init"]
+- ["Sm", "init"]
+- !private ["SY", "fill"]
+- ["SY", "medium"]
+- ["SY", "semibold"]
+- ["ST", "init"]
+- ["ST", "init"]
+- !private ["s12StaticStringV", "init"]
+- !private ["s12StaticStringV", "init"]
+- ["SS", "init"]
+- ["SS", "init"]
+- ["Sy", "init"]
+- ["Sy", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "GiftHeaderLabel"]
+- ["So29UIAccessibilityIdentificationP", "UILabel"]
+- !private ["So29UIAccessibilityIdentificationP", "UIStackView"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "addSubview"]
+- !private ["So29UIAccessibilityIdentificationP", "balanceLabel"]
+- !private ["So29UIAccessibilityIdentificationP", "distribution"]
+- !private ["So29UIAccessibilityIdentificationP", "fatalError"]
+- !private ["So29UIAccessibilityIdentificationP", "fillSuperview"]
+- ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So12UIAppearanceP", "GiftHeaderLabel"]
+- ["So12UIAppearanceP", "UILabel"]
+- !private ["So12UIAppearanceP", "UIStackView"]
+- ["So12UIAppearanceP", ""]
+- !private ["So12UIAppearanceP", "addSubview"]
+- !private ["So12UIAppearanceP", "balanceLabel"]
+- !private ["So12UIAppearanceP", "distribution"]
+- !private ["So12UIAppearanceP", "fatalError"]
+- !private ["So12UIAppearanceP", "fillSuperview"]
+- ["So12UIAppearanceP", "init"]
+- !private ["So21UIAppearanceContainerP", "GiftHeaderLabel"]
+- ["So21UIAppearanceContainerP", "UILabel"]
+- !private ["So21UIAppearanceContainerP", "UIStackView"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "addSubview"]
+- !private ["So21UIAppearanceContainerP", "balanceLabel"]
+- !private ["So21UIAppearanceContainerP", "distribution"]
+- !private ["So21UIAppearanceContainerP", "fatalError"]
+- !private ["So21UIAppearanceContainerP", "fillSuperview"]
+- ["So21UIAppearanceContainerP", "init"]
+- ["So24UICollectionReusableViewC", "CGRect"]
+- ["So24UICollectionReusableViewC", "GiftHeaderLabel"]
+- ["So24UICollectionReusableViewC", "NSCoder"]
+- ["So24UICollectionReusableViewC", "UILabel"]
+- !private ["So24UICollectionReusableViewC", "UIStackView"]
+- !private ["So24UICollectionReusableViewC", "addSubview"]
+- ["So24UICollectionReusableViewC", "balanceLabel"]
+- !private ["So24UICollectionReusableViewC", "fatalError"]
+- ["So24UICollectionReusableViewC", "init"]
+- ["So20UICollectionViewCellC", "CGRect"]
+- ["So20UICollectionViewCellC", "GiftHeaderLabel"]
+- ["So20UICollectionViewCellC", "NSCoder"]
+- ["So20UICollectionViewCellC", "UILabel"]
+- !private ["So20UICollectionViewCellC", "UIStackView"]
+- ["So20UICollectionViewCellC", ""]
+- !private ["So20UICollectionViewCellC", "addSubview"]
+- ["So20UICollectionViewCellC", "balanceLabel"]
+- !private ["So20UICollectionViewCellC", "fatalError"]
+- ["So20UICollectionViewCellC", "init"]
+- ["So30UIContentSizeCategoryAdjustingP", "init"]
+- !private ["So17UICoordinateSpaceP", "GiftHeaderLabel"]
+- ["So17UICoordinateSpaceP", "UILabel"]
+- !private ["So17UICoordinateSpaceP", "UIStackView"]
+- ["So17UICoordinateSpaceP", ""]
+- !private ["So17UICoordinateSpaceP", "addSubview"]
+- !private ["So17UICoordinateSpaceP", "balanceLabel"]
+- !private ["So17UICoordinateSpaceP", "distribution"]
+- !private ["So17UICoordinateSpaceP", "fatalError"]
+- !private ["So17UICoordinateSpaceP", "fillSuperview"]
+- ["So17UICoordinateSpaceP", "init"]
+- !private ["So13UIDynamicItemP", "GiftHeaderLabel"]
+- ["So13UIDynamicItemP", "UILabel"]
+- !private ["So13UIDynamicItemP", "UIStackView"]
+- ["So13UIDynamicItemP", ""]
+- !private ["So13UIDynamicItemP", "addSubview"]
+- !private ["So13UIDynamicItemP", "balanceLabel"]
+- !private ["So13UIDynamicItemP", "distribution"]
+- !private ["So13UIDynamicItemP", "fatalError"]
+- !private ["So13UIDynamicItemP", "fillSuperview"]
+- ["So13UIDynamicItemP", "init"]
+- !private ["So12UIEdgeInsetsV", "init"]
+- !private ["So12UIEdgeInsetsV", "init"]
+- !private ["So18UIFocusEnvironmentP", "GiftHeaderLabel"]
+- ["So18UIFocusEnvironmentP", "UILabel"]
+- !private ["So18UIFocusEnvironmentP", "UIStackView"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "addSubview"]
+- !private ["So18UIFocusEnvironmentP", "balanceLabel"]
+- !private ["So18UIFocusEnvironmentP", "distribution"]
+- !private ["So18UIFocusEnvironmentP", "fatalError"]
+- !private ["So18UIFocusEnvironmentP", "fillSuperview"]
+- ["So18UIFocusEnvironmentP", "init"]
+- !private ["So11UIFocusItemP", "GiftHeaderLabel"]
+- ["So11UIFocusItemP", "UILabel"]
+- !private ["So11UIFocusItemP", "UIStackView"]
+- ["So11UIFocusItemP", ""]
+- !private ["So11UIFocusItemP", "addSubview"]
+- !private ["So11UIFocusItemP", "balanceLabel"]
+- !private ["So11UIFocusItemP", "distribution"]
+- !private ["So11UIFocusItemP", "fatalError"]
+- !private ["So11UIFocusItemP", "fillSuperview"]
+- ["So11UIFocusItemP", "init"]
+- !private ["So20UIFocusItemContainerP", "GiftHeaderLabel"]
+- ["So20UIFocusItemContainerP", "UILabel"]
+- !private ["So20UIFocusItemContainerP", "UIStackView"]
+- ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "addSubview"]
+- !private ["So20UIFocusItemContainerP", "balanceLabel"]
+- !private ["So20UIFocusItemContainerP", "distribution"]
+- !private ["So20UIFocusItemContainerP", "fatalError"]
+- !private ["So20UIFocusItemContainerP", "fillSuperview"]
+- ["So20UIFocusItemContainerP", "init"]
+- ["So6UIFontC", "systemFont"]
+- ["So7UILabelC", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "GiftHeaderLabel"]
+- ["So30UIPasteConfigurationSupportingP", "UILabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "UIStackView"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
+- !private ["So30UIPasteConfigurationSupportingP", "balanceLabel"]
+- !private ["So30UIPasteConfigurationSupportingP", "distribution"]
+- !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- !private ["So30UIPasteConfigurationSupportingP", "fillSuperview"]
+- ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So11UIResponderC", "CGRect"]
+- ["So11UIResponderC", "GiftHeaderLabel"]
+- ["So11UIResponderC", "NSCoder"]
+- ["So11UIResponderC", "UILabel"]
+- !private ["So11UIResponderC", "UIStackView"]
+- !private ["So11UIResponderC", "addSubview"]
+- ["So11UIResponderC", "balanceLabel"]
+- !private ["So11UIResponderC", "distribution"]
+- !private ["So11UIResponderC", "fatalError"]
+- !private ["So11UIResponderC", "fillSuperview"]
+- ["So11UIResponderC", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "GiftHeaderLabel"]
+- ["So30UIResponderStandardEditActionsP", "UILabel"]
+- !private ["So30UIResponderStandardEditActionsP", "UIStackView"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "addSubview"]
+- !private ["So30UIResponderStandardEditActionsP", "balanceLabel"]
+- !private ["So30UIResponderStandardEditActionsP", "distribution"]
+- !private ["So30UIResponderStandardEditActionsP", "fatalError"]
+- !private ["So30UIResponderStandardEditActionsP", "fillSuperview"]
+- ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So11UIStackViewC", "distribution"]
+- !private ["So11UIStackViewC", "fillSuperview"]
+- !private ["So11UIStackViewC", "init"]
+- !private ["So18UITraitEnvironmentP", "GiftHeaderLabel"]
+- ["So18UITraitEnvironmentP", "UILabel"]
+- !private ["So18UITraitEnvironmentP", "UIStackView"]
+- ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "addSubview"]
+- !private ["So18UITraitEnvironmentP", "balanceLabel"]
+- !private ["So18UITraitEnvironmentP", "distribution"]
+- !private ["So18UITraitEnvironmentP", "fatalError"]
+- !private ["So18UITraitEnvironmentP", "fillSuperview"]
+- ["So18UITraitEnvironmentP", "init"]
+- !private ["So23UIUserActivityRestoringP", "GiftHeaderLabel"]
+- ["So23UIUserActivityRestoringP", "UILabel"]
+- !private ["So23UIUserActivityRestoringP", "UIStackView"]
+- ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addSubview"]
+- !private ["So23UIUserActivityRestoringP", "balanceLabel"]
+- !private ["So23UIUserActivityRestoringP", "distribution"]
+- !private ["So23UIUserActivityRestoringP", "fatalError"]
+- !private ["So23UIUserActivityRestoringP", "fillSuperview"]
+- ["So23UIUserActivityRestoringP", "init"]
+- ["So6UIViewC", "CGRect"]
+- ["So6UIViewC", "GiftHeaderLabel"]
+- ["So6UIViewC", "NSCoder"]
+- ["So6UIViewC", "UILabel"]
+- !private ["So6UIViewC", "UIStackView"]
+- !private ["So6UIViewC", "addSubview"]
+- ["So6UIViewC", "balanceLabel"]
+- !private ["So6UIViewC", "distribution"]
+- !private ["So6UIViewC", "fatalError"]
+- !private ["So6UIViewC", "fillSuperview"]
+- ["So6UIViewC", "init"]
+- ["So12UIFontWeighta", "medium"]
+- ["So12UIFontWeighta", "semibold"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "GiftHeaderLabel"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "UILabel"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "UIStackView"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "balanceLabel"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "distribution"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fatalError"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fillSuperview"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "medium"]
+- ["s35_HasCustomAnyHashableRepresentationP", "semibold"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "GiftHeaderLabel"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIStackView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "balanceLabel"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "distribution"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fillSuperview"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "systemFont"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- ["s21_ObjectiveCBridgeableP", "medium"]
+- ["s21_ObjectiveCBridgeableP", "semibold"]
+- ["s20_SwiftNewtypeWrapperP", "medium"]
+- ["s20_SwiftNewtypeWrapperP", "semibold"]
+- ["s16_SwiftStringViewP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+- ["5UIKit01_A23NumericRawRepresentableP", "medium"]
+- ["5UIKit01_A23NumericRawRepresentableP", "semibold"]
+depends-nominal:
+- "SK"
+- "So15CALayerDelegateP"
+- "s7CVarArgP"
+- "Sl"
+- "SL"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "Se"
+- !private "So23UIStackViewDistributionV"
+- "SE"
+- "SQ"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "9mojo_test14GiftHeaderCellC"
+- "SH"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- "Sm"
+- "SY"
+- "ST"
+- !private "s12StaticStringV"
+- "SS"
+- "Sy"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So24UICollectionReusableViewC"
+- "So20UICollectionViewCellC"
+- "So30UIContentSizeCategoryAdjustingP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- !private "So12UIEdgeInsetsV"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So20UIFocusItemContainerP"
+- "So6UIFontC"
+- "So7UILabelC"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- !private "So11UIStackViewC"
+- "So18UITraitEnvironmentP"
+- "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- "So12UIFontWeighta"
+- "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s21_ObjectiveCBridgeableP"
+- "s20_SwiftNewtypeWrapperP"
+- "s16_SwiftStringViewP"
+- "5UIKit01_A23NumericRawRepresentableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/arm64.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/arm64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/yunyunchen1/dev/mojo-test/Pods/Firebase/CoreOnly/Sources/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "c11b30448b9a13c5205b6ff6a58138b5"

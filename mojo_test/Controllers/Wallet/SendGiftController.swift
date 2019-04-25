@@ -89,9 +89,16 @@ class SendGiftController: UITableViewController {
                     _ = error.userInfo[FunctionsErrorDetailsKey]
                 }
             }
-            hud.textLabel.text = "Sent!"
+            hud.textLabel.text = "🎁 Sent!"
             hud.show(in: self.view)
             hud.dismiss(afterDelay: 2)
+        }
+        self.goBackToPreviousPage()
+    }
+    
+    fileprivate func goBackToPreviousPage() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.navigationController?.popViewController(animated: true)
         }
     }
     

@@ -82,7 +82,7 @@ class UserProfileController: UIViewController {
         
         feedbacksButton.setTitleColor(.black, for: .normal)
         feedbacksButton.height(40)
-        feedbacksButton.width(150)
+        feedbacksButton.width(250)
         feedbacksButton.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         feedbacksButton.layer.borderWidth = 1
         feedbacksButton.addTarget(self, action: #selector(handleFeedbacks), for: .touchUpInside)
@@ -120,7 +120,7 @@ class UserProfileController: UIViewController {
     let feedbacksButton = UIButton(title: "View Feedbacks", cornerRadius: 20, font: .systemFont(ofSize: 14, weight: .medium))
     
     fileprivate func setupNavProfileView() {
-        navProfileView.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+        navProfileView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         navProfileView.widthAnchor.constraint(equalToConstant: 40).isActive = true
         navProfileView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         navigationController?.navigationBar.addSubview(navProfileView)

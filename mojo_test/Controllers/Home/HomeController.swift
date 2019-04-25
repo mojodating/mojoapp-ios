@@ -76,7 +76,6 @@ class HomeController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
             }
             if let dictionary = result?.data as? [String: Any] {
                 dictionary.forEach({ (key, value) in
-                    print(value)
                     guard let conv = value as? [String: Any] else { return }
                     conv.forEach({ (key, value) in
                         if let userDict = value as? [String: Any] {

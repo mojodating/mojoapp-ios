@@ -10,7 +10,13 @@ import UIKit
 import Firebase
 import SDWebImage
 
+protocol SentFeedCellDelegate {
+    func didTapCell(conversation : Conversation)
+}
+
 class SentFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    var delegate: SentFeedCellDelegate?
         
     var chatSent = [Conversation]()
         
@@ -64,7 +70,6 @@ class SentFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         addSubview(collectionView)
         collectionView.fillSuperview()
         collectionView.register(SentCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView.register(EmptyCell.self, forCellWithReuseIdentifier: "emptyCell")
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -98,9 +103,9 @@ class SentFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             
-//            let conversation = self.chatSent[indexPath.row]            
-//            delegate?.didTapCell(conversation: conversation)
-            
+        let conversation = self.chatSent[indexPath.row]
+        delegate?.didTapCell(conversation: conversation)
+        
     }
         
     required init?(coder aDecoder: NSCoder) {

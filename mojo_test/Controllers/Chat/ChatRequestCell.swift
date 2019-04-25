@@ -12,7 +12,7 @@ protocol ChatRequestCellDelegate {
     func didTapCell(conversation : Conversation)
 }
 
-class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, RequestsFeedCellDelegate {
+class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, RequestsFeedCellDelegate, SentFeedCellDelegate {
     
     var delegate: ChatRequestCellDelegate?
     
@@ -25,7 +25,11 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 1 {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: sentCellId, for: indexPath) as! SentFeedCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: sentCellId, for: indexPath) as! SentFeedCell
+            
+            cell.delegate = self
+            
+            return cell
         }
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! RequestsFeedCell

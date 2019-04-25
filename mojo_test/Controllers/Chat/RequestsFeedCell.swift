@@ -74,7 +74,6 @@ class RequestsFeedCell: UICollectionViewCell, UICollectionViewDelegate, UICollec
         collectionView.fillSuperview()
         
         collectionView.register(RequestCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView.register(EmptyCell.self, forCellWithReuseIdentifier: "emptyCell")
         collectionView.delegate = self
         collectionView.dataSource = self
         
