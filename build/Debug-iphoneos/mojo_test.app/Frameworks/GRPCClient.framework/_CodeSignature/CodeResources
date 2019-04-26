@@ -6,11 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		RoFW2zY+VhBBDFBK6OXJAyMtKKY=
+		7vvgB4PxSKTTWbEoNlh/VmjHKVo=
 		</data>
 		<key>gRPCCertificates.bundle/Info.plist</key>
 		<data>
-		Ftbed4w08ptWxuFN0zp/lMibrA8=
+		j7Uea4pqLRPwk1fGIGatzBgRT+Q=
 		</data>
 		<key>gRPCCertificates.bundle/roots.pem</key>
 		<data>
@@ -23,11 +23,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Ftbed4w08ptWxuFN0zp/lMibrA8=
+			j7Uea4pqLRPwk1fGIGatzBgRT+Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			nbSpilgjhP23c5Npais+rSgaaGhJ7Xq7FwrZk509Rv8=
+			fpBbPVwdJ/44TvSQSaGXaCLCSV7VwFDQ55FtWd0GYrw=
 			</data>
 		</dict>
 		<key>gRPCCertificates.bundle/roots.pem</key>
@@ -44,7 +44,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -75,24 +75,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -128,13 +116,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

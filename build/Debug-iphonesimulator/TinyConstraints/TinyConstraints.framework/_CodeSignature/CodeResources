@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/TinyConstraints-Swift.h</key>
 		<data>
-		36DtEGgw9MlbMZtXRtxC9yY8yQY=
+		Ey9f6/A8SBvUi3MaqdaOYveYhvc=
 		</data>
 		<key>Headers/TinyConstraints-umbrella.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		dxG3ta9JdGImHog5mFy6QaGtv8Q=
+		s0x0dv6Rr13MHfp0aLJ3JmoyKMA=
 		</data>
 		<key>Modules/TinyConstraints.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		bUMTpZUss03bWFMjhMhSr7OIVPk=
+		zZulhutmgfURn+k3Onkxcu5hQIY=
 		</data>
 		<key>Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		dA1ovNsdhe4bPrp5q7AyPrzM8HQ=
+		Oc0IEzpLNLTS4LFBT/eMZJ6cMqQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			36DtEGgw9MlbMZtXRtxC9yY8yQY=
+			Ey9f6/A8SBvUi3MaqdaOYveYhvc=
 			</data>
 			<key>hash2</key>
 			<data>
-			V8P6OHqnxnQWlA29TYhSq0RhzxGxCwdMeosSf22K6yE=
+			qyTIwnfUkz+EDKDztIWg5RcaDiRzMlhOGIvoEJlbY9s=
 			</data>
 		</dict>
 		<key>Headers/TinyConstraints-umbrella.h</key>
@@ -57,22 +57,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bUMTpZUss03bWFMjhMhSr7OIVPk=
+			zZulhutmgfURn+k3Onkxcu5hQIY=
 			</data>
 			<key>hash2</key>
 			<data>
-			2YRkAtznwOSL9NS645IfRngJoZC/ojc0l/6VAAYaoEE=
+			VMsfHs96VAuEGNQkKGxfhZviXL8w+nATYeySrPfK9io=
 			</data>
 		</dict>
 		<key>Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dA1ovNsdhe4bPrp5q7AyPrzM8HQ=
+			Oc0IEzpLNLTS4LFBT/eMZJ6cMqQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			Y1W78QXWsdZxxt3XcRlVeHw514krTApfS9/ISf4hgL0=
+			YnB9/vlQ9iFSCwyCmPGLAyB7in72iis/Gi9QtP2xkNA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -89,7 +89,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -120,24 +120,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -173,13 +161,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

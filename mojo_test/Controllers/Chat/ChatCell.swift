@@ -26,7 +26,6 @@ class ChatCell:UICollectionViewCell {
             }
             
             fetchLastMessageFromConversation()
-            
             Firestore.firestore().collection("users").document(chatProfileUID!).getDocument { (snapshot, err) in
                 if let err = err {
                     print(err)
@@ -55,6 +54,7 @@ class ChatCell:UICollectionViewCell {
     }
     
     var messageLog = [Message]()
+    
     func fetchLastMessageFromConversation() {
         guard let conversationId = conversation?.id else { return }
         Firestore.firestore().collection("conversations").document(conversationId).collection("messages").order(by: "date", descending: false)
@@ -79,7 +79,6 @@ class ChatCell:UICollectionViewCell {
                 }
         }
     }
-    
     
     let chatProfileImage = UIImageView(cornerRadius: 28)
     let nameLabel = UILabel(text: "", font: .systemFont(ofSize: 18, weight: .semibold))

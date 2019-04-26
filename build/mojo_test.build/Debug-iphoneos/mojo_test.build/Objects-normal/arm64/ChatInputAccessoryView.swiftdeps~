@@ -13,26 +13,19 @@ provides-dynamic-lookup:
 - "intrinsicContentSize"
 depends-top-level:
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
 - "CGRect"
 - "CGSize"
 - "ChatInputAccessaryView"
 - "ChatInputAccessaryViewDelegate"
 - "ChatInputTextView"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "NSCoder"
 - "String"
-- "StringLiteralType"
 - "UIButton"
 - "UIFont"
 - "UIView"
-- "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
 - !private ["So18UIViewAutoresizingV", "flexibleHeight"]
-- ["SK", "init"]
-- ["SK", "init"]
 - ["So12UIButtonTypeV", "system"]
 - ["So15CALayerDelegateP", "ChatInputTextView"]
 - ["So15CALayerDelegateP", "UIButton"]
@@ -78,7 +71,6 @@ depends-member:
 - !private ["s7CVarArgP", "fatalError"]
 - ["s7CVarArgP", "font"]
 - ["s7CVarArgP", "handleSend"]
-- ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "isScrollEnabled"]
 - !private ["s7CVarArgP", "leadingAnchor"]
@@ -128,10 +120,6 @@ depends-member:
 - ["9mojo_test17ChatInputTextViewC", "isScrollEnabled"]
 - !private ["9mojo_test17ChatInputTextViewC", "showPlaceHolderLabel"]
 - !private ["9mojo_test17ChatInputTextViewC", "text"]
-- ["Sl", "init"]
-- ["Sl", "init"]
-- ["SL", "init"]
-- ["SL", "init"]
 - ["SL", "semibold"]
 - ["15TinyConstraints13ConstrainableP", "ChatInputTextView"]
 - ["15TinyConstraints13ConstrainableP", "UIButton"]
@@ -176,7 +164,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "font"]
 - ["s28CustomDebugStringConvertibleP", "handleSend"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "isScrollEnabled"]
 - !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "safeAreaLayoutGuide"]
@@ -193,11 +181,8 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "zero"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "zero"]
-- ["s17CustomReflectableP", "init"]
-- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "white"]
 - !private ["s17CustomReflectableP", "zero"]
 - ["s23CustomStringConvertibleP", "ChatInputTextView"]
@@ -215,7 +200,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "font"]
 - ["s23CustomStringConvertibleP", "handleSend"]
 - ["s23CustomStringConvertibleP", "init"]
-- ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "isScrollEnabled"]
 - !private ["s23CustomStringConvertibleP", "leadingAnchor"]
 - !private ["s23CustomStringConvertibleP", "safeAreaLayoutGuide"]
@@ -231,12 +215,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "topAnchor"]
 - !private ["s23CustomStringConvertibleP", "trailingAnchor"]
 - !private ["s23CustomStringConvertibleP", "white"]
-- ["Se", "init"]
-- ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
 - !private ["Se", "white"]
 - !private ["Se", "zero"]
-- ["SE", "init"]
-- ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
 - !private ["SE", "white"]
 - !private ["SE", "zero"]
 - ["SQ", "ChatInputTextView"]
@@ -255,7 +239,7 @@ depends-member:
 - ["SQ", "font"]
 - ["SQ", "handleSend"]
 - ["SQ", "init"]
-- ["SQ", "init"]
+- !private ["SQ", "init"]
 - ["SQ", "isScrollEnabled"]
 - !private ["SQ", "leadingAnchor"]
 - ["SQ", "normal"]
@@ -280,13 +264,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "flexibleHeight"]
 - ["s25ExpressibleByArrayLiteralP", "normal"]
 - ["s25ExpressibleByArrayLiteralP", "touchUpInside"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["SH", "ChatInputTextView"]
 - ["SH", "UIButton"]
 - ["SH", "UIFont"]
@@ -301,7 +279,6 @@ depends-member:
 - !private ["SH", "fatalError"]
 - ["SH", "font"]
 - ["SH", "handleSend"]
-- ["SH", "init"]
 - ["SH", "init"]
 - ["SH", "isScrollEnabled"]
 - !private ["SH", "leadingAnchor"]
@@ -320,10 +297,6 @@ depends-member:
 - !private ["SH", "topAnchor"]
 - !private ["SH", "trailingAnchor"]
 - !private ["SH", "white"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s10MirrorPathP", "init"]
-- ["s10MirrorPathP", "init"]
 - ["So8NSCodingP", "ChatInputTextView"]
 - ["So8NSCodingP", "UIButton"]
 - ["So8NSCodingP", "UIFont"]
@@ -427,29 +400,15 @@ depends-member:
 - ["s9OptionSetP", "normal"]
 - ["s9OptionSetP", "touchUpInside"]
 - !private ["Sq", "white"]
-- ["Sm", "init"]
-- ["Sm", "init"]
 - !private ["SY", "flexibleHeight"]
 - ["SY", "normal"]
 - ["SY", "semibold"]
 - ["SY", "system"]
 - ["SY", "touchUpInside"]
-- ["ST", "init"]
-- ["ST", "init"]
 - !private ["s10SetAlgebraP", "flexibleHeight"]
 - ["s10SetAlgebraP", "normal"]
 - ["s10SetAlgebraP", "touchUpInside"]
 - ["So14UIControlStateV", "normal"]
-- !private ["s12StaticStringV", "init"]
-- !private ["s12StaticStringV", "init"]
-- ["SS", "init"]
-- ["SS", "init"]
-- ["Sy", "init"]
-- ["Sy", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
-- ["s20TextOutputStreamableP", "init"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "addTarget"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "anchor"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
@@ -934,44 +893,10 @@ depends-member:
 - !private ["So6UIViewC", "topAnchor"]
 - !private ["So6UIViewC", "trailingAnchor"]
 - ["So12UIFontWeighta", "semibold"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "ChatInputTextView"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "UIButton"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "UIFont"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "addTarget"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "anchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "autoresizingMask"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "delegate"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fatalError"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "font"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "handleSend"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "isScrollEnabled"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "safeAreaLayoutGuide"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "self"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "sendButton"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "setTitle"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "setTitleColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "showPlaceHolderLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textView"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "zero"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "semibold"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "ChatInputTextView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIButton"]
@@ -1003,18 +928,42 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "topAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
-- ["s21_ObjectiveCBridgeableP", "init"]
-- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "semibold"]
 - !private ["s21_ObjectiveCBridgeableP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
 - ["s20_SwiftNewtypeWrapperP", "semibold"]
-- ["s16_SwiftStringViewP", "init"]
-- ["s16_SwiftStringViewP", "init"]
 - ["5UIKit01_A23NumericRawRepresentableP", "semibold"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "ChatInputTextView"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "UIButton"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "UIFont"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "addTarget"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "anchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "autoresizingMask"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "delegate"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fatalError"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "font"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "handleSend"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "isScrollEnabled"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "safeAreaLayoutGuide"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "self"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "sendButton"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "setTitle"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "setTitleColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "showPlaceHolderLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textView"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "titleLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 depends-nominal:
 - !private "So18UIViewAutoresizingV"
-- "SK"
 - "So12UIButtonTypeV"
 - "So15CALayerDelegateP"
 - !private "So6CGSizeV"
@@ -1022,25 +971,18 @@ depends-nominal:
 - "9mojo_test22ChatInputAccessaryViewC"
 - "9mojo_test30ChatInputAccessaryViewDelegateP"
 - "9mojo_test17ChatInputTextViewC"
-- "Sl"
 - "SL"
 - "15TinyConstraints13ConstrainableP"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
-- "s17CustomReflectableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "Se"
-- "SE"
+- !private "Se"
+- !private "SE"
 - "SQ"
 - "So15UIControlEventsV"
 - "s25ExpressibleByArrayLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
-- "s25LosslessStringConvertibleP"
-- "s10MirrorPathP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - !private "So21NSItemProviderReadingP"
@@ -1050,16 +992,9 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - "s9OptionSetP"
 - !private "Sq"
-- "Sm"
 - "SY"
-- "ST"
 - "s10SetAlgebraP"
 - "So14UIControlStateV"
-- !private "s12StaticStringV"
-- "SS"
-- "Sy"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -1094,22 +1029,16 @@ depends-nominal:
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
 - "So12UIFontWeighta"
-- "s37_DefaultCustomPlaygroundQuickLookableP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s26_ExpressibleByColorLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
 - "s20_SwiftNewtypeWrapperP"
-- "s16_SwiftStringViewP"
 - "5UIKit01_A23NumericRawRepresentableP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/arm64.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
@@ -1264,18 +1193,19 @@ depends-external:
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "90154dbb80dc58ca6c8d092edb6b6d56"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "db8a424a28866eb01de08e73f97fe93e"

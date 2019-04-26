@@ -27,7 +27,7 @@ class RequestMessageCell: UICollectionViewCell {
         
         addSubview(profileImageView)
         profileImageView.anchor(top: descriptionLabel.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 36, left: 8, bottom: 0, right: 0), size: .init(width: 48, height: 48))
-        profileImageView.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
+        profileImageView.backgroundColor = .white
         
 
         bubbleView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 36).isActive = true
@@ -56,6 +56,7 @@ class RequestMessageCell: UICollectionViewCell {
         
         addSubview(rejectButton)
         rejectButton.anchor(top: giftImageView.bottomAnchor, leading: leadingAnchor, bottom: nil, trailing: nil, padding: .init(top: 8, left: 48, bottom: 0, right: 0))
+        rejectButton.isHidden = true
         
         
         

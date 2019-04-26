@@ -6,29 +6,22 @@ provides-nominal:
 provides-member:
 - ["9mojo_test8GiftCellC", ""]
 provides-dynamic-lookup:
-- "isSelected"
 depends-top-level:
 - !private "*"
 - !private "/"
 - !private "??"
 - "AssignmentPrecedence"
-- "Bool"
 - "CGRect"
 - "DigitalGood"
-- "FloatLiteralType"
 - "GiftCell"
-- "IntegerLiteralType"
 - "NSCoder"
-- "StringLiteralType"
 - "UICollectionViewCell"
 - "UIImageView"
 - "UILabel"
 - !private "URL"
-- !private "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
-- ["SK", "init"]
-- ["SK", "init"]
+- !private ["So7CALayerC", "cornerRadius"]
 - ["So15CALayerDelegateP", "UIImageView"]
 - ["So15CALayerDelegateP", "UILabel"]
 - !private ["So15CALayerDelegateP", "URL"]
@@ -41,6 +34,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "fatalError"]
 - !private ["So15CALayerDelegateP", "giftImageView"]
 - ["So15CALayerDelegateP", "init"]
+- !private ["So15CALayerDelegateP", "layer"]
 - !private ["So15CALayerDelegateP", "leadingAnchor"]
 - !private ["So15CALayerDelegateP", "nameLabel"]
 - !private ["So15CALayerDelegateP", "priceLabel"]
@@ -49,6 +43,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "textAlignment"]
 - !private ["So15CALayerDelegateP", "topAnchor"]
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
+- !private ["So13CAMediaTimingP", "cornerRadius"]
 - !private ["So6CGRectV", "height"]
 - !private ["So6CGSizeV", "init"]
 - !private ["So6CGSizeV", "init"]
@@ -61,11 +56,12 @@ depends-member:
 - !private ["s7CVarArgP", "backgroundColor"]
 - !private ["s7CVarArgP", "bottomAnchor"]
 - !private ["s7CVarArgP", "clear"]
+- !private ["s7CVarArgP", "cornerRadius"]
 - !private ["s7CVarArgP", "digitalGood"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "giftImageView"]
 - ["s7CVarArgP", "init"]
-- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "layer"]
 - !private ["s7CVarArgP", "leadingAnchor"]
 - !private ["s7CVarArgP", "nameLabel"]
 - !private ["s7CVarArgP", "priceLabel"]
@@ -75,10 +71,6 @@ depends-member:
 - !private ["s7CVarArgP", "textAlignment"]
 - !private ["s7CVarArgP", "topAnchor"]
 - !private ["s7CVarArgP", "trailingAnchor"]
-- ["Sl", "init"]
-- ["Sl", "init"]
-- ["SL", "init"]
-- ["SL", "init"]
 - ["SL", "medium"]
 - ["15TinyConstraints13ConstrainableP", "UIImageView"]
 - ["15TinyConstraints13ConstrainableP", "UILabel"]
@@ -92,6 +84,7 @@ depends-member:
 - !private ["15TinyConstraints13ConstrainableP", "fatalError"]
 - !private ["15TinyConstraints13ConstrainableP", "giftImageView"]
 - ["15TinyConstraints13ConstrainableP", "init"]
+- !private ["15TinyConstraints13ConstrainableP", "layer"]
 - !private ["15TinyConstraints13ConstrainableP", "leadingAnchor"]
 - !private ["15TinyConstraints13ConstrainableP", "nameLabel"]
 - !private ["15TinyConstraints13ConstrainableP", "priceLabel"]
@@ -109,12 +102,14 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "backgroundColor"]
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "clear"]
+- !private ["s28CustomDebugStringConvertibleP", "cornerRadius"]
 - !private ["s28CustomDebugStringConvertibleP", "digitalGood"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "giftImageView"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "layer"]
 - !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "nameLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "priceLabel"]
@@ -124,27 +119,27 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "textAlignment"]
 - !private ["s28CustomDebugStringConvertibleP", "topAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "trailingAnchor"]
-- !private ["s29CustomPlaygroundQuickLookableP", "height"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "clear"]
 - !private ["s17CustomReflectableP", "height"]
-- ["s17CustomReflectableP", "init"]
-- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
 - ["s23CustomStringConvertibleP", "UIImageView"]
 - ["s23CustomStringConvertibleP", "UILabel"]
 - !private ["s23CustomStringConvertibleP", "URL"]
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "anchor"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
 - !private ["s23CustomStringConvertibleP", "clear"]
+- !private ["s23CustomStringConvertibleP", "cornerRadius"]
 - !private ["s23CustomStringConvertibleP", "digitalGood"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "giftImageView"]
 - ["s23CustomStringConvertibleP", "init"]
-- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "layer"]
 - !private ["s23CustomStringConvertibleP", "leadingAnchor"]
 - !private ["s23CustomStringConvertibleP", "nameLabel"]
 - !private ["s23CustomStringConvertibleP", "priceLabel"]
@@ -156,15 +151,17 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "trailingAnchor"]
 - !private ["Se", "clear"]
 - !private ["Se", "height"]
-- ["Se", "init"]
-- ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["Se", "init"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["9mojo_test11DigitalGoodV", "imageUrl"]
 - !private ["9mojo_test11DigitalGoodV", "name"]
 - !private ["9mojo_test11DigitalGoodV", "price"]
 - !private ["SE", "clear"]
 - !private ["SE", "height"]
-- ["SE", "init"]
-- ["SE", "init"]
+- !private ["SE", "init"]
+- !private ["SE", "init"]
 - ["SQ", "UIImageView"]
 - ["SQ", "UILabel"]
 - !private ["SQ", "URL"]
@@ -175,12 +172,14 @@ depends-member:
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "center"]
 - !private ["SQ", "clear"]
+- !private ["SQ", "cornerRadius"]
 - !private ["SQ", "digitalGood"]
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "giftImageView"]
 - !private ["SQ", "height"]
 - ["SQ", "init"]
-- ["SQ", "init"]
+- !private ["SQ", "init"]
+- !private ["SQ", "layer"]
 - !private ["SQ", "leadingAnchor"]
 - ["SQ", "medium"]
 - !private ["SQ", "nameLabel"]
@@ -191,14 +190,7 @@ depends-member:
 - !private ["SQ", "textAlignment"]
 - !private ["SQ", "topAnchor"]
 - !private ["SQ", "trailingAnchor"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "clear"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["9mojo_test8GiftCellC", "Bool"]
 - ["9mojo_test8GiftCellC", "CGRect"]
 - ["9mojo_test8GiftCellC", "DigitalGood"]
 - ["9mojo_test8GiftCellC", "NSCoder"]
@@ -208,12 +200,12 @@ depends-member:
 - !private ["9mojo_test8GiftCellC", "addSubview"]
 - !private ["9mojo_test8GiftCellC", "backgroundColor"]
 - !private ["9mojo_test8GiftCellC", "bottomAnchor"]
-- !private ["9mojo_test8GiftCellC", "deinit"]
+- ["9mojo_test8GiftCellC", "deinit"]
 - ["9mojo_test8GiftCellC", "digitalGood"]
 - !private ["9mojo_test8GiftCellC", "fatalError"]
 - !private ["9mojo_test8GiftCellC", "giftImageView"]
 - ["9mojo_test8GiftCellC", "init"]
-- ["9mojo_test8GiftCellC", "isSelected"]
+- !private ["9mojo_test8GiftCellC", "layer"]
 - !private ["9mojo_test8GiftCellC", "leadingAnchor"]
 - !private ["9mojo_test8GiftCellC", "nameLabel"]
 - !private ["9mojo_test8GiftCellC", "priceLabel"]
@@ -229,11 +221,12 @@ depends-member:
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "center"]
 - !private ["SH", "clear"]
+- !private ["SH", "cornerRadius"]
 - !private ["SH", "digitalGood"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "giftImageView"]
 - ["SH", "init"]
-- ["SH", "init"]
+- !private ["SH", "layer"]
 - !private ["SH", "leadingAnchor"]
 - ["SH", "medium"]
 - !private ["SH", "nameLabel"]
@@ -244,10 +237,6 @@ depends-member:
 - !private ["SH", "textAlignment"]
 - !private ["SH", "topAnchor"]
 - !private ["SH", "trailingAnchor"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s10MirrorPathP", "init"]
-- ["s10MirrorPathP", "init"]
 - ["So8NSCodingP", "UIImageView"]
 - ["So8NSCodingP", "UILabel"]
 - !private ["So8NSCodingP", "URL"]
@@ -257,10 +246,12 @@ depends-member:
 - !private ["So8NSCodingP", "backgroundColor"]
 - !private ["So8NSCodingP", "bottomAnchor"]
 - !private ["So8NSCodingP", "clear"]
+- !private ["So8NSCodingP", "cornerRadius"]
 - !private ["So8NSCodingP", "digitalGood"]
 - !private ["So8NSCodingP", "fatalError"]
 - !private ["So8NSCodingP", "giftImageView"]
 - ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "layer"]
 - !private ["So8NSCodingP", "leadingAnchor"]
 - !private ["So8NSCodingP", "nameLabel"]
 - !private ["So8NSCodingP", "priceLabel"]
@@ -273,7 +264,6 @@ depends-member:
 - ["So9NSCopyingP", "systemFont"]
 - !private ["So21NSItemProviderReadingP", "clear"]
 - !private ["So21NSItemProviderWritingP", "clear"]
-- ["So8NSObjectC", "Bool"]
 - ["So8NSObjectC", "CGRect"]
 - ["So8NSObjectC", "DigitalGood"]
 - ["So8NSObjectC", "NSCoder"]
@@ -285,11 +275,12 @@ depends-member:
 - !private ["So8NSObjectC", "backgroundColor"]
 - !private ["So8NSObjectC", "bottomAnchor"]
 - !private ["So8NSObjectC", "clear"]
+- !private ["So8NSObjectC", "cornerRadius"]
 - ["So8NSObjectC", "digitalGood"]
 - !private ["So8NSObjectC", "fatalError"]
 - ["So8NSObjectC", "giftImageView"]
 - ["So8NSObjectC", "init"]
-- ["So8NSObjectC", "isSelected"]
+- !private ["So8NSObjectC", "layer"]
 - !private ["So8NSObjectC", "leadingAnchor"]
 - ["So8NSObjectC", "nameLabel"]
 - ["So8NSObjectC", "priceLabel"]
@@ -308,10 +299,12 @@ depends-member:
 - !private ["So8NSObjectP", "backgroundColor"]
 - !private ["So8NSObjectP", "bottomAnchor"]
 - !private ["So8NSObjectP", "clear"]
+- !private ["So8NSObjectP", "cornerRadius"]
 - !private ["So8NSObjectP", "digitalGood"]
 - !private ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "giftImageView"]
 - ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "layer"]
 - !private ["So8NSObjectP", "leadingAnchor"]
 - !private ["So8NSObjectP", "nameLabel"]
 - !private ["So8NSObjectP", "priceLabel"]
@@ -322,25 +315,16 @@ depends-member:
 - !private ["So8NSObjectP", "topAnchor"]
 - !private ["So8NSObjectP", "trailingAnchor"]
 - !private ["So14NSSecureCodingP", "clear"]
+- !private ["So14NSSecureCodingP", "cornerRadius"]
 - !private ["So15NSTextAlignmentV", "center"]
 - !private ["Sq", "clear"]
-- ["Sm", "init"]
-- ["Sm", "init"]
 - !private ["SY", "center"]
 - ["SY", "medium"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
-- ["ST", "init"]
-- ["ST", "init"]
-- !private ["s12StaticStringV", "init"]
-- !private ["s12StaticStringV", "init"]
-- ["SS", "init"]
-- ["SS", "init"]
-- ["Sy", "init"]
-- ["Sy", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
-- ["s20TextOutputStreamableP", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "anchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "bottomAnchor"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
@@ -357,6 +341,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "fatalError"]
 - !private ["So29UIAccessibilityIdentificationP", "giftImageView"]
 - ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "layer"]
 - !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "nameLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "priceLabel"]
@@ -377,6 +362,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "fatalError"]
 - !private ["So12UIAppearanceP", "giftImageView"]
 - ["So12UIAppearanceP", "init"]
+- !private ["So12UIAppearanceP", "layer"]
 - !private ["So12UIAppearanceP", "leadingAnchor"]
 - !private ["So12UIAppearanceP", "nameLabel"]
 - !private ["So12UIAppearanceP", "priceLabel"]
@@ -397,6 +383,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "fatalError"]
 - !private ["So21UIAppearanceContainerP", "giftImageView"]
 - ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "layer"]
 - !private ["So21UIAppearanceContainerP", "leadingAnchor"]
 - !private ["So21UIAppearanceContainerP", "nameLabel"]
 - !private ["So21UIAppearanceContainerP", "priceLabel"]
@@ -405,7 +392,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "textAlignment"]
 - !private ["So21UIAppearanceContainerP", "topAnchor"]
 - !private ["So21UIAppearanceContainerP", "trailingAnchor"]
-- ["So24UICollectionReusableViewC", "Bool"]
 - ["So24UICollectionReusableViewC", "CGRect"]
 - ["So24UICollectionReusableViewC", "DigitalGood"]
 - ["So24UICollectionReusableViewC", "NSCoder"]
@@ -419,13 +405,12 @@ depends-member:
 - !private ["So24UICollectionReusableViewC", "fatalError"]
 - ["So24UICollectionReusableViewC", "giftImageView"]
 - ["So24UICollectionReusableViewC", "init"]
-- ["So24UICollectionReusableViewC", "isSelected"]
+- !private ["So24UICollectionReusableViewC", "layer"]
 - !private ["So24UICollectionReusableViewC", "leadingAnchor"]
 - ["So24UICollectionReusableViewC", "nameLabel"]
 - ["So24UICollectionReusableViewC", "priceLabel"]
 - !private ["So24UICollectionReusableViewC", "topAnchor"]
 - !private ["So24UICollectionReusableViewC", "trailingAnchor"]
-- ["So20UICollectionViewCellC", "Bool"]
 - ["So20UICollectionViewCellC", "CGRect"]
 - ["So20UICollectionViewCellC", "DigitalGood"]
 - ["So20UICollectionViewCellC", "NSCoder"]
@@ -440,7 +425,7 @@ depends-member:
 - !private ["So20UICollectionViewCellC", "fatalError"]
 - ["So20UICollectionViewCellC", "giftImageView"]
 - ["So20UICollectionViewCellC", "init"]
-- ["So20UICollectionViewCellC", "isSelected"]
+- !private ["So20UICollectionViewCellC", "layer"]
 - !private ["So20UICollectionViewCellC", "leadingAnchor"]
 - ["So20UICollectionViewCellC", "nameLabel"]
 - ["So20UICollectionViewCellC", "priceLabel"]
@@ -464,6 +449,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "fatalError"]
 - !private ["So17UICoordinateSpaceP", "giftImageView"]
 - ["So17UICoordinateSpaceP", "init"]
+- !private ["So17UICoordinateSpaceP", "layer"]
 - !private ["So17UICoordinateSpaceP", "leadingAnchor"]
 - !private ["So17UICoordinateSpaceP", "nameLabel"]
 - !private ["So17UICoordinateSpaceP", "priceLabel"]
@@ -484,6 +470,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "fatalError"]
 - !private ["So13UIDynamicItemP", "giftImageView"]
 - ["So13UIDynamicItemP", "init"]
+- !private ["So13UIDynamicItemP", "layer"]
 - !private ["So13UIDynamicItemP", "leadingAnchor"]
 - !private ["So13UIDynamicItemP", "nameLabel"]
 - !private ["So13UIDynamicItemP", "priceLabel"]
@@ -506,6 +493,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "fatalError"]
 - !private ["So18UIFocusEnvironmentP", "giftImageView"]
 - ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "layer"]
 - !private ["So18UIFocusEnvironmentP", "leadingAnchor"]
 - !private ["So18UIFocusEnvironmentP", "nameLabel"]
 - !private ["So18UIFocusEnvironmentP", "priceLabel"]
@@ -526,6 +514,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "fatalError"]
 - !private ["So11UIFocusItemP", "giftImageView"]
 - ["So11UIFocusItemP", "init"]
+- !private ["So11UIFocusItemP", "layer"]
 - !private ["So11UIFocusItemP", "leadingAnchor"]
 - !private ["So11UIFocusItemP", "nameLabel"]
 - !private ["So11UIFocusItemP", "priceLabel"]
@@ -546,6 +535,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "fatalError"]
 - !private ["So20UIFocusItemContainerP", "giftImageView"]
 - ["So20UIFocusItemContainerP", "init"]
+- !private ["So20UIFocusItemContainerP", "layer"]
 - !private ["So20UIFocusItemContainerP", "leadingAnchor"]
 - !private ["So20UIFocusItemContainerP", "nameLabel"]
 - !private ["So20UIFocusItemContainerP", "priceLabel"]
@@ -576,6 +566,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "giftImageView"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "layer"]
 - !private ["So30UIPasteConfigurationSupportingP", "leadingAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "nameLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "priceLabel"]
@@ -584,7 +575,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "textAlignment"]
 - !private ["So30UIPasteConfigurationSupportingP", "topAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "trailingAnchor"]
-- ["So11UIResponderC", "Bool"]
 - ["So11UIResponderC", "CGRect"]
 - ["So11UIResponderC", "DigitalGood"]
 - ["So11UIResponderC", "NSCoder"]
@@ -599,7 +589,7 @@ depends-member:
 - !private ["So11UIResponderC", "fatalError"]
 - ["So11UIResponderC", "giftImageView"]
 - ["So11UIResponderC", "init"]
-- ["So11UIResponderC", "isSelected"]
+- !private ["So11UIResponderC", "layer"]
 - !private ["So11UIResponderC", "leadingAnchor"]
 - ["So11UIResponderC", "nameLabel"]
 - ["So11UIResponderC", "priceLabel"]
@@ -620,6 +610,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "giftImageView"]
 - ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "layer"]
 - !private ["So30UIResponderStandardEditActionsP", "leadingAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "nameLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "priceLabel"]
@@ -640,6 +631,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "fatalError"]
 - !private ["So18UITraitEnvironmentP", "giftImageView"]
 - ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "layer"]
 - !private ["So18UITraitEnvironmentP", "leadingAnchor"]
 - !private ["So18UITraitEnvironmentP", "nameLabel"]
 - !private ["So18UITraitEnvironmentP", "priceLabel"]
@@ -660,6 +652,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "giftImageView"]
 - ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "layer"]
 - !private ["So23UIUserActivityRestoringP", "leadingAnchor"]
 - !private ["So23UIUserActivityRestoringP", "nameLabel"]
 - !private ["So23UIUserActivityRestoringP", "priceLabel"]
@@ -668,7 +661,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "textAlignment"]
 - !private ["So23UIUserActivityRestoringP", "topAnchor"]
 - !private ["So23UIUserActivityRestoringP", "trailingAnchor"]
-- ["So6UIViewC", "Bool"]
 - ["So6UIViewC", "CGRect"]
 - ["So6UIViewC", "DigitalGood"]
 - ["So6UIViewC", "NSCoder"]
@@ -683,7 +675,7 @@ depends-member:
 - !private ["So6UIViewC", "fatalError"]
 - ["So6UIViewC", "giftImageView"]
 - ["So6UIViewC", "init"]
-- ["So6UIViewC", "isSelected"]
+- !private ["So6UIViewC", "layer"]
 - !private ["So6UIViewC", "leadingAnchor"]
 - ["So6UIViewC", "nameLabel"]
 - ["So6UIViewC", "priceLabel"]
@@ -694,38 +686,11 @@ depends-member:
 - !private ["So6UIViewC", "trailingAnchor"]
 - !private ["10Foundation3URLV", "init"]
 - ["So12UIFontWeighta", "medium"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "UIImageView"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "UILabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "URL"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "anchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "digitalGood"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fatalError"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "giftImageView"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "nameLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "priceLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "sd_setImage"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textAlignment"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "clear"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "medium"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UIImageView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
@@ -736,10 +701,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "backgroundColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "clear"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "cornerRadius"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "digitalGood"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "giftImageView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "layer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "nameLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "priceLabel"]
@@ -751,38 +718,52 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
 - !private ["s21_ObjectiveCBridgeableP", "clear"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
-- ["s21_ObjectiveCBridgeableP", "init"]
-- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "medium"]
 - ["s20_SwiftNewtypeWrapperP", "medium"]
-- ["s16_SwiftStringViewP", "init"]
-- ["s16_SwiftStringViewP", "init"]
 - ["5UIKit01_A23NumericRawRepresentableP", "medium"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "UIImageView"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "UILabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "URL"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "anchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "digitalGood"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fatalError"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "giftImageView"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "layer"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "nameLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "priceLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "sd_setImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textAlignment"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 depends-nominal:
-- "SK"
+- !private "So7CALayerC"
 - "So15CALayerDelegateP"
+- !private "So13CAMediaTimingP"
 - !private "So6CGRectV"
 - !private "So6CGSizeV"
 - "s7CVarArgP"
-- "Sl"
 - "SL"
 - "15TinyConstraints13ConstrainableP"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
-- "s17CustomReflectableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "Se"
+- !private "Se"
+- !private "s26DefaultStringInterpolationV"
 - !private "9mojo_test11DigitalGoodV"
-- "SE"
+- !private "SE"
 - "SQ"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
 - "9mojo_test8GiftCellC"
 - "SH"
-- "s25LosslessStringConvertibleP"
-- "s10MirrorPathP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - !private "So21NSItemProviderReadingP"
@@ -792,15 +773,10 @@ depends-nominal:
 - !private "So14NSSecureCodingP"
 - !private "So15NSTextAlignmentV"
 - !private "Sq"
-- "Sm"
 - "SY"
 - !private "10Foundation20ReferenceConvertibleP"
-- "ST"
-- !private "s12StaticStringV"
-- "SS"
-- "Sy"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -826,23 +802,17 @@ depends-nominal:
 - "So6UIViewC"
 - !private "10Foundation3URLV"
 - "So12UIFontWeighta"
-- "s37_DefaultCustomPlaygroundQuickLookableP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s34_ExpressibleByFileReferenceLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
 - "s20_SwiftNewtypeWrapperP"
-- "s16_SwiftStringViewP"
 - "5UIKit01_A23NumericRawRepresentableP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/arm64.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
@@ -997,18 +967,19 @@ depends-external:
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "c280fbe7bba5413359b400cfba032307"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "3955588129fa60febe540769627b7e8e"

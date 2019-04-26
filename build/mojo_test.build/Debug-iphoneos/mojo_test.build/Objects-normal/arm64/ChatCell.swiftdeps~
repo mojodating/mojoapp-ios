@@ -36,18 +36,12 @@ depends-member:
 - !private ["Sa", "forEach"]
 - ["Sa", "init"]
 - !private ["Sa", "last"]
-- !private ["s13ArrayProtocolP", "append"]
-- !private ["s13ArrayProtocolP", "forEach"]
-- ["s13ArrayProtocolP", "init"]
-- !private ["s13ArrayProtocolP", "last"]
 - ["So7FIRAuthC", "auth"]
 - ["So7FIRAuthC", "currentUser"]
 - !private ["SK", "append"]
 - !private ["SK", "forEach"]
 - ["SK", "init"]
-- ["SK", "init"]
 - !private ["SK", "last"]
-- !private ["Sb", "_getBuiltinLogicValue"]
 - ["So15CALayerDelegateP", "Auth"]
 - !private ["So15CALayerDelegateP", "Date"]
 - !private ["So15CALayerDelegateP", "Firestore"]
@@ -64,6 +58,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "bottomAnchor"]
 - !private ["So15CALayerDelegateP", "centerYAnchor"]
 - !private ["So15CALayerDelegateP", "chatProfileImage"]
+- !private ["So15CALayerDelegateP", "checkNewMessageStatus"]
 - !private ["So15CALayerDelegateP", "contentLabel"]
 - !private ["So15CALayerDelegateP", "conversation"]
 - !private ["So15CALayerDelegateP", "currentUser"]
@@ -95,7 +90,6 @@ depends-member:
 - !private ["s7CVarArgP", "URL"]
 - !private ["s7CVarArgP", "User"]
 - ["s7CVarArgP", ""]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "addSnapshotListener"]
 - !private ["s7CVarArgP", "addSubview"]
 - !private ["s7CVarArgP", "anchor"]
@@ -107,6 +101,7 @@ depends-member:
 - !private ["s7CVarArgP", "bottomAnchor"]
 - !private ["s7CVarArgP", "centerYAnchor"]
 - !private ["s7CVarArgP", "chatProfileImage"]
+- !private ["s7CVarArgP", "checkNewMessageStatus"]
 - !private ["s7CVarArgP", "collection"]
 - !private ["s7CVarArgP", "constraint"]
 - !private ["s7CVarArgP", "contentLabel"]
@@ -120,7 +115,6 @@ depends-member:
 - !private ["s7CVarArgP", "firestore"]
 - !private ["s7CVarArgP", "forEach"]
 - !private ["s7CVarArgP", "getDocument"]
-- ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isActive"]
 - !private ["s7CVarArgP", "isHidden"]
@@ -161,10 +155,11 @@ depends-member:
 - !private ["9mojo_test8ChatCellC", "backgroundColor"]
 - !private ["9mojo_test8ChatCellC", "centerYAnchor"]
 - ["9mojo_test8ChatCellC", "chatProfileImage"]
+- !private ["9mojo_test8ChatCellC", "checkNewMessageStatus"]
 - ["9mojo_test8ChatCellC", "contentLabel"]
 - ["9mojo_test8ChatCellC", "conversation"]
 - ["9mojo_test8ChatCellC", "currentUser"]
-- !private ["9mojo_test8ChatCellC", "deinit"]
+- ["9mojo_test8ChatCellC", "deinit"]
 - !private ["9mojo_test8ChatCellC", "fatalError"]
 - ["9mojo_test8ChatCellC", "fetchLastMessageFromConversation"]
 - ["9mojo_test8ChatCellC", "init"]
@@ -182,13 +177,10 @@ depends-member:
 - !private ["Sl", "append"]
 - !private ["Sl", "forEach"]
 - ["Sl", "init"]
-- ["Sl", "init"]
 - !private ["Sl", "last"]
 - !private ["So22FIRCollectionReferenceC", "document"]
 - !private ["So22FIRCollectionReferenceC", "order"]
 - !private ["SL", "StringFromCustomDate"]
-- ["SL", "init"]
-- ["SL", "init"]
 - ["SL", "semibold"]
 - ["15TinyConstraints13ConstrainableP", "Auth"]
 - !private ["15TinyConstraints13ConstrainableP", "Date"]
@@ -206,6 +198,7 @@ depends-member:
 - !private ["15TinyConstraints13ConstrainableP", "bottomAnchor"]
 - !private ["15TinyConstraints13ConstrainableP", "centerYAnchor"]
 - !private ["15TinyConstraints13ConstrainableP", "chatProfileImage"]
+- !private ["15TinyConstraints13ConstrainableP", "checkNewMessageStatus"]
 - !private ["15TinyConstraints13ConstrainableP", "contentLabel"]
 - !private ["15TinyConstraints13ConstrainableP", "conversation"]
 - !private ["15TinyConstraints13ConstrainableP", "currentUser"]
@@ -226,6 +219,10 @@ depends-member:
 - !private ["15TinyConstraints13ConstrainableP", "trailingAnchor"]
 - !private ["15TinyConstraints13ConstrainableP", "unreadImage"]
 - !private ["15TinyConstraints13ConstrainableP", "user"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "forEach"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "last"]
 - !private ["9mojo_test12ConversationV", "id"]
 - !private ["9mojo_test12ConversationV", "receiver"]
 - !private ["9mojo_test12ConversationV", "seen"]
@@ -251,6 +248,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "centerYAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "chatProfileImage"]
+- !private ["s28CustomDebugStringConvertibleP", "checkNewMessageStatus"]
 - !private ["s28CustomDebugStringConvertibleP", "collection"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
 - !private ["s28CustomDebugStringConvertibleP", "contentLabel"]
@@ -265,7 +263,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "forEach"]
 - !private ["s28CustomDebugStringConvertibleP", "getDocument"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
@@ -288,17 +286,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "unreadImage"]
 - !private ["s28CustomDebugStringConvertibleP", "user"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
-- !private ["s29CustomPlaygroundQuickLookableP", "StringFromCustomDate"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "StringFromCustomDate"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "black"]
 - !private ["s17CustomReflectableP", "forEach"]
 - ["s17CustomReflectableP", "init"]
-- ["s17CustomReflectableP", "init"]
+- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "last"]
 - !private ["s17CustomReflectableP", "lightGray"]
 - !private ["s17CustomReflectableP", "white"]
@@ -312,11 +305,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "URL"]
 - !private ["s23CustomStringConvertibleP", "User"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addSnapshotListener"]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "anchor"]
 - !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "arrowImage"]
 - ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
@@ -324,6 +318,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
 - !private ["s23CustomStringConvertibleP", "centerYAnchor"]
 - !private ["s23CustomStringConvertibleP", "chatProfileImage"]
+- !private ["s23CustomStringConvertibleP", "checkNewMessageStatus"]
 - !private ["s23CustomStringConvertibleP", "collection"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
 - !private ["s23CustomStringConvertibleP", "contentLabel"]
@@ -337,7 +332,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "firestore"]
 - !private ["s23CustomStringConvertibleP", "forEach"]
 - !private ["s23CustomStringConvertibleP", "getDocument"]
-- ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
@@ -361,17 +355,22 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "unreadImage"]
 - !private ["s23CustomStringConvertibleP", "user"]
 - !private ["s23CustomStringConvertibleP", "white"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "forEach"]
+- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "last"]
 - !private ["10Foundation4DateV", "StringFromCustomDate"]
 - !private ["Se", "StringFromCustomDate"]
-- !private ["Se", "_getBuiltinLogicValue"]
 - !private ["Se", "append"]
 - !private ["Se", "black"]
 - !private ["Se", "forEach"]
 - ["Se", "init"]
-- ["Se", "init"]
+- !private ["Se", "init"]
 - !private ["Se", "last"]
 - !private ["Se", "lightGray"]
 - !private ["Se", "white"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["So17FIRDocumentChangeC", "document"]
 - !private ["So17FIRDocumentChangeC", "type"]
 - !private ["So21FIRDocumentChangeTypeV", "added"]
@@ -379,12 +378,11 @@ depends-member:
 - !private ["So20FIRDocumentReferenceC", "getDocument"]
 - !private ["So19FIRDocumentSnapshotC", "data"]
 - !private ["SE", "StringFromCustomDate"]
-- !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "append"]
 - !private ["SE", "black"]
 - !private ["SE", "forEach"]
 - ["SE", "init"]
-- ["SE", "init"]
+- !private ["SE", "init"]
 - !private ["SE", "last"]
 - !private ["SE", "lightGray"]
 - !private ["SE", "white"]
@@ -398,7 +396,6 @@ depends-member:
 - !private ["SQ", "URL"]
 - !private ["SQ", "User"]
 - ["SQ", ""]
-- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "addSnapshotListener"]
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "added"]
@@ -411,6 +408,7 @@ depends-member:
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "centerYAnchor"]
 - !private ["SQ", "chatProfileImage"]
+- !private ["SQ", "checkNewMessageStatus"]
 - !private ["SQ", "collection"]
 - !private ["SQ", "constraint"]
 - !private ["SQ", "contentLabel"]
@@ -425,7 +423,7 @@ depends-member:
 - !private ["SQ", "forEach"]
 - !private ["SQ", "getDocument"]
 - ["SQ", "init"]
-- ["SQ", "init"]
+- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "isHidden"]
 - !private ["SQ", "last"]
@@ -453,16 +451,9 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "last"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "black"]
 - !private ["s23ExpressibleByNilLiteralP", "lightGray"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["So12FIRFirestoreC", "collection"]
 - !private ["So12FIRFirestoreC", "firestore"]
 - ["SH", "Auth"]
@@ -475,7 +466,6 @@ depends-member:
 - !private ["SH", "URL"]
 - !private ["SH", "User"]
 - ["SH", ""]
-- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "addSnapshotListener"]
 - !private ["SH", "addSubview"]
 - !private ["SH", "added"]
@@ -488,6 +478,7 @@ depends-member:
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "centerYAnchor"]
 - !private ["SH", "chatProfileImage"]
+- !private ["SH", "checkNewMessageStatus"]
 - !private ["SH", "collection"]
 - !private ["SH", "constraint"]
 - !private ["SH", "contentLabel"]
@@ -501,7 +492,6 @@ depends-member:
 - !private ["SH", "firestore"]
 - !private ["SH", "forEach"]
 - !private ["SH", "getDocument"]
-- ["SH", "init"]
 - ["SH", "init"]
 - !private ["SH", "isActive"]
 - !private ["SH", "isHidden"]
@@ -526,18 +516,17 @@ depends-member:
 - !private ["SH", "unreadImage"]
 - !private ["SH", "user"]
 - !private ["SH", "white"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s25LosslessStringConvertibleP", "init"]
 - !private ["9mojo_test7MessageV", "date"]
 - !private ["9mojo_test7MessageV", "init"]
 - !private ["9mojo_test7MessageV", "text"]
-- ["s10MirrorPathP", "init"]
-- ["s10MirrorPathP", "init"]
 - !private ["SM", "append"]
 - !private ["SM", "forEach"]
 - ["SM", "init"]
 - !private ["SM", "last"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "forEach"]
+- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "last"]
 - ["So8NSCodingP", "Auth"]
 - !private ["So8NSCodingP", "Date"]
 - !private ["So8NSCodingP", "Firestore"]
@@ -555,6 +544,7 @@ depends-member:
 - !private ["So8NSCodingP", "bottomAnchor"]
 - !private ["So8NSCodingP", "centerYAnchor"]
 - !private ["So8NSCodingP", "chatProfileImage"]
+- !private ["So8NSCodingP", "checkNewMessageStatus"]
 - !private ["So8NSCodingP", "contentLabel"]
 - !private ["So8NSCodingP", "conversation"]
 - !private ["So8NSCodingP", "currentUser"]
@@ -612,6 +602,7 @@ depends-member:
 - !private ["So8NSObjectC", "bottomAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
 - ["So8NSObjectC", "chatProfileImage"]
+- ["So8NSObjectC", "checkNewMessageStatus"]
 - !private ["So8NSObjectC", "collection"]
 - !private ["So8NSObjectC", "constraint"]
 - ["So8NSObjectC", "contentLabel"]
@@ -666,6 +657,7 @@ depends-member:
 - !private ["So8NSObjectP", "bottomAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
 - !private ["So8NSObjectP", "chatProfileImage"]
+- !private ["So8NSObjectP", "checkNewMessageStatus"]
 - !private ["So8NSObjectP", "collection"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "contentLabel"]
@@ -721,7 +713,6 @@ depends-member:
 - !private ["Sm", "append"]
 - !private ["Sm", "forEach"]
 - ["Sm", "init"]
-- ["Sm", "init"]
 - !private ["Sm", "last"]
 - !private ["SY", "added"]
 - ["SY", "semibold"]
@@ -730,18 +721,11 @@ depends-member:
 - !private ["ST", "append"]
 - !private ["ST", "forEach"]
 - ["ST", "init"]
-- ["ST", "init"]
 - !private ["ST", "last"]
-- !private ["s12StaticStringV", "init"]
-- !private ["s12StaticStringV", "init"]
-- ["SS", "init"]
-- ["SS", "init"]
-- ["Sy", "init"]
-- ["Sy", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
-- ["s20TextOutputStreamableP", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "anchor"]
 - !private ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "centerYAnchor"]
 - ["So48UIAccessibilityContentSizeCategoryImageAdjustingP", "init"]
@@ -765,6 +749,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "bottomAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "centerYAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "chatProfileImage"]
+- !private ["So29UIAccessibilityIdentificationP", "checkNewMessageStatus"]
 - !private ["So29UIAccessibilityIdentificationP", "contentLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "conversation"]
 - !private ["So29UIAccessibilityIdentificationP", "currentUser"]
@@ -801,6 +786,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "bottomAnchor"]
 - !private ["So12UIAppearanceP", "centerYAnchor"]
 - !private ["So12UIAppearanceP", "chatProfileImage"]
+- !private ["So12UIAppearanceP", "checkNewMessageStatus"]
 - !private ["So12UIAppearanceP", "contentLabel"]
 - !private ["So12UIAppearanceP", "conversation"]
 - !private ["So12UIAppearanceP", "currentUser"]
@@ -837,6 +823,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "bottomAnchor"]
 - !private ["So21UIAppearanceContainerP", "centerYAnchor"]
 - !private ["So21UIAppearanceContainerP", "chatProfileImage"]
+- !private ["So21UIAppearanceContainerP", "checkNewMessageStatus"]
 - !private ["So21UIAppearanceContainerP", "contentLabel"]
 - !private ["So21UIAppearanceContainerP", "conversation"]
 - !private ["So21UIAppearanceContainerP", "currentUser"]
@@ -874,6 +861,7 @@ depends-member:
 - !private ["So24UICollectionReusableViewC", "backgroundColor"]
 - !private ["So24UICollectionReusableViewC", "centerYAnchor"]
 - ["So24UICollectionReusableViewC", "chatProfileImage"]
+- ["So24UICollectionReusableViewC", "checkNewMessageStatus"]
 - ["So24UICollectionReusableViewC", "contentLabel"]
 - ["So24UICollectionReusableViewC", "conversation"]
 - ["So24UICollectionReusableViewC", "currentUser"]
@@ -909,6 +897,7 @@ depends-member:
 - !private ["So20UICollectionViewCellC", "backgroundColor"]
 - !private ["So20UICollectionViewCellC", "centerYAnchor"]
 - ["So20UICollectionViewCellC", "chatProfileImage"]
+- ["So20UICollectionViewCellC", "checkNewMessageStatus"]
 - ["So20UICollectionViewCellC", "contentLabel"]
 - ["So20UICollectionViewCellC", "conversation"]
 - ["So20UICollectionViewCellC", "currentUser"]
@@ -950,6 +939,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "bottomAnchor"]
 - !private ["So17UICoordinateSpaceP", "centerYAnchor"]
 - !private ["So17UICoordinateSpaceP", "chatProfileImage"]
+- !private ["So17UICoordinateSpaceP", "checkNewMessageStatus"]
 - !private ["So17UICoordinateSpaceP", "contentLabel"]
 - !private ["So17UICoordinateSpaceP", "conversation"]
 - !private ["So17UICoordinateSpaceP", "currentUser"]
@@ -986,6 +976,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "bottomAnchor"]
 - !private ["So13UIDynamicItemP", "centerYAnchor"]
 - !private ["So13UIDynamicItemP", "chatProfileImage"]
+- !private ["So13UIDynamicItemP", "checkNewMessageStatus"]
 - !private ["So13UIDynamicItemP", "contentLabel"]
 - !private ["So13UIDynamicItemP", "conversation"]
 - !private ["So13UIDynamicItemP", "currentUser"]
@@ -1024,6 +1015,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "bottomAnchor"]
 - !private ["So18UIFocusEnvironmentP", "centerYAnchor"]
 - !private ["So18UIFocusEnvironmentP", "chatProfileImage"]
+- !private ["So18UIFocusEnvironmentP", "checkNewMessageStatus"]
 - !private ["So18UIFocusEnvironmentP", "contentLabel"]
 - !private ["So18UIFocusEnvironmentP", "conversation"]
 - !private ["So18UIFocusEnvironmentP", "currentUser"]
@@ -1060,6 +1052,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "bottomAnchor"]
 - !private ["So11UIFocusItemP", "centerYAnchor"]
 - !private ["So11UIFocusItemP", "chatProfileImage"]
+- !private ["So11UIFocusItemP", "checkNewMessageStatus"]
 - !private ["So11UIFocusItemP", "contentLabel"]
 - !private ["So11UIFocusItemP", "conversation"]
 - !private ["So11UIFocusItemP", "currentUser"]
@@ -1096,6 +1089,7 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "bottomAnchor"]
 - !private ["So20UIFocusItemContainerP", "centerYAnchor"]
 - !private ["So20UIFocusItemContainerP", "chatProfileImage"]
+- !private ["So20UIFocusItemContainerP", "checkNewMessageStatus"]
 - !private ["So20UIFocusItemContainerP", "contentLabel"]
 - !private ["So20UIFocusItemContainerP", "conversation"]
 - !private ["So20UIFocusItemContainerP", "currentUser"]
@@ -1145,6 +1139,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "bottomAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "centerYAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "chatProfileImage"]
+- !private ["So30UIPasteConfigurationSupportingP", "checkNewMessageStatus"]
 - !private ["So30UIPasteConfigurationSupportingP", "contentLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "conversation"]
 - !private ["So30UIPasteConfigurationSupportingP", "currentUser"]
@@ -1184,6 +1179,7 @@ depends-member:
 - !private ["So11UIResponderC", "bottomAnchor"]
 - !private ["So11UIResponderC", "centerYAnchor"]
 - ["So11UIResponderC", "chatProfileImage"]
+- ["So11UIResponderC", "checkNewMessageStatus"]
 - ["So11UIResponderC", "contentLabel"]
 - ["So11UIResponderC", "conversation"]
 - ["So11UIResponderC", "currentUser"]
@@ -1221,6 +1217,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "bottomAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "centerYAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "chatProfileImage"]
+- !private ["So30UIResponderStandardEditActionsP", "checkNewMessageStatus"]
 - !private ["So30UIResponderStandardEditActionsP", "contentLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "conversation"]
 - !private ["So30UIResponderStandardEditActionsP", "currentUser"]
@@ -1257,6 +1254,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "bottomAnchor"]
 - !private ["So18UITraitEnvironmentP", "centerYAnchor"]
 - !private ["So18UITraitEnvironmentP", "chatProfileImage"]
+- !private ["So18UITraitEnvironmentP", "checkNewMessageStatus"]
 - !private ["So18UITraitEnvironmentP", "contentLabel"]
 - !private ["So18UITraitEnvironmentP", "conversation"]
 - !private ["So18UITraitEnvironmentP", "currentUser"]
@@ -1293,6 +1291,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "bottomAnchor"]
 - !private ["So23UIUserActivityRestoringP", "centerYAnchor"]
 - !private ["So23UIUserActivityRestoringP", "chatProfileImage"]
+- !private ["So23UIUserActivityRestoringP", "checkNewMessageStatus"]
 - !private ["So23UIUserActivityRestoringP", "contentLabel"]
 - !private ["So23UIUserActivityRestoringP", "conversation"]
 - !private ["So23UIUserActivityRestoringP", "currentUser"]
@@ -1332,6 +1331,7 @@ depends-member:
 - !private ["So6UIViewC", "bottomAnchor"]
 - !private ["So6UIViewC", "centerYAnchor"]
 - ["So6UIViewC", "chatProfileImage"]
+- ["So6UIViewC", "checkNewMessageStatus"]
 - ["So6UIViewC", "contentLabel"]
 - ["So6UIViewC", "conversation"]
 - ["So6UIViewC", "currentUser"]
@@ -1360,61 +1360,25 @@ depends-member:
 - ["So7FIRUserC", "uid"]
 - ["So11FIRUserInfoP", "uid"]
 - ["So12UIFontWeighta", "semibold"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "Auth"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "Date"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "Firestore"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "Message"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "UIImageView"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "UILabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "URL"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "User"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "anchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "arrowImage"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "centerYAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "chatProfileImage"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "contentLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "conversation"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "currentUser"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fatalError"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fetchLastMessageFromConversation"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isHidden"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "messageLog"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "nameLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "print"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "sd_setImage"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "setupCell"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "timeLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "unreadImage"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "user"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "last"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "StringFromCustomDate"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "forEach"]
 - ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "last"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "black"]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "forEach"]
+- ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "last"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
@@ -1439,6 +1403,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerYAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "chatProfileImage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "checkNewMessageStatus"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "collection"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentLabel"]
@@ -1474,26 +1439,58 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "user"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "StringFromCustomDate"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "black"]
 - !private ["s21_ObjectiveCBridgeableP", "forEach"]
 - ["s21_ObjectiveCBridgeableP", "init"]
-- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "last"]
 - !private ["s21_ObjectiveCBridgeableP", "lightGray"]
 - ["s21_ObjectiveCBridgeableP", "semibold"]
 - !private ["s21_ObjectiveCBridgeableP", "white"]
 - ["s20_SwiftNewtypeWrapperP", "semibold"]
-- ["s16_SwiftStringViewP", "init"]
-- ["s16_SwiftStringViewP", "init"]
 - ["5UIKit01_A23NumericRawRepresentableP", "semibold"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "Auth"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "Date"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "Firestore"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "Message"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "UIImageView"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "UILabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "URL"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "User"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "anchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "arrowImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "centerYAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "chatProfileImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "checkNewMessageStatus"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "contentLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "conversation"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "currentUser"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fatalError"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fetchLastMessageFromConversation"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isHidden"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "messageLog"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "nameLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "print"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "sd_setImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "setupCell"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "timeLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "unreadImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "user"]
 depends-nominal:
 - "Sa"
-- "s13ArrayProtocolP"
 - "So7FIRAuthC"
 - "SK"
-- !private "Sb"
 - "So15CALayerDelegateP"
 - !private "So6CGSizeV"
 - "s7CVarArgP"
@@ -1502,13 +1499,15 @@ depends-nominal:
 - !private "So22FIRCollectionReferenceC"
 - "SL"
 - "15TinyConstraints13ConstrainableP"
+- "10Foundation15ContiguousBytesP"
 - !private "9mojo_test12ConversationV"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
 - !private "10Foundation4DateV"
 - "Se"
+- !private "s26DefaultStringInterpolationV"
 - !private "So17FIRDocumentChangeC"
 - !private "So21FIRDocumentChangeTypeV"
 - !private "So20FIRDocumentReferenceC"
@@ -1516,17 +1515,12 @@ depends-nominal:
 - "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
-- !private "s27ExpressibleByBooleanLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "So12FIRFirestoreC"
 - "SH"
-- "s25LosslessStringConvertibleP"
 - !private "9mojo_test7MessageV"
-- "s10MirrorPathP"
 - "SM"
+- "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - !private "So21NSItemProviderReadingP"
@@ -1547,11 +1541,8 @@ depends-nominal:
 - "SY"
 - !private "10Foundation20ReferenceConvertibleP"
 - "ST"
-- !private "s12StaticStringV"
-- "SS"
-- "Sy"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
 - "So48UIAccessibilityContentSizeCategoryImageAdjustingP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
@@ -1580,25 +1571,20 @@ depends-nominal:
 - "So7FIRUserC"
 - "So11FIRUserInfoP"
 - "So12UIFontWeighta"
-- "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
 - !private "s34_ExpressibleByFileReferenceLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
+- "s19_HasContiguousBytesP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
 - "s20_SwiftNewtypeWrapperP"
-- "s16_SwiftStringViewP"
 - "5UIKit01_A23NumericRawRepresentableP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/arm64.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
@@ -1753,18 +1739,19 @@ depends-external:
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "faecfab158586e939fabeace91ebed93"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "58c9e36157df83c61693f752514877f7"

@@ -6,15 +6,15 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		4FzrENgZW/SGiwJFRL/34p7xal0=
+		G3l1v8aKfQhuKT4ttVtc/1gggys=
 		</data>
 		<key>JGProgressHUD.bundle/Info.plist</key>
 		<data>
-		gNuTHqf3reQ748wa2cQXNOlL+bw=
+		NDDPHC58fvXfDGFEfW+twyqywKc=
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		doQN0K26NLhpL4gsrC3oUXvONcE=
+		fBRbOZ/FSn57S/OOAXSRSi4QKWE=
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -22,11 +22,11 @@
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		iy1JT8Y1+YnvtMcHOeJZkEfYaj0=
+		UuJdVMYy2+U2t3W8s86IMw6LpdY=
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		xSVwdv36Ud5NANOw1zozbHkjjcQ=
+		JTaOtSPhrIc2oyq+KBIR4gvn6oE=
 		</data>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -63,22 +63,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gNuTHqf3reQ748wa2cQXNOlL+bw=
+			NDDPHC58fvXfDGFEfW+twyqywKc=
 			</data>
 			<key>hash2</key>
 			<data>
-			Zyxp9xxQ/S21QDhh9j2Rn40m1Ix6hAuEsgnjN9RBYpY=
+			BifXRUlQPZvbPN1LO+UorKt+q5fFSuqcpMSSzfKTV7w=
 			</data>
 		</dict>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			doQN0K26NLhpL4gsrC3oUXvONcE=
+			fBRbOZ/FSn57S/OOAXSRSi4QKWE=
 			</data>
 			<key>hash2</key>
 			<data>
-			K0LynvSvRZO/rDwQv0g/h6JYfpOVJFtK5BmTB0TAjqA=
+			RDB8FP4may0aDlTq11TOrvpJa+URIwgx9m8+a0hd52E=
 			</data>
 		</dict>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeRequirements</key>
@@ -96,22 +96,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			iy1JT8Y1+YnvtMcHOeJZkEfYaj0=
+			UuJdVMYy2+U2t3W8s86IMw6LpdY=
 			</data>
 			<key>hash2</key>
 			<data>
-			by2F72rfG+WGJ8W3Mqnfgr4UN4yY7DH+LlxwhdEUc8E=
+			DT+pCV+v400Q3xtKfpER7eX3kQc07fcefH9KGueUam4=
 			</data>
 		</dict>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			xSVwdv36Ud5NANOw1zozbHkjjcQ=
+			JTaOtSPhrIc2oyq+KBIR4gvn6oE=
 			</data>
 			<key>hash2</key>
 			<data>
-			v7GrSkuoWPry5f/c/hsPrS2jpCNY6q9EHpRJmjbag5w=
+			ws4NAWH5ePUlsynh7ojqTMTTk7lXcfgH+lwSwCxe4c4=
 			</data>
 		</dict>
 		<key>JGProgressHUD.bundle/_CodeSignature/CodeSignature</key>
@@ -194,7 +194,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -225,24 +225,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -278,13 +266,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

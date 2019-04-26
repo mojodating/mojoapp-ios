@@ -23,6 +23,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     let headerId = "headerId"
     var conversitionId: String?
     var chatProfileUID: String?
+//    var requestorUID: String?
     var conversation : Conversation? {
         didSet {
             self.conversitionId = conversation?.id
@@ -30,8 +31,10 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
             
             if currentUser == conversation?.sender {
                 chatProfileUID = conversation?.receiver
+//                requestorUID = Auth.auth().currentUser?.uid
             } else {
                 chatProfileUID = conversation?.sender
+//                requestorUID = chatProfileUID
             }
             self.checkIfChatBlocked()
         }
@@ -111,7 +114,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         collectionView.register(RequestMessageCell.self, forCellWithReuseIdentifier: requestCellId)
         collectionView.alwaysBounceVertical = true
         collectionView.keyboardDismissMode = .interactive
-        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 8, right: 8)
+        collectionView.contentInset = UIEdgeInsets(top: 16, left: 0, bottom: 40, right: 8)
         collectionView.scrollIndicatorInsets = UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
         collectionView.register(PrivateChatDateHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerId)
     }
@@ -227,8 +230,8 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     var chatSender: User?
     
     fileprivate func setupRequestCell(cell: RequestMessageCell, message: Message ) {
-        if let requestorUID = self.conversation?.sender {
-            Firestore.firestore().collection("users").document(requestorUID).getDocument { (snapshot, err) in
+        guard let requestorUID = self.conversation?.sender else { return }
+        Firestore.firestore().collection("users").document(requestorUID).getDocument { (snapshot, err) in
                 if let err = err {
                     print(err)
                     return
@@ -242,7 +245,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
                     cell.profileImageView.sd_setImage(with: requestProfileUrl)
                 }
             }
-        }
+        
         cell.profileImageView.isUserInteractionEnabled = true
         let singleTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleViewRequesterProfile))
         singleTap.numberOfTapsRequired = 1

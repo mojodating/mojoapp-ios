@@ -386,7 +386,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MtC0YVVpFHS7RurIPwwijXHsdkM=
+		fNimNJ7B1Di3SHuOS4QK4jAxnFM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -398,11 +398,11 @@
 		</data>
 		<key>gRPCCertificates.bundle/Info.plist</key>
 		<data>
-		2NlN8+CRTXsZ+AkK0PvwPwsBaDw=
+		e+n6/wf97VeRP48X6AdYHpr7ZkA=
 		</data>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeDirectory</key>
 		<data>
-		4ypzLfrVsqScCIabFcShxiGCJQY=
+		ahgw7KM9Xn8L19c/8eiQ6N7Yqx8=
 		</data>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -410,11 +410,11 @@
 		</data>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		YdOy9pcEu4ZU9r4WpzIJeM01Fm8=
+		u3LTt52SLJVzzl/2gQG/Ye/pAis=
 		</data>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeResources</key>
 		<data>
-		etqAXFPRzwjksOAkvgyEdyiBK34=
+		jxUqTo0FILlV0+qb46OoXyOj3ig=
 		</data>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeSignature</key>
 		<data>
@@ -1498,22 +1498,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2NlN8+CRTXsZ+AkK0PvwPwsBaDw=
+			e+n6/wf97VeRP48X6AdYHpr7ZkA=
 			</data>
 			<key>hash2</key>
 			<data>
-			msd3oM8XkOPLAuxlVOKyNu0zdlhJW+VfGp5jfEQ9S6Y=
+			gVz3YLiyhgObj+//Cg5QDzSHfOGtoNUxGKRQM9B1PrA=
 			</data>
 		</dict>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			4ypzLfrVsqScCIabFcShxiGCJQY=
+			ahgw7KM9Xn8L19c/8eiQ6N7Yqx8=
 			</data>
 			<key>hash2</key>
 			<data>
-			WVtiJbyd9QlbPtwK127LyYwEXkK95+uD/OGF2jMNRgo=
+			XqkLLT0YclYTKl+O/GRnpFsX6CKRYrap12N1kN0UcCc=
 			</data>
 		</dict>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeRequirements</key>
@@ -1531,22 +1531,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			YdOy9pcEu4ZU9r4WpzIJeM01Fm8=
+			u3LTt52SLJVzzl/2gQG/Ye/pAis=
 			</data>
 			<key>hash2</key>
 			<data>
-			SxLO6c/g6JuBsvxycjJbuQxwVanmF8ms2stUcUfVwds=
+			+fVbG6DzWjduae0gv0B5Zgepec3JzOHDEo16U1SZ0PM=
 			</data>
 		</dict>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			etqAXFPRzwjksOAkvgyEdyiBK34=
+			jxUqTo0FILlV0+qb46OoXyOj3ig=
 			</data>
 			<key>hash2</key>
 			<data>
-			iH/KPx0vNKz5azgWjCUxjPYbOayYUkeZqVTBvciNCUY=
+			dLtLWJJQ7588DlvDIZBNOXWowpkUIzLNOV2y/3xg404=
 			</data>
 		</dict>
 		<key>gRPCCertificates.bundle/_CodeSignature/CodeSignature</key>
@@ -1574,7 +1574,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -1605,24 +1605,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -1658,13 +1646,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

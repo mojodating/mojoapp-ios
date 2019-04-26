@@ -8,19 +8,13 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
-- !private "BooleanLiteralType"
 - "CGRect"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "NSCoder"
 - "PrivateChatDateHeaderView"
-- "StringLiteralType"
 - "UICollectionReusableView"
 - "UILabel"
 - !private "fatalError"
 depends-member:
-- ["SK", "init"]
-- ["SK", "init"]
 - ["So15CALayerDelegateP", "UILabel"]
 - ["So15CALayerDelegateP", ""]
 - !private ["So15CALayerDelegateP", "addSubview"]
@@ -43,7 +37,6 @@ depends-member:
 - !private ["s7CVarArgP", "dateLabel"]
 - !private ["s7CVarArgP", "fatalError"]
 - ["s7CVarArgP", "init"]
-- ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isActive"]
 - !private ["s7CVarArgP", "lightGray"]
 - ["s7CVarArgP", "systemFont"]
@@ -51,10 +44,6 @@ depends-member:
 - !private ["s7CVarArgP", "textColor"]
 - !private ["s7CVarArgP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s7CVarArgP", "white"]
-- ["Sl", "init"]
-- ["Sl", "init"]
-- ["SL", "init"]
-- ["SL", "init"]
 - ["15TinyConstraints13ConstrainableP", "UILabel"]
 - ["15TinyConstraints13ConstrainableP", ""]
 - !private ["15TinyConstraints13ConstrainableP", "addSubview"]
@@ -77,7 +66,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "dateLabel"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "lightGray"]
 - ["s28CustomDebugStringConvertibleP", "systemFont"]
@@ -85,10 +73,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "textColor"]
 - !private ["s28CustomDebugStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- ["s17CustomReflectableP", "init"]
-- ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "lightGray"]
 - !private ["s17CustomReflectableP", "white"]
 - ["s23CustomStringConvertibleP", "UILabel"]
@@ -101,7 +85,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "dateLabel"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - ["s23CustomStringConvertibleP", "init"]
-- ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - !private ["s23CustomStringConvertibleP", "lightGray"]
 - ["s23CustomStringConvertibleP", "systemFont"]
@@ -109,12 +92,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "textColor"]
 - !private ["s23CustomStringConvertibleP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["s23CustomStringConvertibleP", "white"]
-- ["Se", "init"]
-- ["Se", "init"]
 - !private ["Se", "lightGray"]
 - !private ["Se", "white"]
-- ["SE", "init"]
-- ["SE", "init"]
 - !private ["SE", "lightGray"]
 - !private ["SE", "white"]
 - ["SQ", "UILabel"]
@@ -128,7 +107,6 @@ depends-member:
 - !private ["SQ", "dateLabel"]
 - !private ["SQ", "fatalError"]
 - ["SQ", "init"]
-- ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "lightGray"]
 - ["SQ", "systemFont"]
@@ -136,14 +114,8 @@ depends-member:
 - !private ["SQ", "textColor"]
 - !private ["SQ", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SQ", "white"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "lightGray"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - ["SH", "UILabel"]
 - ["SH", ""]
 - !private ["SH", "addSubview"]
@@ -155,7 +127,6 @@ depends-member:
 - !private ["SH", "dateLabel"]
 - !private ["SH", "fatalError"]
 - ["SH", "init"]
-- ["SH", "init"]
 - !private ["SH", "isActive"]
 - !private ["SH", "lightGray"]
 - ["SH", "systemFont"]
@@ -163,10 +134,6 @@ depends-member:
 - !private ["SH", "textColor"]
 - !private ["SH", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["SH", "white"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s10MirrorPathP", "init"]
-- ["s10MirrorPathP", "init"]
 - ["So8NSCodingP", "UILabel"]
 - ["So8NSCodingP", ""]
 - !private ["So8NSCodingP", "addSubview"]
@@ -240,24 +207,10 @@ depends-member:
 - !private ["9mojo_test25PrivateChatDateHeaderViewC", "centerXAnchor"]
 - !private ["9mojo_test25PrivateChatDateHeaderViewC", "centerYAnchor"]
 - ["9mojo_test25PrivateChatDateHeaderViewC", "dateLabel"]
-- !private ["9mojo_test25PrivateChatDateHeaderViewC", "deinit"]
+- ["9mojo_test25PrivateChatDateHeaderViewC", "deinit"]
 - !private ["9mojo_test25PrivateChatDateHeaderViewC", "fatalError"]
 - ["9mojo_test25PrivateChatDateHeaderViewC", "init"]
-- ["Sm", "init"]
-- ["Sm", "init"]
 - !private ["SY", "center"]
-- ["ST", "init"]
-- ["ST", "init"]
-- !private ["s12StaticStringV", "init"]
-- !private ["s12StaticStringV", "init"]
-- ["SS", "init"]
-- ["SS", "init"]
-- ["Sy", "init"]
-- ["Sy", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
-- ["s20TextOutputStreamableP", "init"]
 - ["So29UIAccessibilityIdentificationP", "UILabel"]
 - ["So29UIAccessibilityIdentificationP", ""]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
@@ -454,30 +407,8 @@ depends-member:
 - !private ["So6UIViewC", "textAlignment"]
 - !private ["So6UIViewC", "textColor"]
 - !private ["So6UIViewC", "translatesAutoresizingMaskIntoConstraints"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "UILabel"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "centerXAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "centerYAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dateLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fatalError"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textAlignment"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "translatesAutoresizingMaskIntoConstraints"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UILabel"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
@@ -495,33 +426,32 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textColor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
-- ["s21_ObjectiveCBridgeableP", "init"]
-- ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "lightGray"]
 - !private ["s21_ObjectiveCBridgeableP", "white"]
-- ["s16_SwiftStringViewP", "init"]
-- ["s16_SwiftStringViewP", "init"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "UILabel"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "centerXAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "centerYAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "dateLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fatalError"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textAlignment"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "translatesAutoresizingMaskIntoConstraints"]
 depends-nominal:
-- "SK"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
-- "Sl"
-- "SL"
 - "15TinyConstraints13ConstrainableP"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
-- "s17CustomReflectableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "Se"
-- "SE"
+- !private "Se"
+- !private "SE"
 - "SQ"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
 - "SH"
-- "s25LosslessStringConvertibleP"
-- "s10MirrorPathP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - !private "So21NSItemProviderReadingP"
@@ -536,14 +466,7 @@ depends-nominal:
 - !private "So15NSTextAlignmentV"
 - !private "Sq"
 - "9mojo_test25PrivateChatDateHeaderViewC"
-- "Sm"
 - !private "SY"
-- "ST"
-- !private "s12StaticStringV"
-- "SS"
-- "Sy"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -563,19 +486,12 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
-- "s37_DefaultCustomPlaygroundQuickLookableP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
-- "s21_ObjectiveCBridgeableP"
-- "s16_SwiftStringViewP"
+- !private "s21_ObjectiveCBridgeableP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/arm64.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/arm64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
@@ -730,18 +646,19 @@ depends-external:
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "ab1ce3d8e91ac3f5e40384f49d5b28e1"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "f7f0729fd818bda72174e9f503b5389c"

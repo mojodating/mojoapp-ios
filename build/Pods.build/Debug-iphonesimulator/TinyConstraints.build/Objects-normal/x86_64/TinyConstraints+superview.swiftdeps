@@ -53,12 +53,8 @@ depends-top-level:
 depends-member:
 - !private ["Sa", "append"]
 - !private ["Sa", "init"]
-- !private ["s13ArrayProtocolP", "append"]
-- !private ["s13ArrayProtocolP", "init"]
 - !private ["SK", "append"]
 - !private ["SK", "init"]
-- !private ["SK", "init"]
-- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "Constraints"]
 - !private ["So15CALayerDelegateP", "bottom"]
 - !private ["So15CALayerDelegateP", "bottomToSuperview"]
@@ -84,7 +80,6 @@ depends-member:
 - !private ["So15CALayerDelegateP", "width"]
 - !private ["So7CGPointV", "zero"]
 - !private ["s7CVarArgP", "Constraints"]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "append"]
 - !private ["s7CVarArgP", "bottom"]
 - !private ["s7CVarArgP", "bottomToSuperview"]
@@ -94,7 +89,6 @@ depends-member:
 - !private ["s7CVarArgP", "effectiveUserInterfaceLayoutDirection"]
 - !private ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "height"]
-- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "leading"]
 - !private ["s7CVarArgP", "left"]
@@ -112,9 +106,6 @@ depends-member:
 - !private ["s7CVarArgP", "width"]
 - !private ["Sl", "append"]
 - !private ["Sl", "init"]
-- !private ["Sl", "init"]
-- !private ["SL", "init"]
-- !private ["SL", "init"]
 - !private ["SL", "required"]
 - !private ["15TinyConstraints13ConstrainableP", "Constraints"]
 - !private ["15TinyConstraints13ConstrainableP", "bottom"]
@@ -140,6 +131,8 @@ depends-member:
 - !private ["15TinyConstraints13ConstrainableP", "trailing"]
 - !private ["15TinyConstraints13ConstrainableP", "width"]
 - !private ["15TinyConstraints18ConstraintRelationO", "equal"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "Constraints"]
 - !private ["s28CustomDebugStringConvertibleP", "append"]
 - !private ["s28CustomDebugStringConvertibleP", "bottom"]
@@ -150,7 +143,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "effectiveUserInterfaceLayoutDirection"]
 - !private ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "height"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "leading"]
 - !private ["s28CustomDebugStringConvertibleP", "left"]
@@ -167,17 +159,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "trailing"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
 - !private ["s28CustomDebugStringConvertibleP", "zero"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "zero"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
-- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "zero"]
 - !private ["s23CustomStringConvertibleP", "Constraints"]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "append"]
 - !private ["s23CustomStringConvertibleP", "bottom"]
 - !private ["s23CustomStringConvertibleP", "bottomToSuperview"]
@@ -187,7 +172,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "effectiveUserInterfaceLayoutDirection"]
 - !private ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "height"]
-- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "leading"]
 - !private ["s23CustomStringConvertibleP", "left"]
@@ -203,16 +187,23 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "topToSuperview"]
 - !private ["s23CustomStringConvertibleP", "trailing"]
 - !private ["s23CustomStringConvertibleP", "width"]
-- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "init"]
 - !private ["Se", "append"]
+- !private ["Se", "bottom"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
+- !private ["Se", "left"]
+- !private ["Se", "right"]
+- !private ["Se", "top"]
 - !private ["Se", "zero"]
-- !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "append"]
+- !private ["SE", "bottom"]
 - !private ["SE", "init"]
-- !private ["SE", "init"]
+- !private ["SE", "left"]
+- !private ["SE", "right"]
+- !private ["SE", "top"]
 - !private ["SE", "zero"]
+- ["SQ", "=="]
 - ["SQ", "ArrayLiteralElement"]
 - !private ["SQ", "Constraints"]
 - ["SQ", "Element"]
@@ -222,7 +213,6 @@ depends-member:
 - ["SQ", "_Default_ArrayLiteralElement"]
 - ["SQ", "_Default_Element"]
 - ["SQ", "_Default_RawValue"]
-- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "append"]
 - !private ["SQ", "bottom"]
 - !private ["SQ", "bottomToSuperview"]
@@ -238,7 +228,6 @@ depends-member:
 - ["SQ", "formUnion"]
 - !private ["SQ", "height"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - ["SQ", "insert"]
 - ["SQ", "intersection"]
 - ["SQ", "isDisjoint"]
@@ -271,6 +260,7 @@ depends-member:
 - ["SQ", "update"]
 - !private ["SQ", "width"]
 - !private ["SQ", "zero"]
+- ["s25ExpressibleByArrayLiteralP", "=="]
 - ["s25ExpressibleByArrayLiteralP", "ArrayLiteralElement"]
 - ["s25ExpressibleByArrayLiteralP", "Element"]
 - ["s25ExpressibleByArrayLiteralP", "LayoutEdge"]
@@ -305,15 +295,7 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "trailing"]
 - ["s25ExpressibleByArrayLiteralP", "union"]
 - ["s25ExpressibleByArrayLiteralP", "update"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["SH", "Constraints"]
-- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "append"]
 - !private ["SH", "bottom"]
 - !private ["SH", "bottomToSuperview"]
@@ -324,7 +306,6 @@ depends-member:
 - !private ["SH", "equal"]
 - !private ["SH", "fatalError"]
 - !private ["SH", "height"]
-- !private ["SH", "init"]
 - !private ["SH", "init"]
 - !private ["SH", "leading"]
 - !private ["SH", "left"]
@@ -343,6 +324,7 @@ depends-member:
 - !private ["SH", "topToSuperview"]
 - !private ["SH", "trailing"]
 - !private ["SH", "width"]
+- ["15TinyConstraints10LayoutEdgeV", "=="]
 - ["15TinyConstraints10LayoutEdgeV", "ArrayLiteralElement"]
 - ["15TinyConstraints10LayoutEdgeV", "Element"]
 - ["15TinyConstraints10LayoutEdgeV", "LayoutEdge"]
@@ -377,13 +359,10 @@ depends-member:
 - ["15TinyConstraints10LayoutEdgeV", "trailing"]
 - ["15TinyConstraints10LayoutEdgeV", "union"]
 - ["15TinyConstraints10LayoutEdgeV", "update"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s10MirrorPathP", "init"]
-- !private ["s10MirrorPathP", "init"]
 - !private ["SM", "append"]
 - !private ["SM", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["So8NSCodingP", "Constraints"]
 - !private ["So8NSCodingP", "bottom"]
 - !private ["So8NSCodingP", "bottomToSuperview"]
@@ -477,6 +456,7 @@ depends-member:
 - !private ["So8NSObjectP", "topToSuperview"]
 - !private ["So8NSObjectP", "trailing"]
 - !private ["So8NSObjectP", "width"]
+- ["s9OptionSetP", "=="]
 - ["s9OptionSetP", "ArrayLiteralElement"]
 - ["s9OptionSetP", "Element"]
 - ["s9OptionSetP", "LayoutEdge"]
@@ -514,7 +494,7 @@ depends-member:
 - !private ["Sk", "init"]
 - !private ["Sm", "append"]
 - !private ["Sm", "init"]
-- !private ["Sm", "init"]
+- ["SY", "=="]
 - ["SY", "ArrayLiteralElement"]
 - ["SY", "Element"]
 - ["SY", "LayoutEdge"]
@@ -554,7 +534,7 @@ depends-member:
 - ["SY", "update"]
 - !private ["ST", "append"]
 - !private ["ST", "init"]
-- !private ["ST", "init"]
+- ["s10SetAlgebraP", "=="]
 - ["s10SetAlgebraP", "ArrayLiteralElement"]
 - ["s10SetAlgebraP", "Element"]
 - ["s10SetAlgebraP", "LayoutEdge"]
@@ -588,16 +568,6 @@ depends-member:
 - !private ["s10SetAlgebraP", "trailing"]
 - ["s10SetAlgebraP", "union"]
 - ["s10SetAlgebraP", "update"]
-- !private ["s12StaticStringV", "init"]
-- !private ["s12StaticStringV", "init"]
-- !private ["SS", "init"]
-- !private ["SS", "init"]
-- !private ["Sy", "init"]
-- !private ["Sy", "init"]
-- !private ["s16TextOutputStreamP", "init"]
-- !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", "init"]
-- !private ["s20TextOutputStreamableP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "Constraints"]
 - !private ["So29UIAccessibilityIdentificationP", "bottom"]
 - !private ["So29UIAccessibilityIdentificationP", "bottomToSuperview"]
@@ -978,42 +948,13 @@ depends-member:
 - ["So6UIViewC", "verticalToSuperview"]
 - !private ["So6UIViewC", "width"]
 - ["So6UIViewC", "widthToSuperview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "Constraints"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "bottom"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "bottomToSuperview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "center"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "centerX"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "centerY"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "effectiveUserInterfaceLayoutDirection"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fatalError"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "height"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leading"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "left"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leftToSuperview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "origin"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "prepareForLayout"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "right"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rightToSuperview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "safeAreaLayoutGuide"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "safeConstrainable"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "superview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "top"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "topToSuperview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailing"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "width"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "zero"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "init"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s33_ExpressibleByStringInterpolationP", "init"]
-- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "required"]
@@ -1040,10 +981,8 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "topToSuperview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailing"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "width"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "bottom"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "left"]
 - !private ["s21_ObjectiveCBridgeableP", "required"]
@@ -1051,14 +990,33 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "top"]
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
 - !private ["s20_SwiftNewtypeWrapperP", "required"]
-- !private ["s16_SwiftStringViewP", "init"]
-- !private ["s16_SwiftStringViewP", "init"]
 - !private ["5UIKit01_A23NumericRawRepresentableP", "required"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "Constraints"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bottom"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bottomToSuperview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "center"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "centerX"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "centerY"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "effectiveUserInterfaceLayoutDirection"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fatalError"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "height"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "leading"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "left"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "leftToSuperview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "origin"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "prepareForLayout"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "right"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rightToSuperview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "safeAreaLayoutGuide"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "safeConstrainable"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "superview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "top"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topToSuperview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailing"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "width"]
 depends-nominal:
 - !private "Sa"
-- !private "s13ArrayProtocolP"
 - !private "SK"
-- !private "Sb"
 - !private "So15CALayerDelegateP"
 - !private "So7CGPointV"
 - !private "s7CVarArgP"
@@ -1066,23 +1024,19 @@ depends-nominal:
 - !private "SL"
 - !private "15TinyConstraints13ConstrainableP"
 - !private "15TinyConstraints18ConstraintRelationO"
+- !private "10Foundation15ContiguousBytesP"
 - !private "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
 - !private "Se"
 - !private "SE"
 - "SQ"
 - "s25ExpressibleByArrayLiteralP"
-- !private "s27ExpressibleByBooleanLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "SH"
 - "15TinyConstraints10LayoutEdgeV"
-- !private "s25LosslessStringConvertibleP"
-- !private "s10MirrorPathP"
 - !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
 - !private "So8NSCodingP"
 - "So8NSObjectC"
 - !private "So8NSObjectP"
@@ -1092,11 +1046,6 @@ depends-nominal:
 - "SY"
 - !private "ST"
 - "s10SetAlgebraP"
-- !private "s12StaticStringV"
-- !private "SS"
-- !private "Sy"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
@@ -1115,23 +1064,18 @@ depends-nominal:
 - !private "So23UIUserActivityRestoringP"
 - !private "So30UIUserInterfaceLayoutDirectionV"
 - "So6UIViewC"
-- !private "s37_DefaultCustomPlaygroundQuickLookableP"
+- !private "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- !private "s33_ExpressibleByStringInterpolationP"
+- !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 - !private "s20_SwiftNewtypeWrapperP"
-- !private "s16_SwiftStringViewP"
 - !private "5UIKit01_A23NumericRawRepresentableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
@@ -1146,15 +1090,16 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/Pods/Target Support Files/TinyConstraints/TinyConstraints-umbrella.h"
 - "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/TinyConstraints.build/unextended-module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "eae1b18c20bc0253eb75325bbebeb70a"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "47ca03a7a6963f3c02d945d0b7795806"

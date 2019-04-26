@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Cosmos-Swift.h</key>
 		<data>
-		6U6Khoe2g5AOqVtgOKG506Bf3gE=
+		ysY/3FubOjt8VtakrBN572q1Dig=
 		</data>
 		<key>Headers/Cosmos-umbrella.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		c2etCNwDsXZAHoa0Gv29/vGUKgE=
+		Nvc1JovicXq2k1bGm0djjGY4el0=
 		</data>
 		<key>Modules/Cosmos.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		a7kDJ3XtQ6yxlzvzM3v3SbvsuhM=
+		Z3ckvETDKY0lG6O/uqZqrNH6PYU=
 		</data>
 		<key>Modules/Cosmos.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		rY9MBfCPCREc56EPSrn2JFrM248=
+		BQtyB/4bWzYncyHoMY7kG1j5RwE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6U6Khoe2g5AOqVtgOKG506Bf3gE=
+			ysY/3FubOjt8VtakrBN572q1Dig=
 			</data>
 			<key>hash2</key>
 			<data>
-			PPXfp8ZWQXxKINKzD9iSrVOeL23xWeZsMrgOXoLb32Y=
+			PW2umB2AiOBbv49Jmf+ocJfMuyHl79HR1mTq1+4mFXw=
 			</data>
 		</dict>
 		<key>Headers/Cosmos-umbrella.h</key>
@@ -57,22 +57,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			a7kDJ3XtQ6yxlzvzM3v3SbvsuhM=
+			Z3ckvETDKY0lG6O/uqZqrNH6PYU=
 			</data>
 			<key>hash2</key>
 			<data>
-			/juVptAyeeOfSUlzsyFUngfloDpOIiaMESxx5FbTR48=
+			G/nHGw5acE8/WoM6HSgQ8+zPqv8Qeu+bVZ3tfA5BwCI=
 			</data>
 		</dict>
 		<key>Modules/Cosmos.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rY9MBfCPCREc56EPSrn2JFrM248=
+			BQtyB/4bWzYncyHoMY7kG1j5RwE=
 			</data>
 			<key>hash2</key>
 			<data>
-			i84V4DTiIT09GKLggi7ytkHkmluH+wPLwl7mPvxxUGk=
+			Et2z8jLp6fi2xaWNHK3snPayTqQbTa8HgjutQuZ9fA8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -89,7 +89,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -120,24 +120,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -173,13 +161,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

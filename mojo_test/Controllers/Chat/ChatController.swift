@@ -113,7 +113,6 @@ class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, Ch
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: chatCellId, for: indexPath) as! ChatCell
             cell.conversation = chats[indexPath.item]
-            
             return cell
         }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: chatRequestCellId, for: indexPath) as! ChatRequestCell

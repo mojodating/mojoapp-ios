@@ -53,7 +53,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         textView.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return textView
     }()
-    let descriptionLabel = UILabel(text: "It requires a gift to send chat request. They will receive gift only if they accept this request.\n\nYou will find your request history and gifts you purchased under 'Chat' Tab.", font: .systemFont(ofSize: 12))
+    let descriptionLabel = UILabel(text: "It requires a gift to send chat request.", font: .systemFont(ofSize: 12))
     let warningLabel = UILabel(text: "(Not enough)", font: .systemFont(ofSize: 16, weight: .medium))
 
     

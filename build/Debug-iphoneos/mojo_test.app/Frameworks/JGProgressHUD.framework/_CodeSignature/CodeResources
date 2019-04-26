@@ -6,11 +6,11 @@
 	<dict>
 		<key>Info.plist</key>
 		<data>
-		fBakxZkG6Ft/R+Xssm6oycQpnCA=
+		BqEtgGKtU++VZ9ohnR9Z/0V17j8=
 		</data>
 		<key>JGProgressHUD.bundle/Info.plist</key>
 		<data>
-		ZV3Uc2rXpUuWcj6Qiltq8w8MHiU=
+		Af/9+NO+qwCQ8PLdp9f6LAKLwyQ=
 		</data>
 		<key>JGProgressHUD.bundle/jg_hud_error.png</key>
 		<data>
@@ -43,11 +43,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ZV3Uc2rXpUuWcj6Qiltq8w8MHiU=
+			Af/9+NO+qwCQ8PLdp9f6LAKLwyQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			wYE/FmKRvnK8dFtxX2JvMWtku0yAkh2Ioeos5YDJad4=
+			zfc5v1D0dzzq1rFa4RcH+0sQrN3mIIPBxIoqr1tIeiw=
 			</data>
 		</dict>
 		<key>JGProgressHUD.bundle/jg_hud_error.png</key>
@@ -119,7 +119,7 @@
 	</dict>
 	<key>rules</key>
 	<dict>
-		<key>^</key>
+		<key>^.*</key>
 		<true/>
 		<key>^.*\.lproj/</key>
 		<dict>
@@ -150,24 +150,12 @@
 			<key>weight</key>
 			<real>11</real>
 		</dict>
-		<key>^</key>
-		<dict>
-			<key>weight</key>
-			<real>20</real>
-		</dict>
 		<key>^(.*/)?\.DS_Store$</key>
 		<dict>
 			<key>omit</key>
 			<true/>
 			<key>weight</key>
 			<real>2000</real>
-		</dict>
-		<key>^(Frameworks|SharedFrameworks|PlugIns|Plug-ins|XPCServices|Helpers|MacOS|Library/(Automator|Spotlight|LoginItems))/</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^.*</key>
 		<true/>
@@ -203,13 +191,6 @@
 			<true/>
 			<key>weight</key>
 			<real>20</real>
-		</dict>
-		<key>^[^/]+$</key>
-		<dict>
-			<key>nested</key>
-			<true/>
-			<key>weight</key>
-			<real>10</real>
 		</dict>
 		<key>^embedded\.provisionprofile$</key>
 		<dict>

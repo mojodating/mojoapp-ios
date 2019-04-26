@@ -20,7 +20,6 @@ depends-top-level:
 - !private "URLSession"
 - "imageCache"
 depends-member:
-- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "DispatchQueue"]
 - !private ["So15CALayerDelegateP", "UIImage"]
 - !private ["So15CALayerDelegateP", "URL"]
@@ -31,7 +30,6 @@ depends-member:
 - !private ["s7CVarArgP", "UIImage"]
 - !private ["s7CVarArgP", "URL"]
 - !private ["s7CVarArgP", "URLSession"]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "async"]
 - !private ["s7CVarArgP", "dataTask"]
 - !private ["s7CVarArgP", "global"]
@@ -64,14 +62,10 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "resume"]
 - !private ["s28CustomDebugStringConvertibleP", "setObject"]
 - !private ["s28CustomDebugStringConvertibleP", "shared"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "DispatchQueue"]
 - !private ["s23CustomStringConvertibleP", "UIImage"]
 - !private ["s23CustomStringConvertibleP", "URL"]
 - !private ["s23CustomStringConvertibleP", "URLSession"]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "async"]
 - !private ["s23CustomStringConvertibleP", "dataTask"]
 - !private ["s23CustomStringConvertibleP", "global"]
@@ -83,7 +77,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "resume"]
 - !private ["s23CustomStringConvertibleP", "setObject"]
 - !private ["s23CustomStringConvertibleP", "shared"]
-- !private ["Se", "_getBuiltinLogicValue"]
 - !private ["Se", "init"]
 - !private ["So18OS_dispatch_objectC", "async"]
 - !private ["So18OS_dispatch_objectC", "global"]
@@ -91,13 +84,11 @@ depends-member:
 - !private ["So17OS_dispatch_queueC", "async"]
 - !private ["So17OS_dispatch_queueC", "global"]
 - !private ["So17OS_dispatch_queueC", "main"]
-- !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "init"]
 - !private ["SQ", "DispatchQueue"]
 - !private ["SQ", "UIImage"]
 - !private ["SQ", "URL"]
 - !private ["SQ", "URLSession"]
-- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "async"]
 - !private ["SQ", "dataTask"]
 - !private ["SQ", "global"]
@@ -110,12 +101,10 @@ depends-member:
 - !private ["SQ", "setObject"]
 - !private ["SQ", "shared"]
 - !private ["SQ", "userInitiated"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["SH", "DispatchQueue"]
 - !private ["SH", "UIImage"]
 - !private ["SH", "URL"]
 - !private ["SH", "URLSession"]
-- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "async"]
 - !private ["SH", "dataTask"]
 - !private ["SH", "global"]
@@ -128,7 +117,6 @@ depends-member:
 - !private ["SH", "setObject"]
 - !private ["SH", "shared"]
 - !private ["SH", "userInitiated"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["So7NSCacheC", "init"]
 - !private ["So7NSCacheC", "object"]
 - !private ["So7NSCacheC", "setObject"]
@@ -295,13 +283,7 @@ depends-member:
 - !private ["So12NSURLSessionC", "shared"]
 - !private ["So20NSURLSessionDataTaskC", "resume"]
 - !private ["So16NSURLSessionTaskC", "resume"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "DispatchQueue"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "UIImage"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "URL"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "URLSession"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "image"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "imageCache"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - !private ["s26_ExpressibleByImageLiteralP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
@@ -319,25 +301,25 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resume"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setObject"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "shared"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "DispatchQueue"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "URL"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "URLSession"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "image"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "imageCache"]
 depends-nominal:
-- !private "Sb"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "15TinyConstraints13ConstrainableP"
 - "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
-- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
 - !private "Se"
 - !private "So18OS_dispatch_objectC"
 - !private "So17OS_dispatch_queueC"
 - !private "SE"
 - "SQ"
-- !private "s27ExpressibleByBooleanLiteralP"
 - "SH"
-- !private "s25LosslessStringConvertibleP"
 - "So7NSCacheC"
 - !private "So8NSCodingP"
 - !private "So9NSCopyingP"
@@ -372,15 +354,14 @@ depends-nominal:
 - !private "So12NSURLSessionC"
 - !private "So20NSURLSessionDataTaskC"
 - !private "So16NSURLSessionTaskC"
-- !private "s37_DefaultCustomPlaygroundQuickLookableP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s34_ExpressibleByFileReferenceLiteralP"
 - !private "s26_ExpressibleByImageLiteralP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/x86_64.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
@@ -535,18 +516,19 @@ depends-external:
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "548571e31147a959383cf8cac9ae8a34"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "12920363cf8cadd84d8b7295c144afe6"
