@@ -13,20 +13,24 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
+- "BooleanLiteralType"
 - "CGRect"
 - "CGSize"
 - "CastingPrecedence"
 - "ChatRequestCell"
 - "ChatRequestCellDelegate"
 - "Conversation"
+- "FloatLiteralType"
 - "IndexPath"
 - "Int"
+- "IntegerLiteralType"
 - "MenuBar"
 - "NSCoder"
 - !private "RequestsFeedCell"
 - "RequestsFeedCellDelegate"
 - !private "SentFeedCell"
 - "SentFeedCellDelegate"
+- "StringLiteralType"
 - "UICollectionView"
 - "UICollectionViewCell"
 - "UICollectionViewDataSource"
@@ -96,7 +100,6 @@ depends-member:
 - ["So15CALayerDelegateP", "viewForZoomingInScrollView"]
 - !private ["So6CGRectV", "width"]
 - ["So6CGRectV", "zero"]
-- !private ["So6CGSizeV", "init"]
 - !private ["So6CGSizeV", "init"]
 - !private ["s7CVarArgP", "CGSize"]
 - !private ["s7CVarArgP", "IndexPath"]
@@ -302,7 +305,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "indexTitles"]
 - ["s28CustomDebugStringConvertibleP", "indexTitlesForCollectionView"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "isPagingEnabled"]
 - ["s28CustomDebugStringConvertibleP", "isScrollEnabled"]
 - !private ["s28CustomDebugStringConvertibleP", "item"]
@@ -337,7 +339,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
 - ["s28CustomDebugStringConvertibleP", "zero"]
-- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "item"]
 - ["s17CustomReflectableP", "white"]
@@ -404,12 +405,10 @@ depends-member:
 - ["s23CustomStringConvertibleP", "viewForZoomingInScrollView"]
 - ["s23CustomStringConvertibleP", "white"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "item"]
 - ["Se", "white"]
 - !private ["Se", "width"]
 - ["Se", "zero"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "item"]
 - ["SE", "white"]
@@ -444,7 +443,6 @@ depends-member:
 - ["SQ", "indexTitles"]
 - ["SQ", "indexTitlesForCollectionView"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - ["SQ", "isPagingEnabled"]
 - ["SQ", "isScrollEnabled"]
 - !private ["SQ", "item"]
@@ -1414,7 +1412,6 @@ depends-member:
 - ["So13UIDynamicItemP", "viewForZooming"]
 - ["So13UIDynamicItemP", "viewForZoomingInScrollView"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "CGSize"]
 - !private ["So18UIFocusEnvironmentP", "IndexPath"]
 - ["So18UIFocusEnvironmentP", "MenuBar"]
@@ -2010,7 +2007,6 @@ depends-member:
 - ["So6UIViewC", "viewForZooming"]
 - ["So6UIViewC", "viewForZoomingInScrollView"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "width"]
 - ["s30_CustomPlaygroundQuickLookableP", "zero"]
 - ["s26_ExpressibleByColorLiteralP", "white"]
@@ -2073,7 +2069,6 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZooming"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "viewForZoomingInScrollView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "white"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "item"]
 - ["s21_ObjectiveCBridgeableP", "white"]

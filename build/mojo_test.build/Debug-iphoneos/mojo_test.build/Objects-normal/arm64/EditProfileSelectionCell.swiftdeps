@@ -15,7 +15,6 @@ depends-top-level:
 - "UIButton"
 - "UITableViewCell"
 - !private "UIView"
-- !private "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
 - !private ["So28UITableViewCellAccessoryTypeV", "disclosureIndicator"]
@@ -154,7 +153,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
 - !private ["Se", "black"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "width"]
 - ["9mojo_test24EditProfileSelectionCellC", "NSCoder"]
 - ["9mojo_test24EditProfileSelectionCellC", "String"]
@@ -173,7 +171,6 @@ depends-member:
 - !private ["9mojo_test24EditProfileSelectionCellC", "setupLayout"]
 - !private ["9mojo_test24EditProfileSelectionCellC", "trailingAnchor"]
 - !private ["SE", "black"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "width"]
 - !private ["SQ", "AccessoryType"]
@@ -197,7 +194,6 @@ depends-member:
 - !private ["SQ", "frame"]
 - !private ["SQ", "heightAnchor"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "leadingAnchor"]
 - !private ["SQ", "left"]
@@ -470,7 +466,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "setupLayout"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "AccessoryType"]
 - ["So18UIFocusEnvironmentP", "CellStyle"]
@@ -754,7 +749,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "trailingAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
 - !private ["s21_ObjectiveCBridgeableP", "black"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "regular"]
 - !private ["s21_ObjectiveCBridgeableP", "width"]

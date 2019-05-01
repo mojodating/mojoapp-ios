@@ -98,9 +98,9 @@ class RegistrationController: UIViewController {
     let registerButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Sign up mojo", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-        button.backgroundColor = #colorLiteral(red: 0, green: 0.5664333767, blue: 1, alpha: 1)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.backgroundColor = #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 1)
         button.isEnabled = false
         button.heightAnchor.constraint(equalToConstant: 46).isActive = true
         button.layer.cornerRadius = 2
@@ -237,7 +237,6 @@ class RegistrationController: UIViewController {
     let goToLoginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Go to login", for: .normal)
-        button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         button.addTarget(self, action: #selector(handleGoToLogin), for: .touchUpInside)
         return button

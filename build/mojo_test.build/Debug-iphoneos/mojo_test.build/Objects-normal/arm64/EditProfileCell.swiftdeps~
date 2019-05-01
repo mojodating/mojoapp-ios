@@ -13,14 +13,19 @@ provides-dynamic-lookup:
 - "textRect"
 depends-top-level:
 - "AssignmentPrecedence"
+- !private "BooleanLiteralType"
 - "CGRect"
 - "CGSize"
 - "EditProfileCell"
+- !private "FloatLiteralType"
+- !private "IntegerLiteralType"
 - "NSCoder"
 - "String"
+- "StringLiteralType"
 - "UITableViewCell"
 - "UITextField"
 - !private "UIView"
+- !private "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
 - ["So15CALayerDelegateP", "CellStyle"]

@@ -13,13 +13,9 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "RegistrationViewModel"
 - "SignupEmailController"
 - !private "SignupPasswordController"
-- "StringLiteralType"
 - "UIButton"
 - "UIFont"
 - "UILabel"
@@ -27,7 +23,6 @@ depends-top-level:
 - "UITextField"
 - "UIView"
 - "UIViewController"
-- "_ColorLiteralType"
 depends-member:
 - !private ["SK", "isEmpty"]
 - !private ["So15CALayerDelegateP", "addGestureRecognizer"]

@@ -10,16 +10,20 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - !private "Auth"
+- !private "BooleanLiteralType"
 - "CGRect"
 - !private "CastingPrecedence"
+- "FloatLiteralType"
 - "Functions"
 - !private "FunctionsErrorCode"
 - !private "FunctionsErrorDetailsKey"
 - !private "FunctionsErrorDomain"
 - !private "Int"
+- "IntegerLiteralType"
 - "NSCoder"
 - !private "NSError"
 - !private "String"
+- "StringLiteralType"
 - "UIButton"
 - "UICollectionViewCell"
 - "UILabel"
@@ -27,6 +31,7 @@ depends-top-level:
 - !private "UIView"
 - !private "VerticalStackView"
 - "WalletHeaderCell"
+- !private "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
 - !private ["So20UIStackViewAlignmentV", "center"]
@@ -262,14 +267,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
 - !private ["Se", "black"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "subscript"]
 - !private ["Se", "white"]
 - !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
 - !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SD", "subscript"]
 - !private ["SE", "black"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "subscript"]
 - !private ["SE", "white"]
@@ -309,7 +312,6 @@ depends-member:
 - !private ["SQ", "heightAnchor"]
 - !private ["SQ", "httpsCallable"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "layer"]
 - !private ["SQ", "localizedDescription"]
@@ -823,7 +825,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "userBalanceLabel"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
 - ["So18UIFocusEnvironmentP", "Functions"]
 - !private ["So18UIFocusEnvironmentP", "FunctionsErrorCode"]
@@ -1228,7 +1229,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
 - !private ["s21_ObjectiveCBridgeableP", "black"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "medium"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]

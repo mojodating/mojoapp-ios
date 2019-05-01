@@ -13,22 +13,18 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - !private "Auth"
-- "BooleanLiteralType"
 - !private "CastingPrecedence"
 - "Conversation"
 - !private "DispatchQueue"
 - !private "Firestore"
-- "FloatLiteralType"
 - "Functions"
 - !private "FunctionsErrorCode"
 - !private "FunctionsErrorDetailsKey"
 - !private "FunctionsErrorDomain"
-- "IntegerLiteralType"
 - "JGProgressHUD"
 - !private "NSError"
 - "Selector"
 - !private "String"
-- "StringLiteralType"
 - "UIButton"
 - "UIFont"
 - "UIImage"
@@ -40,7 +36,6 @@ depends-top-level:
 - "UnicodeScalarType"
 - "User"
 - "UserDetailFeedbackController"
-- "_ImageLiteralType"
 - !private "print"
 depends-member:
 - !private ["Sa", "forEach"]
@@ -80,7 +75,6 @@ depends-member:
 - ["So15CALayerDelegateP", "titleLabel"]
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
 - ["So13CAMediaTimingP", "cornerRadius"]
-- !private ["So6CGSizeV", "init"]
 - !private ["So6CGSizeV", "init"]
 - !private ["s7CVarArgP", "Auth"]
 - !private ["s7CVarArgP", "DispatchQueue"]
@@ -137,7 +131,6 @@ depends-member:
 - !private ["s7CVarArgP", "hud"]
 - !private ["s7CVarArgP", "imageView"]
 - ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isActive"]
 - ["s7CVarArgP", "layer"]
 - !private ["s7CVarArgP", "leadingAnchor"]
@@ -275,7 +268,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "hud"]
 - !private ["s28CustomDebugStringConvertibleP", "imageView"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - ["s28CustomDebugStringConvertibleP", "layer"]
 - !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
@@ -321,7 +313,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "centerYAnchor"]
 - ["s17CustomReflectableP", "darkGray"]
 - !private ["s17CustomReflectableP", "forEach"]
-- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "leadingAnchor"]
 - !private ["s17CustomReflectableP", "safeAreaLayoutGuide"]
@@ -385,7 +376,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "hud"]
 - !private ["s23CustomStringConvertibleP", "imageView"]
 - ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - ["s23CustomStringConvertibleP", "layer"]
 - !private ["s23CustomStringConvertibleP", "leadingAnchor"]
@@ -433,7 +423,6 @@ depends-member:
 - ["Se", "darkGray"]
 - !private ["Se", "forEach"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "leadingAnchor"]
 - !private ["Se", "safeAreaLayoutGuide"]
 - !private ["Se", "subscript"]
@@ -457,7 +446,6 @@ depends-member:
 - !private ["SE", "centerYAnchor"]
 - ["SE", "darkGray"]
 - !private ["SE", "forEach"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "leadingAnchor"]
 - !private ["SE", "safeAreaLayoutGuide"]
@@ -522,7 +510,6 @@ depends-member:
 - !private ["SQ", "hud"]
 - !private ["SQ", "imageView"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - ["SQ", "layer"]
 - !private ["SQ", "leadingAnchor"]
@@ -655,7 +642,6 @@ depends-member:
 - !private ["SH", "hud"]
 - !private ["SH", "imageView"]
 - ["SH", "init"]
-- !private ["SH", "init"]
 - !private ["SH", "isActive"]
 - ["SH", "layer"]
 - !private ["SH", "leadingAnchor"]
@@ -751,7 +737,6 @@ depends-member:
 - !private ["So8NSCodingP", "hud"]
 - !private ["So8NSCodingP", "imageView"]
 - ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "init"]
 - ["So8NSCodingP", "layer"]
 - !private ["So8NSCodingP", "leadingAnchor"]
 - !private ["So8NSCodingP", "likeButton"]
@@ -819,7 +804,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "functions"]
 - ["So26NSExtensionRequestHandlingP", "handleRateUser"]
 - !private ["So26NSExtensionRequestHandlingP", "hud"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "likeButton"]
 - !private ["So26NSExtensionRequestHandlingP", "madButton"]
@@ -904,7 +888,6 @@ depends-member:
 - ["So8NSObjectC", "hud"]
 - !private ["So8NSObjectC", "imageView"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isActive"]
 - ["So8NSObjectC", "layer"]
 - !private ["So8NSObjectC", "leadingAnchor"]
@@ -1000,7 +983,6 @@ depends-member:
 - !private ["So8NSObjectP", "hud"]
 - !private ["So8NSObjectP", "imageView"]
 - ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isActive"]
 - ["So8NSObjectP", "layer"]
 - !private ["So8NSObjectP", "leadingAnchor"]
@@ -1206,7 +1188,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "hud"]
 - !private ["So21UIAppearanceContainerP", "imageView"]
 - ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "init"]
 - ["So21UIAppearanceContainerP", "layer"]
 - !private ["So21UIAppearanceContainerP", "leadingAnchor"]
 - !private ["So21UIAppearanceContainerP", "likeButton"]
@@ -1267,7 +1248,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "functions"]
 - ["So18UIContentContainerP", "handleRateUser"]
 - !private ["So18UIContentContainerP", "hud"]
-- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "likeButton"]
 - !private ["So18UIContentContainerP", "madButton"]
@@ -1356,7 +1336,6 @@ depends-member:
 - ["So13UIDynamicItemP", "titleLabel"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
 - !private ["So18UIFocusEnvironmentP", "DispatchQueue"]
 - !private ["So18UIFocusEnvironmentP", "Firestore"]
@@ -1396,7 +1375,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "hud"]
 - !private ["So18UIFocusEnvironmentP", "imageView"]
 - ["So18UIFocusEnvironmentP", "init"]
-- !private ["So18UIFocusEnvironmentP", "init"]
 - ["So18UIFocusEnvironmentP", "layer"]
 - !private ["So18UIFocusEnvironmentP", "leadingAnchor"]
 - !private ["So18UIFocusEnvironmentP", "likeButton"]
@@ -1541,7 +1519,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "hud"]
 - !private ["So30UIPasteConfigurationSupportingP", "imageView"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - ["So30UIPasteConfigurationSupportingP", "layer"]
 - !private ["So30UIPasteConfigurationSupportingP", "leadingAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "likeButton"]
@@ -1612,7 +1589,6 @@ depends-member:
 - ["So11UIResponderC", "hud"]
 - !private ["So11UIResponderC", "imageView"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "layer"]
 - !private ["So11UIResponderC", "leadingAnchor"]
 - ["So11UIResponderC", "likeButton"]
@@ -1682,7 +1658,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "hud"]
 - !private ["So30UIResponderStandardEditActionsP", "imageView"]
 - ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - ["So30UIResponderStandardEditActionsP", "layer"]
 - !private ["So30UIResponderStandardEditActionsP", "leadingAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "likeButton"]
@@ -1748,7 +1723,6 @@ depends-member:
 - ["So16UIStateRestoringP", "handleRateUser"]
 - !private ["So16UIStateRestoringP", "hud"]
 - !private ["So16UIStateRestoringP", "init"]
-- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "likeButton"]
 - !private ["So16UIStateRestoringP", "madButton"]
 - !private ["So16UIStateRestoringP", "markHasFeedback"]
@@ -1803,7 +1777,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "hud"]
 - !private ["So18UITraitEnvironmentP", "imageView"]
 - ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
 - ["So18UITraitEnvironmentP", "layer"]
 - !private ["So18UITraitEnvironmentP", "leadingAnchor"]
 - !private ["So18UITraitEnvironmentP", "likeButton"]
@@ -1870,7 +1843,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "hud"]
 - !private ["So23UIUserActivityRestoringP", "imageView"]
 - ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - ["So23UIUserActivityRestoringP", "layer"]
 - !private ["So23UIUserActivityRestoringP", "leadingAnchor"]
 - !private ["So23UIUserActivityRestoringP", "likeButton"]
@@ -1956,7 +1928,6 @@ depends-member:
 - ["So16UIViewControllerC", "handleRateUser"]
 - ["So16UIViewControllerC", "hud"]
 - ["So16UIViewControllerC", "init"]
-- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "likeButton"]
 - ["So16UIViewControllerC", "likeButton.storage"]
 - ["So16UIViewControllerC", "madButton"]
@@ -2032,7 +2003,6 @@ depends-member:
 - ["So12UIFontWeighta", "semibold"]
 - !private ["s14_ArrayProtocolP", "forEach"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s24_DestructorSafeContainerP", "forEach"]
 - !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
@@ -2101,7 +2071,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "hud"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "imageView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isActive"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "layer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "leadingAnchor"]
@@ -2146,7 +2115,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "centerYAnchor"]
 - ["s21_ObjectiveCBridgeableP", "darkGray"]
 - !private ["s21_ObjectiveCBridgeableP", "forEach"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "leadingAnchor"]
 - ["s21_ObjectiveCBridgeableP", "regular"]

@@ -13,7 +13,6 @@ depends-top-level:
 - !private "??"
 - "AssignmentPrecedence"
 - !private "Auth"
-- !private "BooleanLiteralType"
 - !private "CABasicAnimation"
 - !private "CATransaction"
 - "CardSwipingController"
@@ -22,35 +21,26 @@ depends-top-level:
 - "CardViewModel"
 - !private "CastingPrecedence"
 - "CosmosView"
-- "Dictionary"
 - !private "EditProfileController"
 - !private "Firestore"
-- !private "FloatLiteralType"
 - "Functions"
 - !private "FunctionsErrorCode"
 - !private "FunctionsErrorDetailsKey"
 - !private "FunctionsErrorDomain"
-- !private "IntegerLiteralType"
 - "JGProgressHUD"
 - !private "NSError"
-- "StringLiteralType"
 - "UIView"
 - "UIViewController"
 - "User"
-- "_ImageLiteralType"
 - "editProfileControllerDelegate"
 - !private "print"
 depends-member:
 - !private ["Sa", "forEach"]
 - ["Sa", "init"]
-- !private ["s13ArrayProtocolP", "forEach"]
-- ["s13ArrayProtocolP", "init"]
 - !private ["So7FIRAuthC", "auth"]
 - !private ["So7FIRAuthC", "currentUser"]
 - !private ["SK", "forEach"]
 - ["SK", "init"]
-- !private ["SK", "init"]
-- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So8CAActionP", "duration"]
 - !private ["So8CAActionP", "fillMode"]
 - !private ["So8CAActionP", "init"]
@@ -80,11 +70,11 @@ depends-member:
 - !private ["So15CALayerDelegateP", "layer"]
 - !private ["So15CALayerDelegateP", "leadingAnchor"]
 - !private ["So15CALayerDelegateP", "nextCardView"]
-- !private ["So15CALayerDelegateP", "rating"]
+- ["So15CALayerDelegateP", "rating"]
 - !private ["So15CALayerDelegateP", "removeFromSuperview"]
 - !private ["So15CALayerDelegateP", "safeAreaLayoutGuide"]
 - !private ["So15CALayerDelegateP", "sendSubviewToBack"]
-- !private ["So15CALayerDelegateP", "settings"]
+- ["So15CALayerDelegateP", "settings"]
 - !private ["So15CALayerDelegateP", "show"]
 - !private ["So15CALayerDelegateP", "subviews"]
 - !private ["So15CALayerDelegateP", "text"]
@@ -111,7 +101,7 @@ depends-member:
 - !private ["s7CVarArgP", "CATransaction"]
 - !private ["s7CVarArgP", "CardView"]
 - ["s7CVarArgP", "CardViewModel"]
-- !private ["s7CVarArgP", "CosmosView"]
+- ["s7CVarArgP", "CosmosView"]
 - !private ["s7CVarArgP", "EditProfileController"]
 - !private ["s7CVarArgP", "Firestore"]
 - ["s7CVarArgP", "Functions"]
@@ -122,7 +112,6 @@ depends-member:
 - ["s7CVarArgP", "UIView"]
 - !private ["s7CVarArgP", "User"]
 - ["s7CVarArgP", ""]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "add"]
 - !private ["s7CVarArgP", "addSubview"]
 - !private ["s7CVarArgP", "anchor"]
@@ -170,12 +159,12 @@ depends-member:
 - !private ["s7CVarArgP", "nextCardView"]
 - !private ["s7CVarArgP", "performSwipeAnimation"]
 - !private ["s7CVarArgP", "print"]
-- !private ["s7CVarArgP", "rating"]
+- ["s7CVarArgP", "rating"]
 - !private ["s7CVarArgP", "removeFromSuperview"]
 - !private ["s7CVarArgP", "safeAreaLayoutGuide"]
 - !private ["s7CVarArgP", "sendSubviewToBack"]
 - !private ["s7CVarArgP", "setCompletionBlock"]
-- !private ["s7CVarArgP", "settings"]
+- ["s7CVarArgP", "settings"]
 - !private ["s7CVarArgP", "setupCardFromUser"]
 - !private ["s7CVarArgP", "setupLayout"]
 - !private ["s7CVarArgP", "show"]
@@ -194,7 +183,7 @@ depends-member:
 - !private ["s7CVarArgP", "viewDidLoad"]
 - !private ["s7CVarArgP", "whereField"]
 - !private ["s7CVarArgP", "white"]
-- !private ["s7CVarArgP", "withRenderingMode"]
+- ["s7CVarArgP", "withRenderingMode"]
 - !private ["9mojo_test21CardSwipingControllerC", "Auth"]
 - !private ["9mojo_test21CardSwipingControllerC", "CABasicAnimation"]
 - !private ["9mojo_test21CardSwipingControllerC", "CATransaction"]
@@ -248,7 +237,7 @@ depends-member:
 - !private ["9mojo_test16CardViewDelegateP", "CATransaction"]
 - !private ["9mojo_test16CardViewDelegateP", "CardView"]
 - ["9mojo_test16CardViewDelegateP", "CardViewModel"]
-- !private ["9mojo_test16CardViewDelegateP", "CosmosView"]
+- ["9mojo_test16CardViewDelegateP", "CosmosView"]
 - !private ["9mojo_test16CardViewDelegateP", "EditProfileController"]
 - !private ["9mojo_test16CardViewDelegateP", "Firestore"]
 - ["9mojo_test16CardViewDelegateP", "Functions"]
@@ -279,11 +268,8 @@ depends-member:
 - !private ["9mojo_test13CardViewModelC", "uid"]
 - !private ["Sl", "forEach"]
 - ["Sl", "init"]
-- !private ["Sl", "init"]
 - !private ["Sl", "subscript"]
 - !private ["So22FIRCollectionReferenceC", "whereField"]
-- !private ["SL", "init"]
-- !private ["SL", "init"]
 - !private ["15TinyConstraints13ConstrainableP", "addSubview"]
 - !private ["15TinyConstraints13ConstrainableP", "anchor"]
 - !private ["15TinyConstraints13ConstrainableP", "backgroundColor"]
@@ -297,33 +283,35 @@ depends-member:
 - !private ["15TinyConstraints13ConstrainableP", "layer"]
 - !private ["15TinyConstraints13ConstrainableP", "leadingAnchor"]
 - !private ["15TinyConstraints13ConstrainableP", "nextCardView"]
-- !private ["15TinyConstraints13ConstrainableP", "rating"]
+- ["15TinyConstraints13ConstrainableP", "rating"]
 - !private ["15TinyConstraints13ConstrainableP", "removeFromSuperview"]
 - !private ["15TinyConstraints13ConstrainableP", "safeAreaLayoutGuide"]
 - !private ["15TinyConstraints13ConstrainableP", "sendSubviewToBack"]
-- !private ["15TinyConstraints13ConstrainableP", "settings"]
+- ["15TinyConstraints13ConstrainableP", "settings"]
 - !private ["15TinyConstraints13ConstrainableP", "show"]
 - !private ["15TinyConstraints13ConstrainableP", "subviews"]
 - !private ["15TinyConstraints13ConstrainableP", "text"]
 - !private ["15TinyConstraints13ConstrainableP", "textLabel"]
 - !private ["15TinyConstraints13ConstrainableP", "topAnchor"]
 - !private ["15TinyConstraints13ConstrainableP", "trailingAnchor"]
-- !private ["6Cosmos0A8SettingsV", "emptyImage"]
-- !private ["6Cosmos0A8SettingsV", "fillMode"]
-- !private ["6Cosmos0A8SettingsV", "filledImage"]
-- !private ["6Cosmos0A8SettingsV", "starMargin"]
-- !private ["6Cosmos0A8SettingsV", "starSize"]
+- !private ["10Foundation15ContiguousBytesP", "forEach"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- ["6Cosmos0A8SettingsV", "emptyImage"]
+- ["6Cosmos0A8SettingsV", "fillMode"]
+- ["6Cosmos0A8SettingsV", "filledImage"]
+- ["6Cosmos0A8SettingsV", "starMargin"]
+- ["6Cosmos0A8SettingsV", "starSize"]
 - !private ["6Cosmos0A4ViewC", "anchor"]
 - !private ["6Cosmos0A4ViewC", "didFinishTouchingCosmos"]
-- !private ["6Cosmos0A4ViewC", "init"]
-- !private ["6Cosmos0A4ViewC", "rating"]
-- !private ["6Cosmos0A4ViewC", "settings"]
+- ["6Cosmos0A4ViewC", "init"]
+- ["6Cosmos0A4ViewC", "rating"]
+- ["6Cosmos0A4ViewC", "settings"]
 - !private ["s28CustomDebugStringConvertibleP", "Auth"]
 - !private ["s28CustomDebugStringConvertibleP", "CABasicAnimation"]
 - !private ["s28CustomDebugStringConvertibleP", "CATransaction"]
 - !private ["s28CustomDebugStringConvertibleP", "CardView"]
 - ["s28CustomDebugStringConvertibleP", "CardViewModel"]
-- !private ["s28CustomDebugStringConvertibleP", "CosmosView"]
+- ["s28CustomDebugStringConvertibleP", "CosmosView"]
 - !private ["s28CustomDebugStringConvertibleP", "EditProfileController"]
 - !private ["s28CustomDebugStringConvertibleP", "Firestore"]
 - ["s28CustomDebugStringConvertibleP", "Functions"]
@@ -381,12 +369,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "nextCardView"]
 - !private ["s28CustomDebugStringConvertibleP", "performSwipeAnimation"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
-- !private ["s28CustomDebugStringConvertibleP", "rating"]
+- ["s28CustomDebugStringConvertibleP", "rating"]
 - !private ["s28CustomDebugStringConvertibleP", "removeFromSuperview"]
 - !private ["s28CustomDebugStringConvertibleP", "safeAreaLayoutGuide"]
 - !private ["s28CustomDebugStringConvertibleP", "sendSubviewToBack"]
 - !private ["s28CustomDebugStringConvertibleP", "setCompletionBlock"]
-- !private ["s28CustomDebugStringConvertibleP", "settings"]
+- ["s28CustomDebugStringConvertibleP", "settings"]
 - !private ["s28CustomDebugStringConvertibleP", "setupCardFromUser"]
 - !private ["s28CustomDebugStringConvertibleP", "setupLayout"]
 - !private ["s28CustomDebugStringConvertibleP", "show"]
@@ -405,19 +393,13 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "viewDidLoad"]
 - !private ["s28CustomDebugStringConvertibleP", "whereField"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
-- !private ["s28CustomDebugStringConvertibleP", "withRenderingMode"]
+- ["s28CustomDebugStringConvertibleP", "withRenderingMode"]
 - !private ["s28CustomDebugStringConvertibleP", "zero"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "zero"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "addSubview"]
 - !private ["s17CustomReflectableP", "backgroundColor"]
 - !private ["s17CustomReflectableP", "bottomAnchor"]
 - !private ["s17CustomReflectableP", "forEach"]
 - ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "leadingAnchor"]
 - !private ["s17CustomReflectableP", "safeAreaLayoutGuide"]
 - !private ["s17CustomReflectableP", "subscript"]
@@ -431,7 +413,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "CATransaction"]
 - !private ["s23CustomStringConvertibleP", "CardView"]
 - ["s23CustomStringConvertibleP", "CardViewModel"]
-- !private ["s23CustomStringConvertibleP", "CosmosView"]
+- ["s23CustomStringConvertibleP", "CosmosView"]
 - !private ["s23CustomStringConvertibleP", "EditProfileController"]
 - !private ["s23CustomStringConvertibleP", "Firestore"]
 - ["s23CustomStringConvertibleP", "Functions"]
@@ -442,7 +424,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "UIView"]
 - !private ["s23CustomStringConvertibleP", "User"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "add"]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "anchor"]
@@ -490,12 +471,12 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "nextCardView"]
 - !private ["s23CustomStringConvertibleP", "performSwipeAnimation"]
 - !private ["s23CustomStringConvertibleP", "print"]
-- !private ["s23CustomStringConvertibleP", "rating"]
+- ["s23CustomStringConvertibleP", "rating"]
 - !private ["s23CustomStringConvertibleP", "removeFromSuperview"]
 - !private ["s23CustomStringConvertibleP", "safeAreaLayoutGuide"]
 - !private ["s23CustomStringConvertibleP", "sendSubviewToBack"]
 - !private ["s23CustomStringConvertibleP", "setCompletionBlock"]
-- !private ["s23CustomStringConvertibleP", "settings"]
+- ["s23CustomStringConvertibleP", "settings"]
 - !private ["s23CustomStringConvertibleP", "setupCardFromUser"]
 - !private ["s23CustomStringConvertibleP", "setupLayout"]
 - !private ["s23CustomStringConvertibleP", "show"]
@@ -514,8 +495,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - !private ["s23CustomStringConvertibleP", "whereField"]
 - !private ["s23CustomStringConvertibleP", "white"]
-- !private ["s23CustomStringConvertibleP", "withRenderingMode"]
-- !private ["Se", "_getBuiltinLogicValue"]
+- ["s23CustomStringConvertibleP", "withRenderingMode"]
+- !private ["10Foundation12DataProtocolP", "forEach"]
+- ["10Foundation12DataProtocolP", "init"]
 - !private ["Se", "addSubview"]
 - !private ["Se", "backgroundColor"]
 - !private ["Se", "bottomAnchor"]
@@ -534,7 +516,6 @@ depends-member:
 - !private ["So19FIRDocumentSnapshotC", "data"]
 - !private ["9mojo_test21EditProfileControllerC", "defaultMaxSeekingAge"]
 - !private ["9mojo_test21EditProfileControllerC", "defaultMinSeekingAge"]
-- !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "addSubview"]
 - !private ["SE", "backgroundColor"]
 - !private ["SE", "bottomAnchor"]
@@ -554,7 +535,7 @@ depends-member:
 - !private ["SQ", "CATransaction"]
 - !private ["SQ", "CardView"]
 - ["SQ", "CardViewModel"]
-- !private ["SQ", "CosmosView"]
+- ["SQ", "CosmosView"]
 - !private ["SQ", "EditProfileController"]
 - !private ["SQ", "Firestore"]
 - ["SQ", "Functions"]
@@ -565,10 +546,9 @@ depends-member:
 - ["SQ", "UIView"]
 - !private ["SQ", "User"]
 - ["SQ", ""]
-- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "add"]
 - !private ["SQ", "addSubview"]
-- !private ["SQ", "alwaysOriginal"]
+- ["SQ", "alwaysOriginal"]
 - !private ["SQ", "anchor"]
 - !private ["SQ", "auth"]
 - !private ["SQ", "backgroundColor"]
@@ -600,7 +580,7 @@ depends-member:
 - !private ["SQ", "firestore"]
 - !private ["SQ", "forEach"]
 - !private ["SQ", "forwards"]
-- !private ["SQ", "full"]
+- ["SQ", "full"]
 - ["SQ", "functions"]
 - !private ["SQ", "getDocuments"]
 - !private ["SQ", "handleRating"]
@@ -617,12 +597,12 @@ depends-member:
 - !private ["SQ", "nextCardView"]
 - !private ["SQ", "performSwipeAnimation"]
 - !private ["SQ", "print"]
-- !private ["SQ", "rating"]
+- ["SQ", "rating"]
 - !private ["SQ", "removeFromSuperview"]
 - !private ["SQ", "safeAreaLayoutGuide"]
 - !private ["SQ", "sendSubviewToBack"]
 - !private ["SQ", "setCompletionBlock"]
-- !private ["SQ", "settings"]
+- ["SQ", "settings"]
 - !private ["SQ", "setupCardFromUser"]
 - !private ["SQ", "setupLayout"]
 - !private ["SQ", "show"]
@@ -641,7 +621,7 @@ depends-member:
 - !private ["SQ", "viewDidLoad"]
 - !private ["SQ", "whereField"]
 - !private ["SQ", "white"]
-- !private ["SQ", "withRenderingMode"]
+- ["SQ", "withRenderingMode"]
 - !private ["SQ", "zero"]
 - !private ["s5ErrorP", "code"]
 - !private ["s5ErrorP", "domain"]
@@ -649,10 +629,7 @@ depends-member:
 - !private ["s5ErrorP", "userInfo"]
 - !private ["s25ExpressibleByArrayLiteralP", "forEach"]
 - ["s25ExpressibleByArrayLiteralP", "init"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "addSubview"]
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "bottomAnchor"]
@@ -662,10 +639,6 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "trailingAnchor"]
 - !private ["s23ExpressibleByNilLiteralP", "uid"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
-- !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s26ExpressibleByStringLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["So12FIRFirestoreC", "collection"]
 - !private ["So12FIRFirestoreC", "fetchCurrentUser"]
 - !private ["So12FIRFirestoreC", "firestore"]
@@ -678,7 +651,7 @@ depends-member:
 - !private ["SH", "CATransaction"]
 - !private ["SH", "CardView"]
 - ["SH", "CardViewModel"]
-- !private ["SH", "CosmosView"]
+- ["SH", "CosmosView"]
 - !private ["SH", "EditProfileController"]
 - !private ["SH", "Firestore"]
 - ["SH", "Functions"]
@@ -689,10 +662,9 @@ depends-member:
 - ["SH", "UIView"]
 - !private ["SH", "User"]
 - ["SH", ""]
-- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "add"]
 - !private ["SH", "addSubview"]
-- !private ["SH", "alwaysOriginal"]
+- ["SH", "alwaysOriginal"]
 - !private ["SH", "anchor"]
 - !private ["SH", "auth"]
 - !private ["SH", "backgroundColor"]
@@ -724,7 +696,7 @@ depends-member:
 - !private ["SH", "firestore"]
 - !private ["SH", "forEach"]
 - !private ["SH", "forwards"]
-- !private ["SH", "full"]
+- ["SH", "full"]
 - ["SH", "functions"]
 - !private ["SH", "getDocuments"]
 - !private ["SH", "handleRating"]
@@ -741,12 +713,12 @@ depends-member:
 - !private ["SH", "nextCardView"]
 - !private ["SH", "performSwipeAnimation"]
 - !private ["SH", "print"]
-- !private ["SH", "rating"]
+- ["SH", "rating"]
 - !private ["SH", "removeFromSuperview"]
 - !private ["SH", "safeAreaLayoutGuide"]
 - !private ["SH", "sendSubviewToBack"]
 - !private ["SH", "setCompletionBlock"]
-- !private ["SH", "settings"]
+- ["SH", "settings"]
 - !private ["SH", "setupCardFromUser"]
 - !private ["SH", "setupLayout"]
 - !private ["SH", "show"]
@@ -765,25 +737,22 @@ depends-member:
 - !private ["SH", "viewDidLoad"]
 - !private ["SH", "whereField"]
 - !private ["SH", "white"]
-- !private ["SH", "withRenderingMode"]
+- ["SH", "withRenderingMode"]
 - !private ["So13JGProgressHUDC", "dismiss"]
 - ["So13JGProgressHUDC", "init"]
 - !private ["So13JGProgressHUDC", "show"]
 - !private ["So13JGProgressHUDC", "textLabel"]
 - ["So18JGProgressHUDStyleV", "dark"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s25LosslessStringConvertibleP", "init"]
-- !private ["s10MirrorPathP", "init"]
-- !private ["s10MirrorPathP", "init"]
 - !private ["SM", "forEach"]
 - ["SM", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "forEach"]
+- ["10Foundation19MutableDataProtocolP", "init"]
 - !private ["So8NSCodingP", "Auth"]
 - !private ["So8NSCodingP", "CABasicAnimation"]
 - !private ["So8NSCodingP", "CATransaction"]
 - !private ["So8NSCodingP", "CardView"]
 - ["So8NSCodingP", "CardViewModel"]
-- !private ["So8NSCodingP", "CosmosView"]
+- ["So8NSCodingP", "CosmosView"]
 - !private ["So8NSCodingP", "EditProfileController"]
 - !private ["So8NSCodingP", "Firestore"]
 - ["So8NSCodingP", "Functions"]
@@ -830,11 +799,11 @@ depends-member:
 - !private ["So8NSCodingP", "nextCardView"]
 - !private ["So8NSCodingP", "performSwipeAnimation"]
 - !private ["So8NSCodingP", "print"]
-- !private ["So8NSCodingP", "rating"]
+- ["So8NSCodingP", "rating"]
 - !private ["So8NSCodingP", "removeFromSuperview"]
 - !private ["So8NSCodingP", "safeAreaLayoutGuide"]
 - !private ["So8NSCodingP", "sendSubviewToBack"]
-- !private ["So8NSCodingP", "settings"]
+- ["So8NSCodingP", "settings"]
 - !private ["So8NSCodingP", "setupCardFromUser"]
 - !private ["So8NSCodingP", "setupLayout"]
 - !private ["So8NSCodingP", "show"]
@@ -850,7 +819,7 @@ depends-member:
 - !private ["So8NSCodingP", "view"]
 - !private ["So8NSCodingP", "viewDidLoad"]
 - !private ["So8NSCodingP", "white"]
-- !private ["So8NSCodingP", "withRenderingMode"]
+- ["So8NSCodingP", "withRenderingMode"]
 - !private ["So9NSCopyingP", "code"]
 - !private ["So9NSCopyingP", "domain"]
 - !private ["So9NSCopyingP", "duration"]
@@ -870,7 +839,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "CATransaction"]
 - !private ["So26NSExtensionRequestHandlingP", "CardView"]
 - ["So26NSExtensionRequestHandlingP", "CardViewModel"]
-- !private ["So26NSExtensionRequestHandlingP", "CosmosView"]
+- ["So26NSExtensionRequestHandlingP", "CosmosView"]
 - !private ["So26NSExtensionRequestHandlingP", "EditProfileController"]
 - !private ["So26NSExtensionRequestHandlingP", "Firestore"]
 - ["So26NSExtensionRequestHandlingP", "Functions"]
@@ -905,9 +874,9 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "view"]
 - !private ["So26NSExtensionRequestHandlingP", "viewDidLoad"]
 - !private ["So21NSItemProviderReadingP", "white"]
-- !private ["So21NSItemProviderReadingP", "withRenderingMode"]
+- ["So21NSItemProviderReadingP", "withRenderingMode"]
 - !private ["So21NSItemProviderWritingP", "white"]
-- !private ["So21NSItemProviderWritingP", "withRenderingMode"]
+- ["So21NSItemProviderWritingP", "withRenderingMode"]
 - !private ["So8NSObjectC", "Auth"]
 - !private ["So8NSObjectC", "CABasicAnimation"]
 - !private ["So8NSObjectC", "CATransaction"]
@@ -974,12 +943,12 @@ depends-member:
 - !private ["So8NSObjectC", "nextCardView"]
 - ["So8NSObjectC", "performSwipeAnimation"]
 - !private ["So8NSObjectC", "print"]
-- !private ["So8NSObjectC", "rating"]
+- ["So8NSObjectC", "rating"]
 - !private ["So8NSObjectC", "removeFromSuperview"]
 - !private ["So8NSObjectC", "safeAreaLayoutGuide"]
 - !private ["So8NSObjectC", "sendSubviewToBack"]
 - !private ["So8NSObjectC", "setCompletionBlock"]
-- !private ["So8NSObjectC", "settings"]
+- ["So8NSObjectC", "settings"]
 - ["So8NSObjectC", "setupCardFromUser"]
 - ["So8NSObjectC", "setupLayout"]
 - !private ["So8NSObjectC", "show"]
@@ -997,13 +966,13 @@ depends-member:
 - ["So8NSObjectC", "viewDidLoad"]
 - !private ["So8NSObjectC", "whereField"]
 - !private ["So8NSObjectC", "white"]
-- !private ["So8NSObjectC", "withRenderingMode"]
+- ["So8NSObjectC", "withRenderingMode"]
 - !private ["So8NSObjectP", "Auth"]
 - !private ["So8NSObjectP", "CABasicAnimation"]
 - !private ["So8NSObjectP", "CATransaction"]
 - !private ["So8NSObjectP", "CardView"]
 - ["So8NSObjectP", "CardViewModel"]
-- !private ["So8NSObjectP", "CosmosView"]
+- ["So8NSObjectP", "CosmosView"]
 - !private ["So8NSObjectP", "EditProfileController"]
 - !private ["So8NSObjectP", "Firestore"]
 - ["So8NSObjectP", "Functions"]
@@ -1060,12 +1029,12 @@ depends-member:
 - !private ["So8NSObjectP", "nextCardView"]
 - !private ["So8NSObjectP", "performSwipeAnimation"]
 - !private ["So8NSObjectP", "print"]
-- !private ["So8NSObjectP", "rating"]
+- ["So8NSObjectP", "rating"]
 - !private ["So8NSObjectP", "removeFromSuperview"]
 - !private ["So8NSObjectP", "safeAreaLayoutGuide"]
 - !private ["So8NSObjectP", "sendSubviewToBack"]
 - !private ["So8NSObjectP", "setCompletionBlock"]
-- !private ["So8NSObjectP", "settings"]
+- ["So8NSObjectP", "settings"]
 - !private ["So8NSObjectP", "setupCardFromUser"]
 - !private ["So8NSObjectP", "setupLayout"]
 - !private ["So8NSObjectP", "show"]
@@ -1083,7 +1052,7 @@ depends-member:
 - !private ["So8NSObjectP", "viewDidLoad"]
 - !private ["So8NSObjectP", "whereField"]
 - !private ["So8NSObjectP", "white"]
-- !private ["So8NSObjectP", "withRenderingMode"]
+- ["So8NSObjectP", "withRenderingMode"]
 - !private ["So14NSSecureCodingP", "add"]
 - !private ["So14NSSecureCodingP", "code"]
 - !private ["So14NSSecureCodingP", "domain"]
@@ -1095,7 +1064,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "toValue"]
 - !private ["So14NSSecureCodingP", "userInfo"]
 - !private ["So14NSSecureCodingP", "white"]
-- !private ["So14NSSecureCodingP", "withRenderingMode"]
+- ["So14NSSecureCodingP", "withRenderingMode"]
 - !private ["Sq", "addSubview"]
 - !private ["Sq", "backgroundColor"]
 - !private ["Sq", "bottomAnchor"]
@@ -1118,26 +1087,16 @@ depends-member:
 - ["Sk", "init"]
 - !private ["Sm", "forEach"]
 - ["Sm", "init"]
-- !private ["Sm", "init"]
-- !private ["SY", "alwaysOriginal"]
+- ["SY", "alwaysOriginal"]
 - ["SY", "dark"]
 - !private ["SY", "forwards"]
-- !private ["SY", "full"]
+- ["SY", "full"]
 - !private ["SY", "init"]
-- !private ["So20UIImageRenderingModeV", "alwaysOriginal"]
+- ["So20UIImageRenderingModeV", "alwaysOriginal"]
 - !private ["ST", "forEach"]
 - ["ST", "init"]
-- !private ["ST", "init"]
 - !private ["ST", "subscript"]
-- !private ["6Cosmos12StarFillModeO", "full"]
-- !private ["SS", "init"]
-- !private ["SS", "init"]
-- !private ["Sy", "init"]
-- !private ["Sy", "init"]
-- !private ["s16TextOutputStreamP", "init"]
-- !private ["s16TextOutputStreamP", "init"]
-- !private ["s20TextOutputStreamableP", "init"]
-- !private ["s20TextOutputStreamableP", "init"]
+- ["6Cosmos12StarFillModeO", "full"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "anchor"]
 - !private ["So29UIAccessibilityIdentificationP", "backgroundColor"]
@@ -1151,18 +1110,18 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "layer"]
 - !private ["So29UIAccessibilityIdentificationP", "leadingAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "nextCardView"]
-- !private ["So29UIAccessibilityIdentificationP", "rating"]
+- ["So29UIAccessibilityIdentificationP", "rating"]
 - !private ["So29UIAccessibilityIdentificationP", "removeFromSuperview"]
 - !private ["So29UIAccessibilityIdentificationP", "safeAreaLayoutGuide"]
 - !private ["So29UIAccessibilityIdentificationP", "sendSubviewToBack"]
-- !private ["So29UIAccessibilityIdentificationP", "settings"]
+- ["So29UIAccessibilityIdentificationP", "settings"]
 - !private ["So29UIAccessibilityIdentificationP", "show"]
 - !private ["So29UIAccessibilityIdentificationP", "subviews"]
 - !private ["So29UIAccessibilityIdentificationP", "text"]
 - !private ["So29UIAccessibilityIdentificationP", "textLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "topAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "trailingAnchor"]
-- !private ["So29UIAccessibilityIdentificationP", "withRenderingMode"]
+- ["So29UIAccessibilityIdentificationP", "withRenderingMode"]
 - !private ["So12UIAppearanceP", "addSubview"]
 - !private ["So12UIAppearanceP", "anchor"]
 - !private ["So12UIAppearanceP", "backgroundColor"]
@@ -1176,11 +1135,11 @@ depends-member:
 - !private ["So12UIAppearanceP", "layer"]
 - !private ["So12UIAppearanceP", "leadingAnchor"]
 - !private ["So12UIAppearanceP", "nextCardView"]
-- !private ["So12UIAppearanceP", "rating"]
+- ["So12UIAppearanceP", "rating"]
 - !private ["So12UIAppearanceP", "removeFromSuperview"]
 - !private ["So12UIAppearanceP", "safeAreaLayoutGuide"]
 - !private ["So12UIAppearanceP", "sendSubviewToBack"]
-- !private ["So12UIAppearanceP", "settings"]
+- ["So12UIAppearanceP", "settings"]
 - !private ["So12UIAppearanceP", "show"]
 - !private ["So12UIAppearanceP", "subviews"]
 - !private ["So12UIAppearanceP", "text"]
@@ -1192,7 +1151,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "CATransaction"]
 - !private ["So21UIAppearanceContainerP", "CardView"]
 - ["So21UIAppearanceContainerP", "CardViewModel"]
-- !private ["So21UIAppearanceContainerP", "CosmosView"]
+- ["So21UIAppearanceContainerP", "CosmosView"]
 - !private ["So21UIAppearanceContainerP", "EditProfileController"]
 - !private ["So21UIAppearanceContainerP", "Firestore"]
 - ["So21UIAppearanceContainerP", "Functions"]
@@ -1232,11 +1191,11 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "nextCardView"]
 - !private ["So21UIAppearanceContainerP", "performSwipeAnimation"]
 - !private ["So21UIAppearanceContainerP", "print"]
-- !private ["So21UIAppearanceContainerP", "rating"]
+- ["So21UIAppearanceContainerP", "rating"]
 - !private ["So21UIAppearanceContainerP", "removeFromSuperview"]
 - !private ["So21UIAppearanceContainerP", "safeAreaLayoutGuide"]
 - !private ["So21UIAppearanceContainerP", "sendSubviewToBack"]
-- !private ["So21UIAppearanceContainerP", "settings"]
+- ["So21UIAppearanceContainerP", "settings"]
 - !private ["So21UIAppearanceContainerP", "setupCardFromUser"]
 - !private ["So21UIAppearanceContainerP", "setupLayout"]
 - !private ["So21UIAppearanceContainerP", "show"]
@@ -1255,7 +1214,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "CATransaction"]
 - !private ["So18UIContentContainerP", "CardView"]
 - ["So18UIContentContainerP", "CardViewModel"]
-- !private ["So18UIContentContainerP", "CosmosView"]
+- ["So18UIContentContainerP", "CosmosView"]
 - !private ["So18UIContentContainerP", "EditProfileController"]
 - !private ["So18UIContentContainerP", "Firestore"]
 - ["So18UIContentContainerP", "Functions"]
@@ -1303,11 +1262,11 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "layer"]
 - !private ["So17UICoordinateSpaceP", "leadingAnchor"]
 - !private ["So17UICoordinateSpaceP", "nextCardView"]
-- !private ["So17UICoordinateSpaceP", "rating"]
+- ["So17UICoordinateSpaceP", "rating"]
 - !private ["So17UICoordinateSpaceP", "removeFromSuperview"]
 - !private ["So17UICoordinateSpaceP", "safeAreaLayoutGuide"]
 - !private ["So17UICoordinateSpaceP", "sendSubviewToBack"]
-- !private ["So17UICoordinateSpaceP", "settings"]
+- ["So17UICoordinateSpaceP", "settings"]
 - !private ["So17UICoordinateSpaceP", "show"]
 - !private ["So17UICoordinateSpaceP", "subviews"]
 - !private ["So17UICoordinateSpaceP", "text"]
@@ -1327,11 +1286,11 @@ depends-member:
 - !private ["So13UIDynamicItemP", "layer"]
 - !private ["So13UIDynamicItemP", "leadingAnchor"]
 - !private ["So13UIDynamicItemP", "nextCardView"]
-- !private ["So13UIDynamicItemP", "rating"]
+- ["So13UIDynamicItemP", "rating"]
 - !private ["So13UIDynamicItemP", "removeFromSuperview"]
 - !private ["So13UIDynamicItemP", "safeAreaLayoutGuide"]
 - !private ["So13UIDynamicItemP", "sendSubviewToBack"]
-- !private ["So13UIDynamicItemP", "settings"]
+- ["So13UIDynamicItemP", "settings"]
 - !private ["So13UIDynamicItemP", "show"]
 - !private ["So13UIDynamicItemP", "subviews"]
 - !private ["So13UIDynamicItemP", "text"]
@@ -1345,7 +1304,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "CATransaction"]
 - !private ["So18UIFocusEnvironmentP", "CardView"]
 - ["So18UIFocusEnvironmentP", "CardViewModel"]
-- !private ["So18UIFocusEnvironmentP", "CosmosView"]
+- ["So18UIFocusEnvironmentP", "CosmosView"]
 - !private ["So18UIFocusEnvironmentP", "EditProfileController"]
 - !private ["So18UIFocusEnvironmentP", "Firestore"]
 - ["So18UIFocusEnvironmentP", "Functions"]
@@ -1385,11 +1344,11 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "nextCardView"]
 - !private ["So18UIFocusEnvironmentP", "performSwipeAnimation"]
 - !private ["So18UIFocusEnvironmentP", "print"]
-- !private ["So18UIFocusEnvironmentP", "rating"]
+- ["So18UIFocusEnvironmentP", "rating"]
 - !private ["So18UIFocusEnvironmentP", "removeFromSuperview"]
 - !private ["So18UIFocusEnvironmentP", "safeAreaLayoutGuide"]
 - !private ["So18UIFocusEnvironmentP", "sendSubviewToBack"]
-- !private ["So18UIFocusEnvironmentP", "settings"]
+- ["So18UIFocusEnvironmentP", "settings"]
 - !private ["So18UIFocusEnvironmentP", "setupCardFromUser"]
 - !private ["So18UIFocusEnvironmentP", "setupLayout"]
 - !private ["So18UIFocusEnvironmentP", "show"]
@@ -1415,11 +1374,11 @@ depends-member:
 - !private ["So11UIFocusItemP", "layer"]
 - !private ["So11UIFocusItemP", "leadingAnchor"]
 - !private ["So11UIFocusItemP", "nextCardView"]
-- !private ["So11UIFocusItemP", "rating"]
+- ["So11UIFocusItemP", "rating"]
 - !private ["So11UIFocusItemP", "removeFromSuperview"]
 - !private ["So11UIFocusItemP", "safeAreaLayoutGuide"]
 - !private ["So11UIFocusItemP", "sendSubviewToBack"]
-- !private ["So11UIFocusItemP", "settings"]
+- ["So11UIFocusItemP", "settings"]
 - !private ["So11UIFocusItemP", "show"]
 - !private ["So11UIFocusItemP", "subviews"]
 - !private ["So11UIFocusItemP", "text"]
@@ -1439,21 +1398,21 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "layer"]
 - !private ["So20UIFocusItemContainerP", "leadingAnchor"]
 - !private ["So20UIFocusItemContainerP", "nextCardView"]
-- !private ["So20UIFocusItemContainerP", "rating"]
+- ["So20UIFocusItemContainerP", "rating"]
 - !private ["So20UIFocusItemContainerP", "removeFromSuperview"]
 - !private ["So20UIFocusItemContainerP", "safeAreaLayoutGuide"]
 - !private ["So20UIFocusItemContainerP", "sendSubviewToBack"]
-- !private ["So20UIFocusItemContainerP", "settings"]
+- ["So20UIFocusItemContainerP", "settings"]
 - !private ["So20UIFocusItemContainerP", "show"]
 - !private ["So20UIFocusItemContainerP", "subviews"]
 - !private ["So20UIFocusItemContainerP", "text"]
 - !private ["So20UIFocusItemContainerP", "textLabel"]
 - !private ["So20UIFocusItemContainerP", "topAnchor"]
 - !private ["So20UIFocusItemContainerP", "trailingAnchor"]
-- !private ["So7UIImageC", "withRenderingMode"]
+- ["So7UIImageC", "withRenderingMode"]
 - !private ["So31UIImagePickerControllerDelegateP", "defaultMaxSeekingAge"]
 - !private ["So31UIImagePickerControllerDelegateP", "defaultMinSeekingAge"]
-- !private ["So39UIItemProviderPresentationSizeProvidingP", "withRenderingMode"]
+- ["So39UIItemProviderPresentationSizeProvidingP", "withRenderingMode"]
 - !private ["So7UILabelC", "text"]
 - !private ["So13UILayoutGuideC", "bottomAnchor"]
 - !private ["So22UINavigationControllerC", "isNavigationBarHidden"]
@@ -1464,7 +1423,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "CATransaction"]
 - !private ["So30UIPasteConfigurationSupportingP", "CardView"]
 - ["So30UIPasteConfigurationSupportingP", "CardViewModel"]
-- !private ["So30UIPasteConfigurationSupportingP", "CosmosView"]
+- ["So30UIPasteConfigurationSupportingP", "CosmosView"]
 - !private ["So30UIPasteConfigurationSupportingP", "EditProfileController"]
 - !private ["So30UIPasteConfigurationSupportingP", "Firestore"]
 - ["So30UIPasteConfigurationSupportingP", "Functions"]
@@ -1504,11 +1463,11 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "nextCardView"]
 - !private ["So30UIPasteConfigurationSupportingP", "performSwipeAnimation"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
-- !private ["So30UIPasteConfigurationSupportingP", "rating"]
+- ["So30UIPasteConfigurationSupportingP", "rating"]
 - !private ["So30UIPasteConfigurationSupportingP", "removeFromSuperview"]
 - !private ["So30UIPasteConfigurationSupportingP", "safeAreaLayoutGuide"]
 - !private ["So30UIPasteConfigurationSupportingP", "sendSubviewToBack"]
-- !private ["So30UIPasteConfigurationSupportingP", "settings"]
+- ["So30UIPasteConfigurationSupportingP", "settings"]
 - !private ["So30UIPasteConfigurationSupportingP", "setupCardFromUser"]
 - !private ["So30UIPasteConfigurationSupportingP", "setupLayout"]
 - !private ["So30UIPasteConfigurationSupportingP", "show"]
@@ -1570,11 +1529,11 @@ depends-member:
 - !private ["So11UIResponderC", "nextCardView"]
 - ["So11UIResponderC", "performSwipeAnimation"]
 - !private ["So11UIResponderC", "print"]
-- !private ["So11UIResponderC", "rating"]
+- ["So11UIResponderC", "rating"]
 - !private ["So11UIResponderC", "removeFromSuperview"]
 - !private ["So11UIResponderC", "safeAreaLayoutGuide"]
 - !private ["So11UIResponderC", "sendSubviewToBack"]
-- !private ["So11UIResponderC", "settings"]
+- ["So11UIResponderC", "settings"]
 - ["So11UIResponderC", "setupCardFromUser"]
 - ["So11UIResponderC", "setupLayout"]
 - !private ["So11UIResponderC", "show"]
@@ -1592,7 +1551,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "CATransaction"]
 - !private ["So30UIResponderStandardEditActionsP", "CardView"]
 - ["So30UIResponderStandardEditActionsP", "CardViewModel"]
-- !private ["So30UIResponderStandardEditActionsP", "CosmosView"]
+- ["So30UIResponderStandardEditActionsP", "CosmosView"]
 - !private ["So30UIResponderStandardEditActionsP", "EditProfileController"]
 - !private ["So30UIResponderStandardEditActionsP", "Firestore"]
 - ["So30UIResponderStandardEditActionsP", "Functions"]
@@ -1632,11 +1591,11 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "nextCardView"]
 - !private ["So30UIResponderStandardEditActionsP", "performSwipeAnimation"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
-- !private ["So30UIResponderStandardEditActionsP", "rating"]
+- ["So30UIResponderStandardEditActionsP", "rating"]
 - !private ["So30UIResponderStandardEditActionsP", "removeFromSuperview"]
 - !private ["So30UIResponderStandardEditActionsP", "safeAreaLayoutGuide"]
 - !private ["So30UIResponderStandardEditActionsP", "sendSubviewToBack"]
-- !private ["So30UIResponderStandardEditActionsP", "settings"]
+- ["So30UIResponderStandardEditActionsP", "settings"]
 - !private ["So30UIResponderStandardEditActionsP", "setupCardFromUser"]
 - !private ["So30UIResponderStandardEditActionsP", "setupLayout"]
 - !private ["So30UIResponderStandardEditActionsP", "show"]
@@ -1656,7 +1615,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "CATransaction"]
 - !private ["So16UIStateRestoringP", "CardView"]
 - ["So16UIStateRestoringP", "CardViewModel"]
-- !private ["So16UIStateRestoringP", "CosmosView"]
+- ["So16UIStateRestoringP", "CosmosView"]
 - !private ["So16UIStateRestoringP", "EditProfileController"]
 - !private ["So16UIStateRestoringP", "Firestore"]
 - ["So16UIStateRestoringP", "Functions"]
@@ -1701,7 +1660,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "CATransaction"]
 - !private ["So18UITraitEnvironmentP", "CardView"]
 - ["So18UITraitEnvironmentP", "CardViewModel"]
-- !private ["So18UITraitEnvironmentP", "CosmosView"]
+- ["So18UITraitEnvironmentP", "CosmosView"]
 - !private ["So18UITraitEnvironmentP", "EditProfileController"]
 - !private ["So18UITraitEnvironmentP", "Firestore"]
 - ["So18UITraitEnvironmentP", "Functions"]
@@ -1741,11 +1700,11 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "nextCardView"]
 - !private ["So18UITraitEnvironmentP", "performSwipeAnimation"]
 - !private ["So18UITraitEnvironmentP", "print"]
-- !private ["So18UITraitEnvironmentP", "rating"]
+- ["So18UITraitEnvironmentP", "rating"]
 - !private ["So18UITraitEnvironmentP", "removeFromSuperview"]
 - !private ["So18UITraitEnvironmentP", "safeAreaLayoutGuide"]
 - !private ["So18UITraitEnvironmentP", "sendSubviewToBack"]
-- !private ["So18UITraitEnvironmentP", "settings"]
+- ["So18UITraitEnvironmentP", "settings"]
 - !private ["So18UITraitEnvironmentP", "setupCardFromUser"]
 - !private ["So18UITraitEnvironmentP", "setupLayout"]
 - !private ["So18UITraitEnvironmentP", "show"]
@@ -1763,7 +1722,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "CATransaction"]
 - !private ["So23UIUserActivityRestoringP", "CardView"]
 - ["So23UIUserActivityRestoringP", "CardViewModel"]
-- !private ["So23UIUserActivityRestoringP", "CosmosView"]
+- ["So23UIUserActivityRestoringP", "CosmosView"]
 - !private ["So23UIUserActivityRestoringP", "EditProfileController"]
 - !private ["So23UIUserActivityRestoringP", "Firestore"]
 - ["So23UIUserActivityRestoringP", "Functions"]
@@ -1803,11 +1762,11 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "nextCardView"]
 - !private ["So23UIUserActivityRestoringP", "performSwipeAnimation"]
 - !private ["So23UIUserActivityRestoringP", "print"]
-- !private ["So23UIUserActivityRestoringP", "rating"]
+- ["So23UIUserActivityRestoringP", "rating"]
 - !private ["So23UIUserActivityRestoringP", "removeFromSuperview"]
 - !private ["So23UIUserActivityRestoringP", "safeAreaLayoutGuide"]
 - !private ["So23UIUserActivityRestoringP", "sendSubviewToBack"]
-- !private ["So23UIUserActivityRestoringP", "settings"]
+- ["So23UIUserActivityRestoringP", "settings"]
 - !private ["So23UIUserActivityRestoringP", "setupCardFromUser"]
 - !private ["So23UIUserActivityRestoringP", "setupLayout"]
 - !private ["So23UIUserActivityRestoringP", "show"]
@@ -1833,11 +1792,11 @@ depends-member:
 - !private ["So6UIViewC", "layer"]
 - !private ["So6UIViewC", "leadingAnchor"]
 - !private ["So6UIViewC", "nextCardView"]
-- !private ["So6UIViewC", "rating"]
+- ["So6UIViewC", "rating"]
 - !private ["So6UIViewC", "removeFromSuperview"]
 - !private ["So6UIViewC", "safeAreaLayoutGuide"]
 - !private ["So6UIViewC", "sendSubviewToBack"]
-- !private ["So6UIViewC", "settings"]
+- ["So6UIViewC", "settings"]
 - !private ["So6UIViewC", "show"]
 - !private ["So6UIViewC", "subviews"]
 - !private ["So6UIViewC", "text"]
@@ -1896,45 +1855,15 @@ depends-member:
 - !private ["9mojo_test4UserV", "uid"]
 - !private ["So7FIRUserC", "uid"]
 - !private ["So11FIRUserInfoP", "uid"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "anchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "cardViewModel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "delegate"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "didFinishTouchingCosmos"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dismiss"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fillSuperview"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "layer"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "nextCardView"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rating"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "removeFromSuperview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "safeAreaLayoutGuide"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "sendSubviewToBack"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "settings"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "show"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "subviews"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textLabel"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "zero"]
 - !private ["s24_DestructorSafeContainerP", "forEach"]
 - ["s24_DestructorSafeContainerP", "init"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- !private ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
-- !private ["s26_ExpressibleByImageLiteralP", "withRenderingMode"]
-- !private ["s33_ExpressibleByStringInterpolationP", "init"]
-- !private ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s26_ExpressibleByImageLiteralP", "withRenderingMode"]
+- !private ["s19_HasContiguousBytesP", "forEach"]
+- ["s19_HasContiguousBytesP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "forwards"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
@@ -1944,7 +1873,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CATransaction"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "CardView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "CardViewModel"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "CosmosView"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "CosmosView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "EditProfileController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Firestore"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "Functions"]
@@ -2001,12 +1930,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "nextCardView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "performSwipeAnimation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "rating"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "rating"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "removeFromSuperview"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "safeAreaLayoutGuide"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "sendSubviewToBack"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setCompletionBlock"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "settings"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "settings"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setupCardFromUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "setupLayout"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "show"]
@@ -2024,8 +1953,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewDidLoad"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "whereField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "withRenderingMode"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "withRenderingMode"]
 - !private ["s21_ObjectiveCBridgeableP", "addSubview"]
 - !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
 - !private ["s21_ObjectiveCBridgeableP", "bottomAnchor"]
@@ -2042,14 +1970,36 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
 - !private ["s20_SwiftNewtypeWrapperP", "forwards"]
-- !private ["s16_SwiftStringViewP", "init"]
-- !private ["s16_SwiftStringViewP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "anchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "cardViewModel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "delegate"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "didFinishTouchingCosmos"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "dismiss"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fillSuperview"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "layer"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "leadingAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "nextCardView"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "rating"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "removeFromSuperview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "safeAreaLayoutGuide"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "sendSubviewToBack"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "settings"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "show"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "subviews"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textLabel"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "topAnchor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "trailingAnchor"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "Auth"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "CABasicAnimation"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "CATransaction"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "CardView"]
 - ["9mojo_test29editProfileControllerDelegateP", "CardViewModel"]
-- !private ["9mojo_test29editProfileControllerDelegateP", "CosmosView"]
+- ["9mojo_test29editProfileControllerDelegateP", "CosmosView"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "EditProfileController"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "Firestore"]
 - ["9mojo_test29editProfileControllerDelegateP", "Functions"]
@@ -2079,10 +2029,8 @@ depends-member:
 - !private ["9mojo_test29editProfileControllerDelegateP", "view"]
 depends-nominal:
 - "Sa"
-- "s13ArrayProtocolP"
 - !private "So7FIRAuthC"
 - "SK"
-- !private "Sb"
 - !private "So8CAActionP"
 - !private "So11CAAnimationC"
 - !private "So16CABasicAnimationC"
@@ -2100,14 +2048,14 @@ depends-nominal:
 - !private "9mojo_test13CardViewModelC"
 - "Sl"
 - !private "So22FIRCollectionReferenceC"
-- !private "SL"
 - "15TinyConstraints13ConstrainableP"
-- !private "6Cosmos0A8SettingsV"
-- !private "6Cosmos0A4ViewC"
+- "10Foundation15ContiguousBytesP"
+- "6Cosmos0A8SettingsV"
+- "6Cosmos0A4ViewC"
 - "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
 - "Se"
 - !private "SD"
 - !private "So19FIRDocumentSnapshotC"
@@ -2116,12 +2064,8 @@ depends-nominal:
 - "SQ"
 - !private "s5ErrorP"
 - "s25ExpressibleByArrayLiteralP"
-- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
-- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- !private "s26ExpressibleByStringLiteralP"
-- !private "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "So12FIRFirestoreC"
 - "So12FIRFunctionsC"
 - !private "So21FIRFunctionsErrorCodeV"
@@ -2129,18 +2073,17 @@ depends-nominal:
 - "SH"
 - "So13JGProgressHUDC"
 - "So18JGProgressHUDStyleV"
-- !private "s25LosslessStringConvertibleP"
-- !private "s10MirrorPathP"
 - "SM"
+- "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - !private "So7NSErrorC"
 - "So26NSExtensionRequestHandlingP"
-- !private "So21NSItemProviderReadingP"
-- !private "So21NSItemProviderWritingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So14NSSecureCodingP"
+- "So14NSSecureCodingP"
 - !private "Sq"
 - !private "9mojo_test21ProducesCardViewModelP"
 - !private "So8FIRQueryC"
@@ -2149,13 +2092,9 @@ depends-nominal:
 - "Sk"
 - "Sm"
 - "SY"
-- !private "So20UIImageRenderingModeV"
+- "So20UIImageRenderingModeV"
 - "ST"
-- !private "6Cosmos12StarFillModeO"
-- !private "SS"
-- !private "Sy"
-- !private "s16TextOutputStreamP"
-- !private "s20TextOutputStreamableP"
+- "6Cosmos12StarFillModeO"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -2168,9 +2107,9 @@ depends-nominal:
 - "So18UIFocusEnvironmentP"
 - "So11UIFocusItemP"
 - "So20UIFocusItemContainerP"
-- !private "So7UIImageC"
+- "So7UIImageC"
 - !private "So31UIImagePickerControllerDelegateP"
-- !private "So39UIItemProviderPresentationSizeProvidingP"
+- "So39UIItemProviderPresentationSizeProvidingP"
 - !private "So7UILabelC"
 - !private "So13UILayoutGuideC"
 - !private "So22UINavigationControllerC"
@@ -2190,25 +2129,20 @@ depends-nominal:
 - !private "9mojo_test4UserV"
 - !private "So7FIRUserC"
 - !private "So11FIRUserInfoP"
-- "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- !private "s34_ExpressibleByBuiltinStringLiteralP"
-- !private "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
-- !private "s26_ExpressibleByImageLiteralP"
-- !private "s33_ExpressibleByStringInterpolationP"
+- "s26_ExpressibleByImageLiteralP"
+- "s19_HasContiguousBytesP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
 - !private "s20_SwiftNewtypeWrapperP"
-- !private "s16_SwiftStringViewP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
 - "9mojo_test29editProfileControllerDelegateP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/x86_64.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
@@ -2363,18 +2297,19 @@ depends-external:
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "46b75b405ef1c96f036f68de93beef98"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "e78011d090f13b737f2ad92d743f3e89"

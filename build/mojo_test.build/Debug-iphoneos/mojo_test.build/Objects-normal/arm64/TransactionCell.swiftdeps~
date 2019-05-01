@@ -14,6 +14,7 @@ depends-top-level:
 - "UILabel"
 - "UITableViewCell"
 - !private "UIView"
+- !private "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
 - ["So15CALayerDelegateP", "CellStyle"]

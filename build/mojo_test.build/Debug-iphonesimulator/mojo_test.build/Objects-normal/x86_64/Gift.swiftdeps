@@ -10,9 +10,11 @@ depends-top-level:
 - !private "??"
 - "AssignmentPrecedence"
 - "Bool"
+- !private "BooleanLiteralType"
 - "CastingPrecedence"
 - "Gift"
 - "String"
+- !private "StringLiteralType"
 depends-member:
 - !private ["s7CVarArgP", "subscript"]
 - !private ["Sl", "subscript"]
@@ -31,6 +33,7 @@ depends-member:
 - ["9mojo_test4GiftV", "imageUrl"]
 - ["9mojo_test4GiftV", "init"]
 - ["9mojo_test4GiftV", "name"]
+- ["9mojo_test4GiftV", "sender"]
 - !private ["SH", "subscript"]
 - !private ["ST", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
@@ -222,4 +225,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "8bbb7e619b6567218b4057787dbef378"
+interface-hash: "912c9bfa1600810dac2099b982347ad3"

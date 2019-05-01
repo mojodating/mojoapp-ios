@@ -18,15 +18,19 @@ depends-top-level:
 - "AssignmentPrecedence"
 - !private "Auth"
 - "Bool"
+- "BooleanLiteralType"
 - !private "CGRect"
 - !private "CardView"
 - !private "Double"
 - !private "EditProfileController"
 - !private "FeedbacksController"
 - !private "Firestore"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - !private "NSLayoutConstraint"
 - !private "RegistrationController"
 - !private "String"
+- "StringLiteralType"
 - "UIButton"
 - !private "UICollectionViewFlowLayout"
 - "UIImageView"
@@ -39,6 +43,7 @@ depends-top-level:
 - !private "URL"
 - "User"
 - "UserProfileController"
+- "_ColorLiteralType"
 - !private "print"
 depends-member:
 - !private ["s18AdditiveArithmeticP", "init"]
@@ -146,7 +151,6 @@ depends-member:
 - ["s7CVarArgP", "height"]
 - !private ["s7CVarArgP", "heightAnchor"]
 - ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isActive"]
 - !private ["s7CVarArgP", "isHidden"]
 - ["s7CVarArgP", "isUserInteractionEnabled"]
@@ -289,7 +293,6 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "height"]
 - !private ["s28CustomDebugStringConvertibleP", "heightAnchor"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - ["s28CustomDebugStringConvertibleP", "isUserInteractionEnabled"]
@@ -401,7 +404,6 @@ depends-member:
 - ["s23CustomStringConvertibleP", "height"]
 - !private ["s23CustomStringConvertibleP", "heightAnchor"]
 - ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
 - ["s23CustomStringConvertibleP", "isUserInteractionEnabled"]
@@ -449,7 +451,6 @@ depends-member:
 - !private ["Se", "forEach"]
 - !private ["Se", "frame"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "leadingAnchor"]
 - !private ["Se", "safeAreaLayoutGuide"]
 - !private ["Se", "trailingAnchor"]
@@ -468,7 +469,6 @@ depends-member:
 - !private ["SE", "black"]
 - !private ["SE", "forEach"]
 - !private ["SE", "frame"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "leadingAnchor"]
 - !private ["SE", "safeAreaLayoutGuide"]
@@ -534,7 +534,6 @@ depends-member:
 - ["SQ", "height"]
 - !private ["SQ", "heightAnchor"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "isHidden"]
 - ["SQ", "isUserInteractionEnabled"]
@@ -663,7 +662,6 @@ depends-member:
 - ["SH", "height"]
 - !private ["SH", "heightAnchor"]
 - ["SH", "init"]
-- !private ["SH", "init"]
 - !private ["SH", "isActive"]
 - !private ["SH", "isHidden"]
 - ["SH", "isUserInteractionEnabled"]
@@ -758,7 +756,6 @@ depends-member:
 - ["So8NSCodingP", "height"]
 - !private ["So8NSCodingP", "heightAnchor"]
 - ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isHidden"]
 - ["So8NSCodingP", "isUserInteractionEnabled"]
 - ["So8NSCodingP", "layer"]
@@ -825,7 +822,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "fetchCurrentUser"]
 - !private ["So26NSExtensionRequestHandlingP", "handleEditProfile"]
 - !private ["So26NSExtensionRequestHandlingP", "handleFeedbacks"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "navProfileView"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationBar"]
@@ -908,7 +904,6 @@ depends-member:
 - ["So8NSObjectC", "height"]
 - !private ["So8NSObjectC", "heightAnchor"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isActive"]
 - !private ["So8NSObjectC", "isHidden"]
 - ["So8NSObjectC", "isUserInteractionEnabled"]
@@ -1004,7 +999,6 @@ depends-member:
 - ["So8NSObjectP", "height"]
 - !private ["So8NSObjectP", "heightAnchor"]
 - ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isActive"]
 - !private ["So8NSObjectP", "isHidden"]
 - ["So8NSObjectP", "isUserInteractionEnabled"]
@@ -1219,7 +1213,6 @@ depends-member:
 - ["So21UIAppearanceContainerP", "height"]
 - !private ["So21UIAppearanceContainerP", "heightAnchor"]
 - ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
 - ["So21UIAppearanceContainerP", "isUserInteractionEnabled"]
 - ["So21UIAppearanceContainerP", "layer"]
@@ -1297,7 +1290,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "fetchCurrentUser"]
 - !private ["So18UIContentContainerP", "handleEditProfile"]
 - !private ["So18UIContentContainerP", "handleFeedbacks"]
-- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "navProfileView"]
 - !private ["So18UIContentContainerP", "navigationBar"]
@@ -1387,7 +1379,6 @@ depends-member:
 - ["So13UIDynamicItemP", "width"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
 - !private ["So18UIFocusEnvironmentP", "CGRect"]
 - !private ["So18UIFocusEnvironmentP", "CardView"]
@@ -1429,7 +1420,6 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "height"]
 - !private ["So18UIFocusEnvironmentP", "heightAnchor"]
 - ["So18UIFocusEnvironmentP", "init"]
-- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - ["So18UIFocusEnvironmentP", "isUserInteractionEnabled"]
 - ["So18UIFocusEnvironmentP", "layer"]
@@ -1598,7 +1588,6 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "height"]
 - !private ["So30UIPasteConfigurationSupportingP", "heightAnchor"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - ["So30UIPasteConfigurationSupportingP", "isUserInteractionEnabled"]
 - ["So30UIPasteConfigurationSupportingP", "layer"]
@@ -1674,7 +1663,6 @@ depends-member:
 - ["So11UIResponderC", "height"]
 - !private ["So11UIResponderC", "heightAnchor"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isHidden"]
 - ["So11UIResponderC", "isUserInteractionEnabled"]
 - ["So11UIResponderC", "layer"]
@@ -1750,7 +1738,6 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "height"]
 - !private ["So30UIResponderStandardEditActionsP", "heightAnchor"]
 - ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - ["So30UIResponderStandardEditActionsP", "isUserInteractionEnabled"]
 - ["So30UIResponderStandardEditActionsP", "layer"]
@@ -1824,7 +1811,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "handleEditProfile"]
 - !private ["So16UIStateRestoringP", "handleFeedbacks"]
 - !private ["So16UIStateRestoringP", "init"]
-- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "navProfileView"]
 - !private ["So16UIStateRestoringP", "navigationBar"]
 - !private ["So16UIStateRestoringP", "navigationController"]
@@ -1888,7 +1874,6 @@ depends-member:
 - ["So18UITraitEnvironmentP", "height"]
 - !private ["So18UITraitEnvironmentP", "heightAnchor"]
 - ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
 - ["So18UITraitEnvironmentP", "isUserInteractionEnabled"]
 - ["So18UITraitEnvironmentP", "layer"]
@@ -1964,7 +1949,6 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "height"]
 - !private ["So23UIUserActivityRestoringP", "heightAnchor"]
 - ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "isHidden"]
 - ["So23UIUserActivityRestoringP", "isUserInteractionEnabled"]
 - ["So23UIUserActivityRestoringP", "layer"]
@@ -2059,7 +2043,6 @@ depends-member:
 - ["So16UIViewControllerC", "handleEditProfile"]
 - ["So16UIViewControllerC", "handleFeedbacks"]
 - ["So16UIViewControllerC", "init"]
-- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "navProfileView"]
 - !private ["So16UIViewControllerC", "navigationBar"]
 - !private ["So16UIViewControllerC", "navigationController"]
@@ -2208,7 +2191,6 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "height"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "heightAnchor"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isActive"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "isUserInteractionEnabled"]
@@ -2254,7 +2236,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "black"]
 - !private ["s21_ObjectiveCBridgeableP", "forEach"]
 - !private ["s21_ObjectiveCBridgeableP", "frame"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "leadingAnchor"]
 - ["s21_ObjectiveCBridgeableP", "medium"]

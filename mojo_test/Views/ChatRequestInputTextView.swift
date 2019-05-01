@@ -27,7 +27,7 @@ class ChatRequestInputTextView: UITextView {
         NotificationCenter.default.addObserver(self, selector: #selector(handleTextChange), name: UITextView.textDidChangeNotification , object: nil)
         
         addSubview(placeholderLabel)
-        placeholderLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 8, left: 8, bottom: 0, right: 0))
+        placeholderLabel.anchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 12, left: 12, bottom: 0, right: 0))
     }
     
     @objc fileprivate func handleTextChange() {

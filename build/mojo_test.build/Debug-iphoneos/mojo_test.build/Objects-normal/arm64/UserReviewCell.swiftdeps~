@@ -22,7 +22,6 @@ depends-top-level:
 - "UILabel"
 - !private "UIStackView"
 - "UIView"
-- "UnicodeScalarType"
 - "UserReviewCell"
 - !private "fatalError"
 - !private "print"

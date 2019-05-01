@@ -50,7 +50,7 @@ class WalletHeaderCell: UICollectionViewCell {
         accountButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
         topUpButton.setTitleColor(.white, for: .normal)
-        topUpButton.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.7098039216, blue: 0.768627451, alpha: 1)
+        topUpButton.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
         topUpButton.widthAnchor.constraint(equalToConstant: 110).isActive = true
         topUpButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         

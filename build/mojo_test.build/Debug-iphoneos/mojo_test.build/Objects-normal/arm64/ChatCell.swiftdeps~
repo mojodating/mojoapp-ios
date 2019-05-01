@@ -10,25 +10,19 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - "Auth"
-- !private "BooleanLiteralType"
 - "CGRect"
 - "ChatCell"
 - "Conversation"
 - !private "Date"
 - !private "Firestore"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "Message"
 - "NSCoder"
 - !private "String"
-- "StringLiteralType"
 - "UICollectionViewCell"
 - "UIImageView"
 - "UILabel"
 - !private "URL"
 - "User"
-- !private "_ColorLiteralType"
-- "_ImageLiteralType"
 - !private "fatalError"
 - !private "print"
 depends-member:
@@ -58,7 +52,6 @@ depends-member:
 - !private ["So15CALayerDelegateP", "bottomAnchor"]
 - !private ["So15CALayerDelegateP", "centerYAnchor"]
 - !private ["So15CALayerDelegateP", "chatProfileImage"]
-- !private ["So15CALayerDelegateP", "checkNewMessageStatus"]
 - !private ["So15CALayerDelegateP", "contentLabel"]
 - !private ["So15CALayerDelegateP", "conversation"]
 - !private ["So15CALayerDelegateP", "currentUser"]
@@ -101,7 +94,6 @@ depends-member:
 - !private ["s7CVarArgP", "bottomAnchor"]
 - !private ["s7CVarArgP", "centerYAnchor"]
 - !private ["s7CVarArgP", "chatProfileImage"]
-- !private ["s7CVarArgP", "checkNewMessageStatus"]
 - !private ["s7CVarArgP", "collection"]
 - !private ["s7CVarArgP", "constraint"]
 - !private ["s7CVarArgP", "contentLabel"]
@@ -155,7 +147,6 @@ depends-member:
 - !private ["9mojo_test8ChatCellC", "backgroundColor"]
 - !private ["9mojo_test8ChatCellC", "centerYAnchor"]
 - ["9mojo_test8ChatCellC", "chatProfileImage"]
-- !private ["9mojo_test8ChatCellC", "checkNewMessageStatus"]
 - ["9mojo_test8ChatCellC", "contentLabel"]
 - ["9mojo_test8ChatCellC", "conversation"]
 - ["9mojo_test8ChatCellC", "currentUser"]
@@ -198,7 +189,6 @@ depends-member:
 - !private ["15TinyConstraints13ConstrainableP", "bottomAnchor"]
 - !private ["15TinyConstraints13ConstrainableP", "centerYAnchor"]
 - !private ["15TinyConstraints13ConstrainableP", "chatProfileImage"]
-- !private ["15TinyConstraints13ConstrainableP", "checkNewMessageStatus"]
 - !private ["15TinyConstraints13ConstrainableP", "contentLabel"]
 - !private ["15TinyConstraints13ConstrainableP", "conversation"]
 - !private ["15TinyConstraints13ConstrainableP", "currentUser"]
@@ -248,7 +238,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "bottomAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "centerYAnchor"]
 - !private ["s28CustomDebugStringConvertibleP", "chatProfileImage"]
-- !private ["s28CustomDebugStringConvertibleP", "checkNewMessageStatus"]
 - !private ["s28CustomDebugStringConvertibleP", "collection"]
 - !private ["s28CustomDebugStringConvertibleP", "constraint"]
 - !private ["s28CustomDebugStringConvertibleP", "contentLabel"]
@@ -318,7 +307,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "bottomAnchor"]
 - !private ["s23CustomStringConvertibleP", "centerYAnchor"]
 - !private ["s23CustomStringConvertibleP", "chatProfileImage"]
-- !private ["s23CustomStringConvertibleP", "checkNewMessageStatus"]
 - !private ["s23CustomStringConvertibleP", "collection"]
 - !private ["s23CustomStringConvertibleP", "constraint"]
 - !private ["s23CustomStringConvertibleP", "contentLabel"]
@@ -408,7 +396,6 @@ depends-member:
 - !private ["SQ", "bottomAnchor"]
 - !private ["SQ", "centerYAnchor"]
 - !private ["SQ", "chatProfileImage"]
-- !private ["SQ", "checkNewMessageStatus"]
 - !private ["SQ", "collection"]
 - !private ["SQ", "constraint"]
 - !private ["SQ", "contentLabel"]
@@ -478,7 +465,6 @@ depends-member:
 - !private ["SH", "bottomAnchor"]
 - !private ["SH", "centerYAnchor"]
 - !private ["SH", "chatProfileImage"]
-- !private ["SH", "checkNewMessageStatus"]
 - !private ["SH", "collection"]
 - !private ["SH", "constraint"]
 - !private ["SH", "contentLabel"]
@@ -544,7 +530,6 @@ depends-member:
 - !private ["So8NSCodingP", "bottomAnchor"]
 - !private ["So8NSCodingP", "centerYAnchor"]
 - !private ["So8NSCodingP", "chatProfileImage"]
-- !private ["So8NSCodingP", "checkNewMessageStatus"]
 - !private ["So8NSCodingP", "contentLabel"]
 - !private ["So8NSCodingP", "conversation"]
 - !private ["So8NSCodingP", "currentUser"]
@@ -602,7 +587,6 @@ depends-member:
 - !private ["So8NSObjectC", "bottomAnchor"]
 - !private ["So8NSObjectC", "centerYAnchor"]
 - ["So8NSObjectC", "chatProfileImage"]
-- ["So8NSObjectC", "checkNewMessageStatus"]
 - !private ["So8NSObjectC", "collection"]
 - !private ["So8NSObjectC", "constraint"]
 - ["So8NSObjectC", "contentLabel"]
@@ -657,7 +641,6 @@ depends-member:
 - !private ["So8NSObjectP", "bottomAnchor"]
 - !private ["So8NSObjectP", "centerYAnchor"]
 - !private ["So8NSObjectP", "chatProfileImage"]
-- !private ["So8NSObjectP", "checkNewMessageStatus"]
 - !private ["So8NSObjectP", "collection"]
 - !private ["So8NSObjectP", "constraint"]
 - !private ["So8NSObjectP", "contentLabel"]
@@ -749,7 +732,6 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "bottomAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "centerYAnchor"]
 - !private ["So29UIAccessibilityIdentificationP", "chatProfileImage"]
-- !private ["So29UIAccessibilityIdentificationP", "checkNewMessageStatus"]
 - !private ["So29UIAccessibilityIdentificationP", "contentLabel"]
 - !private ["So29UIAccessibilityIdentificationP", "conversation"]
 - !private ["So29UIAccessibilityIdentificationP", "currentUser"]
@@ -786,7 +768,6 @@ depends-member:
 - !private ["So12UIAppearanceP", "bottomAnchor"]
 - !private ["So12UIAppearanceP", "centerYAnchor"]
 - !private ["So12UIAppearanceP", "chatProfileImage"]
-- !private ["So12UIAppearanceP", "checkNewMessageStatus"]
 - !private ["So12UIAppearanceP", "contentLabel"]
 - !private ["So12UIAppearanceP", "conversation"]
 - !private ["So12UIAppearanceP", "currentUser"]
@@ -823,7 +804,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "bottomAnchor"]
 - !private ["So21UIAppearanceContainerP", "centerYAnchor"]
 - !private ["So21UIAppearanceContainerP", "chatProfileImage"]
-- !private ["So21UIAppearanceContainerP", "checkNewMessageStatus"]
 - !private ["So21UIAppearanceContainerP", "contentLabel"]
 - !private ["So21UIAppearanceContainerP", "conversation"]
 - !private ["So21UIAppearanceContainerP", "currentUser"]
@@ -861,7 +841,6 @@ depends-member:
 - !private ["So24UICollectionReusableViewC", "backgroundColor"]
 - !private ["So24UICollectionReusableViewC", "centerYAnchor"]
 - ["So24UICollectionReusableViewC", "chatProfileImage"]
-- ["So24UICollectionReusableViewC", "checkNewMessageStatus"]
 - ["So24UICollectionReusableViewC", "contentLabel"]
 - ["So24UICollectionReusableViewC", "conversation"]
 - ["So24UICollectionReusableViewC", "currentUser"]
@@ -897,7 +876,6 @@ depends-member:
 - !private ["So20UICollectionViewCellC", "backgroundColor"]
 - !private ["So20UICollectionViewCellC", "centerYAnchor"]
 - ["So20UICollectionViewCellC", "chatProfileImage"]
-- ["So20UICollectionViewCellC", "checkNewMessageStatus"]
 - ["So20UICollectionViewCellC", "contentLabel"]
 - ["So20UICollectionViewCellC", "conversation"]
 - ["So20UICollectionViewCellC", "currentUser"]
@@ -939,7 +917,6 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "bottomAnchor"]
 - !private ["So17UICoordinateSpaceP", "centerYAnchor"]
 - !private ["So17UICoordinateSpaceP", "chatProfileImage"]
-- !private ["So17UICoordinateSpaceP", "checkNewMessageStatus"]
 - !private ["So17UICoordinateSpaceP", "contentLabel"]
 - !private ["So17UICoordinateSpaceP", "conversation"]
 - !private ["So17UICoordinateSpaceP", "currentUser"]
@@ -976,7 +953,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "bottomAnchor"]
 - !private ["So13UIDynamicItemP", "centerYAnchor"]
 - !private ["So13UIDynamicItemP", "chatProfileImage"]
-- !private ["So13UIDynamicItemP", "checkNewMessageStatus"]
 - !private ["So13UIDynamicItemP", "contentLabel"]
 - !private ["So13UIDynamicItemP", "conversation"]
 - !private ["So13UIDynamicItemP", "currentUser"]
@@ -1015,7 +991,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "bottomAnchor"]
 - !private ["So18UIFocusEnvironmentP", "centerYAnchor"]
 - !private ["So18UIFocusEnvironmentP", "chatProfileImage"]
-- !private ["So18UIFocusEnvironmentP", "checkNewMessageStatus"]
 - !private ["So18UIFocusEnvironmentP", "contentLabel"]
 - !private ["So18UIFocusEnvironmentP", "conversation"]
 - !private ["So18UIFocusEnvironmentP", "currentUser"]
@@ -1052,7 +1027,6 @@ depends-member:
 - !private ["So11UIFocusItemP", "bottomAnchor"]
 - !private ["So11UIFocusItemP", "centerYAnchor"]
 - !private ["So11UIFocusItemP", "chatProfileImage"]
-- !private ["So11UIFocusItemP", "checkNewMessageStatus"]
 - !private ["So11UIFocusItemP", "contentLabel"]
 - !private ["So11UIFocusItemP", "conversation"]
 - !private ["So11UIFocusItemP", "currentUser"]
@@ -1089,7 +1063,6 @@ depends-member:
 - !private ["So20UIFocusItemContainerP", "bottomAnchor"]
 - !private ["So20UIFocusItemContainerP", "centerYAnchor"]
 - !private ["So20UIFocusItemContainerP", "chatProfileImage"]
-- !private ["So20UIFocusItemContainerP", "checkNewMessageStatus"]
 - !private ["So20UIFocusItemContainerP", "contentLabel"]
 - !private ["So20UIFocusItemContainerP", "conversation"]
 - !private ["So20UIFocusItemContainerP", "currentUser"]
@@ -1139,7 +1112,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "bottomAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "centerYAnchor"]
 - !private ["So30UIPasteConfigurationSupportingP", "chatProfileImage"]
-- !private ["So30UIPasteConfigurationSupportingP", "checkNewMessageStatus"]
 - !private ["So30UIPasteConfigurationSupportingP", "contentLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "conversation"]
 - !private ["So30UIPasteConfigurationSupportingP", "currentUser"]
@@ -1179,7 +1151,6 @@ depends-member:
 - !private ["So11UIResponderC", "bottomAnchor"]
 - !private ["So11UIResponderC", "centerYAnchor"]
 - ["So11UIResponderC", "chatProfileImage"]
-- ["So11UIResponderC", "checkNewMessageStatus"]
 - ["So11UIResponderC", "contentLabel"]
 - ["So11UIResponderC", "conversation"]
 - ["So11UIResponderC", "currentUser"]
@@ -1217,7 +1188,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "bottomAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "centerYAnchor"]
 - !private ["So30UIResponderStandardEditActionsP", "chatProfileImage"]
-- !private ["So30UIResponderStandardEditActionsP", "checkNewMessageStatus"]
 - !private ["So30UIResponderStandardEditActionsP", "contentLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "conversation"]
 - !private ["So30UIResponderStandardEditActionsP", "currentUser"]
@@ -1254,7 +1224,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "bottomAnchor"]
 - !private ["So18UITraitEnvironmentP", "centerYAnchor"]
 - !private ["So18UITraitEnvironmentP", "chatProfileImage"]
-- !private ["So18UITraitEnvironmentP", "checkNewMessageStatus"]
 - !private ["So18UITraitEnvironmentP", "contentLabel"]
 - !private ["So18UITraitEnvironmentP", "conversation"]
 - !private ["So18UITraitEnvironmentP", "currentUser"]
@@ -1291,7 +1260,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "bottomAnchor"]
 - !private ["So23UIUserActivityRestoringP", "centerYAnchor"]
 - !private ["So23UIUserActivityRestoringP", "chatProfileImage"]
-- !private ["So23UIUserActivityRestoringP", "checkNewMessageStatus"]
 - !private ["So23UIUserActivityRestoringP", "contentLabel"]
 - !private ["So23UIUserActivityRestoringP", "conversation"]
 - !private ["So23UIUserActivityRestoringP", "currentUser"]
@@ -1331,7 +1299,6 @@ depends-member:
 - !private ["So6UIViewC", "bottomAnchor"]
 - !private ["So6UIViewC", "centerYAnchor"]
 - ["So6UIViewC", "chatProfileImage"]
-- ["So6UIViewC", "checkNewMessageStatus"]
 - ["So6UIViewC", "contentLabel"]
 - ["So6UIViewC", "conversation"]
 - ["So6UIViewC", "currentUser"]
@@ -1403,7 +1370,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "bottomAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "centerYAnchor"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "chatProfileImage"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "checkNewMessageStatus"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "collection"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "constraint"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "contentLabel"]
@@ -1466,7 +1432,6 @@ depends-member:
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bottomAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "centerYAnchor"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "chatProfileImage"]
-- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "checkNewMessageStatus"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "contentLabel"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "conversation"]
 - !private ["s38__DefaultCustomPlaygroundQuickLookableP", "currentUser"]
@@ -1754,4 +1719,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "58c9e36157df83c61693f752514877f7"
+interface-hash: "75ea056c8cd8622e36e22b6d15462a1b"

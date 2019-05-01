@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate, SentFeedCellDelegate {
+class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, ChatRequestCellDelegate {
     
     let chatRequestCellId = "chatRequestCellId"
     let chatCellId = "chatCellId"
@@ -146,6 +146,14 @@ class ChatController: BaseListController, UICollectionViewDelegateFlowLayout, Ch
     func didTapCell(conversation: Conversation) {
         let chatLogController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
         chatLogController.conversation = conversation
+        navigationController?.pushViewController(chatLogController, animated: true)
+    }
+    
+    func didTapSentCell(conversation: Conversation) {
+        
+        let chatLogController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
+        chatLogController.conversation = conversation
+        chatLogController.containerView.isHidden = true
         navigationController?.pushViewController(chatLogController, animated: true)
     }
     

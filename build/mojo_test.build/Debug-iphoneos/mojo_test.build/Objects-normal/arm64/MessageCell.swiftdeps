@@ -23,7 +23,6 @@ depends-top-level:
 - "UILabel"
 - "UIView"
 - "User"
-- !private "_ColorLiteralType"
 - !private "fatalError"
 - !private "print"
 depends-member:
@@ -71,7 +70,6 @@ depends-member:
 - ["So13CAMediaTimingP", "cornerRadius"]
 - ["So13CAMediaTimingP", "masksToBounds"]
 - !private ["So6CGRectV", "height"]
-- !private ["So6CGSizeV", "init"]
 - !private ["So6CGSizeV", "init"]
 - !private ["s7CVarArgP", "Auth"]
 - !private ["s7CVarArgP", "Firestore"]
@@ -198,7 +196,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "height"]
 - !private ["s28CustomDebugStringConvertibleP", "heightAnchor"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - ["s28CustomDebugStringConvertibleP", "layer"]
 - !private ["s28CustomDebugStringConvertibleP", "leadingAnchor"]
@@ -220,7 +217,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "widthAnchor"]
 - ["s17CustomReflectableP", "clear"]
 - !private ["s17CustomReflectableP", "height"]
-- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "white"]
 - !private ["s23CustomStringConvertibleP", "Auth"]
@@ -278,13 +274,11 @@ depends-member:
 - ["Se", "clear"]
 - !private ["Se", "height"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - ["Se", "white"]
 - !private ["So20FIRDocumentReferenceC", "getDocument"]
 - !private ["So19FIRDocumentSnapshotC", "data"]
 - ["SE", "clear"]
 - !private ["SE", "height"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - ["SE", "white"]
 - !private ["SQ", "Auth"]
@@ -321,7 +315,6 @@ depends-member:
 - !private ["SQ", "height"]
 - !private ["SQ", "heightAnchor"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - ["SQ", "layer"]
 - !private ["SQ", "leadingAnchor"]
@@ -863,7 +856,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "user"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
 - !private ["So18UIFocusEnvironmentP", "Firestore"]
 - ["So18UIFocusEnvironmentP", "UIFont"]
@@ -1226,7 +1218,6 @@ depends-member:
 - ["So12UIFontWeighta", "regular"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - ["s26_ExpressibleByColorLiteralP", "clear"]
 - ["s26_ExpressibleByColorLiteralP", "white"]
 - ["s35_HasCustomAnyHashableRepresentationP", "regular"]
@@ -1284,7 +1275,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
 - ["s21_ObjectiveCBridgeableP", "clear"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "regular"]
 - ["s21_ObjectiveCBridgeableP", "white"]

@@ -18,7 +18,6 @@ depends-top-level:
 - !private "Auth"
 - "BaseListController"
 - "Bool"
-- !private "BooleanLiteralType"
 - "CGSize"
 - "CastingPrecedence"
 - !private "ChatCell"
@@ -27,16 +26,13 @@ depends-top-level:
 - "ChatRequestCellDelegate"
 - "Conversation"
 - !private "Firestore"
-- "FloatLiteralType"
 - "IndexPath"
 - "Int"
-- "IntegerLiteralType"
 - !private "MainTabBarController"
 - !private "NSAttributedString"
 - !private "PrivateChatController"
 - "SentFeedCellDelegate"
 - !private "String"
-- "StringLiteralType"
 - !private "UIApplication"
 - "UICollectionView"
 - "UICollectionViewCell"
@@ -89,7 +85,6 @@ depends-member:
 - ["9mojo_test18BaseListControllerC", "fetchChatListsFromServer"]
 - ["9mojo_test18BaseListControllerC", "handleRefreshPage"]
 - ["9mojo_test18BaseListControllerC", "init"]
-- !private ["9mojo_test18BaseListControllerC", "init"]
 - !private ["9mojo_test18BaseListControllerC", "navigationController"]
 - !private ["9mojo_test18BaseListControllerC", "navigationItem"]
 - ["9mojo_test18BaseListControllerC", "numberOfSections"]
@@ -174,7 +169,6 @@ depends-member:
 - !private ["s7CVarArgP", "frame"]
 - !private ["s7CVarArgP", "handleRefreshPage"]
 - ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isHidden"]
 - !private ["s7CVarArgP", "keyWindow"]
 - !private ["s7CVarArgP", "lightGray"]
@@ -365,7 +359,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "handleRefreshPage"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "item"]
 - !private ["s28CustomDebugStringConvertibleP", "keyWindow"]
@@ -466,7 +459,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "frame"]
 - !private ["s23CustomStringConvertibleP", "handleRefreshPage"]
 - ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
 - !private ["s23CustomStringConvertibleP", "item"]
 - !private ["s23CustomStringConvertibleP", "keyWindow"]
@@ -600,7 +592,6 @@ depends-member:
 - !private ["SQ", "frame"]
 - !private ["SQ", "handleRefreshPage"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isHidden"]
 - !private ["SQ", "item"]
 - !private ["SQ", "keyWindow"]
@@ -707,7 +698,6 @@ depends-member:
 - !private ["SH", "frame"]
 - !private ["SH", "handleRefreshPage"]
 - ["SH", "init"]
-- !private ["SH", "init"]
 - !private ["SH", "isHidden"]
 - !private ["SH", "item"]
 - !private ["SH", "keyWindow"]
@@ -798,7 +788,6 @@ depends-member:
 - !private ["So8NSCodingP", "frame"]
 - !private ["So8NSCodingP", "handleRefreshPage"]
 - ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isHidden"]
 - !private ["So8NSCodingP", "lightGray"]
 - !private ["So8NSCodingP", "navigationBar"]
@@ -848,7 +837,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "emptyLabel"]
 - !private ["So26NSExtensionRequestHandlingP", "fetchChatListsFromServer"]
 - !private ["So26NSExtensionRequestHandlingP", "handleRefreshPage"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationBar"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
@@ -916,7 +904,6 @@ depends-member:
 - !private ["So8NSObjectC", "frame"]
 - ["So8NSObjectC", "handleRefreshPage"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isHidden"]
 - !private ["So8NSObjectC", "keyWindow"]
 - !private ["So8NSObjectC", "lightGray"]
@@ -987,7 +974,6 @@ depends-member:
 - !private ["So8NSObjectP", "frame"]
 - !private ["So8NSObjectP", "handleRefreshPage"]
 - ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isHidden"]
 - !private ["So8NSObjectP", "keyWindow"]
 - !private ["So8NSObjectP", "lightGray"]
@@ -1175,7 +1161,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "frame"]
 - !private ["So21UIAppearanceContainerP", "handleRefreshPage"]
 - ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
 - !private ["So21UIAppearanceContainerP", "navigationBar"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
@@ -1238,7 +1223,6 @@ depends-member:
 - ["So26UICollectionViewControllerC", "fetchChatListsFromServer"]
 - ["So26UICollectionViewControllerC", "handleRefreshPage"]
 - !private ["So26UICollectionViewControllerC", "init"]
-- !private ["So26UICollectionViewControllerC", "init"]
 - !private ["So26UICollectionViewControllerC", "navigationController"]
 - !private ["So26UICollectionViewControllerC", "navigationItem"]
 - ["So26UICollectionViewControllerC", "numberOfSections"]
@@ -1273,7 +1257,6 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "fetchChatListsFromServer"]
 - !private ["So26UICollectionViewDataSourceP", "handleRefreshPage"]
 - !private ["So26UICollectionViewDataSourceP", "init"]
-- !private ["So26UICollectionViewDataSourceP", "init"]
 - !private ["So26UICollectionViewDataSourceP", "navigationController"]
 - !private ["So26UICollectionViewDataSourceP", "navigationItem"]
 - !private ["So26UICollectionViewDataSourceP", "print"]
@@ -1306,7 +1289,6 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "emptyLabel"]
 - !private ["So24UICollectionViewDelegateP", "fetchChatListsFromServer"]
 - !private ["So24UICollectionViewDelegateP", "handleRefreshPage"]
-- !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "navigationController"]
 - !private ["So24UICollectionViewDelegateP", "navigationItem"]
@@ -1374,7 +1356,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "emptyLabel"]
 - !private ["So18UIContentContainerP", "fetchChatListsFromServer"]
 - !private ["So18UIContentContainerP", "handleRefreshPage"]
-- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "navigationBar"]
 - !private ["So18UIContentContainerP", "navigationController"]
@@ -1473,7 +1454,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "frame"]
 - !private ["So18UIFocusEnvironmentP", "handleRefreshPage"]
 - ["So18UIFocusEnvironmentP", "init"]
-- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "navigationBar"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
@@ -1579,7 +1559,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
 - !private ["So30UIPasteConfigurationSupportingP", "handleRefreshPage"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "keyWindow"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationBar"]
@@ -1645,7 +1624,6 @@ depends-member:
 - !private ["So11UIResponderC", "frame"]
 - ["So11UIResponderC", "handleRefreshPage"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isHidden"]
 - !private ["So11UIResponderC", "keyWindow"]
 - !private ["So11UIResponderC", "navigationBar"]
@@ -1701,7 +1679,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
 - !private ["So30UIResponderStandardEditActionsP", "handleRefreshPage"]
 - ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "keyWindow"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationBar"]
@@ -1753,7 +1730,6 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "fetchChatListsFromServer"]
 - !private ["So20UIScrollViewDelegateP", "handleRefreshPage"]
 - !private ["So20UIScrollViewDelegateP", "init"]
-- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "navigationController"]
 - !private ["So20UIScrollViewDelegateP", "navigationItem"]
 - !private ["So20UIScrollViewDelegateP", "print"]
@@ -1790,7 +1766,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "emptyLabel"]
 - !private ["So16UIStateRestoringP", "fetchChatListsFromServer"]
 - !private ["So16UIStateRestoringP", "handleRefreshPage"]
-- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "navigationBar"]
 - !private ["So16UIStateRestoringP", "navigationController"]
@@ -1840,7 +1815,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "frame"]
 - !private ["So18UITraitEnvironmentP", "handleRefreshPage"]
 - ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
 - !private ["So18UITraitEnvironmentP", "navigationBar"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
@@ -1893,7 +1867,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "frame"]
 - !private ["So23UIUserActivityRestoringP", "handleRefreshPage"]
 - ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "isHidden"]
 - !private ["So23UIUserActivityRestoringP", "keyWindow"]
 - !private ["So23UIUserActivityRestoringP", "navigationBar"]
@@ -1964,7 +1937,6 @@ depends-member:
 - ["So16UIViewControllerC", "emptyLabel"]
 - ["So16UIViewControllerC", "fetchChatListsFromServer"]
 - ["So16UIViewControllerC", "handleRefreshPage"]
-- !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "navigationBar"]
 - !private ["So16UIViewControllerC", "navigationController"]
@@ -2054,7 +2026,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleRefreshPage"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "keyWindow"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lightGray"]

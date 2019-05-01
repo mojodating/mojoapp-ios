@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+ <key>clang_version</key>
+<string>Apple LLVM version 10.0.1 (clang-1001.0.46.4)</string>
+ <key>diagnostics</key>
+ <array>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>134</integer>
+      <key>col</key><integer>5</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>135</integer>
+         <key>col</key><integer>9</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>136</integer>
+         <key>col</key><integer>79</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>c5d59c4b660acf95e8da9c5674eb1188</string>
+  <key>issue_context_kind</key><string>C++ method</string>
+  <key>issue_context</key><string>PopulateCallCounts</string>
+  <key>issue_hash_function_offset</key><string>19</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>134</integer>
+   <key>col</key><integer>5</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>134</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>160</integer>
+      <key>col</key><integer>3</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>160</integer>
+         <key>col</key><integer>19</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>161</integer>
+         <key>col</key><integer>72</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>4aeca627122473150e61ebe9cf576fd9</string>
+  <key>issue_context_kind</key><string>C++ method</string>
+  <key>issue_context</key><string>RenderJson</string>
+  <key>issue_hash_function_offset</key><string>10</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>160</integer>
+   <key>col</key><integer>3</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>160</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>231</integer>
+      <key>col</key><integer>5</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>231</integer>
+         <key>col</key><integer>21</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>232</integer>
+         <key>col</key><integer>65</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>467a47249c90aef1fb1f6f07c501eba5</string>
+  <key>issue_context_kind</key><string>C++ method</string>
+  <key>issue_context</key><string>RenderServerSockets</string>
+  <key>issue_hash_function_offset</key><string>24</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>231</integer>
+   <key>col</key><integer>5</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>231</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>249</integer>
+      <key>col</key><integer>3</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>249</integer>
+         <key>col</key><integer>19</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>250</integer>
+         <key>col</key><integer>71</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>f38f05a0eb6298d37892344f7291d055</string>
+  <key>issue_context_kind</key><string>C++ method</string>
+  <key>issue_context</key><string>RenderJson</string>
+  <key>issue_hash_function_offset</key><string>10</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>249</integer>
+   <key>col</key><integer>3</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>249</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>311</integer>
+      <key>col</key><integer>5</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>311</integer>
+         <key>col</key><integer>21</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>312</integer>
+         <key>col</key><integer>76</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>4685dd238577e4f758cb80bbf84cc774</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>PopulateSocketAddressJson</string>
+  <key>issue_hash_function_offset</key><string>26</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>311</integer>
+   <key>col</key><integer>5</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>311</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>321</integer>
+      <key>col</key><integer>5</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>322</integer>
+         <key>col</key><integer>9</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>323</integer>
+         <key>col</key><integer>77</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>efd01f923463c556aa05b843da38c372</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>PopulateSocketAddressJson</string>
+  <key>issue_hash_function_offset</key><string>36</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>321</integer>
+   <key>col</key><integer>5</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>321</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>329</integer>
+      <key>col</key><integer>5</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>329</integer>
+         <key>col</key><integer>21</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>330</integer>
+         <key>col</key><integer>77</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>261e87aa83acfb39d1c577d4cf6ce7a5</string>
+  <key>issue_context_kind</key><string>function</string>
+  <key>issue_context</key><string>PopulateSocketAddressJson</string>
+  <key>issue_hash_function_offset</key><string>44</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>329</integer>
+   <key>col</key><integer>5</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>329</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>374</integer>
+      <key>col</key><integer>3</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>374</integer>
+         <key>col</key><integer>19</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>375</integer>
+         <key>col</key><integer>71</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>f1851df8e3e05c5d0a8e43b3e607ce5f</string>
+  <key>issue_context_kind</key><string>C++ method</string>
+  <key>issue_context</key><string>RenderJson</string>
+  <key>issue_hash_function_offset</key><string>10</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>374</integer>
+   <key>col</key><integer>3</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>374</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>432</integer>
+      <key>col</key><integer>5</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>432</integer>
+         <key>col</key><integer>21</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>433</integer>
+         <key>col</key><integer>64</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>a1401b0bcb8a849bceeed32c54e28777</string>
+  <key>issue_context_kind</key><string>C++ method</string>
+  <key>issue_context</key><string>RenderJson</string>
+  <key>issue_hash_function_offset</key><string>68</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>432</integer>
+   <key>col</key><integer>5</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>432</integer>
+   </array>
+  </dict>
+  </dict>
+  <dict>
+   <key>path</key>
+   <array>
+    <dict>
+     <key>kind</key><string>event</string>
+     <key>location</key>
+     <dict>
+      <key>line</key><integer>451</integer>
+      <key>col</key><integer>3</integer>
+      <key>file</key><integer>0</integer>
+     </dict>
+     <key>ranges</key>
+     <array>
+       <array>
+        <dict>
+         <key>line</key><integer>451</integer>
+         <key>col</key><integer>19</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+        <dict>
+         <key>line</key><integer>452</integer>
+         <key>col</key><integer>71</integer>
+         <key>file</key><integer>0</integer>
+        </dict>
+       </array>
+     </array>
+     <key>depth</key><integer>0</integer>
+     <key>extended_message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+     <key>message</key>
+     <string>Value stored to &apos;json_iterator&apos; is never read</string>
+    </dict>
+   </array>
+   <key>description</key><string>Value stored to &apos;json_iterator&apos; is never read</string>
+   <key>category</key><string>Dead store</string>
+   <key>type</key><string>Dead assignment</string>
+   <key>check_name</key><string>deadcode.DeadStores</string>
+   <!-- This hash is experimental and going to change! -->
+   <key>issue_hash_content_of_line_in_context</key><string>8d22671a6848868e71daf4476a7bb33c</string>
+  <key>issue_context_kind</key><string>C++ method</string>
+  <key>issue_context</key><string>RenderJson</string>
+  <key>issue_hash_function_offset</key><string>10</string>
+  <key>location</key>
+  <dict>
+   <key>line</key><integer>451</integer>
+   <key>col</key><integer>3</integer>
+   <key>file</key><integer>0</integer>
+  </dict>
+  <key>ExecutedLines</key>
+  <dict>
+   <key>0</key>
+   <array>
+    <integer>451</integer>
+   </array>
+  </dict>
+  </dict>
+ </array>
+ <key>files</key>
+ <array>
+  <string>/Users/yunyunchen1/dev/mojo-test/Pods/gRPC-Core/src/core/lib/channel/channelz.cc</string>
+ </array>
+</dict>
+</plist>

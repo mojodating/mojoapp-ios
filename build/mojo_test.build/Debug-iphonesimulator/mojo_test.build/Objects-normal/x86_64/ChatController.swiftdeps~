@@ -34,7 +34,6 @@ depends-top-level:
 - !private "MainTabBarController"
 - !private "NSAttributedString"
 - !private "PrivateChatController"
-- "SentFeedCellDelegate"
 - !private "String"
 - "StringLiteralType"
 - !private "UIApplication"
@@ -55,13 +54,6 @@ depends-member:
 - !private ["Sa", "removeAll"]
 - !private ["Sa", "sorted"]
 - !private ["Sa", "subscript"]
-- !private ["s13ArrayProtocolP", "append"]
-- !private ["s13ArrayProtocolP", "count"]
-- !private ["s13ArrayProtocolP", "forEach"]
-- ["s13ArrayProtocolP", "init"]
-- !private ["s13ArrayProtocolP", "removeAll"]
-- !private ["s13ArrayProtocolP", "sorted"]
-- !private ["s13ArrayProtocolP", "subscript"]
 - !private ["So7FIRAuthC", "auth"]
 - !private ["So7FIRAuthC", "currentUser"]
 - !private ["9mojo_test18BaseListControllerC", "Auth"]
@@ -92,11 +84,11 @@ depends-member:
 - ["9mojo_test18BaseListControllerC", "collectionView"]
 - !private ["9mojo_test18BaseListControllerC", "deinit"]
 - ["9mojo_test18BaseListControllerC", "didTapCell"]
+- ["9mojo_test18BaseListControllerC", "didTapSentCell"]
 - ["9mojo_test18BaseListControllerC", "emptyLabel"]
 - ["9mojo_test18BaseListControllerC", "fetchChatListsFromServer"]
 - ["9mojo_test18BaseListControllerC", "handleRefreshPage"]
 - ["9mojo_test18BaseListControllerC", "init"]
-- !private ["9mojo_test18BaseListControllerC", "init"]
 - !private ["9mojo_test18BaseListControllerC", "navigationController"]
 - !private ["9mojo_test18BaseListControllerC", "navigationItem"]
 - ["9mojo_test18BaseListControllerC", "numberOfSections"]
@@ -110,14 +102,12 @@ depends-member:
 - !private ["SK", "count"]
 - !private ["SK", "forEach"]
 - ["SK", "init"]
-- ["SK", "init"]
 - !private ["SK", "item"]
 - !private ["SK", "removeAll"]
 - !private ["SK", "row"]
 - !private ["SK", "section"]
 - !private ["SK", "sorted"]
 - !private ["SK", "subscript"]
-- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "addSubview"]
 - !private ["So15CALayerDelegateP", "addTarget"]
 - !private ["So15CALayerDelegateP", "attributedTitle"]
@@ -153,7 +143,6 @@ depends-member:
 - ["s7CVarArgP", "UILabel"]
 - !private ["s7CVarArgP", "UIRefreshControl"]
 - ["s7CVarArgP", ""]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "addSnapshotListener"]
 - !private ["s7CVarArgP", "addSubview"]
 - !private ["s7CVarArgP", "addTarget"]
@@ -166,6 +155,7 @@ depends-member:
 - !private ["s7CVarArgP", "chats"]
 - !private ["s7CVarArgP", "collection"]
 - ["s7CVarArgP", "collectionView"]
+- !private ["s7CVarArgP", "containerView"]
 - !private ["s7CVarArgP", "conversation"]
 - !private ["s7CVarArgP", "count"]
 - !private ["s7CVarArgP", "currentUser"]
@@ -183,7 +173,6 @@ depends-member:
 - !private ["s7CVarArgP", "forEach"]
 - !private ["s7CVarArgP", "frame"]
 - !private ["s7CVarArgP", "handleRefreshPage"]
-- ["s7CVarArgP", "init"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isHidden"]
 - !private ["s7CVarArgP", "keyWindow"]
@@ -244,6 +233,7 @@ depends-member:
 - ["9mojo_test14ChatControllerC", "collectionView"]
 - ["9mojo_test14ChatControllerC", "deinit"]
 - ["9mojo_test14ChatControllerC", "didTapCell"]
+- ["9mojo_test14ChatControllerC", "didTapSentCell"]
 - ["9mojo_test14ChatControllerC", "emptyLabel"]
 - ["9mojo_test14ChatControllerC", "fetchChatListsFromServer"]
 - ["9mojo_test14ChatControllerC", "handleRefreshPage"]
@@ -257,6 +247,8 @@ depends-member:
 - !private ["9mojo_test14ChatControllerC", "view"]
 - ["9mojo_test14ChatControllerC", "viewDidLoad"]
 - ["9mojo_test14ChatControllerC", "viewWillAppear"]
+- !private ["9mojo_test22ChatInputAccessaryViewC", "isHidden"]
+- !private ["9mojo_test30ChatInputAccessaryViewDelegateP", "containerView"]
 - !private ["9mojo_test30ChatInputAccessaryViewDelegateP", "conversation"]
 - !private ["9mojo_test30ChatInputAccessaryViewDelegateP", "init"]
 - !private ["9mojo_test15ChatRequestCellC", "delegate"]
@@ -292,7 +284,6 @@ depends-member:
 - !private ["Sl", "count"]
 - !private ["Sl", "forEach"]
 - ["Sl", "init"]
-- ["Sl", "init"]
 - !private ["Sl", "item"]
 - !private ["Sl", "removeAll"]
 - !private ["Sl", "row"]
@@ -300,8 +291,6 @@ depends-member:
 - !private ["Sl", "sorted"]
 - !private ["Sl", "subscript"]
 - !private ["So22FIRCollectionReferenceC", "whereField"]
-- ["SL", "init"]
-- ["SL", "init"]
 - !private ["SL", "item"]
 - !private ["SL", "row"]
 - !private ["SL", "section"]
@@ -324,6 +313,13 @@ depends-member:
 - !private ["15TinyConstraints13ConstrainableP", "rootViewController"]
 - !private ["15TinyConstraints13ConstrainableP", "textAlignment"]
 - !private ["15TinyConstraints13ConstrainableP", "textColor"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "count"]
+- !private ["10Foundation15ContiguousBytesP", "forEach"]
+- ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "removeAll"]
+- !private ["10Foundation15ContiguousBytesP", "sorted"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
 - !private ["9mojo_test12ConversationV", "accepted"]
 - !private ["9mojo_test12ConversationV", "init"]
 - !private ["9mojo_test12ConversationV", "lastUpdated"]
@@ -353,6 +349,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "chats"]
 - !private ["s28CustomDebugStringConvertibleP", "collection"]
 - ["s28CustomDebugStringConvertibleP", "collectionView"]
+- !private ["s28CustomDebugStringConvertibleP", "containerView"]
 - !private ["s28CustomDebugStringConvertibleP", "conversation"]
 - !private ["s28CustomDebugStringConvertibleP", "count"]
 - !private ["s28CustomDebugStringConvertibleP", "currentUser"]
@@ -370,7 +367,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "forEach"]
 - !private ["s28CustomDebugStringConvertibleP", "frame"]
 - !private ["s28CustomDebugStringConvertibleP", "handleRefreshPage"]
-- ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "item"]
@@ -407,18 +403,12 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "whereField"]
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "width"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "addSubview"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "backgroundColor"]
 - !private ["s17CustomReflectableP", "count"]
 - !private ["s17CustomReflectableP", "forEach"]
 - !private ["s17CustomReflectableP", "frame"]
-- ["s17CustomReflectableP", "init"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "item"]
 - !private ["s17CustomReflectableP", "lightGray"]
@@ -446,11 +436,12 @@ depends-member:
 - ["s23CustomStringConvertibleP", "UILabel"]
 - !private ["s23CustomStringConvertibleP", "UIRefreshControl"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addSnapshotListener"]
 - !private ["s23CustomStringConvertibleP", "addSubview"]
 - !private ["s23CustomStringConvertibleP", "addTarget"]
 - !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "appendInterpolation"]
+- !private ["s23CustomStringConvertibleP", "appendLiteral"]
 - !private ["s23CustomStringConvertibleP", "attributedTitle"]
 - !private ["s23CustomStringConvertibleP", "auth"]
 - !private ["s23CustomStringConvertibleP", "backgroundColor"]
@@ -459,6 +450,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "chats"]
 - !private ["s23CustomStringConvertibleP", "collection"]
 - ["s23CustomStringConvertibleP", "collectionView"]
+- !private ["s23CustomStringConvertibleP", "containerView"]
 - !private ["s23CustomStringConvertibleP", "conversation"]
 - !private ["s23CustomStringConvertibleP", "count"]
 - !private ["s23CustomStringConvertibleP", "currentUser"]
@@ -476,7 +468,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "forEach"]
 - !private ["s23CustomStringConvertibleP", "frame"]
 - !private ["s23CustomStringConvertibleP", "handleRefreshPage"]
-- ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
 - !private ["s23CustomStringConvertibleP", "item"]
@@ -512,14 +503,19 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "viewWillAppear"]
 - !private ["s23CustomStringConvertibleP", "whereField"]
 - !private ["s23CustomStringConvertibleP", "white"]
-- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "count"]
+- !private ["10Foundation12DataProtocolP", "forEach"]
+- ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "removeAll"]
+- !private ["10Foundation12DataProtocolP", "sorted"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
 - !private ["Se", "addSubview"]
 - !private ["Se", "append"]
 - !private ["Se", "backgroundColor"]
 - !private ["Se", "count"]
 - !private ["Se", "forEach"]
 - !private ["Se", "frame"]
-- ["Se", "init"]
 - ["Se", "init"]
 - !private ["Se", "item"]
 - !private ["Se", "lightGray"]
@@ -533,20 +529,20 @@ depends-member:
 - !private ["Se", "subscript"]
 - !private ["Se", "white"]
 - !private ["Se", "width"]
+- !private ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- !private ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SD", "forEach"]
 - !private ["SD", "subscript"]
 - !private ["So17FIRDocumentChangeC", "document"]
 - !private ["So17FIRDocumentChangeC", "type"]
 - !private ["So21FIRDocumentChangeTypeV", "added"]
 - !private ["So19FIRDocumentSnapshotC", "data"]
-- !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "addSubview"]
 - !private ["SE", "append"]
 - !private ["SE", "backgroundColor"]
 - !private ["SE", "count"]
 - !private ["SE", "forEach"]
 - !private ["SE", "frame"]
-- ["SE", "init"]
 - ["SE", "init"]
 - !private ["SE", "item"]
 - !private ["SE", "lightGray"]
@@ -574,7 +570,6 @@ depends-member:
 - ["SQ", "UILabel"]
 - !private ["SQ", "UIRefreshControl"]
 - ["SQ", ""]
-- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "addSnapshotListener"]
 - !private ["SQ", "addSubview"]
 - !private ["SQ", "addTarget"]
@@ -589,6 +584,7 @@ depends-member:
 - !private ["SQ", "chats"]
 - !private ["SQ", "collection"]
 - ["SQ", "collectionView"]
+- !private ["SQ", "containerView"]
 - !private ["SQ", "conversation"]
 - !private ["SQ", "count"]
 - !private ["SQ", "currentUser"]
@@ -606,7 +602,6 @@ depends-member:
 - !private ["SQ", "forEach"]
 - !private ["SQ", "frame"]
 - !private ["SQ", "handleRefreshPage"]
-- ["SQ", "init"]
 - ["SQ", "init"]
 - !private ["SQ", "isHidden"]
 - !private ["SQ", "item"]
@@ -656,11 +651,8 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "sorted"]
 - !private ["s25ExpressibleByArrayLiteralP", "subscript"]
 - !private ["s25ExpressibleByArrayLiteralP", "valueChanged"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "forEach"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s23ExpressibleByNilLiteralP", "addSubview"]
 - !private ["s23ExpressibleByNilLiteralP", "backgroundColor"]
 - !private ["s23ExpressibleByNilLiteralP", "frame"]
@@ -669,10 +661,6 @@ depends-member:
 - !private ["s23ExpressibleByNilLiteralP", "register"]
 - !private ["s23ExpressibleByNilLiteralP", "reloadData"]
 - !private ["s23ExpressibleByNilLiteralP", "white"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["So12FIRFirestoreC", "collection"]
 - !private ["So12FIRFirestoreC", "firestore"]
 - !private ["SH", "Auth"]
@@ -689,7 +677,6 @@ depends-member:
 - ["SH", "UILabel"]
 - !private ["SH", "UIRefreshControl"]
 - ["SH", ""]
-- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "addSnapshotListener"]
 - !private ["SH", "addSubview"]
 - !private ["SH", "addTarget"]
@@ -704,6 +691,7 @@ depends-member:
 - !private ["SH", "chats"]
 - !private ["SH", "collection"]
 - ["SH", "collectionView"]
+- !private ["SH", "containerView"]
 - !private ["SH", "conversation"]
 - !private ["SH", "count"]
 - !private ["SH", "currentUser"]
@@ -721,7 +709,6 @@ depends-member:
 - !private ["SH", "forEach"]
 - !private ["SH", "frame"]
 - !private ["SH", "handleRefreshPage"]
-- ["SH", "init"]
 - ["SH", "init"]
 - !private ["SH", "isHidden"]
 - !private ["SH", "item"]
@@ -761,12 +748,7 @@ depends-member:
 - !private ["10Foundation9IndexPathV", "row"]
 - !private ["10Foundation9IndexPathV", "section"]
 - !private ["9mojo_test23LoginControllerDelegateP", "setupViewControllers"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s25LosslessStringConvertibleP", "init"]
 - !private ["9mojo_test20MainTabBarControllerC", "setupViewControllers"]
-- ["s10MirrorPathP", "init"]
-- ["s10MirrorPathP", "init"]
 - !private ["SM", "append"]
 - !private ["SM", "count"]
 - !private ["SM", "forEach"]
@@ -777,6 +759,13 @@ depends-member:
 - !private ["SM", "section"]
 - !private ["SM", "sorted"]
 - !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "count"]
+- !private ["10Foundation19MutableDataProtocolP", "forEach"]
+- ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "removeAll"]
+- !private ["10Foundation19MutableDataProtocolP", "sorted"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
 - !private ["So18NSAttributedStringC", "init"]
 - !private ["So8NSCodingP", "Auth"]
 - !private ["So8NSCodingP", "CGSize"]
@@ -800,6 +789,7 @@ depends-member:
 - !private ["So8NSCodingP", "chatRequestCellId"]
 - !private ["So8NSCodingP", "chats"]
 - ["So8NSCodingP", "collectionView"]
+- !private ["So8NSCodingP", "containerView"]
 - !private ["So8NSCodingP", "conversation"]
 - !private ["So8NSCodingP", "delegate"]
 - !private ["So8NSCodingP", "dequeueReusableCell"]
@@ -811,7 +801,6 @@ depends-member:
 - !private ["So8NSCodingP", "frame"]
 - !private ["So8NSCodingP", "handleRefreshPage"]
 - ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isHidden"]
 - !private ["So8NSCodingP", "lightGray"]
 - !private ["So8NSCodingP", "navigationBar"]
@@ -856,12 +845,12 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "chatRequestCellId"]
 - !private ["So26NSExtensionRequestHandlingP", "chats"]
 - ["So26NSExtensionRequestHandlingP", "collectionView"]
+- !private ["So26NSExtensionRequestHandlingP", "containerView"]
 - !private ["So26NSExtensionRequestHandlingP", "conversation"]
 - ["So26NSExtensionRequestHandlingP", "didTapCell"]
 - !private ["So26NSExtensionRequestHandlingP", "emptyLabel"]
 - !private ["So26NSExtensionRequestHandlingP", "fetchChatListsFromServer"]
 - !private ["So26NSExtensionRequestHandlingP", "handleRefreshPage"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationBar"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
@@ -913,12 +902,14 @@ depends-member:
 - ["So8NSObjectC", "chats"]
 - !private ["So8NSObjectC", "collection"]
 - ["So8NSObjectC", "collectionView"]
+- !private ["So8NSObjectC", "containerView"]
 - !private ["So8NSObjectC", "conversation"]
 - !private ["So8NSObjectC", "currentUser"]
 - !private ["So8NSObjectC", "data"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "dequeueReusableCell"]
 - ["So8NSObjectC", "didTapCell"]
+- ["So8NSObjectC", "didTapSentCell"]
 - !private ["So8NSObjectC", "document"]
 - !private ["So8NSObjectC", "documentChanges"]
 - ["So8NSObjectC", "emptyLabel"]
@@ -929,7 +920,6 @@ depends-member:
 - !private ["So8NSObjectC", "frame"]
 - ["So8NSObjectC", "handleRefreshPage"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isHidden"]
 - !private ["So8NSObjectC", "keyWindow"]
 - !private ["So8NSObjectC", "lightGray"]
@@ -984,6 +974,7 @@ depends-member:
 - !private ["So8NSObjectP", "chats"]
 - !private ["So8NSObjectP", "collection"]
 - ["So8NSObjectP", "collectionView"]
+- !private ["So8NSObjectP", "containerView"]
 - !private ["So8NSObjectP", "conversation"]
 - !private ["So8NSObjectP", "currentUser"]
 - !private ["So8NSObjectP", "data"]
@@ -1000,7 +991,6 @@ depends-member:
 - !private ["So8NSObjectP", "frame"]
 - !private ["So8NSObjectP", "handleRefreshPage"]
 - ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isHidden"]
 - !private ["So8NSObjectP", "keyWindow"]
 - !private ["So8NSObjectP", "lightGray"]
@@ -1042,6 +1032,7 @@ depends-member:
 - !private ["Sq", "register"]
 - !private ["Sq", "reloadData"]
 - !private ["Sq", "white"]
+- !private ["9mojo_test21PrivateChatControllerC", "containerView"]
 - !private ["9mojo_test21PrivateChatControllerC", "conversation"]
 - !private ["9mojo_test21PrivateChatControllerC", "deinit"]
 - !private ["9mojo_test21PrivateChatControllerC", "init"]
@@ -1063,7 +1054,6 @@ depends-member:
 - !private ["Sm", "count"]
 - !private ["Sm", "forEach"]
 - ["Sm", "init"]
-- ["Sm", "init"]
 - !private ["Sm", "removeAll"]
 - !private ["Sm", "sorted"]
 - !private ["Sm", "subscript"]
@@ -1074,39 +1064,10 @@ depends-member:
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
 - !private ["10Foundation20ReferenceConvertibleP", "section"]
 - !private ["9mojo_test24RequestsFeedCellDelegateP", "delegate"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "Auth"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "CGSize"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "ChatCell"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "ChatRequestCell"]
-- ["9mojo_test20SentFeedCellDelegateP", "Conversation"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "Firestore"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "NSAttributedString"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "PrivateChatController"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "UIApplication"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "UICollectionViewFlowLayout"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "UIEdgeInsets"]
-- ["9mojo_test20SentFeedCellDelegateP", "UILabel"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "UIRefreshControl"]
-- ["9mojo_test20SentFeedCellDelegateP", ""]
-- !private ["9mojo_test20SentFeedCellDelegateP", "chatCellId"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "chatRequestCellId"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "chats"]
-- ["9mojo_test20SentFeedCellDelegateP", "collectionView"]
 - !private ["9mojo_test20SentFeedCellDelegateP", "delegate"]
-- ["9mojo_test20SentFeedCellDelegateP", "didTapCell"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "emptyLabel"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "fetchChatListsFromServer"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "handleRefreshPage"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "navigationController"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "navigationItem"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "print"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "setupLayout"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "setupNavBar"]
-- !private ["9mojo_test20SentFeedCellDelegateP", "view"]
 - !private ["ST", "append"]
 - !private ["ST", "count"]
 - !private ["ST", "forEach"]
-- ["ST", "init"]
 - ["ST", "init"]
 - !private ["ST", "item"]
 - !private ["ST", "removeAll"]
@@ -1115,14 +1076,10 @@ depends-member:
 - !private ["ST", "sorted"]
 - !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", "valueChanged"]
-- ["SS", "init"]
-- ["SS", "init"]
-- ["Sy", "init"]
-- ["Sy", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
-- ["s20TextOutputStreamableP", "init"]
+- !private ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- !private ["s27StringInterpolationProtocolP", "appendLiteral"]
+- !private ["s16TextOutputStreamP", "appendInterpolation"]
+- !private ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["So29UIAccessibilityIdentificationP", "addSubview"]
 - !private ["So29UIAccessibilityIdentificationP", "addTarget"]
 - !private ["So29UIAccessibilityIdentificationP", "attributedTitle"]
@@ -1183,6 +1140,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "chatRequestCellId"]
 - !private ["So21UIAppearanceContainerP", "chats"]
 - ["So21UIAppearanceContainerP", "collectionView"]
+- !private ["So21UIAppearanceContainerP", "containerView"]
 - !private ["So21UIAppearanceContainerP", "conversation"]
 - !private ["So21UIAppearanceContainerP", "delegate"]
 - !private ["So21UIAppearanceContainerP", "dequeueReusableCell"]
@@ -1194,7 +1152,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "frame"]
 - !private ["So21UIAppearanceContainerP", "handleRefreshPage"]
 - ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
 - !private ["So21UIAppearanceContainerP", "navigationBar"]
 - !private ["So21UIAppearanceContainerP", "navigationController"]
@@ -1251,12 +1208,13 @@ depends-member:
 - ["So26UICollectionViewControllerC", "chatRequestCellId"]
 - ["So26UICollectionViewControllerC", "chats"]
 - ["So26UICollectionViewControllerC", "collectionView"]
+- !private ["So26UICollectionViewControllerC", "containerView"]
 - !private ["So26UICollectionViewControllerC", "conversation"]
 - ["So26UICollectionViewControllerC", "didTapCell"]
+- ["So26UICollectionViewControllerC", "didTapSentCell"]
 - ["So26UICollectionViewControllerC", "emptyLabel"]
 - ["So26UICollectionViewControllerC", "fetchChatListsFromServer"]
 - ["So26UICollectionViewControllerC", "handleRefreshPage"]
-- !private ["So26UICollectionViewControllerC", "init"]
 - !private ["So26UICollectionViewControllerC", "init"]
 - !private ["So26UICollectionViewControllerC", "navigationController"]
 - !private ["So26UICollectionViewControllerC", "navigationItem"]
@@ -1285,13 +1243,13 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "chatRequestCellId"]
 - !private ["So26UICollectionViewDataSourceP", "chats"]
 - ["So26UICollectionViewDataSourceP", "collectionView"]
+- !private ["So26UICollectionViewDataSourceP", "containerView"]
 - !private ["So26UICollectionViewDataSourceP", "conversation"]
 - !private ["So26UICollectionViewDataSourceP", "delegate"]
 - ["So26UICollectionViewDataSourceP", "didTapCell"]
 - !private ["So26UICollectionViewDataSourceP", "emptyLabel"]
 - !private ["So26UICollectionViewDataSourceP", "fetchChatListsFromServer"]
 - !private ["So26UICollectionViewDataSourceP", "handleRefreshPage"]
-- !private ["So26UICollectionViewDataSourceP", "init"]
 - !private ["So26UICollectionViewDataSourceP", "init"]
 - !private ["So26UICollectionViewDataSourceP", "navigationController"]
 - !private ["So26UICollectionViewDataSourceP", "navigationItem"]
@@ -1319,13 +1277,13 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "chatRequestCellId"]
 - !private ["So24UICollectionViewDelegateP", "chats"]
 - ["So24UICollectionViewDelegateP", "collectionView"]
+- !private ["So24UICollectionViewDelegateP", "containerView"]
 - !private ["So24UICollectionViewDelegateP", "conversation"]
 - !private ["So24UICollectionViewDelegateP", "delegate"]
 - ["So24UICollectionViewDelegateP", "didTapCell"]
 - !private ["So24UICollectionViewDelegateP", "emptyLabel"]
 - !private ["So24UICollectionViewDelegateP", "fetchChatListsFromServer"]
 - !private ["So24UICollectionViewDelegateP", "handleRefreshPage"]
-- !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "navigationController"]
 - !private ["So24UICollectionViewDelegateP", "navigationItem"]
@@ -1353,6 +1311,7 @@ depends-member:
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "chatRequestCellId"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "chats"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "collectionView"]
+- !private ["So34UICollectionViewDelegateFlowLayoutP", "containerView"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "conversation"]
 - !private ["So34UICollectionViewDelegateFlowLayoutP", "delegate"]
 - ["So34UICollectionViewDelegateFlowLayoutP", "didTapCell"]
@@ -1388,12 +1347,12 @@ depends-member:
 - !private ["So18UIContentContainerP", "chatRequestCellId"]
 - !private ["So18UIContentContainerP", "chats"]
 - ["So18UIContentContainerP", "collectionView"]
+- !private ["So18UIContentContainerP", "containerView"]
 - !private ["So18UIContentContainerP", "conversation"]
 - ["So18UIContentContainerP", "didTapCell"]
 - !private ["So18UIContentContainerP", "emptyLabel"]
 - !private ["So18UIContentContainerP", "fetchChatListsFromServer"]
 - !private ["So18UIContentContainerP", "handleRefreshPage"]
-- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "navigationBar"]
 - !private ["So18UIContentContainerP", "navigationController"]
@@ -1481,6 +1440,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "chatRequestCellId"]
 - !private ["So18UIFocusEnvironmentP", "chats"]
 - ["So18UIFocusEnvironmentP", "collectionView"]
+- !private ["So18UIFocusEnvironmentP", "containerView"]
 - !private ["So18UIFocusEnvironmentP", "conversation"]
 - !private ["So18UIFocusEnvironmentP", "delegate"]
 - !private ["So18UIFocusEnvironmentP", "dequeueReusableCell"]
@@ -1492,7 +1452,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "frame"]
 - !private ["So18UIFocusEnvironmentP", "handleRefreshPage"]
 - ["So18UIFocusEnvironmentP", "init"]
-- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "navigationBar"]
 - !private ["So18UIFocusEnvironmentP", "navigationController"]
@@ -1587,6 +1546,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "chatRequestCellId"]
 - !private ["So30UIPasteConfigurationSupportingP", "chats"]
 - ["So30UIPasteConfigurationSupportingP", "collectionView"]
+- !private ["So30UIPasteConfigurationSupportingP", "containerView"]
 - !private ["So30UIPasteConfigurationSupportingP", "conversation"]
 - !private ["So30UIPasteConfigurationSupportingP", "delegate"]
 - !private ["So30UIPasteConfigurationSupportingP", "dequeueReusableCell"]
@@ -1598,7 +1558,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "frame"]
 - !private ["So30UIPasteConfigurationSupportingP", "handleRefreshPage"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "keyWindow"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationBar"]
@@ -1653,10 +1612,12 @@ depends-member:
 - ["So11UIResponderC", "chatRequestCellId"]
 - ["So11UIResponderC", "chats"]
 - ["So11UIResponderC", "collectionView"]
+- !private ["So11UIResponderC", "containerView"]
 - !private ["So11UIResponderC", "conversation"]
 - !private ["So11UIResponderC", "delegate"]
 - !private ["So11UIResponderC", "dequeueReusableCell"]
 - ["So11UIResponderC", "didTapCell"]
+- ["So11UIResponderC", "didTapSentCell"]
 - ["So11UIResponderC", "emptyLabel"]
 - !private ["So11UIResponderC", "endRefreshing"]
 - ["So11UIResponderC", "fetchChatListsFromServer"]
@@ -1664,7 +1625,6 @@ depends-member:
 - !private ["So11UIResponderC", "frame"]
 - ["So11UIResponderC", "handleRefreshPage"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isHidden"]
 - !private ["So11UIResponderC", "keyWindow"]
 - !private ["So11UIResponderC", "navigationBar"]
@@ -1709,6 +1669,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "chatRequestCellId"]
 - !private ["So30UIResponderStandardEditActionsP", "chats"]
 - ["So30UIResponderStandardEditActionsP", "collectionView"]
+- !private ["So30UIResponderStandardEditActionsP", "containerView"]
 - !private ["So30UIResponderStandardEditActionsP", "conversation"]
 - !private ["So30UIResponderStandardEditActionsP", "delegate"]
 - !private ["So30UIResponderStandardEditActionsP", "dequeueReusableCell"]
@@ -1720,7 +1681,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "frame"]
 - !private ["So30UIResponderStandardEditActionsP", "handleRefreshPage"]
 - ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "keyWindow"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationBar"]
@@ -1765,13 +1725,13 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "chatRequestCellId"]
 - !private ["So20UIScrollViewDelegateP", "chats"]
 - ["So20UIScrollViewDelegateP", "collectionView"]
+- !private ["So20UIScrollViewDelegateP", "containerView"]
 - !private ["So20UIScrollViewDelegateP", "conversation"]
 - !private ["So20UIScrollViewDelegateP", "delegate"]
 - ["So20UIScrollViewDelegateP", "didTapCell"]
 - !private ["So20UIScrollViewDelegateP", "emptyLabel"]
 - !private ["So20UIScrollViewDelegateP", "fetchChatListsFromServer"]
 - !private ["So20UIScrollViewDelegateP", "handleRefreshPage"]
-- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "navigationController"]
 - !private ["So20UIScrollViewDelegateP", "navigationItem"]
@@ -1804,12 +1764,12 @@ depends-member:
 - !private ["So16UIStateRestoringP", "chatRequestCellId"]
 - !private ["So16UIStateRestoringP", "chats"]
 - ["So16UIStateRestoringP", "collectionView"]
+- !private ["So16UIStateRestoringP", "containerView"]
 - !private ["So16UIStateRestoringP", "conversation"]
 - ["So16UIStateRestoringP", "didTapCell"]
 - !private ["So16UIStateRestoringP", "emptyLabel"]
 - !private ["So16UIStateRestoringP", "fetchChatListsFromServer"]
 - !private ["So16UIStateRestoringP", "handleRefreshPage"]
-- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "navigationBar"]
 - !private ["So16UIStateRestoringP", "navigationController"]
@@ -1824,6 +1784,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "viewWillAppear"]
 - !private ["So18UITabBarControllerC", "setupViewControllers"]
 - !private ["So16UITabBarDelegateP", "setupViewControllers"]
+- !private ["So19UITextFieldDelegateP", "containerView"]
 - !private ["So19UITextFieldDelegateP", "conversation"]
 - !private ["So19UITextFieldDelegateP", "init"]
 - !private ["So18UITraitEnvironmentP", "Auth"]
@@ -1848,6 +1809,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "chatRequestCellId"]
 - !private ["So18UITraitEnvironmentP", "chats"]
 - ["So18UITraitEnvironmentP", "collectionView"]
+- !private ["So18UITraitEnvironmentP", "containerView"]
 - !private ["So18UITraitEnvironmentP", "conversation"]
 - !private ["So18UITraitEnvironmentP", "delegate"]
 - !private ["So18UITraitEnvironmentP", "dequeueReusableCell"]
@@ -1859,7 +1821,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "frame"]
 - !private ["So18UITraitEnvironmentP", "handleRefreshPage"]
 - ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
 - !private ["So18UITraitEnvironmentP", "navigationBar"]
 - !private ["So18UITraitEnvironmentP", "navigationController"]
@@ -1901,6 +1862,7 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "chatRequestCellId"]
 - !private ["So23UIUserActivityRestoringP", "chats"]
 - ["So23UIUserActivityRestoringP", "collectionView"]
+- !private ["So23UIUserActivityRestoringP", "containerView"]
 - !private ["So23UIUserActivityRestoringP", "conversation"]
 - !private ["So23UIUserActivityRestoringP", "delegate"]
 - !private ["So23UIUserActivityRestoringP", "dequeueReusableCell"]
@@ -1912,7 +1874,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "frame"]
 - !private ["So23UIUserActivityRestoringP", "handleRefreshPage"]
 - ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "isHidden"]
 - !private ["So23UIUserActivityRestoringP", "keyWindow"]
 - !private ["So23UIUserActivityRestoringP", "navigationBar"]
@@ -1978,12 +1939,13 @@ depends-member:
 - ["So16UIViewControllerC", "chatRequestCellId"]
 - ["So16UIViewControllerC", "chats"]
 - ["So16UIViewControllerC", "collectionView"]
+- !private ["So16UIViewControllerC", "containerView"]
 - !private ["So16UIViewControllerC", "conversation"]
 - ["So16UIViewControllerC", "didTapCell"]
+- ["So16UIViewControllerC", "didTapSentCell"]
 - ["So16UIViewControllerC", "emptyLabel"]
 - ["So16UIViewControllerC", "fetchChatListsFromServer"]
 - ["So16UIViewControllerC", "handleRefreshPage"]
-- !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "navigationBar"]
 - !private ["So16UIViewControllerC", "navigationController"]
@@ -2000,25 +1962,15 @@ depends-member:
 - !private ["So8UIWindowC", "rootViewController"]
 - !private ["So7FIRUserC", "uid"]
 - !private ["So11FIRUserInfoP", "uid"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addSubview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addTarget"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "attributedTitle"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "conversation"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "delegate"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "dequeueReusableCell"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "endRefreshing"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fillSuperview"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "frame"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isHidden"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "prefersLargeTitles"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "refreshControl"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "register"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadData"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textAlignment"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textColor"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "count"]
+- !private ["s14_ArrayProtocolP", "forEach"]
+- ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "removeAll"]
+- !private ["s14_ArrayProtocolP", "sorted"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "count"]
 - !private ["s24_DestructorSafeContainerP", "forEach"]
@@ -2026,19 +1978,15 @@ depends-member:
 - !private ["s24_DestructorSafeContainerP", "removeAll"]
 - !private ["s24_DestructorSafeContainerP", "sorted"]
 - !private ["s24_DestructorSafeContainerP", "subscript"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "count"]
+- !private ["s19_HasContiguousBytesP", "forEach"]
+- ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "removeAll"]
+- !private ["s19_HasContiguousBytesP", "sorted"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "count"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "forEach"]
@@ -2071,6 +2019,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "chats"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "collection"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "collectionView"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "containerView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "conversation"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "currentUser"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "data"]
@@ -2087,7 +2036,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "frame"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleRefreshPage"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "keyWindow"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lightGray"]
@@ -2116,14 +2064,12 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewWillAppear"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "whereField"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "white"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "addSubview"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "backgroundColor"]
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "forEach"]
 - !private ["s21_ObjectiveCBridgeableP", "frame"]
-- ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "item"]
 - !private ["s21_ObjectiveCBridgeableP", "lightGray"]
@@ -2137,35 +2083,53 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s21_ObjectiveCBridgeableP", "white"]
 - !private ["s21_ObjectiveCBridgeableP", "width"]
-- ["s16_SwiftStringViewP", "init"]
-- ["s16_SwiftStringViewP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addSubview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addTarget"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "attributedTitle"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "backgroundColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "conversation"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "delegate"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "dequeueReusableCell"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "endRefreshing"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fillSuperview"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "frame"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isHidden"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "prefersLargeTitles"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "refreshControl"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "register"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "reloadData"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textAlignment"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "setupViewControllers"]
 depends-nominal:
 - "Sa"
-- "s13ArrayProtocolP"
 - !private "So7FIRAuthC"
 - "9mojo_test18BaseListControllerC"
 - "SK"
-- !private "Sb"
 - "So15CALayerDelegateP"
 - !private "So6CGRectV"
 - !private "So6CGSizeV"
 - "s7CVarArgP"
 - !private "9mojo_test8ChatCellC"
 - "9mojo_test14ChatControllerC"
+- !private "9mojo_test22ChatInputAccessaryViewC"
 - !private "9mojo_test30ChatInputAccessaryViewDelegateP"
 - !private "9mojo_test15ChatRequestCellC"
 - "9mojo_test23ChatRequestCellDelegateP"
 - "Sl"
 - !private "So22FIRCollectionReferenceC"
-- "SL"
+- !private "SL"
 - "15TinyConstraints13ConstrainableP"
+- "10Foundation15ContiguousBytesP"
 - !private "9mojo_test12ConversationV"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- "10Foundation12DataProtocolP"
 - "Se"
+- !private "s26DefaultStringInterpolationV"
 - !private "SD"
 - !private "So17FIRDocumentChangeC"
 - !private "So21FIRDocumentChangeTypeV"
@@ -2174,20 +2138,15 @@ depends-nominal:
 - "SQ"
 - !private "So15UIControlEventsV"
 - "s25ExpressibleByArrayLiteralP"
-- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s23ExpressibleByNilLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "So12FIRFirestoreC"
 - "SH"
 - !private "10Foundation9IndexPathV"
 - !private "9mojo_test23LoginControllerDelegateP"
-- "s25LosslessStringConvertibleP"
 - !private "9mojo_test20MainTabBarControllerC"
-- "s10MirrorPathP"
 - "SM"
+- "10Foundation19MutableDataProtocolP"
 - !private "So18NSAttributedStringC"
 - "So8NSCodingP"
 - "So9NSCopyingP"
@@ -2210,13 +2169,11 @@ depends-nominal:
 - !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "9mojo_test24RequestsFeedCellDelegateP"
-- "9mojo_test20SentFeedCellDelegateP"
+- !private "9mojo_test20SentFeedCellDelegateP"
 - "ST"
 - !private "s10SetAlgebraP"
-- "SS"
-- "Sy"
-- "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
+- !private "s27StringInterpolationProtocolP"
+- !private "s16TextOutputStreamP"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -2266,23 +2223,18 @@ depends-nominal:
 - !private "So8UIWindowC"
 - !private "So7FIRUserC"
 - !private "So11FIRUserInfoP"
-- "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s14_ArrayProtocolP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - "s24_DestructorSafeContainerP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
 - !private "s26_ExpressibleByColorLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
+- "s19_HasContiguousBytesP"
 - "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
-- "s16_SwiftStringViewP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
 - !private "9mojo_test29editProfileControllerDelegateP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/x86_64.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
@@ -2437,18 +2389,19 @@ depends-external:
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "3e1a86476012dc45ba60feefcc3923a4"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "03600f7049f06dafe1b693f814f35135"

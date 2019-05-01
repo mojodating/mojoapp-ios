@@ -31,8 +31,6 @@ depends-top-level:
 - "NSLayoutConstraint"
 - !private "~="
 depends-member:
-- !private ["Sb", "_getBuiltinLogicValue"]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "activate"]
 - !private ["s7CVarArgP", "deactivate"]
 - !private ["s7CVarArgP", "isActive"]
@@ -42,8 +40,10 @@ depends-member:
 - ["Sl", "Iterator"]
 - ["Sl", "activate"]
 - ["Sl", "deActivate"]
+- ["15TinyConstraints18ConstraintRelationO", "=="]
 - ["15TinyConstraints18ConstraintRelationO", "RawValue"]
 - ["15TinyConstraints18ConstraintRelationO", "_Default_RawValue"]
+- ["15TinyConstraints18ConstraintRelationO", "_rawHashValue"]
 - ["15TinyConstraints18ConstraintRelationO", "deinit"]
 - ["15TinyConstraints18ConstraintRelationO", "equal"]
 - ["15TinyConstraints18ConstraintRelationO", "equalOrGreater"]
@@ -56,19 +56,15 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "deactivate"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "priority"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "activate"]
 - !private ["s23CustomStringConvertibleP", "deactivate"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - !private ["s23CustomStringConvertibleP", "priority"]
-- !private ["Se", "_getBuiltinLogicValue"]
-- !private ["SE", "_getBuiltinLogicValue"]
+- ["SQ", "=="]
 - ["SQ", "RawValue"]
 - ["SQ", ""]
 - ["SQ", "_Default_RawValue"]
-- !private ["SQ", "_getBuiltinLogicValue"]
+- ["SQ", "_rawHashValue"]
 - !private ["SQ", "activate"]
 - !private ["SQ", "deactivate"]
 - ["SQ", "hash"]
@@ -77,11 +73,11 @@ depends-member:
 - !private ["SQ", "isActive"]
 - !private ["SQ", "priority"]
 - ["SQ", "rawValue"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- ["SH", "=="]
 - ["SH", "RawValue"]
 - ["SH", ""]
 - ["SH", "_Default_RawValue"]
-- !private ["SH", "_getBuiltinLogicValue"]
+- ["SH", "_rawHashValue"]
 - !private ["SH", "activate"]
 - !private ["SH", "deactivate"]
 - ["SH", "hash"]
@@ -90,8 +86,6 @@ depends-member:
 - !private ["SH", "isActive"]
 - !private ["SH", "priority"]
 - ["SH", "rawValue"]
-- !private ["s6HasherV", "combine"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - ["So18NSLayoutConstraintC", "Bool"]
 - ["So18NSLayoutConstraintC", "LayoutPriority"]
 - !private ["So18NSLayoutConstraintC", "activate"]
@@ -112,9 +106,11 @@ depends-member:
 - !private ["So8NSObjectP", "deactivate"]
 - !private ["So8NSObjectP", "isActive"]
 - !private ["So8NSObjectP", "priority"]
+- ["SY", "=="]
 - ["SY", "RawValue"]
 - ["SY", ""]
 - ["SY", "_Default_RawValue"]
+- ["SY", "_rawHashValue"]
 - ["SY", "hash"]
 - ["SY", "hashValue"]
 - ["SY", "init"]
@@ -122,39 +118,26 @@ depends-member:
 - ["ST", "Constraint"]
 - !private ["ST", "Constraints"]
 - ["ST", "Iterator"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "activate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "deactivate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isActive"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "priority"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 depends-nominal:
-- !private "Sb"
 - !private "s7CVarArgP"
 - "Sl"
 - "15TinyConstraints18ConstraintRelationO"
 - !private "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
-- !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
-- !private "Se"
-- !private "SE"
 - "SQ"
-- !private "s27ExpressibleByBooleanLiteralP"
 - "SH"
-- !private "s6HasherV"
-- !private "s25LosslessStringConvertibleP"
 - "So18NSLayoutConstraintC"
 - "So8NSObjectC"
 - !private "So8NSObjectP"
 - "SY"
 - "ST"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
-- !private "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
@@ -169,15 +152,16 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/Pods/Target Support Files/TinyConstraints/TinyConstraints-umbrella.h"
 - "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/TinyConstraints.build/unextended-module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "fe67103b66d4e715d5580fdea8c40cc2"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "57fe7a4c2be10efbdfc78168c34603c9"

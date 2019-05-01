@@ -23,18 +23,16 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
     let headerId = "headerId"
     var conversitionId: String?
     var chatProfileUID: String?
-//    var requestorUID: String?
+    let currentUser = Auth.auth().currentUser?.uid
+
     var conversation : Conversation? {
         didSet {
             self.conversitionId = conversation?.id
-            guard let currentUser = Auth.auth().currentUser?.uid else { return }
             
             if currentUser == conversation?.sender {
                 chatProfileUID = conversation?.receiver
-//                requestorUID = Auth.auth().currentUser?.uid
             } else {
                 chatProfileUID = conversation?.sender
-//                requestorUID = chatProfileUID
             }
             self.checkIfChatBlocked()
         }
@@ -102,6 +100,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         blockedLabel.textAlignment = .center
     
     }
+    
     let blockedLabel = UILabel(text: "Not able to send message. The conversation is blocked", font: .systemFont(ofSize: 14))
     
     fileprivate func setupNavigation() {
@@ -266,7 +265,7 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
           
         } else {
             if messages.count == 1 {
-                cell.descriptionLabel.text = "Simply reply this conversation to accept this request and gift. To turn down both, select 'reject'."
+                cell.descriptionLabel.text = "Reply to accept request and gift. Or reject"
             } else {
                 cell.descriptionLabel.text = "Chat Request"
             }
@@ -281,10 +280,13 @@ class PrivateChatController: UICollectionViewController, UICollectionViewDelegat
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
         cell.giftInfoLabel.attributedText = attributedString
         
-        if messages.count == 1 {
+        if (messages.count == 1 && currentUser != conversation?.sender) {
             cell.rejectButton.isHidden = false
             cell.rejectButton.addTarget(self, action: #selector(handleRejectRequest), for: .touchUpInside)
-        } else {
+        } else if (messages.count == 1 && currentUser == conversation?.sender) {
+            self.containerView.isHidden = true
+        }
+        else {
             cell.rejectButton.isHidden = true
         }
     }

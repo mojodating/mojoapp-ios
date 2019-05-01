@@ -4,34 +4,34 @@
   'roots': [
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/BoringSSL-GRPC/openssl_grpc.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "openssl_grpc-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Headers/openssl_grpc-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/BoringSSL-GRPC/openssl_grpc.framework/Headers/openssl_grpc-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/BoringSSL-GRPC/openssl_grpc.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/BoringSSL-GRPC/openssl_grpc.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/BoringSSL-GRPC.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/BoringSSL-GRPC.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "Cosmos-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Headers/Cosmos-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Headers/Cosmos-Swift.h"
         },
         {
           'type': 'file',
@@ -42,18 +42,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Cosmos/Cosmos.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/Cosmos.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/Cosmos.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -163,7 +163,7 @@
         {
           'type': 'file',
           'name': "FirebaseAuth-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Headers/FirebaseAuth-Swift.h"
         },
         {
           'type': 'file',
@@ -184,18 +184,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseAuth/FirebaseAuth.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseAuth/FirebaseAuth.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/FirebaseAuth.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseAuth.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -225,7 +225,7 @@
         {
           'type': 'file',
           'name': "FirebaseCore-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Headers/FirebaseCore-Swift.h"
         },
         {
           'type': 'file',
@@ -241,18 +241,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/FirebaseCore.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseCore/FirebaseCore.framework/PrivateHeaders",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseCore/FirebaseCore.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -338,7 +338,7 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -433,7 +433,7 @@
         {
           'type': 'file',
           'name': "FirebaseFirestore-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Headers/FirebaseFirestore-Swift.h"
         },
         {
           'type': 'file',
@@ -449,18 +449,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFirestore/FirebaseFirestore.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFirestore/FirebaseFirestore.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/FirebaseFirestore.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseFirestore.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -480,7 +480,7 @@
         {
           'type': 'file',
           'name': "FirebaseFunctions-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Headers/FirebaseFunctions-Swift.h"
         },
         {
           'type': 'file',
@@ -496,18 +496,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseFunctions/FirebaseFunctions.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/FirebaseFunctions.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseFunctions.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -517,7 +517,7 @@
         {
           'type': 'file',
           'name': "FirebaseMessaging-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Headers/FirebaseMessaging-Swift.h"
         },
         {
           'type': 'file',
@@ -533,18 +533,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseMessaging/FirebaseMessaging.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseMessaging/FirebaseMessaging.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/FirebaseMessaging.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseMessaging.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -594,7 +594,7 @@
         {
           'type': 'file',
           'name': "FirebaseStorage-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Headers/FirebaseStorage-Swift.h"
         },
         {
           'type': 'file',
@@ -610,23 +610,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/FirebaseStorage/FirebaseStorage.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseStorage/FirebaseStorage.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/FirebaseStorage.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseStorage.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "GTMSessionFetcher-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Headers/GTMSessionFetcher-Swift.h"
         },
         {
           'type': 'file',
@@ -657,18 +657,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GTMSessionFetcher/GTMSessionFetcher.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/GTMSessionFetcher.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/GTMSessionFetcher.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/GoogleUtilities/GoogleUtilities.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GoogleUtilities-00567490/GoogleUtilities.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -687,30 +687,30 @@
         },
         {
           'type': 'file',
-          'name': "GoogleUtilities-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/GoogleUtilities/GoogleUtilities.framework/Headers/GoogleUtilities-Swift.h"
+          'name': "GoogleUtilities-00567490-umbrella.h",
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/Pods/Target Support Files/GoogleUtilities-00567490/GoogleUtilities-00567490-umbrella.h"
         },
         {
           'type': 'file',
-          'name': "GoogleUtilities-umbrella.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/Pods/Target Support Files/GoogleUtilities/GoogleUtilities-umbrella.h"
+          'name': "GoogleUtilities-Swift.h",
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GoogleUtilities-00567490/GoogleUtilities.framework/Headers/GoogleUtilities-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/GoogleUtilities/GoogleUtilities.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GoogleUtilities-00567490/GoogleUtilities.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/GoogleUtilities.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/GoogleUtilities-00567490.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/GoogleUtilities/GoogleUtilities.framework/PrivateHeaders",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GoogleUtilities-00567490/GoogleUtilities.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -786,7 +786,55 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GoogleUtilities-Environment-Logger/GoogleUtilities.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GULLoggerLevel.h",
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/Pods/GoogleUtilities/GoogleUtilities/Logger/Public/GULLoggerLevel.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleUtilities-Environment-Logger-umbrella.h",
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/Pods/Target Support Files/GoogleUtilities-Environment-Logger/GoogleUtilities-Environment-Logger-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "GoogleUtilities-Swift.h",
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GoogleUtilities-Environment-Logger/GoogleUtilities.framework/Headers/GoogleUtilities-Swift.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GoogleUtilities-Environment-Logger/GoogleUtilities.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/GoogleUtilities-Environment-Logger.build/module.modulemap"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/GoogleUtilities-Environment-Logger/GoogleUtilities.framework/PrivateHeaders",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "GULAppEnvironmentUtil.h",
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h"
+        },
+        {
+          'type': 'file',
+          'name': "GULLogger.h",
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/Pods/GoogleUtilities/GoogleUtilities/Logger/Private/GULLogger.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -796,7 +844,7 @@
         {
           'type': 'file',
           'name': "JGProgressHUD-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Headers/JGProgressHUD-Swift.h"
         },
         {
           'type': 'file',
@@ -867,18 +915,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/JGProgressHUD/JGProgressHUD.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/JGProgressHUD/JGProgressHUD.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/JGProgressHUD.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/JGProgressHUD.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Pods_mojo_test.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Pods_mojo_test.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -888,24 +936,24 @@
         {
           'type': 'file',
           'name': "Pods_mojo_test-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Pods_mojo_test.framework/Headers/Pods_mojo_test-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Pods_mojo_test.framework/Headers/Pods_mojo_test-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Pods_mojo_test.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Pods_mojo_test.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/Pods-mojo_test.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/Pods-mojo_test.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Protobuf/Protobuf.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -1075,7 +1123,7 @@
         {
           'type': 'file',
           'name': "Protobuf-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Protobuf/Protobuf.framework/Headers/Protobuf-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Protobuf/Protobuf.framework/Headers/Protobuf-Swift.h"
         },
         {
           'type': 'file',
@@ -1111,18 +1159,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/Protobuf/Protobuf.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Protobuf/Protobuf.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/Protobuf.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/Protobuf.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -1157,7 +1205,7 @@
         {
           'type': 'file',
           'name': "SDWebImage-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Headers/SDWebImage-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Headers/SDWebImage-Swift.h"
         },
         {
           'type': 'file',
@@ -1278,23 +1326,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/SDWebImage/SDWebImage.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/SDWebImage/SDWebImage.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/SDWebImage.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/SDWebImage.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "TinyConstraints-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Headers/TinyConstraints-Swift.h"
         },
         {
           'type': 'file',
@@ -1305,18 +1353,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/TinyConstraints/TinyConstraints.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/TinyConstraints.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/TinyConstraints.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-C++/grpcpp.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -1326,46 +1374,46 @@
         {
           'type': 'file',
           'name': "grpcpp-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-C++/grpcpp.framework/Headers/grpcpp-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-C++/grpcpp.framework/Headers/grpcpp-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-C++/grpcpp.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-C++/grpcpp.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/gRPC-C++.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/gRPC-C++.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-Core/grpc.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "grpc-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Headers/grpc-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-Core/grpc.framework/Headers/grpc-Swift.h"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-Core/grpc.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-Core/grpc.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/gRPC-Core.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/gRPC-Core.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-ProtoRPC/ProtoRPC.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-ProtoRPC/ProtoRPC.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -1375,7 +1423,7 @@
         {
           'type': 'file',
           'name': "ProtoRPC-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-ProtoRPC/ProtoRPC.framework/Headers/ProtoRPC-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-ProtoRPC/ProtoRPC.framework/Headers/ProtoRPC-Swift.h"
         },
         {
           'type': 'file',
@@ -1396,23 +1444,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-ProtoRPC/ProtoRPC.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-ProtoRPC/ProtoRPC.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/gRPC-ProtoRPC.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/gRPC-ProtoRPC.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-RxLibrary/RxLibrary.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-RxLibrary/RxLibrary.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "RxLibrary-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-RxLibrary/RxLibrary.framework/Headers/RxLibrary-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-RxLibrary/RxLibrary.framework/Headers/RxLibrary-Swift.h"
         },
         {
           'type': 'file',
@@ -1423,18 +1471,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC-RxLibrary/RxLibrary.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC-RxLibrary/RxLibrary.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/gRPC-RxLibrary.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/gRPC-RxLibrary.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC/GRPCClient.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC/GRPCClient.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -1479,7 +1527,7 @@
         {
           'type': 'file',
           'name': "GRPCClient-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC/GRPCClient.framework/Headers/GRPCClient-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC/GRPCClient.framework/Headers/GRPCClient-Swift.h"
         },
         {
           'type': 'file',
@@ -1490,18 +1538,18 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC/GRPCClient.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC/GRPCClient.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/gRPC.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/gRPC.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/gRPC/GRPCClient.framework/PrivateHeaders",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/gRPC/GRPCClient.framework/PrivateHeaders",
       'contents': [
         {
           'type': 'file',
@@ -1607,7 +1655,7 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/leveldb-library/leveldb.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers",
       'contents': [
         {
           'type': 'file',
@@ -1652,7 +1700,7 @@
         {
           'type': 'file',
           'name': "leveldb-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/leveldb-library/leveldb.framework/Headers/leveldb-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/leveldb-library/leveldb.framework/Headers/leveldb-Swift.h"
         },
         {
           'type': 'file',
@@ -1693,23 +1741,23 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/leveldb-library/leveldb.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/leveldb-library/leveldb.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/leveldb-library.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/leveldb-library.build/module.modulemap"
         }
       ]
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/nanopb/nanopb.framework/Headers",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/nanopb/nanopb.framework/Headers",
       'contents': [
         {
           'type': 'file',
           'name': "nanopb-Swift.h",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/nanopb/nanopb.framework/Headers/nanopb-Swift.h"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/nanopb/nanopb.framework/Headers/nanopb-Swift.h"
         },
         {
           'type': 'file',
@@ -1740,12 +1788,12 @@
     },
     {
       'type': 'directory',
-      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphoneos/nanopb/nanopb.framework/Modules",
+      'name': "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/nanopb/nanopb.framework/Modules",
       'contents': [
         {
           'type': 'file',
           'name': "module.modulemap",
-          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/nanopb.build/module.modulemap"
+          'external-contents': "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/nanopb.build/module.modulemap"
         }
       ]
     }

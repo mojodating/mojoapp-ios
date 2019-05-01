@@ -13,7 +13,6 @@ target 'mojo_test' do
   use_frameworks!
 
    # Pods for mojo_test
-
 pod 'Firebase/Firestore', '~>5.10.0'
 pod 'Firebase/Auth','~>5.10.0'
 pod 'Firebase/Storage','~>5.10.0'
@@ -25,5 +24,10 @@ pod 'JGProgressHUD','~>2.0.3'
 pod 'GoogleAppMeasurement', '~> 5.2.0'
 pod 'Cosmos', '~> 18.0'
 pod 'TinyConstraints'
+
+    target 'mojo_testTests' do
+        inherit! :search_paths
+        pod 'Firebase/Firestore', '~>5.10.0'
+    end
 
 end

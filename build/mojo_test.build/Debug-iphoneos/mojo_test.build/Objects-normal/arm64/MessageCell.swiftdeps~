@@ -23,6 +23,7 @@ depends-top-level:
 - "UILabel"
 - "UIView"
 - "User"
+- !private "_ColorLiteralType"
 - !private "fatalError"
 - !private "print"
 depends-member:

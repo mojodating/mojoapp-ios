@@ -15,6 +15,7 @@ depends-top-level:
 - "UIButton"
 - "UITableViewCell"
 - !private "UIView"
+- !private "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
 - !private ["So28UITableViewCellAccessoryTypeV", "disclosureIndicator"]

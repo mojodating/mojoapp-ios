@@ -34,7 +34,6 @@ depends-member:
 - ["9mojo_test13CardViewModelC", "String"]
 - ["9mojo_test13CardViewModelC", "advanceToNextPhoto"]
 - ["9mojo_test13CardViewModelC", "attributedString"]
-- ["9mojo_test13CardViewModelC", "deinit"]
 - ["9mojo_test13CardViewModelC", "goToPreviousPhoto"]
 - !private ["9mojo_test13CardViewModelC", "imageIndex"]
 - ["9mojo_test13CardViewModelC", "imageIndexObserver"]

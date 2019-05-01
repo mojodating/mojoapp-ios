@@ -22,15 +22,19 @@ depends-top-level:
 - !private "Auth"
 - "BaseListController"
 - "Bool"
+- !private "BooleanLiteralType"
 - "CGFloat"
 - "CGSize"
 - "CastingPrecedence"
 - !private "Firestore"
+- "FloatLiteralType"
 - "Gift"
 - "IndexPath"
 - "Int"
+- "IntegerLiteralType"
 - !private "InviteNewUserController"
 - !private "SendGiftController"
+- "StringLiteralType"
 - !private "TopUpController"
 - !private "UIAlertAction"
 - !private "UIAlertController"
@@ -45,6 +49,7 @@ depends-top-level:
 - !private "WalletAccountController"
 - "WalletController"
 - !private "WalletHeaderCell"
+- !private "_ColorLiteralType"
 - !private "print"
 depends-member:
 - !private ["Sa", "append"]
@@ -89,7 +94,6 @@ depends-member:
 - ["9mojo_test18BaseListControllerC", "handleTopup"]
 - ["9mojo_test18BaseListControllerC", "headerCellId"]
 - ["9mojo_test18BaseListControllerC", "init"]
-- !private ["9mojo_test18BaseListControllerC", "init"]
 - !private ["9mojo_test18BaseListControllerC", "navigationController"]
 - !private ["9mojo_test18BaseListControllerC", "navigationItem"]
 - ["9mojo_test18BaseListControllerC", "numberOfSections"]
@@ -184,7 +188,6 @@ depends-member:
 - !private ["s7CVarArgP", "handleTopup"]
 - !private ["s7CVarArgP", "headerCellId"]
 - ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isHidden"]
 - !private ["s7CVarArgP", "lightGray"]
 - !private ["s7CVarArgP", "nameLabel"]
@@ -307,7 +310,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "handleTopup"]
 - !private ["s28CustomDebugStringConvertibleP", "headerCellId"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "item"]
 - !private ["s28CustomDebugStringConvertibleP", "lightGray"]
@@ -413,7 +415,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "handleTopup"]
 - !private ["s23CustomStringConvertibleP", "headerCellId"]
 - ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
 - !private ["s23CustomStringConvertibleP", "item"]
 - !private ["s23CustomStringConvertibleP", "lightGray"]
@@ -460,7 +461,6 @@ depends-member:
 - !private ["Se", "count"]
 - !private ["Se", "frame"]
 - ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "item"]
 - !private ["Se", "lightGray"]
 - !private ["Se", "register"]
@@ -482,7 +482,6 @@ depends-member:
 - !private ["SE", "count"]
 - !private ["SE", "frame"]
 - ["SE", "init"]
-- !private ["SE", "init"]
 - !private ["SE", "item"]
 - !private ["SE", "lightGray"]
 - !private ["SE", "register"]
@@ -548,7 +547,6 @@ depends-member:
 - !private ["SQ", "handleTopup"]
 - !private ["SQ", "headerCellId"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isHidden"]
 - !private ["SQ", "item"]
 - !private ["SQ", "lightGray"]
@@ -664,7 +662,6 @@ depends-member:
 - !private ["SH", "handleTopup"]
 - !private ["SH", "headerCellId"]
 - ["SH", "init"]
-- !private ["SH", "init"]
 - !private ["SH", "isHidden"]
 - !private ["SH", "item"]
 - !private ["SH", "lightGray"]
@@ -760,7 +757,6 @@ depends-member:
 - !private ["So8NSCodingP", "handleTopup"]
 - !private ["So8NSCodingP", "headerCellId"]
 - ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isHidden"]
 - !private ["So8NSCodingP", "lightGray"]
 - !private ["So8NSCodingP", "nameLabel"]
@@ -820,7 +816,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "handleFreeToken"]
 - !private ["So26NSExtensionRequestHandlingP", "handleTopup"]
 - !private ["So26NSExtensionRequestHandlingP", "headerCellId"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationBar"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
@@ -895,7 +890,6 @@ depends-member:
 - ["So8NSObjectC", "handleTopup"]
 - ["So8NSObjectC", "headerCellId"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isHidden"]
 - !private ["So8NSObjectC", "lightGray"]
 - !private ["So8NSObjectC", "nameLabel"]
@@ -975,7 +969,6 @@ depends-member:
 - !private ["So8NSObjectP", "handleTopup"]
 - !private ["So8NSObjectP", "headerCellId"]
 - ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isHidden"]
 - !private ["So8NSObjectP", "lightGray"]
 - !private ["So8NSObjectP", "nameLabel"]
@@ -1155,7 +1148,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "handleTopup"]
 - !private ["So21UIAppearanceContainerP", "headerCellId"]
 - ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
 - !private ["So21UIAppearanceContainerP", "nameLabel"]
 - !private ["So21UIAppearanceContainerP", "navigationBar"]
@@ -1230,7 +1222,6 @@ depends-member:
 - ["So26UICollectionViewControllerC", "handleFreeToken"]
 - ["So26UICollectionViewControllerC", "handleTopup"]
 - ["So26UICollectionViewControllerC", "headerCellId"]
-- !private ["So26UICollectionViewControllerC", "init"]
 - !private ["So26UICollectionViewControllerC", "navigationController"]
 - !private ["So26UICollectionViewControllerC", "navigationItem"]
 - ["So26UICollectionViewControllerC", "numberOfSections"]
@@ -1269,7 +1260,6 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "handleTopup"]
 - !private ["So26UICollectionViewDataSourceP", "headerCellId"]
 - !private ["So26UICollectionViewDataSourceP", "init"]
-- !private ["So26UICollectionViewDataSourceP", "init"]
 - !private ["So26UICollectionViewDataSourceP", "navigationController"]
 - !private ["So26UICollectionViewDataSourceP", "navigationItem"]
 - !private ["So26UICollectionViewDataSourceP", "present"]
@@ -1306,7 +1296,6 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "handleFreeToken"]
 - !private ["So24UICollectionViewDelegateP", "handleTopup"]
 - !private ["So24UICollectionViewDelegateP", "headerCellId"]
-- !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "navigationController"]
 - !private ["So24UICollectionViewDelegateP", "navigationItem"]
@@ -1384,7 +1373,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "handleTopup"]
 - !private ["So18UIContentContainerP", "headerCellId"]
 - !private ["So18UIContentContainerP", "init"]
-- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "navigationBar"]
 - !private ["So18UIContentContainerP", "navigationController"]
 - !private ["So18UIContentContainerP", "navigationItem"]
@@ -1455,7 +1443,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "textColor"]
 - !private ["So13UIDynamicItemP", "topUpButton"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
 - !private ["So18UIFocusEnvironmentP", "CGSize"]
 - !private ["So18UIFocusEnvironmentP", "Firestore"]
@@ -1495,7 +1482,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "handleTopup"]
 - !private ["So18UIFocusEnvironmentP", "headerCellId"]
 - ["So18UIFocusEnvironmentP", "init"]
-- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "nameLabel"]
 - !private ["So18UIFocusEnvironmentP", "navigationBar"]
@@ -1620,7 +1606,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "handleTopup"]
 - !private ["So30UIPasteConfigurationSupportingP", "headerCellId"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "nameLabel"]
 - !private ["So30UIPasteConfigurationSupportingP", "navigationBar"]
@@ -1689,7 +1674,6 @@ depends-member:
 - ["So11UIResponderC", "handleTopup"]
 - ["So11UIResponderC", "headerCellId"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "isHidden"]
 - !private ["So11UIResponderC", "nameLabel"]
 - !private ["So11UIResponderC", "navigationBar"]
@@ -1753,7 +1737,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "handleTopup"]
 - !private ["So30UIResponderStandardEditActionsP", "headerCellId"]
 - ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "nameLabel"]
 - !private ["So30UIResponderStandardEditActionsP", "navigationBar"]
@@ -1810,7 +1793,6 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "handleTopup"]
 - !private ["So20UIScrollViewDelegateP", "headerCellId"]
 - !private ["So20UIScrollViewDelegateP", "init"]
-- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "navigationController"]
 - !private ["So20UIScrollViewDelegateP", "navigationItem"]
 - !private ["So20UIScrollViewDelegateP", "present"]
@@ -1857,7 +1839,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "handleFreeToken"]
 - !private ["So16UIStateRestoringP", "handleTopup"]
 - !private ["So16UIStateRestoringP", "headerCellId"]
-- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "navigationBar"]
 - !private ["So16UIStateRestoringP", "navigationController"]
@@ -1916,7 +1897,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "handleTopup"]
 - !private ["So18UITraitEnvironmentP", "headerCellId"]
 - ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
 - !private ["So18UITraitEnvironmentP", "nameLabel"]
 - !private ["So18UITraitEnvironmentP", "navigationBar"]
@@ -1979,7 +1959,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "handleTopup"]
 - !private ["So23UIUserActivityRestoringP", "headerCellId"]
 - ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "isHidden"]
 - !private ["So23UIUserActivityRestoringP", "nameLabel"]
 - !private ["So23UIUserActivityRestoringP", "navigationBar"]
@@ -2059,7 +2038,6 @@ depends-member:
 - ["So16UIViewControllerC", "handleFreeToken"]
 - ["So16UIViewControllerC", "handleTopup"]
 - ["So16UIViewControllerC", "headerCellId"]
-- !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "navigationBar"]
 - !private ["So16UIViewControllerC", "navigationController"]
@@ -2206,7 +2184,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleTopup"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "headerCellId"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "lightGray"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "nameLabel"]
@@ -2243,7 +2220,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "count"]
 - !private ["s21_ObjectiveCBridgeableP", "frame"]
 - ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "item"]
 - !private ["s21_ObjectiveCBridgeableP", "lightGray"]
 - !private ["s21_ObjectiveCBridgeableP", "register"]

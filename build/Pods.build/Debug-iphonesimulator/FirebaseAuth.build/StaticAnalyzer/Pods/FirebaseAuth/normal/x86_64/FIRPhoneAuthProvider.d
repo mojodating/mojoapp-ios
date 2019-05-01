@@ -1,0 +1,42 @@
+dependencies: \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthProvider.m \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseAuth.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthProvider.h \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIROptions.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FirebaseCore.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRLoggerLevel.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRConfiguration.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthCredential_Internal.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthCredential.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthCredential.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSToken.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthAPNSTokenType.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSTokenManager.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredential.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredentialManager.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthGlobalWorkQueue.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth_Internal.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuth.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthErrors.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthURLPresenter.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthNotificationManager.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthErrorUtils.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthBackend.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthSettings.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebUtils.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuthVersion.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigRequest.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRIdentityToolkitRequest.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRequestConfiguration.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRPCRequest.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigResponse.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRPCResponse.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeRequest.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeResponse.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientRequest.h \
+  /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientResponse.h

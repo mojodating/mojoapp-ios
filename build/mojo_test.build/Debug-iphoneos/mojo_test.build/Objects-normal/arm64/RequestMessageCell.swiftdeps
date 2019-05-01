@@ -8,20 +8,15 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
 - "CGRect"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "NSCoder"
 - "NSLayoutConstraint"
 - "RequestMessageCell"
-- "StringLiteralType"
 - "UIButton"
 - "UICollectionViewCell"
 - "UIImageView"
 - "UILabel"
 - "UIView"
-- "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
 - ["So7CALayerC", "cornerRadius"]
@@ -64,7 +59,6 @@ depends-member:
 - ["So13CAMediaTimingP", "cornerRadius"]
 - ["So13CAMediaTimingP", "masksToBounds"]
 - !private ["So6CGRectV", "height"]
-- !private ["So6CGSizeV", "init"]
 - !private ["So6CGSizeV", "init"]
 - ["s7CVarArgP", "UIButton"]
 - ["s7CVarArgP", "UIImageView"]
@@ -169,7 +163,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "height"]
 - !private ["s28CustomDebugStringConvertibleP", "heightAnchor"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - ["s28CustomDebugStringConvertibleP", "layer"]
@@ -189,7 +182,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "white"]
 - !private ["s28CustomDebugStringConvertibleP", "widthAnchor"]
 - !private ["s17CustomReflectableP", "height"]
-- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "lightGray"]
 - !private ["s17CustomReflectableP", "white"]
@@ -237,11 +229,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
 - !private ["Se", "height"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "lightGray"]
 - !private ["Se", "white"]
 - !private ["SE", "height"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "lightGray"]
 - !private ["SE", "white"]
@@ -272,7 +262,6 @@ depends-member:
 - !private ["SQ", "height"]
 - !private ["SQ", "heightAnchor"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "isHidden"]
 - ["SQ", "layer"]
@@ -764,7 +753,6 @@ depends-member:
 - ["So13UIDynamicItemP", "translatesAutoresizingMaskIntoConstraints"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - ["So18UIFocusEnvironmentP", "UIButton"]
 - ["So18UIFocusEnvironmentP", "UIImageView"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
@@ -1108,7 +1096,6 @@ depends-member:
 - ["So12UIFontWeighta", "bold"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "height"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s26_ExpressibleByColorLiteralP", "lightGray"]
 - !private ["s26_ExpressibleByColorLiteralP", "white"]
 - ["s35_HasCustomAnyHashableRepresentationP", "bold"]
@@ -1156,7 +1143,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
 - ["s21_ObjectiveCBridgeableP", "bold"]
 - !private ["s21_ObjectiveCBridgeableP", "height"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "lightGray"]
 - !private ["s21_ObjectiveCBridgeableP", "white"]

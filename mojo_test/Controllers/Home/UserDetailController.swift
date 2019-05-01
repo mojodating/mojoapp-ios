@@ -46,9 +46,10 @@ class UserDetailController: BaseListController, UICollectionViewDelegateFlowLayo
         closeButton.addTarget(self, action: #selector(handleTapDismiss), for: .touchUpInside)
         
         view.addSubview(chatRequestButton)
-        chatRequestButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, size: .init(width: view.frame.width, height: 50))
-        chatRequestButton.backgroundColor = #colorLiteral(red: 0.9921568627, green: 0.9450980392, blue: 0.6, alpha: 1)
+        chatRequestButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width - 32, height: 50))
+        chatRequestButton.backgroundColor = #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 1)
         chatRequestButton.setTitleColor(.black, for: .normal)
+        chatRequestButton.layer.cornerRadius = 8
         chatRequestButton.addTarget(self, action: #selector(handleOpenRequest), for: .touchUpInside)
        
     }

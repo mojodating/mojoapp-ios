@@ -13,12 +13,10 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "AssignmentPrecedence"
-- !private "BooleanLiteralType"
 - "CGFloat"
 - "Date"
 - !private "DateFormatter"
 - "String"
-- !private "StringLiteralType"
 - "UIButton"
 - "UIFont"
 - "UIImageView"

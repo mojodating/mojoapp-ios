@@ -22,7 +22,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9568627451, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 0.9322652284, green: 0.9322652284, blue: 0.9322652284, alpha: 1)
         navigationItem.title = "Send Chat Request"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleCancel))
         
@@ -32,7 +32,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         setupNotificationObservers()
     }
     
-    let titleLabel = UILabel(text: "Choose a Gift", font: .systemFont(ofSize: 24, weight: .black))
+    let titleLabel = UILabel(text: "Choose a Gift", font: .systemFont(ofSize: 28, weight: .bold))
     let giftsCellId = "giftsCellId"
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -42,7 +42,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         return cv
     }()
     let balanceLabel = UILabel(text: "Your balance: \n ..Jo", font: .systemFont(ofSize: 14))
-    let topupButton = UIButton(title: "Top up", cornerRadius: 8, font: .systemFont(ofSize: 14, weight: .medium))
+    let topupButton = UIButton(title: "Top up", cornerRadius: 20, font: .systemFont(ofSize: 14, weight: .medium))
     let separatorView = UIView()
     let payButton = UIButton(title: "Pay and Send", cornerRadius: 0, font: .systemFont(ofSize: 16, weight: .semibold))
     let inputTextView: ChatRequestInputTextView = {
@@ -53,8 +53,8 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         textView.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         return textView
     }()
-    let descriptionLabel = UILabel(text: "It requires a gift to send chat request.", font: .systemFont(ofSize: 12))
-    let warningLabel = UILabel(text: "(Not enough)", font: .systemFont(ofSize: 16, weight: .medium))
+    let descriptionLabel = UILabel(text: "It requires a gift to send chat request.", font: .systemFont(ofSize: 14))
+    let warningLabel = UILabel(text: "(Not enough)", font: .systemFont(ofSize: 14, weight: .regular))
 
     
     fileprivate func setupLayout() {
@@ -70,10 +70,11 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         warningLabel.isHidden = true
         warningLabel.textColor = .orange
         view.addSubview(topupButton)
-        topupButton.anchor(top: nil, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 80, height: 32))
+        topupButton.anchor(top: nil, leading: nil, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 16), size: .init(width: 100, height: 40))
         topupButton.centerYAnchor.constraint(equalTo: balanceLabel.centerYAnchor).isActive = true
-        topupButton.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.7098039216, blue: 0.768627451, alpha: 1)
-        topupButton.setTitleColor(.white, for: .normal)
+        topupButton.backgroundColor = .white
+
+//        topupButton.setTitleColor(.black, for: .normal)
         topupButton.addTarget(self, action: #selector(handleTopup), for: .touchUpInside)
         
         view.addSubview(separatorView)
@@ -98,11 +99,12 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         descriptionLabel.numberOfLines = 0
         
         view.addSubview(payButton)
-        payButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, size: .init(width: view.frame.width, height: 50))
+        payButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width - 32, height: 50))
         payButton.setTitleColor(.white, for: .normal)
+        payButton.layer.cornerRadius = 8
         payButton.addTarget(self, action: #selector(handleSendChatRequest), for: .touchUpInside)
         payButton.isEnabled = false
-        payButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        payButton.backgroundColor = #colorLiteral(red: 0, green: 0.7662263513, blue: 0.9543122649, alpha: 1)
 
     }
     
@@ -135,7 +137,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         cell.digitalGood = digitalGoods[indexPath.item]
         
         if (self.selectedIndexPath != nil && indexPath == self.selectedIndexPath) {
-            cell.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 0.3355896832)
+            cell.backgroundColor = #colorLiteral(red: 0.9632236362, green: 0.8585800529, blue: 0.8492385745, alpha: 0.5)
         } else {
                 cell.backgroundColor = .clear
             }
@@ -159,7 +161,7 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
     var selectedIndexPath: IndexPath?
     var giftPrice: Int?
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 0.3355896832)
+        collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9632236362, green: 0.8585800529, blue: 0.8492385745, alpha: 0.5)
         let digitalGood = self.digitalGoods[indexPath.item]
         self.digitalGood = digitalGood
         self.giftPrice = digitalGood.price
@@ -271,10 +273,13 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         // Check balance
         if self.userBalance ?? 0 >= self.giftPrice ?? 0 {
             self.payButton.isEnabled = true
-            self.payButton.backgroundColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+            self.payButton.backgroundColor = #colorLiteral(red: 0, green: 0.7662263513, blue: 0.9543122649, alpha: 1)
+//            self.payButton.setTitleColor(.black, for: .normal)
+            self.warningLabel.isHidden = true
         } else {
             self.payButton.isEnabled = false
-            self.payButton.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+            self.payButton.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0.5951947774)
+            self.payButton.setTitleColor(.white, for: .normal)
             self.warningLabel.isHidden = false
         }
     }

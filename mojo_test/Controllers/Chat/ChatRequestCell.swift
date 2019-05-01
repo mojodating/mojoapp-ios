@@ -12,9 +12,16 @@ protocol ChatRequestCellDelegate {
     func didTapCell(conversation : Conversation)
 }
 
+//protocol ChatRequestCellSentDelegate {
+//    func didTapSentCell(conversation : Conversation)
+//}
+
 class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, RequestsFeedCellDelegate, SentFeedCellDelegate {
     
+    
     var delegate: ChatRequestCellDelegate?
+    
+//    var sentDelegate: ChatRequestCellSentDelegate?
     
     let cellId = "cellId"
     let sentCellId = "sentCellId"
@@ -59,6 +66,11 @@ class ChatRequestCell: UICollectionViewCell, UICollectionViewDelegate, UICollect
         let conversation = conversation
         delegate?.didTapCell(conversation: conversation)
     }
+    
+//    func didTapSentCell(conversation: Conversation) {
+//        let conversation = conversation
+//        sentDelegate?.didTapSentCell(conversation: conversation)
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

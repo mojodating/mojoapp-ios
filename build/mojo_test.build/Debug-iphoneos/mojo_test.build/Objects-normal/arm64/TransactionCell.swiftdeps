@@ -14,7 +14,6 @@ depends-top-level:
 - "UILabel"
 - "UITableViewCell"
 - !private "UIView"
-- !private "_ColorLiteralType"
 - !private "fatalError"
 depends-member:
 - ["So15CALayerDelegateP", "CellStyle"]
@@ -133,9 +132,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "widthAnchor"]
 - !private ["Se", "darkGray"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["SE", "darkGray"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - ["SQ", "CellStyle"]
 - ["SQ", "UILabel"]
@@ -150,7 +147,6 @@ depends-member:
 - !private ["SQ", "fatalError"]
 - !private ["SQ", "heightAnchor"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "leadingAnchor"]
 - ["SQ", "medium"]
@@ -394,7 +390,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "txLabel"]
 - !private ["So13UIDynamicItemP", "valueLabel"]
 - !private ["So13UIDynamicItemP", "widthAnchor"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So12UIEdgeInsetsV", "init"]
 - ["So18UIFocusEnvironmentP", "CellStyle"]
 - ["So18UIFocusEnvironmentP", "UILabel"]
@@ -647,7 +642,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "valueLabel"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "widthAnchor"]
 - !private ["s21_ObjectiveCBridgeableP", "darkGray"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - ["s21_ObjectiveCBridgeableP", "medium"]
 - ["s20_SwiftNewtypeWrapperP", "medium"]

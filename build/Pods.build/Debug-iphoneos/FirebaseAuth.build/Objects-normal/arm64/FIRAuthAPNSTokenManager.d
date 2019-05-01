@@ -11,7 +11,7 @@ dependencies: \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRApp.h \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Public/FIRAnalyticsConfiguration.h \
   /Users/yunyunchen1/dev/mojo-test/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
-  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/GoogleUtilities.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/GoogleUtilities-Environment-Logger.build/module.modulemap \
   /Users/yunyunchen1/dev/mojo-test/Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSToken.h \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthAPNSTokenType.h \

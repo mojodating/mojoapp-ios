@@ -201,11 +201,11 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         
         let userInfo = response.notification.request.content.userInfo
         
-//        if let conversationId = userInfo["gcm.notification.conversationId"] as? String {
-//            guard let fromId = userInfo["gcm.notification.from"] as? String else { return }
-//            let privateChatController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
-//            privateChatController.conversitionId = conversationId
-//            privateChatController.chatProfileUID = fromId
+        if let conversationId = userInfo["gcm.notification.conversationId"] as? String {
+            guard let fromId = userInfo["gcm.notification.from"] as? String else { return }
+            let privateChatController = PrivateChatController(collectionViewLayout: UICollectionViewFlowLayout())
+            privateChatController.conversitionId = conversationId
+            privateChatController.chatProfileUID = fromId
         
             //access main UI from Appdelegate
             if let mainTabBarController = window?.rootViewController as? MainTabBarController {
@@ -213,10 +213,10 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
                 mainTabBarController.selectedIndex = 1
                 mainTabBarController.presentedViewController?.dismiss(animated: true, completion: nil)
                 
-//                if let chatNavController = mainTabBarController.viewControllers?[1] as? UINavigationController {
-//                    chatNavController.pushViewController(privateChatController, animated: true)
-//                }
-//            }
+                if let chatNavController = mainTabBarController.viewControllers?[1] as? UINavigationController {
+                    chatNavController.pushViewController(privateChatController, animated: true)
+                }
+            }
         }
     
         // Print message ID.

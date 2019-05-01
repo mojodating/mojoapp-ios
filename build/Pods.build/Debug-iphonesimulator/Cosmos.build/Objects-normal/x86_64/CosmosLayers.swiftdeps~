@@ -32,18 +32,16 @@ depends-top-level:
 - "TernaryPrecedence"
 - !private "UIScreen"
 depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
+- !private ["s18AdditiveArithmeticP", "pi"]
 - !private ["Sa", "append"]
 - !private ["Sa", "init"]
 - !private ["Sa", "reverse"]
-- !private ["s13ArrayProtocolP", "append"]
-- !private ["s13ArrayProtocolP", "init"]
-- !private ["s13ArrayProtocolP", "reverse"]
 - !private ["SK", "append"]
 - !private ["SK", "init"]
 - !private ["SK", "reverse"]
 - !private ["SB", "init"]
 - !private ["SB", "pi"]
-- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So7CALayerC", "addSublayer"]
 - !private ["So7CALayerC", "anchorPoint"]
 - !private ["So7CALayerC", "bounds"]
@@ -65,7 +63,6 @@ depends-member:
 - !private ["So6CGRectV", "size"]
 - !private ["So6CGRectV", "width"]
 - !private ["So6CGSizeV", "width"]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "addSublayer"]
 - !private ["s7CVarArgP", "anchorPoint"]
 - !private ["s7CVarArgP", "append"]
@@ -83,6 +80,9 @@ depends-member:
 - !private ["Sl", "reverse"]
 - !private ["SL", "init"]
 - !private ["SL", "pi"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "init"]
+- !private ["10Foundation15ContiguousBytesP", "reverse"]
 - ["6Cosmos0A6LayersC", "Bool"]
 - ["6Cosmos0A6LayersC", "CALayer"]
 - !private ["6Cosmos0A6LayersC", "CATransform3DMakeRotation"]
@@ -131,13 +131,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "transform"]
 - !private ["s28CustomDebugStringConvertibleP", "width"]
 - !private ["s28CustomDebugStringConvertibleP", "x"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "pi"]
-- !private ["s29CustomPlaygroundQuickLookableP", "size"]
-- !private ["s29CustomPlaygroundQuickLookableP", "width"]
-- !private ["s29CustomPlaygroundQuickLookableP", "x"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "pi"]
@@ -145,7 +138,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "size"]
 - !private ["s17CustomReflectableP", "width"]
 - !private ["s17CustomReflectableP", "x"]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "addSublayer"]
 - !private ["s23CustomStringConvertibleP", "anchorPoint"]
 - !private ["s23CustomStringConvertibleP", "append"]
@@ -158,7 +150,9 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "reverse"]
 - !private ["s23CustomStringConvertibleP", "scale"]
 - !private ["s23CustomStringConvertibleP", "transform"]
-- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "init"]
+- !private ["10Foundation12DataProtocolP", "reverse"]
 - !private ["Se", "append"]
 - !private ["Se", "init"]
 - !private ["Se", "pi"]
@@ -167,7 +161,6 @@ depends-member:
 - !private ["Se", "width"]
 - !private ["Se", "x"]
 - !private ["Sd", "pi"]
-- !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "append"]
 - !private ["SE", "init"]
 - !private ["SE", "pi"]
@@ -175,7 +168,6 @@ depends-member:
 - !private ["SE", "size"]
 - !private ["SE", "width"]
 - !private ["SE", "x"]
-- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "addSublayer"]
 - !private ["SQ", "anchorPoint"]
 - !private ["SQ", "append"]
@@ -194,14 +186,12 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
 - !private ["s25ExpressibleByArrayLiteralP", "reverse"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s25ExpressibleByFloatLiteralP", "pi"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "pi"]
 - !private ["SF", "init"]
 - !private ["SF", "pi"]
-- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "addSublayer"]
 - !private ["SH", "anchorPoint"]
 - !private ["SH", "append"]
@@ -214,11 +204,13 @@ depends-member:
 - !private ["SH", "reverse"]
 - !private ["SH", "scale"]
 - !private ["SH", "transform"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "pi"]
 - !private ["SM", "append"]
 - !private ["SM", "init"]
 - !private ["SM", "reverse"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "init"]
+- !private ["10Foundation19MutableDataProtocolP", "reverse"]
 - !private ["So8NSCodingP", "addSublayer"]
 - !private ["So8NSCodingP", "anchorPoint"]
 - !private ["So8NSCodingP", "bounds"]
@@ -259,6 +251,7 @@ depends-member:
 - !private ["Sm", "append"]
 - !private ["Sm", "init"]
 - !private ["Sm", "reverse"]
+- !private ["s10SIMDScalarP", "pi"]
 - !private ["ST", "append"]
 - !private ["ST", "init"]
 - !private ["ST", "reverse"]
@@ -267,20 +260,31 @@ depends-member:
 - !private ["6Cosmos9StarLayerV", "create"]
 - !private ["Sx", "init"]
 - !private ["Sx", "pi"]
+- !private ["s20TextOutputStreamableP", "pi"]
 - !private ["So8UIScreenC", "main"]
 - !private ["So8UIScreenC", "scale"]
 - !private ["So18UITraitEnvironmentP", "main"]
 - !private ["So18UITraitEnvironmentP", "scale"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s14_ArrayProtocolP", "reverse"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s15_CVarArgAlignedP", "pi"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "pi"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "pi"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "size"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "x"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "init"]
 - !private ["s24_DestructorSafeContainerP", "reverse"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s33_ExpressibleByBuiltinFloatLiteralP", "pi"]
 - !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "pi"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "init"]
+- !private ["s19_HasContiguousBytesP", "reverse"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "pi"]
@@ -294,7 +298,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "position"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "scale"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "transform"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "pi"]
@@ -303,11 +306,10 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["s21_ObjectiveCBridgeableP", "x"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - !private "Sa"
-- !private "s13ArrayProtocolP"
 - !private "SK"
 - !private "SB"
-- !private "Sb"
 - !private "So7CALayerC"
 - !private "So13CAMediaTimingP"
 - !private "12CoreGraphics7CGFloatV"
@@ -317,25 +319,26 @@ depends-nominal:
 - !private "s7CVarArgP"
 - !private "Sl"
 - !private "SL"
+- !private "10Foundation15ContiguousBytesP"
 - "6Cosmos0A6LayersC"
 - !private "6Cosmos0A6RatingV"
 - !private "6Cosmos0A8SettingsV"
 - !private "s28CustomDebugStringConvertibleP"
-- !private "s29CustomPlaygroundQuickLookableP"
 - !private "s17CustomReflectableP"
 - !private "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
 - !private "Se"
 - !private "Sd"
 - !private "SE"
 - !private "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "SF"
 - !private "SH"
 - !private "s25LosslessStringConvertibleP"
 - !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
 - !private "So8NSCodingP"
 - !private "So8NSObjectC"
 - !private "So8NSObjectP"
@@ -343,24 +346,27 @@ depends-nominal:
 - !private "Sj"
 - !private "Sk"
 - !private "Sm"
+- !private "s10SIMDScalarP"
 - !private "ST"
 - !private "s13SignedNumericP"
 - !private "6Cosmos9StarLayerV"
 - !private "Sx"
+- !private "s20TextOutputStreamableP"
 - !private "So8UIScreenC"
 - !private "So18UITraitEnvironmentP"
+- !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
+- !private "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
 - !private "s33_ExpressibleByBuiltinFloatLiteralP"
 - !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - !private "10Foundation27_KeyValueCodingAndObservingP"
 - !private "s21_ObjectiveCBridgeableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
@@ -375,15 +381,16 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/Pods/Target Support Files/Cosmos/Cosmos-umbrella.h"
 - "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphonesimulator/Cosmos.build/unextended-module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "4a83c144c54dd311ae959cb3ad4f435a"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "e19df0c1e351af749829bcaf6ab9e7b4"

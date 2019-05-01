@@ -31,7 +31,6 @@ depends-top-level:
 - "AssignmentPrecedence"
 - !private "Auth"
 - "Bool"
-- "BooleanLiteralType"
 - !private "CGAffineTransform"
 - !private "CGFloat"
 - "CGRect"
@@ -42,10 +41,8 @@ depends-top-level:
 - "Conversation"
 - !private "Date"
 - !private "Firestore"
-- "FloatLiteralType"
 - "IndexPath"
 - "Int"
-- "IntegerLiteralType"
 - "Message"
 - "MessageCell"
 - !private "NSAttributedString"
@@ -62,7 +59,6 @@ depends-top-level:
 - !private "PrivateChatDateHeaderView"
 - "RequestMessageCell"
 - "String"
-- "StringLiteralType"
 - !private "UIAlertAction"
 - !private "UIAlertController"
 - !private "UIBarButtonItem"
@@ -83,8 +79,6 @@ depends-top-level:
 - !private "UnicodeScalarType"
 - "User"
 - !private "UserDetailController"
-- !private "_ColorLiteralType"
-- "_ImageLiteralType"
 - !private "print"
 depends-member:
 - !private ["So22UIViewAnimationOptionsV", "curveEaseOut"]
@@ -263,7 +257,6 @@ depends-member:
 - !private ["s7CVarArgP", "headerId"]
 - ["s7CVarArgP", "imageView"]
 - ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isActive"]
 - !private ["s7CVarArgP", "isHidden"]
 - !private ["s7CVarArgP", "isLoading"]
@@ -597,7 +590,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "height"]
 - ["s28CustomDebugStringConvertibleP", "imageView"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "isLoading"]
@@ -806,7 +798,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "headerId"]
 - ["s23CustomStringConvertibleP", "imageView"]
 - ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isActive"]
 - !private ["s23CustomStringConvertibleP", "isHidden"]
 - !private ["s23CustomStringConvertibleP", "isLoading"]
@@ -899,7 +890,6 @@ depends-member:
 - !private ["Se", "height"]
 - !private ["Se", "identity"]
 - ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "item"]
 - !private ["Se", "keyboardDismissMode"]
 - !private ["Se", "leadingAnchor"]
@@ -939,7 +929,6 @@ depends-member:
 - !private ["SE", "height"]
 - !private ["SE", "identity"]
 - ["SE", "init"]
-- !private ["SE", "init"]
 - !private ["SE", "item"]
 - !private ["SE", "keyboardDismissMode"]
 - !private ["SE", "leadingAnchor"]
@@ -1072,7 +1061,6 @@ depends-member:
 - !private ["SQ", "identity"]
 - ["SQ", "imageView"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "interactive"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "isHidden"]
@@ -1309,7 +1297,6 @@ depends-member:
 - !private ["SH", "headerId"]
 - ["SH", "imageView"]
 - ["SH", "init"]
-- !private ["SH", "init"]
 - !private ["SH", "interactive"]
 - !private ["SH", "isActive"]
 - !private ["SH", "isHidden"]
@@ -1508,7 +1495,6 @@ depends-member:
 - !private ["So8NSCodingP", "headerId"]
 - ["So8NSCodingP", "imageView"]
 - ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isHidden"]
 - !private ["So8NSCodingP", "isLoading"]
 - !private ["So8NSCodingP", "isUserInteractionEnabled"]
@@ -1631,7 +1617,6 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "handleViewProfile"]
 - !private ["So26NSExtensionRequestHandlingP", "handleViewRequesterProfile"]
 - !private ["So26NSExtensionRequestHandlingP", "headerId"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "isLoading"]
 - !private ["So26NSExtensionRequestHandlingP", "markMessageAsSeen"]
@@ -1806,7 +1791,6 @@ depends-member:
 - ["So8NSObjectC", "headerId"]
 - ["So8NSObjectC", "imageView"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "inputAccessoryView"]
 - !private ["So8NSObjectC", "isActive"]
 - !private ["So8NSObjectC", "isHidden"]
@@ -1975,7 +1959,6 @@ depends-member:
 - !private ["So8NSObjectP", "headerId"]
 - ["So8NSObjectP", "imageView"]
 - ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isActive"]
 - !private ["So8NSObjectP", "isHidden"]
 - !private ["So8NSObjectP", "isLoading"]
@@ -2459,7 +2442,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "headerId"]
 - ["So21UIAppearanceContainerP", "imageView"]
 - ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "isHidden"]
 - !private ["So21UIAppearanceContainerP", "isLoading"]
 - !private ["So21UIAppearanceContainerP", "isUserInteractionEnabled"]
@@ -2617,7 +2599,6 @@ depends-member:
 - ["So26UICollectionViewControllerC", "handleViewRequesterProfile"]
 - ["So26UICollectionViewControllerC", "headerId"]
 - ["So26UICollectionViewControllerC", "init"]
-- !private ["So26UICollectionViewControllerC", "init"]
 - ["So26UICollectionViewControllerC", "inputAccessoryView"]
 - ["So26UICollectionViewControllerC", "isLoading"]
 - ["So26UICollectionViewControllerC", "markMessageAsSeen"]
@@ -2703,7 +2684,6 @@ depends-member:
 - !private ["So26UICollectionViewDataSourceP", "handleViewRequesterProfile"]
 - !private ["So26UICollectionViewDataSourceP", "headerId"]
 - !private ["So26UICollectionViewDataSourceP", "init"]
-- !private ["So26UICollectionViewDataSourceP", "init"]
 - !private ["So26UICollectionViewDataSourceP", "isLoading"]
 - !private ["So26UICollectionViewDataSourceP", "markMessageAsSeen"]
 - !private ["So26UICollectionViewDataSourceP", "messages"]
@@ -2786,7 +2766,6 @@ depends-member:
 - !private ["So24UICollectionViewDelegateP", "handleViewProfile"]
 - !private ["So24UICollectionViewDelegateP", "handleViewRequesterProfile"]
 - !private ["So24UICollectionViewDelegateP", "headerId"]
-- !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "init"]
 - !private ["So24UICollectionViewDelegateP", "isLoading"]
 - !private ["So24UICollectionViewDelegateP", "markMessageAsSeen"]
@@ -2955,7 +2934,6 @@ depends-member:
 - !private ["So18UIContentContainerP", "handleViewRequesterProfile"]
 - !private ["So18UIContentContainerP", "headerId"]
 - !private ["So18UIContentContainerP", "init"]
-- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "isLoading"]
 - !private ["So18UIContentContainerP", "markMessageAsSeen"]
 - !private ["So18UIContentContainerP", "messages"]
@@ -3099,7 +3077,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So13UIDynamicItemP", "transform"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - !private ["So18UIFocusEnvironmentP", "Auth"]
 - !private ["So18UIFocusEnvironmentP", "CGAffineTransform"]
 - ["So18UIFocusEnvironmentP", "CGRect"]
@@ -3182,7 +3159,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "headerId"]
 - ["So18UIFocusEnvironmentP", "imageView"]
 - ["So18UIFocusEnvironmentP", "init"]
-- !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "isHidden"]
 - !private ["So18UIFocusEnvironmentP", "isLoading"]
 - !private ["So18UIFocusEnvironmentP", "isUserInteractionEnabled"]
@@ -3435,7 +3411,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "headerId"]
 - ["So30UIPasteConfigurationSupportingP", "imageView"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "isHidden"]
 - !private ["So30UIPasteConfigurationSupportingP", "isLoading"]
 - !private ["So30UIPasteConfigurationSupportingP", "isUserInteractionEnabled"]
@@ -3581,7 +3556,6 @@ depends-member:
 - ["So11UIResponderC", "headerId"]
 - ["So11UIResponderC", "imageView"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "inputAccessoryView"]
 - !private ["So11UIResponderC", "isHidden"]
 - ["So11UIResponderC", "isLoading"]
@@ -3717,7 +3691,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "headerId"]
 - ["So30UIResponderStandardEditActionsP", "imageView"]
 - ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "isHidden"]
 - !private ["So30UIResponderStandardEditActionsP", "isLoading"]
 - !private ["So30UIResponderStandardEditActionsP", "isUserInteractionEnabled"]
@@ -3835,7 +3808,6 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "handleViewRequesterProfile"]
 - !private ["So20UIScrollViewDelegateP", "headerId"]
 - !private ["So20UIScrollViewDelegateP", "init"]
-- !private ["So20UIScrollViewDelegateP", "init"]
 - !private ["So20UIScrollViewDelegateP", "isLoading"]
 - !private ["So20UIScrollViewDelegateP", "markMessageAsSeen"]
 - !private ["So20UIScrollViewDelegateP", "messages"]
@@ -3935,7 +3907,6 @@ depends-member:
 - !private ["So16UIStateRestoringP", "handleViewProfile"]
 - !private ["So16UIStateRestoringP", "handleViewRequesterProfile"]
 - !private ["So16UIStateRestoringP", "headerId"]
-- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "isLoading"]
 - !private ["So16UIStateRestoringP", "markMessageAsSeen"]
@@ -4131,7 +4102,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "headerId"]
 - ["So18UITraitEnvironmentP", "imageView"]
 - ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "isHidden"]
 - !private ["So18UITraitEnvironmentP", "isLoading"]
 - !private ["So18UITraitEnvironmentP", "isUserInteractionEnabled"]
@@ -4262,7 +4232,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "headerId"]
 - ["So23UIUserActivityRestoringP", "imageView"]
 - ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "isHidden"]
 - !private ["So23UIUserActivityRestoringP", "isLoading"]
 - !private ["So23UIUserActivityRestoringP", "isUserInteractionEnabled"]
@@ -4429,7 +4398,6 @@ depends-member:
 - ["So16UIViewControllerC", "handleViewRequesterProfile"]
 - ["So16UIViewControllerC", "headerId"]
 - ["So16UIViewControllerC", "init"]
-- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "inputAccessoryView"]
 - ["So16UIViewControllerC", "isLoading"]
 - ["So16UIViewControllerC", "markMessageAsSeen"]
@@ -4610,7 +4578,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "headerId"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "imageView"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isActive"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isHidden"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isLoading"]
@@ -4690,7 +4657,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "height"]
 - !private ["s21_ObjectiveCBridgeableP", "identity"]
 - ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "item"]
 - !private ["s21_ObjectiveCBridgeableP", "keyboardDismissMode"]
 - !private ["s21_ObjectiveCBridgeableP", "leadingAnchor"]

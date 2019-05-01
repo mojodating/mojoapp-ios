@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4122CA71FCA037376D5A8532 /* Pods_mojo_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */; };
 		8817623F222BC4BB00743689 /* GenderSeekingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8817623E222BC4BB00743689 /* GenderSeekingController.swift */; };
 		8817624122308D6C00743689 /* PrivateChatDateHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8817624022308D6C00743689 /* PrivateChatDateHeaderView.swift */; };
 		881762472235BE8300743689 /* GiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881762462235BE8300743689 /* GiftCell.swift */; };
@@ -134,6 +135,7 @@
 /* Begin PBXFileReference section */
 		3A9154023E1BDE2B631D4978 /* Pods-mojo_test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_test.release.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_test/Pods-mojo_test.release.xcconfig"; sourceTree = "<group>"; };
 		3B92FAC75E98011E271C4321 /* Pods_mojo_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		499F8D933CC2BA89DD596DE2 /* Pods-mojo_testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_testTests/Pods-mojo_testTests.release.xcconfig"; sourceTree = "<group>"; };
 		878FD6C48B1CA67CAC746D26 /* Pods_mojo_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8817623E222BC4BB00743689 /* GenderSeekingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSeekingController.swift; sourceTree = "<group>"; };
 		8817624022308D6C00743689 /* PrivateChatDateHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateChatDateHeaderView.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 		88B5C05721AE6F73004EADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88C6A46C2226117300703EBD /* LogoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutCell.swift; sourceTree = "<group>"; };
 		88F3903A21E76EB30070096E /* TopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopUpController.swift; sourceTree = "<group>"; };
+		97BFA0C984176A64A40875B7 /* Pods-mojo_testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_testTests/Pods-mojo_testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B39CED528515D07CDD5588E9 /* Pods-mojo_test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mojo_test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mojo_test/Pods-mojo_test.debug.xcconfig"; sourceTree = "<group>"; };
 		F1A46049713FFD8EF38D2B91 /* Pods_mojo_testUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_mojo_testUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -250,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4122CA71FCA037376D5A8532 /* Pods_mojo_testTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +533,8 @@
 			children = (
 				B39CED528515D07CDD5588E9 /* Pods-mojo_test.debug.xcconfig */,
 				3A9154023E1BDE2B631D4978 /* Pods-mojo_test.release.xcconfig */,
+				97BFA0C984176A64A40875B7 /* Pods-mojo_testTests.debug.xcconfig */,
+				499F8D933CC2BA89DD596DE2 /* Pods-mojo_testTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -578,9 +584,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88B5C05D21AE6F73004EADFC /* Build configuration list for PBXNativeTarget "mojo_testTests" */;
 			buildPhases = (
+				A575A9DF547E2F111602EF84 /* [CP] Check Pods Manifest.lock */,
 				88B5C04221AE6F73004EADFC /* Sources */,
 				88B5C04321AE6F73004EADFC /* Frameworks */,
 				88B5C04421AE6F73004EADFC /* Resources */,
+				C51F7425953BE823E5E602CA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -622,9 +630,11 @@
 				TargetAttributes = {
 					889E0FDD21D1F24B00A74140 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					88B5C02F21AE6F71004EADFC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -636,10 +646,12 @@
 					};
 					88B5C04521AE6F73004EADFC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 88B5C02F21AE6F71004EADFC;
 					};
 					88B5C05021AE6F73004EADFC = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 88B5C02F21AE6F71004EADFC;
 					};
 				};
@@ -711,7 +723,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-00567490/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -745,6 +757,68 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mojo_test/Pods-mojo_test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A575A9DF547E2F111602EF84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-mojo_testTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C51F7425953BE823E5E602CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-mojo_testTests/Pods-mojo_testTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities-Environment-Logger/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mojo_testTests/Pods-mojo_testTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E4BF1257D1A21957BD3300D1 /* [CP] Check Pods Manifest.lock */ = {
@@ -928,7 +1002,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mojodating.prealpha.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -947,7 +1021,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mojodating.prealpha.NotificationService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1081,7 +1155,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mojodating.prealpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1099,13 +1173,14 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mojodating.prealpha;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		88B5C05E21AE6F73004EADFC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97BFA0C984176A64A40875B7 /* Pods-mojo_testTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1115,11 +1190,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@loader_path/Frameworks\n",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YC.mojo-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mojo_test.app/mojo_test";
 			};
@@ -1127,6 +1202,7 @@
 		};
 		88B5C05F21AE6F73004EADFC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 499F8D933CC2BA89DD596DE2 /* Pods-mojo_testTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1136,11 +1212,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
+					"@loader_path/Frameworks\n",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YC.mojo-testTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mojo_test.app/mojo_test";
 			};
@@ -1160,7 +1236,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YC.mojo-testUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = mojo_test;
 			};
@@ -1180,7 +1256,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "YC.mojo-testUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = mojo_test;
 			};

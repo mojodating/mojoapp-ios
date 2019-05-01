@@ -60,7 +60,7 @@ class SwipingPhotosController: UIPageViewController, UIPageViewControllerDataSou
 
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
         let pageContentViewController = pageViewController.viewControllers![0]
-        self.pageControl.currentPage = controllers.index(of: pageContentViewController) ?? 0
+        self.pageControl.currentPage = controllers.firstIndex(of: pageContentViewController) ?? 0
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {

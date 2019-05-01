@@ -19,8 +19,12 @@ class UserGiftCell: UICollectionViewCell {
     
     fileprivate func setupLayout() {
         
+        addSubview(senderLabel)
+        senderLabel.anchor(top: nil, leading: nil, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 8, right: 0))
+        senderLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
+        
         addSubview(nameLabel)
-        nameLabel.anchor(top: nil, leading: nil, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 8, right: 0))
+        nameLabel.anchor(top: nil, leading: nil, bottom: senderLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 4, right: 0))
         nameLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
         
         addSubview(giftImageView)
@@ -41,6 +45,8 @@ class UserGiftCell: UICollectionViewCell {
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
         return label
     }()
+    
+    let senderLabel = UILabel(text: "", font: .systemFont(ofSize: 14))
     
     
     required init?(coder aDecoder: NSCoder) {

@@ -61,7 +61,6 @@ depends-top-level:
 - !private "CosmosTouchTarget"
 - "CosmosView"
 - "Double"
-- "FloatLiteralType"
 - "Int"
 - "NSCoder"
 - !private "RightToLeft"
@@ -75,14 +74,12 @@ depends-top-level:
 - "UITouch"
 - "UIView"
 depends-member:
+- !private ["s18AdditiveArithmeticP", "init"]
 - !private ["Sa", "append"]
 - !private ["Sa", "insert"]
-- !private ["s13ArrayProtocolP", "append"]
-- !private ["s13ArrayProtocolP", "insert"]
 - !private ["SK", "append"]
 - !private ["SK", "insert"]
 - !private ["SB", "init"]
-- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So7CALayerC", "addSublayer"]
 - !private ["So7CALayerC", "bounds"]
 - !private ["So7CALayerC", "position"]
@@ -178,7 +175,6 @@ depends-member:
 - !private ["s7CVarArgP", "StarFillMode"]
 - !private ["s7CVarArgP", "UIScreen"]
 - ["s7CVarArgP", ""]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "accessibilityDecrement"]
 - !private ["s7CVarArgP", "accessibilityIncrement"]
 - !private ["s7CVarArgP", "addSublayer"]
@@ -242,6 +238,8 @@ depends-member:
 - !private ["Sl", "first"]
 - !private ["Sl", "insert"]
 - !private ["SL", "init"]
+- !private ["10Foundation15ContiguousBytesP", "append"]
+- !private ["10Foundation15ContiguousBytesP", "insert"]
 - !private ["6Cosmos0A13AccessibilityV", "accessibilityDecrement"]
 - !private ["6Cosmos0A13AccessibilityV", "accessibilityIncrement"]
 - !private ["6Cosmos0A13AccessibilityV", "update"]
@@ -319,7 +317,7 @@ depends-member:
 - ["6Cosmos0A4ViewC", "awakeFromNib"]
 - !private ["6Cosmos0A4ViewC", "bounds"]
 - !private ["6Cosmos0A4ViewC", "createTextLayer"]
-- !private ["6Cosmos0A4ViewC", "deinit"]
+- ["6Cosmos0A4ViewC", "deinit"]
 - ["6Cosmos0A4ViewC", "didFinishTouchingCosmos"]
 - ["6Cosmos0A4ViewC", "didTouchCosmos"]
 - ["6Cosmos0A4ViewC", "emptyBorderColor"]
@@ -442,15 +440,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "withSize"]
 - !private ["s28CustomDebugStringConvertibleP", "x"]
 - !private ["s28CustomDebugStringConvertibleP", "zero"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- !private ["s29CustomPlaygroundQuickLookableP", "contains"]
-- !private ["s29CustomPlaygroundQuickLookableP", "height"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- !private ["s29CustomPlaygroundQuickLookableP", "size"]
-- !private ["s29CustomPlaygroundQuickLookableP", "width"]
-- !private ["s29CustomPlaygroundQuickLookableP", "x"]
-- !private ["s29CustomPlaygroundQuickLookableP", "zero"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
 - !private ["s17CustomReflectableP", "append"]
 - !private ["s17CustomReflectableP", "contains"]
 - !private ["s17CustomReflectableP", "first"]
@@ -475,7 +464,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "StarFillMode"]
 - !private ["s23CustomStringConvertibleP", "UIScreen"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "accessibilityDecrement"]
 - !private ["s23CustomStringConvertibleP", "accessibilityIncrement"]
 - !private ["s23CustomStringConvertibleP", "addSublayer"]
@@ -535,7 +523,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "updateSize"]
 - !private ["s23CustomStringConvertibleP", "viewSize"]
 - !private ["s23CustomStringConvertibleP", "withSize"]
-- !private ["Se", "_getBuiltinLogicValue"]
+- !private ["10Foundation12DataProtocolP", "append"]
+- !private ["10Foundation12DataProtocolP", "insert"]
 - !private ["Se", "append"]
 - !private ["Se", "contains"]
 - !private ["Se", "first"]
@@ -546,7 +535,6 @@ depends-member:
 - !private ["Se", "width"]
 - !private ["Se", "x"]
 - !private ["Se", "zero"]
-- !private ["SE", "_getBuiltinLogicValue"]
 - !private ["SE", "append"]
 - !private ["SE", "contains"]
 - !private ["SE", "first"]
@@ -571,7 +559,6 @@ depends-member:
 - !private ["SQ", "StarFillMode"]
 - !private ["SQ", "UIScreen"]
 - ["SQ", ""]
-- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "accessibilityDecrement"]
 - !private ["SQ", "accessibilityIncrement"]
 - !private ["SQ", "addSublayer"]
@@ -641,7 +628,6 @@ depends-member:
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "first"]
 - !private ["s25ExpressibleByArrayLiteralP", "insert"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s25ExpressibleByFloatLiteralP", "init"]
 - !private ["s27ExpressibleByIntegerLiteralP", "init"]
 - !private ["SF", "init"]
@@ -659,7 +645,6 @@ depends-member:
 - !private ["SH", "StarFillMode"]
 - !private ["SH", "UIScreen"]
 - ["SH", ""]
-- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "accessibilityDecrement"]
 - !private ["SH", "accessibilityIncrement"]
 - !private ["SH", "addSublayer"]
@@ -720,9 +705,10 @@ depends-member:
 - !private ["SH", "updateSize"]
 - !private ["SH", "viewSize"]
 - !private ["SH", "withSize"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["SM", "append"]
 - !private ["SM", "insert"]
+- !private ["10Foundation19MutableDataProtocolP", "append"]
+- !private ["10Foundation19MutableDataProtocolP", "insert"]
 - !private ["So8NSCodingP", "CGFloat"]
 - ["So8NSCodingP", "CGSize"]
 - !private ["So8NSCodingP", "CosmosAccessibility"]
@@ -1860,72 +1846,21 @@ depends-member:
 - ["So6UIViewC", "updateOnTouch"]
 - ["So6UIViewC", "updateSize"]
 - ["So6UIViewC", "viewSize"]
+- !private ["s14_ArrayProtocolP", "append"]
+- !private ["s14_ArrayProtocolP", "insert"]
 - !private ["s15_CVarArgAlignedP", "init"]
 - !private ["s22_CVarArgPassedAsDoubleP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CGFloat"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "CGSize"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosAccessibility"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosDefaultSettings"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosLayerHelper"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosLayers"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosSize"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosText"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosTouch"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "CosmosTouchTarget"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "RightToLeft"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "StarFillMode"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "UIScreen"]
-- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "accessibilityDecrement"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "accessibilityIncrement"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "addTextLayer"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "bounds"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "createTextLayer"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "didFinishTouchingCosmos"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "didTouchCosmos"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "emptyBorderColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "emptyBorderWidth"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "emptyColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "emptyImage"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "fillMode"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "filledBorderColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "filledBorderWidth"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "filledColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "filledImage"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "frame"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "improvePerformance"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "intrinsicContentSize"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "invalidateIntrinsicContentSize"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "isOpaque"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "layer"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "minTouchRating"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "onDidTouch"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "prepareForInterfaceBuilder"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "previousRatingForDidTouchCallback"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rating"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "settings"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "starMargin"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "starSize"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "text"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textColor"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textMargin"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "textSize"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "totalStars"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "touchLocationFromBeginningOfRating"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "touchesBegan"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "touchesCancelled"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "touchesEnded"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "touchesMoved"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "update"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "updateAccessibility"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "updateOnTouch"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "updateSize"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "viewSize"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "contains"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "height"]
+- ["s30_CustomPlaygroundQuickLookableP", "init"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "size"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "width"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "x"]
+- !private ["s30_CustomPlaygroundQuickLookableP", "zero"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "insert"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s19_HasContiguousBytesP", "append"]
+- !private ["s19_HasContiguousBytesP", "insert"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "append"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "first"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "insert"]
@@ -1999,7 +1934,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "updateSize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewSize"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "withSize"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
 - !private ["s21_ObjectiveCBridgeableP", "append"]
 - !private ["s21_ObjectiveCBridgeableP", "contains"]
 - !private ["s21_ObjectiveCBridgeableP", "first"]
@@ -2010,12 +1944,72 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "width"]
 - !private ["s21_ObjectiveCBridgeableP", "x"]
 - !private ["s21_ObjectiveCBridgeableP", "zero"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CGFloat"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "CGSize"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CosmosAccessibility"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", "CosmosDefaultSettings"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CosmosLayerHelper"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CosmosLayers"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CosmosSize"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CosmosText"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CosmosTouch"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "CosmosTouchTarget"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "RightToLeft"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "StarFillMode"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "UIScreen"]
+- ["s38__DefaultCustomPlaygroundQuickLookableP", ""]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "accessibilityDecrement"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "accessibilityIncrement"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "addTextLayer"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "bounds"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "createTextLayer"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "didFinishTouchingCosmos"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "didTouchCosmos"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "emptyBorderColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "emptyBorderWidth"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "emptyColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "emptyImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "fillMode"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "filledBorderColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "filledBorderWidth"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "filledColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "filledImage"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "frame"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "improvePerformance"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "intrinsicContentSize"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "invalidateIntrinsicContentSize"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "isOpaque"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "layer"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "minTouchRating"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "onDidTouch"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "prepareForInterfaceBuilder"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "previousRatingForDidTouchCallback"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rating"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "settings"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "starMargin"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "starSize"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textColor"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textMargin"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "textSize"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "totalStars"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "touchLocationFromBeginningOfRating"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "touchesBegan"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "touchesCancelled"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "touchesEnded"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "touchesMoved"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "update"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "updateAccessibility"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "updateOnTouch"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "updateSize"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "viewSize"]
 depends-nominal:
+- !private "s18AdditiveArithmeticP"
 - !private "Sa"
-- !private "s13ArrayProtocolP"
 - !private "SK"
 - !private "SB"
-- !private "Sb"
 - !private "So7CALayerC"
 - "So15CALayerDelegateP"
 - !private "So13CAMediaTimingP"
@@ -2026,6 +2020,7 @@ depends-nominal:
 - "s7CVarArgP"
 - !private "Sl"
 - !private "SL"
+- !private "10Foundation15ContiguousBytesP"
 - !private "6Cosmos0A13AccessibilityV"
 - "6Cosmos0A15DefaultSettingsV"
 - !private "6Cosmos0A11LayerHelperC"
@@ -2037,20 +2032,19 @@ depends-nominal:
 - !private "6Cosmos0A11TouchTargetV"
 - "6Cosmos0A4ViewC"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
 - "Se"
 - "SE"
 - "SQ"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s25ExpressibleByFloatLiteralP"
 - !private "s27ExpressibleByIntegerLiteralP"
 - !private "SF"
 - "SH"
-- !private "s25LosslessStringConvertibleP"
 - !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
 - "So8NSCodingP"
 - !private "So9NSCopyingP"
 - "So8NSObjectC"
@@ -2084,17 +2078,18 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - "So6UIViewC"
+- !private "s14_ArrayProtocolP"
 - !private "s15_CVarArgAlignedP"
 - !private "s22_CVarArgPassedAsDoubleP"
-- "s37_DefaultCustomPlaygroundQuickLookableP"
+- "s30_CustomPlaygroundQuickLookableP"
 - !private "s24_DestructorSafeContainerP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s19_HasContiguousBytesP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 - "s21_ObjectiveCBridgeableP"
+- "s38__DefaultCustomPlaygroundQuickLookableP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
@@ -2109,15 +2104,16 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/Pods/Target Support Files/Cosmos/Cosmos-umbrella.h"
 - "/Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/Cosmos.build/unextended-module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "4107119df5376c8ee12cf8e559e40f26"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "2d7ec6f0dea876d28965632587a35b81"

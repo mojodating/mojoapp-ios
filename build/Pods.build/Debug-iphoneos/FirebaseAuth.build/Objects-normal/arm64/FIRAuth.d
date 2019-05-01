@@ -24,7 +24,7 @@ dependencies: \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Private/FIRComponentRegistrant.h \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Private/FIRCoreConfigurable.h \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseCore/Firebase/Core/Private/FIRLogger.h \
-  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/GoogleUtilities.build/module.modulemap \
+  /Users/yunyunchen1/dev/mojo-test/build/Pods.build/Debug-iphoneos/GoogleUtilities-Environment-Logger.build/module.modulemap \
   /Users/yunyunchen1/dev/mojo-test/Pods/GoogleUtilities/GoogleUtilities/Environment/third_party/GULAppEnvironmentUtil.h \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/EmailPassword/FIREmailPasswordAuthCredential.h \
   /Users/yunyunchen1/dev/mojo-test/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthCredential_Internal.h \

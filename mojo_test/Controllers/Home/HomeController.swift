@@ -96,7 +96,7 @@ class HomeController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! ProfileCell
         cell.user = users[indexPath.item]
@@ -105,7 +105,6 @@ class HomeController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
             print("Rated: \(rating)")
             
             guard let cardUID = cell.user?.uid else { return }
-            print(cardUID)
             self.functions.httpsCallable("rate").call(["uid": cardUID, "rate": rating]) { (result, error) in
                 if let error = error as NSError? {
                     if error.domain == FunctionsErrorDomain {
@@ -116,11 +115,25 @@ class HomeController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
                 }
             }
             cell.cosmosView.isUserInteractionEnabled = false
+            self.scrollToNextCell(cell: cell, indexPath: indexPath)
             self.hud.textLabel.text = "Submitted"
             self.hud.show(in: self.view)
             self.hud.dismiss(afterDelay: 0.5)
+            
         }
         return cell
+    }
+    
+    fileprivate func scrollToNextCell(cell: ProfileCell, indexPath: IndexPath) {
+        let collectionBounds = self.collectionView.bounds
+        let contentOffset = CGFloat(floor(self.collectionView.contentOffset.y + collectionBounds.size.height / 1.6))
+        self.moveCollectionToFrame(contentOffset: contentOffset)
+    }
+    
+    func moveCollectionToFrame(contentOffset : CGFloat) {
+        
+        let frame: CGRect = CGRect(x : self.collectionView.contentOffset.x - 15 ,y : contentOffset ,width : self.collectionView.frame.width,height : self.collectionView.frame.height)
+        self.collectionView.scrollRectToVisible(frame, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -141,7 +154,6 @@ class HomeController: BaseListController, UICollectionViewDelegateFlowLayout, Pr
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.view.backgroundColor = #colorLiteral(red: 0.9585977157, green: 0.9585977157, blue: 0.9585977157, alpha: 1)
 //        setupNavProfileView()
-        
     }
     
     fileprivate func setupNavProfileView() {

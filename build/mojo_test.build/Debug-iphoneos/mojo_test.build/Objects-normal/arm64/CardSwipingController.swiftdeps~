@@ -32,6 +32,7 @@ depends-top-level:
 - "UIView"
 - "UIViewController"
 - "User"
+- "_ImageLiteralType"
 - "editProfileControllerDelegate"
 - !private "print"
 depends-member:

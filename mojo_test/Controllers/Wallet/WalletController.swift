@@ -108,6 +108,7 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
                 cell.giftImageView.sd_setImage(with: imageUrl)
             }
             cell.nameLabel.text = gift.name
+            cell.senderLabel.text = gift.sender
             
             return cell
         }
@@ -147,7 +148,7 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.section != 0 {
-            collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 0.3355896832)
+            collectionView.cellForItem(at: indexPath)?.backgroundColor = #colorLiteral(red: 0.9632236362, green: 0.8585800529, blue: 0.8492385745, alpha: 0.5)
             let gift = gifts[indexPath.row]
             let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
             

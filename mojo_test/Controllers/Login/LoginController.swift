@@ -58,9 +58,9 @@ class LoginController: UIViewController {
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Log in", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
-        button.backgroundColor = #colorLiteral(red: 0, green: 0.5664333767, blue: 1, alpha: 1)
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        button.backgroundColor = #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 1)
         button.isEnabled = false
         button.heightAnchor.constraint(equalToConstant: 46).isActive = true
         button.layer.cornerRadius = 2
@@ -94,7 +94,7 @@ class LoginController: UIViewController {
     fileprivate let backToRegisterButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Go to signup", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+//        button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .heavy)
         button.addTarget(self, action: #selector(handleBack), for: .touchUpInside)
         return button
@@ -129,8 +129,8 @@ class LoginController: UIViewController {
         loginViewModel.isFormValid.bind { [unowned self] (isFormValid) in
             guard let isFormValid = isFormValid else { return }
             self.loginButton.isEnabled = isFormValid
-            self.loginButton.backgroundColor = isFormValid ? #colorLiteral(red: 0, green: 0.5664333767, blue: 1, alpha: 1) : #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-            self.loginButton.setTitleColor(isFormValid ? .white : .gray, for: .normal)
+            self.loginButton.backgroundColor = isFormValid ? #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 1) : #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 1)
+            self.loginButton.setTitleColor(isFormValid ? .black : .white, for: .normal)
         }
         loginViewModel.isLoggingIn.bind { [unowned self] (isRegistering) in
             if isRegistering == true {

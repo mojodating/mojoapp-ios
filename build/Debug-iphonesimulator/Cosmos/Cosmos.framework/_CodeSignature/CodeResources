@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/Cosmos-Swift.h</key>
 		<data>
-		ysY/3FubOjt8VtakrBN572q1Dig=
+		kvE3dXQR6Lh1SUjYQ5bPNUEJN8A=
 		</data>
 		<key>Headers/Cosmos-umbrella.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/Cosmos.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		Z3ckvETDKY0lG6O/uqZqrNH6PYU=
+		eg8aReA8QwlQj5jk2WGRe2lnCzM=
 		</data>
 		<key>Modules/Cosmos.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		BQtyB/4bWzYncyHoMY7kG1j5RwE=
+		cEdVjrTVwemnZQhL5rIGXODKYmE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ysY/3FubOjt8VtakrBN572q1Dig=
+			kvE3dXQR6Lh1SUjYQ5bPNUEJN8A=
 			</data>
 			<key>hash2</key>
 			<data>
-			PW2umB2AiOBbv49Jmf+ocJfMuyHl79HR1mTq1+4mFXw=
+			qaJ37vFQvwzhc+pd4+9Gq/IekgVNP3z7D/js+C+nVF0=
 			</data>
 		</dict>
 		<key>Headers/Cosmos-umbrella.h</key>
@@ -57,22 +57,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Z3ckvETDKY0lG6O/uqZqrNH6PYU=
+			eg8aReA8QwlQj5jk2WGRe2lnCzM=
 			</data>
 			<key>hash2</key>
 			<data>
-			G/nHGw5acE8/WoM6HSgQ8+zPqv8Qeu+bVZ3tfA5BwCI=
+			qtf3p4jhqjt2gWeH8Mo+YAbwFgh6BzCdgowXwLpvFDw=
 			</data>
 		</dict>
 		<key>Modules/Cosmos.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			BQtyB/4bWzYncyHoMY7kG1j5RwE=
+			cEdVjrTVwemnZQhL5rIGXODKYmE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Et2z8jLp6fi2xaWNHK3snPayTqQbTa8HgjutQuZ9fA8=
+			Po2pJJ9F54wiF2HaYZW2cHNlg1wE35zds6DBkXPACK8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

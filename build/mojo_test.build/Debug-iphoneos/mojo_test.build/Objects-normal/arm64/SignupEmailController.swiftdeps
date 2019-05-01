@@ -13,9 +13,13 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
+- "BooleanLiteralType"
+- "FloatLiteralType"
+- "IntegerLiteralType"
 - "RegistrationViewModel"
 - "SignupEmailController"
 - !private "SignupPasswordController"
+- "StringLiteralType"
 - "UIButton"
 - "UIFont"
 - "UILabel"
@@ -23,6 +27,7 @@ depends-top-level:
 - "UITextField"
 - "UIView"
 - "UIViewController"
+- "_ColorLiteralType"
 depends-member:
 - !private ["SK", "isEmpty"]
 - !private ["So15CALayerDelegateP", "addGestureRecognizer"]
@@ -48,7 +53,6 @@ depends-member:
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
 - !private ["So6CGRectV", "width"]
 - !private ["So6CGSizeV", "init"]
-- !private ["So6CGSizeV", "init"]
 - ["s7CVarArgP", "RegistrationViewModel"]
 - !private ["s7CVarArgP", "SignupPasswordController"]
 - ["s7CVarArgP", "UIButton"]
@@ -73,7 +77,6 @@ depends-member:
 - !private ["s7CVarArgP", "handleTapDismiss"]
 - ["s7CVarArgP", "handleTextChange"]
 - ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "isEmpty"]
 - ["s7CVarArgP", "isEnabled"]
 - ["s7CVarArgP", "keyboardType"]
@@ -148,7 +151,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "handleTapDismiss"]
 - ["s28CustomDebugStringConvertibleP", "handleTextChange"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isEmpty"]
 - ["s28CustomDebugStringConvertibleP", "isEnabled"]
 - ["s28CustomDebugStringConvertibleP", "keyboardType"]
@@ -180,7 +182,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "endEditing"]
 - !private ["s17CustomReflectableP", "frame"]
 - !private ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "isEmpty"]
 - !private ["s17CustomReflectableP", "leadingAnchor"]
 - !private ["s17CustomReflectableP", "safeAreaLayoutGuide"]
@@ -211,7 +212,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "handleTapDismiss"]
 - ["s23CustomStringConvertibleP", "handleTextChange"]
 - ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "init"]
 - !private ["s23CustomStringConvertibleP", "isEmpty"]
 - ["s23CustomStringConvertibleP", "isEnabled"]
 - ["s23CustomStringConvertibleP", "keyboardType"]
@@ -242,7 +242,6 @@ depends-member:
 - !private ["Se", "endEditing"]
 - !private ["Se", "frame"]
 - !private ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "isEmpty"]
 - !private ["Se", "leadingAnchor"]
 - !private ["Se", "safeAreaLayoutGuide"]
@@ -254,7 +253,6 @@ depends-member:
 - !private ["SE", "backgroundColor"]
 - !private ["SE", "endEditing"]
 - !private ["SE", "frame"]
-- !private ["SE", "init"]
 - !private ["SE", "init"]
 - !private ["SE", "isEmpty"]
 - !private ["SE", "leadingAnchor"]
@@ -289,7 +287,6 @@ depends-member:
 - !private ["SQ", "handleTapDismiss"]
 - ["SQ", "handleTextChange"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isEmpty"]
 - ["SQ", "isEnabled"]
 - ["SQ", "keyboardType"]
@@ -362,7 +359,6 @@ depends-member:
 - !private ["SH", "handleTapDismiss"]
 - ["SH", "handleTextChange"]
 - ["SH", "init"]
-- !private ["SH", "init"]
 - !private ["SH", "isEmpty"]
 - ["SH", "isEnabled"]
 - ["SH", "keyboardType"]
@@ -414,7 +410,6 @@ depends-member:
 - !private ["So8NSCodingP", "handleTapDismiss"]
 - ["So8NSCodingP", "handleTextChange"]
 - ["So8NSCodingP", "init"]
-- !private ["So8NSCodingP", "init"]
 - !private ["So8NSCodingP", "isEmpty"]
 - ["So8NSCodingP", "isEnabled"]
 - ["So8NSCodingP", "keyboardType"]
@@ -454,7 +449,6 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "handleSignupNext"]
 - !private ["So26NSExtensionRequestHandlingP", "handleTapDismiss"]
 - ["So26NSExtensionRequestHandlingP", "handleTextChange"]
-- !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "lineView"]
 - !private ["So26NSExtensionRequestHandlingP", "navigationController"]
@@ -496,7 +490,6 @@ depends-member:
 - ["So8NSObjectC", "handleTapDismiss"]
 - ["So8NSObjectC", "handleTextChange"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
 - !private ["So8NSObjectC", "isEmpty"]
 - ["So8NSObjectC", "isEnabled"]
 - ["So8NSObjectC", "keyboardType"]
@@ -545,7 +538,6 @@ depends-member:
 - !private ["So8NSObjectP", "handleTapDismiss"]
 - ["So8NSObjectP", "handleTextChange"]
 - ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "init"]
 - !private ["So8NSObjectP", "isEmpty"]
 - ["So8NSObjectP", "isEnabled"]
 - ["So8NSObjectP", "keyboardType"]
@@ -704,7 +696,6 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "handleTapDismiss"]
 - ["So21UIAppearanceContainerP", "handleTextChange"]
 - ["So21UIAppearanceContainerP", "init"]
-- !private ["So21UIAppearanceContainerP", "init"]
 - ["So21UIAppearanceContainerP", "isEnabled"]
 - ["So21UIAppearanceContainerP", "keyboardType"]
 - !private ["So21UIAppearanceContainerP", "leadingAnchor"]
@@ -747,7 +738,6 @@ depends-member:
 - ["So18UIContentContainerP", "handleSignupNext"]
 - !private ["So18UIContentContainerP", "handleTapDismiss"]
 - ["So18UIContentContainerP", "handleTextChange"]
-- !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "lineView"]
 - !private ["So18UIContentContainerP", "navigationController"]
@@ -823,7 +813,6 @@ depends-member:
 - ["So13UIDynamicItemP", "titleLabel"]
 - !private ["So13UIDynamicItemP", "trailingAnchor"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - ["So18UIFocusEnvironmentP", "RegistrationViewModel"]
 - !private ["So18UIFocusEnvironmentP", "SignupPasswordController"]
 - ["So18UIFocusEnvironmentP", "UIButton"]
@@ -848,7 +837,6 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "handleTapDismiss"]
 - ["So18UIFocusEnvironmentP", "handleTextChange"]
 - ["So18UIFocusEnvironmentP", "init"]
-- !private ["So18UIFocusEnvironmentP", "init"]
 - ["So18UIFocusEnvironmentP", "isEnabled"]
 - ["So18UIFocusEnvironmentP", "keyboardType"]
 - !private ["So18UIFocusEnvironmentP", "leadingAnchor"]
@@ -952,7 +940,6 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "handleTapDismiss"]
 - ["So30UIPasteConfigurationSupportingP", "handleTextChange"]
 - ["So30UIPasteConfigurationSupportingP", "init"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - ["So30UIPasteConfigurationSupportingP", "isEnabled"]
 - ["So30UIPasteConfigurationSupportingP", "keyboardType"]
 - !private ["So30UIPasteConfigurationSupportingP", "leadingAnchor"]
@@ -997,7 +984,6 @@ depends-member:
 - ["So11UIResponderC", "handleTapDismiss"]
 - ["So11UIResponderC", "handleTextChange"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - ["So11UIResponderC", "isEnabled"]
 - ["So11UIResponderC", "keyboardType"]
 - !private ["So11UIResponderC", "leadingAnchor"]
@@ -1042,7 +1028,6 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "handleTapDismiss"]
 - ["So30UIResponderStandardEditActionsP", "handleTextChange"]
 - ["So30UIResponderStandardEditActionsP", "init"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - ["So30UIResponderStandardEditActionsP", "isEnabled"]
 - ["So30UIResponderStandardEditActionsP", "keyboardType"]
 - !private ["So30UIResponderStandardEditActionsP", "leadingAnchor"]
@@ -1084,7 +1069,6 @@ depends-member:
 - ["So16UIStateRestoringP", "handleSignupNext"]
 - !private ["So16UIStateRestoringP", "handleTapDismiss"]
 - ["So16UIStateRestoringP", "handleTextChange"]
-- !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "lineView"]
 - !private ["So16UIStateRestoringP", "navigationController"]
@@ -1164,7 +1148,6 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "handleTapDismiss"]
 - ["So18UITraitEnvironmentP", "handleTextChange"]
 - ["So18UITraitEnvironmentP", "init"]
-- !private ["So18UITraitEnvironmentP", "init"]
 - ["So18UITraitEnvironmentP", "isEnabled"]
 - ["So18UITraitEnvironmentP", "keyboardType"]
 - !private ["So18UITraitEnvironmentP", "leadingAnchor"]
@@ -1209,7 +1192,6 @@ depends-member:
 - !private ["So23UIUserActivityRestoringP", "handleTapDismiss"]
 - ["So23UIUserActivityRestoringP", "handleTextChange"]
 - ["So23UIUserActivityRestoringP", "init"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - ["So23UIUserActivityRestoringP", "isEnabled"]
 - ["So23UIUserActivityRestoringP", "keyboardType"]
 - !private ["So23UIUserActivityRestoringP", "leadingAnchor"]
@@ -1266,7 +1248,6 @@ depends-member:
 - ["So16UIViewControllerC", "handleTapDismiss"]
 - ["So16UIViewControllerC", "handleTextChange"]
 - ["So16UIViewControllerC", "init"]
-- !private ["So16UIViewControllerC", "init"]
 - ["So16UIViewControllerC", "lineView"]
 - !private ["So16UIViewControllerC", "navigationController"]
 - ["So16UIViewControllerC", "nextButton"]
@@ -1280,7 +1261,6 @@ depends-member:
 - ["So16UIViewControllerC", "viewDidLoad"]
 - ["So12UIFontWeighta", "bold"]
 - ["So12UIFontWeighta", "semibold"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "isEmpty"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "width"]
@@ -1316,7 +1296,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "handleTapDismiss"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "handleTextChange"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "isEmpty"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "isEnabled"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "keyboardType"]
@@ -1347,7 +1326,6 @@ depends-member:
 - ["s21_ObjectiveCBridgeableP", "bold"]
 - !private ["s21_ObjectiveCBridgeableP", "endEditing"]
 - !private ["s21_ObjectiveCBridgeableP", "frame"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "isEmpty"]
 - !private ["s21_ObjectiveCBridgeableP", "leadingAnchor"]

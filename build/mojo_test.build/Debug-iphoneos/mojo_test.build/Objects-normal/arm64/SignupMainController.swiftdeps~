@@ -13,19 +13,14 @@ depends-top-level:
 - !private "*"
 - !private "/"
 - "AssignmentPrecedence"
-- "BooleanLiteralType"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - !private "NewLoginController"
 - !private "SignupEmailController"
 - "SignupMainController"
-- "StringLiteralType"
 - "UIButton"
 - "UIFont"
 - !private "UIImage"
 - "UILabel"
 - "UIViewController"
-- "_ColorLiteralType"
 depends-member:
 - ["So12UIButtonTypeV", "system"]
 - ["So7CALayerC", "cornerRadius"]

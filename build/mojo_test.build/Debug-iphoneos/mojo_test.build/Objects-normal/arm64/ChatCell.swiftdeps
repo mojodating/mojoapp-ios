@@ -10,24 +10,19 @@ depends-top-level:
 - !private "=="
 - "AssignmentPrecedence"
 - "Auth"
-- !private "BooleanLiteralType"
 - "CGRect"
 - "ChatCell"
 - "Conversation"
 - !private "Date"
 - !private "Firestore"
-- "FloatLiteralType"
-- "IntegerLiteralType"
 - "Message"
 - "NSCoder"
 - !private "String"
-- "StringLiteralType"
 - "UICollectionViewCell"
 - "UIImageView"
 - "UILabel"
 - !private "URL"
 - "User"
-- !private "_ColorLiteralType"
 - "_ImageLiteralType"
 - !private "fatalError"
 - !private "print"
@@ -78,7 +73,6 @@ depends-member:
 - !private ["So15CALayerDelegateP", "trailingAnchor"]
 - !private ["So15CALayerDelegateP", "unreadImage"]
 - !private ["So15CALayerDelegateP", "user"]
-- !private ["So6CGSizeV", "init"]
 - !private ["So6CGSizeV", "init"]
 - ["s7CVarArgP", "Auth"]
 - !private ["s7CVarArgP", "Date"]
@@ -258,7 +252,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "forEach"]
 - !private ["s28CustomDebugStringConvertibleP", "getDocument"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "init"]
 - !private ["s28CustomDebugStringConvertibleP", "isActive"]
 - !private ["s28CustomDebugStringConvertibleP", "isHidden"]
 - !private ["s28CustomDebugStringConvertibleP", "last"]
@@ -286,7 +279,6 @@ depends-member:
 - !private ["s17CustomReflectableP", "black"]
 - !private ["s17CustomReflectableP", "forEach"]
 - ["s17CustomReflectableP", "init"]
-- !private ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "last"]
 - !private ["s17CustomReflectableP", "lightGray"]
 - !private ["s17CustomReflectableP", "white"]
@@ -359,7 +351,6 @@ depends-member:
 - !private ["Se", "black"]
 - !private ["Se", "forEach"]
 - ["Se", "init"]
-- !private ["Se", "init"]
 - !private ["Se", "last"]
 - !private ["Se", "lightGray"]
 - !private ["Se", "white"]
@@ -376,7 +367,6 @@ depends-member:
 - !private ["SE", "black"]
 - !private ["SE", "forEach"]
 - ["SE", "init"]
-- !private ["SE", "init"]
 - !private ["SE", "last"]
 - !private ["SE", "lightGray"]
 - !private ["SE", "white"]
@@ -416,7 +406,6 @@ depends-member:
 - !private ["SQ", "forEach"]
 - !private ["SQ", "getDocument"]
 - ["SQ", "init"]
-- !private ["SQ", "init"]
 - !private ["SQ", "isActive"]
 - !private ["SQ", "isHidden"]
 - !private ["SQ", "last"]
@@ -980,7 +969,6 @@ depends-member:
 - !private ["So13UIDynamicItemP", "unreadImage"]
 - !private ["So13UIDynamicItemP", "user"]
 - !private ["So12UIEdgeInsetsV", "init"]
-- !private ["So12UIEdgeInsetsV", "init"]
 - ["So18UIFocusEnvironmentP", "Auth"]
 - !private ["So18UIFocusEnvironmentP", "Date"]
 - !private ["So18UIFocusEnvironmentP", "Firestore"]
@@ -1339,7 +1327,6 @@ depends-member:
 - !private ["s14_ArrayProtocolP", "last"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "StringFromCustomDate"]
 - !private ["s30_CustomPlaygroundQuickLookableP", "init"]
-- !private ["s30_CustomPlaygroundQuickLookableP", "init"]
 - !private ["s24_DestructorSafeContainerP", "append"]
 - !private ["s24_DestructorSafeContainerP", "forEach"]
 - ["s24_DestructorSafeContainerP", "init"]
@@ -1415,7 +1402,6 @@ depends-member:
 - !private ["s21_ObjectiveCBridgeableP", "black"]
 - !private ["s21_ObjectiveCBridgeableP", "forEach"]
 - ["s21_ObjectiveCBridgeableP", "init"]
-- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "last"]
 - !private ["s21_ObjectiveCBridgeableP", "lightGray"]
 - ["s21_ObjectiveCBridgeableP", "semibold"]

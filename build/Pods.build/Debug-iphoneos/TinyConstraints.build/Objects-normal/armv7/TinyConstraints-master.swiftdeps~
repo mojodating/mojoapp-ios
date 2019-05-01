@@ -1,0 +1,11 @@
+version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+options: "219c9b10f4aa79074e438e1b3550ce88"
+build_time: [1556300844, 917771000]
+inputs:
+  "/Users/yunyunchen1/dev/mojo-test/Pods/TinyConstraints/TinyConstraints/Classes/Abstraction.swift": [1553888967, 365944233]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/TinyConstraints/TinyConstraints/Classes/Constrainable.swift": [1553888967, 367343749]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/TinyConstraints/TinyConstraints/Classes/Constraints.swift": [1553888967, 365483494]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/TinyConstraints/TinyConstraints/Classes/Stack.swift": [1553888967, 365689984]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/TinyConstraints/TinyConstraints/Classes/TinyConstraints+superview.swift": [1553888967, 366516563]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/TinyConstraints/TinyConstraints/Classes/TinyConstraints.swift": [1553888967, 366936430]
+  "/Users/yunyunchen1/dev/mojo-test/Pods/TinyConstraints/TinyConstraints/Classes/TinyEdgeInsets.swift": [1553888967, 366239000]

@@ -20,13 +20,11 @@ depends-top-level:
 - !private "=="
 - "AnyHashable"
 - "AppDelegate"
-- !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
 - !private "BooleanLiteralType"
 - "CastingPrecedence"
 - "Data"
-- !private "Dictionary"
 - "Error"
 - !private "FirebaseApp"
 - !private "Firestore"
@@ -40,18 +38,15 @@ depends-top-level:
 - "Messaging"
 - "MessagingDelegate"
 - "MessagingRemoteMessage"
-- !private "NSError"
+- "NSError"
 - "NSPersistentContainer"
 - !private "Notification"
 - !private "NotificationCenter"
-- !private "PrivateChatController"
 - "String"
 - "StringLiteralType"
 - "UIApplication"
 - "UIApplicationDelegate"
 - "UIBackgroundFetchResult"
-- !private "UICollectionViewFlowLayout"
-- !private "UINavigationController"
 - "UIResponder"
 - !private "UIUserNotificationSettings"
 - "UIWindow"
@@ -62,7 +57,7 @@ depends-top-level:
 - "UNUserNotificationCenter"
 - "UNUserNotificationCenterDelegate"
 - "Void"
-- !private "fatalError"
+- "fatalError"
 - "functions"
 - !private "print"
 depends-member:
@@ -78,16 +73,13 @@ depends-member:
 - !private ["9mojo_test11AppDelegateC", "MainTabBarController"]
 - ["9mojo_test11AppDelegateC", "Messaging"]
 - ["9mojo_test11AppDelegateC", "MessagingRemoteMessage"]
-- !private ["9mojo_test11AppDelegateC", "NSError"]
+- ["9mojo_test11AppDelegateC", "NSError"]
 - ["9mojo_test11AppDelegateC", "NSPersistentContainer"]
 - !private ["9mojo_test11AppDelegateC", "Notification"]
 - !private ["9mojo_test11AppDelegateC", "NotificationCenter"]
-- !private ["9mojo_test11AppDelegateC", "PrivateChatController"]
 - ["9mojo_test11AppDelegateC", "String"]
 - ["9mojo_test11AppDelegateC", "UIApplication"]
 - ["9mojo_test11AppDelegateC", "UIBackgroundFetchResult"]
-- !private ["9mojo_test11AppDelegateC", "UICollectionViewFlowLayout"]
-- !private ["9mojo_test11AppDelegateC", "UINavigationController"]
 - !private ["9mojo_test11AppDelegateC", "UIUserNotificationSettings"]
 - ["9mojo_test11AppDelegateC", "UIWindow"]
 - !private ["9mojo_test11AppDelegateC", "UNAuthorizationOptions"]
@@ -110,7 +102,7 @@ depends-member:
 - ["9mojo_test11AppDelegateC", "applicationWillTerminate"]
 - !private ["9mojo_test11AppDelegateC", "attempRegisterForNotifications"]
 - ["9mojo_test11AppDelegateC", "deinit"]
-- !private ["9mojo_test11AppDelegateC", "fatalError"]
+- ["9mojo_test11AppDelegateC", "fatalError"]
 - !private ["9mojo_test11AppDelegateC", "functions"]
 - ["9mojo_test11AppDelegateC", "gcmMessageIDKey"]
 - ["9mojo_test11AppDelegateC", "init"]
@@ -121,12 +113,6 @@ depends-member:
 - ["9mojo_test11AppDelegateC", "saveContext"]
 - ["9mojo_test11AppDelegateC", "userNotificationCenter"]
 - ["9mojo_test11AppDelegateC", "window"]
-- !private ["Sa", "subscript"]
-- !private ["s13ArrayProtocolP", "subscript"]
-- ["SK", "init"]
-- ["SK", "init"]
-- !private ["SK", "subscript"]
-- !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "makeKeyAndVisible"]
 - !private ["So15CALayerDelegateP", "rootViewController"]
@@ -138,17 +124,14 @@ depends-member:
 - ["s7CVarArgP", "LaunchOptionsKey"]
 - !private ["s7CVarArgP", "MainTabBarController"]
 - !private ["s7CVarArgP", "Messaging"]
-- !private ["s7CVarArgP", "NSPersistentContainer"]
+- ["s7CVarArgP", "NSPersistentContainer"]
 - !private ["s7CVarArgP", "Notification"]
 - !private ["s7CVarArgP", "NotificationCenter"]
-- !private ["s7CVarArgP", "PrivateChatController"]
 - !private ["s7CVarArgP", "UIBackgroundFetchResult"]
-- !private ["s7CVarArgP", "UICollectionViewFlowLayout"]
 - !private ["s7CVarArgP", "UIUserNotificationSettings"]
 - !private ["s7CVarArgP", "UIWindow"]
 - !private ["s7CVarArgP", "UNUserNotificationCenter"]
 - ["s7CVarArgP", ""]
-- !private ["s7CVarArgP", "_getBuiltinLogicValue"]
 - !private ["s7CVarArgP", "appData"]
 - ["s7CVarArgP", "application"]
 - ["s7CVarArgP", "applicationDidBecomeActive"]
@@ -168,21 +151,19 @@ depends-member:
 - !private ["s7CVarArgP", "code"]
 - !private ["s7CVarArgP", "configure"]
 - !private ["s7CVarArgP", "content"]
-- !private ["s7CVarArgP", "conversitionId"]
 - !private ["s7CVarArgP", "current"]
 - !private ["s7CVarArgP", "default"]
 - !private ["s7CVarArgP", "delegate"]
 - !private ["s7CVarArgP", "dismiss"]
 - !private ["s7CVarArgP", "domain"]
-- !private ["s7CVarArgP", "fatalError"]
+- ["s7CVarArgP", "fatalError"]
 - !private ["s7CVarArgP", "firestore"]
 - ["s7CVarArgP", "functions"]
 - !private ["s7CVarArgP", "gcmMessageIDKey"]
 - !private ["s7CVarArgP", "hasChanges"]
 - !private ["s7CVarArgP", "httpsCallable"]
 - ["s7CVarArgP", "init"]
-- ["s7CVarArgP", "init"]
-- !private ["s7CVarArgP", "loadPersistentStores"]
+- ["s7CVarArgP", "loadPersistentStores"]
 - !private ["s7CVarArgP", "localizedDescription"]
 - !private ["s7CVarArgP", "makeKeyAndVisible"]
 - ["s7CVarArgP", "messaging"]
@@ -191,7 +172,6 @@ depends-member:
 - !private ["s7CVarArgP", "post"]
 - !private ["s7CVarArgP", "presentedViewController"]
 - !private ["s7CVarArgP", "print"]
-- !private ["s7CVarArgP", "pushViewController"]
 - !private ["s7CVarArgP", "registerForRemoteNotifications"]
 - !private ["s7CVarArgP", "registerUserNotificationSettings"]
 - !private ["s7CVarArgP", "request"]
@@ -202,18 +182,11 @@ depends-member:
 - !private ["s7CVarArgP", "selectedIndex"]
 - !private ["s7CVarArgP", "settings"]
 - !private ["s7CVarArgP", "subscript"]
-- !private ["s7CVarArgP", "userInfo"]
+- ["s7CVarArgP", "userInfo"]
 - ["s7CVarArgP", "userNotificationCenter"]
 - !private ["s7CVarArgP", "viewContext"]
-- !private ["s7CVarArgP", "viewControllers"]
 - ["s7CVarArgP", "window"]
-- !private ["9mojo_test30ChatInputAccessaryViewDelegateP", "conversitionId"]
-- !private ["9mojo_test30ChatInputAccessaryViewDelegateP", "init"]
-- ["Sl", "init"]
-- ["Sl", "init"]
 - !private ["Sl", "subscript"]
-- ["SL", "init"]
-- ["SL", "init"]
 - !private ["15TinyConstraints13ConstrainableP", "init"]
 - !private ["15TinyConstraints13ConstrainableP", "makeKeyAndVisible"]
 - !private ["15TinyConstraints13ConstrainableP", "rootViewController"]
@@ -225,13 +198,11 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "LaunchOptionsKey"]
 - !private ["s28CustomDebugStringConvertibleP", "MainTabBarController"]
 - !private ["s28CustomDebugStringConvertibleP", "Messaging"]
-- !private ["s28CustomDebugStringConvertibleP", "NSPersistentContainer"]
+- ["s28CustomDebugStringConvertibleP", "NSPersistentContainer"]
 - !private ["s28CustomDebugStringConvertibleP", "Name"]
 - !private ["s28CustomDebugStringConvertibleP", "Notification"]
 - !private ["s28CustomDebugStringConvertibleP", "NotificationCenter"]
-- !private ["s28CustomDebugStringConvertibleP", "PrivateChatController"]
 - !private ["s28CustomDebugStringConvertibleP", "UIBackgroundFetchResult"]
-- !private ["s28CustomDebugStringConvertibleP", "UICollectionViewFlowLayout"]
 - !private ["s28CustomDebugStringConvertibleP", "UIUserNotificationSettings"]
 - !private ["s28CustomDebugStringConvertibleP", "UIWindow"]
 - !private ["s28CustomDebugStringConvertibleP", "UNUserNotificationCenter"]
@@ -255,21 +226,19 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "code"]
 - !private ["s28CustomDebugStringConvertibleP", "configure"]
 - !private ["s28CustomDebugStringConvertibleP", "content"]
-- !private ["s28CustomDebugStringConvertibleP", "conversitionId"]
 - !private ["s28CustomDebugStringConvertibleP", "current"]
 - !private ["s28CustomDebugStringConvertibleP", "default"]
 - !private ["s28CustomDebugStringConvertibleP", "delegate"]
 - !private ["s28CustomDebugStringConvertibleP", "dismiss"]
 - !private ["s28CustomDebugStringConvertibleP", "domain"]
-- !private ["s28CustomDebugStringConvertibleP", "fatalError"]
+- ["s28CustomDebugStringConvertibleP", "fatalError"]
 - !private ["s28CustomDebugStringConvertibleP", "firestore"]
 - ["s28CustomDebugStringConvertibleP", "functions"]
 - !private ["s28CustomDebugStringConvertibleP", "gcmMessageIDKey"]
 - !private ["s28CustomDebugStringConvertibleP", "hasChanges"]
 - !private ["s28CustomDebugStringConvertibleP", "httpsCallable"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", "init"]
-- !private ["s28CustomDebugStringConvertibleP", "loadPersistentStores"]
+- ["s28CustomDebugStringConvertibleP", "loadPersistentStores"]
 - !private ["s28CustomDebugStringConvertibleP", "localizedDescription"]
 - !private ["s28CustomDebugStringConvertibleP", "makeKeyAndVisible"]
 - ["s28CustomDebugStringConvertibleP", "messaging"]
@@ -278,7 +247,6 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "post"]
 - !private ["s28CustomDebugStringConvertibleP", "presentedViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
-- !private ["s28CustomDebugStringConvertibleP", "pushViewController"]
 - !private ["s28CustomDebugStringConvertibleP", "registerForRemoteNotifications"]
 - !private ["s28CustomDebugStringConvertibleP", "registerUserNotificationSettings"]
 - !private ["s28CustomDebugStringConvertibleP", "request"]
@@ -289,18 +257,11 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "selectedIndex"]
 - !private ["s28CustomDebugStringConvertibleP", "settings"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
-- !private ["s28CustomDebugStringConvertibleP", "userInfo"]
+- ["s28CustomDebugStringConvertibleP", "userInfo"]
 - ["s28CustomDebugStringConvertibleP", "userNotificationCenter"]
 - !private ["s28CustomDebugStringConvertibleP", "viewContext"]
-- !private ["s28CustomDebugStringConvertibleP", "viewControllers"]
 - ["s28CustomDebugStringConvertibleP", "window"]
-- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
-- ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "Name"]
-- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
-- ["s17CustomReflectableP", "init"]
-- ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "FirebaseApp"]
 - !private ["s23CustomStringConvertibleP", "Firestore"]
@@ -310,19 +271,18 @@ depends-member:
 - ["s23CustomStringConvertibleP", "LaunchOptionsKey"]
 - !private ["s23CustomStringConvertibleP", "MainTabBarController"]
 - !private ["s23CustomStringConvertibleP", "Messaging"]
-- !private ["s23CustomStringConvertibleP", "NSPersistentContainer"]
+- ["s23CustomStringConvertibleP", "NSPersistentContainer"]
 - !private ["s23CustomStringConvertibleP", "Name"]
 - !private ["s23CustomStringConvertibleP", "Notification"]
 - !private ["s23CustomStringConvertibleP", "NotificationCenter"]
-- !private ["s23CustomStringConvertibleP", "PrivateChatController"]
 - !private ["s23CustomStringConvertibleP", "UIBackgroundFetchResult"]
-- !private ["s23CustomStringConvertibleP", "UICollectionViewFlowLayout"]
 - !private ["s23CustomStringConvertibleP", "UIUserNotificationSettings"]
 - !private ["s23CustomStringConvertibleP", "UIWindow"]
 - !private ["s23CustomStringConvertibleP", "UNUserNotificationCenter"]
 - ["s23CustomStringConvertibleP", ""]
-- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "appData"]
+- ["s23CustomStringConvertibleP", "appendInterpolation"]
+- ["s23CustomStringConvertibleP", "appendLiteral"]
 - ["s23CustomStringConvertibleP", "application"]
 - ["s23CustomStringConvertibleP", "applicationDidBecomeActive"]
 - ["s23CustomStringConvertibleP", "applicationDidEnterBackground"]
@@ -341,21 +301,19 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "code"]
 - !private ["s23CustomStringConvertibleP", "configure"]
 - !private ["s23CustomStringConvertibleP", "content"]
-- !private ["s23CustomStringConvertibleP", "conversitionId"]
 - !private ["s23CustomStringConvertibleP", "current"]
 - !private ["s23CustomStringConvertibleP", "default"]
 - !private ["s23CustomStringConvertibleP", "delegate"]
 - !private ["s23CustomStringConvertibleP", "dismiss"]
 - !private ["s23CustomStringConvertibleP", "domain"]
-- !private ["s23CustomStringConvertibleP", "fatalError"]
+- ["s23CustomStringConvertibleP", "fatalError"]
 - !private ["s23CustomStringConvertibleP", "firestore"]
 - ["s23CustomStringConvertibleP", "functions"]
 - !private ["s23CustomStringConvertibleP", "gcmMessageIDKey"]
 - !private ["s23CustomStringConvertibleP", "hasChanges"]
 - !private ["s23CustomStringConvertibleP", "httpsCallable"]
 - ["s23CustomStringConvertibleP", "init"]
-- ["s23CustomStringConvertibleP", "init"]
-- !private ["s23CustomStringConvertibleP", "loadPersistentStores"]
+- ["s23CustomStringConvertibleP", "loadPersistentStores"]
 - !private ["s23CustomStringConvertibleP", "localizedDescription"]
 - !private ["s23CustomStringConvertibleP", "makeKeyAndVisible"]
 - ["s23CustomStringConvertibleP", "messaging"]
@@ -364,7 +322,6 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "post"]
 - !private ["s23CustomStringConvertibleP", "presentedViewController"]
 - !private ["s23CustomStringConvertibleP", "print"]
-- !private ["s23CustomStringConvertibleP", "pushViewController"]
 - !private ["s23CustomStringConvertibleP", "registerForRemoteNotifications"]
 - !private ["s23CustomStringConvertibleP", "registerUserNotificationSettings"]
 - !private ["s23CustomStringConvertibleP", "request"]
@@ -375,19 +332,14 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "selectedIndex"]
 - !private ["s23CustomStringConvertibleP", "settings"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
-- !private ["s23CustomStringConvertibleP", "userInfo"]
+- ["s23CustomStringConvertibleP", "userInfo"]
 - ["s23CustomStringConvertibleP", "userNotificationCenter"]
 - !private ["s23CustomStringConvertibleP", "viewContext"]
-- !private ["s23CustomStringConvertibleP", "viewControllers"]
 - ["s23CustomStringConvertibleP", "window"]
-- !private ["Se", "_getBuiltinLogicValue"]
-- ["Se", "init"]
-- ["Se", "init"]
 - !private ["Se", "subscript"]
+- ["s26DefaultStringInterpolationV", "appendInterpolation"]
+- ["s26DefaultStringInterpolationV", "appendLiteral"]
 - !private ["SD", "subscript"]
-- !private ["SE", "_getBuiltinLogicValue"]
-- ["SE", "init"]
-- ["SE", "init"]
 - !private ["SE", "subscript"]
 - !private ["SQ", "FirebaseApp"]
 - !private ["SQ", "Firestore"]
@@ -397,18 +349,15 @@ depends-member:
 - ["SQ", "LaunchOptionsKey"]
 - !private ["SQ", "MainTabBarController"]
 - !private ["SQ", "Messaging"]
-- !private ["SQ", "NSPersistentContainer"]
+- ["SQ", "NSPersistentContainer"]
 - !private ["SQ", "Name"]
 - !private ["SQ", "Notification"]
 - !private ["SQ", "NotificationCenter"]
-- !private ["SQ", "PrivateChatController"]
 - !private ["SQ", "UIBackgroundFetchResult"]
-- !private ["SQ", "UICollectionViewFlowLayout"]
 - !private ["SQ", "UIUserNotificationSettings"]
 - !private ["SQ", "UIWindow"]
 - !private ["SQ", "UNUserNotificationCenter"]
 - ["SQ", ""]
-- !private ["SQ", "_getBuiltinLogicValue"]
 - !private ["SQ", "alert"]
 - !private ["SQ", "appData"]
 - ["SQ", "application"]
@@ -430,21 +379,19 @@ depends-member:
 - !private ["SQ", "code"]
 - !private ["SQ", "configure"]
 - !private ["SQ", "content"]
-- !private ["SQ", "conversitionId"]
 - !private ["SQ", "current"]
 - !private ["SQ", "default"]
 - !private ["SQ", "delegate"]
 - !private ["SQ", "dismiss"]
 - !private ["SQ", "domain"]
-- !private ["SQ", "fatalError"]
+- ["SQ", "fatalError"]
 - !private ["SQ", "firestore"]
 - ["SQ", "functions"]
 - !private ["SQ", "gcmMessageIDKey"]
 - !private ["SQ", "hasChanges"]
 - !private ["SQ", "httpsCallable"]
 - ["SQ", "init"]
-- ["SQ", "init"]
-- !private ["SQ", "loadPersistentStores"]
+- ["SQ", "loadPersistentStores"]
 - !private ["SQ", "localizedDescription"]
 - !private ["SQ", "makeKeyAndVisible"]
 - ["SQ", "messaging"]
@@ -454,7 +401,6 @@ depends-member:
 - !private ["SQ", "post"]
 - !private ["SQ", "presentedViewController"]
 - !private ["SQ", "print"]
-- !private ["SQ", "pushViewController"]
 - !private ["SQ", "registerForRemoteNotifications"]
 - !private ["SQ", "registerUserNotificationSettings"]
 - !private ["SQ", "request"]
@@ -466,27 +412,18 @@ depends-member:
 - !private ["SQ", "settings"]
 - !private ["SQ", "sound"]
 - !private ["SQ", "subscript"]
-- !private ["SQ", "userInfo"]
+- ["SQ", "userInfo"]
 - ["SQ", "userNotificationCenter"]
 - !private ["SQ", "viewContext"]
-- !private ["SQ", "viewControllers"]
 - ["SQ", "window"]
 - !private ["s5ErrorP", "code"]
 - !private ["s5ErrorP", "domain"]
 - !private ["s5ErrorP", "localizedDescription"]
-- !private ["s5ErrorP", "userInfo"]
+- ["s5ErrorP", "userInfo"]
 - !private ["s25ExpressibleByArrayLiteralP", "alert"]
 - !private ["s25ExpressibleByArrayLiteralP", "badge"]
 - !private ["s25ExpressibleByArrayLiteralP", "sound"]
-- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
-- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["So6FIRAppC", "configure"]
 - !private ["So12FIRFirestoreC", "firestore"]
 - !private ["So12FIRFirestoreC", "settings"]
@@ -503,18 +440,15 @@ depends-member:
 - ["SH", "LaunchOptionsKey"]
 - !private ["SH", "MainTabBarController"]
 - !private ["SH", "Messaging"]
-- !private ["SH", "NSPersistentContainer"]
+- ["SH", "NSPersistentContainer"]
 - !private ["SH", "Name"]
 - !private ["SH", "Notification"]
 - !private ["SH", "NotificationCenter"]
-- !private ["SH", "PrivateChatController"]
 - !private ["SH", "UIBackgroundFetchResult"]
-- !private ["SH", "UICollectionViewFlowLayout"]
 - !private ["SH", "UIUserNotificationSettings"]
 - !private ["SH", "UIWindow"]
 - !private ["SH", "UNUserNotificationCenter"]
 - ["SH", ""]
-- !private ["SH", "_getBuiltinLogicValue"]
 - !private ["SH", "appData"]
 - ["SH", "application"]
 - ["SH", "applicationDidBecomeActive"]
@@ -534,21 +468,19 @@ depends-member:
 - !private ["SH", "code"]
 - !private ["SH", "configure"]
 - !private ["SH", "content"]
-- !private ["SH", "conversitionId"]
 - !private ["SH", "current"]
 - !private ["SH", "default"]
 - !private ["SH", "delegate"]
 - !private ["SH", "dismiss"]
 - !private ["SH", "domain"]
-- !private ["SH", "fatalError"]
+- ["SH", "fatalError"]
 - !private ["SH", "firestore"]
 - ["SH", "functions"]
 - !private ["SH", "gcmMessageIDKey"]
 - !private ["SH", "hasChanges"]
 - !private ["SH", "httpsCallable"]
 - ["SH", "init"]
-- ["SH", "init"]
-- !private ["SH", "loadPersistentStores"]
+- ["SH", "loadPersistentStores"]
 - !private ["SH", "localizedDescription"]
 - !private ["SH", "makeKeyAndVisible"]
 - ["SH", "messaging"]
@@ -558,7 +490,6 @@ depends-member:
 - !private ["SH", "post"]
 - !private ["SH", "presentedViewController"]
 - !private ["SH", "print"]
-- !private ["SH", "pushViewController"]
 - !private ["SH", "registerForRemoteNotifications"]
 - !private ["SH", "registerUserNotificationSettings"]
 - !private ["SH", "request"]
@@ -569,23 +500,17 @@ depends-member:
 - !private ["SH", "selectedIndex"]
 - !private ["SH", "settings"]
 - !private ["SH", "subscript"]
-- !private ["SH", "userInfo"]
+- ["SH", "userInfo"]
 - ["SH", "userNotificationCenter"]
 - !private ["SH", "viewContext"]
-- !private ["SH", "viewControllers"]
 - ["SH", "window"]
 - !private ["9mojo_test23LoginControllerDelegateP", "init"]
 - !private ["9mojo_test23LoginControllerDelegateP", "presentedViewController"]
 - !private ["9mojo_test23LoginControllerDelegateP", "selectedIndex"]
-- !private ["9mojo_test23LoginControllerDelegateP", "viewControllers"]
-- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
-- ["s25LosslessStringConvertibleP", "init"]
-- ["s25LosslessStringConvertibleP", "init"]
 - !private ["9mojo_test20MainTabBarControllerC", "deinit"]
 - !private ["9mojo_test20MainTabBarControllerC", "init"]
 - !private ["9mojo_test20MainTabBarControllerC", "presentedViewController"]
 - !private ["9mojo_test20MainTabBarControllerC", "selectedIndex"]
-- !private ["9mojo_test20MainTabBarControllerC", "viewControllers"]
 - !private ["So12FIRMessagingC", "delegate"]
 - !private ["So12FIRMessagingC", "messaging"]
 - !private ["So20FIRMessagingDelegateP", "FirebaseApp"]
@@ -595,12 +520,10 @@ depends-member:
 - !private ["So20FIRMessagingDelegateP", "FunctionsErrorDomain"]
 - !private ["So20FIRMessagingDelegateP", "MainTabBarController"]
 - !private ["So20FIRMessagingDelegateP", "Messaging"]
-- !private ["So20FIRMessagingDelegateP", "NSPersistentContainer"]
+- ["So20FIRMessagingDelegateP", "NSPersistentContainer"]
 - !private ["So20FIRMessagingDelegateP", "Notification"]
 - !private ["So20FIRMessagingDelegateP", "NotificationCenter"]
-- !private ["So20FIRMessagingDelegateP", "PrivateChatController"]
 - !private ["So20FIRMessagingDelegateP", "UIBackgroundFetchResult"]
-- !private ["So20FIRMessagingDelegateP", "UICollectionViewFlowLayout"]
 - !private ["So20FIRMessagingDelegateP", "UIUserNotificationSettings"]
 - !private ["So20FIRMessagingDelegateP", "UIWindow"]
 - !private ["So20FIRMessagingDelegateP", "UNUserNotificationCenter"]
@@ -618,7 +541,7 @@ depends-member:
 - ["So20FIRMessagingDelegateP", "applicationWillResignActive"]
 - ["So20FIRMessagingDelegateP", "applicationWillTerminate"]
 - !private ["So20FIRMessagingDelegateP", "attempRegisterForNotifications"]
-- !private ["So20FIRMessagingDelegateP", "fatalError"]
+- ["So20FIRMessagingDelegateP", "fatalError"]
 - !private ["So20FIRMessagingDelegateP", "functions"]
 - !private ["So20FIRMessagingDelegateP", "gcmMessageIDKey"]
 - ["So20FIRMessagingDelegateP", "messaging"]
@@ -628,12 +551,8 @@ depends-member:
 - ["So20FIRMessagingDelegateP", "userNotificationCenter"]
 - ["So20FIRMessagingDelegateP", "window"]
 - !private ["So25FIRMessagingRemoteMessageC", "appData"]
-- ["s10MirrorPathP", "init"]
-- ["s10MirrorPathP", "init"]
-- !private ["SM", "subscript"]
 - !private ["So8NSCodingP", "code"]
 - !private ["So8NSCodingP", "content"]
-- !private ["So8NSCodingP", "conversitionId"]
 - !private ["So8NSCodingP", "dismiss"]
 - !private ["So8NSCodingP", "domain"]
 - !private ["So8NSCodingP", "hasChanges"]
@@ -642,13 +561,11 @@ depends-member:
 - !private ["So8NSCodingP", "makeKeyAndVisible"]
 - !private ["So8NSCodingP", "notification"]
 - !private ["So8NSCodingP", "presentedViewController"]
-- !private ["So8NSCodingP", "pushViewController"]
 - !private ["So8NSCodingP", "request"]
 - !private ["So8NSCodingP", "rootViewController"]
 - !private ["So8NSCodingP", "save"]
 - !private ["So8NSCodingP", "selectedIndex"]
-- !private ["So8NSCodingP", "userInfo"]
-- !private ["So8NSCodingP", "viewControllers"]
+- ["So8NSCodingP", "userInfo"]
 - !private ["So9NSCopyingP", "areTimestampsInSnapshotsEnabled"]
 - !private ["So9NSCopyingP", "code"]
 - !private ["So9NSCopyingP", "content"]
@@ -656,18 +573,15 @@ depends-member:
 - !private ["So9NSCopyingP", "localizedDescription"]
 - !private ["So9NSCopyingP", "notification"]
 - !private ["So9NSCopyingP", "request"]
-- !private ["So9NSCopyingP", "userInfo"]
+- ["So9NSCopyingP", "userInfo"]
 - !private ["So7NSErrorC", "code"]
 - !private ["So7NSErrorC", "domain"]
 - !private ["So7NSErrorC", "localizedDescription"]
-- !private ["So7NSErrorC", "userInfo"]
-- !private ["So26NSExtensionRequestHandlingP", "conversitionId"]
+- ["So7NSErrorC", "userInfo"]
 - !private ["So26NSExtensionRequestHandlingP", "dismiss"]
 - !private ["So26NSExtensionRequestHandlingP", "init"]
 - !private ["So26NSExtensionRequestHandlingP", "presentedViewController"]
-- !private ["So26NSExtensionRequestHandlingP", "pushViewController"]
 - !private ["So26NSExtensionRequestHandlingP", "selectedIndex"]
-- !private ["So26NSExtensionRequestHandlingP", "viewControllers"]
 - !private ["So9NSLockingP", "hasChanges"]
 - !private ["So9NSLockingP", "save"]
 - !private ["So22NSManagedObjectContextC", "hasChanges"]
@@ -686,16 +600,13 @@ depends-member:
 - !private ["So8NSObjectC", "MainTabBarController"]
 - ["So8NSObjectC", "Messaging"]
 - ["So8NSObjectC", "MessagingRemoteMessage"]
-- !private ["So8NSObjectC", "NSError"]
+- ["So8NSObjectC", "NSError"]
 - ["So8NSObjectC", "NSPersistentContainer"]
 - !private ["So8NSObjectC", "Notification"]
 - !private ["So8NSObjectC", "NotificationCenter"]
-- !private ["So8NSObjectC", "PrivateChatController"]
 - ["So8NSObjectC", "String"]
 - ["So8NSObjectC", "UIApplication"]
 - ["So8NSObjectC", "UIBackgroundFetchResult"]
-- !private ["So8NSObjectC", "UICollectionViewFlowLayout"]
-- !private ["So8NSObjectC", "UINavigationController"]
 - !private ["So8NSObjectC", "UIUserNotificationSettings"]
 - ["So8NSObjectC", "UIWindow"]
 - !private ["So8NSObjectC", "UNAuthorizationOptions"]
@@ -723,21 +634,19 @@ depends-member:
 - !private ["So8NSObjectC", "code"]
 - !private ["So8NSObjectC", "configure"]
 - !private ["So8NSObjectC", "content"]
-- !private ["So8NSObjectC", "conversitionId"]
 - !private ["So8NSObjectC", "current"]
 - !private ["So8NSObjectC", "default"]
 - !private ["So8NSObjectC", "delegate"]
 - !private ["So8NSObjectC", "dismiss"]
 - !private ["So8NSObjectC", "domain"]
-- !private ["So8NSObjectC", "fatalError"]
+- ["So8NSObjectC", "fatalError"]
 - !private ["So8NSObjectC", "firestore"]
 - ["So8NSObjectC", "functions"]
 - ["So8NSObjectC", "gcmMessageIDKey"]
 - !private ["So8NSObjectC", "hasChanges"]
 - !private ["So8NSObjectC", "httpsCallable"]
 - ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "init"]
-- !private ["So8NSObjectC", "loadPersistentStores"]
+- ["So8NSObjectC", "loadPersistentStores"]
 - !private ["So8NSObjectC", "localizedDescription"]
 - !private ["So8NSObjectC", "makeKeyAndVisible"]
 - ["So8NSObjectC", "messaging"]
@@ -747,7 +656,6 @@ depends-member:
 - !private ["So8NSObjectC", "post"]
 - !private ["So8NSObjectC", "presentedViewController"]
 - !private ["So8NSObjectC", "print"]
-- !private ["So8NSObjectC", "pushViewController"]
 - !private ["So8NSObjectC", "registerForRemoteNotifications"]
 - !private ["So8NSObjectC", "registerUserNotificationSettings"]
 - !private ["So8NSObjectC", "request"]
@@ -757,10 +665,9 @@ depends-member:
 - ["So8NSObjectC", "saveContext"]
 - !private ["So8NSObjectC", "selectedIndex"]
 - !private ["So8NSObjectC", "settings"]
-- !private ["So8NSObjectC", "userInfo"]
+- ["So8NSObjectC", "userInfo"]
 - ["So8NSObjectC", "userNotificationCenter"]
 - !private ["So8NSObjectC", "viewContext"]
-- !private ["So8NSObjectC", "viewControllers"]
 - ["So8NSObjectC", "window"]
 - !private ["So8NSObjectP", "FirebaseApp"]
 - !private ["So8NSObjectP", "Firestore"]
@@ -770,12 +677,10 @@ depends-member:
 - ["So8NSObjectP", "LaunchOptionsKey"]
 - !private ["So8NSObjectP", "MainTabBarController"]
 - !private ["So8NSObjectP", "Messaging"]
-- !private ["So8NSObjectP", "NSPersistentContainer"]
+- ["So8NSObjectP", "NSPersistentContainer"]
 - !private ["So8NSObjectP", "Notification"]
 - !private ["So8NSObjectP", "NotificationCenter"]
-- !private ["So8NSObjectP", "PrivateChatController"]
 - !private ["So8NSObjectP", "UIBackgroundFetchResult"]
-- !private ["So8NSObjectP", "UICollectionViewFlowLayout"]
 - !private ["So8NSObjectP", "UIUserNotificationSettings"]
 - !private ["So8NSObjectP", "UIWindow"]
 - !private ["So8NSObjectP", "UNUserNotificationCenter"]
@@ -799,21 +704,19 @@ depends-member:
 - !private ["So8NSObjectP", "code"]
 - !private ["So8NSObjectP", "configure"]
 - !private ["So8NSObjectP", "content"]
-- !private ["So8NSObjectP", "conversitionId"]
 - !private ["So8NSObjectP", "current"]
 - !private ["So8NSObjectP", "default"]
 - !private ["So8NSObjectP", "delegate"]
 - !private ["So8NSObjectP", "dismiss"]
 - !private ["So8NSObjectP", "domain"]
-- !private ["So8NSObjectP", "fatalError"]
+- ["So8NSObjectP", "fatalError"]
 - !private ["So8NSObjectP", "firestore"]
 - ["So8NSObjectP", "functions"]
 - !private ["So8NSObjectP", "gcmMessageIDKey"]
 - !private ["So8NSObjectP", "hasChanges"]
 - !private ["So8NSObjectP", "httpsCallable"]
-- !private ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "init"]
-- !private ["So8NSObjectP", "loadPersistentStores"]
+- ["So8NSObjectP", "init"]
+- ["So8NSObjectP", "loadPersistentStores"]
 - !private ["So8NSObjectP", "localizedDescription"]
 - !private ["So8NSObjectP", "makeKeyAndVisible"]
 - ["So8NSObjectP", "messaging"]
@@ -822,7 +725,6 @@ depends-member:
 - !private ["So8NSObjectP", "post"]
 - !private ["So8NSObjectP", "presentedViewController"]
 - !private ["So8NSObjectP", "print"]
-- !private ["So8NSObjectP", "pushViewController"]
 - !private ["So8NSObjectP", "registerForRemoteNotifications"]
 - !private ["So8NSObjectP", "registerUserNotificationSettings"]
 - !private ["So8NSObjectP", "request"]
@@ -832,13 +734,12 @@ depends-member:
 - !private ["So8NSObjectP", "saveContext"]
 - !private ["So8NSObjectP", "selectedIndex"]
 - !private ["So8NSObjectP", "settings"]
-- !private ["So8NSObjectP", "userInfo"]
+- ["So8NSObjectP", "userInfo"]
 - ["So8NSObjectP", "userNotificationCenter"]
 - !private ["So8NSObjectP", "viewContext"]
-- !private ["So8NSObjectP", "viewControllers"]
 - ["So8NSObjectP", "window"]
-- !private ["So21NSPersistentContainerC", "init"]
-- !private ["So21NSPersistentContainerC", "loadPersistentStores"]
+- ["So21NSPersistentContainerC", "init"]
+- ["So21NSPersistentContainerC", "loadPersistentStores"]
 - !private ["So21NSPersistentContainerC", "viewContext"]
 - !private ["So14NSSecureCodingP", "code"]
 - !private ["So14NSSecureCodingP", "content"]
@@ -846,7 +747,7 @@ depends-member:
 - !private ["So14NSSecureCodingP", "localizedDescription"]
 - !private ["So14NSSecureCodingP", "notification"]
 - !private ["So14NSSecureCodingP", "request"]
-- !private ["So14NSSecureCodingP", "userInfo"]
+- ["So14NSSecureCodingP", "userInfo"]
 - !private ["So18NSNotificationNamea", "init"]
 - !private ["10Foundation12NotificationV", "Name"]
 - !private ["So20NSNotificationCenterC", "default"]
@@ -854,50 +755,32 @@ depends-member:
 - !private ["s9OptionSetP", "alert"]
 - !private ["s9OptionSetP", "badge"]
 - !private ["s9OptionSetP", "sound"]
-- !private ["9mojo_test21PrivateChatControllerC", "conversitionId"]
-- !private ["9mojo_test21PrivateChatControllerC", "deinit"]
-- !private ["9mojo_test21PrivateChatControllerC", "init"]
-- !private ["Sk", "subscript"]
-- ["Sm", "init"]
-- ["Sm", "init"]
-- !private ["Sm", "subscript"]
 - !private ["SY", "alert"]
 - !private ["SY", "badge"]
 - !private ["SY", "init"]
 - !private ["SY", "newData"]
 - !private ["SY", "sound"]
 - !private ["10Foundation20ReferenceConvertibleP", "Name"]
-- ["ST", "init"]
-- ["ST", "init"]
 - !private ["ST", "subscript"]
 - !private ["s10SetAlgebraP", "alert"]
 - !private ["s10SetAlgebraP", "badge"]
 - !private ["s10SetAlgebraP", "sound"]
-- !private ["s12StaticStringV", "init"]
-- !private ["s12StaticStringV", "init"]
-- ["SS", "init"]
-- ["SS", "init"]
-- ["Sy", "init"]
-- ["Sy", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s16TextOutputStreamP", "init"]
-- ["s20TextOutputStreamableP", "init"]
-- ["s20TextOutputStreamableP", "init"]
+- ["s27StringInterpolationProtocolP", "appendInterpolation"]
+- ["s27StringInterpolationProtocolP", "appendLiteral"]
+- ["s16TextOutputStreamP", "appendInterpolation"]
+- ["s16TextOutputStreamP", "appendLiteral"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "makeKeyAndVisible"]
 - !private ["So29UIAccessibilityIdentificationP", "rootViewController"]
 - !private ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "makeKeyAndVisible"]
 - !private ["So12UIAppearanceP", "rootViewController"]
-- !private ["So21UIAppearanceContainerP", "conversitionId"]
 - !private ["So21UIAppearanceContainerP", "dismiss"]
 - !private ["So21UIAppearanceContainerP", "init"]
 - !private ["So21UIAppearanceContainerP", "makeKeyAndVisible"]
 - !private ["So21UIAppearanceContainerP", "presentedViewController"]
-- !private ["So21UIAppearanceContainerP", "pushViewController"]
 - !private ["So21UIAppearanceContainerP", "rootViewController"]
 - !private ["So21UIAppearanceContainerP", "selectedIndex"]
-- !private ["So21UIAppearanceContainerP", "viewControllers"]
 - ["So13UIApplicationC", "LaunchOptionsKey"]
 - !private ["So13UIApplicationC", "registerForRemoteNotifications"]
 - !private ["So13UIApplicationC", "registerUserNotificationSettings"]
@@ -908,12 +791,10 @@ depends-member:
 - !private ["So21UIApplicationDelegateP", "FunctionsErrorDomain"]
 - !private ["So21UIApplicationDelegateP", "MainTabBarController"]
 - !private ["So21UIApplicationDelegateP", "Messaging"]
-- !private ["So21UIApplicationDelegateP", "NSPersistentContainer"]
+- ["So21UIApplicationDelegateP", "NSPersistentContainer"]
 - !private ["So21UIApplicationDelegateP", "Notification"]
 - !private ["So21UIApplicationDelegateP", "NotificationCenter"]
-- !private ["So21UIApplicationDelegateP", "PrivateChatController"]
 - !private ["So21UIApplicationDelegateP", "UIBackgroundFetchResult"]
-- !private ["So21UIApplicationDelegateP", "UICollectionViewFlowLayout"]
 - !private ["So21UIApplicationDelegateP", "UIUserNotificationSettings"]
 - !private ["So21UIApplicationDelegateP", "UIWindow"]
 - !private ["So21UIApplicationDelegateP", "UNUserNotificationCenter"]
@@ -931,7 +812,7 @@ depends-member:
 - ["So21UIApplicationDelegateP", "applicationWillResignActive"]
 - ["So21UIApplicationDelegateP", "applicationWillTerminate"]
 - !private ["So21UIApplicationDelegateP", "attempRegisterForNotifications"]
-- !private ["So21UIApplicationDelegateP", "fatalError"]
+- ["So21UIApplicationDelegateP", "fatalError"]
 - !private ["So21UIApplicationDelegateP", "functions"]
 - !private ["So21UIApplicationDelegateP", "gcmMessageIDKey"]
 - ["So21UIApplicationDelegateP", "messaging"]
@@ -941,45 +822,28 @@ depends-member:
 - ["So21UIApplicationDelegateP", "userNotificationCenter"]
 - ["So21UIApplicationDelegateP", "window"]
 - !private ["So23UIBackgroundFetchResultV", "newData"]
-- !private ["So26UICollectionViewControllerC", "conversitionId"]
-- !private ["So26UICollectionViewControllerC", "init"]
-- !private ["So26UICollectionViewDataSourceP", "conversitionId"]
-- !private ["So26UICollectionViewDataSourceP", "init"]
-- !private ["So24UICollectionViewDelegateP", "conversitionId"]
-- !private ["So24UICollectionViewDelegateP", "init"]
-- !private ["So34UICollectionViewDelegateFlowLayoutP", "conversitionId"]
-- !private ["So34UICollectionViewDelegateFlowLayoutP", "init"]
-- !private ["So26UICollectionViewFlowLayoutC", "init"]
-- !private ["So22UICollectionViewLayoutC", "init"]
-- !private ["So18UIContentContainerP", "conversitionId"]
 - !private ["So18UIContentContainerP", "dismiss"]
 - !private ["So18UIContentContainerP", "init"]
 - !private ["So18UIContentContainerP", "presentedViewController"]
-- !private ["So18UIContentContainerP", "pushViewController"]
 - !private ["So18UIContentContainerP", "selectedIndex"]
-- !private ["So18UIContentContainerP", "viewControllers"]
 - !private ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "makeKeyAndVisible"]
 - !private ["So17UICoordinateSpaceP", "rootViewController"]
 - !private ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "makeKeyAndVisible"]
 - !private ["So13UIDynamicItemP", "rootViewController"]
-- !private ["So18UIFocusEnvironmentP", "conversitionId"]
 - !private ["So18UIFocusEnvironmentP", "dismiss"]
 - !private ["So18UIFocusEnvironmentP", "init"]
 - !private ["So18UIFocusEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UIFocusEnvironmentP", "presentedViewController"]
-- !private ["So18UIFocusEnvironmentP", "pushViewController"]
 - !private ["So18UIFocusEnvironmentP", "rootViewController"]
 - !private ["So18UIFocusEnvironmentP", "selectedIndex"]
-- !private ["So18UIFocusEnvironmentP", "viewControllers"]
 - !private ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "makeKeyAndVisible"]
 - !private ["So11UIFocusItemP", "rootViewController"]
 - !private ["So20UIFocusItemContainerP", "init"]
 - !private ["So20UIFocusItemContainerP", "makeKeyAndVisible"]
 - !private ["So20UIFocusItemContainerP", "rootViewController"]
-- !private ["So22UINavigationControllerC", "pushViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "FirebaseApp"]
 - !private ["So30UIPasteConfigurationSupportingP", "Firestore"]
 - !private ["So30UIPasteConfigurationSupportingP", "FunctionsErrorCode"]
@@ -988,12 +852,10 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "LaunchOptionsKey"]
 - !private ["So30UIPasteConfigurationSupportingP", "MainTabBarController"]
 - !private ["So30UIPasteConfigurationSupportingP", "Messaging"]
-- !private ["So30UIPasteConfigurationSupportingP", "NSPersistentContainer"]
+- ["So30UIPasteConfigurationSupportingP", "NSPersistentContainer"]
 - !private ["So30UIPasteConfigurationSupportingP", "Notification"]
 - !private ["So30UIPasteConfigurationSupportingP", "NotificationCenter"]
-- !private ["So30UIPasteConfigurationSupportingP", "PrivateChatController"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIBackgroundFetchResult"]
-- !private ["So30UIPasteConfigurationSupportingP", "UICollectionViewFlowLayout"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIUserNotificationSettings"]
 - !private ["So30UIPasteConfigurationSupportingP", "UIWindow"]
 - !private ["So30UIPasteConfigurationSupportingP", "UNUserNotificationCenter"]
@@ -1011,26 +873,22 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "applicationWillResignActive"]
 - ["So30UIPasteConfigurationSupportingP", "applicationWillTerminate"]
 - !private ["So30UIPasteConfigurationSupportingP", "attempRegisterForNotifications"]
-- !private ["So30UIPasteConfigurationSupportingP", "conversitionId"]
 - !private ["So30UIPasteConfigurationSupportingP", "dismiss"]
-- !private ["So30UIPasteConfigurationSupportingP", "fatalError"]
+- ["So30UIPasteConfigurationSupportingP", "fatalError"]
 - !private ["So30UIPasteConfigurationSupportingP", "functions"]
 - !private ["So30UIPasteConfigurationSupportingP", "gcmMessageIDKey"]
-- !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - !private ["So30UIPasteConfigurationSupportingP", "makeKeyAndVisible"]
 - ["So30UIPasteConfigurationSupportingP", "messaging"]
 - !private ["So30UIPasteConfigurationSupportingP", "persistentContainer"]
 - !private ["So30UIPasteConfigurationSupportingP", "presentedViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
-- !private ["So30UIPasteConfigurationSupportingP", "pushViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "registerForRemoteNotifications"]
 - !private ["So30UIPasteConfigurationSupportingP", "registerUserNotificationSettings"]
 - !private ["So30UIPasteConfigurationSupportingP", "rootViewController"]
 - !private ["So30UIPasteConfigurationSupportingP", "saveContext"]
 - !private ["So30UIPasteConfigurationSupportingP", "selectedIndex"]
 - ["So30UIPasteConfigurationSupportingP", "userNotificationCenter"]
-- !private ["So30UIPasteConfigurationSupportingP", "viewControllers"]
 - ["So30UIPasteConfigurationSupportingP", "window"]
 - ["So11UIResponderC", "AnyHashable"]
 - ["So11UIResponderC", "Bool"]
@@ -1045,16 +903,13 @@ depends-member:
 - !private ["So11UIResponderC", "MainTabBarController"]
 - ["So11UIResponderC", "Messaging"]
 - ["So11UIResponderC", "MessagingRemoteMessage"]
-- !private ["So11UIResponderC", "NSError"]
+- ["So11UIResponderC", "NSError"]
 - ["So11UIResponderC", "NSPersistentContainer"]
 - !private ["So11UIResponderC", "Notification"]
 - !private ["So11UIResponderC", "NotificationCenter"]
-- !private ["So11UIResponderC", "PrivateChatController"]
 - ["So11UIResponderC", "String"]
 - ["So11UIResponderC", "UIApplication"]
 - ["So11UIResponderC", "UIBackgroundFetchResult"]
-- !private ["So11UIResponderC", "UICollectionViewFlowLayout"]
-- !private ["So11UIResponderC", "UINavigationController"]
 - !private ["So11UIResponderC", "UIUserNotificationSettings"]
 - ["So11UIResponderC", "UIWindow"]
 - !private ["So11UIResponderC", "UNAuthorizationOptions"]
@@ -1077,27 +932,23 @@ depends-member:
 - ["So11UIResponderC", "applicationWillResignActive"]
 - ["So11UIResponderC", "applicationWillTerminate"]
 - ["So11UIResponderC", "attempRegisterForNotifications"]
-- !private ["So11UIResponderC", "conversitionId"]
 - !private ["So11UIResponderC", "dismiss"]
-- !private ["So11UIResponderC", "fatalError"]
+- ["So11UIResponderC", "fatalError"]
 - !private ["So11UIResponderC", "functions"]
 - ["So11UIResponderC", "gcmMessageIDKey"]
 - ["So11UIResponderC", "init"]
-- !private ["So11UIResponderC", "init"]
 - !private ["So11UIResponderC", "makeKeyAndVisible"]
 - ["So11UIResponderC", "messaging"]
 - ["So11UIResponderC", "persistentContainer"]
 - ["So11UIResponderC", "persistentContainer.storage"]
 - !private ["So11UIResponderC", "presentedViewController"]
 - !private ["So11UIResponderC", "print"]
-- !private ["So11UIResponderC", "pushViewController"]
 - !private ["So11UIResponderC", "registerForRemoteNotifications"]
 - !private ["So11UIResponderC", "registerUserNotificationSettings"]
 - !private ["So11UIResponderC", "rootViewController"]
 - ["So11UIResponderC", "saveContext"]
 - !private ["So11UIResponderC", "selectedIndex"]
 - ["So11UIResponderC", "userNotificationCenter"]
-- !private ["So11UIResponderC", "viewControllers"]
 - ["So11UIResponderC", "window"]
 - !private ["So30UIResponderStandardEditActionsP", "FirebaseApp"]
 - !private ["So30UIResponderStandardEditActionsP", "Firestore"]
@@ -1107,12 +958,10 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "LaunchOptionsKey"]
 - !private ["So30UIResponderStandardEditActionsP", "MainTabBarController"]
 - !private ["So30UIResponderStandardEditActionsP", "Messaging"]
-- !private ["So30UIResponderStandardEditActionsP", "NSPersistentContainer"]
+- ["So30UIResponderStandardEditActionsP", "NSPersistentContainer"]
 - !private ["So30UIResponderStandardEditActionsP", "Notification"]
 - !private ["So30UIResponderStandardEditActionsP", "NotificationCenter"]
-- !private ["So30UIResponderStandardEditActionsP", "PrivateChatController"]
 - !private ["So30UIResponderStandardEditActionsP", "UIBackgroundFetchResult"]
-- !private ["So30UIResponderStandardEditActionsP", "UICollectionViewFlowLayout"]
 - !private ["So30UIResponderStandardEditActionsP", "UIUserNotificationSettings"]
 - !private ["So30UIResponderStandardEditActionsP", "UIWindow"]
 - !private ["So30UIResponderStandardEditActionsP", "UNUserNotificationCenter"]
@@ -1130,55 +979,39 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "applicationWillResignActive"]
 - ["So30UIResponderStandardEditActionsP", "applicationWillTerminate"]
 - !private ["So30UIResponderStandardEditActionsP", "attempRegisterForNotifications"]
-- !private ["So30UIResponderStandardEditActionsP", "conversitionId"]
 - !private ["So30UIResponderStandardEditActionsP", "dismiss"]
-- !private ["So30UIResponderStandardEditActionsP", "fatalError"]
+- ["So30UIResponderStandardEditActionsP", "fatalError"]
 - !private ["So30UIResponderStandardEditActionsP", "functions"]
 - !private ["So30UIResponderStandardEditActionsP", "gcmMessageIDKey"]
-- !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "makeKeyAndVisible"]
 - ["So30UIResponderStandardEditActionsP", "messaging"]
 - !private ["So30UIResponderStandardEditActionsP", "persistentContainer"]
 - !private ["So30UIResponderStandardEditActionsP", "presentedViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
-- !private ["So30UIResponderStandardEditActionsP", "pushViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "registerForRemoteNotifications"]
 - !private ["So30UIResponderStandardEditActionsP", "registerUserNotificationSettings"]
 - !private ["So30UIResponderStandardEditActionsP", "rootViewController"]
 - !private ["So30UIResponderStandardEditActionsP", "saveContext"]
 - !private ["So30UIResponderStandardEditActionsP", "selectedIndex"]
 - ["So30UIResponderStandardEditActionsP", "userNotificationCenter"]
-- !private ["So30UIResponderStandardEditActionsP", "viewControllers"]
 - ["So30UIResponderStandardEditActionsP", "window"]
-- !private ["So20UIScrollViewDelegateP", "conversitionId"]
-- !private ["So20UIScrollViewDelegateP", "init"]
-- !private ["So16UIStateRestoringP", "conversitionId"]
 - !private ["So16UIStateRestoringP", "dismiss"]
 - !private ["So16UIStateRestoringP", "init"]
 - !private ["So16UIStateRestoringP", "presentedViewController"]
-- !private ["So16UIStateRestoringP", "pushViewController"]
 - !private ["So16UIStateRestoringP", "selectedIndex"]
-- !private ["So16UIStateRestoringP", "viewControllers"]
 - !private ["So18UITabBarControllerC", "init"]
 - !private ["So18UITabBarControllerC", "presentedViewController"]
 - !private ["So18UITabBarControllerC", "selectedIndex"]
-- !private ["So18UITabBarControllerC", "viewControllers"]
 - !private ["So16UITabBarDelegateP", "init"]
 - !private ["So16UITabBarDelegateP", "presentedViewController"]
 - !private ["So16UITabBarDelegateP", "selectedIndex"]
-- !private ["So16UITabBarDelegateP", "viewControllers"]
-- !private ["So19UITextFieldDelegateP", "conversitionId"]
-- !private ["So19UITextFieldDelegateP", "init"]
-- !private ["So18UITraitEnvironmentP", "conversitionId"]
 - !private ["So18UITraitEnvironmentP", "dismiss"]
 - !private ["So18UITraitEnvironmentP", "init"]
 - !private ["So18UITraitEnvironmentP", "makeKeyAndVisible"]
 - !private ["So18UITraitEnvironmentP", "presentedViewController"]
-- !private ["So18UITraitEnvironmentP", "pushViewController"]
 - !private ["So18UITraitEnvironmentP", "rootViewController"]
 - !private ["So18UITraitEnvironmentP", "selectedIndex"]
-- !private ["So18UITraitEnvironmentP", "viewControllers"]
 - !private ["So23UIUserActivityRestoringP", "FirebaseApp"]
 - !private ["So23UIUserActivityRestoringP", "Firestore"]
 - !private ["So23UIUserActivityRestoringP", "FunctionsErrorCode"]
@@ -1187,12 +1020,10 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "LaunchOptionsKey"]
 - !private ["So23UIUserActivityRestoringP", "MainTabBarController"]
 - !private ["So23UIUserActivityRestoringP", "Messaging"]
-- !private ["So23UIUserActivityRestoringP", "NSPersistentContainer"]
+- ["So23UIUserActivityRestoringP", "NSPersistentContainer"]
 - !private ["So23UIUserActivityRestoringP", "Notification"]
 - !private ["So23UIUserActivityRestoringP", "NotificationCenter"]
-- !private ["So23UIUserActivityRestoringP", "PrivateChatController"]
 - !private ["So23UIUserActivityRestoringP", "UIBackgroundFetchResult"]
-- !private ["So23UIUserActivityRestoringP", "UICollectionViewFlowLayout"]
 - !private ["So23UIUserActivityRestoringP", "UIUserNotificationSettings"]
 - !private ["So23UIUserActivityRestoringP", "UIWindow"]
 - !private ["So23UIUserActivityRestoringP", "UNUserNotificationCenter"]
@@ -1210,26 +1041,22 @@ depends-member:
 - ["So23UIUserActivityRestoringP", "applicationWillResignActive"]
 - ["So23UIUserActivityRestoringP", "applicationWillTerminate"]
 - !private ["So23UIUserActivityRestoringP", "attempRegisterForNotifications"]
-- !private ["So23UIUserActivityRestoringP", "conversitionId"]
 - !private ["So23UIUserActivityRestoringP", "dismiss"]
-- !private ["So23UIUserActivityRestoringP", "fatalError"]
+- ["So23UIUserActivityRestoringP", "fatalError"]
 - !private ["So23UIUserActivityRestoringP", "functions"]
 - !private ["So23UIUserActivityRestoringP", "gcmMessageIDKey"]
-- !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "init"]
 - !private ["So23UIUserActivityRestoringP", "makeKeyAndVisible"]
 - ["So23UIUserActivityRestoringP", "messaging"]
 - !private ["So23UIUserActivityRestoringP", "persistentContainer"]
 - !private ["So23UIUserActivityRestoringP", "presentedViewController"]
 - !private ["So23UIUserActivityRestoringP", "print"]
-- !private ["So23UIUserActivityRestoringP", "pushViewController"]
 - !private ["So23UIUserActivityRestoringP", "registerForRemoteNotifications"]
 - !private ["So23UIUserActivityRestoringP", "registerUserNotificationSettings"]
 - !private ["So23UIUserActivityRestoringP", "rootViewController"]
 - !private ["So23UIUserActivityRestoringP", "saveContext"]
 - !private ["So23UIUserActivityRestoringP", "selectedIndex"]
 - ["So23UIUserActivityRestoringP", "userNotificationCenter"]
-- !private ["So23UIUserActivityRestoringP", "viewControllers"]
 - ["So23UIUserActivityRestoringP", "window"]
 - !private ["So26UIUserNotificationSettingsC", "init"]
 - !private ["So22UIUserNotificationTypeV", "alert"]
@@ -1238,13 +1065,10 @@ depends-member:
 - !private ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "makeKeyAndVisible"]
 - !private ["So6UIViewC", "rootViewController"]
-- !private ["So16UIViewControllerC", "conversitionId"]
 - !private ["So16UIViewControllerC", "dismiss"]
 - !private ["So16UIViewControllerC", "init"]
 - !private ["So16UIViewControllerC", "presentedViewController"]
-- !private ["So16UIViewControllerC", "pushViewController"]
 - !private ["So16UIViewControllerC", "selectedIndex"]
-- !private ["So16UIViewControllerC", "viewControllers"]
 - !private ["So8UIWindowC", "init"]
 - !private ["So8UIWindowC", "makeKeyAndVisible"]
 - !private ["So8UIWindowC", "rootViewController"]
@@ -1266,12 +1090,10 @@ depends-member:
 - !private ["So32UNUserNotificationCenterDelegateP", "FunctionsErrorDomain"]
 - !private ["So32UNUserNotificationCenterDelegateP", "MainTabBarController"]
 - !private ["So32UNUserNotificationCenterDelegateP", "Messaging"]
-- !private ["So32UNUserNotificationCenterDelegateP", "NSPersistentContainer"]
+- ["So32UNUserNotificationCenterDelegateP", "NSPersistentContainer"]
 - !private ["So32UNUserNotificationCenterDelegateP", "Notification"]
 - !private ["So32UNUserNotificationCenterDelegateP", "NotificationCenter"]
-- !private ["So32UNUserNotificationCenterDelegateP", "PrivateChatController"]
 - !private ["So32UNUserNotificationCenterDelegateP", "UIBackgroundFetchResult"]
-- !private ["So32UNUserNotificationCenterDelegateP", "UICollectionViewFlowLayout"]
 - !private ["So32UNUserNotificationCenterDelegateP", "UIUserNotificationSettings"]
 - !private ["So32UNUserNotificationCenterDelegateP", "UIWindow"]
 - !private ["So32UNUserNotificationCenterDelegateP", "UNUserNotificationCenter"]
@@ -1289,7 +1111,7 @@ depends-member:
 - ["So32UNUserNotificationCenterDelegateP", "applicationWillResignActive"]
 - ["So32UNUserNotificationCenterDelegateP", "applicationWillTerminate"]
 - !private ["So32UNUserNotificationCenterDelegateP", "attempRegisterForNotifications"]
-- !private ["So32UNUserNotificationCenterDelegateP", "fatalError"]
+- ["So32UNUserNotificationCenterDelegateP", "fatalError"]
 - !private ["So32UNUserNotificationCenterDelegateP", "functions"]
 - !private ["So32UNUserNotificationCenterDelegateP", "gcmMessageIDKey"]
 - ["So32UNUserNotificationCenterDelegateP", "messaging"]
@@ -1298,21 +1120,6 @@ depends-member:
 - !private ["So32UNUserNotificationCenterDelegateP", "saveContext"]
 - ["So32UNUserNotificationCenterDelegateP", "userNotificationCenter"]
 - ["So32UNUserNotificationCenterDelegateP", "window"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "makeKeyAndVisible"]
-- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
-- !private ["s24_DestructorSafeContainerP", "subscript"]
-- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
-- ["s33_ExpressibleByStringInterpolationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "FirebaseApp"]
@@ -1323,12 +1130,10 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "LaunchOptionsKey"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "MainTabBarController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Messaging"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "NSPersistentContainer"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSPersistentContainer"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Notification"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "NotificationCenter"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "PrivateChatController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIBackgroundFetchResult"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "UICollectionViewFlowLayout"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIUserNotificationSettings"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UIWindow"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "UNUserNotificationCenter"]
@@ -1352,21 +1157,19 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "code"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "configure"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "content"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "conversitionId"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "current"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "default"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "dismiss"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "domain"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "fatalError"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "firestore"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "functions"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "gcmMessageIDKey"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "hasChanges"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "httpsCallable"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "loadPersistentStores"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "loadPersistentStores"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "localizedDescription"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "makeKeyAndVisible"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "messaging"]
@@ -1375,7 +1178,6 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "post"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "presentedViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "pushViewController"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "registerForRemoteNotifications"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "registerUserNotificationSettings"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "request"]
@@ -1385,50 +1187,37 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "saveContext"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "selectedIndex"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "settings"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "userInfo"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "userNotificationCenter"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "viewContext"]
-- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewControllers"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "window"]
 - !private ["s21_ObjectiveCBridgeableP", "Name"]
-- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
-- ["s21_ObjectiveCBridgeableP", "init"]
-- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - !private ["s20_SwiftNewtypeWrapperP", "init"]
-- ["s16_SwiftStringViewP", "init"]
-- ["s16_SwiftStringViewP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "init"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "makeKeyAndVisible"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "rootViewController"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "init"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "presentedViewController"]
 - !private ["9mojo_test29editProfileControllerDelegateP", "selectedIndex"]
-- !private ["9mojo_test29editProfileControllerDelegateP", "viewControllers"]
 depends-nominal:
 - "9mojo_test11AppDelegateC"
-- !private "Sa"
-- !private "s13ArrayProtocolP"
-- "SK"
-- !private "Sb"
 - !private "So15CALayerDelegateP"
 - "s7CVarArgP"
-- !private "9mojo_test30ChatInputAccessaryViewDelegateP"
-- "Sl"
-- "SL"
+- !private "Sl"
 - !private "15TinyConstraints13ConstrainableP"
 - "s28CustomDebugStringConvertibleP"
-- "s29CustomPlaygroundQuickLookableP"
-- "s17CustomReflectableP"
+- !private "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
-- "Se"
+- !private "Se"
+- "s26DefaultStringInterpolationV"
 - !private "SD"
-- "SE"
+- !private "SE"
 - "SQ"
-- !private "s5ErrorP"
+- "s5ErrorP"
 - !private "s25ExpressibleByArrayLiteralP"
-- !private "s27ExpressibleByBooleanLiteralP"
 - !private "s30ExpressibleByDictionaryLiteralP"
-- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- "s26ExpressibleByStringLiteralP"
-- "s33ExpressibleByUnicodeScalarLiteralP"
 - !private "So6FIRAppC"
 - !private "So12FIRFirestoreC"
 - !private "So20FIRFirestoreSettingsC"
@@ -1437,67 +1226,49 @@ depends-nominal:
 - !private "So16FIRHTTPSCallableC"
 - "SH"
 - !private "9mojo_test23LoginControllerDelegateP"
-- "s25LosslessStringConvertibleP"
 - !private "9mojo_test20MainTabBarControllerC"
 - !private "So12FIRMessagingC"
 - "So20FIRMessagingDelegateP"
 - !private "So25FIRMessagingRemoteMessageC"
-- "s10MirrorPathP"
-- !private "SM"
-- !private "So8NSCodingP"
-- !private "So9NSCopyingP"
-- !private "So7NSErrorC"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So7NSErrorC"
 - !private "So26NSExtensionRequestHandlingP"
 - !private "So9NSLockingP"
 - !private "So22NSManagedObjectContextC"
 - !private "So16NSMutableCopyingP"
 - "So8NSObjectC"
 - "So8NSObjectP"
-- !private "So21NSPersistentContainerC"
-- !private "So14NSSecureCodingP"
+- "So21NSPersistentContainerC"
+- "So14NSSecureCodingP"
 - !private "So18NSNotificationNamea"
 - !private "10Foundation12NotificationV"
 - !private "So20NSNotificationCenterC"
 - !private "s9OptionSetP"
-- !private "9mojo_test21PrivateChatControllerC"
-- !private "Sk"
-- "Sm"
 - !private "SY"
 - !private "10Foundation20ReferenceConvertibleP"
-- "ST"
+- !private "ST"
 - !private "s10SetAlgebraP"
-- !private "s12StaticStringV"
-- "SS"
-- "Sy"
+- "s27StringInterpolationProtocolP"
 - "s16TextOutputStreamP"
-- "s20TextOutputStreamableP"
 - !private "So29UIAccessibilityIdentificationP"
 - !private "So12UIAppearanceP"
 - !private "So21UIAppearanceContainerP"
 - "So13UIApplicationC"
 - "So21UIApplicationDelegateP"
 - !private "So23UIBackgroundFetchResultV"
-- !private "So26UICollectionViewControllerC"
-- !private "So26UICollectionViewDataSourceP"
-- !private "So24UICollectionViewDelegateP"
-- !private "So34UICollectionViewDelegateFlowLayoutP"
-- !private "So26UICollectionViewFlowLayoutC"
-- !private "So22UICollectionViewLayoutC"
 - !private "So18UIContentContainerP"
 - !private "So17UICoordinateSpaceP"
 - !private "So13UIDynamicItemP"
 - !private "So18UIFocusEnvironmentP"
 - !private "So11UIFocusItemP"
 - !private "So20UIFocusItemContainerP"
-- !private "So22UINavigationControllerC"
 - "So30UIPasteConfigurationSupportingP"
 - "So11UIResponderC"
 - "So30UIResponderStandardEditActionsP"
-- !private "So20UIScrollViewDelegateP"
 - !private "So16UIStateRestoringP"
 - !private "So18UITabBarControllerC"
 - !private "So16UITabBarDelegateP"
-- !private "So19UITextFieldDelegateP"
 - !private "So18UITraitEnvironmentP"
 - "So23UIUserActivityRestoringP"
 - !private "So26UIUserNotificationSettingsC"
@@ -1513,23 +1284,14 @@ depends-nominal:
 - !private "So22UNNotificationResponseC"
 - !private "So24UNUserNotificationCenterC"
 - "So32UNUserNotificationCenterDelegateP"
-- !private "s37_DefaultCustomPlaygroundQuickLookableP"
-- !private "s24_DestructorSafeContainerP"
-- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
-- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
-- "s34_ExpressibleByBuiltinStringLiteralP"
-- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
-- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
-- "s33_ExpressibleByStringInterpolationP"
 - !private "s35_HasCustomAnyHashableRepresentationP"
 - "10Foundation27_KeyValueCodingAndObservingP"
-- "s21_ObjectiveCBridgeableP"
+- !private "s21_ObjectiveCBridgeableP"
 - !private "s20_SwiftNewtypeWrapperP"
-- "s16_SwiftStringViewP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
 - !private "9mojo_test29editProfileControllerDelegateP"
 depends-dynamic-lookup:
 depends-external:
-- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/Cosmos.swiftmodule/x86_64.swiftmodule"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/TinyConstraints.swiftmodule/x86_64.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
@@ -1684,18 +1446,19 @@ depends-external:
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/FirebaseFunctions/FirebaseFunctions.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/Cosmos/Cosmos.framework/Modules/module.modulemap"
 - "/Users/yunyunchen1/dev/mojo-test/build/Debug-iphonesimulator/TinyConstraints/TinyConstraints.framework/Modules/module.modulemap"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/objc/ObjectiveC.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/Darwin.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
-- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
-interface-hash: "5201892db096dafbe5fabb72090a5523"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/MessageUI.framework/Headers/MessageUI.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreData.framework/Headers/CoreData.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.2.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "d07bbcdaa44aab45f697c6098303a881"

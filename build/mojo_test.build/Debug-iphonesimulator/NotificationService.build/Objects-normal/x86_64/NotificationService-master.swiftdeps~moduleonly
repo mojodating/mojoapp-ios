@@ -1,5 +1,5 @@
 version: "Apple Swift version 5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
-options: "024d60d0f1239a7eb8ed754f6784ec5a"
-build_time: [1556250283, 965004000]
+options: "ebcfb979d51759d65192b4b1fa7b65dc"
+build_time: [1556302255, 770575000]
 inputs:
   "/Users/yunyunchen1/dev/mojo-test/NotificationService/NotificationService.swift": [1545714379, 833327411]
