@@ -100,11 +100,11 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         
         view.addSubview(payButton)
         payButton.anchor(top: nil, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 16, bottom: 0, right: 16), size: .init(width: view.frame.width - 32, height: 50))
-        payButton.setTitleColor(.white, for: .normal)
+        payButton.setTitleColor(.black, for: .normal)
         payButton.layer.cornerRadius = 8
         payButton.addTarget(self, action: #selector(handleSendChatRequest), for: .touchUpInside)
         payButton.isEnabled = false
-        payButton.backgroundColor = #colorLiteral(red: 0, green: 0.7662263513, blue: 0.9543122649, alpha: 1)
+        payButton.backgroundColor = #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 1)
 
     }
     
@@ -273,12 +273,12 @@ class ChatRequestController: UIViewController, UICollectionViewDelegate, UIColle
         // Check balance
         if self.userBalance ?? 0 >= self.giftPrice ?? 0 {
             self.payButton.isEnabled = true
-            self.payButton.backgroundColor = #colorLiteral(red: 0, green: 0.7662263513, blue: 0.9543122649, alpha: 1)
-//            self.payButton.setTitleColor(.black, for: .normal)
+            self.payButton.backgroundColor = #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 1)
+            self.payButton.setTitleColor(.black, for: .normal)
             self.warningLabel.isHidden = true
         } else {
             self.payButton.isEnabled = false
-            self.payButton.backgroundColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 0.5951947774)
+            self.payButton.backgroundColor = #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 0.6019103168)
             self.payButton.setTitleColor(.white, for: .normal)
             self.warningLabel.isHidden = false
         }

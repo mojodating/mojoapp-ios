@@ -101,14 +101,8 @@ class WalletController: BaseListController, UICollectionViewDelegateFlowLayout {
         
         if indexPath.section == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! UserGiftCell
-            
-            let gift = gifts[indexPath.item]
-            let imageUrl = gift.imageUrl
-            if let imageUrl = URL(string: imageUrl) {
-                cell.giftImageView.sd_setImage(with: imageUrl)
-            }
-            cell.nameLabel.text = gift.name
-            cell.senderLabel.text = gift.sender
+            cell.gift = gifts[indexPath.item]
+//            let gift = gifts[indexPath.item]
             
             return cell
         }

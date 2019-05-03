@@ -49,8 +49,8 @@ class WalletHeaderCell: UICollectionViewCell {
         accountButton.backgroundColor = #colorLiteral(red: 0.9582804569, green: 0.9582804569, blue: 0.9582804569, alpha: 1)
         accountButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        topUpButton.setTitleColor(.white, for: .normal)
-        topUpButton.backgroundColor = #colorLiteral(red: 0.2588235438, green: 0.7568627596, blue: 0.9686274529, alpha: 1)
+        topUpButton.setTitleColor(.black, for: .normal)
+        topUpButton.backgroundColor = #colorLiteral(red: 0.7864880562, green: 0.9731746316, blue: 0.9783737063, alpha: 1)
         topUpButton.widthAnchor.constraint(equalToConstant: 110).isActive = true
         topUpButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
@@ -82,7 +82,7 @@ class WalletHeaderCell: UICollectionViewCell {
     let userBalanceLabel = UILabel(text: "Loading...", font: .boldSystemFont(ofSize: 24))
     
     let accountButton = UIButton(title: "Address & Transaction history", cornerRadius: 4, font: .boldSystemFont(ofSize: 14))
-    let topUpButton = UIButton(title: "Top up", cornerRadius: 20, font: .boldSystemFont(ofSize: 14))
+    let topUpButton = UIButton(title: "Top up", cornerRadius: 20, font: .systemFont(ofSize: 14, weight: .medium))
     let freeTokenButton = UIButton(title: "Free Tokens", cornerRadius: 20, font: .systemFont(ofSize: 14, weight: .medium))
 
    

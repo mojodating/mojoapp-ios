@@ -7,14 +7,41 @@
 //
 
 import UIKit
+import Firebase
 
 class UserGiftCell: UICollectionViewCell {
+    
+    var gift: Gift? {
+        didSet {
+            guard let imageUrl = gift?.imageUrl else { return }
+            if let imageUrl = URL(string: imageUrl) {
+                self.giftImageView.sd_setImage(with: imageUrl)
+            }
+            self.nameLabel.text = gift?.name
+            if (gift?.sender != "") {
+                getSenderNameFromFirestore(uid: gift?.sender ?? "")
+            }
+        }
+    }
+    
+    var user: User?
+    fileprivate func getSenderNameFromFirestore(uid: String) {
+        Firestore.firestore().collection("users").document( uid).getDocument { (snapshot, err) in
+            if let err = err {
+                print(err)
+                return
+            }
+            guard let dictionary = snapshot?.data() else { return }
+            self.user = User(dictionary: dictionary)
+            let senderName = self.user?.name
+            self.senderLabel.text = "From: \(senderName ?? "")"
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setupLayout()
         layer.cornerRadius = 8
-        
     }
     
     fileprivate func setupLayout() {
@@ -22,6 +49,7 @@ class UserGiftCell: UICollectionViewCell {
         addSubview(senderLabel)
         senderLabel.anchor(top: nil, leading: nil, bottom: bottomAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 8, right: 0))
         senderLabel.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
+        senderLabel.textColor = .lightGray
         
         addSubview(nameLabel)
         nameLabel.anchor(top: nil, leading: nil, bottom: senderLabel.topAnchor, trailing: nil, padding: .init(top: 0, left: 0, bottom: 4, right: 0))
@@ -46,7 +74,7 @@ class UserGiftCell: UICollectionViewCell {
         return label
     }()
     
-    let senderLabel = UILabel(text: "", font: .systemFont(ofSize: 14))
+    let senderLabel = UILabel(text: "", font: .systemFont(ofSize: 12))
     
     
     required init?(coder aDecoder: NSCoder) {
